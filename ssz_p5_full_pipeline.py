@@ -468,6 +468,25 @@ def check_blacklist(root: Path) -> list[Check]:
         return [Check("hygiene", "production_blacklist", "FAIL", repr(e), "valid JSON")]
 
 
+def check_frozen_onshell(root: Path) -> list[Check]:
+    from ssz_p5.action.onshell import audit_frozen_carrier
+
+    try:
+        report = audit_frozen_carrier(root)
+        output = root / "build/FROZEN_ONSHELL_IDENTITY.json"
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
+        return [Check(
+            "frozen_onshell", "necessary_carrier_background_identity",
+            "FAIL" if report["status"] == "FAIL_ON_SHELL_IDENTITY" else "PASS",
+            report["routes"][0]["residual"],
+            "Eq.85 necessary consistency within unchanged policy and reported sensitivity",
+            str(output.relative_to(root)),
+        )]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        return [Check("frozen_onshell", "necessary_carrier_background_identity", "FAIL", str(exc))]
+
+
 def check_absolute_closure(root: Path) -> list[Check]:
     from ssz_p5.export.verification import verify_absolute_closure
 
@@ -497,6 +516,7 @@ def check_absolute_closure(root: Path) -> list[Check]:
 def write_reports(root: Path, checks: list[Check], json_path: Path, md_path: Path) -> None:
     passed = sum(c.passed for c in checks)
     failed = sum(not c.passed for c in checks)
+    absolute_pass = failed == 0 and any(c.stage == "absolute_closure" for c in checks)
     payload = {
         "release": RELEASE,
         "generated_at_utc": datetime.now(UTC).isoformat(),
@@ -518,14 +538,17 @@ def write_reports(root: Path, checks: list[Check], json_path: Path, md_path: Pat
         },
         "checks": [asdict(c) for c in checks],
         "scientific_status": {
+            "frozen_carrier_necessary_onshell_identity": next(
+                (c.status for c in checks if c.stage == "frozen_onshell"), "NOT_RUN"
+            ),
             "absolute_closure": "PASS"
-            if any(c.stage == "absolute_closure" and c.passed for c in checks)
+            if absolute_pass
             else "NOT_CERTIFIED",
             "direct_global_krgm_export": "PASS"
-            if any(c.stage == "absolute_closure" and c.passed for c in checks)
+            if absolute_pass
             else "NOT_CERTIFIED",
             "coupled_hsvt_qnm": "PASS"
-            if any(c.stage == "absolute_closure" and c.passed for c in checks)
+            if absolute_pass
             else "NOT_CERTIFIED",
             "scope": "archive, constructive audit and numerical regressions; "
             "not a direct-global export certificate",
@@ -662,6 +685,7 @@ def main() -> int:
     )
 
     if ns.strict:
+        checks += check_frozen_onshell(root)
         checks += check_absolute_closure(root)
 
     json_path = ns.json or root / "FULL_PIPELINE_REPORT.json"

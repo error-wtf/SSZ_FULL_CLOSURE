@@ -1,5 +1,11 @@
 # Direct-production implementation findings — 2026-09-17
 
+**Update:** a subsequent necessary on-shell check identifies a concrete conflict
+in the prescribed strong carrier, independent of the core emitter. See
+[Frozen carrier contradiction](FROZEN_CARRIER_ONSHELL_CONTRADICTION.md).
+The implementation-boundary findings below remain valid; they are no longer
+the only impediment to direct production.
+
 ## Verified constraint correction
 
 The common unreduced action contains `b2 * H1 * dot(delta_phi_prime)`.

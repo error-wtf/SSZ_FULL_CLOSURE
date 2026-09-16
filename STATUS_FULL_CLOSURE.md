@@ -3,7 +3,11 @@
 Absolute full closure is **NOT CERTIFIED**. Strict mode now rejects missing
 direct-production matrices and coupled spectral evidence. The H1 constraint
 source has been repaired; general quartic/quintic core emission remains to be
-implemented. See [current implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md).
+implemented. A necessary on-shell identity now reproducibly **FAILS** in the
+interior of the prescribed strong carrier for `A0prime=0`. See the
+[precise contradiction](docs/FROZEN_CARRIER_ONSHELL_CONTRADICTION.md).
+The claim that only core emission is missing is therefore not supported by
+the current direct check. See [current implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md).
 This is not a reported physical instability. The frozen historical statement
 below is retained for provenance and does not override current strict behavior.
 

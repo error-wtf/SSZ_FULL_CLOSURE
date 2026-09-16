@@ -1,0 +1,110 @@
+{
+  "status": "FAIL_ON_SHELL_IDENTITY",
+  "scope": "Necessary frozen-carrier background identity, not a spectrum or theory no-go",
+  "reference": {
+    "url": "https://arxiv.org/html/2301.10362",
+    "equations": [
+      7,
+      9,
+      10,
+      24,
+      25,
+      85
+    ]
+  },
+  "inputs": [
+    {
+      "path": "data/production/ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv",
+      "sha256": "65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba"
+    },
+    {
+      "path": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
+      "sha256": "742d7c1dbfa06d9870b69f2b95ae1b764b1c3083aea16d968cae5d8e136cf684"
+    },
+    {
+      "path": "NUMERICAL_POLICY.json",
+      "sha256": "5458f3915fa13337dca04a47a0c64356e68d7d3216df64ff96bd99cd5ed1c3d8"
+    }
+  ],
+  "vector_branch": "A0prime = 0",
+  "epsilon_Y": 0.01,
+  "deformation_background_contribution": "zero: field strength is zero",
+  "row_index_zero_based": 2366,
+  "csv_line_one_based": 2368,
+  "radius": 1.5999977950251312,
+  "input_row": {
+    "r_over_rs": 1.5999977950251312,
+    "u": 0.6250008613194952,
+    "phi": 0.6353660749083901,
+    "f": 0.3739125409549743,
+    "h": 0.4015751947977254,
+    "H_equals_F_equals_G": 0.8777994828489721,
+    "G4": 0.438899741424486,
+    "G4_phi": 0.61633042306571,
+    "K_target": 0.0097422814724652,
+    "K_verified": 0.0097422847057897,
+    "Q": 1.6435873813612445,
+    "G3X": -5.645555965033057,
+    "X": -0.1279419624045815,
+    "XG3X": 0.7223035090312202,
+    "a1_Horndeski": -0.1051242244246119,
+    "a4_Horndeski": 0.1700723764053989,
+    "c4_Horndeski": -0.1022579678223304,
+    "mu": 3.242068659060008,
+    "P1": 0.4437708837773809
+  },
+  "routes": [
+    {
+      "method": "JET9D8",
+      "stride": 1,
+      "radius": 1.5999977950251312,
+      "lhs": 0.006453887622634062,
+      "rhs": -0.06452053578102868,
+      "residual": 0.07097442340366274
+    },
+    {
+      "method": "JET9D8",
+      "stride": 2,
+      "radius": 1.5999977950251312,
+      "lhs": 0.00645388762240757,
+      "rhs": -0.0645205382469386,
+      "residual": 0.07097442586934617
+    },
+    {
+      "method": "JET9D8",
+      "stride": 3,
+      "radius": 1.5999977950251312,
+      "lhs": 0.006453887622556112,
+      "rhs": -0.06452053816327896,
+      "residual": 0.07097442578583507
+    },
+    {
+      "method": "JET9D8",
+      "stride": 4,
+      "radius": 1.5999977950251312,
+      "lhs": 0.0064538876225493525,
+      "rhs": -0.06452053788660878,
+      "residual": 0.07097442550915813
+    },
+    {
+      "method": "action jets and scalar chain rule; remaining derivatives JET9D8",
+      "radius": 1.5999977950251312,
+      "lhs": 0.0064538876226385945,
+      "rhs": -0.0645205335442377,
+      "residual": 0.0709744211668763,
+      "E00_minus_E22": -0.12294499883905527,
+      "independent_subtraction_residual": 2.7755575615628914e-17
+    }
+  ],
+  "route_spread": 4.702469871831205e-09,
+  "diagnostic_sensitivity_envelope_100x_spread": 4.702469871831205e-07,
+  "sensitivity_is_rigorous_interval_bound": false,
+  "unchanged_background_policy_tolerance": 1e-10,
+  "consistency_checks": {
+    "max_abs_f_minus_scalar_closure": 2.7755575615628914e-16,
+    "max_abs_H_minus_2G4": 2.220446049250313e-16,
+    "witness_Hprime_action_minus_JET9D8": 1.1191048088221578e-13,
+    "witness_phiprime_X_minus_JET9D8": -1.340927369142264e-12
+  },
+  "interpretation": "The prescribed f,h,F=H and A0'=0 violate a necessary on-shell identity. G2/G3 or core-only changes cannot remove this interior residual while these prescribed functions remain fixed. No replacement member is selected."
+}

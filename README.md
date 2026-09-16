@@ -8,9 +8,11 @@ scalar–vector–tensor deformation. Original papers and historical calculation
 are preserved alongside executable verification code.
 
 > **Current production status: absolute full closure is not certified.**
-> The software tests and the archive audit pass. A complete regenerated global
-> finite-multipole operator and a converged coupled spectrum have not been
-> produced. `--strict` requires both and currently exits with failure.
+> The software tests and the archive audit pass. A newly reproduced necessary
+> background identity fails for the prescribed strong carrier on `A0prime=0`.
+> This is an input consistency failure, in addition to the missing general core
+> emitter and coupled spectral products. `--strict` reports the failure.
+> See the [reproduction and derivation](docs/FROZEN_CARRIER_ONSHELL_CONTRADICTION.md).
 
 ## Reproduce
 
@@ -27,9 +29,8 @@ pytest -q
 python ssz_p5_full_pipeline.py --strict
 ```
 
-A strict exit code `2` currently reports the missing direct-production closure
-certificate. This is the required behavior while the production chain is
-incomplete. Installation instructions and interpretation of the results are in
+A strict exit code `2` currently reports the frozen-carrier on-shell identity
+failure and the missing direct-production closure certificate. Installation instructions and interpretation of the results are in
 [REPRODUCE.md](REPRODUCE.md).
 
 To run the separately labelled historical archive and regression audit:
@@ -59,6 +60,7 @@ Frozen P5 action / background jets
 | --- | --- | --- |
 | Software tests | PASS | Includes negative certificate tests and direct constraint stationarity |
 | Existing archive/audit checks | PASS | Reproduces the defined historical witnesses |
+| Frozen carrier, necessary on-shell identity | **FAIL** | Five numerical routes give a nonzero interior residual; no action member has been changed |
 | Direct global action → 41-slot regeneration | Not completed | General quartic/quintic core emission is not implemented by the existing restricted emitter |
 | Direct global finite-L matrices | Not certified | A complete same-action set of generated matrices is required |
 | Coupled spectral convergence | Not certified | Archived test-field calculations cannot substitute for the coupled operator |
@@ -72,7 +74,8 @@ The concrete source-to-emitter comparison is machine readable in
 [data/diagnostic/PRODUCTION_SOURCE_CONTRACT.json](data/diagnostic/PRODUCTION_SOURCE_CONTRACT.json).
 [Implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md) record the
 verified constraint repair and the remaining emission boundary. These are
-implementation findings, not a claim that the frozen physical model is unstable.
+implementation findings. The separately documented background inconsistency is
+not a computed perturbative instability or a no-go theorem for P5 geometry.
 
 ## Frozen model and numerical conventions
 
@@ -98,7 +101,7 @@ No production tolerance has been relaxed to obtain a passing result.
 ## Strict verification and spectral scope
 
 Strict mode checks file integrity, the software tests, existing audit results,
-and the direct-production closure evidence. It rejects absent direct matrices,
+the necessary frozen-carrier on-shell identity, and direct-production closure evidence. It rejects absent direct matrices,
 missing multipoles, inconsistent hashes, nonpositive finite-L results, matrices
 that do not reproduce from the recorded coefficient stream, and spectral records
 bound to a different operator. It also requires convergence records for every
