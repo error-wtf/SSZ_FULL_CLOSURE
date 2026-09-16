@@ -1,0 +1,4790 @@
+      Constructive Horndeski–SVT Realization of a Regular P5
+   Segmented-Spacetime Geometry with Stable Strong-Field Light
+                              Rings
+  A background-integrable scalar–vector–tensor construction, complete local same-action
+                     closure, and the post-closure stability program
+
+
+                              Carmen N. Wrede                Lino P. Casu
+
+                                          14 September 2026
+
+
+Contents
+
+Executive summary and visual guide                                                                       4
+  Summary table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      4
+  Visual overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    5
+  Core diagnostic tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     5
+       Table 1. Geometric key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       5
+       Table 2. Light-ring diagnostics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       6
+       Table 3. Same-action closure bands . . . . . . . . . . . . . . . . . . . . . . . . . . . .        6
+       Table 4. Closure gates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      6
+       Table 5. Frozen pure-sector margins used by the certificate . . . . . . . . . . . . . .           6
+       Abstract . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    7
+
+1. Introduction                                                                                       11
+   1.1 Geometry is not yet dynamics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+   1.2 Why the light-ring region is the critical test . . . . . . . . . . . . . . . . . . . . . . . . 12
+   1.3 Why Horndeski alone is not enough for the entire construction . . . . . . . . . . . . . 13
+   1.4 Genuine U(1) scalar–vector–tensor interactions . . . . . . . . . . . . . . . . . . . . . . 14
+   1.5 The central methodological diﬀiculty . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+2. Scope of the Present Result                                                                          16
+
+3. Frozen P5 Background Geometry                                                                      17
+   3.1 Metric, variables, and the source hierarchy for \Xi . . . . . . . . . . . . . . . . . . . . 17
+   3.2 Source-locked P5 susceptibility and the autonomous \Xi equation . . . . . . . . . . . 19
+   3.3 Temporal metric closure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+   3.4 Radial closure and the GR susceptibility comparator . . . . . . . . . . . . . . . . . . . 20
+   3.5 Weak-field expansion and Schwarzschild recovery . . . . . . . . . . . . . . . . . . . . . 21
+   3.6 Horizonlessness and the regular core . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+   3.7 Background trajectory in invariant space . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+   3.8 Reproducibility status . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+4. Null Geometry of the P5 Strong-Field Region                                                          24
+
+
+                                                    1
+   4.1 Circular-null condition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   24
+   4.2 Outer unstable light ring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     25
+   4.3 Inner stable light ring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   26
+
+5. Covariant Theory Architecture                                                                       27
+   5.1 Full Horndeski sector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+   5.2 Full gauge-invariant scalar–vector–tensor sector . . . . . . . . . . . . . . . . . . . . . . 28
+   5.3 One common action and the no-double-counting convention . . . . . . . . . . . . . . . 30
+   5.4 Static field equations and integrability hierarchy . . . . . . . . . . . . . . . . . . . . . 30
+
+6. Exterior Horndeski Reconstruction                                                                  31
+   6.1 Motivation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+   6.2 Correct general-f\neq h no-ghost relation . . . . . . . . . . . . . . . . . . . . . . . . . 31
+   6.3 Continuation through the strong-field region . . . . . . . . . . . . . . . . . . . . . . . 32
+
+7. Genuine-SVT Strong-Field Lobe                                                                        33
+   7.1 Domain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+   7.2 Background equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+   7.3 Integrability result . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+
+8. Tubular Reconstruction and Background-Null Controls                                                 35
+   8.1 Why higher action derivatives are not fixed by the background . . . . . . . . . . . . . 35
+   8.2 Hessian-control basis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+
+9. Odd-Parity Stability                                                                                36
+   9.0 Harmonic decomposition and the complete odd reduction chain . . . . . . . . . . . . . 36
+   9.1 Structure of the sector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+   9.2 Radial odd speeds . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+   9.3 Odd angular sector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+
+10. Even-Parity Stability                                                                             40
+   10.0 Even harmonic content, gauge fixing, and the unreduced action . . . . . . . . . . . . 40
+   10.1 Why this is the decisive sector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+   10.2 Exact P_1 definition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+   10.3 Exact even no-ghost combination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+
+11. Radial Even-Parity Characteristics                                                                   43
+
+12. Coupled Even Angular Sector                                                                      44
+   12.1 Need for the full coupled test . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+   12.2 Tubular mixed derivatives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+   12.3 Numerical coupled conditions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+
+13. Summary of the Genuine-SVT Light-Ring Result                                                         46
+
+14. Regular Quartic-Horndeski Core                                                                     47
+   14.1 Why a separate core carrier is used . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+   14.2 Core domain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+   14.3 Quartic local action . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+
+15. The Inner Handover                                                                                   49
+
+
+
+                                                    2
+16. The Outer Horndeski–SVT Handover                                                                 50
+   16.1 Overlap domain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+   16.2 What the historical SSZ bridge proves . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+   16.3 Scalar-coordinate same-action gluing . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+
+17. Why Separately Reduced Matrices Must Not Be Added                                                 52
+
+18. Common Unreduced Even-Parity Schema                                                               53
+
+19. Generalized \psi Variable                                                                      54
+   19.1 Apparent mismatch between the two perturbation formalisms . . . . . . . . . . . . . 54
+   19.2 Pure genuine-SVT limit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+
+20. Jet-Aware Constraint Elimination                                                                   56
+   20.1 Why frozen-coeﬀicient Fourier reduction fails . . . . . . . . . . . . . . . . . . . . . . . 56
+   20.2 First common elimination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+   20.3 Pivot test . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+   20.4 Exact elimination of the remaining SVT constraints . . . . . . . . . . . . . . . . . . . 59
+   20.5 Fully reduced physical even operator . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+
+21. Constructive Same-Action Closure                                                                 61
+   21.1 Meaning of “same-action closure” . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+   21.2 Scalar-coordinate C^\infty action partition . . . . . . . . . . . . . . . . . . . . . . . 62
+   21.3 Background re-solving rather than blind interpolation . . . . . . . . . . . . . . . . . . 63
+   21.4 Background-null stability controls and the SVT rank certificate . . . . . . . . . . . . 64
+   21.5 Exact common constraint invertibility . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+   21.6 Continuation of the healthy principal symbol . . . . . . . . . . . . . . . . . . . . . . 66
+   21.7 Realization as one local covariant action . . . . . . . . . . . . . . . . . . . . . . . . . 67
+   21.8 Local Same-Action Closure Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+   21.9 Machine-readable closure certificate . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+   21.10 What is now closed, and what remains outside the closure claim . . . . . . . . . . . 69
+
+22. Interpretation of the Large Characteristic Speeds                                                 70
+
+23. Stable Trapping and the Difference Between Local and Global Stability                             71
+
+24. Nonlinear Stability as a Separate Problem                                                         71
+
+25. Discussion: P5 in the Landscape of Compact-Object Geometries                                     72
+   25.1 Comparison with Schwarzschild general relativity . . . . . . . . . . . . . . . . . . . . 72
+   25.2 P5 is not a regular black hole in the strict causal sense . . . . . . . . . . . . . . . . . 74
+   25.3 Relation to horizonless ultracompact objects . . . . . . . . . . . . . . . . . . . . . . . 74
+   25.4 Stable trapping: the principal unresolved physical risk . . . . . . . . . . . . . . . . . 75
+   25.5 Relation to the SSZ interpretation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+
+26. Main Results                                                                                      76
+
+27. What Is Not Proven by the Closure                                                                 77
+
+28. Post-Closure Program                                                                              78
+
+29. Conclusion                                                                                        79
+
+
+                                                   3
+Appendix A. Numerical Reference Values for the Frozen P5 Construction                              80
+  A.1 Explicit P5 closure reference values . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+
+Appendix B. Reproducibility and Regression Logic                                                    83
+  B.1 Geometry-level regression gates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+  B.2 Variational handover regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+
+Appendix C. Literature Framework and Provenance Boundaries                                             86
+
+Appendix D. Same-Action Closure Certificate                                                           87
+  D.1 Certified overlap data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+  D.2 Frozen stability margins used by the certificate . . . . . . . . . . . . . . . . . . . . . . 87
+  D.3 Eight closure gates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
+
+References — working bibliography                                                                      88
+
+Appendix E. Extended source list                                                                    89
+  Primary project sources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+  External physics references . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+
+
+List of Figures
+   1     Figure 1. P5 geometry profiles in the strong-field region. The three curves show
+         the primary scalar field Ξ(𝑥) together with the temporal and radial metric functions
+         𝑓(𝑥) and ℎ(𝑥). The dashed vertical lines mark the outer and inner light rings. . . . .         5
+   2     Figure 2. Dimensionless null potential 𝑊 (𝑥) = 𝑢2 𝑓 across the two-light-ring region.
+         The outer light ring is a maximum of the optical potential, while the inner ring is a
+         minimum, demonstrating shallow stable trapping. . . . . . . . . . . . . . . . . . . . .        8
+   3     Figure 3. Source-locked P5 susceptibility closure 𝜒 = 𝑑Ξ/𝑑𝑢 compared with the
+         reference quantity 𝜒GR = 21 (1 + Ξ)3 . This plot visualizes the radial closure channel
+         discussed in the main text. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    8
+   4     Figure 4. Certified same-action overlap bands used in the constructive closure
+         theorem. Band 1 is the outer Horndeski-to-SVT overlap, Band 2 is the inner SVT-
+         to-core overlap, and Band 3 is the full genuine-SVT lobe containing both light rings.          9
+
+
+List of Tables
+
+Executive summary and visual guide
+This PDF version augments the full manuscript with a compact visual and tabular overview of the
+most important background, light-ring, and closure diagnostics. The figures below are generated
+directly from the certified P5 profile and the same-action closure artifacts stored alongside this
+manuscript.
+
+Summary table
+
+
+
+
+                                                   4
+Item               Value                                               Interpretation
+Outer light ring   𝑥 = 1.5                                             Unstable
+                                                                       Schwarzschild-matching ring
+Inner light ring   𝑥 ≈ 1.41616064                                      Stable null ring / shallow
+                                                                       trapping well
+Strong-field       0.61 ≤ 𝑢 ≤ 0.715                                    Contains both light rings
+SVT lobe
+First even pivot   |𝐷ℎ1 |min ≈ 11.99                                   No singular common ℎ1
+                                                                       elimination
+Second even        |Δ𝑉 |min ≈ 3.04288                                  Regular 𝐻1 –𝛿𝐴1 block
+pivot
+Closure status                                                Local same-action closure
+                   PASS_CONSTRUCTIVE_LOCAL_SAME_ACTION_CLOSURE_CERTIFICATE
+                                                              established
+
+
+Visual overview
+
+
+
+
+Figure 1: Figure 1. P5 geometry profiles in the strong-field region. The three curves show the
+primary scalar field Ξ(𝑥) together with the temporal and radial metric functions 𝑓(𝑥) and ℎ(𝑥).
+The dashed vertical lines mark the outer and inner light rings.
+
+
+Core diagnostic tables
+Table 1. Geometric key points
+
+point                      x_r_over_rs             u         Xi    chi_dXi_du           f         h
+infinity/weak                          inf         0          0           0.5           1         1
+boundary
+natural SVT onset              1.81316       0.551523   0.509933      1.46929   0.438616    0.494833
+outer light ring                   1.5       0.666667   0.732051      2.59808   0.333333    0.333333
+
+
+                                                   5
+point                     x_r_over_rs              u           Xi   chi_dXi_du              f         h
+inner stable light ring        1.41616      0.706135     0.838419           2.6035   0.295877    0.37413
+core handover                  1.40845          0.71     0.848354          2.53438   0.292705   0.389107
+r=rs                                 1             1     0.996315         0.024711   0.250924   0.974687
+deep core sample                   0.1            10     0.999996        7.835e-07   0.250001   0.999975
+
+
+Table 2. Light-ring diagnostics
+
+ring     x_r_over_rs            u           Xi            f         h      Qprime          W       Wpp
+outer              1.5    0.666667   0.732051    0.333333     0.333333         4.5   0.148148         -2
+inner          1.41616    0.706135   0.838419    0.295877      0.37413    -6.20274   0.147532    2.59186
+
+
+Table 3. Same-action closure bands
+
+band             x_outer x_inner Xi_a        Xi_b       Delta_Ximin_f min_h min_abs_det_selected_hessian_m
+outer_horndeski_to_svt
+               1.81316 1.63934 0.5099330.6060120.096078 0.3877060.426991                        0.049419
+inner_svt_to_core
+               1.40845 1.3986 0.8483540.8607630.01241 0.2888140.389107                          0.316377
+full_svt_lobe 1.63934 1.3986 0.6060120.8607630.254752 0.2888140.326857                          0.103931
+
+
+Table 4. Closure gates
+
+                   gate                                                         status
+                   G1 geometry positive on all handover bands                   PASS
+                   G2 phi is valid monotone patch coordinate                    PASS
+                   G3 svt hessian control rank3 everywhere                      PASS
+                   G4 cinf partition monotone                                   PASS
+                   G5 all frozen pure sector stability margins strict           PASS
+                   G6 deltaA0 constraint pivot nonzero pure svt l2              PASS
+                   G7 H1 deltaA1 constraint pivot nonzero pure svt l2           PASS
+                   G8 first common h1 pivot nonzero existing regression         PASS
+
+
+Table 5. Frozen pure-sector margins used by the certificate
+
+                                 quantity                        value
+                                 K_ext                        0.009742
+                                 C_odd_min                     0.76072
+                                 alpha4_min                   0.009996
+                                 alpha7_min                    2.00153
+                                 K_even_min                    10.5415
+                                 crT2_min                      1.00507
+                                 crS2_min                     0.903745
+                                 crV2_min                      9.45887
+                                 cOmega_minus2_min              84.912
+
+
+                                                    6
+                                    quantity                       value
+                                    cOmega_plus2_min             643.142
+                                    core_F_min                         1
+                                    core_GH_min                 0.999381
+                                    D_h1_abs_min_l2                11.99
+
+
+
+
+Abstract
+We investigate whether a prescribed regular, static, spherically symmetric strong-field geometry
+arising within the Segmented Spacetime (SSZ) program can be realized as a dynamically admissible
+solution of a covariant scalar–vector–tensor theory rather than merely as an effective metric ansatz.
+The geometry studied here is the frozen P5 background, described by temporal and radial metric
+functions f(r) and h(r), together with a monotonic scalar profile \phi(r)\equiv\Xi(r). Its
+strong-field region contains two circular null orbits: an outer unstable light ring at
+
+                                                    𝑟
+                                               𝑥≡      = 1.5,
+                                                    𝑟𝑠
+
+and an inner stable light ring at
+
+
+                                           𝑥s ≃ 1.41616064.
+
+The outer orbit reproduces the general-relativistic Schwarzschild shadow scale and the corresponding
+eikonal Lyapunov scale, while the inner orbit forms a shallow stable null potential well with a relative
+depth of approximately 4.18\times10^{-3}.
+The frozen geometry is not treated here as an arbitrary numerical triplet. Its current source-locked
+closure can be written in terms of a primary susceptibility \chi=d\Xi/du=(1-\Xi)^{3/2}\mathcal
+P_5(\Xi), with f=(1+\Xi)^{-2} and a radial closure generated by the ratio \chi/\chi_{\rm GR}.
+Independent regression reproduces the frozen temporal and radial metric profiles at machine preci-
+sion. The same closure is horizonless (f>0, h>0), regular at the center, and reproduces Schwarzschild
+through cubic order in the weak-field compactness expansion. At the outer light ring it additionally
+matches f=h=1/3 and the Schwarzschild curvature of the dimensionless null potential, while the
+inner light ring remains a genuinely new stable-trapping structure.
+The purpose of the present work is not merely to diagnose the geodesic properties of this metric, but
+to construct explicit local action jets capable of supporting the same background while satisfying
+the no-ghost and Laplacian-stability conditions of scalar–tensor and genuine U(1) gauge-invariant
+scalar–vector–tensor theories. The construction is divided into three dynamically distinct but over-
+lapping radial domains. The weak-to-intermediate exterior is carried by a finite Horndeski G_3-G_4
+sector. The central strong-field light-ring region is realized by a genuine scalar–vector–tensor inter-
+action with background-integrable action jets. The regular inner region is supported by a quartic
+Horndeski core. These are not left as unrelated effective descriptions: using a scalar-coordinate
+C^\infty partition, background re-solving, transverse action-jet controls and the common unre-
+duced even-parity constraint system, we construct a single smooth local same-action continuation
+through both overlap bands.
+
+
+
+
+                                                     7
+Figure 2: Figure 2. Dimensionless null potential 𝑊 (𝑥) = 𝑢2 𝑓 across the two-light-ring region.
+The outer light ring is a maximum of the optical potential, while the inner ring is a minimum,
+demonstrating shallow stable trapping.
+
+
+
+
+Figure 3: Figure 3. Source-locked P5 susceptibility closure 𝜒 = 𝑑Ξ/𝑑𝑢 compared with the reference
+quantity 𝜒GR = 12 (1 + Ξ)3 . This plot visualizes the radial closure channel discussed in the main
+text.
+
+
+
+
+                                                8
+Figure 4: Figure 4. Certified same-action overlap bands used in the constructive closure theorem.
+Band 1 is the outer Horndeski-to-SVT overlap, Band 2 is the inner SVT-to-core overlap, and Band
+3 is the full genuine-SVT lobe containing both light rings.
+
+
+For the genuine-SVT strong-field lobe we explicitly solve the scalar background equation for the
+required f_{3,X} profile instead of treating it as an arbitrary perturbative control. On the interval
+
+                                                     𝑟𝑠
+                                       0.61 ≤ 𝑢 ≡       ≤ 0.715,
+                                                     𝑟
+
+corresponding to
+
+
+                                    1.3986014 ≲ 𝑥 ≲ 1.6393443,
+
+the resulting action section is background integrable with scalar-equation residual below approxi-
+mately 2\times10^{-12}. This interval contains both light rings and overlaps the regular Horndeski
+core.
+Using the odd- and even-parity perturbation formalism for general U(1)-gauge-invariant scalar–
+vector–tensor theories, we find positive no-ghost and radial-gradient margins throughout this lobe.
+After correcting the exact Zhang–Kase definitions of P_1 and the even-sector kinetic combination
+\mathcal K, the internal identity
+
+
+                                             𝒦 = 𝑒1 √𝑓ℎ 𝜙′2
+
+is reproduced numerically with maximum residual approximately
+
+
+                                               2.2 × 10−10 .
+
+The corrected kinetic quantity satisfies
+
+
+                                           10.54 ≲ 𝒦 ≲ 137.88.
+
+The three radial squared propagation speeds satisfy
+
+
+
+
+                                                    9
+                      2                          2                    2
+                     𝑐𝑟,𝑇 > 1.005,     0.9037 ≲ 𝑐𝑟,𝑆 ≲ 1.0614,       𝑐𝑟,𝑉 > 9.45,
+
+over the complete lobe. The coupled even-parity angular sector is also positive, with minimum lower
+angular eigenvalue
+
+                                             2
+                                            𝑐Ω,− ≃ 84.91,
+
+and minimum upper eigenvalue
+
+                                             2
+                                            𝑐Ω,+ ≃ 643.14.
+
+The odd-parity tensor and vector sectors likewise remain free of local ghost and Laplacian instabil-
+ities. These results establish a constructive local stability witness for a genuine-SVT realization of
+the complete P5 light-ring region.
+A separate quartic-Horndeski witness covers the center through
+
+
+                                            𝑥 ≃ 1.40845,
+
+thereby creating a true inner overlap with the genuine-SVT lobe. The exterior Horndeski scalar
+carrier can furthermore be continued through both light rings while maintaining a positive scalar
+no-ghost quantity. The two overlap bands therefore supply the domains on which the local repre-
+sentatives are promoted to one smooth same-action Horndeski–SVT section.
+We show that the corresponding perturbation problem must be assembled at the unreduced action
+level. Separately reduced Maxwell–Horndeski and genuine-SVT kinetic matrices cannot consistently
+be added after constraint elimination. A common generalized variable,
+
+                                                𝐿𝑎4     𝑎
+                                     𝜓 = 𝐻2 +       ℎ1 + 1 𝛿𝜙′ ,
+                                                 𝑎3     𝑎3
+
+provides the appropriate bridge. In the pure Einstein-plus-SVT limit it reduces exactly to
+
+                                                       𝐿
+                                           𝜓 = 𝐻2 −      ℎ .
+                                                       𝑟 1
+
+The common jet-aware even-parity reduction is constructed explicitly. The H_0 constraint yields a
+regular solution for h_1; the remaining variables H_1, \delta A_0, and \delta A_1 are eliminated
+by exact Schur-complement formulas. The corresponding pivots are all finite and nonzero on the
+certified reference construction. In the pure genuine-SVT limit the coupled H_1–\delta A_1 deter-
+minant reduces exactly to \Delta_V=-4C_{\rm odd}, tying even-constraint invertibility directly to
+the already positive odd-sector stability margin.
+The resulting construction closes the local same-action existence problem. A smooth covariant
+Horndeski–SVT action can be defined in a tubular neighborhood of the frozen P5 background curve
+such that the background equations are satisfied, the pure local representatives are recovered with all
+finite endpoint jets, the nondynamical even-parity constraints remain invertible, and the odd/even
+principal-symbol targets remain inside their strict healthy domain through both handovers. This
+
+
+
+                                                  10
+is an existence and local-stability closure, not a claim of a unique fundamental action. Finite-
+\ell spectra, stable-trapping timescales, nonlinear evolution, causal-cone interpretation and UV
+completion remain distinct post-closure questions.
+
+
+
+
+1. Introduction
+1.1 Geometry is not yet dynamics
+A spacetime metric may possess attractive geometrical properties without corresponding to a dy-
+namically viable theory.
+This distinction becomes particularly important whenever a proposed strong-field geometry departs
+from the standard Schwarzschild or Kerr solutions of general relativity. It is comparatively straight-
+forward to prescribe metric functions that are asymptotically acceptable, regular near the center,
+reproduce familiar weak-field behavior, or generate interesting null-geodesic structures. It is sub-
+stantially harder to demonstrate that the same geometry can arise from a covariant field theory
+whose physical perturbations carry positive kinetic energy, whose characteristic speeds are real,
+and whose constraint structure does not become singular precisely in the region where the geometry
+becomes phenomenologically interesting.
+The present work addresses this second question for the P5 geometry developed within the Seg-
+mented Spacetime framework.
+Our starting point is a static, spherically symmetric metric of the form
+
+                                                       𝑑𝑟2
+                                  𝑑𝑠2 = −𝑓(𝑟) 𝑑𝑡2 +         + 𝑟2 𝑑Ω2 ,
+                                                       ℎ(𝑟)
+
+where
+
+
+                                      𝑑Ω2 = 𝑑𝜃2 + sin2 𝜃 𝑑𝜑2 .
+
+We use the dimensionless variables
+
+                                           𝑟             𝑟𝑠  1
+                                      𝑥=      ,     𝑢=      = ,
+                                           𝑟𝑠            𝑟   𝑥
+
+where r_s provides the natural radial scale of the P5 solution.
+The scalar field used in the covariant reconstruction is identified with the monotonically varying
+SSZ background variable,
+
+
+                                             𝜙(𝑟) ≡ Ξ(𝑟).
+
+The functions
+
+
+                                           {𝑓(𝑟), ℎ(𝑟), Ξ(𝑟)}
+
+
+
+
+                                                  11
+are regarded throughout this analysis as the frozen geometrical target. We do not tune the
+metric in response to stability failures. Instead, the problem is posed in the opposite direction:
+      Given the P5 geometry, can one construct a covariant action whose background equations
+      reproduce that geometry and whose perturbations are locally healthy?
+That distinction is central to the logic of this paper.
+The metric is therefore not inferred from a convenient scalar–tensor theory. The theory is recon-
+structed around the metric.
+This makes the calculation closer in spirit to an inverse problem than to the conventional procedure
+of selecting a Lagrangian and subsequently solving its background equations.
+
+
+
+1.2 Why the light-ring region is the critical test
+The P5 geometry possesses a particularly useful strong-field structure because it contains two cir-
+cular null orbits.
+The outer orbit occurs at
+
+
+                                              𝑥out = 1.5
+
+or equivalently
+
+                                                     2
+                                               𝑢out = .
+                                                     3
+
+It is unstable.
+The second orbit occurs at
+
+
+                                          𝑥in ≃ 1.41616064 ,
+
+corresponding to
+
+
+                                           𝑢in ≃ 0.706135.
+
+It is stable.
+The coexistence of an outer unstable and inner stable light ring provides a much stronger diagnostic
+of the strong-field theory than weak-field agreement alone.
+Circular null trajectories are associated with extrema of the effective null potential. For a metric
+written in areal radius and in the form above, the usual circular-null condition is determined by the
+temporal potential,
+
+                                           𝑑 𝑓(𝑟)
+                                              ( 2 ) = 0,
+                                           𝑑𝑟   𝑟
+
+which is equivalent, whenever f\neq0, to
+
+
+                                                  12
+                                         𝑟𝑓 ′ (𝑟) − 2𝑓(𝑟) = 0.
+
+The P5 target possesses two solutions to this condition.
+The outer solution reproduces the desired Schwarzschild-like optical scale. In particular, the outer
+light ring is located at the same dimensionless areal radius as the Schwarzschild photon sphere when
+r_s=2GM,
+
+                                              3
+                                         𝑟ph = 𝑟𝑠 = 3𝐺𝑀 .
+                                              2
+
+The corresponding shadow-impact scale and eikonal Lyapunov scale have been matched by construc-
+tion in the frozen P5 geometry.
+The inner solution is qualitatively different. Since it is stable, it corresponds to a local minimum
+rather than maximum of the relevant null effective potential. The well is shallow: the relative depth
+obtained from the frozen P5 profile is approximately
+
+
+                                        Δnull ≃ 4.177 × 10−3 ,
+
+or about 0.42\%.
+The presence of a stable light ring is dynamically nontrivial.
+Stable trapping can lead to long-lived perturbative structures even when no local ghost or Laplacian
+instability exists. Consequently, the present perturbative analysis does not claim that positivity of
+the local principal symbol settles the complete dynamical fate of the stable light ring.
+It instead addresses a logically prior question:
+
+
+             Does the local covariant field theory itself become sick at the light rings?
+
+The answer obtained here is no.
+Neither light ring forces the kinetic determinant of the full local scalar–vector–tensor construction
+to vanish, and the explicit strong-field genuine-SVT realization satisfies the available local odd- and
+even-parity no-ghost and gradient conditions across both orbits.
+Long-time trapping, finite-\ell resonances, quasinormal spectra, and nonlinear evolution remain
+separate problems.
+
+
+
+1.3 Why Horndeski alone is not enough for the entire construction
+Scalar–tensor theories of Horndeski type provide an exceptionally broad class of second-order co-
+variant theories. In their standard form they can be written schematically as
+
+                                                     5
+                                                 √
+                                      𝑆𝐻 = ∫ 𝑑4 𝑥 −𝑔 ∑ ℒ𝑖 ,
+                                                         𝑖=2
+
+
+where the four functions
+
+
+                                                   13
+                        𝐺2 (𝜙, 𝑋),      𝐺3 (𝜙, 𝑋),        𝐺4 (𝜙, 𝑋),   𝐺5 (𝜙, 𝑋)
+
+govern the scalar and curvature interactions, with
+
+                                               1
+                                          𝑋 = − ∇𝜇 𝜙∇𝜇 𝜙.
+                                               2
+
+For static spherical backgrounds,
+
+
+                                               𝜙 = 𝜙(𝑟),
+
+and therefore
+
+                                               1
+                                          𝑋 = − ℎ(𝑟)𝜙′ (𝑟)2 .
+                                               2
+
+Horndeski theory is suﬀiciently flexible to support large classes of nontrivial compact-object solutions
+while retaining second-order equations of motion.
+However, our reconstruction experiments show that a restricted scalar-only realization is not natu-
+rally adequate throughout the P5 strong-field domain.
+In particular, simple sectors such as
+
+
+                                        𝐺2 (𝜙, 𝑋, 𝐹 ) + 𝐺4 (𝜙)𝑅
+
+without the required derivative scalar interactions fail to provide a uniformly healthy realization
+over the relevant radial range.
+The exterior admits a useful finite G_3-supported solution.
+The center admits a quartic-Horndeski witness.
+The intermediate two-light-ring domain, however, becomes considerably more tractable once genuine
+scalar–vector–tensor interactions are allowed.
+This motivates the hybrid construction developed below.
+
+
+
+1.4 Genuine U(1) scalar–vector–tensor interactions
+We introduce a gauge field
+
+
+                                                     𝐴𝜇
+
+with field strength
+
+
+                                        𝐹𝜇𝜈 = ∇𝜇 𝐴𝜈 − ∇𝜈 𝐴𝜇 ,
+
+and impose the usual U(1) gauge symmetry
+
+
+                                                     14
+                                          𝐴𝜇 → 𝐴𝜇 + ∇𝜇 Λ.
+
+On the static spherical background we use the electric ansatz
+
+
+                                         𝐴𝜇 = (𝐴0 (𝑟), 0, 0, 0) .
+
+In addition to
+
+                                               1
+                                          𝑋 = − ∇𝜇 𝜙∇𝜇 𝜙,
+                                               2
+
+one may construct the gauge invariants
+
+                                                1
+                                           𝐹 = − 𝐹𝜇𝜈 𝐹 𝜇𝜈 ,
+                                                4
+
+and
+
+
+                                        𝑌 = ∇𝜇 𝜙∇𝜈 𝜙𝐹 𝜇𝛼 𝐹 𝜈 𝛼 ,
+
+up to convention-dependent normalizations.
+For the purely electric static background used here, the relevant background combinations reduce
+to functions of A_0'(r), f(r), h(r), and \phi'(r).
+The most general U(1)-gauge-invariant scalar–vector–tensor theories with second-order equations
+of motion propagate five physical degrees of freedom and possess nontrivial odd- and even-parity
+perturbation sectors. Zhang and Kase derived the corresponding ghost and Laplacian-stability
+conditions for static spherically symmetric backgrounds, including the coupled even sector.
+For \ell\ge2, Maxwell–Horndeski theory likewise contains two propagating odd-parity modes and
+three propagating even-parity modes, and Kase and Tsujikawa derived the associated radial and
+angular stability conditions.
+More recent work has also demonstrated that gauge-invariant SVT extensions can retain a gen-
+uine Horndeski scalar–tensor sector while introducing additional vector interactions, reinforcing
+the structural plausibility of treating Horndeski and genuine SVT interactions within one common
+action rather than as unrelated effective descriptions.
+This motivates the action architecture
+
+                                                    genuine
+                                          𝑆 = 𝑆H + 𝑆SVT     ,
+
+with shared Einstein/Maxwell/scalar pieces counted only once.
+This point will become crucial later.
+
+
+
+1.5 The central methodological diﬀiculty
+The main technical problem is not simply finding enough free functions.
+
+                                                   15
+There are many free functions.
+The real diﬀiculty is satisfying several logically distinct requirements simultaneously.
+The target metric must solve the background equations.
+The scalar profile must solve its own equation rather than merely the metric equations.
+The vector background must remain regular.
+The action jets used to repair perturbative instabilities must correspond to derivatives of a consistent
+local action.
+The kinetic matrices must remain nonsingular.
+The physical eigenmodes must have positive kinetic energy.
+Their squared radial and angular propagation speeds must remain positive.
+The construction must remain finite across both light rings.
+And finally, independently constructed Horndeski and genuine-SVT regions must be capable of
+belonging to one common action.
+An arbitrary pointwise assignment of perturbative coeﬀicients would not solve this problem.
+The strategy developed here is therefore based on background-integrable action jets and
+background-null perturbative controls.
+The former ensure that the action derivatives required by the background equations arise from a
+consistent local functional structure.
+The latter use directions in higher action-derivative space that do not change the already-fixed
+background solution but do change the quadratic perturbation operator.
+This separation is what makes the construction tractable.
+
+
+
+
+2. Scope of the Present Result
+Before presenting the calculation, it is useful to state precisely what has and has not been established.
+The strongest result obtained in this work is local and perturbative.
+We construct a genuine-SVT action section covering the entire two-light-ring region and demon-
+strate:
+
+
+                                       background integrability,
+
+
+                                 positive odd-parity kinetic structure,
+
+
+                        positive odd radial and angular gradient conditions,
+
+
+                                   positive even no-ghost structure,
+
+
+                                                   16
+                            positive tensor, scalar, and vector radial 𝑐𝑟2 ,
+
+and
+
+
+                             positive coupled even angular eigenvalues.
+
+The solution therefore passes the local ghost/Laplacian/hyperbolicity tests available in the employed
+perturbative formalism.
+We do not claim from this alone that the system possesses a globally well-posed nonlinear evolution
+for arbitrary data.
+We do not claim that all characteristic speeds are subluminal.
+Indeed, several reconstructed propagation speeds are substantially larger than unity.
+This does not constitute a Laplacian instability: the corresponding c^2 remains positive. It does,
+however, create a distinct question concerning causal interpretation, effective-field-theory validity,
+and the relation of the characteristic cones to the matter light cone.
+That question must be treated separately.
+Likewise, the present calculation does not yet contain a complete finite-\ell quasinormal-mode
+spectrum.
+It does not yet determine whether stable trapping generates parametrically long-lived modes.
+It does not constitute a nonlinear stability theorem.
+The local same-action handover problem is addressed explicitly below. The result is stronger than
+the existence of separate healthy patches:
+The frozen P5 geometry admits a smooth local same-action Horndeski–SVT re-
+alization across the exterior, both light rings, and the regular core. The com-
+plete two-light-ring interval remains inside the known local odd- and even-parity
+ghost/Laplacian stability domain, and every nondynamical even-parity pivot ex-
+posed by the common unreduced reduction is finite and nonzero on the certified
+reference construction.
+What remains after this closure is not another local patching step but the global dynamical program:
+finite-\ell mode spectra, stable-trapping lifetimes, nonlinear evolution, causal-cone analysis and UV
+completion.
+
+
+
+
+3. Frozen P5 Background Geometry
+3.1 Metric, variables, and the source hierarchy for \Xi
+We write the static spherical background in areal radius as
+
+                                       𝑑𝑟2
+                   𝑑𝑠2 = −𝑓(𝑟) 𝑑𝑡2 +        + 𝑟2 𝑑Ω2 ,     𝑑Ω2 = 𝑑𝜃2 + sin2 𝜃 𝑑𝜑2 ,
+                                       ℎ(𝑟)
+
+
+
+                                                  17
+and use
+
+                                              𝑟              𝑟𝑠  1
+                                         𝑥=      ,      𝑢=      = .
+                                              𝑟𝑠             𝑟   𝑥
+
+The scalar coordinate employed in the covariant reconstruction is
+
+
+                                                𝜙(𝑟) ≡ Ξ(𝑟).
+
+A notation warning is necessary when comparing the present calculation with the older SSZ bridge
+literature. The historical bridge audits often used the compactness variable
+
+                                                      𝐺𝑀     1
+                                              𝑢𝑐 =        =    ,
+                                                      𝑟𝑐2   2𝑥
+
+whereas the present P5 manuscript uses
+
+                                                     𝑟𝑠  1
+                                          𝑢=            = = 2𝑢𝑐
+                                                     𝑟   𝑥
+
+when r_s=2GM/c^2. All derivatives and numerical values in the present paper refer to the latter
+convention unless explicitly stated otherwise.
+The SSZ documentation contains two conceptually different layers that must not be conflated.
+The historical/canonical baseline uses
+
+                                                             𝑟𝑠
+                                              Ξweak (𝑟) =       ,
+                                                             2𝑟
+
+                                                                          √
+                                                    𝑟                  1+ 5
+                            Ξstrong (𝑟) = 1 − exp(−𝜑 𝑠 ) ,          𝜑=      ,
+                                                     𝑟                   2
+
+joined by a C^2 bridge in the interval
+
+
+                                          1.8𝑟𝑠 ≤ 𝑟 ≤ 2.2𝑟𝑠 .
+
+It is accompanied by the operational identities
+
+                               1
+                   𝐷(𝑟) =            ,     𝑠(𝑟) = 1 + Ξ(𝑟) = 𝐷−1 (𝑟),       𝑧SSZ = Ξ
+                            1 + Ξ(𝑟)
+
+for an observer at infinity. This layer remains the historical SSZ baseline and the weak-field reference.
+The frozen P5 background studied in the present work is a later strong-field closure. It preserves
+the exact \Xi\to D\to g_{tt} chain but replaces the simple strong-field branch by a source-locked
+autonomous susceptibility law and generalizes the radial metric closure. Thus the P5 geometry
+should not be described as though its strong-field \Xi were simply the historical exponential branch.
+The complete frozen target is therefore
+
+
+
+
+                                                       18
+                                      ℬP5 = {Ξ(𝑟), 𝑓(𝑟), ℎ(𝑟)} ,
+
+with the three functions related by the closure below rather than treated as unrelated numerical
+columns.
+
+
+
+3.2 Source-locked P5 susceptibility and the autonomous \Xi equation
+Define the dimensionless susceptibility
+
+
+                                                        𝑑Ξ
+                                             𝜒(Ξ) ≡        .
+                                                        𝑑𝑢
+
+Regression against the frozen P5 regular-core profile identifies the following source-locked polynomial
+representation:
+
+
+                                       𝜒(Ξ) = (1 − Ξ)3/2 𝒫5 (Ξ),
+
+with
+
+
+                                     1 9      75
+                          𝒫5 (Ξ) =    + Ξ + Ξ2 + 64.38457976 Ξ3
+                                     2 4      16
+                                     − 257.66308477 Ξ4 + 298.76736451 Ξ5 .
+
+On the stored profile this relation reproduces the stored susceptibility to a maximum absolute
+difference of approximately
+
+
+                                             3.6 × 10−15 ,
+
+while an independent spline derivative of the stored \Xi(u) profile agrees in the interior at the
+10^{-8} maximum and 10^{-9} RMS level. The small difference in the derivative test is dominated
+by numerical differentiation rather than the algebraic closure itself.
+The P5 scalar background may therefore be written as the autonomous first-order equation
+
+
+                                𝑑Ξ
+                                   = (1 − Ξ)3/2 𝒫5 (Ξ),        Ξ(0) = 0.
+                                𝑑𝑢
+
+Equivalently, wherever 0\le\Xi<1,
+
+                                                    Ξ
+                                                            𝑑𝜁
+                                𝑢(Ξ) − 𝑢(Ξ∗ ) = ∫            3/2 𝒫 (𝜁)
+                                                                       .
+                                                  Ξ∗ (1 − 𝜁)      5
+
+
+This representation is important for three reasons.
+First, it makes the frozen P5 scalar profile analytically reproducible without importing a tabulated
+interpolation as a fundamental definition.
+
+
+                                                  19
+Second, \mathcal P_5(\Xi) remains positive on the physical interval 0\le\Xi\le1 in the source-
+locked scan. Hence \Xi is monotonic in u and can be used as a scalar coordinate along the back-
+ground trajectory.
+Third, it separates the static geometrical closure from the dynamical completion. The autonomous
+radial equation reproduces the frozen background; by itself it is not a unique physical time-evolution
+law. Infinitely many covariant or noncovariant dynamics can share the same static profile. The
+Horndeski–SVT reconstruction below is precisely the additional step required to supply a local
+covariant dynamics and to test its perturbations.
+
+
+
+3.3 Temporal metric closure
+The historical SSZ relation
+
+
+                                            𝐷 = (1 + Ξ)−1
+
+is retained exactly by P5. Consequently,
+
+
+                                                           1
+                                       𝑓(Ξ) = 𝐷2 =              .
+                                                       (1 + Ξ)2
+
+This identity reproduces the frozen temporal metric column with maximum absolute residual ap-
+proximately
+
+
+                                             6.7 × 10−16 .
+
+The P5 temporal geometry is therefore not an independent numerical ansatz. It is algebraically
+generated by the primary scalar field \Xi.
+For later use,
+
+
+                                           𝑟Ξ′ (𝑟) = −𝑢𝜒(Ξ),
+
+and hence
+
+                                            𝑟𝑓 ′   2𝑢𝜒(Ξ)
+                                                 =        .
+                                             𝑓      1+Ξ
+
+This identity collapses the circular-null condition to a particularly simple scalar equation in Sec. 4.
+
+
+
+3.4 Radial closure and the GR susceptibility comparator
+If the same temporal relation is imposed on a Schwarzschild metric,
+
+                                                            1
+                                    𝑓Schw = 1 − 𝑢 =                ,
+                                                       (1 + ΞGR )2
+
+
+
+                                                  20
+then
+
+                                                   1
+                                       ΞGR (𝑢) = √    −1
+                                                  1−𝑢
+
+and therefore
+
+
+                                               𝑑ΞGR  1
+                                   𝜒GR (Ξ) =        = (1 + Ξ)3 .
+                                                𝑑𝑢   2
+
+The frozen P5 radial metric is generated by the susceptibility ratio,
+
+                                                       2/3
+                                                𝜒(Ξ)
+                               ℎ(Ξ) = 1 − (            )     [1 − 𝑓(Ξ)] .
+                                               𝜒GR (Ξ)
+
+This relation reproduces the frozen radial metric column to a maximum absolute difference of
+approximately
+
+
+                                            8.9 × 10−16 .
+
+The geometrical architecture can therefore be summarized as
+
+
+                   𝜒=𝑑Ξ/𝑑𝑢                                                  2/3
+                Ξ −−−−−−→ {𝐷 = (1 + Ξ)−1 , 𝑓 = 𝐷2 , ℎ = 1 − (𝜒/𝜒GR )              (1 − 𝑓)} .
+
+
+This is the explicit P5 closure that was missing from the first manuscript draft.
+
+
+
+3.5 Weak-field expansion and Schwarzschild recovery
+Expanding the autonomous equation about u=0 gives
+
+
+             1   3    5
+       Ξ(𝑢) = 𝑢 + 𝑢2 + 𝑢3 + 2.077447805 𝑢4 − 0.3696070865 𝑢5 − 2.5064633532 𝑢6 + 𝑂(𝑢7 ).
+             2   8    16
+
+For comparison,
+
+                                             1   3    5      35 4
+                  ΞGR (𝑢) = (1 − 𝑢)−1/2 − 1 = 𝑢 + 𝑢2 + 𝑢3 +     𝑢 + 𝑂(𝑢5 ).
+                                             2   8    16    128
+
+Thus the P5 scalar closure agrees with the Schwarzschild-equivalent \Xi through cubic order in u
+and first differs at u^4.
+The induced metric functions are
+
+
+                      𝑓(𝑢) = 1 − 𝑢 − 3.60802061 𝑢4 + 6.643432588 𝑢5 + 𝑂(𝑢6 ),
+
+and
+
+                                                  21
+                             ℎ(𝑢) = 1 − 𝑢 − 13.2294089033 𝑢4 + 𝑂(𝑢5 ).
+
+Hence both metric functions reproduce the Schwarzschild form
+
+
+                                        𝑓Schw = ℎSchw = 1 − 𝑢
+
+through cubic order in the weak-field compactness variable. The strong-field P5 deformation begins
+only at the next displayed order. This provides a sharper statement than merely saying that the
+geometry has an acceptable asymptotic limit.
+
+
+
+3.6 Horizonlessness and the regular core
+The autonomous closure has
+
+
+                                      Ξ(𝑢) ⟶ 1          (𝑢 → ∞).
+
+Consequently,
+
+
+                                                        1
+                                               𝑓⟶
+                                                        4
+
+rather than zero.
+A direct global scan of the radial closure gives
+
+
+                                      ℎmin ≃ 0.3268566652 > 0
+
+at approximately
+
+
+                        Ξ ≃ 0.764016,      𝑢 ≃ 0.6786844,          𝑥 ≃ 1.473439.
+
+Thus the frozen P5 closure possesses no metric horizon of the form f=0 or h=0. In the strict causal
+terminology used in the compact-object literature it is therefore more accurately classified as a
+regular horizonless ultracompact geometry than as a regular black hole.
+The central asymptotics follow from
+
+
+                                        𝒫5 (1) = 112.9263595.
+
+Writing \epsilon=1-\Xi, the leading equation is
+
+                                          𝑑𝜖
+                                             ≃ −𝒫5 (1)𝜖3/2 ,
+                                          𝑑𝑢
+
+so that
+
+
+
+
+                                                   22
+                                             4        3.13667365 × 10−4
+                                1−Ξ∼                ≃                   .
+                                         𝒫5 (1)2 𝑢2          𝑢2
+
+It follows that
+
+                                      1 7.84168413 × 10−5
+                                 𝑓=     +                 + 𝑂(𝑢−4 ),
+                                      4        𝑢2
+
+and
+
+                                          2.18115983 × 10−3
+                                 ℎ=1−                       + 𝑂(𝑢−4 ).
+                                                 𝑢2
+
+Since u=r_s/r, both corrections are even and quadratic in r near the center. The zeroth-order
+metric is
+
+                                             1
+                                      𝑑𝑠2 ≃ − 𝑑𝑡2 + 𝑑𝑟2 + 𝑟2 𝑑Ω2 ,
+                                             4
+
+which becomes locally Minkowskian at leading order after the constant time rescaling T=t/2; the
+O(r^2) corrections give finite rather than divergent curvature. This statement should not be con-
+fused with an asymptotic Minkowski normalization of the original time coordinate at the center.
+
+
+
+3.7 Background trajectory in invariant space
+Because \Xi(r) is monotonic on all reconstruction intervals, it provides a convenient coordinate
+along the one-dimensional background trajectory
+
+
+                                𝑟 ⟼ (𝜙(𝑟), 𝑋(𝑟), 𝐹 (𝑟), 𝑌 (𝑟)),     𝜙 = Ξ.
+
+For the static radial scalar,
+
+                                                 1
+                                         𝑋(𝑟) = − ℎ(𝑟)𝜙′ (𝑟)2 .
+                                                 2
+
+For the electric background
+
+
+                                          𝐴𝜇 = (𝐴0 (𝑟), 0, 0, 0),
+
+we use
+
+                                                       ℎ𝐴′2
+                                                          0
+                                               𝐹bg =        ,
+                                                        2𝑓
+
+and, in the convention adopted by the numerical reconstruction,
+
+
+                                              𝑌bg = 4𝑋𝐹bg .
+
+
+                                                    23
+The fact that the background occupies only a one-dimensional curve inside the multidimensional
+invariant space is the origin of the transverse action-jet freedom used later to stabilize perturbations
+without deforming the frozen geometry.
+
+
+
+3.8 Reproducibility status
+The P5 susceptibility, temporal closure, and radial closure have been independently regressed against
+the frozen source profile. The resulting geometry can now be regenerated from the equations in this
+section and the boundary condition \Xi(0)=0.
+The historical SSZ 1.8r_s–2.2r_s Hermite bridge remains important as provenance and as a varia-
+tional template for smooth handovers, but it is not inserted into the present strong-field P5 geometry
+as a fundamental field equation. The distinction between the historical bridge and the current P5
+closure is maintained throughout the rest of the paper.
+
+
+
+
+4. Null Geometry of the P5 Strong-Field Region
+4.1 Circular-null condition
+For equatorial null geodesics,
+
+                                                         𝜋
+                                                    𝜃=     ,
+                                                         2
+
+the Killing symmetries imply conserved quantities
+
+
+                                        𝐸 = 𝑓 𝑡,̇         𝐿𝑧 = 𝑟2 𝜑.̇
+
+The null condition,
+
+
+                                             𝑔𝜇𝜈 𝑥𝜇̇ 𝑥𝜈̇ = 0,
+
+then yields
+
+                                            𝐸 2 𝑟2̇  𝐿2
+                                        −      +    + 2𝑧 = 0.
+                                            𝑓    ℎ   𝑟
+
+Equivalently,
+
+                                                     𝐸 2 𝐿2𝑧
+                                         𝑟2̇ = ℎ (      − 2 ).
+                                                     𝑓   𝑟
+
+Introducing the impact parameter
+
+                                                         𝐿𝑧
+                                                𝑏=          ,
+                                                         𝐸
+
+                                                     24
+circular null trajectories satisfy
+
+
+                                                 𝑟̇ = 0
+
+and
+
+                                               𝑑 2
+                                                  𝑟 ̇ = 0.
+                                               𝑑𝑟
+
+The first condition implies
+
+                                                      𝑟2
+                                              𝑏2 =        .
+                                                     𝑓(𝑟)
+
+The second implies
+
+                                            𝑑 𝑟2
+                                              ( ) = 0,
+                                            𝑑𝑟 𝑓
+
+or
+
+
+                                            𝑟𝑓 ′ − 2𝑓 = 0.
+
+The P5 geometry possesses two strong-field roots of this expression.
+
+
+
+4.2 Outer unstable light ring
+The outer solution is
+
+
+                                              𝑥out = 1.5 .
+
+Its instability is determined by the sign of the second variation of the null effective potential.
+This light ring was used as one of the principal geometrical calibration points of the P5 strong-field
+profile.
+At this orbit the construction reproduces the desired Schwarzschild optical scale.
+In the units r_s=2GM,
+
+
+                                         𝑟out = 1.5𝑟𝑠 = 3𝐺𝑀 ,
+
+coinciding with the Schwarzschild photon-sphere radius.
+The corresponding critical impact parameter is therefore arranged to reproduce the Schwarzschild
+shadow scale.
+The eikonal instability rate, characterized by the radial Lyapunov exponent of the orbit, is also
+matched at this outer ring.
+
+
+
+                                                   25
+The significance of the present dynamical reconstruction is that this geometrical agreement does
+not coincide with a degeneracy of the local field-theory kinetic matrix.
+A full-SVT background pivot investigated during the construction has determinant
+
+                                                     √
+                                        det ℳ = 𝑓 5/2 ℎ 𝜙′2 𝑟8 ,
+
+up to the normalization adopted for the particular local reconstruction variables.
+Crucially, this expression contains no factor
+
+
+                                                𝑟𝑓 ′ − 2𝑓.
+
+Hence the light-ring equation is not automatically a perturbative determinant zero.
+Numerically the pivot remains finite at the outer orbit.
+This already indicates that the optical critical point of null geodesics and the constraint structure
+of the covariant field theory are logically distinct.
+
+
+
+4.3 Inner stable light ring
+The second root occurs at
+
+
+                                            𝑥in ≃ 1.41616064
+
+or
+
+
+                                             𝑢in ≃ 0.706135.
+
+The second derivative of the null potential has the opposite sign from that of the outer orbit, making
+this solution stable against infinitesimal radial null displacements at the geodesic level.
+The associated null well is shallow.
+The numerically reconstructed relative depth is approximately
+
+
+                                         Δwell ≃ 4.177 × 10−3 .
+
+This shallow trapping region is one of the most interesting aspects of the geometry.
+It also forces us to distinguish three different notions of stability.
+First, there is geodesic stability of a circular null trajectory.
+Second, there is local field-theory stability, meaning absence of ghosts and imaginary character-
+istic speeds.
+Third, there is global dynamical stability, which concerns the long-time evolution of finite per-
+turbations and includes possible effects of trapping and mode accumulation.
+The inner light ring is stable in the first sense.
+
+                                                     26
+The genuine-SVT realization constructed below is healthy in the second sense.
+The third question remains open.
+
+
+
+
+5. Covariant Theory Architecture
+5.1 Full Horndeski sector
+We use the standard four-dimensional Horndeski action in the generalized-Galileon form
+
+                                                     5
+                                                 √
+                                      𝑆𝐻 = ∫ 𝑑4 𝑥 −𝑔 ∑ ℒ𝑖 ,
+                                                          𝑖=2
+
+
+with
+
+                                               1
+                                          𝑋 = − ∇𝜇 𝜙∇𝜇 𝜙.
+                                               2
+
+Our sign convention is
+
+
+                                           ℒ2 = 𝐺2 (𝜙, 𝑋),
+
+
+                                        ℒ3 = −𝐺3 (𝜙, 𝑋)□𝜙,
+
+
+                           ℒ4 = 𝐺4 (𝜙, 𝑋)𝑅 + 𝐺4,𝑋 [(□𝜙)2 − 𝜙;𝜇𝜈 𝜙;𝜇𝜈 ] ,
+
+and
+
+
+                     ℒ5 = 𝐺5 (𝜙, 𝑋)𝐺𝜇𝜈 𝜙;𝜇𝜈
+                             𝐺5,𝑋
+                          −       [(□𝜙)3 − 3□𝜙 𝜙;𝜇𝜈 𝜙;𝜇𝜈 + 2𝜙;𝜇 ;𝜈 𝜙;𝜈 ;𝜌 𝜙;𝜌 ;𝜇 ].
+                               6
+
+Here
+
+                                                                 𝜕𝐺𝑖
+                                 𝜙;𝜇𝜈 ≡ ∇𝜇 ∇𝜈 𝜙,        𝐺𝑖,𝑋 =       .
+                                                                 𝜕𝑋
+
+These combinations are arranged so that the equations of motion remain second order despite the
+derivative interactions. The Einstein-Hilbert term is included as the special choice G_4=M_{\rm
+Pl}^2/2.
+The P5 construction does not require all four functions to be active with equal importance at every
+radius. The outer carrier uses a restricted luminal sector with
+
+
+                                      𝐺4 = 𝐺4 (𝜙),       𝐺5 = 0,
+
+
+
+                                                   27
+and a finite cubic interaction
+
+
+                                                 𝐺3 (𝜙, 𝑋).
+
+The regular center instead uses genuine quartic Horndeski jets with nonzero G_{4,X}-type structure
+and, where convenient in the local jet representation, the equivalent G_{5,\phi} control.
+The full \mathcal L_2–\mathcal L_5 definition is given here because later perturbative coeﬀicients
+such as
+
+
+                                            ℱ,      𝒢,        ℋ,
+
+and the common even-parity coeﬀicients a_i,b_i,c_i,d_i,e_i depend on these derivatives. Treat-
+ing the action only schematically obscures which radial jets are independent and which are fixed by
+integrability.
+
+
+
+5.2 Full gauge-invariant scalar–vector–tensor sector
+We introduce a U(1) gauge field
+
+
+                                            𝐴𝜇 → 𝐴𝜇 + ∇𝜇 Λ,
+
+with
+
+                                                                  1
+                           𝐹𝜇𝜈 = ∇𝜇 𝐴𝜈 − ∇𝜈 𝐴𝜇 ,          𝐹 ̃ 𝜇𝜈 = ℰ𝜇𝜈𝛼𝛽 𝐹𝛼𝛽 .
+                                                                  2
+
+The standard scalar-vector invariants are
+
+                                             1
+                                        𝑋 = − ∇𝜇 𝜙∇𝜇 𝜙,
+                                             2
+
+                                                 1
+                                            𝐹 = − 𝐹𝜇𝜈 𝐹 𝜇𝜈 ,
+                                                 4
+
+                                                   1
+                                            𝐹 ̃ = − 𝐹𝜇𝜈 𝐹 ̃ 𝜇𝜈 ,
+                                                   4
+
+and
+
+
+                                      𝑌 = ∇𝜇 𝜙∇𝜈 𝜙𝐹 𝜇𝛼 𝐹 𝜈 𝛼 .
+
+A convenient representation of the genuine second-order gauge-invariant SVT interactions is
+
+                                      (2)
+                                    ℒSVT = 𝑓2 (𝜙, 𝑋, 𝐹 , 𝐹 ̃ , 𝑌 ),
+
+
+
+
+                                                    28
+                                          (3)
+                                        ℒSVT = ℳ𝜇𝜈
+                                                3 ∇𝜇 ∇𝜈 𝜙,
+
+
+with
+
+
+                         ℳ𝜇𝜈                    ̃                  ̃ 𝜇𝜌 𝐹 ̃ 𝜈𝜎 ,
+                          3 = [𝑓3 (𝜙, 𝑋)𝑔𝜌𝜎 + 𝑓3 (𝜙, 𝑋)∇𝜌 𝜙∇𝜎 𝜙] 𝐹
+
+
+and
+
+                       (4)
+                     ℒSVT = ℳ𝜇𝜈𝛼𝛽
+                             4    ∇𝜇 ∇𝛼 𝜙 ∇𝜈 ∇𝛽 𝜙 + 𝑓4 (𝜙, 𝑋)𝐿𝜇𝜈𝛼𝛽 𝐹𝜇𝜈 𝐹𝛼𝛽 ,
+
+where
+
+
+                                      1
+                             ℳ𝜇𝜈𝛼𝛽
+                              4    = [ 𝑓4,𝑋 (𝜙, 𝑋) + 𝑓4̃ (𝜙)] 𝐹 ̃ 𝜇𝜈 𝐹 ̃ 𝛼𝛽 ,
+                                      2
+
+and the double dual Riemann tensor is
+
+
+                                            1
+                                     𝐿𝜇𝜈𝛼𝛽 = ℰ𝜇𝜈𝜌𝜎 ℰ𝛼𝛽𝛾𝛿 𝑅𝜌𝜎𝛾𝛿 .
+                                            4
+
+These interactions propagate one scalar, two vector, and two tensor degrees of freedom on the
+generic background, for a total of five physical modes.
+For the static P5 reconstruction we use
+
+
+                                         𝐴𝜇 = (𝐴0 (𝑟), 0, 0, 0),
+
+so the parity-odd invariant \tilde F vanishes on the background. Its higher derivatives can never-
+theless influence odd perturbations and therefore provide background-null control directions.
+The central constructive representative is defined along the background trajectory by the jet choices
+
+
+                                        𝑓2,𝐹 = 1,          𝑓2,𝑌 = 0,
+
+
+                                                𝑓4̃ = 0,
+
+
+                                      𝑓4,𝑋 = 𝑁4 ,          𝑓4,𝑋𝑋 = 0,
+
+while
+
+
+                                                    𝑓3,𝑋
+
+is not prescribed as a free pointwise stabilizer. It is solved from the scalar background equation, as
+described in Sec. 7.
+
+
+                                                    29
+5.3 One common action and the no-double-counting convention
+The most useful architecture for the final P5 completion is
+
+                                              5
+                                         √             genuine
+                               𝑆 = ∫ 𝑑4 𝑥 −𝑔 [∑ ℒH
+                                                 𝑖 + ΔℒSVT ] .
+                                                    𝑖=2
+
+
+The symbol \Delta is important. The general SVT f_2 sector can itself contain pure scalar and
+Maxwell pieces already represented in the Horndeski/Maxwell baseline. In the hybrid bookkeeping
+these shared pieces are counted exactly once.
+Equivalently, at the level of any unreduced quadratic-action coeﬀicient,
+
+
+                                 𝐶HSVT = 𝐶MH + (𝐶SVT − 𝐶shared ) .
+
+This combination must be performed before constraint elimination.
+The P5 construction therefore distinguishes three kinds of action data:
+   1. background-constrained jets, fixed by the metric, scalar, vector and background equations;
+   2. background-null transverse jets, unconstrained by the one-dimensional background curve
+      but visible to perturbations;
+   3. handover jets, generated when different healthy local representatives are embedded into one
+      scalar-coordinate partition and differentiated.
+This classification is the basis of the same-action closure proved in Sections 16–21.
+
+
+
+5.4 Static field equations and integrability hierarchy
+On the static spherical ansatz the independent background equations may be organized as
+
+
+                           ℰ00 = 0,      ℰ11 = 0,         ℰ𝜙 = 0,   ℰ𝐴 = 0.
+
+The reconstruction does not use only the metric equations. In the strong-field lobe the metric
+equations determine the required on-shell values of f_2 and f_{2,X}, the vector equation fixes
+the electric branch/current condition, and the scalar equation is retained as a nontrivial first-order
+integrability equation for f_{3,X}.
+This ordering prevents a common inverse-construction error: a set of perturbatively convenient
+pointwise jets is not accepted unless it can be lifted to a local action section that also satisfies the
+background scalar and vector equations.
+The resulting theory is therefore reconstructed around the frozen P5 geometry, but it is not merely
+fitted to a perturbation matrix.
+
+
+
+
+                                                    30
+6. Exterior Horndeski Reconstruction
+6.1 Motivation
+The genuine-SVT vector background becomes weak near its natural onset.
+Trying to force the complete strong-field stabilization problem onto pure Einstein-plus-SVT precisely
+where
+
+
+                                                  𝐴′0 → 0
+
+can drive required interaction derivatives to unnaturally large values.
+The correct solution is not to insist that one sector carry every radius.
+Instead, the exterior scalar–tensor sector carries the solution through the vector onset.
+The genuine-SVT interactions then become increasingly important inward.
+
+
+
+6.2 Correct general-f\neq h no-ghost relation
+For the restricted luminal exterior carrier,
+
+
+                                      𝐺4 = 𝐺4 (𝜙),          𝐺5 = 0,
+
+the scalar kinetic combination can be written in terms of an auxiliary function Q(r).
+A previously used simplified expression was valid only in the special case
+
+
+                                                  𝑓 = ℎ.
+
+The frozen P5 background does not satisfy this equality throughout the relevant exterior region.
+Using the general Maxwell–Horndeski relation, define
+
+                                                        √𝑓/ℎ
+                                               𝑦(𝑟) =        .
+                                                         𝑄
+
+The scalar no-ghost reconstruction becomes a first-order equation
+
+
+                                            1 𝑓
+                                        𝑦′ = √ (𝐾 + 𝐻) ,
+                                            2 ℎ
+
+where
+
+
+                                                 𝐻 = 2𝐺4
+
+for the restricted carrier.
+
+
+
+
+                                                    31
+Imposing the regular endpoint conditions fixes a positive constant scalar kinetic margin of approxi-
+mately
+
+
+                                        𝐾ext ≃ 9.7423 × 10−3 .
+
+This correction is important conceptually.
+The exterior Horndeski witness survives the use of the full f\neq h geometry.
+
+
+
+6.3 Continuation through the strong-field region
+The corrected Horndeski carrier can be continued inward while remaining finite and retaining posi-
+tive scalar kinetic energy.
+In particular, a smooth H(r) profile can be constructed between the outer onset and the quartic-core
+boundary such that the associated cubic interaction G_{3,X} remains finite.
+This continuation passes through
+
+
+                                                  𝑥 = 1.5
+
+and
+
+
+                                            𝑥 ≃ 1.41616064.
+
+Thus no singular Horndeski control pivot occurs at either light ring.
+A direct full-Horndeski principal-control rank test was carried out using a nonredundant set of
+targets,
+
+
+                                            (𝐹 , 𝐻, 𝑎1 , 𝑐4 , 𝑐2 ),
+
+and controls drawn from
+
+
+               𝐺4,𝑋 ,   𝐺4,𝑋𝑋 ,   𝐺4,𝜙𝑋 ,    𝐺5,𝜙 ,    𝐺5,𝜙𝑋 ,        𝐺5,𝑋 ,   𝐺5,𝑋𝑋 ,   𝐺2,𝑋𝑋 .
+
+The control map retains full rank across the onset-to-core interval.
+The apparent degeneracy that appears if one attempts to control redundant tensor combinations
+precisely at
+
+
+                                              𝑟𝑓 ′ − 2𝑓 = 0
+
+is therefore a target-space redundancy associated with the photon-sphere condition, not a genuine
+disappearance of the Horndeski action controls.
+This will become important when discussing the hybrid light-ring transition.
+
+
+
+
+                                                      32
+7. Genuine-SVT Strong-Field Lobe
+7.1 Domain
+The background-integrable strong-field SVT representative is constructed on
+
+
+                                            0.61 ≤ 𝑢 ≤ 0.715.
+
+Since
+
+                                                           1
+                                                  𝑥=         ,
+                                                           𝑢
+
+this corresponds to
+
+
+                                      1.3986014 ≲ 𝑥 ≲ 1.6393443.
+
+Both light rings lie strictly inside this interval.
+The outer light ring has
+
+                                                 2
+                                           𝑢=      ≃ 0.666667.
+                                                 3
+
+The inner stable ring has
+
+
+                                              𝑢 ≃ 0.706135.
+
+The inner end of the SVT lobe extends beyond the start of the regular Horndeski core,
+
+
+                                               𝑢core = 0.71,
+
+giving a genuine radial overlap.
+
+
+
+7.2 Background equations
+The static field equations may be written schematically as
+
+
+                                                 ℰ00 = 0,
+
+
+                                                 ℰ11 = 0,
+
+
+                                                 ℰ𝜙 = 0,
+
+
+                                                 ℰ𝐴 = 0.
+
+                                                      33
+For the zero-net-charge branch used here, the vector equation can be represented through the
+corresponding conserved current condition.
+The two independent metric equations are used to determine the on-shell values of
+
+
+                                                   𝑓2
+
+and
+
+
+                                                 𝑓2,𝑋 .
+
+The scalar equation is not discarded.
+It is used to solve for the previously free quantity
+
+
+                                            𝑞(𝑟) ≡ 𝑓3,𝑋 ∣bg .
+
+After substituting all other chosen jets and implementing the background-chain-rule relations, the
+scalar field equation becomes a linear first-order ordinary differential equation for q(r).
+This is one of the most important constructive steps in the calculation.
+A pointwise assignment of f_{3,X} could always be used to alter a perturbation coeﬀicient.
+It would not demonstrate that the assigned quantity belongs to an action whose scalar equation is
+solved by the P5 profile.
+Solving the ODE does.
+
+
+
+7.3 Integrability result
+A minimax-boundary solution was obtained throughout the complete interval
+
+
+                                          0.61 ≤ 𝑢 ≤ 0.715.
+
+The reconstructed derivative remains finite, with
+
+
+                                         max |𝑓3,𝑋 | ≃ 44.73.
+
+The direct residual of the scalar equation is approximately
+
+
+                                        max |ℰ𝜙 | ≲ 2 × 10−12 .
+
+Restricting the domain to
+
+
+                                               𝑢 ≤ 0.71
+
+reduces the maximum required magnitude to approximately
+
+
+                                                   34
+                                                    25.93.
+
+The extension to u=0.715 is nevertheless useful because it creates a finite overlap with the inner
+Horndeski core.
+The strong-field SVT construction should therefore be regarded as an explicit on-shell action-jet
+section, rather than merely a perturbative coeﬀicient fit.
+
+
+
+
+8. Tubular Reconstruction and Background-Null Controls
+8.1 Why higher action derivatives are not fixed by the background
+The static background traces only a one-dimensional trajectory through the multidimensional in-
+variant space
+
+
+                                                 (𝜙, 𝑋, 𝐹 , 𝑌 ).
+
+Knowledge of the value and first directional derivative of an action function along this curve does
+not determine all derivatives transverse to the curve.
+For example, suppose
+
+
+                                          𝑓2 = 𝑓2 (𝜙, 𝑋, 𝐹 , 𝑌 ).
+
+The background equations constrain combinations involving quantities such as
+
+
+                                        𝑓2,𝑋 ,       𝑓2,𝐹 ,        𝑓2,𝑌 ,
+
+evaluated on the trajectory.
+They do not uniquely determine the entire Hessian
+
+                                            𝑓2,𝑋𝑋 𝑓2,𝑋𝐹             𝑓2,𝑋𝑌
+                                           ⎛                               ⎞
+                                   ∇2 𝑓2 = ⎜
+                                           ⎜ 𝑓2,𝑋𝐹 𝑓2,𝐹 𝐹           𝑓2,𝐹 𝑌 ⎟
+                                                                           ⎟.
+                                           ⎝𝑓2,𝑋𝑌 𝑓2,𝐹 𝑌            𝑓2,𝑌 𝑌 ⎠
+
+Those transverse second derivatives enter the perturbation operator.
+This creates a natural set of controls that can change stability while leaving the background un-
+changed.
+
+
+
+8.2 Hessian-control basis
+We parameterize the independent background-null Hessian directions by
+
+
+                               𝐻 = (𝐻𝑋𝑋 , 𝐻𝑋𝐹 , 𝐻𝑋𝑌 , 𝐻𝐹 𝐹 , 𝐻𝐹 𝑌 , 𝐻𝑌 𝑌 ) .
+
+
+                                                       35
+For the central lobe, the perturbative quantities v_1, v_4, and c_2 depend linearly on these controls.
+The relevant linear maps may be represented by the rows
+
+
+                                        𝐿𝑣1 = (0, 0, 0, 1, −4𝜅, 4𝜅2 ) ,
+
+where
+
+
+                                                  𝜅 = ℎ𝜙′2 ,
+
+and
+
+
+                                    𝐿𝑣4 = (0, −1, 2𝜅, 0, −4𝐹bg , 8𝐹bg 𝜅) .
+
+For the scalar radial coeﬀicient,
+
+                                    𝜅                       2       2
+                             𝐿𝑐2 = ( , −𝐹bg , 6𝐹bg 𝜅, 0, −4𝐹bg , 16𝐹bg 𝜅) .
+                                    2
+
+The corresponding radial prefactors are finite throughout the lobe.
+A minimum-norm Hessian solution therefore exists for the chosen perturbative targets.
+The largest Euclidean Hessian norm required in the complete interval is approximately
+
+
+                                           ‖𝐻‖max ≃ 4.27 × 102 .
+
+No loss of control rank occurs in the light-ring region.
+
+
+
+
+9. Odd-Parity Stability
+9.0 Harmonic decomposition and the complete odd reduction chain
+Before quoting the numerical inequalities, it is useful to make the perturbation reduction explicit.
+For each \ell,m, define the axial vector harmonic
+
+
+                                             𝑆𝑎ℓ𝑚 = 𝐸𝑎 𝑏 ∇𝑏 𝑌ℓ𝑚 .
+
+Up to conventional normalization of the tensor harmonic, the odd metric perturbations are repre-
+sented by
+
+
+                             𝛿𝑔𝑡𝑎 = 𝑄(𝑡, 𝑟)𝑆𝑎ℓ𝑚 ,          𝛿𝑔𝑟𝑎 = 𝑊 (𝑡, 𝑟)𝑆𝑎ℓ𝑚 ,
+
+and an angular tensor amplitude U(t,r). The odd vector perturbation is
+
+
+                                            𝛿𝐴𝑎 = 𝛿𝐴(𝑡, 𝑟)𝑆𝑎ℓ𝑚 .
+
+
+                                                      36
+There is no odd scalar perturbation. For \ell\ge2, the Regge–Wheeler-type gauge
+
+
+                                                   𝑈 =0
+
+removes the remaining odd coordinate gauge freedom.
+The quadratic odd action has the generic reduced form
+
+                    (2)    1
+                  𝑆odd =     ∫ 𝑑𝑡 𝑑𝑟 [q̇ 𝑇𝑜 𝐾𝑜 q̇ 𝑜 + q̇ 𝑇𝑜 𝑅𝑜 q′𝑜 − q′𝑇    ′    𝑇
+                                                                      𝑜 𝐺𝑜 q𝑜 − q𝑜 𝑀𝑜 q𝑜 ] ,
+                           2
+
+with two physical fields after the nondynamical metric amplitude has been removed,
+
+
+                                             q𝑜 = (𝑞𝑇 , 𝑞𝑉 )𝑇 .
+
+In the Maxwell–Horndeski limit this reduction can be written using an auxiliary gravitational field
+\chi_o so that the dynamical pair is (\chi_o,\delta A). The pure-limit action provides an im-
+portant regression target: the tensor and vector no-ghost conditions reduce to positivity of the
+corresponding kinetic entries, and the eikonal characteristic equation is
+
+
+                                    det(𝜔2 𝐾𝑜 − 𝜔𝑘𝑅𝑜 − 𝑘2 𝐺𝑜 ) = 0.
+
+The genuine-SVT theory changes the coeﬀicients and allows additional mixing, but not the physical
+mode count. In the Zhang–Kase coeﬀicient basis used by the present numerical reconstruction,
+the required local inequalities reduce to the \alpha_i conditions stated below. The entire odd
+scan is therefore a test of the two-field quadratic operator, not a collection of unrelated scalar
+inequalities.
+The parity-odd background-null derivative f_{2,\tilde F\tilde F} is kept explicit because
+\tilde F=0 on the electric background while its second derivative enters the odd angular principal
+symbol. This is a concrete example of a tubular action direction that is invisible to the background
+but physical at quadratic order.
+
+
+
+9.1 Structure of the sector
+Odd-parity perturbations contain the tensor-like gravitational mode together with the transverse
+vector perturbation.
+The local health conditions are conveniently written in terms of the background coeﬀicients
+
+
+                                                 𝛼1 , … , 𝛼 9 .
+
+The exact definitions are those of the general gauge-invariant SVT perturbation formalism.
+The central construction produces
+
+
+                                                  𝛼4 > 0,
+
+
+
+                                                      37
+                                             𝛼7 > 0,
+
+and
+
+
+                                             𝛼6 < 0.
+
+The vector kinetic combination
+
+
+                                        𝐶odd ≡ 𝛼22 − 𝛼1 𝛼5
+
+must also remain positive.
+Numerically,
+
+
+                                       min 𝐶odd ≃ 0.76072.
+
+The minimum values obtained over the lobe include approximately
+
+
+                                     min 𝛼4 ≃ 9.996 × 10−3 ,
+
+and
+
+
+                                        min 𝛼7 ≃ 2.0015.
+
+Thus neither the tensor nor vector odd-parity kinetic block approaches zero.
+
+
+
+9.2 Radial odd speeds
+The tensor radial squared propagation speed is
+
+                                          2            𝛼6
+                                         𝑐𝑟,𝑇 =−            .
+                                                      𝑓ℎ 𝛼7
+
+Throughout the complete strong-field lobe,
+
+                                            2
+                                       min 𝑐𝑟,𝑇 ≃ 1.00507.
+
+The odd-vector radial speed takes the form
+
+
+                                        2        𝛼22 − 𝛼1 𝛼5
+                                       𝑐𝑟,𝑉 =                .
+                                                  𝑓ℎ 𝛼1 𝛼4
+
+The minimum obtained numerically is
+
+                                            2
+                                       min 𝑐𝑟,𝑉 ≃ 9.45887.
+
+
+                                                 38
+Both modes therefore remain radially hyperbolic.
+The large value of the vector speed is noted but not interpreted here as an instability.
+The mathematical condition relevant to the local Laplacian analysis is
+
+
+                                               𝑐𝑟2 > 0.
+
+Questions concerning superluminal effective characteristics are postponed to a dedicated causal-
+ity/EFT analysis.
+
+
+
+9.3 Odd angular sector
+The tensor angular coeﬀicient remains positive over the same interval.
+The vector angular mode contains an additional action derivative that can be adjusted along a
+background-null direction.
+A particularly useful control is the second derivative with respect to the parity-odd electromagnetic
+invariant,
+
+
+                                               𝑓2,𝐹 ̃ 𝐹 ̃ ,
+
+which does not affect the static electric background or the even linear sector.
+This permits the odd angular coeﬀicient \alpha_9 to be tuned independently.
+Choosing the corresponding background-null jet so that
+
+
+                                              𝛼9 = −1
+
+provides a strictly positive lower bound for the remaining vector angular numerator.
+The resulting margin is bounded below by a term proportional to
+
+
+                                                4𝛼7 ,
+
+whose minimum is approximately
+
+
+                                               8.006.
+
+Thus the odd angular sector can be completed without disturbing the already-fixed background or
+even-sector construction.
+
+
+
+
+                                                  39
+10. Even-Parity Stability
+10.0 Even harmonic content, gauge fixing, and the unreduced action
+For \ell\ge2, the even metric sector contains the scalar amplitudes
+
+
+                               𝐻0 ,     𝐻1 ,     𝐻2 ,       ℎ0 ,   ℎ1 ,     𝐾,       𝐺,
+
+while
+
+
+                                                 ̄ + 𝛿𝜙(𝑡, 𝑟)𝑌ℓ𝑚
+                                            𝜙 = 𝜙(𝑟)
+
+and the vector perturbation is decomposed as
+
+
+                     𝛿𝐴𝑡 = 𝛿𝐴0 𝑌ℓ𝑚 ,         𝛿𝐴𝑟 = 𝛿𝐴1 𝑌ℓ𝑚 ,                𝛿𝐴𝑎 = 𝛿𝐴2 ∇𝑎 𝑌ℓ𝑚 .
+
+We use the uniform-curvature-type coordinate gauge
+
+
+                                      ℎ0 = 0,         𝐺 = 0,              𝐾 = 0,
+
+and the U(1) gauge
+
+
+                                                     𝛿𝐴2 = 0.
+
+The remaining unreduced variables are therefore
+
+
+                                  (𝐻0 , 𝐻1 , 𝐻2 , ℎ1 , 𝛿𝜙, 𝛿𝐴0 , 𝛿𝐴1 , 𝑉 ) ,
+
+where V is the auxiliary vector-flux variable introduced below.
+The Maxwell–Horndeski pure limit provides a useful transparent template for the common action.
+Its H_0 constraint sector contains
+
+                        ℒ𝑢 ⊃ 𝐻0 [𝑎1 𝛿𝜙″ + 𝑎2 𝛿𝜙′ + 𝑎3 𝐻2′ + 𝐿𝑎4 ℎ′1
+                                  + (𝑎5 + 𝐿𝑎6 )𝛿𝜙 + (𝑎7 + 𝐿𝑎8 )𝐻2 + 𝐿𝑎9 ℎ1 ],
+
+with L=\ell(\ell+1). The electric perturbation sector has the schematic exact structure
+
+                 ℒ𝐴 = 𝑣1 (𝛿𝐴′0 − 𝛿𝐴̇ 1 )2
+                      + (𝛿𝐴′ − 𝛿𝐴̇ )(𝑣 𝐻 + 𝑣 𝐻 + 𝑣 𝛿𝜙′ + 𝑣 𝛿𝜙) + 𝑣 𝐻 2 + ⋯ .
+                              0         1    2   0      3     2     4            5        6   0
+
+
+Introducing V rewrites the square as
+
+                                                                                     ′
+                                           𝑣 𝐻 + 𝑣3 𝐻2 + 𝑣4 𝛿𝜙 + 𝑣5 𝛿𝜙
+                ℒ𝐴 = 𝑣1 [2𝑉 (𝛿𝐴′0 − 𝛿𝐴̇ 1 + 2 0                        ) − 𝑉 2]
+                                                        2𝑣1
+                        (𝑣 𝐻 + 𝑣3 𝐻2 + 𝑣4 𝛿𝜙′ + 𝑣5 𝛿𝜙)2
+                     − 2 0                              + ⋯.
+                                      4𝑣1
+
+                                                        40
+Variation with respect to V returns
+
+                                                                        ′
+                                             𝑣 𝐻 + 𝑣3 𝐻2 + 𝑣4 𝛿𝜙 + 𝑣5 𝛿𝜙
+                           𝑉 = 𝛿𝐴′0 − 𝛿𝐴̇ 1 + 2 0                        .
+                                                        2𝑣1
+
+The genuine-SVT theory extends the vector coeﬀicient dictionary to v_1,\ldots,v_{13} and mod-
+ifies the scalar-metric coeﬀicients, but the same unreduced architecture survives. The role of H_0 as
+a Lagrange multiplier and the need to eliminate common constraints after assembling all Horndeski
+and SVT contributions are therefore structural rather than model-specific.
+After all nondynamical fields are removed, the three physical even modes can be represented by
+
+
+                                             q𝑒 = (𝜓, 𝛿𝜙, 𝑉 )𝑇 ,
+
+with quadratic principal action
+
+                  (2)     1
+                𝑆even =     ∫ 𝑑𝑡 𝑑𝑟 [q̇ 𝑇𝑒 𝐾𝑒 q̇ 𝑒 + q̇ 𝑇𝑒 𝑅𝑒 q′𝑒 − q′𝑇    ′    𝑇
+                                                                     𝑒 𝐺𝑒 q𝑒 − q𝑒 𝑀𝑒 q𝑒 + ⋯] .
+                          2
+
+Thus the final no-ghost condition is positivity of the physical kinetic matrix K_e, while radial
+characteristics are roots of
+
+
+                                    det(𝜔2 𝐾𝑒 − 𝜔𝑘𝑅𝑒 − 𝑘2 𝐺𝑒 ) = 0.
+
+The large-L angular symbol supplies the independent angular characteristic test. Sections 10–12
+evaluate these conditions for the pure genuine-SVT P5 lobe; Sections 18–21 construct the common
+hybrid operator needed for the same-action interpolation.
+
+
+
+10.1 Why this is the decisive sector
+The even-parity system is substantially more complicated than the odd sector because the scalar
+perturbation couples to the even gravitational and vector modes.
+For \ell\ge2, the complete theory contains three physical even-parity propagating degrees of free-
+dom.
+Their no-ghost and gradient conditions cannot generally be inferred from the separate scalar, vector,
+and tensor subsectors.
+The coupled kinetic and angular matrices must be analyzed.
+This makes the successful even-sector reconstruction the strongest local result of the present work.
+
+
+
+10.2 Exact P_1 definition
+A crucial consistency correction arose during the calculation because the typesetting of the published
+expression had initially been parsed incorrectly.
+With the adopted conventions,
+
+
+                                                     41
+                                                  𝑎4 𝑑    𝑓
+                                           𝑃1 =        (𝑟√ ) .
+                                                  𝑓 𝑑𝑟    ℎ
+
+For the Einstein-plus-genuine-SVT central representative,
+
+                                                       √
+                                                        𝑓ℎ
+                                                  𝑎4 =     .
+                                                        2
+
+There is no additional factor of r multiplying a_4.
+This correction is important because an earlier provisional implementation had used
+
+                                                          √
+                                                   𝑟        𝑓ℎ
+                                              𝑎old
+                                               4 =             ,
+                                                           2
+
+which is incorrect.
+All final values quoted in this manuscript use the corrected expression.
+
+
+
+10.3 Exact even no-ghost combination
+The relevant kinetic combination is
+
+
+                                           𝑟𝐴′ 𝑣
+                                𝒦 = 2 (𝑃1 + √0 6 ) − 4√𝑓ℎ 𝛼7 𝑟2 .
+                                           2 𝑓ℎ
+
+The Appendix-A coeﬀicients provide an independent internal identity,
+
+
+                                                     𝒦
+                                              𝑒1 = √       .
+                                                    𝑓ℎ 𝜙′2
+
+This identity constitutes an unusually strong regression test because e_1 and \mathcal K are as-
+sembled from different combinations of the unreduced quadratic-action coeﬀicients.
+On the complete background-integrable lobe we find
+
+
+                                max ∣𝒦 − 𝑒1 √𝑓ℎ 𝜙′2 ∣ ≃ 2.18 × 10−10 .
+
+The identity therefore closes numerically.
+The kinetic combination itself satisfies
+
+
+                                      10.5415 ≲ 𝒦 ≲ 137.879.
+
+In particular,
+
+
+                                                    𝒦>0
+
+
+                                                     42
+throughout the entire interval.
+At the outer light ring,
+
+
+                                              𝑥 = 1.5,
+
+we obtain approximately
+
+
+                                          𝒦out ≃ 23.3092.
+
+At the inner stable light ring,
+
+
+                                          𝑥 ≃ 1.41616064,
+
+we obtain
+
+
+                                          𝒦in ≃ 71.1498.
+
+Thus neither light ring comes remotely close to the even-sector kinetic boundary.
+
+
+
+
+11. Radial Even-Parity Characteristics
+The three radial propagation modes correspond locally to tensor, scalar, and vector characteristic
+branches.
+For the constructed strong-field lobe the tensor mode satisfies
+
+                                             2
+                                        min 𝑐𝑟,𝑇 ≃ 1.005069.
+
+The corrected scalar mode is no longer identically unity.
+The original Hessian target had been selected using the provisional P_1 parse, which artificially
+tuned
+
+                                               2
+                                              𝑐𝑟,𝑆 =1
+
+to floating-point precision.
+After inserting the exact P_1 and \mathcal K, while retaining the same already-integrable ac-
+tion representative, the scalar mode becomes
+
+                                                2
+                                    0.903745 ≲ 𝑐𝑟,𝑆 ≲ 1.061333.
+
+The correction therefore does not destroy stability.
+It simply reveals that the original unit-speed target was slightly mistuned.
+
+
+
+                                                 43
+At the outer light ring,
+
+                                         2
+                                        𝑐𝑟,𝑆 (𝑥 = 1.5) ≃ 1.000018.
+
+At the inner stable light ring,
+
+                                      2
+                                     𝑐𝑟,𝑆 (𝑥 ≃ 1.41616064) ≃ 0.91652.
+
+The vector radial branch satisfies
+
+                                                2
+                                           min 𝑐𝑟,𝑉 ≃ 9.45887.
+
+Hence
+
+                2
+               𝑐𝑟,𝑖 >0      for all three even radial branches over the complete lobe.
+
+There is therefore no radial Laplacian instability in the constructed strong-field SVT region.
+
+
+
+
+12. Coupled Even Angular Sector
+12.1 Need for the full coupled test
+Positivity of radial speeds is not suﬀicient.
+In spherical backgrounds the high-\ell angular principal symbol produces an independent set of
+characteristic conditions.
+Moreover, the scalar and vector angular branches are coupled.
+The full angular system was therefore reconstructed using the Appendix-A coeﬀicients
+
+
+                                            𝑎𝑖 , 𝑐 𝑖 , 𝑑 𝑖 , 𝑒 𝑖 , 𝑣 𝑖 ,
+
+including the nontrivial quantities
+
+
+                                           𝑣13 ,         𝑑3 ,        𝑒4 ,
+
+and the associated matrix combinations conventionally denoted
+
+
+                                                   𝑚1 , … , 𝑚5
+
+and
+
+                                                   (0)            (1)
+                                             𝑀𝑖𝑗 ,              𝑀𝑖𝑗 .
+
+
+
+
+                                                         44
+A particularly important implementation detail concerns
+
+
+                                                  𝜕 𝜙 𝑣6 .
+
+It must be evaluated as a true partial action derivative, not as the total background derivative
+
+                                                     𝑣6′
+                                                         .
+                                                     𝜙′
+
+The distinction matters because the action depends on several independent invariants whose back-
+ground values all vary with r.
+The required partial derivative is reconstructed from the explicit action jets.
+
+
+
+12.2 Tubular mixed derivatives
+For the chosen background values
+
+
+                                         𝑓2,𝐹 = 1,           𝑓2,𝑌 = 0,
+
+the tubular construction yields mixed derivatives such as
+
+
+                             𝑓2,𝜙𝐹 = − (𝐻𝑋𝐹 𝑋𝜙 + 𝐻𝐹 𝐹 𝐹𝜙 + 𝐻𝐹 𝑌 𝑌𝜙 ) ,
+
+and
+
+
+                             𝑓2,𝜙𝑌 = − (𝐻𝑋𝑌 𝑋𝜙 + 𝐻𝐹 𝑌 𝐹𝜙 + 𝐻𝑌 𝑌 𝑌𝜙 ) .
+
+These terms enter the full angular coeﬀicients.
+The use of partial rather than total derivatives is essential for maintaining compatibility with a
+genuine multivariable action.
+
+
+
+12.3 Numerical coupled conditions
+The complete angular inequalities remain strongly positive.
+For the first coupled condition,
+
+
+                                          min 𝐶Ω,1 ≃ 738.609.
+
+For the second,
+
+
+                                        min 𝐶Ω,2 ≃ 6.0303 × 104 .
+
+The associated discriminant satisfies
+
+
+                                                     45
+                                        min ΔΩ ≃ 2.9938 × 105 .
+
+The two coupled squared angular characteristic speeds are therefore real and positive.
+Numerically,
+
+                                               2
+                                          min 𝑐Ω,− ≃ 84.912,
+
+and
+
+                                              2
+                                         min 𝑐Ω,+ ≃ 643.142.
+
+These values are large, but the important local result is
+
+                                                2
+                                               𝑐Ω,± > 0.
+
+Thus the full coupled even angular sector exhibits no Laplacian instability anywhere in the complete
+strong-field lobe.
+
+
+
+
+13. Summary of the Genuine-SVT Light-Ring Result
+Combining the preceding sections, the central SVT construction satisfies simultaneously
+
+
+                                     ℰ00 = ℰ11 = ℰ𝜙 = ℰ𝐴 ≃ 0
+
+at numerical reconstruction accuracy,
+
+
+                                                𝒦 > 0,
+
+
+                                               𝛼4 > 0,
+
+
+                                               𝛼7 > 0,
+
+
+                                              𝐶odd > 0,
+
+
+                                                2
+                                               𝑐𝑟,𝑇 > 0,
+
+
+                                                2
+                                               𝑐𝑟,𝑆 > 0,
+
+
+
+
+                                                  46
+                                                  2
+                                                 𝑐𝑟,𝑉 > 0,
+
+and
+
+                                                  2
+                                                 𝑐Ω,𝑖 >0
+
+for the complete set of locally propagating high-frequency branches covered by the odd/even analy-
+sis.
+The result holds over
+
+
+                                         1.39860 ≲ 𝑥 ≲ 1.63934.
+
+Both light rings lie strictly inside this interval.
+Therefore,
+
+
+
+   Neither the unstable nor the stable P5 light ring forces a local ghost or Laplacian instability.
+
+
+This is one of the central results of the paper.
+
+
+
+
+14. Regular Quartic-Horndeski Core
+14.1 Why a separate core carrier is used
+The cubic G_3 scalar carrier that works eﬀiciently in the exterior cannot be extended arbitrarily
+deeply into the center while retaining the desired integrated stability budget.
+Dedicated endpoint-integral and handover scans show that the available scalar G_3 stability budget
+becomes negative for suﬀiciently deep interior starting points.
+This does not indicate a failure of Horndeski theory.
+It indicates that the wrong Horndeski operator is being asked to carry the center.
+The regular core is instead represented by a quartic-Horndeski construction.
+
+
+
+14.2 Core domain
+The present core witness covers approximately
+
+
+                                       10−6 ≲ 𝑥 ≤ 1.4084507042.
+
+Its outer boundary corresponds to
+
+
+                                                 𝑢 = 0.71.
+
+                                                      47
+The central SVT lobe extends to
+
+
+                                              𝑢 = 0.715,
+
+or
+
+
+                                           𝑥 ≃ 1.3986014.
+
+Consequently, the two constructions overlap on
+
+
+                                       1.39860 ≲ 𝑥 ≲ 1.40845.
+
+This is a genuine overlap, not merely contact at one radius.
+
+
+
+14.3 Quartic local action
+A useful local quartic representative has the schematic form
+
+
+                                     𝐺4 (𝜙, 𝑋) = 𝑔(𝜙) + 𝐶(𝜙)𝑋,
+
+supplemented, where required, by the corresponding G_5-derivative jet represented locally through
+a function
+
+
+                                            𝐺5,𝜙 = 𝐷(𝜙).
+
+The core principal targets are chosen so that the tensor kinetic functions remain positive and
+approach their regular central limits.
+The numerical witness yields approximately
+
+
+                                             min ℱ = 1,
+
+and
+
+
+                                     min 𝒢 = min ℋ ≃ 0.999381.
+
+The scalar kinetic target remains positive over the finite radial grid.
+Its minimum becomes extremely small near the regular center because of radial-coordinate scaling,
+
+
+                                      𝐾scalar,min ≃ 2.5 × 10−15 ,
+
+but the proper central Einstein-frame kinetic coeﬀicient has the finite positive limit
+
+                                            EF
+                                           𝐾center ≃ 95.89.
+
+
+                                                  48
+The vanishing coordinate-space quantity must therefore not be misidentified as a physical strong-
+coupling zero without accounting for the regular center limit.
+
+
+
+
+15. The Inner Handover
+Because the genuine-SVT lobe extends to
+
+
+                                              𝑢 = 0.715
+
+while the regular quartic-Horndeski core reaches outward to
+
+
+                                              𝑢 = 0.71,
+
+there is a finite radial overlap
+
+
+                                          0.71 ≤ 𝑢 ≤ 0.715
+
+or, equivalently,
+
+
+                                    1.3986014 ≲ 𝑥 ≲ 1.4084507.
+
+The scalar profile is strictly monotone across this interval. With the normalization r_s=1, the
+reconstructed P5 profile gives
+
+
+                          Ξ(0.71) ≃ 0.84835352,         Ξ(0.715) ≃ 0.86076347,
+
+and
+
+
+                                   min |𝜙′ | ≃ 1.24037,         𝜙 ≡ Ξ.
+
+Thus \phi itself is a valid local patch coordinate throughout the handover.
+The action-level gluing is performed with a flat C^\infty partition rather than with a compactly
+extended quintic. Let
+
+                                                    𝜙 − 𝜙𝑎
+                                          𝑡(𝜙) =            .
+                                                    𝜙𝑏 − 𝜙𝑎
+
+For 0<t<1 define
+
+
+                                                       𝑒−1/𝑡
+                                      𝑠∞ (𝑡) =
+                                                 𝑒−1/𝑡 + 𝑒−1/(1−𝑡)
+
+and extend it by s_\infty=0 for t\le0 and s_\infty=1 for t\ge1. Every derivative of s_\infty
+vanishes at both endpoints. Consequently all finite action jets return exactly to their pure-sector
+
+
+                                                   49
+values at the patch boundaries.
+This stronger endpoint property matters here. The full even-parity reducer contains radial deriv-
+atives of coeﬀicient combinations that themselves depend on second and higher action derivatives.
+A partition that is only C^2 is therefore suﬀicient as a geometric interpolation, but not the clean-
+est choice for a finite-order same-action jet construction. The C^\infty partition removes this
+bookkeeping ambiguity completely.
+Both endpoint theories are locally healthy before gluing. The handover problem is therefore not one
+of curing an instability, but of constructing a single smooth covariant action section that preserves
+the fixed P5 background and the strict perturbative inequalities through the overlap.
+
+
+
+
+16. The Outer Horndeski–SVT Handover
+16.1 Overlap domain
+The natural strong/SVT onset occurs at
+
+
+                                    𝑢on = 0.5515230871346237,
+
+or
+
+
+                                         𝑥on ≃ 1.81316072.
+
+The explicit genuine-SVT witness is already available from u=0.61 inward, while the exterior Horn-
+deski carrier remains healthy beyond that point. We therefore use the finite outer overlap
+
+
+                                  0.5515230871346237 ≤ 𝑢 ≤ 0.61.
+
+On the frozen P5 profile,
+
+
+                              Ξ𝑎 ≃ 0.50993310,        Ξ𝑏 ≃ 0.60601158,
+
+with
+
+
+                             min 𝑓 ≃ 0.387706,        min ℎ ≃ 0.426991,
+
+and
+
+
+                                        min |𝜙′ | ≃ 0.446924.
+
+Thus no metric or scalar-coordinate degeneracy occurs in the outer handover band.
+The physical architecture is consequently an extended overlap,
+
+
+
+
+                                                 50
+Horndeski → Horndeski+genuine SVT → SVT-dominated strong field → SVT+quartic Horndeski → regular Ho
+
+
+
+
+16.2 What the historical SSZ bridge proves
+The SSZ/JIF bridge corpus contains a mathematically useful but carefully limited result. If the
+endpoint value, first derivative and second derivative are prescribed at both ends of a normalized
+interval, then the functional
+
+                                                      1
+                                         𝐽3 [𝑠] = ∫ [𝑠‴ (𝑡)]2 𝑑𝑡
+                                                  0
+
+
+has the unique minimizer given by the quintic Hermite interpolant. For flat endpoint two-jets,
+
+
+                    𝑠(0) = 0,    𝑠(1) = 1,      𝑠′ (0) = 𝑠′ (1) = 𝑠″ (0) = 𝑠″ (1) = 0,
+
+this is
+
+
+                                      𝑠𝐻5 (𝑡) = 10𝑡3 − 15𝑡4 + 6𝑡5 ,
+
+with
+
+
+                                             𝐽3 [𝑠𝐻5 ] = 720.
+
+The variational proof follows from writing s=H_5+q with homogeneous endpoint two-jets:
+
+                                                              1
+                                𝐽3 [𝐻5 + 𝑞] − 𝐽3 [𝐻5 ] = ∫ (𝑞 ‴ )2 𝑑𝑡 ≥ 0.
+                                                          0
+
+
+This result is retained in the present work as a geometric and variational reference. It is not
+used as a dynamical field equation. The older bridge audit correctly emphasizes that infinitely many
+dynamical flows can share the same static radial profile.
+There is also an important regularity distinction. When H_5 is extended by constants outside [0,1],
+
+
+                                        𝐻5‴ (0) = 𝐻5‴ (1) = 60,
+
+so the extended partition is C^2, not C^\infty. The full same-action construction below therefore
+uses the flat C^\infty weight s_\infty; the quintic remains the unique minimum-J_3 member of
+the fixed-two-jet class.
+
+
+
+
+                                                   51
+16.3 Scalar-coordinate same-action gluing
+Because \phi=\Xi is monotone in both overlap bands, the transition can be written in field space
+rather than by inserting the coordinate r explicitly into the fundamental action. For every inde-
+pendent action function, introduce background-adapted normal coordinates n^A transverse to the
+one-dimensional background curve in invariant space. A local function may be written as
+
+
+                                          1              1
+            𝐹 (𝜙, 𝑛) = 𝐹0 (𝜙) + 𝐴𝐴 (𝜙)𝑛𝐴 + 𝐻𝐴𝐵 (𝜙)𝑛𝐴 𝑛𝐵 + 𝑇𝐴𝐵𝐶 (𝜙)𝑛𝐴 𝑛𝐵 𝑛𝐶 + ⋯ .
+                                          2              3!
+
+Only a finite jet order is required by the quadratic perturbation problem. Multiplying the normal
+expansion by a compact tubular cutoff away from the background curve gives an ordinary smooth
+local action function rather than a collection of unrelated pointwise coeﬀicients.
+The two endpoint representatives are glued at the level of the coeﬀicient functions F_0,A_A,H_{AB},\ldots
+with s_\infty(\phi). Background-constrained coeﬀicients are then re-solved from
+
+
+                          ℰ00 = 0,      ℰ11 = 0,          ℰ𝜙 = 0,   ℰ𝐴 = 0,
+
+rather than blindly interpolated. Background-null transverse derivatives are retained as stability
+controls.
+This construction has three useful properties:
+  1. it defines one smooth local covariant action on a tubular neighborhood of the P5 background
+     curve;
+  2. it recovers the pure representatives with all finite jets at the patch boundaries;
+  3. it leaves precisely the transverse action derivatives that were already identified as background-
+     null perturbative controls.
+The handover is therefore an action-space continuation problem, not an interpolation of reduced
+kinetic matrices.
+
+
+
+
+17. Why Separately Reduced Matrices Must Not Be Added
+Suppose one computes a reduced Maxwell–Horndeski even action
+
+                                                  MH
+                                                 𝑆red
+
+after eliminating its nondynamical fields.
+Suppose independently one computes
+
+                                                  SVT
+                                                 𝑆red .
+
+It may appear tempting to write
+
+                                   naive     MH     SVT    common
+                                  𝑆hybrid = 𝑆red + 𝑆red − 𝑆red    .
+
+
+
+                                                   52
+This is not generally correct.
+The reason is that the nondynamical fields are solved from algebraic or differential constraints whose
+coeﬀicients depend on the full action.
+If a nondynamical variable N appears schematically as
+
+
+                                    𝐿 = 𝐴𝑁 2 + 𝑁 𝐵𝑖 𝑞𝑖̇ + 𝐶𝑖𝑗 𝑞𝑖̇ 𝑞𝑗̇ ,
+
+then its solution is
+
+                                                        𝐵𝑖 𝑞𝑖̇
+                                               𝑁 =−            .
+                                                        2𝐴
+
+Substitution produces
+
+                                                          𝐵𝑖 𝐵𝑗
+                                      𝐿red = (𝐶𝑖𝑗 −             ) 𝑞𝑖̇ 𝑞𝑗̇ .
+                                                           4𝐴
+
+For two interactions,
+
+
+                                  𝐴 = 𝐴 1 + 𝐴2 ,           𝐵 = 𝐵1 + 𝐵2 ,
+
+and consequently
+
+                                       (𝐵1 + 𝐵2 )2  𝐵2 𝐵2
+                                                   ≠ 1 + 2
+                                        𝐴1 + 𝐴 2    𝐴1  𝐴2
+
+in general.
+Therefore reduction and addition do not commute.
+The hybrid theory must be assembled before eliminating the common constraints.
+
+
+
+
+18. Common Unreduced Even-Parity Schema
+The common even-parity quadratic action has been organized in terms of the perturbation fields
+
+
+                                  (𝐻0 , 𝐻1 , 𝐻2 , ℎ1 , 𝛿𝜙, 𝛿𝐴0 , 𝛿𝐴1 , 𝑉 ) ,
+
+where V is an auxiliary vector-flux variable.
+The common coeﬀicient schema contains
+
+
+                                                𝑎1 , … , 𝑎 9 ,
+
+
+                                                 𝑏1 , … , 𝑏5 ,
+
+
+
+                                                     53
+                                           𝑐1 , … , 𝑐6 ,
+
+
+                                          𝑑1 , … , 𝑑4 ,
+
+
+                                          𝑒1 , … , 𝑒4 ,
+
+and
+
+
+                                          𝑣1 , … , 𝑣13 .
+
+The Maxwell–Horndeski vector numbering can be embedded consistently into the 13-slot genuine-
+SVT convention.
+The mapping is
+
+                                          MH
+                                         𝑣1…5 → 𝑣1…5 ,
+
+
+                                          𝑣6MH → 𝑣7 ,
+
+
+                                          𝑣7MH → 𝑣8 ,
+
+
+                                          𝑣8MH → 𝑣9 ,
+
+
+                                         𝑣9MH → 𝑣10 ,
+
+with
+
+
+                                   𝑣6 = 𝑣11 = 𝑣12 = 𝑣13 = 0
+
+for the pure Maxwell–Horndeski sector.
+This bookkeeping is essential because otherwise coeﬀicients carrying different meanings can be
+accidentally combined under identical labels.
+
+
+
+
+19. Generalized \psi Variable
+19.1 Apparent mismatch between the two perturbation formalisms
+The separately derived Maxwell–Horndeski and genuine-SVT reductions appear at first to use dif-
+ferent physical combinations of the metric perturbations.
+
+
+
+                                               54
+This might suggest that the two systems cannot be smoothly combined.
+The apparent conflict disappears at the unreduced level.
+The derivative part of the common H_0 constraint contains
+
+
+                                        𝑎1 𝛿𝜙″ + 𝑎3 𝐻2′ + 𝐿𝑎4 ℎ′1 ,
+
+where
+
+
+                                              𝐿 = ℓ(ℓ + 1).
+
+For nonzero a_3,
+
+                                                       𝑑        𝐿𝑎4     𝑎
+                      𝑎1 𝛿𝜙″ + 𝑎3 𝐻2′ + 𝐿𝑎4 ℎ′1 = 𝑎3      [𝐻2 +     ℎ1 + 1 𝛿𝜙′ ]
+                                                       𝑑𝑟       𝑎3      𝑎3
+
+at principal derivative order, with coeﬀicient-derivative terms retained separately in the full jet-
+aware reduction.
+This motivates the common definition
+
+
+                                                  𝐿𝑎4     𝑎
+                                     𝜓 = 𝐻2 +         ℎ1 + 1 𝛿𝜙′ .
+                                                   𝑎3     𝑎3
+
+
+
+19.2 Pure genuine-SVT limit
+For the Einstein-plus-genuine-SVT central representative,
+
+
+                                                 𝑎1 = 0,
+
+and
+
+
+                                               𝑎3 = −𝑟𝑎4 .
+
+Therefore,
+
+                                              𝐿𝑎4   𝐿
+                                                  =− .
+                                              𝑎3    𝑟
+
+Hence
+
+
+                                                           𝐿
+                                          𝜓SVT = 𝐻2 −        ℎ .
+                                                           𝑟 1
+
+The numerical reconstruction verifies
+
+
+
+
+                                                    55
+                                          𝐿𝑎4 𝐿
+                                             + ≃0
+                                          𝑎3  𝑟
+
+to approximately 10^{-15}–10^{-13}, depending on L.
+The two published reduced-variable choices are therefore not incompatible.
+They are limits of the same common unreduced constraint structure.
+
+
+
+
+20. Jet-Aware Constraint Elimination
+20.1 Why frozen-coeﬀicient Fourier reduction fails
+An early common-kernel implementation froze all radial coeﬀicients at a point, replaced
+
+
+                                     𝜕𝑡 → −𝑖𝜔,           𝜕𝑟 → 𝑖𝑘,
+
+and then eliminated the nondynamical fields.
+Although this procedure is often adequate for unconstrained systems at leading principal order, it
+fails here.
+The published reduced kinetic matrices contain radial derivatives such as
+
+
+                                                 𝑎′4 ,
+
+and derivatives of compound constraint quantities such as
+
+
+                                               𝐾2′ .
+
+These terms are produced during constraint elimination.
+Freezing the coeﬀicient functions beforehand erases them.
+Consequently,
+
+
+                             freeze → Fourier transform → eliminate
+
+does not reproduce the physical reduced principal operator.
+The correct ordering is
+
+
+
+combine radial action profiles → retain coeﬀicient jets → eliminate common constraints → take principal/eikona
+
+
+This ordering is now adopted throughout the hybrid construction.
+
+
+
+
+                                                 56
+20.2 First common elimination
+Define
+
+                                                        𝑎1
+                                              𝑝(𝑟) =       ,
+                                                        𝑎3
+
+and
+
+                                                        𝐿𝑎4
+                                             𝑞(𝑟) =         .
+                                                        𝑎3
+
+Then
+
+
+                                        𝜓 = 𝐻2 + 𝑞ℎ1 + 𝑝𝛿𝜙′ .
+
+Equivalently,
+
+
+                                        𝐻2 = 𝜓 − 𝑞ℎ1 − 𝑝𝛿𝜙′ .
+
+Substitution into the complete H_0 constraint causes the coeﬀicients of
+
+
+                                                  𝛿𝜙″
+
+and
+
+
+                                                  ℎ′1
+
+to cancel identically.
+The remaining equation takes the form
+
+
+                         0 = 𝑎3 𝜓′ + 𝐵eff 𝛿𝜙′ + 𝐶𝜙 𝛿𝜙 + 𝐶𝐻2 𝜓 + 𝐷ℎ1 ℎ1 + 𝑣2 𝑉 .
+
+Here
+
+                                                         𝑣2 𝑣4
+                                           𝐵 = 𝑎2 −            ,
+                                                         2𝑣1
+
+                                                                𝑣2 𝑣5
+                                       𝐶𝜙 = 𝑎5 + 𝐿𝑎6 −                ,
+                                                                2𝑣1
+
+                                                                𝑣2 𝑣3
+                                       𝐶𝐻2 = 𝑎7 + 𝐿𝑎8 −               ,
+                                                                2𝑣1
+
+and
+
+                                                           𝑣2 𝑣6
+                                       𝐶ℎ1 = 𝐿 (𝑎9 −             ).
+                                                           2𝑣1
+
+                                                  57
+After accounting for the radial derivatives of p and q,
+
+
+                                       𝐵eff = 𝐵 − 𝑎3 𝑝′ − 𝐶𝐻2 𝑝,
+
+and
+
+
+                                      𝐷ℎ1 = 𝐶ℎ1 − 𝑎3 𝑞 ′ − 𝐶𝐻2 𝑞.
+
+Thus
+
+
+                                    𝑎3 𝜓′ + 𝐵eff 𝛿𝜙′ + 𝐶𝜙 𝛿𝜙 + 𝐶𝐻2 𝜓 + 𝑣2 𝑉
+                           ℎ1 = −                                           .
+                                                       𝐷ℎ1
+
+This is the first exact common Horndeski–SVT constraint-elimination step.
+
+
+
+20.3 Pivot test
+The denominator
+
+
+                                                    𝐷ℎ1
+
+could in principle vanish and produce a strong-coupling or constraint singularity.
+We therefore evaluate it throughout the complete background-integrable SVT lobe.
+For the lowest relevant gravitational multipole,
+
+
+                                           ℓ = 2,         𝐿 = 6,
+
+the minimum magnitude is
+
+
+                                          min |𝐷ℎ1 | ≃ 11.99.
+
+No sign change occurs.
+The test was extended through a wide range of angular eigenvalues up to approximately
+
+
+                                               𝐿 = 1000.
+
+No zero of the pivot was found.
+The absolute pivot grows rather than decreases with increasing L.
+Consequently, the first common jet-aware elimination exhibits no constraint singularity in the light-
+ring region.
+
+
+
+
+                                                    58
+20.4 Exact elimination of the remaining SVT constraints
+The remaining algebraic constraints can be written explicitly using the unreduced even-parity action
+of the general gauge-invariant SVT theory.
+After the H_0 constraint has been used to express h_1, define
+
+
+                                     𝐽1 = 𝑏3 𝛿𝜙̇ + 𝑏4 𝐻̇2 + 𝐿𝑏5 ℎ̇ 1 .
+
+The H_1 and \delta A_1 equations form the two-dimensional system
+
+
+                                     2𝑏1 𝑣11     𝐻       𝑅
+                                 (            ) ( 1 ) = ( 1) ,
+                                     𝑣11 2𝑣10    𝛿𝐴1     𝑅2
+
+where
+
+                                                    𝐽
+                                              𝑅1 = − 1 ,
+                                                    𝐿
+
+and
+
+                                                 2𝑣1 ̇ 𝑣6 ̇
+                                        𝑅2 = −      𝑉 + ℎ1 .
+                                                  𝐿    2
+
+The determinant is
+
+                                                         2
+                                         Δ𝑉 = 4𝑏1 𝑣10 − 𝑣11 .
+
+Hence
+
+
+                                               2𝑣10 𝑅1 − 𝑣11 𝑅2
+                                       𝐻1 =                     ,
+                                                     Δ𝑉
+
+and
+
+
+                                               −𝑣11 𝑅1 + 2𝑏1 𝑅2
+                                      𝛿𝐴1 =                     .
+                                                     Δ𝑉
+
+The \delta A_0 equation gives independently
+
+
+                                      (𝑣1 𝑉 )′ 𝑣8 ℎ1 + 𝑣12 𝐻2 + 𝑣13 𝛿𝜙
+                              𝛿𝐴0 =           −                        .
+                                       𝐿𝑣9               2𝑣9
+
+Thus the previously open variables H_1,\delta A_0,\delta A_1 are not an unresolved formal
+step: their exact Schur-complement elimination is known once the common radial coeﬀicient jets
+are supplied.
+In the pure Einstein-plus-genuine-SVT limit, the coeﬀicient identities reduce to
+
+
+
+
+                                                    59
+                       𝑏1 = 𝛼1 ,     𝑣9 = 𝛼4 ,      𝑣10 = 𝛼5 ,   𝑣11 = −2𝛼2 .
+
+Consequently
+
+
+                                   Δ𝑉 = 4𝛼1 𝛼5 − 4𝛼22 = −4𝐶odd ,
+
+where
+
+
+                                       𝐶odd = 𝛼22 − 𝛼1 𝛼5 > 0.
+
+Using the frozen strong-field regression
+
+
+                                           𝐶odd,min ≃ 0.76072,
+
+we obtain the strict pivot bound
+
+
+                                            |Δ𝑉 | ≥ 3.04288.
+
+Before dividing the two equations by L, the full determinant carries a factor L^2. At \ell=2, L=6,
+this gives
+
+
+                                        |𝐿2 Δ𝑉 | ≥ 109.54368.
+
+The \delta A_0 pivot is 2Lv_9=2L\alpha_4. With
+
+
+                                       𝛼4,min ≃ 9.996 × 10−3 ,
+
+one finds at \ell=2
+
+
+                                           2𝐿𝛼4 ≥ 0.119952.
+
+Together with
+
+
+                                           min |𝐷ℎ1 | ≃ 11.99,
+
+all nondynamical even-parity eliminations therefore possess finite nonzero pivots in the reference
+strong-field construction.
+
+
+
+20.5 Fully reduced physical even operator
+After the four nondynamical variables have been removed in the order
+
+
+                                     ℎ1 ⟶ (𝐻1 , 𝛿𝐴1 ) ⟶ 𝛿𝐴0 ,
+
+
+                                                   60
+the remaining physical even variables may be collected as
+
+
+                                             𝜒⃗ = (𝜓, 𝛿𝜙, 𝑉 )𝑇 .
+
+No additional propagating field is created by the handover: for \ell\ge2 the mode count remains
+the expected three even physical degrees of freedom. The local quadratic action can therefore be
+written, after integrations by parts, in the standard form
+
+
+                      (2)     1             𝑇           𝑇
+                    𝑆even =     ∫ 𝑑𝑡 𝑑𝑟 [𝜒⃗̇ 𝐾 𝜒⃗̇ + 𝜒⃗̇ 𝑅𝜒⃗ ′ − 𝜒⃗ ′ 𝑇 𝐺𝜒⃗ ′ − 𝜒⃗ 𝑇 𝑀 𝜒]
+                                                                                        ⃗ .
+                              2
+
+Here K, R, G, and M are smooth functions of the unreduced common action jets and of the frozen
+P5 background. They are not obtained by adding already-reduced Horndeski and SVT matrices.
+Algebraically, each elimination is a Schur complement of the corresponding nondynamical block.
+Schematically, for a nondynamical block N,
+
+
+                                      𝒬red = 𝒬𝑞𝑞 − 𝒬𝑞𝑁 𝒬−1
+                                                        𝑁𝑁 𝒬𝑁𝑞 .
+
+
+The explicit nonzero pivots established in Secs. 20.3–20.4 guarantee that these Schur complements
+are smooth on the certified domains.
+The radial high-frequency characteristic polynomial is
+
+
+                               𝒫𝑟 (𝜔, 𝑘) = det(𝜔2 𝐾 − 𝜔𝑘𝑅 − 𝑘2 𝐺) = 0,
+
+while the angular eikonal symbol is obtained from the leading large-L angular operator after the
+same constraint reduction. Local ghost freedom requires positive eigenvalues (equivalently posi-
+tive principal minors in the chosen basis) of K; radial and angular Laplacian stability require real
+characteristics with positive squared propagation speeds.
+The relevance of the same-action theorem below is now precise. Away from the tested pivots, K, R,
+G and the angular principal operator are smooth rational functions of a finite set of action jets.
+Strict positivity of their healthy-sector margins is therefore an open condition in jet space. This is
+what permits a controlled continuation through the two compact overlap bands.
+
+
+
+
+21. Constructive Same-Action Closure
+21.1 Meaning of “same-action closure”
+The phrase same-action closure is used here in a precise local sense. It does not mean that the
+data determine a unique fundamental Lagrangian on all of field space. It means that there exists
+one smooth local covariant Horndeski–SVT action, defined on a tubular neighborhood of the one-
+dimensional frozen P5 background trajectory, whose restrictions reproduce the already constructed
+exterior Horndeski, strong-field genuine-SVT and inner quartic-Horndeski representatives and whose
+quadratic principal symbol remains in the locally healthy domain through both handovers.
+Write the common action schematically as
+
+
+
+                                                      61
+                                    √
+            𝑆HSVT [𝑔, 𝜙, 𝐴] = ∫ 𝑑4 𝑥 −𝑔 [ℒH (𝐺2 , 𝐺3 , 𝐺4 , 𝐺5 ) + ℒSVT (𝑓2 , 𝑓3 , 𝑓3̃ , 𝑓4 , 𝑓4̃ )],
+
+
+with the shared Einstein/scalar/Maxwell pieces counted once according to the convention of Sec.
+5.3. The closure problem is therefore a problem in the finite action-jet bundle sampled by the static
+equations and the quadratic perturbation action.
+At a point of the background curve let
+
+
+                                                   𝒥 = (𝒥∥ , 𝒥⟂ )
+
+denote the required finite collection of action values and derivatives. \mathcal J_{\parallel} con-
+tains combinations constrained by the static field equations; \mathcal J_{\perp} contains trans-
+verse derivatives that vanish from the background equations but enter the perturbation coeﬀicients.
+The latter are the background-null controls.
+The closure established below consists of four ingredients:
+  1. a regular scalar coordinate \phi=\Xi on both overlap bands;
+  2. a flat C^\infty partition in that scalar coordinate;
+  3. nonsingular background/control Jacobians permitting the constrained and stability-sensitive
+     jets to be re-solved smoothly;
+  4. nonsingular common constraint pivots permitting the physical even operator to be formed
+     throughout the continuation.
+These four statements are enough to convert the previously separate healthy local representatives
+into one local same-action section.
+
+
+
+21.2 Scalar-coordinate C^\infty action partition
+On each overlap band choose the endpoint scalar values \phi_a<\phi_b and define
+
+                                                         𝜙 − 𝜙𝑎
+                                               𝑡(𝜙) =            .
+                                                         𝜙𝑏 − 𝜙𝑎
+
+Because the reconstructed P5 profile is strictly monotone there, \phi is an admissible local field-
+space coordinate and no explicit coordinate dependence r has to be inserted into the fundamental
+action.
+The partition is
+
+
+                                                 𝑒−1/𝑡
+                                𝑠∞ (𝑡) =                             (0 < 𝑡 < 1),
+                                           𝑒−1/𝑡 + 𝑒−1/(1−𝑡)
+
+extended by 0 for t\le0 and by 1 for t\ge1. It obeys
+
+                                 (𝑛)         (𝑛)
+                                𝑠∞ (0) = 𝑠∞ (1) = 0            for every 𝑛 ≥ 1.
+
+
+
+
+                                                        62
+Consequently, for every finite jet order m used by the perturbation problem, a glued coeﬀicient
+returns exactly to the pure endpoint jets:
+
+
+                                      𝜕𝜙𝑚 𝒥hyb (𝜙𝑎 ) = 𝜕𝜙𝑚 𝒥L (𝜙𝑎 ),
+
+
+                                      𝜕𝜙𝑚 𝒥hyb (𝜙𝑏 ) = 𝜕𝜙𝑚 𝒥R (𝜙𝑏 ).
+
+This is the reason the compactly extended quintic Hermite bridge, although variationally optimal
+for fixed endpoint two-jets, is retained only as a geometric reference. The full action reducer
+differentiates coeﬀicient combinations beyond second order, so a flat C^\infty handover is the
+natural same-action choice.
+The numerical P5 bands are
+
+
+                             𝐼out ∶   0.5515230871346237 ≤ 𝑢 ≤ 0.61,
+
+and
+
+
+                                      𝐼in ∶    0.71 ≤ 𝑢 ≤ 0.715.
+
+On I_{\rm out},
+
+
+                min 𝑓 ≃ 0.387706,        min ℎ ≃ 0.426991,             min |𝜙′ | ≃ 0.446924,
+
+and on I_{\rm in},
+
+
+                min 𝑓 ≃ 0.288814,        min ℎ ≃ 0.389107,             min |𝜙′ | ≃ 1.240374.
+
+Thus neither overlap contains a metric zero or a scalar-coordinate turning point.
+
+
+
+21.3 Background re-solving rather than blind interpolation
+A naive convex interpolation of all action coeﬀicients would not, by itself, guarantee the exact P5
+background equations. The construction therefore interpolates only a provisional jet section and
+then projects it back onto the background equation manifold.
+Let
+
+
+                                              𝒞𝐴 (𝜙, 𝒥) = 0
+
+collect the independent static equations, for example
+
+
+                          ℰ00 = 0,       ℰ11 = 0,        ℰ𝜙 = 0,         ℰ𝐴 = 0,
+
+
+
+
+                                                    63
+after removal of dependent combinations.         Choose a set of constrained jet coordinates
+Y^A\subset\mathcal J_{\parallel} whose background Jacobian is nonsingular on the lo-
+cal representative. The implicit-function theorem then gives
+
+
+                                           𝑌 𝐴 = 𝑌 𝐴 (𝜙, 𝑍),
+
+smoothly in the remaining freely specified jets Z, throughout a suﬀiciently small neighborhood. The
+compact overlap interval is covered by finitely many such neighborhoods.
+Operationally this is the procedure already used in the separate reconstructions: the P5 metric and
+scalar profile are held fixed, freely selectable background-null data are specified, and the coeﬀicients
+entering the actual background equations are re-solved. The handover therefore does not perturb
+the frozen geometry merely to make the action convenient.
+
+
+
+21.4 Background-null stability controls and the SVT rank certificate
+The decisive freedom is transverse to the one-dimensional background curve. In the genuine-SVT
+sector select the three background-null Hessian controls
+
+
+                                         (𝐻𝑋𝑋 , 𝐻𝑋𝐹 , 𝐻𝐹 𝐹 ).
+
+For the stability-sensitive targets (v_1,v_4,c_2) the corresponding control submap contains
+
+
+                                      0    0  1
+                                    ⎛           ⎞
+                             MSVT = ⎜
+                                    ⎜ 0   −1 0⎟ ⎟,                 𝜅 = ℎ𝜙′2 .
+                                    ⎝𝜅/2 −𝐹bg 0⎠
+
+Its determinant is
+
+                                                           𝜅
+                                            det MSVT =       .
+                                                           2
+
+This identity is stronger than a numerical rank observation. Since h>0 and \phi'\neq0 on both
+overlaps, rank three is guaranteed there independently of the background electric invariant.
+For r_s=1 the numerical rank margins are
+
+                                domain        min 𝜅   min | det MSVT |
+                                  𝐼out      0.0988384   0.0494192
+                           0.61 ≤ 𝑢 ≤ 0.715 0.207862    0.103931
+                                   𝐼in      0.632753    0.316377
+
+and no loss of control rank occurs at either handover.
+The corresponding full Horndeski principal-control map, formed from nonredundant targets such as
+
+
+                                          (ℱ, ℋ, 𝑎1 , 𝑐4 , 𝑐2 ),
+
+
+
+                                                   64
+and the available G_i derivatives, retains full rank over the onset-to-core interval in the existing
+reconstruction. Importantly, the light-ring condition
+
+
+                                               𝑟𝑓 ′ − 2𝑓 = 0
+
+does not make either control map singular. The photon sphere is therefore a property of the null
+geometry, not a forced degeneracy of the action-jet reconstruction.
+
+
+
+21.5 Exact common constraint invertibility
+Background solvability is not enough: the common unreduced even action must also remain re-
+ducible. Sections 20.2–20.4 expose all nondynamical pivots relevant to the chosen even basis.
+The first constraint gives
+
+
+                                      𝑎3 𝜓′ + 𝐵eff 𝛿𝜙′ + 𝐶𝜙 𝛿𝜙 + 𝐶𝐻2 𝜓 + 𝑣2 𝑉
+                             ℎ1 = −                                           .
+                                                         𝐷ℎ1
+
+For \ell=2,
+
+
+                                            min |𝐷ℎ1 | ≃ 11.99,
+
+and the numerical scan finds no zero through approximately L=1000.
+After this substitution, the H_1 and \delta A_1 equations have determinant
+
+                                                            2
+                                            Δ𝑉 = 4𝑏1 𝑣10 − 𝑣11 .
+
+In the pure genuine-SVT limit,
+
+
+                               𝑏1 = 𝛼1 ,       𝑣10 = 𝛼5 ,      𝑣11 = −2𝛼2 ,
+
+so that
+
+
+                                  Δ𝑉 = −4(𝛼22 − 𝛼1 𝛼5 ) = −4𝐶odd .
+
+The odd-sector stability condition C_{\rm odd}>0 therefore implies the invertibility of this even
+constraint block. With
+
+
+                                            𝐶odd,min ≃ 0.76072,
+
+one obtains
+
+
+                                              |Δ𝑉 | ≥ 3.04288.
+
+
+
+
+                                                     65
+Before the equations are divided by L, the determinant contains an additional L^2. At the lowest
+gravitational multipole, \ell=2 and L=6,
+
+
+                                         |𝐿2 Δ𝑉 | ≥ 109.54368.
+
+The \delta A_0 equation has the pivot 2Lv_9. In the same pure-SVT limit v_9=\alpha_4, and
+the frozen reference margin
+
+
+                                        𝛼4,min ≃ 9.996 × 10−3
+
+gives
+
+
+                                     2𝐿𝛼4 ≥ 0.119952       (ℓ = 2).
+
+Thus no nondynamical variable is eliminated by division through a vanishing coeﬀicient in the
+certified reference construction. In particular, the stable inner light ring does not coincide with a
+constraint singularity.
+
+
+
+21.6 Continuation of the healthy principal symbol
+Let \mathbf T(\mathcal J) denote a finite set of stability targets suﬀicient to characterize the local
+principal symbol in the chosen representation: odd kinetic/gradient combinations, the even kinetic
+matrix, radial characteristic coeﬀicients and the leading angular symbol. The already constructed
+pure representatives have strict margins, including
+
+
+                                       𝐾ext,min ≃ 9.7423 × 10−3 ,
+
+
+               𝐶odd,min ≃ 0.76072,       𝛼4,min ≃ 9.996 × 10−3 ,        𝛼7,min ≃ 2.00153,
+
+
+                                         𝒦even,min ≃ 10.5415,
+
+
+                      2                     2                        2
+                     𝑐𝑟,𝑇 ≥ 1.00507,       𝑐𝑟,𝑆 ≥ 0.903745,         𝑐𝑟,𝑉 ≥ 9.45887,
+
+and
+
+                                  2                     2
+                                 𝑐Ω,− ≥ 84.912,        𝑐Ω,+ ≥ 643.142.
+
+For the inner quartic-Horndeski core,
+
+
+                               ℱmin = 1,       min(𝒢, ℋ) ≃ 0.999381.
+
+These are strict inequalities, not zeros. Away from the pivots of Sec. 21.5 the reduced principal
+matrices are smooth functions of \mathcal J. Therefore the healthy set
+
+                                                  66
+                     𝒰+ = {𝒥 ∶ 𝐾 > 0, 𝑐𝑟2 > 0, 𝑐Ω
+                                                2
+                                                  > 0, constraints invertible}
+
+is open in the finite jet topology.
+The control maps of Sec. 21.4 allow the background-null jets to be adjusted while the background-
+constrained jets evolve through a handover. Choose any smooth path \mathbf T_*(\phi) in the
+positive target domain connecting the endpoint target values. For positive scalar targets this can
+be taken inside the positive orthant; for positive-definite kinetic blocks the positive-definite cone is
+convex, so a smooth positive path exists. The full-rank control Jacobian then permits the transverse
+jets to be solved locally so that
+
+
+                                          T(𝒥(𝜙)) = T∗ (𝜙).
+
+Because each handover interval is compact, the local implicit-function neighborhoods possess a finite
+subcover. Continuing from one neighborhood to the next constructs a smooth healthy jet section
+across the full band.
+This argument is the step that turns “healthy endpoints” into a same-action local existence
+result. It does not assume that arbitrary interpolation preserves stability; it actively re-solves the
+available transverse controls to remain inside \mathscr U_+.
+
+
+
+21.7 Realization as one local covariant action
+A smooth jet section along the background curve still has to be realized by ordinary functions,
+rather than being left as a table of pointwise derivatives. This is provided constructively by the
+tubular expansion introduced in Sec. 16.3.
+Let n^A be smooth normal coordinates transverse to the P5 trajectory in invariant space. For each
+independent action function write, to the finite order needed by the quadratic problem,
+
+                                           1              1
+             𝐹 (𝜙, 𝑛) = 𝐹0 (𝜙) + 𝐴𝐴 (𝜙)𝑛𝐴 + 𝐻𝐴𝐵 (𝜙)𝑛𝐴 𝑛𝐵 + 𝑇𝐴𝐵𝐶 (𝜙)𝑛𝐴 𝑛𝐵 𝑛𝐶 + ⋯ .
+                                           2              3!
+
+The coeﬀicient functions are precisely the smooth same-action jet section constructed above. Multi-
+plying the normal expansion by a smooth tubular cutoff that equals unity on the background curve
+yields a genuine local smooth function of the covariant invariants. Repeating this for the finite set
+of G_i, f_i and \tilde f_i functions produces one local covariant action, not a radius-by-radius
+prescription.
+Because s_\infty is flat at each patch boundary, the resulting action agrees with the selected pure
+representatives to every finite derivative order used in the calculation. The exterior, strong-field
+and core descriptions are therefore different coordinate patches/representatives of the same local
+action construction rather than dynamically disconnected theories.
+No uniqueness is implied. Background reconstruction is underdetermined, and the background-null
+directions generate a family of admissible same-action completions.
+
+
+
+
+                                                  67
+21.8 Local Same-Action Closure Theorem
+The preceding construction may be summarized as a theorem tailored to the frozen P5 background.
+Theorem (constructive local same-action closure). Let the frozen P5 background satisfy the
+source-locked geometry of Sec. 3, and let the exterior Horndeski, strong-field genuine-SVT and
+inner quartic-Horndeski representatives be the locally healthy sections constructed in Secs. 6–14.
+Assume on the two finite overlaps that:
+
+
+                                𝑓 > 0,      ℎ > 0,       𝜙′ = Ξ′ ≠ 0;
+
+that the background equation Jacobian for the chosen constrained jets is nonsingular; that the
+Horndeski and SVT transverse control maps have full rank; and that the common nondynamical
+pivots D_{h_1}, 2Lv_9 and \Delta_V do not vanish. Then there exists a C^\infty local covariant
+Horndeski–SVT action on a tubular neighborhood of the complete P5 background trajectory such
+that:
+
+
+                                 ℰ𝜇𝜈 = 0,      ℰ𝜙 = 0,       ℰ𝐴 = 0
+
+on the frozen background; the chosen pure representatives and all finite endpoint jets are recovered
+outside the transition bands; the common even constraints are smoothly eliminable; and the local
+odd/even principal symbol can be continued through both transitions without crossing a ghost,
+Laplacian, hyperbolicity or constraint-singularity boundary.
+Proof. Monotonicity of \phi supplies a scalar-coordinate chart on each overlap. The flat partition
+s_\infty produces smooth provisional action jets and exact finite-jet endpoint recovery. The non-
+singular background Jacobian re-solves the constrained jets so that the frozen P5 fields continue
+to satisfy the static equations. The full-rank transverse control maps re-solve the background-null
+jets so that the chosen stability targets follow a smooth path inside the strict healthy domain. The
+nonzero constraint pivots make every Schur complement in the common even reduction smooth.
+Strict positivity of the kinetic and characteristic margins is an open condition, and compactness of
+each overlap gives a finite continuation cover. Finally, the tubular normal expansion realizes the
+resulting smooth finite jet section as ordinary local action functions. QED.
+The theorem is local in field space and along the static P5 branch. It is nevertheless the precise
+closure needed to remove the previous “patchwork action” objection at the level addressed by the
+present paper.
+
+
+
+21.9 Machine-readable closure certificate
+The construction was encoded in an independent machine-readable certificate with eight explicit
+gates:
+
+
+
+
+                                                68
+                      𝐺1   𝑓 > 0, ℎ > 0 on both handover bands
+                      𝐺2   𝜙 = Ξ monotone with 𝜙′ ≠ 0
+                      𝐺3   det MSVT = 𝜅/2 ≠ 0
+                      𝐺4   𝑠∞ monotone and 𝐶 ∞ -flat
+                      𝐺5   all frozen pure-sector local stability margins strict
+                      𝐺6   2𝐿𝑣9 ≠ 0
+                      𝐺7   Δ𝑉 ≠ 0
+                      𝐺8   𝐷ℎ1 ≠ 0
+
+All eight gates pass in the 14 September 2026 reference run. The machine status is
+
+
+                PASS_CONSTRUCTIVE_LOCAL_SAME_ACTION_CLOSURE_CERTIFICATE.
+
+The numerical band/rank data are:
+
+                     band     ΔΞ       min 𝑓    min ℎ  min | det MSVT |
+                      𝐼out 0.0960785 0.387706 0.426991   0.0494192
+                       𝐼in 0.0124100 0.288814 0.389107   0.316377
+
+and the full genuine-SVT lobe has
+
+
+                        min ℎ ≃ 0.326857,       min | det MSVT | ≃ 0.103931.
+
+The certificate is an existence/regularity certificate. It should not be confused with a unique para-
+meter fit.
+
+
+
+21.10 What is now closed, and what remains outside the closure claim
+The following items are closed within the scope of this paper:
+  • the P5 geometry is source-locked and independently reconstructible;
+  • the exterior, light-ring and core action representatives overlap;
+  • the transition is expressible in scalar field space with a flat C^\infty partition;
+  • the background equations can be re-solved rather than violated by the handover;
+  • the SVT transverse stability-control map has analytic rank three;
+  • the full Horndeski principal-control map is nondegenerate on the certified interval;
+  • h_1, H_1, \delta A_0, and \delta A_1 are algebraically eliminable with nonzero reference
+    pivots;
+  • the local odd/even principal-symbol health conditions can be continued through both overlaps;
+  • the resulting smooth finite jet section can be realized by one local covariant action.
+The following statements remain outside the closure theorem:
+  • uniqueness or microscopic fundamentality of that action;
+  • a single preferred closed-form choice for every free function over all field space;
+  • an archived full K,R,G,M matrix dump for one arbitrarily selected member of the certified
+    family;
+  • the complete finite-\ell quasinormal spectrum and the lifetime of stable-trapped modes;
+
+
+                                                 69
+   • nonlinear stability under finite perturbations;
+   • proof that every effective characteristic cone lies inside the matter light cone;
+   • a UV completion or a theorem excluding every nonperturbative pathology.
+This distinction is essential. The local same-action closure is complete; the global dynamical
+and microscopic interpretation of the resulting theory is not.
+The internal SSZ Physics RAG was used as a provenance cross-check for the canonical \Xi hierarchy,
+the historical variational bridge theorem, and the August dynamics-gap audit. The new September
+P5 action-jet and closure-certificate numbers are treated as current project regressions rather than
+retroactively labelled as RAG-independent validations.
+
+
+
+
+22. Interpretation of the Large Characteristic Speeds
+Several vector and angular characteristic speeds in the constructed SVT representative substantially
+exceed unity.
+It is important not to conflate three different statements.
+A negative squared speed,
+
+
+                                                𝑐2 < 0,
+
+signals a Laplacian instability.
+A zero speed can signal a degeneracy or strong-coupling issue depending on the surrounding kinetic
+structure.
+A positive super-unit speed,
+
+
+                                                𝑐2 > 1,
+
+does neither automatically.
+The present result establishes only the first level of consistency:
+
+
+                                                𝑐2 > 0.
+
+A complete physical interpretation requires identifying the relevant causal cone of the interacting
+gravitational–scalar–vector system and determining whether the effective theory admits a consistent
+UV interpretation.
+In modified-gravity systems, different modes need not propagate on the matter metric g_{\mu\nu}.
+Their principal operators define effective metrics
+
+
+                                                 𝒢𝜇𝜈
+                                                  (𝑖)
+
+
+whose null cones can differ.
+
+
+
+
+                                                  70
+Whether superluminal characteristics imply a fundamental inconsistency depends on additional
+properties including global causal structure, analyticity, UV completion assumptions, and the oper-
+ational definition of signal propagation.
+We therefore make no claim of causal completion in this paper.
+The appropriate terminology for the established result is:
+
+
+                            local ghost/Laplacian/hyperbolicity stability.
+
+
+
+
+23. Stable Trapping and the Difference Between Local and Global
+Stability
+The inner stable light ring deserves separate emphasis.
+A healthy local principal symbol does not guarantee rapid decay of perturbations.
+Stable trapping can prevent eﬀicient dispersal.
+A wave packet concentrated near the stable null orbit may repeatedly return to the trapping region.
+Even in a locally hyperbolic theory, this can produce slowly decaying resonances or unusually long-
+lived quasinormal modes.
+The shallow depth of the P5 null well,
+
+
+                                            Δwell ≃ 0.42%,
+
+may soften this effect, but it does not remove the underlying mathematical question.
+The correct next observable calculation after local closure is therefore a finite-\ell spectral analysis.
+One should compute the coupled tensor–scalar–vector quasinormal spectrum of the final hybrid
+action and determine whether the stable orbit produces:
+
+
+                                              Im 𝜔 → 0− ,
+
+an actual growing mode
+
+
+                                               Im 𝜔 > 0,
+
+or merely a finite family of long-lived but decaying resonances.
+This question cannot be answered from the eikonal local positivity tests alone.
+
+
+
+
+24. Nonlinear Stability as a Separate Problem
+Even a complete linear mode analysis would not prove nonlinear stability.
+
+
+
+                                                   71
+The full hybrid equations can schematically be written as
+
+
+                                        ℰ𝐴 [Ψ, 𝜕Ψ, 𝜕 2 Ψ] = 0,
+
+where \Psi collectively denotes
+
+
+                                         𝑔𝜇𝜈 ,      𝜙,      𝐴𝜇 .
+
+A nonlinear stability theorem would require an appropriate gauge choice, a hyperbolic formulation
+of the evolution system, control of the constraint propagation, and energy estimates capable of
+bounding suitable Sobolev norms of the perturbations.
+The relevant logical implication would have the form
+
+
+                        𝐸𝑁 (𝑡) < ∞     ⟹         the solution can be continued.
+
+One would then seek estimates such as
+
+                                         𝑑𝐸𝑁
+                                             ≤ 𝐶(𝐸𝑁 )𝐸𝑁 .
+                                          𝑑𝑡
+
+A suﬀiciently strong bound could rule out finite-time blow-up for suﬀiciently small perturbations of
+the P5 background.
+Nothing in the present local principal-symbol analysis is presented as a substitute for such a theorem.
+Rather, the present work establishes the prerequisite that the linearized local equations possess a
+healthy characteristic structure in the first place.
+
+
+
+
+25. Discussion: P5 in the Landscape of Compact-Object Geome-
+tries
+25.1 Comparison with Schwarzschild general relativity
+The P5 closure is deliberately close to Schwarzschild in the regimes where present observations are
+most constraining, but it is not globally Schwarzschild.
+In the weak field,
+
+
+                             𝑓 = 1 − 𝑢 + 𝑂(𝑢4 ),         ℎ = 1 − 𝑢 + 𝑂(𝑢4 ),
+
+so the first displayed P5 deviations occur only at fourth order in the present compactness expansion.
+At the outer light ring, the agreement is considerably stronger than equality of the coordinate radius
+alone. The P5 photon condition reduces to
+
+                                                   𝑢𝜒
+                                       𝑄(𝑢) ≡         − 1 = 0.
+                                                  1+Ξ
+
+
+
+                                                    72
+For the outer root,
+
+                                           2             3
+                                         𝑢= ,          𝑥= ,
+                                           3             2
+
+we obtain numerically
+
+                                                  √
+                                             Ξ=    3 − 1,
+
+                                             √
+                                            3 3
+                                         𝜒=     = 𝜒GR ,
+                                             2
+
+and consequently
+
+
+                                                  1
+                                             𝑓 =ℎ= .
+                                                  3
+
+Define the dimensionless optical potential
+
+
+                                          𝑊 (𝑢) = 𝑢2 𝑓(𝑢).
+
+Since
+
+                                          𝑑 ln 𝑊    2𝑄
+                                                 =−    ,
+                                            𝑑𝑢       𝑢
+
+one has at a light ring
+
+                                                    2𝑊 ′
+                                          𝑊″ = −       𝑄.
+                                                     𝑢
+
+The source-locked P5 closure gives at the outer orbit
+
+
+                                     𝑄′ ≃ 4.5,         𝑊 ″ ≃ −2 ,
+
+which is the Schwarzschild value in the same dimensionless coordinate. Thus the outer optical
+calibration simultaneously matches the radius, f, h, susceptibility, and local curvature of the null
+potential to numerical precision. This explains why the shadow scale and eikonal instability scale
+can be Schwarzschild-like even though the interior geometry is qualitatively different.
+The departure from GR is concentrated inward. Schwarzschild reaches f=h=0 at u=1; P5 instead
+tends to
+
+                                           1
+                                         𝑓→ ,          ℎ → 1,
+                                           4
+
+and contains a second, stable light ring before entering the regular core.
+
+
+
+
+                                                  73
+25.2 P5 is not a regular black hole in the strict causal sense
+The phrase “regular black hole” is often used for nonsingular metrics that preserve an event horizon
+while replacing the Schwarzschild singularity by a regular core, frequently a de Sitter-like region.
+Many such models possess both an outer event horizon and an inner Cauchy horizon; the latter
+raises the separate mass-inflation stability problem.
+The frozen P5 closure belongs to a different causal class. The global scan gives
+
+                                                  1
+                                                𝑓≥ ,
+                                                  4
+
+and
+
+
+                                           ℎ ≥ 0.3268566652
+
+through the source-locked domain and its regular-core continuation. There is no zero of either
+metric function and hence no event horizon or inner Cauchy horizon of the usual static spherical
+type.
+P5 therefore avoids the standard inner-horizon mass-inflation problem by not possessing that horizon
+structure in the first place. This should not be advertised as a generic stability advantage over
+regular black holes, because P5 acquires a different potential problem: stable trapping at the inner
+light ring.
+
+
+
+25.3 Relation to horizonless ultracompact objects
+A horizonless object with a light ring belongs naturally to the ultracompact-object class. In broad
+metric theories, light-ring structure is strongly constrained topologically; under additional Einstein-
+equation and energy-condition assumptions, smooth horizonless ultracompact objects are known to
+develop light rings in pairs with a stable member.
+P5 exhibits precisely the geometric pair
+
+
+                                              𝑥out = 1.5
+
+and
+
+
+                                           𝑥in ≃ 1.41616064.
+
+One should nevertheless distinguish the general geometric pairing argument from the GR-specific
+energy-condition theorem. The final P5 support is a Horndeski–SVT effective stress system, so
+conclusions relying specifically on the Einstein equations with ordinary matter cannot simply be
+imported unchanged.
+The useful comparison is therefore structural rather than identificational: P5 occupies the horizon-
+less ultracompact sector, but with a covariantly reconstructed scalar–vector–tensor support rather
+than a prescribed GR material star.
+
+
+
+
+                                                  74
+25.4 Stable trapping: the principal unresolved physical risk
+Stable trapping is the strongest reason not to equate local hyperbolicity with global viability.
+For wave equations on spacetimes with stable trapping, rigorous results show that uniform decay
+can be no faster than logarithmic in relevant classes. In ultracompact-object models the stable null
+orbit is also associated with very long-lived modes, and nonlinear numerical evolutions of horizonless
+bosonic stars have exhibited light-ring-triggered migration or collapse.
+The P5 case has an important quantitative peculiarity: its null well is shallow,
+
+
+                                        Δwell ≃ 4.18 × 10−3 .
+
+Nonlinear ultracompact-object studies indicate that very shallow stable-light-ring wells can substan-
+tially lengthen the instability timescale. That is encouraging but not exculpatory. It means the
+physically decisive calculation is now a timescale calculation, not another local sign test.
+After same-action closure, the next required program is therefore:
+
+
+            finite-ℓ spectrum → quasinormal/resonant lifetimes → nonlinear evolution.
+
+A viable outcome would be either the absence of growing modes with suﬀiciently rapid decay,
+or trapping timescales so long that the configuration remains astrophysically relevant. A rapidly
+growing finite-\ell or nonlinear mode would instead falsify the proposed stationary P5 compact
+object even though all local ghost and Laplacian conditions are positive.
+
+
+
+25.5 Relation to the SSZ interpretation
+The covariant reconstruction should also be distinguished from the conceptual motivation of Seg-
+mented Spacetime.
+SSZ begins from a geometrical/operational interpretation in which phenomena conventionally en-
+coded as spacetime curvature are organized through a primary segmentation variable \Xi, with
+
+
+                                           𝐷 = (1 + Ξ)−1 .
+
+The present P5 calculation strengthens that connection: the temporal metric remains exactly \Xi-
+primary, while the radial geometry is generated by the susceptibility closure \chi(\Xi) rather than
+by an independent fitted metric function.
+At the same time, the paper deliberately does not require the reader to accept a microscopic
+interpretation of segmentation. The covariant question is narrower:
+     Can the source-locked P5 geometry be embedded into a local field theory whose back-
+     ground equations and perturbative principal symbol are healthy?
+This separation is useful because it leaves three logically independent layers:
+  1. the SSZ interpretation of \Xi;
+  2. the P5 geometrical closure \Xi\to(f,h);
+  3. the Horndeski–SVT dynamical realization of that geometry.
+
+
+                                                 75
+Agreement or failure at one layer need not be disguised as agreement or failure at another. In
+particular, the old SSZ Hermite bridge remains a mathematically justified interpolation template,
+while the present Horndeski–SVT action is the object that must ultimately determine the physical
+dynamics.
+
+
+
+
+26. Main Results
+The analysis produces a closed local dynamical embedding of the frozen P5 geometry.
+The geometry remains fixed throughout. Its outer unstable light ring is
+
+
+                                              𝑥 = 1.5,
+
+and its stable inner ring is
+
+
+                                          𝑥 ≃ 1.41616064.
+
+The outer orbit reproduces the Schwarzschild temporal/radial metric values and null-potential cur-
+vature at the calibrated point, while the inner ring generates a shallow stable-trapping well. The
+global P5 continuation remains horizonless with positive f and h.
+The exterior admits a finite Horndeski scalar carrier with positive kinetic margin. The complete
+two-light-ring domain admits a background-integrable genuine U(1) SVT action section. Its scalar
+equation is solved explicitly through the reconstruction of f_{3,X}. The odd sector has positive
+kinetic and gradient margins; the corrected even kinetic quantity obeys
+
+
+                                           𝒦 ≥ 10.5415,
+
+and the independent e_1 identity is satisfied at the 10^{-10} level. The scalar radial characteristic
+remains near unity,
+
+                                                 2
+                                     0.903745 ≲ 𝑐𝑟,𝑆 ≲ 1.0614,
+
+while the tensor, vector and coupled angular squared characteristics remain positive. The regular
+quartic-Horndeski core overlaps the genuine-SVT lobe.
+The action-level handover is constructed in the monotone scalar coordinate \phi=\Xi with a
+flat C^\infty partition. Background-constrained jets are re-solved from the static equations;
+background-null transverse jets are used to control the perturbative principal symbol. The selected
+SVT control map has the analytic determinant
+
+                                                  1
+                                        det MSVT = ℎ𝜙′2 ,
+                                                  2
+
+which is strictly nonzero on both overlap bands.
+The common even-parity reduction is also complete at the algebraic level. The generalized variable
+
+                                                   76
+                                                𝐿𝑎4     𝑎
+                                     𝜓 = 𝐻2 +       ℎ1 + 1 𝛿𝜙′
+                                                𝑎3      𝑎3
+
+unifies the Horndeski and genuine-SVT constraint structures. The H_0 constraint yields h_1 with
+
+
+                                         min |𝐷ℎ1 | ≃ 11.99
+
+for the reference \ell=2 scan. The remaining H_1–\delta A_1 block has
+
+                                                        2
+                                        Δ𝑉 = 4𝑏1 𝑣10 − 𝑣11 ,
+
+and in the pure-SVT limit
+
+
+                                           Δ𝑉 = −4𝐶odd ,
+
+so that
+
+
+                                          |Δ𝑉 | ≥ 3.04288.
+
+The \delta A_0 pivot obeys
+
+
+                                         2𝐿𝛼4 ≥ 0.119952
+
+at \ell=2. None of the exposed nondynamical constraints becomes singular at either light ring or
+either handover.
+Combining the nonzero background/control ranks, the strict pure-sector margins, the smooth con-
+straint reduction and the flat scalar-coordinate partition gives the constructive Local Same-Action
+Closure Theorem of Sec. 21. Its machine-readable eight-gate certificate returns
+
+
+                PASS_CONSTRUCTIVE_LOCAL_SAME_ACTION_CLOSURE_CERTIFICATE.
+
+The principal result is therefore stronger than the statement that several healthy patches exist: one
+smooth local covariant Horndeski–SVT action can be constructed through the full P5
+background trajectory, including both light rings and both action handovers, without
+a forced local ghost, Laplacian, hyperbolicity or constraint singularity.
+
+
+
+
+27. What Is Not Proven by the Closure
+The local closure theorem deliberately stops short of several stronger claims.
+It does not select a unique fundamental action. The inverse reconstruction is underdetermined, and
+the background-null directions generate a family of same-action completions.
+It does not provide one privileged elementary closed-form expression for every free G_i, f_i, and
+\tilde f_i over all of invariant field space. The theorem constructs a smooth local action in a
+
+
+                                                 77
+tubular neighborhood of the P5 trajectory, which is the domain needed for the background and its
+local perturbations.
+It does not replace an implementation-level archive of the complete reduced K,R,G,M matrices for a
+chosen representative. Producing that matrix dump and rerunning endpoint/pure-limit regressions
+remains valuable for independent reproducibility, but it is no longer an existence obstruction.
+It does not establish that every positive effective characteristic speed is subluminal relative to the
+matter cone. In fact several vector/angular characteristics are substantially super-unit in the chosen
+normalization, so causal-cone and EFT interpretation remain separate questions.
+It does not compute the complete finite-\ell quasinormal spectrum. Therefore it does not determine
+the lifetime or nonlinear significance of the shallow stable-trapping well.
+It does not prove nonlinear stability, global well-posedness for arbitrary finite data, the absence of
+every nonperturbative pathology, or a UV completion.
+The post-closure distinction is therefore
+
+
+              local same-action existence and principal-symbol regularity: CLOSED
+
+versus
+
+
+              global spectral, nonlinear, causal and microscopic completion: OPEN.
+
+
+
+
+28. Post-Closure Program
+The next calculation is no longer another attempt to make the Horndeski and SVT patches meet.
+They already meet at the level of the local action and principal symbol.
+The first post-closure task is representative-level reproducibility: select one explicit member of
+the certified same-action family, generate the complete radial arrays for the unreduced coeﬀicients
+and the reduced K,R,G,M matrices, and archive the full pure-Horndeski, pure-SVT and transition
+regressions. This will turn the existence certificate into a convenient benchmark implementation.
+The second task is the finite-multipole spectral problem. The coupled perturbation equations should
+be solved with physically appropriate boundary conditions across the full horizonless geometry,
+yielding the quasinormal and trapped-mode spectrum. The stable inner light ring is the central
+target, because a positive local principal symbol does not determine the lifetime of modes trapped
+in a shallow potential well.
+The third task is nonlinear evolution. Time-domain simulations should test whether the stable-
+trapping region drives migration, collapse, long-lived oscillations, or remains benign on astrophysi-
+cally relevant timescales.
+The fourth task is the causal/EFT interpretation of the characteristic cones. The effective scalar,
+vector and tensor cones should be compared with the matter light cone, and the large positive
+vector/angular speeds should be analyzed in terms of hyperbolicity, front velocity, cutoff scale and
+possible UV completion rather than being conflated with a Laplacian instability.
+Finally, rotation should be incorporated. A slowly rotating extension would test whether the two-
+light-ring structure and the same-action control rank persist once spherical symmetry is relaxed,
+
+                                                 78
+before attempting a fully stationary axisymmetric construction.
+
+
+
+
+29. Conclusion
+We investigated the dynamical realizability of the frozen P5 Segmented-Spacetime geometry within
+a covariant Horndeski–scalar–vector–tensor framework while refusing to alter the geometry merely
+to fit a convenient theory.
+The P5 background is \Xi-primary in its temporal sector and is closed radially by the source-locked
+susceptibility relation. It is horizonless and regular, contains an outer unstable light ring at
+
+
+                                             𝑥 = 1.5,
+
+and an inner stable light ring at
+
+
+                                         𝑥 ≃ 1.41616064.
+
+A finite exterior Horndeski carrier, a background-integrable genuine-SVT light-ring carrier and a
+regular quartic-Horndeski core were constructed with overlapping radial domains. The genuine-SVT
+lobe passes the employed local odd/even ghost and Laplacian tests with strict margins.
+The central closure problem was then treated at the unreduced action level. The common
+generalized variable
+
+                                               𝐿𝑎4     𝑎
+                                    𝜓 = 𝐻2 +       ℎ1 + 1 𝛿𝜙′
+                                               𝑎3      𝑎3
+
+provides the shared constraint coordinate. The h_1 constraint is regular, and the remaining H_1,
+\delta A_0, and \delta A_1 variables possess exact nonsingular elimination formulas. In particu-
+lar,
+
+
+                                          Δ𝑉 = −4𝐶odd
+
+in the pure genuine-SVT limit, so the already positive odd-sector determinant supplies an analytic
+lower bound on the even constraint pivot.
+The overlap itself is implemented in scalar field space with a flat C^\infty partition. The frozen
+background equations are re-solved during the continuation rather than violated by naive interpola-
+tion. Background-null transverse action derivatives supply the required perturbative controls; the
+selected SVT control submap has
+
+                                                1
+                                      det MSVT = ℎ𝜙′2 ≠ 0
+                                                2
+
+on both handovers. Since the common reduced operator is smooth away from the tested pivots
+and all endpoint stability margins are strict, the transverse controls can be continued through the
+compact overlap bands while remaining inside the healthy principal-symbol domain. A tubular
+invariant-space expansion then realizes those smooth jets as one ordinary local covariant action.
+
+
+                                                79
+This establishes the result that was previously missing:
+
+
+        For the frozen P5 background there exists a smooth local covariant same-action
+        Horndeski–SVT realization across the exterior, both strong-field light rings, and the
+        regular core. The static background equations can be satisfied throughout both han-
+        dovers, every nondynamical even-parity pivot exposed by the common reduction re-
+        mains nonzero on the certified reference construction, and the local odd/even principal
+        symbol can be continued without a forced ghost, Laplacian, hyperbolicity or constraint
+        singularity. The local same-action closure is therefore complete.
+
+This conclusion is deliberately local and constructive. It does not identify a unique microscopic
+theory, and it does not turn local hyperbolicity into a global stability theorem. The scientifically
+important open questions now begin after closure: finite-\ell quasinormal modes and stable trap-
+ping, nonlinear dynamics, effective causal cones, rotation and UV completion.
+
+
+
+
+Appendix A. Numerical Reference Values for the Frozen P5 Con-
+struction
+A.1 Explicit P5 closure reference values
+In addition to the perturbative reference values below, the frozen geometry itself is now reproducible
+from
+
+
+                                      𝜒(Ξ) = (1 − Ξ)3/2 𝒫5 (Ξ),
+
+
+                                            𝑓 = (1 + Ξ)−2 ,
+
+and
+
+                                           2/3
+                                   𝜒                              1
+                            ℎ=1−(     )          (1 − 𝑓),    𝜒GR = (1 + Ξ)3 .
+                                  𝜒GR                             2
+
+The key geometry regression points are:
+
+Point                   u              x               \Xi         \chi               f             h
+natural      0.5515230871       1.813161          0.509933      1.469286        0.438616     0.494833
+SVT
+onset
+outer        0.6666666667       1.500000          0.732051      2.598076        0.333333     0.333333
+light ring
+stable       0.7061345809 1.4161606400            0.838419      2.603497        0.295877     0.374130
+light ring
+core         0.7100000000       1.408451          0.848354      2.534377        0.292705     0.389107
+handover
+
+
+
+                                                     80
+The radial function has a global minimum in the reconstructed closure of approximately
+
+
+                                         ℎmin = 0.3268566652
+
+near x\simeq1.473439, while f\to1/4 and h\to1 at the regular center.
+
+
+The following values define the current frozen numerical reference point of the manuscript.
+The natural SVT onset is
+
+
+                                      𝑢on = 0.5515230871346237,
+
+corresponding to
+
+
+                                            𝑥on ≃ 1.813161.
+
+The outer unstable light ring is
+
+                                                                2
+                                       𝑥out = 1.5,        𝑢out = .
+                                                                3
+
+The inner stable light ring is
+
+
+                                 𝑥in ≃ 1.41616064,        𝑢in ≃ 0.706135.
+
+The genuine-SVT integration domain is
+
+
+                                           0.61 ≤ 𝑢 ≤ 0.715,
+
+or
+
+
+                                      1.3986014 ≲ 𝑥 ≲ 1.6393443.
+
+The quartic-Horndeski core reaches outward to
+
+
+                                 𝑥core = 1.4084507042,       𝑢core = 0.71.
+
+The SVT–core overlap is therefore approximately
+
+
+                                        1.39860 ≲ 𝑥 ≲ 1.40845.
+
+The scalar background residual of the integrated SVT representative is
+
+
+                                           max |ℰ𝜙 | ∼ 10−12 .
+
+
+
+                                                     81
+The reconstructed cubic SVT derivative satisfies
+
+
+                                         max |𝑓3,𝑋 | ≃ 44.73
+
+over the extended lobe.
+The corrected even no-ghost quantity satisfies
+
+
+                                       10.5415 ≲ 𝒦 ≲ 137.879.
+
+Its independent identity residual is
+
+
+                               max ∣𝒦 − 𝑒1 √𝑓ℎ𝜙′2 ∣ ≃ 2.18 × 10−10 .
+
+The radial characteristic minima are
+
+                                          2
+                                         𝑐𝑟,𝑇 ,min ≃ 1.00507,
+
+
+
+                                          2
+                                         𝑐𝑟,𝑆,min ≃ 0.903745,
+
+and
+
+                                          2
+                                         𝑐𝑟,𝑉 ,min ≃ 9.45887.
+
+
+The scalar radial maximum is
+
+                                          2
+                                         𝑐𝑟,𝑆,max ≃ 1.06133.
+
+The coupled angular minima are
+
+                                          2
+                                         𝑐Ω,−,min ≃ 84.912,
+
+and
+
+                                          2
+                                         𝑐Ω,+,min ≃ 643.142.
+
+The first coupled angular stability margin is approximately
+
+
+                                              738.609,
+
+the second approximately
+
+
+                                            6.0303 × 104 ,
+
+
+
+
+                                                 82
+and the minimum discriminant approximately
+
+
+                                             2.9938 × 105 .
+
+The odd kinetic combination satisfies
+
+
+                                         𝐶odd,min ≃ 0.76072.
+
+The minimum odd coeﬀicients include
+
+
+                                        𝛼4,min ≃ 9.996 × 10−3 ,
+
+and
+
+
+                                           𝛼7,min ≃ 2.00153.
+
+The regular core satisfies approximately
+
+
+                                               ℱmin = 1,
+
+
+                                     𝒢min = ℋmin ≃ 0.999381.
+
+The proper central Einstein-frame scalar kinetic coeﬀicient is approximately
+
+
+                                                 95.89.
+
+The corrected restricted exterior Horndeski scalar kinetic carrier has
+
+
+                                        𝐾ext ≃ 9.7423 × 10−3 .
+
+The first common jet-aware constraint pivot has, for \ell=2,
+
+
+                                           min |𝐷ℎ1 | ≃ 11.99,
+
+and no zero or sign change has been observed throughout the tested high-L range.
+These numerical values should be regarded as the frozen reference values against which later same-
+action hybrid calculations are to be regressed.
+
+
+
+
+Appendix B. Reproducibility and Regression Logic
+A central methodological principle of the present project is that every new layer of the calculation
+should reproduce an independently known limit before being used to make a new physical claim.
+
+
+
+                                                   83
+The current regression chain is
+
+
+
+background profile → background field equations → action jets → unreduced quadratic coeﬀicients → reduced k
+
+
+The most important completed internal checks include
+
+
+                                                𝑎3 + 𝑟𝑎4 = 0
+
+for the pure-SVT representative,
+
+                                                   2𝑟𝑎4
+                                            𝑏4 −        = 0,
+                                                    𝑓
+
+                                                       𝑎4
+                                                𝑏5 +      = 0,
+                                                       𝑓
+
+                                                       𝑎4
+                                                𝑑1 −      = 0,
+                                                       2𝑓
+
+and
+
+                                                   𝐴′2
+                                                    0 𝑣1
+                                            𝑣7 −         =0
+                                                     4
+
+to numerical precision.
+Independent reconstructions of v_1, v_4, and c_2 agree with their stored target values at approxi-
+mately the 10^{-8}–10^{-7} level or better on the numerical interpolation grid.
+Most importantly,
+
+
+                                            𝒦 = 𝑒1 √𝑓ℎ𝜙′2
+
+now closes after correcting the exact P_1 definition.
+The future common hybrid reducer will not be accepted as physically validated merely because its
+matrix algebra is internally consistent.
+It must reproduce, in its pure-SVT limit,
+
+                                        2           2             2
+                                       𝑐𝑟,𝑇 ,      𝑐𝑟,𝑆 ,        𝑐𝑟,𝑉 ,
+
+and the corresponding angular branches obtained from the established SVT formalism.
+It must independently reproduce the Maxwell–Horndeski characteristic conditions when the genuine-
+SVT interactions are switched off.
+Only after both regression limits pass will interpolation results be interpreted as physical predictions
+of the hybrid action.
+
+
+
+                                                       84
+B.1 Geometry-level regression gates
+The following geometry tests are now included before any action reconstruction is accepted:
+
+
+                                 max |𝑓 − (1 + Ξ)−2 | ≲ 6.7 × 10−16 ,
+
+
+                                  max |ℎ − ℎ[Ξ, 𝜒]| ≲ 8.9 × 10−16 ,
+
+and
+
+
+                           max |𝜒stored − (1 − Ξ)3/2 𝒫5 (Ξ)| ≲ 3.6 × 10−15 .
+
+The photon equation
+
+                                                      𝑢𝜒
+                                         𝑄(𝑢) =          −1
+                                                     1+Ξ
+
+has exactly two resolved roots in the tested global P5 profile:
+
+
+                           𝑢1 = 0.66666666668,            𝑢2 = 0.70613458091.
+
+At the outer root the independent optical-potential regression gives
+
+
+                                                 𝑊 ″ ≃ −2
+
+with sub-10^{-9} numerical error in the regenerated profile.
+
+B.2 Variational handover regression
+For the normalized flat-two-jet partition,
+
+
+                                      𝑠𝐻5 = 10𝑡3 − 15𝑡4 + 6𝑡5 ,
+
+we obtain exactly
+
+                                                 1
+                                      𝐽3 = ∫ (𝑠‴   2
+                                               𝐻5 ) 𝑑𝑡 = 720.
+                                             0
+
+The independently evaluated C^\infty bump partition gives
+
+
+                                         𝐽3 ≃ 2454.648507,
+
+so
+
+
+
+
+                                                     85
+                                     𝐽3 [𝐶 ∞ ]/𝐽3 [𝐻5] ≃ 3.409234.
+
+This regression reproduces the variational ordering expected from the historical SSZ bridge theorem
+while keeping the bridge outside the fundamental dynamics.
+
+
+
+
+Appendix C. Literature Framework and Provenance Boundaries
+The full \mathcal L_2–\mathcal L_5 Horndeski definitions used in Sec. 5 follow the generalized-
+Galileon representation of Kobayashi, Yamaguchi and Yokoyama, which is equivalent to Horndeski
+theory up to the standard mappings and integrations by parts.
+The explicit second-order U(1)-gauge-invariant scalar–vector–tensor interactions f_2, f_3, \tilde
+f_3, f_4, and \tilde f_4 follow the gauge-invariant SVT construction used by Heisenberg and
+Tsujikawa. The odd-parity general-SVT stability framework is associated with Heisenberg, Kase
+and Tsujikawa, while the even-parity general-SVT conditions used for the P5 lobe follow Zhang and
+Kase.
+The Maxwell–Horndeski pure-limit regression follows Kase and Tsujikawa. Their \ell\ge2 decom-
+position contains two physical odd modes and three physical even modes, matching the mode count
+used in the common hybrid reducer.
+The stable-trapping discussion is intentionally separated from the local ghost/Laplacian result. Keir
+establishes logarithmic limitations on uniform wave decay in relevant stably trapped spherical geome-
+tries. Cardoso et al. connect stable null orbits in ultracompact objects with long-lived modes and
+possible nonlinear problems. Cunha, Berti and Herdeiro establish strong light-ring pairing results
+for smooth ultracompact objects, with the GR+NEC assumptions carefully distinguished from the
+more general topological part. Fully nonlinear bosonic-star evolutions by Cunha et al. show light-
+ring-triggered migration or collapse and also emphasize that very shallow wells can lengthen the
+relevant timescale.
+The comparison with regular black holes follows the review by Bonanno and Saueressig: many
+standard regular-black-hole geometries retain an outer event horizon and an inner Cauchy horizon.
+Since the frozen P5 closure has f>0 and h>0 everywhere in the tested global continuation, it belongs
+instead to the horizonless ultracompact class.
+The SSZ-specific provenance is deliberately kept separate from established external theory. The
+canonical SSZ baseline \Xi_{\rm weak}, \Xi_{\rm strong}, D and the historical C^2 transition are
+documented in the SSZ complete-documentation corpus, with SSZ_CANONICAL_FORMULAS_2026.md
+used as the later source hierarchy where older branch-lock files conflict. The fixed-two-jet variational
+theorem is documented in SSZ_Variational_Bridge_Paper_Wrede_Casu_BingsiAI_v2.pdf;
+the warning that a frozen bridge does not uniquely determine dynamics is documented in
+SSZ_Middle_Bridge_Dynamics_Gap_Audit_2026-08-29.md. Neither internal source is treated as
+external validation of P5. They provide model provenance, a tested interpolation theorem, and a
+clear separation between geometry and dynamics.
+
+
+
+
+                                                  86
+Appendix D. Same-Action Closure Certificate
+D.1 Certified overlap data
+The machine-readable reference run uses r_s=1 for the numerical \phi' and \kappa normalization.
+The two same-action transition bands are
+
+
+                            𝐼out ∶   0.5515230871346237 ≤ 𝑢 ≤ 0.61,
+
+and
+
+
+                                     𝐼in ∶   0.71 ≤ 𝑢 ≤ 0.715.
+
+The corresponding scalar and rank data are
+
+                                               𝐼out              𝐼in
+                                Ξ𝑎        0.5099330950      0.8483535179
+                                Ξ𝑏        0.6060115821      0.8607634713
+                              min 𝑓       0.3877061179      0.2888136109
+                              min ℎ       0.4269907185      0.3891074915
+                            min |𝜙′ |     0.4469239959      1.2403742162
+                              min 𝜅       0.0988383730      0.6327532291
+                         min | det MSVT | 0.0494191865      0.3163766145
+
+For the full genuine-SVT lobe 0.61\le u\le0.715,
+
+
+                         min 𝑓 ≃ 0.28881361,          min ℎ ≃ 0.32685689,
+
+
+                     min 𝜅 ≃ 0.20786197,        min | det MSVT | ≃ 0.10393098.
+
+D.2 Frozen stability margins used by the certificate
+                               quantity         frozen lower margin
+                                 𝐾ext              9.7423 × 10−3
+                                 𝐶odd                  0.76072
+                                  𝛼4                9.996 × 10−3
+                                  𝛼7                   2.00153
+                                 𝒦even                 10.5415
+                                   2
+                                 𝑐𝑟,𝑇                  1.00507
+                                   2
+                                 𝑐𝑟,𝑆                 0.903745
+                                   2
+                                 𝑐𝑟,𝑉                  9.45887
+                                  2
+                                 𝑐Ω,−                   84.912
+                                  2
+                                 𝑐Ω,+                  643.142
+                                 ℱcore                     1
+                            min(𝒢core , ℋcore )       0.999381
+
+The common/pure constraint bounds entering the same certificate are
+
+
+                                                 87
+                                       min |𝐷ℎ1 |ℓ=2 ≃ 11.99,
+
+
+                       min |Δ𝑉 | ≥ 3.04288,      min |𝐿2 Δ𝑉 |ℓ=2 ≥ 109.54368,
+
+and
+
+
+                                     min(2𝐿𝛼4 )ℓ=2 ≥ 0.119952.
+
+
+D.3 Eight closure gates
+The independent certificate returns true for all of the following tests:
+G1    positive f,h on all handover bands
+G2    monotone scalar patch coordinate phi=Xi
+G3    rank-three SVT Hessian-control map everywhere
+G4    monotone C-infinity-flat scalar partition
+G5    strict frozen pure-sector local stability margins
+G6    nonzero delta-A0 constraint pivot
+G7    nonzero H1/delta-A1 constraint determinant
+G8    nonzero common h1 pivot
+and records the final status
+PASS_CONSTRUCTIVE_LOCAL_SAME_ACTION_CLOSURE_CERTIFICATE
+The reproducibility artifacts associated with this manuscript are
+ssz_p5_same_action_closure_certificate_2026-09-14.json
+ssz_p5_same_action_closure_certificate_2026-09-14.py
+ssz_p5_same_action_closure_bands_2026-09-14.csv
+ssz_p5_geometry_audit_2026-09-14.json
+ssz_p5_geometry_audit_2026-09-14.py
+
+
+
+
+References — working bibliography
+T. Kobayashi, M. Yamaguchi, and J. Yokoyama, “Generalized G-inflation: Inflation with the most
+general second-order field equations,” Prog. Theor. Phys. 126, 511 (2011), arXiv:1105.5723.
+L. Heisenberg and S. Tsujikawa, “Hairy black hole solutions in U(1) gauge-invariant scalar-vector-
+tensor theories,” Phys. Lett. B 780, 638–646 (2018), arXiv:1802.07035.
+L. Heisenberg, R. Kase, and S. Tsujikawa, “Odd-parity stability of hairy black holes in U(1) gauge-
+invariant scalar-vector-tensor theories,” Phys. Rev. D 97, 124043 (2018), arXiv:1804.00535.
+R. Kase and S. Tsujikawa, “Black hole perturbations in Maxwell-Horndeski theories,” Phys. Rev. D
+107, 104045 (2023), arXiv:2301.10362.
+C. Zhang and R. Kase, “Even-parity stability of hairy black holes in U(1) gauge-invariant scalar-
+vector-tensor theories,” Phys. Rev. D 110, 044047 (2024), arXiv:2404.11910.
+
+
+
+                                                 88
+S. Mironov, A. Shtennikova, and M. Valencia-Villegas, “Ghost-free, gauge invariant SVT general-
+izations of Horndeski theory,” Eur. Phys. J. C 85, 1378 (2025).
+J. Keir, “Slowly Decaying Waves on Spherically Symmetric Spacetimes and an Instability of Ultra-
+compact Neutron Stars,” Class. Quantum Grav. 33, 135009 (2016), arXiv:1404.7036.
+V. Cardoso, L. C. B. Crispino, C. F. B. Macedo, H. Okawa, and P. Pani, “Light rings as observational
+evidence for event horizons: long-lived modes, ergoregions and nonlinear instabilities of ultracompact
+objects,” Phys. Rev. D 90, 044069 (2014), arXiv:1406.5510.
+P. V. P. Cunha, E. Berti, and C. A. R. Herdeiro, “Light-ring stability in ultra-compact objects,”
+Phys. Rev. Lett. 119, 251102 (2017), arXiv:1708.04211.
+P. V. P. Cunha, C. Herdeiro, E. Radu, and N. Sanchis-Gual, “Exotic Compact Objects and the Fate
+of the Light-Ring Instability,” Phys. Rev. Lett. 130, 061401 (2023), arXiv:2207.13713.
+A. Bonanno and F. Saueressig, “Stability properties of Regular Black Holes,” arXiv:2211.09192
+(2022).
+Internal SSZ/JIF research artifacts used for provenance and regression: SSZ_CANONICAL_FORMULAS_2026.md;
+SSZ Variational Bridge Paper (Wrede, Casu, Bingsi AI, 2026), SSZ_Variational_Bridge_Paper_Wrede_Casu_Bi
+SSZ_Middle_Bridge_Dynamics_Gap_Audit_2026-08-29.md; and the 14 September 2026 P5
+geometry/same-action closure certificates listed in Appendix D.
+
+
+Appendix E. Extended source list
+Primary project sources
+  1. SSZ_P5_Horndeski_SVT_CLOSURE_COMPLETE_2026-09-14.md — consoli-
+     dated manuscript used as the main text basis for this PDF.
+  2. ssz_p5_reconstructed_profile_2026-09-14.csv — reconstructed frozen P5 background
+     profile ((u,x,�,�,f,h,Q,W)).
+  3. ssz_p5_geometry_keypoints_2026-09-14.csv — key background points, including
+     both light rings and handover locations.
+  4. ssz_p5_light_ring_diagnostics_2026-09-14.csv — ring positions and local potential
+     diagnostics.
+  5. ssz_p5_same_action_closure_certificate_2026-09-14.json — certified closure gates,
+     overlap bands, and pivot bounds.
+  6. ssz_p5_same_action_closure_bands_2026-09-14.csv — numerical summary of same-
+     action overlap bands.
+
+External physics references
+  1. C. Zhang and R. Kase, Even-parity stability of hairy black holes in U(1) gauge-invariant
+     scalar-vector-tensor theories, Phys. Rev. D 110, 044047 (2024), arXiv:2404.11910.
+  2. R. Kase and S. Tsujikawa, Black hole perturbations in Maxwell-Horndeski theories, Phys.
+     Rev. D 107, 104045 (2023), arXiv:2301.10362.
+  3. S. Mironov, A. Shtennikova, and M. Valencia-Villegas, Ghost-free, gauge invariant SVT gen-
+     eralizations of Horndeski theory, Eur. Phys. J. C 85, 1378 (2025).
+  4. T. Kobayashi, M. Yamaguchi, and J. Yokoyama, Generalized G-inflation: inflation with
+     the most general second-order field equations, Prog. Theor. Phys. 126, 511–529 (2011),
+     arXiv:1105.5723.
+
+
+
+                                                 89
+5. V. Cardoso, E. Franzin, and P. Pani, Is the gravitational-wave ringdown a probe of the event
+   horizon?, Phys. Rev. Lett. 116, 171101 (2016), arXiv:1602.07309.
+6. J. Keir, Slow decay of waves on spherically symmetric spacetimes and ultracompact neutron
+   stars, Class. Quantum Grav. 33, 135009 (2016), arXiv:1404.7036.
+7. V. Cardoso et al., Stable light rings and nonlinear instability of ultracompact objects, Phys.
+   Rev. D 90, 044069 (2014), arXiv:1406.5510.
+8. E. Maggio et al., The eikonal instability of ultracompact horizonless objects, JCAP 01 (2019)
+   056, arXiv:1807.08840.
+9. E. Contreras et al., Regular black holes: A short topic review, Universe 9, 453 (2023),
+   arXiv:2211.09192.
+
+
+
+
+                                             90
+

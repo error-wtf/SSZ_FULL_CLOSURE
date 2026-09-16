@@ -1,0 +1,718 @@
+                                                              SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+
+
+
+                                                SSZ P5
+
+Horndeski-SVT KRGM / finite-l Reducer
+Technisches Sicherheitsprotokoll des bisherigen Forschungsstands
+
+                                      Stand: 16. September 2026
+
+Schwerpunkt: same-action closure, 41-Slot-Rekonstruktion, profile-aware Constraint-Reduktion,
+                  K/R/G/M, Vorzeichenkonflikte und QNM-Vorbereitung
+
+
+
+
+Dokumentstatus
+Dieses Dokument ist ein internes, quellengebundenes Forschungs- und Reproduzierbarkeitsprotokoll. "PASS" und
+"CLOSED" bezeichnen die im Projekt definierten numerischen oder konstruktiven Gates; sie sind keine externe
+Peer-Review-Zertifizierung. Besonders wichtig: ältere Resultate, die später durch Quellprüfung oder bessere Jet-
+Behandlung korrigiert wurden, sind ausdrücklich als SUPERSEDED gekennzeichnet.
+
+
+
+
+                                            Stand 16.09.2026 | Seite 1
+                                                              SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+
+Inhalt
+  1. Kurzfassung und aktueller Gesamtstand
+  2. Was die Statuswörter in diesem Projekt bedeuten
+  3. Ausgangsproblem: eine gemeinsame HSVT-Action statt zusammengeklebter reduzierter Matrizen
+  4. Same-action closure, Handovers und Kontrollfreiheiten
+  5. Jet-aware Constraint-Reduktion bis zum physischen 3x3-Operator
+  6. Der bereits vorhandene globale K/R/G-Dump (45.617 Punkte)
+  7. Lower-order-Freiheit und warum M nicht eindeutig durch den Background festgelegt ist
+  8. Korrekturen an Formeln, Parsern und numerischen Ableitungen
+  9. Direkter Action-Audit der Massmatrix M
+  10. Der derzeit entscheidende v12-/G-Vorzeichenkonflikt
+  11. Was trotz dieses Konflikts weiterhin belastbar bleibt
+  12. QNM-Arbeit: was bereits validiert und was verworfen wurde
+  13. Vollständiges Status-Ledger
+  14. Sicherer nächster Rechenweg
+  Anhang A. Wichtige Formeln
+  Anhang B. Reproduzierbarkeits- und Quellenmanifest
+  Anhang C. Explizit verworfene / superseded Pfade
+
+
+1. Kurzfassung und aktueller Gesamtstand
+   Die P5-Arbeit ist deutlich weiter als ein bloßer lokaler Stabilitätscheck. Die geometrische P5-
+Hintergrundkurve, die lokalen Horndeski- und genuine-SVT-Repräsentanten, die beiden C-infinity-Handovers,
+die Hintergrund-Re-Solves, die transversalen Kontrollränge und die algebraische Eliminierung der
+nondynamischen Even-Variablen sind konstruktiv geschlossen. Zusätzlich existiert ein globaler numerischer
+45.617-Punkt-Export des kanonischen Principal-Operators K,R,G. [S1-S3,S11]
+   Der lange offene numerische Schwachpunkt war die lower-order Massmatrix M: mehrere Einträge
+enthalten radiale Ableitungen von zusammengesetzten Koeffizientenkombinationen. Post-hoc Cubic-Spline-
+Ableitungen aus gerundeten CSV-Spalten erzeugten falsche M12/M23- und Randartefakte. Am 16.09. wurde
+diese Ebene durch einen einheitlichen lokalen Polynomial-Jet-Service (9 Punkte, Grad 8) neu aufgebaut. Die
+empfindlichen Größen v13 und e4 regressieren wieder auf den eingefrorenen Zhang-Kase-Zentralvertreter,
+und die direkten finite-L-Massmatrizen konvergieren gegen alle bekannten High-L-Identitäten. [S5,S7]
+   Der gegenwärtig entscheidende offene Punkt ist nicht mehr "existiert ein KRGM-Operator?", sondern die
+eindeutige Vorzeichenkonvention des v12-Kanals im Übergang von der unreduzierten Action zu den
+gedruckten reduzierten radialen G-Formeln. Das archivierte Appendix-A-Profil und die neue Higher-Jet-
+Rekonstruktion ergeben v12=-v6/(2h). Genau diese Minusrelation wird auch vom direkten High-L-Mass-
+Audit gestützt. Im aktuell weitergeführten Direct-Action-Reducer reproduziert der K-Block die publizierte
+Reduktion, während der G-Block bei der Minusrelation von der gedruckten reduzierten G-Formel abweicht;
+die Plusrelation reproduziert dagegen die gedruckte G-Formel. Dieser Konflikt ist noch nicht als endgültiger
+Source-Fix aufgelöst. Deshalb wird in diesem Protokoll kein finaler coupled-QNM-PASS behauptet.
+   Wichtigster Sicherheitsbefund
+   Es wäre derzeit methodisch falsch, den vorhandenen globalen kanonischen K/R/G-Dump einfach mit einem M-
+   Block aus einer anderen Vorzeichen- oder Feldbasis-Konvention zu verheiraten. Eine radiusabhängige
+   Feldtransformation verändert auch lower-order Connection-/Potentialterme. Der endgültige finite-l KRGM-
+   Dump muss nach Auflösung des v12-/G-Konflikts in EINER gemeinsamen physischen Feldbasis aus EINEM
+   konsistenten unreduced 41-Slot-Vertreter erzeugt werden.
+
+
+
+2. Was die Statuswörter in diesem Projekt bedeuten
+   Im Verlauf der Arbeit wurden mehrere Ebenen bewusst getrennt. Diese Trennung ist entscheidend, weil
+ein Existenzbeweis, ein numerischer Representative und ein Spektral-PASS unterschiedliche Aussagen sind.
+
+                                            Stand 16.09.2026 | Seite 2
+                                                                          SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+ Gate / Aussage                               Status                                          Bedeutung / Evidenz
+ CLOSED / PASS CONSTRUCTIVE                   konstruktiv geschlossen                         Die nötigen Freiheitsgrade, Ränge und
+                                                                                              glatten Fortsetzungen sind bewiesen bzw.
+                                                                                              explizit konstruiert; nicht zwingend ein
+                                                                                              einzigartiger numerischer Vertreter.
+ PASS NUMERICAL                               numerisch bestanden                             Ein konkreter maschinenlesbarer Vertreter
+                                                                                              wurde auf einem Gitter ausgewertet und
+                                                                                              die angegebenen Regressionen/Gates
+                                                                                              bestanden.
+ SELECTED                                     Vertreter gewählt                               Eine der nicht eindeutigen Action-
+                                                                                              Freiheiten wurde deterministisch
+                                                                                              festgelegt; das ist Modellwahl, nicht durch
+                                                                                              den Background erzwungen.
+ CANDIDATE                                    noch Audit nötig                                Ein numerischer Kandidat existiert, aber
+                                                                                              ein unabhängiger action-level Re-Eval
+                                                                                              oder eine Source-Konventionsprüfung
+                                                                                              fehlt noch.
+ SUPERSEDED                                   nicht mehr autoritativ                          Später wurde ein Formel-, Vorzeichen-,
+                                                                                              Parser- oder Ableitungsfehler gefunden;
+                                                                                              der alte Output darf nicht mehr als
+                                                                                              Endergebnis verwendet werden.
+ OPEN                                         offen                                           Der nächste eigenständige
+                                                                                              Physik-/Numeriktest ist noch nicht
+                                                                                              abgeschlossen.
+
+
+
+
+3. Ausgangsproblem: eine gemeinsame HSVT-Action statt
+zusammengeklebter reduzierter Matrizen
+   Der zentrale methodische Punkt war früh: Maxwell-Horndeski und genuine U(1)-SVT dürfen nicht erst
+jeweils separat reduziert und anschließend auf Matrixebene addiert werden. Beide Theorien eliminieren ihre
+nondynamischen Variablen in unterschiedlichen Zwischenbasen; Schur-Komplemente sind nicht linear in den
+unreduzierten Koeffizienten. [S1,S12]
+                                      C_HSVT = C_MH + ( C_SVT - C_shared )
+                                    P_red = A_tot - B_tot C_tot^{-1} B_tot^T
+    Die Kombination geschieht auf unreduzierter Action-/Koeffizientenebene, erst danach folgt die gemeinsame Constraint-Eliminierung.
+
+   Die gemeinsame even-parity 41-Slot-Struktur wird in der festen Reihenfolge a1..a9, b1..b5, c1..c6, d1..d4,
+e1..e4 und v1..v13 geführt. Die gemeinsamen gauge-fixed Felder sind (H0,H1,H2,h1,delta phi,delta A0,delta
+A1,V). Für die dynamische Reduktion wurde die verallgemeinerte Variable
+                                 psi = H2 + (L a4/a3) h1 + (a1/a3) delta phi'
+
+
+   verwendet. Diese Variable reduziert im Horndeski-Limit auf die Maxwell-Horndeski-Definition und im
+genuine-SVT-Limit auf die dort verwendete Kombination. Damit liegt eine gemeinsame unreduced Struktur
+vor; das vermeidet einen versteckten Basiswechsel innerhalb des finalen Operators. [S1]
+   Warum "freeze -> Fourier -> eliminate" verworfen wurde
+   Die publizierten reduzierten Matrizen enthalten radiale Ableitungen von Koeffizienten und von
+   zusammengesetzten Constraint-Größen. Werden die Koeffizienten vor der Elimination punktweise eingefroren,
+   verschwinden genau diese Produktregel- und Integrations-by-parts-Terme. Die korrekte Reihenfolge lautet:
+   radiale Actionprofile kombinieren -> Koeffizientenjets behalten -> gemeinsame Constraints eliminieren -> erst
+   dann Principal-/Eikonal-Limit. [S1, Kap. 20.1]
+
+
+
+4. Same-action closure, Handovers und Kontrollfreiheiten
+  Die lokale same-action closure wurde nicht durch direkte Interpolation der 41 Quadratikkoeffizienten
+konstruiert. Stattdessen werden Action-Jets mit einer flachen C-infinity-Partition fortgesetzt, die background-
+constrained Jets aus den statischen Gleichungen erneut gelöst und erst danach die Perturbationskoeffizienten
+neu ausgewertet. [S1]
+                           s_inf(t) = exp(-1/t) / [ exp(-1/t) + exp(-1/(1-t)) ]
+
+                                                       Stand 16.09.2026 | Seite 3
+                                                                SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+
+
+   äußerer zertifizierter Handover: ungefähr u in [0.5515230871, 0.61]
+   innerer Handover: u in [0.71, 0.715]
+   am exakten Zentrum gilt phi' -> 0; dort wird nicht der skalare Koordinaten-IFT benutzt, sondern eine separate
+    endliche Taylor-Action-Branch.
+   Für die principal-SVT-Freiheit wurde ein background-null Hessian-Kontrollraum identifiziert. In einer
+einfachen Selektorgauge kontrollieren (H_XX,H_XF,H_FF) die drei radialen Zielkanäle (Delta v1, Delta v4,
+Delta c2) mit Determinante
+                            det M_rad = (1/2) kappa,             kappa = h (phi')^2
+
+
+   und damit ohne Rangverlust auf den zertifizierten overlap bands. Genau diese transversalen Freiheitsgrade
+erklären, warum ein degenerierender eindimensionaler Versuch (etwa nur f3_X als ODE-Variable) kein No-Go
+der Theorie bedeutet: er ist lediglich ein schlecht gewählter Schnitt durch einen höherdimensionalen
+regulären Kontrollraum. [S1]
+  Für die lower-order Ebene existiert zusätzlich ein dreieckiger Kontrollmap für (v5,c3,e3), siehe Abschnitt 7.
+Damit sind sowohl Principal-Symbol-Ziele als auch die nicht durch den Background festgelegten Potentialjets
+konstruktiv erreichbar.
+
+
+5. Jet-aware Constraint-Reduktion bis zum physischen 3x3-
+Operator
+   Die algebraische Reduktionsarchitektur ist vollständig hergeleitet. Sie muss nicht neu erfunden werden; die
+offene Arbeit ist die konsistente numerische Instanziierung mit den richtigen radialen Jets und
+Vorzeichenkonventionen. [S1]
+
+5.1 H0-Constraint und h1
+                                   p = a1/a3,    q = L a4/a3
+                                     B = a2 - v2 v4/(2 v1)
+                              C_phi = a5 + L a6 - v2 v5/(2 v1)
+                               C_H2 = a7 + L a8 - v2 v3/(2 v1)
+                                C_h1 = L [a9 - v2 v6/(2 v1)]
+                                  B_eff = B - a3 p' - C_H2 p
+                                D_h1 = C_h1 - a3 q' - C_H2 q
+       h1 = -[a3 psi' + B_eff delta phi' + C_phi delta phi + C_H2 psi + v2 V] / D_h1
+
+
+   Im strong-field reference scan liegt min |D_h1| ungefähr bei 11.99 für ell=2; im expliziten sector-cover scan
+wurde auch im weak exterior kein Nullpunkt gefunden, mit einem kleineren Minimum von etwa 0.122207.
+Die Pivotgröße wächst im getesteten L-Bereich eher mit L, statt gegen Null zu laufen. [S1,S12]
+
+5.2 H1, delta A1 und delta A0
+                                 [ 2 b1   v11 ] [ H1        ] = [ R1 ]
+                                 [ v11   2 v10 ] [ delta A1 ]   [ R2 ]
+                                       Delta_V = 4 b1 v10 - v11^2
+
+
+             delta A0 = (v1 V)'/(L v9) - [v8 h1 + v12 H2 + v13 delta phi]/(2 v9)
+
+
+   im pure Einstein+genuine-SVT limit: Delta_V = -4 C_odd;
+   archivierte strong-field Schranke: |Delta_V| >= 3.04288;
+   delta A0-Pivot bei ell=2: 2 L alpha4 >= 0.119952;
+   damit sind die exponierten nondynamischen even constraints im zertifizierten strong-field Vertreter nicht
+    singulär.
+
+
+
+                                              Stand 16.09.2026 | Seite 4
+                                                                    SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+
+5.3 Zieloperator
+                                 chi = ( psi, delta phi, V )^T
+           S_even^(2) = 1/2 int dt dr [ dot(chi)^T K dot(chi) + dot(chi)^T R chi' -
+                                 chi'^T G chi' - chi^T M chi ]
+
+
+  Damit ist der formale Schur-Komplement-Reducer abgeschlossen. Die verbleibenden Schwierigkeiten sind
+Repräsentantenauswahl, radiale Jet-Konsistenz und Source-/Vorzeichenkonsistenz, nicht das Fehlen einer
+Reduktionsformel.
+
+
+6. Der bereits vorhandene globale K/R/G-Dump (45.617 Punkte)
+   Am 15.09. wurde ein globaler kanonischer Principal-Export erzeugt:
+ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15.csv. Er enthält 45.617
+Radialpunkte und die 3x3-Einträge von K,R,G sowie die drei charakteristischen Quadratspeeds cT2,cS2,cV2.
+[S3,S11]
+ Region                                                          Zeilen
+ Horndeski_core_to_center                                        29.790
+ weak_exterior_H                                                 7.996
+ central_exact_SVT                                               3.428
+ outer_H_SVT_characteristic_handover                             2.201
+ inner_SVT_H_characteristic_handover                             1.401
+ central_inner_matching_buffer                                   401
+ central_outer_matching_buffer                                   400
+
+
+   Das Closure-Zertifikat meldet für diesen kanonischen Principal-Vertreter min f = 0.25, min h = 0.3268567,
+min cT2 = 0.9992624, min cS2 = 0.9037452, min cV2 = 1.0 und einen maximalen charakteristischen
+Rekonstruktionsfehler von ungefähr 1.46e-11. Die kanonische Basis ist so normalisiert, dass der kleinste K-
+Eigenwert 1 ist. [S3]
+
+
+
+
+                                  Abb. 1: Regionale Abdeckung des 45.617-Punkt-K/R/G-Exports.
+
+   Interpretationsgrenze des globalen K/R/G-Dumps
+   Der Export ist ein kanonischer characteristic-basis Principal-Vertreter. Er beweist die numerische Principal-
+   Abdeckung dieses konstruierten Repräsentanten. Er ist noch nicht automatisch derselbe finite-l physische
+   Feldbasis-Operator wie ein separat erzeugter lower-order M-Block. Ein radiusabhängiger Basiswechsel erzeugt
+   zusätzliche lower-order Terme. [S8]
+
+
+
+                                                  Stand 16.09.2026 | Seite 5
+                                                               SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+  Außerdem sind einzelne effektive Charakteristiken in der gewählten Normierung deutlich größer als 1 (cV2
+kann sehr groß werden). Das Closure-Dokument trennt deshalb ausdrücklich lokale Hyperbolizität/Stabilität
+von Kausalitätskegel- oder EFT/UV-Interpretationen. Eine positive Geschwindigkeit ist hier kein Beweis für
+Subluminalität relativ zum Materiekegel. [S1]
+
+
+7. Lower-order-Freiheit und warum M nicht eindeutig durch den
+Background festgelegt ist
+  Die statischen Background-Gleichungen und der Principal-Symbol fixieren nicht sämtliche lower-order
+Action-Jets. Diese Freiheit ist der Grund, warum die Existenz eines glatten finite-l K,R,G,M-Operators
+konstruktiv geschlossen werden kann, ohne dass genau ein einzigartiges M(r) durch die Geometrie erzwungen
+wäre. [S2,S3]
+                                            q1 = f2_{phi F}
+                                            q2 = f2_{X phi}
+                                           q3 = f2_{phi phi}
+                                     d v5/dq1 = r^2 sqrt(h/f) A0'
+                               d c3/dq2 = (1/2) r^2 sqrt(f h) (phi')^2
+                                   d e3/dq3 = -(1/2) r^2 sqrt(f/h)
+
+
+                            det J_LO = -(1/4) r^6 A0' (phi')^2 sqrt(f h)
+
+
+   Auf der vector-active Branch ist diese Dreiecksabbildung bei f>0, h>0, phi'!=0 und A0'!=0 invertierbar. An
+den C-infinity-Endpunkten, an denen A0' gegen Null geht, fällt v5 als aktiver Vektorkanal weg; der
+verbleibende (c3,e3)-Block hat det J_H = -(1/4) r^4 f (phi')^2 != 0 auf jedem endlichen punctured overlap. Am
+exakten Zentrum übernimmt die separate Taylor-Branch. [S2,S3]
+   Am 15.09. wurde als deterministischer lower-order Testvertreter v5=c3=e3=0 gewählt. Diese Wahl
+demonstriert die Selektierbarkeit eines konkreten Members, ist aber keine durch P5 erzwungene
+Naturkonstante. Zudem enthält der damalige F3-Selected-Member-Export eine heute superseded v12-
+Pluskonvention und darf deshalb nicht unverändert als finaler physischer Member verwendet werden. [S9,S5]
+
+
+8. Korrekturen an Formeln, Parsern und numerischen
+Ableitungen
+    Mehrere scheinbar physikalische Probleme erwiesen sich als Source-, Parser- oder Jet-
+Konsistenzprobleme. Diese Korrekturen sind für das Archiv besonders wichtig, weil ältere Dateien sonst
+leicht wieder als autoritativ eingelesen werden.
+
+8.1 d3 am Photonensphärenfaktor
+   Ein früher Parse des Maxwell-Horndeski-Appendix behandelte den Nenner von d3 effektiv mit einer
+zusätzlichen phi'-Potenz. Die korrigierte Form enthält den Faktor (r f' - 2 f) phi'. Am äußeren photon-sphere
+Faktor verschwindet der zugehörige Zähler gleichzeitig; der l'Hopital-Limes ist endlich. Damit ist dort kein
+echter d3-Singularitätshinweis vorhanden. [S12]
+
+8.2 a5: fehlender -a1'' Term und holonomische Reparatur
+   Ein besonders wichtiger Fehler wurde am 16.09. gefunden: ältere F2/F3-Skripte und Reports verwendeten
+eine a5-Formel ohne den Term -a1''. Die direkte Appendix-Prüfung ergibt die korrigierte Struktur
+                            a5 = a2' - a1'' - (A0' v4 / 2)' + (A0'/2) v5
+
+
+  Damit sind ältere ausgewählte a5-Spalten, die aus der unvollständigen Formel stammen, superseded.
+Zugleich ist es numerisch ungünstig, a1 aus gerundeten CSVs zweimal zu differenzieren. Der neue
+
+
+                                             Stand 16.09.2026 | Seite 6
+                                                                      SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+holonomische pure-Horndeski-Pfad kombiniert die exakten Appendix-Identitäten so, dass die zweite
+numerische Differentiation vermieden wird. Im aktuellen Closure-Report wird dafür
+                                                a2 = a1' - P a1 + R
+                                             a5 = -P' a1 - P a1' + R'
+                                             P = phi''/phi' + h'/(2h)
+                                         R = r/phi' * (f'/f - h'/h) * a4
+
+
+   verwendet. Auf dem glatten strong-H carrier liegt der mediane skalierte a5-Residual bei 8.11e-7, das 95%-
+Quantil bei 5.43e-6 und das Maximum bei 6.64e-4. Im punctured core ist die Auswahl zwischen zwei sehr
+schwachen Regularisierungen ebenfalls stabil (maximale relative a5-Änderung etwa 1.50e-4). [S6]
+
+8.3 Higher-Jet-Service für v13 und e4
+   Die zweite große Numerikreparatur war der Ersatz von post-hoc Cubic-Spline-Ableitungen durch lokale
+Polynomialjets auf dem tatsächlichen nichtuniformen r=x-Gitter. Akzeptiert wurde ein 9-Punkt/Grad-8-
+Service, aber erst nach Rückregression gegen den eingefrorenen 4000-Punkt-Zhang-Kase-Vertreter. [S5]
+ Gate / Aussage                            Status                                         Bedeutung / Evidenz
+ v12 = -v6/(2h)                            PASS                                           max absoluter Residual 1.42e-14
+ v13 direct action-jet                     PASS                                           Median 6.47e-6; 95% 6.74e-5; max
+                                                                                          1.11e-3
+ e4 mit archiviertem v13                   PASS                                           Median 2.73e-7; max 1.08e-4
+ e4 end-to-end mit rekonstruiertem v13     PASS                                           Median 3.00e-6; max 2.07e-3
+
+
+   Eine alternative direkte Verwendung einer Appendix-Identität für v6' wurde nicht blind übernommen, weil
+sie gegen den eingefrorenen Witness nicht sauber regressierte. Die akzeptierte Route ist diejenige, die den
+bekannten action-level Output reproduziert. Außerdem wurde beim e4-Parsing festgehalten, dass der
+betreffende Ableitungsterm alpha6' und nicht a6' ist.
+
+8.4 Warum alte negative finite-l Scans verworfen wurden
+   Ein früher direkter Full-M-Angularscan zeigte negative Eigenwerte. Gleichzeitig versagte dieselbe
+numerische Ableitungsroute jedoch sogar an bekannten analytischen High-L-Limits von M11, M13 und M33
+nahe der inneren Kante. Deshalb wurde dieser Scan explizit als numerisch kontaminiert zurückgewiesen und
+nicht als physikalische Instabilität interpretiert. [S4]
+
+
+9. Direkter Action-Audit der Massmatrix M
+   Der Massblock wurde bewusst direkt aus der unreduzierten Action und dem gemeinsamen Constraint-
+Map aufgebaut. Nach Substitution entstehen algebraische y^T A y-Terme und first-derivative cross terms y^T
+B y'. Nach symmetrischer partieller Integration trägt die radial abgeleitete symmetrische B-Komponente zum
+Potential bei. Genau hier waren post-hoc Spline-Ableitungen fatal. [S4,S7]
+
+9.1 v12 und die m5-Kombination
+  Der unreduced delta-A0-Source enthält L(v8 h1 + v12 H2 + v13 delta phi). Für die high-L skalare H0-
+Lösung folgt H2 -> (2 h a6/a4) delta phi. Mit der archivierten Appendix-Relation v12=-v6/(2h) ergibt sich
+daher zwingend
+                                            m5_action = a4 v13 - a6 v6
+
+
+   Die in der ausgewerteten gedruckten High-L-Abkürzung verwendete Kombination hat dagegen das
+Pluszeichen. Der Projektbericht erhebt daraus ausdrücklich keinen Anspruch auf ein offizielles Erratum,
+sondern dokumentiert einen internen Konsistenzkonflikt zwischen Appendix-Koeffizient, unreduced Action
+und gedruckter reduzierter Shortcut-Formel. [S4]
+
+9.2 Auflösung des M12/M23-Bookkeepings
+                                         z1 = (a4 + r a9 - r A0' v6/2) v6
+
+                                                    Stand 16.09.2026 | Seite 7
+                                                                    SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+                                          m1_plus = r a4 v8 + z1
+                                          m1_minus = -r a4 v8 + z1
+                                     m3_plus = a4 v1' + (A0' v1 v6)/2
+                                         m5_minus = a4 v13 - a6 v6
+
+
+  Der wesentliche Punkt war, dass der c4-Sektor und der delta-A0/v9-Schur-Sektor nicht denselben m1-
+Shortcut benutzen. Mit getrennten m1_plus/m1_minus und dem action-derived m5_minus schließen M12
+und M23 gegen die direkte finite-L-Reduktion. [S7]
+                      M22^(0) = e4 + 2 h c4 a6/a4 - m5_minus^2/(4 a4^2 v9)
+                 M23^(0) = h A0' c4 v1/a4 + v5/2 + m3_plus m5_minus/(2 a4^2 v9)
+                          - h a6 m4/(2 a4) - (1/4) [ v4 + v1 m5_minus/(a4 v9) ]'
+
+
+
+9.3 JET9D8-Konvergenz
+ L               M11 med           M12 med            M13 med             M22/L med            M23 med             M33 med
+ 1e+05           1.95e-01          7.38e-04           5.66e-01            7.63e-04             3.25e-04            2.01e+00
+ 1e+06           1.95e-02          7.38e-05           5.66e-02            7.62e-05             3.25e-05            2.01e-01
+ 1e+07           1.95e-03          7.38e-06           5.66e-03            7.62e-06             3.25e-06            2.01e-02
+ 1e+08           1.95e-04          7.40e-07           5.66e-04            7.62e-07             3.25e-07            2.01e-03
+ 1e+09           1.95e-05          6.84e-08           5.66e-05            7.62e-08             3.25e-08            2.01e-04
+
+
+
+
+                               Abb. 2: High-L-Konvergenz des direkten Mass-Reducers mit JET9D8.
+
+   Bei L=1e9 liegen die besonders kritischen Medianresiduen bei ungefähr 6.84e-8 (M12), 7.62e-8 (M22/L)
+und 3.25e-8 (M23). Damit ist die frühere M12/M23-Pathologie als Ableitungs-/Bookkeepingproblem
+identifiziert, nicht als physikalischer Beweis einer negativen Mode. [S7]
+
+
+10. Der derzeit entscheidende v12-/G-Vorzeichenkonflikt
+   Aktueller Live-Audit vom 16.09.2026
+   Dieser Abschnitt protokolliert die jüngste, noch nicht als eigenes finales Gate-Artefakt versiegelte Direct-Action-
+   Prüfung aus der laufenden Sitzung. Er ist deshalb bewusst als PROVISIONAL markiert. Die zugrunde liegenden
+   älteren Fakten - Appendix-v12-Minussign, Mass-Action-Minusbranch und der superseded Plusbranch des F3-
+   Selected-Members - sind dagegen bereits archiviert. [S4,S5,S9,S10]
+
+
+
+
+                                                 Stand 16.09.2026 | Seite 8
+                                                                 SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+  Erstens ist die raw Appendix-/Archivebene eindeutig: im 4000-Punkt-Zentralprofil gilt v12=-v6/(2h)
+punktweise mit etwa 1.42e-14 maximalem absolutem Residual. Die unabhängige Higher-Jet-Rekonstruktion
+vom 16.09. reproduziert dieselbe Relation. Die in einem alten F3-Builder gesetzte Plusrelation weicht davon
+um den Faktor-2-Signflip ab und ist als raw Appendix-Rekonstruktion nicht akzeptabel. [S5,S10]
+   Zweitens stützt die Massmatrix denselben Minuspfad: die unreduced delta-A0-Quelle führt zu m5=a4 v13-
+a6 v6, und der direkte finite-L-Reducer konvergiert gegen genau diese High-L-Struktur. [S4,S7]
+   Drittens ist im aktuell fortgeführten Direct-Action-Principal-Reducer eine neue Spannung sichtbar: Der K-
+Block reproduziert die publizierte zentrale Reduktion, sobald K2' wirklich aus dem radialen Profil differenziert
+wird. Beim radialen G-Block reproduziert dagegen die künstliche Pluswahl v12=+v6/(2h) die gedruckte
+reduzierte G-Formel, während die Appendix-konforme Minuswahl davon abweicht. In der Minusbranch kann
+im direkten zentralen radialen Eigenwertproblem eine negative c_r^2-Branch auftreten, obwohl die bisherige
+gedruckte/canonical Principal-Auswertung positiv war.
+   Das ist derzeit der wichtigste offene Source-/Konventionskonflikt. Er darf weder durch "wir nehmen
+einfach das Minus, weil Appendix A es sagt" noch durch "wir nehmen einfach das Plus, weil die gedruckte G-
+Formel dann passt" wegdefiniert werden. Beide Seiten besitzen unabhängige Evidenz in unterschiedlichen
+Teilen der Reduktion.
+             RAW APPENDIX / ARCHIVE:        v12 = -v6/(2h)       [stark bestätigt]
+             DIRECT HIGH-L MASS:            m5 = a4 v13 - a6 v6 [stark bestätigt]
+          PRINTED REDUCED G MATCH:       bevorzugt im Live-Audit die Plus-Konvention
+                     FINAL PHYSICAL BRANCH:         NOCH NICHT ZERTIFIZIERT
+
+
+   Mögliche Erklärungen, die noch geprüft werden müssen, sind ein Vorzeichenfehler in einer gedruckten
+reduzierten Gleichung, eine abweichende Feld-/Gauge-Konvention zwischen Appendix und reduzierter
+Variable, oder ein Vorzeichen in der Übertragung des unreduced Terms in die implementierte G-Reduktion.
+Diese Möglichkeiten sind Hypothesen; dieses Protokoll entscheidet keine davon vor der derivativen Source-
+Prüfung. Es wird ausdrücklich kein offizielles Erratum behauptet.
+
+
+11. Was trotz dieses Konflikts weiterhin belastbar bleibt
+   Die P5-Hintergrundgeometrie, ihre Horizonlosigkeit und die zwei Light-Rings werden durch den v12-Konflikt
+    nicht rückwirkend geändert.
+   Die konstruktive lokale same-action closure und die Existenz glatter C-infinity-Handovers bleiben bestehen; sie
+    beruhen auf Background-/Kontrollrängen und nicht auf der strittigen finalen G-Vorzeichenidentifikation.
+   Die background-null Principal-Kontrollmap und die lower-order (v5,c3,e3)-Kontrollmap bleiben algebraisch
+    vollrangig auf ihren jeweiligen Domains.
+   Die nondynamischen Constraint-Pivots bleiben die bereits berechneten algebraischen Größen; der Konflikt ist
+    kein Beweis eines Pivot-Nullpunkts.
+   Der JET9D8-Higher-Jet-Service, v13/e4-Regression und die holonomische a5-Reparatur bleiben gültige
+    numerische Verbesserungen.
+   Der Direct-Action-Mass-Audit bleibt eine belastbare Aussage darüber, welche High-L-Struktur aus der
+    implementierten unreduced Action folgt.
+   Der 45.617-Punkt-K/R/G-Export bleibt ein dokumentierter kanonischer Principal-Vertreter; seine
+    Identifikation mit dem endgültigen ausgewählten finite-l physical-basis Member ist jedoch bis zur
+    Vorzeichenklärung konditional.
+    Was NICHT behauptet werden darf
+    Derzeit kein endgültiger Satz "der ausgewählte coupled HSVT finite-l Operator hat überall positive radiale c_r^2"
+    und kein Satz "keine Im(omega)>0-QNM". Ebenso darf der alte positive canonical G-Dump nicht ohne
+    Basis-/Vorzeichenprüfung mit einem neuen M-Block als finaler physischer KRGM-Operator ausgegeben werden.
+
+
+
+12. QNM-Arbeit: was bereits validiert und was verworfen wurde
+  Die QNM-Vorbereitung wurde bereits ernsthaft getestet, aber ein coupled HSVT-Spektrum wurde
+bewusst noch nicht als physikalisches Resultat veröffentlicht. [S8]
+                                            Stand 16.09.2026 | Seite 9
+                                                                        SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+
+12.1 Outgoing Jost-Tail
+  Eine hochordentliche outgoing Jost-Expansion im weak exterior wurde an einem exakten Schwarzschild-
+Asymptotiktail von R=45 nach R=25 transportiert. Die Fehler fallen systematisch mit der Ordnung:
+
+
+
+
+                                     Abb. 3: Validierung der asymptotischen outgoing Jost-Serie.
+
+  Die Order-10-Abweichung liegt bei etwa 2.43e-12. Die asymptotische Serie selbst ist damit nicht der
+QNM-Blocker. [S8]
+
+12.2 Reales inward shooting verworfen
+   Für gedämpfte komplexe Moden ist ein inward shot entlang der reellen Radialachse exponentiell schlecht
+konditioniert: winzige eingehende Kontamination wächst beim Integrieren nach innen. Kandidatenpole
+verschoben sich merklich, wenn der äußere Matchingradius zwischen 25 und 45 verändert wurde. Diese Pole
+wurden deshalb explizit verworfen und nicht als QNM-Frequenzen zitiert. [S8]
+   Als Produktionsmethoden sind exterior complex scaling, continued fractions oder eine kompaktifizierte
+Jost-Formulierung vorgesehen. Das ist eine numerische Resonanzmethodenfrage, keine neue Background-
+Existenzfrage.
+
+12.3 Test-field Screen
+   Auf der eingefrorenen Geometrie ist das Maxwell-Testfeldpotential V_l^EM = f l(l+1)/r^2 nichtnegativ.
+Auch das minimal gekoppelte masselose Skalarpotential wurde global für l>=1 positiv gefunden. Dadurch sind
+für diese Testfelder negative räumliche Eigenwerte, die eine rein exponentiell wachsende omega=i gamma
+Mode erzeugen würden, ausgeschlossen. Das ist konsistent mit der WKB-Beobachtung, dass erste trapped
+ground states erst ungefähr bei l=256 (Skalar) bzw. 257 (Maxwell) auftreten. [S8]
+   Grenze dieses Screens
+   Testfelder sind kein Ersatz für den gekoppelten HSVT-Operator. Sie prüfen die Geometrie und Boundary-
+   Methodik, nicht die vollständigen drei gemischten even Moden.
+
+
+
+13. Vollständiges Status-Ledger
+ Gate / Aussage                             Status                                          Bedeutung / Evidenz
+ P5 frozen geometry / light-ring            PASS / CLOSED                                   Geometrische Basis bleibt unverändert.
+ background
+ Lokale Horndeski- und genuine-SVT          PASS / CLOSED                                   Action-level Background-Gleichungen
+ Background-Realisierung                                                                    lösbar.
+ C-infinity same-action Handovers           PASS CONSTRUCTIVE                               Action-Jets glätten, constrained Jets re-
+
+                                                     Stand 16.09.2026 | Seite 10
+                                                                           SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+    Gate / Aussage                              Status                                         Bedeutung / Evidenz
+                                                                                               solven, nicht 41 Slots direkt interpolieren.
+    Principal transverse control map            PASS                                           det M_rad = h(phi')^2/2 != 0 auf overlap
+                                                                                               bands.
+    Lower-order (v5,c3,e3) control map          PASS                                           dreieckiger Map; vector-active und
+                                                                                               vector-free Blöcke kontrolliert.
+    Even nondynamical constraint elimination    PASS                                           h1, H1, deltaA1, deltaA0 algebraisch
+                                                                                               eliminiert; exponierte Pivots nicht null.
+    Global canonical K/R/G export               PASS NUMERICAL                                 45.617 Punkte, alle archivierten principal
+                                                                                               gates positiv.
+    Central v13/e4 higher-jet regeneration      PASS                                           JET9D8 gegen eingefrorenen ZK-Witness
+                                                                                               regressiert.
+    Pure-H a5 holonomic correction              PASS                                           fehlender -a1'' Fehler repariert; doppelte
+                                                                                               CSV-Differentiation vermieden.
+    Central direct-action M High-L identities   PASS                                           M12, M22/L, M23 besonders stark; alle
+                                                                                               sechs bekannten Limits konvergieren.
+    Old spline-based negative angular scan      REJECTED / SUPERSEDED                          bekannte High-L-Limits wurden
+                                                                                               gleichzeitig verletzt; keine Physikdiagnose.
+    Old F3 selected v12=+v6/(2h) raw            SUPERSEDED AS APPENDIX                         archivierter ZK-Witness und Higher-Jet-
+    Appendix branch                             REPRESENTATIVE                                 Service bestätigen die Minusrelation.
+    v12 / reduced-G sign consistency            OPEN / UNRESOLVED                              Minus passt Appendix+Mass; Plus passt
+                                                                                               im Live-Audit die gedruckte reduzierte G-
+                                                                                               Formel.
+    One final same-basis finite-l numerical     OPEN ON SIGN CONSISTENCY                       Existenz konstruktiv geschlossen, finaler
+    KRGM member                                                                                physischer numerischer Export noch nicht
+                                                                                               zertifiziert.
+    Outgoing Jost asymptotics                   PASS                                           Order-10 Transportfehler etwa 2.43e-12.
+    Real-axis inward QNM shooting               REJECTED                                       Pole nicht stabil unter Outer-Radius-
+                                                                                               Änderung.
+    Coupled finite-l HSVT QNM spectrum          OPEN                                           erst nach konsistentem KRGM; dann
+                                                                                               resonance-stabile Methode.
+    Nonlinear / rotation / UV completion        OUTSIDE CURRENT CLOSURE                        separate spätere Programme.
+
+
+
+
+14. Sicherer nächster Rechenweg
+   Aus dem bisherigen Audit folgt eine klare Reihenfolge, die unnötige Wiederholungen vermeidet und
+verhindert, dass zwei inkonsistente Konventionen wieder in einen scheinbar fertigen Operator gemischt
+werden:
+      1. v12/G-Konflikt auf Source-Ebene lösen: unreduced Action, Appendix-A-Koeffizienten, Definition von psi,
+       Feldsignaturen und die gedruckte reduzierte G-Herleitung symbolisch in EINER Konvention durchziehen.
+      2. Den zentralen 4000-Punkt-Witness als harte Regression benutzen: K und G direkt aus denselben 41 Slots
+       und denselben radialen Jets erzeugen; keine Shortcut-Formel akzeptieren, die die action-level Regression nicht
+       reproduziert.
+      3. Erst nach Fix der Branch beide Handovers mit dem akzeptierten Higher-Jet/a5-Service neu auswerten. Die
+       konstruktive Handoverschließung wird nicht neu bewiesen; nur der konkrete numerische Representative wird
+       regeneriert.
+      4. Einen eindeutigen lower-order Member festlegen (z.B. eine dokumentierte v5,c3,e3-Wahl) und alle K,R,G,M-
+       Einträge in derselben physischen Feldbasis für feste finite-l Werte exportieren.
+      5. Endpoint-, pure-limit-, Pivot-, Eigenwert- und radial-resolution Regressionen als Release-Gates speichern.
+      6. Erst dann gekoppelte Resonanzen mit ECS, continued fractions oder compactified Jost berechnen; reale
+       inward shots nicht wieder als Produktionsmethode verwenden.
+      7. Für jede spätere Aussage zwischen lokaler Hyperbolizität, Spektralstabilität, Nichtlinearität und Kausal-/EFT-
+       Interpretation unterscheiden.
+
+
+Anhang A. Wichtige Formeln
+                                                     Common variable:
+                                       psi = H2 + (L a4/a3) h1 + (a1/a3) delta phi'
+
+                                       First constraint pivot:
+             D_h1 = L(a9 - v2 v6/(2v1)) - a3 (L a4/a3)' - (a7+L a8-v2 v3/(2v1))(L a4/a3)
+
+                                         Remaining vector/gravity algebraic block:
+                                                         Stand 16.09.2026 | Seite 11
+                                                                            SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+                                                       Delta_V = 4 b1 v10 - v11^2
+
+                                  Appendix raw relation in the frozen ZK profile:
+                                                   v12 = -v6/(2h)
+
+                                             Corrected general a5 structure:
+                                       a5 = a2' - a1'' - (A0' v4/2)' + (A0'/2) v5
+
+                                                       Action-derived high-L m5:
+                                                       m5_minus = a4 v13 - a6 v6
+
+                                           High-L scalar mass channel:
+                               M22^(0) = e4 + 2h c4 a6/a4 - m5_minus^2/(4 a4^2 v9)
+
+
+  Diese Formelsammlung ist als Reproduzierbarkeitshilfe gedacht. Bei einem späteren Source-Fix des
+v12-/G-Konflikts muss insbesondere geprüft werden, welche Gleichungen reine Definitionsidentitäten,
+welche Appendix-Koeffizientenrelationen und welche bereits reduzierte Konventionsformeln sind.
+
+
+Anhang B. Reproduzierbarkeits- und Quellenmanifest
+  Die folgenden Dateien bildeten die primäre Basis dieses Sicherheitsprotokolls. Die SHA-256-Hashes
+beziehen sich auf die für diese PDF materialisierten Snapshots.
+[S1] SSZ_P5_Horndeski_SVT_CLOSURE_COMPLETE_2026-09-14.pdf - Konstruktive same-action closure; Handovers; Constraint-
+    Reduktion; Scope/Limitierungen.
+[S2] SSZ_P5_FULL_FINITE_JET_OPERATOR_CLOSURE_2026-09-15.md - Lower-order control map und konstruktive finite-l Operator-
+    Existenz.
+[S3] ssz_p5_FULL_CLOSURE_CERTIFICATE_2026-09-15.json - Maschinenlesbares Gate-Zertifikat, 45.617-Punkt Principal-Metriken und
+    Mass-High-L-Zusammenfassung.
+[S4] SSZ_P5_F2B_SIGN_CONFLICT_AND_JET_REDUCER_CHECKPOINT_2026-09-15.md - v12 Appendix-Minusrelation, m5 Action-
+    Minus, alte Spline-Probleme.
+[S5] SSZ_P5_HIGHER_JET_CLOSURE_2026-09-16.md - JET9D8-Regressionsgates für v12/v13/e4.
+[S6] SSZ_P5_HOLONOMIC_A5_CLOSURE_2026-09-16.md - Holonomische a5-Reparatur und strong-H/core Regression.
+[S7] ssz_p5_F2b_action_highL_mass_convergence_JET9D8_2026-09-16.csv - Direkte Mass-High-L-Konvergenz mit akzeptiertem Jet-
+    Service.
+[S8] SSZ_P5_F3_COUPLED_QNM_EXECUTION_CHECKPOINT_2026-09-15.md - Jost-Tail-Validierung, Rejection real-axis shooting,
+    Test-field Screen.
+[S9] SSZ_P5_F3_SELECTED_MEMBER_EXECUTION_2026-09-15.md - Historischer ausgewählter lower-order Member; enthält heute
+    superseded v12-Pluskonvention.
+[S10] ssz_p5_ZK_delta_full_reconstruction_regression_2026-09-15.csv - 41-Slot/Delta-Rekonstruktionsregression; zeigt u.a. den 2.0-
+    Residual der Plus-v12-Relation.
+[S11] ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15.csv - Globaler kanonischer K/R/G-Principal-
+    Export, 45.617 Zeilen.
+[S12] SSZ_P5_F2_COMMON_UNREDUCED_RECONSTRUCTION_CHECKPOINT_2026-09-14.md - d3-Parserkorrektur, sector-cover
+    D_h1 scan und common-unreduced Architektur.
+[S13] ssz_p5_F2b_action_derived_highL_mass_closure_2026-09-15.py - Direct-Action-Massreducer und M12/M23 termweise
+    Konstruktion.
+[S14] ssz_p5_F2b_M12_action_closure_status_2026-09-15.csv - Maschinenlesbare M12/M23/M22 Gate-Zusammenfassung.
+ Datei                                                                  SHA-256
+ SSZ_P5_F2_COMMON_UNREDUCED_RECONSTRUCTION_CHECKPOINT_20                fe220aaff32e27dc2271abe4d99bd79ecf3e2693eaad6922bb2cc4de3d95dfe
+ 26-09-14.md                                                            7
+ ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-          a11a0a214d5e01141a1838f48adf8978bb29095ed09cbfcfde59b131e2b2a40
+ 15.csv                                                                 7
+ ssz_p5_F2b_action_derived_highL_mass_closure_2026-09-15.py             9854a2de4fc09971b4d89a794921aec8e5f72862ca9549d7107c014d6a6375c
+                                                                        1
+ ssz_p5_F2b_action_highL_mass_convergence_JET9D8_2026-09-16.csv         ace245f72dadfeb1f8d94589d6f800f465a79f69f12bdd304258c534bd956f2
+                                                                        a
+ ssz_p5_F2b_M12_action_closure_status_2026-09-15.csv                    b2ffdf1e00e8bc1692cafea8dc1084c4fcf0006113c65ae00ff0ead42a0d5a6
+                                                                        4
+ SSZ_P5_F2B_SIGN_CONFLICT_AND_JET_REDUCER_CHECKPOINT_2026-09-           4b0645968a3f5a60c39731897fa9f168aa2cf14155831b601bc2f757f7f443f
+ 15.md                                                                  c
+ SSZ_P5_F3_COUPLED_QNM_EXECUTION_CHECKPOINT_2026-09-15.md               883fb4463b41f6c367733dd9bda9ca7b7d07b645688207a162c312ad0e97757
+                                                                        b
+ SSZ_P5_F3_SELECTED_MEMBER_EXECUTION_2026-09-15.md                      61dbb5c48e9f0b887029915a061f2754c05ed8f9de0b61155d9ee1819df86b0
+                                                                        1
+ ssz_p5_FULL_CLOSURE_CERTIFICATE_2026-09-15.json                        b74aacb441fe0a98198d73e4c5ba77b05f97e0c5cd5b93f7d0a86628a422d18
+
+
+                                                          Stand 16.09.2026 | Seite 12
+                                                                                  SSZ P5 | KRGM / finite-l Reducer - technisches Sicherheitsprotokoll
+
+                                                                              7
+SSZ_P5_FULL_FINITE_JET_OPERATOR_CLOSURE_2026-09-15.md                         dda4bebec3fd7f850326e33055c17d05c8bfa8636d74846e0cdf5ba29408faf
+                                                                              5
+SSZ_P5_HIGHER_JET_CLOSURE_2026-09-16.md                                       3577182273932855feffcb862c07943fde88b4bcbbb3beeea575c61aed63bdb
+                                                                              9
+SSZ_P5_HOLONOMIC_A5_CLOSURE_2026-09-16.md                                     e567317b9cc714898a31131a89c59c8798839b34f8adb35408a94e9389af8e4
+                                                                              3
+SSZ_P5_Horndeski_SVT_CLOSURE_COMPLETE_2026-09-14.pdf                          cc3e6442c00fda1864c12791e2354c0ea9608a1a86585f7b68f2158da067b30
+                                                                              0
+ssz_p5_ZK_delta_full_reconstruction_regression_2026-09-15.csv                 5b2f4ebf782f039436a572c3dd47e977168724d034709eef1c949eb87e85fdc
+                                                                              1
+
+
+
+
+Anhang C. Explizit verworfene / superseded Pfade
+Gate / Aussage                                      Status                                            Bedeutung / Evidenz
+Direkte Interpolation bereits reduzierter           REJECTED                                          Schur-Komplement nicht linear;
+H- und SVT-Matrizen                                                                                   unterschiedliche dynamische
+                                                                                                      Zwischenbasen.
+Direkte Interpolation der 41 Slots durch            REJECTED                                          Handovers müssen auf Action-Jet-Ebene
+Handovers                                                                                             konstruiert und Background-Jets re-
+                                                                                                      solved werden.
+freeze coefficients -> Fourier -> eliminate         REJECTED                                          verliert radiale Produktregel-/IBP-Terme.
+Post-hoc CubicSpline auf gerundeten                 REJECTED FOR SENSITIVE                            erzeugte falsche M12/M23- und
+Koeffiziententabellen                               MASS/HIGHER-JET TERMS                             Randartefakte.
+Alte a5-Implementierung ohne -a1''                  SUPERSEDED                                        am 16.09. durch Source-Prüfung
+                                                                                                      korrigiert; neuer holonomischer Pfad.
+Alte F3 raw v12=+v6/(2h) als Appendix-              SUPERSEDED                                        zentraler Archive-Witness bestätigt
+Repräsentant                                                                                          Minus; Plus bleibt nur Teil des aktuellen
+                                                                                                      G-Konflikts.
+Alte negative Full-M angular eigen scan             REJECTED NUMERICALLY                              verletzte gleichzeitig bekannte High-L-
+                                                                                                      Limits.
+Finite-radius Sommerfeld / real-axis                REJECTED                                          starke Outer-Radius-Abhängigkeit;
+inward QNM poles                                                                                      exponentielle Konditionierung.
+K/R/G canonical + M aus anderer Basis als           NOT PERMITTED                                     radiusabhängige Basisänderung erzeugt
+finaler KRGM-Dump                                                                                     lower-order Zusatzterme.
+
+
+
+                                      Ende des Sicherheitsprotokolls - Stand 16.09.2026
+
+Nächster harter Gate: v12/G-Sourcekonsistenz -> ein same-basis finite-l KRGM-Member -> resonance-stabile coupled QNMs.
+
+
+
+
+                                                                Stand 16.09.2026 | Seite 13
+

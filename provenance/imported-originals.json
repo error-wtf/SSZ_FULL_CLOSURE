@@ -1,0 +1,148 @@
+{
+  "files": [
+    {
+      "path": "originals/MANIFEST.json",
+      "source_name": "MANIFEST.json",
+      "size_bytes": 12738,
+      "sha256": "83d23d642a73b8e4dfa7f53c52c6cda71ab98d0532e7093524ba07949df3be3d"
+    },
+    {
+      "path": "originals/FILE_INDEX.md",
+      "source_name": "FILE_INDEX.md",
+      "size_bytes": 1492,
+      "sha256": "1c7ba69ced40bc1cf7c28afebe1ab9042a9939c5710a9f32496b88921f76b82e"
+    },
+    {
+      "path": "originals/SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
+      "source_name": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
+      "size_bytes": 840,
+      "sha256": "742d7c1dbfa06d9870b69f2b95ae1b764b1c3083aea16d968cae5d8e136cf684"
+    },
+    {
+      "path": "originals/STATUS_FULL_CLOSURE.md",
+      "source_name": "STATUS_FULL_CLOSURE.md",
+      "size_bytes": 1003,
+      "sha256": "1e4713622998781c714862146c56b191403c2ade183d7f0d8e59e5237adb78ed"
+    },
+    {
+      "path": "originals/CODEX_PROMPT.md",
+      "source_name": "CODEX_PROMPT.md",
+      "size_bytes": 2414,
+      "sha256": "445c210a324a5abc2b3652b79964da277a5d1df432a7e29bc2435190ac512f2f"
+    },
+    {
+      "path": "originals/README_FOR_CODEX.md",
+      "source_name": "README_FOR_CODEX.md",
+      "size_bytes": 2235,
+      "sha256": "55cd5ea1764c71880b1876928ce0b1625694e54e1ff567d52253fb60d5ea8280"
+    },
+    {
+      "path": "originals/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf",
+      "source_name": "SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf",
+      "size_bytes": 2621857,
+      "sha256": "a028d69bd8e66886b9552683376873801936362b25e90eb1516b7e800b837902"
+    },
+    {
+      "path": "originals/ssz_p5_full_closure_auditor.py",
+      "source_name": "ssz_p5_full_closure_auditor.py",
+      "size_bytes": 22429,
+      "sha256": "fb63c86c281f21df02c13e5d3604aeb3d74d526eccb8a9ea0028be6711932059"
+    },
+    {
+      "path": "originals/ssz_p5_STEALTH_SVT_ON_HEALTHY_H_BACKGROUND_2026-09-16.csv",
+      "source_name": "ssz_p5_STEALTH_SVT_ON_HEALTHY_H_BACKGROUND_2026-09-16.csv",
+      "size_bytes": 2447239,
+      "sha256": "f37fc54963c78a0c88a21695b40eed54fb4f7617077deb10853e985082353a2d"
+    },
+    {
+      "path": "originals/ssz_p5_KGSM_highL_crosscheck_2026-09-16.py",
+      "source_name": "ssz_p5_KGSM_highL_crosscheck_2026-09-16.py",
+      "size_bytes": 2310,
+      "sha256": "96204d99484469284dfa25df4f552ebe2e55ab88fce3b68d25bcaa1854ae2abc"
+    },
+    {
+      "path": "originals/ssz_p5_F3_horndeski_carrier_SELECTED_41of41_2026-09-15(1).csv",
+      "source_name": "ssz_p5_F3_horndeski_carrier_SELECTED_41of41_2026-09-15(1).csv",
+      "size_bytes": 4633817,
+      "sha256": "273944c35847ea989c2295651cc62f8874df49fb0617d04508d313f47b31ebf0"
+    },
+    {
+      "path": "originals/ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12(1).csv",
+      "source_name": "ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12(1).csv",
+      "size_bytes": 1856486,
+      "sha256": "65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba"
+    },
+    {
+      "path": "originals/ssz_hybrid_full_constraint_maps_JET9D8(1)(1).py",
+      "source_name": "ssz_hybrid_full_constraint_maps_JET9D8(1)(1).py",
+      "size_bytes": 4918,
+      "sha256": "287185c4f3c660e27f0ff32dc19f7f1e1040726e46e08ba35685a00b0e562850"
+    },
+    {
+      "path": "originals/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py",
+      "source_name": "ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py",
+      "size_bytes": 10083,
+      "sha256": "95156fc3e0124fdd599b891a287acac90d172ef7304824653da64799739e315d"
+    },
+    {
+      "path": "originals/ssz_p5_higher_jet_closure_2026-09-16(1).py",
+      "source_name": "ssz_p5_higher_jet_closure_2026-09-16(1).py",
+      "size_bytes": 9309,
+      "sha256": "523587987738bfbe0c0ba20948c9a97e3f69e273201ac17d999469bfcb360527"
+    },
+    {
+      "path": "originals/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py",
+      "source_name": "ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py",
+      "size_bytes": 8719,
+      "sha256": "bb5ad60f0afd14f0ec8a410e7870ae6777fa01b59648042b6703662289b8e692"
+    },
+    {
+      "path": "originals/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py",
+      "source_name": "ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py",
+      "size_bytes": 10821,
+      "sha256": "fa94b2d147b10c1d697a18431abee6b58143dddcb3a7c040ec0c5e07b8cd45e0"
+    },
+    {
+      "path": "originals/SSZ_P5_HSVT_FINITE_L_TECHNICAL_MEMORY_2026-09-16.pdf",
+      "source_name": "SSZ_P5_HSVT_FINITE_L_TECHNICAL_MEMORY_2026-09-16.pdf",
+      "size_bytes": 750805,
+      "sha256": "b25f47dc0e63285733c91faac3eabf26e7b185dd1332f6b778cf1df054b15a6d"
+    },
+    {
+      "path": "originals/SSZ_P5_KRGM_TECHNISCHES_SICHERHEITSPROTOKOLL_2026-09-16.pdf",
+      "source_name": "SSZ_P5_KRGM_TECHNISCHES_SICHERHEITSPROTOKOLL_2026-09-16.pdf",
+      "size_bytes": 563059,
+      "sha256": "016131521eb19effa93796be1a187f99fc677f603f99621123cfabf7efdcf56e"
+    },
+    {
+      "path": "originals/SSZ_P5_Horndeski_SVT_CLOSURE_COMPLETE_2026-09-14.pdf",
+      "source_name": "SSZ_P5_Horndeski_SVT_CLOSURE_COMPLETE_2026-09-14.pdf",
+      "size_bytes": 643059,
+      "sha256": "cc3e6442c00fda1864c12791e2354c0ea9608a1a86585f7b68f2158da067b300"
+    },
+    {
+      "path": "originals/SSZ_Middle_Bridge_Unified_Dynamics.pdf",
+      "source_name": "SSZ_Middle_Bridge_Unified_Dynamics.pdf",
+      "size_bytes": 2621954,
+      "sha256": "40ba5156a639d1fe3e594ce33321ba35b329c07e0bb0fe350cd3f3be8e2253e4"
+    },
+    {
+      "path": "originals/Wrede_Casu_SSZ_Middle_Bridge_and_Unified_Dynamics_FINAL_MASTER_v13_2026-08-25.pdf",
+      "source_name": "Wrede_Casu_SSZ_Middle_Bridge_and_Unified_Dynamics_FINAL_MASTER_v13_2026-08-25.pdf",
+      "size_bytes": 2175095,
+      "sha256": "727f75991edf6e87a88196a9fdf8dfae50cefa11ce5d2b2ce96e6a7b2460cd26"
+    },
+    {
+      "path": "originals/handoff-note-1.txt",
+      "source_name": "handoff-note-1.txt",
+      "size_bytes": 5379,
+      "sha256": "7ba234b16c4b6179724fc90d438682af07daf45b962d5a824ce76eb423b926f0"
+    },
+    {
+      "path": "originals/handoff-note-2.txt",
+      "source_name": "handoff-note-2.txt",
+      "size_bytes": 5379,
+      "sha256": "7ba234b16c4b6179724fc90d438682af07daf45b962d5a824ce76eb423b926f0"
+    }
+  ]
+}

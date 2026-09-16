@@ -1,0 +1,975 @@
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+
+                     SSZ P5 / Horndeski-SVT
+               Finite-l Closure and QNM Threshold
+                    Detailed technical memory and reproducibility report
+
+                               Frozen status after the final variable-G4 outer candidate audit
+                                                     16 September 2026
+
+                   Purpose: external technical memory for later reconstruction by Carmen and ChatGPT.
+   This is not a publication claim; it records what was proved, what was merely constructive, what was superseded, and
+                                       exactly where the final explicit representative failed.
+
+  STOP CHECKPOINT
+  Do not restart ad-hoc representative hunting from scratch. The 41/41 coefficient language, derivative service, constraint
+  maps, Zhang-Kase emitter, Maxwell-Horndeski emitter, and profile reducer are already closed. The unresolved task is a
+  targeted global finite-l representative-selection/control problem.
+
+
+
+
+                                                                                                                              Page 1
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+1. Executive status - the short version
+The most important distinction in the whole project is that several different meanings of "closure" were used at different stages.
+The apparent contradiction between "41/41 closed" and the final finite-l failure disappears once these levels are separated.
+
+ Object                                               Status                                  Meaning
+
+ P5 frozen geometry                                   PASS                                    Regular, horizonless, two light rings resolved.
+
+                                                                                              Exterior Horndeski, central genuine-SVT,
+ Local sector principal witnesses                     PASS
+                                                                                              regular Horndeski core.
+
+                                                                                              C-infinity existence with background re-solving
+ Constructive local same-action handovers             PASS
+                                                                                              and transverse jet controls.
+
+                                                                                              Complete a,b,c,d,e,v tables for selected
+ Unreduced 41-slot coefficient language               CLOSED
+                                                                                              local/sector representatives.
+
+                                                                                              Needed higher radial jets and product rules
+ JET9D8 radial derivative service                     PASS
+                                                                                              regress.
+
+                                                                                              All common pivots nonzero on certified
+ Full algebraic even constraint maps                  PASS
+                                                                                              domains.
+
+                                                                                              Includes product-rule/IBP terms and
+ Profile-aware K,R,G,S,M reducer                      PASS
+                                                                                              antisymmetric S block.
+
+ Zhang-Kase Appendix-A emitter                        PASS                                    Complete 41-slot emitter, regression-controlled.
+
+                                                                                              Strong-H 39/41 regression after c6,d3,e4 parser
+ Variable-G4(phi) Maxwell-Horndeski emitter           PASS
+                                                                                              fixes.
+
+                                                                                              45,617-point center-to-infinity characteristic
+ Global canonical principal K/R/G stream              PASS as principal witness
+                                                                                              stream.
+
+                                                                                              sym(K) is negative over much of the band;
+ Variable-G4 outer finite-l candidate                 REJECTED                                moreover the variable-G4 transplant was not
+                                                                                              followed by a fresh full background re-solve.
+
+                                                                                              No center-to-infinity on-shell member has yet
+ Certified global finite-l same-action member         OPEN
+                                                                                              passed the complete finite-l gates.
+
+                                                                                              Must not be computed/claimed until a certified
+ Coupled QNM spectrum                                 BLOCKED
+                                                                                              global finite-l member exists.
+
+  Bottom line
+  The statement "41/41 is closed" remains correct. The Sep-16 variable-G4 outer construction is a rejected diagnostic
+  candidate, not a certified global same-action member: after importing the healthier Horndeski principal carrier, the complete
+  background equations were not re-solved for that modified member. Its negative sym(K) is enough to reject the candidate,
+  but it is not a no-go for the still-open global finite-l same-action problem.
+
+
+1.1 Kinetic result of the final variable-G4 candidate
+ L                  min eig(K)          negative K rows      min radial c^2   neg c^2   min |Dh1|          min |DeltaV|         min |2Lv9|
+
+
+ 6                  -2116.85            2113 / 2201          0.0888293        0         3.3874             0.187126             12.8789
+
+ 12                 -668.848            2065 / 2201          0.0906121        0         14.1102            0.187126             25.7579
+
+ 20                 -236.372            2025 / 2201          0.0638748        0         39.8178            0.187126             42.9298
+
+ 42                 -12.8644            1903 / 2201          0.00285261       0         177.755            0.187126             90.1525
+
+ 110                -1.88458            1576 / 2201          0.000950391      0         1227.61            0.187126             236.114
+
+ 420                -0.250559           1061 / 2201          0.000254172      0         17952.1            0.187126             901.525
+
+ 1000               -0.10648            629 / 2201           0.000107519      0         101834             0.187126             2146.49
+
+Where K is positive, the radial generalized eigenvalues in this audit remain positive. That does not rescue a ghost-sign failure of
+K itself. The kinetic gate is logically prior to a physical QNM interpretation.
+
+
+
+                                                                                                                                             Page 2
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+
+                          Figure 1. Minimum eigenvalue of sym(K) for the final variable-G4 outer candidate, L=6, 42 and 1000.
+
+
+
+
+                    Figure 2. Higher-L zoom of the rejected candidate. The negative direction weakens with increasing L but persists.
+
+
+2. Terminology: what exactly was meant by "closed"
+The project accumulated several distinct closure layers. Keeping them separate is essential for later work.
+
+2.1 Slot closure: 41/41
+The common unreduced even-parity coefficient language contains exactly 41 coefficient slots:
+                    a1...a9 (9) + b1...b5 (5) + c1...c6 (6) + d1...d4 (4) + e1...e4 (4) + v1...v13 (13) = 41.
+"41/41 closed" means that complete unreduced coefficient tables exist for selected local/sector representatives in this common
+basis. It does not by itself prove that all radial sectors belong to one identical holonomic action member, nor that the reduced
+finite-l kinetic matrix is positive everywhere.
+
+
+
+
+                                                                                                                                        Page 3
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+2.2 Constructive same-action closure
+This is an existence statement. The outer and inner overlap bands possess enough background-constrained and background-
+null action-jet freedom to connect the local representatives by smooth C-infinity handovers while retaining the frozen P5
+geometry and nonzero common constraint pivots.
+
+2.3 Principal global closure
+A separate center-to-infinity characteristic/principal stream exists. It proves that one can select a globally healthy principal-
+symbol representation. It is not automatically the same basis, same lower-order member, or same action representative as an
+independently built finite-l mass/potential block.
+
+2.4 Finite-l global same-action closure
+This is the strongest level required before a coupled QNM spectrum can be called physical: one holonomic center-to-infinity
+action member, with both handovers directly evaluated from that member, reduced with all profile derivatives retained, and
+passing K>0 plus radial and angular gradient gates at finite l. This final level is not yet passed.
+
+3. Frozen P5 geometry and theory architecture
+3.1 Background variables
+The P5 geometry is source-locked in the segment variable Xi. With r_s=1, C=r_s/r=1/x and phi=Xi(C). The susceptibility
+chi=dXi/dC obeys the autonomous P5 closure dXi/dC=(1-Xi)^(3/2) P5(Xi). The temporal metric is f=(1+Xi)^(-2); h is fixed by the
+P5 radial closure.
+      Outer unstable light ring: C=2/3, x=1.5.
+      Inner stable light ring: C approximately 0.706135, x approximately 1.41616064.
+      Regular horizonless center.
+The historical Hermite middle bridge is provenance only and is not the P5 field equation.
+
+3.2 Exact kappa identity and the 00/11 basis issue
+                                       phi_r = -C^2 chi,       kappa = h phi_r^2 = h C^4 chi^2 = -2 X.
+For the metric background block (f2,f2X), the E00/E11 Jacobian has the triangular form J=[[-A,0],[-A,-B]] with A=r^2 f and B=A
+kappa. Merely swapping E00 and E11 cannot improve singular values. The algebraically natural basis is instead E0=E00 and
+EDelta=E11-E00, in which the Jacobian is diagonal: diag(-A,-A kappa).
+This is the precise version of the earlier 00/11 rotation/inversion intuition: the useful operation is not a blind row swap but a
+regime-aware basis change. The same kappa=-2X also controls the rank of the simple SVT Hessian control map. Near the exact
+center kappa->0, so the scalar coordinate chart must be replaced by the separate regular Taylor-center branch rather than
+divided through by kappa.
+
+3.3 Hybrid covariant architecture
+                                                 C_HSVT = C_MH + ( C_SVT - C_shared ).
+This addition must be performed on the common unreduced quadratic action before eliminating H0,H1,H2,h1,dA0,dA1 or the
+auxiliary vector variable V. Constraint elimination is nonlinear in the coefficient set, so Reduce(A+B) is not equal to Reduce(A)
++Reduce(B) in general.
+The physical architecture is therefore Horndeski exterior -> genuine U(1)-SVT light-ring lobe -> Horndeski core, with the genuine-
+SVT lobe containing both light rings.
+
+4. Established local principal witnesses and the global canonical principal stream
+4.1 Central genuine-SVT reference
+The central exact Zhang-Kase reference on 0.61 <= u <= 0.715 is the strongest local even-sector witness. Regressed
+characteristic minima include:
+
+    Quantity                                                              Certified minimum / range
+
+    K_even                                                                about 10.5415 > 0
+
+    c_r,T^2                                                               >= 1.00507
+
+
+                                                                                                                              Page 4
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+ Quantity                                                                    Certified minimum / range
+
+ c_r,S^2                                                                     >= 0.903745
+
+ c_r,V^2                                                                     >= 9.45887
+
+ c_Omega,-^2                                                                 >= 84.912
+
+ c_Omega,+^2                                                                 >= 643.142
+
+
+4.2 Global principal export
+ Region                                                                      Rows
+
+ Horndeski_core_to_center                                                    29790
+
+ central_exact_SVT                                                           3428
+
+ central_inner_matching_buffer                                               401
+
+ central_outer_matching_buffer                                               400
+
+ inner_SVT_H_characteristic_handover                                         1401
+
+ outer_H_SVT_characteristic_handover                                         2201
+
+ weak_exterior_H                                                             7996
+The 45,617-point principal export has min f=0.25, min h=0.326856666, min cT^2=0.9992624, min cS^2=0.903745178, min
+cV^2=1. All stored R_ij are exactly zero in this canonical export.
+
+  Important limitation
+  This global K/R/G file is a principal-characteristic witness. It must not be silently spliced to an independently constructed
+  finite-l M block and relabeled as a single same-action physical KRGM operator.
+
+
+
+5. Same-action handovers and background re-solving
+5.1 Outer handover
+The explicit re-solved outer background band covers approximately u=0.551523087 to 0.61. The flat partition is genuinely flat at
+the Horndeski endpoint: S_SVT=0 through the initial plateau, rises across the overlap, and reaches S_SVT=1 at u=0.61. Typical
+values are approximately S=0.001 near u=0.575, S=0.065 near 0.58, S=0.501 near 0.59, S=0.935 near 0.60, and 1 at 0.61.
+
+
+
+
+                                           Figure 3. Stored outer C-infinity partition weights T_H and S_SVT.
+
+
+                                                                                                                                  Page 5
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+The resolved metric/vector residuals are at machine precision: max |E00_resolved| about 1.8e-16, max |E11_resolved| about
+3.2e-16, max |J_A| about 1.6e-15.
+
+5.2 Inner handover
+The explicit inner band covers u=0.71...0.715. The actual re-solved residuals are machine zero (E00 about 8.9e-16, E11 about
+4.7e-15, J_A about 3.1e-15). A previous diagnostic column E_H+E_SVTg is not the complete residual in this band because
+partition derivatives and re-solved lower Horndeski jets contribute. Treating that naive sum as a failure was superseded.
+The stored genuine-SVT lower values themselves visibly follow the action partition: f2=S_SVT*f2_full and f2X=S_SVT*f2X_full to
+numerical precision, with f2F approximately S_SVT. This is why a split block must not be reinterpreted as an unsplit full-SVT
+background action.
+
+6. Background-null controls and why local existence survived the handovers
+The static background fixes only action data tangent to the one-dimensional background trajectory. Transverse jets remain
+available for perturbative control. For the genuine-SVT Hessian controls H=(HXX,HXF,HXY,HFF,HFY,HYY), the three radial
+channels are:
+    Delta v1 = HFF - 4 kappa HFY + 4 kappa^2 HYY
+    Delta v4 = -HXF + 2 kappa HXY - 4 Fbg HFY + 8 Fbg kappa HYY
+    Delta c2 = (kappa/2) HXX - Fbg HXF + 6 Fbg kappa HXY - 4 Fbg^2 HFY + 16 Fbg^2 kappa HYY
+In the selector gauge HXY=HFY=HYY=0, the exact right inverse is:
+                           HFF = Delta v1,       HXF = -Delta v4,         HXX = (2/kappa)(Delta c2 - Fbg Delta v4).
+                                                              det M_rad = kappa/2.
+Certified kappa minima are approximately 0.098838 in the outer overlap, 0.207862 in the central lobe, and 0.632753 in the inner
+overlap, so this control map does not lose rank there. Independent unused Hessian directions remain available for angular-
+channel regulation. The Horndeski principal-control map with targets (F,H,a1,c4,c2) was likewise found full rank through the
+onset-to-core interval.
+
+7. Radial derivative service, holonomicity, and branch corrections
+7.1 JET9D8
+The accepted radial derivative service is a local polynomial jet on the nonuniform r=x grid with window=9 and polynomial
+degree=8. This replaced spline-based derivative experiments for production finite-l work.
+    v12=-v6/(2h) regression: absolute residual around 1e-14 or better.
+    v13: median scaled relative error around 6e-6 on the central regression; edge maxima are derivative/rounding sensitive.
+    e4: isolated median at the few-1e-7 scale; end-to-end regression is also strong.
+The previously selected plus branch v12=+v6/(2h) is superseded. Pure Horndeski has v6=0, so the sign was invisible there, but
+it matters in genuine-SVT and hybrid bands.
+
+7.2 Correct a5
+                                                   a5 = a2' - a1'' - (A0' v4 / 2)' + A0' v5 / 2.
+For pure Horndeski A0'=0, this reduces to a5=a2'-a1''. A previous builder omitted -a1'' and is not authoritative.
+
+7.3 Holonomic on-curve partials
+Two Appendix expressions exposed the same practical point: in the selected one-dimensional action representative, partial
+derivatives appearing in d3 are represented by the holonomic on-curve derivatives, e.g. partial_phi v6=(dv6/dr)/phi_r and
+partial_phi a4=a4'/phi_r. Using naive explicit partials generated false mismatches. With the holonomic convention, d3 regression
+closes to numerical/JET accuracy.
+
+7.4 Central action holonomicity
+Direct chain-rule checks such as df3/dr=f3_phi phi_r+f3_X X_r and the corresponding relations for f3_X, f4, f4_X, f4_XX, f2 and
+f2_X close in the interior, usually around 1e-6 or better and much tighter for several upper jets. Therefore the temporary
+hypothesis that the central action data were fundamentally nonholonomic was rejected.
+
+
+
+
+                                                                                                                           Page 6
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+8. Unreduced coefficient emitters
+8.1 Complete Zhang-Kase Appendix-A 41-slot emitter
+A complete ZK 41-slot emitter was reconstructed from action jets and frozen P5 geometry. It evaluates a1...a9, b1...b5, c1...c6,
+d1...d4, e1...e4 and v1...v13 using JET9D8 for radial derivative terms and the selected lower-order member when supplied.
+
+ Slot                                  median scaled rel                  p95                      max (edge sensitive)
+
+ a2                                    6.4e-09                            2.18e-08                 7.13e-06
+
+ c2                                    3.89e-11                           3.03e-10                 3.77e-10
+
+ d3                                    1.11e-07                           7.39e-07                 0.0363
+
+ e4                                    1.5e-06                            1.72e-05                 0.254
+
+ v1                                    6.95e-11                           2.31e-10                 2.89e-10
+
+ v4                                    1.15e-10                           9.16e-10                 1.52e-09
+
+ v6                                    5.55e-17                           2.94e-16                 6.47e-16
+
+ v12                                   1.39e-17                           2.52e-16                 6.56e-16
+
+ v13                                   6.83e-06                           0.000154                 1.5
+
+The relatively large edge maxima for d3, e4 and v13 are consistent with known high-derivative edge sensitivity and archived
+rounded inputs; the interior median/p95 values are the meaningful regression measure.
+
+8.2 Variable-G4(phi), G5=0 Maxwell-Horndeski emitter
+The old strong-H principal action dataset was recovered with direct columns for G4(phi), G4_phi, G3_X, F=G=H, a1,a4,c4,mu
+and P1 over u approximately 0.551523...0.71. This made it possible to reconstruct the correct luminal variable-G4 Horndeski
+member rather than inventing it backward from a coefficient table.
+
+ Slot/quantity                         median                             p95                      max
+
+ a1                                    1.6e-12                            7.77e-12                 2.26e-11
+
+ a2                                    2.42e-08                           1.2e-07                  3.53e-07
+
+ c2                                    0                                  0                        0
+
+ c4                                    1.54e-12                           8.91e-12                 2.39e-11
+
+ c6                                    6e-13                              3.73e-12                 1.08e-11
+
+ d3                                    5.28e-11                           3.84e-10                 9.76e-08
+
+ e1                                    1.6e-07                            6.31e-07                 4.13e-06
+
+ e4                                    3.26e-08                           1.43e-07                 6.09e-07
+
+ mu                                    2.32e-12                           1.37e-11                 3.44e-11
+
+ K_scalar                              4.62e-08                           2.48e-07                 1.46e-06
+
+The Sep-16 parser fixes to c6, d3 and e4 reduce those expressions to numerical/JET-level regression. The emitter is therefore
+no longer an uncertainty in the final failure diagnosis.
+
+9. Complete common even-parity constraint elimination
+Before reduction the common gauge-fixed fields are (H0,H1,H2,h1,dphi,dA0,dA1,V). The physical basis is chi=(psi,dphi,V)^T
+with
+                                                   psi = H2 + (L a4/a3) h1 + (a1/a3) dphi' .
+Define p=a1/a3, q=L a4/a3 and
+   B    = a2 - v2 v4/(2 v1)
+   Cphi = a5 + L a6 - v2 v5/(2 v1)
+   CH2 = a7 + L a8 - v2 v3/(2 v1)
+
+
+                                                                                                                            Page 7
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+     Ch1 = L (a9 - v2 v6/(2 v1))
+     Beff = B - a3 p' - CH2 p
+     Dh1 = Ch1 - a3 q' - CH2 q
+                                     h1 = -(a3 psi' + Beff dphi' + Cphi dphi + CH2 psi + v2 V) / Dh1.
+The remaining two algebraic time-derivative constraints use DeltaV=4 b1 v10-v11^2. Finally dA0=(v1 V)'/(L v9) -(v8 h1+v12
+H2+v13 dphi)/(2v9). The full JET9D8 implementation exports linear profile maps for h1,H2,H1,dA1,dA0 in y=(psi,dphi,V) and y'.
+On the central 4000-point reference, L=6 gives min |Dh1|=11.987940, min |DeltaV|=3.042884 and min |2 L v9|=0.119951. The
+dphi'' and h1' higher-derivative cancellations close to zero / about 1e-16.
+
+10. Profile-aware reducer and the missing S block
+The decisive structural correction on Sep-16 was to retain the antisymmetric first-order radial block. Zhang-Kase Eq. 4.25 has
+the reduced form
+                           L_even^(2) = dot(Y)^T K dot(Y) + Y'^T G Y' + Y'^T S Y + Y^T M Y,             S^T=-S.
+In the project convention used by the profile reducer, after applying the formal differential transformation T and integrating by
+parts:
+     K = -P20/2
+     G = +P02/2        (project action uses -chi'^T G chi')
+     R = -P11/2 = 0
+     S = 1/2 (P02' - P01)
+     M = -1/2 (P00 + S')
+Earlier attempts to force the antisymmetric first-order radial contribution into M caused an apparent lower-order mismatch. Once
+S was retained explicitly, the reducer high-L mass regression passed.
+
+10.1 Structural reducer audit
+On the central reference there are no differential operator terms above second radial order, the H0 quadratic residual is about
+4.55e-13, and the internal principal K comparison is typically at 1e-12 scale or better. The project has R=0 in the final profile
+convention.
+
+11. High-L mass/potential closure
+The direct-action high-L mass formulas serve as an independent regression target for the profile reducer. The corrected leading
+terms are:
+     M11 = -r^2 v6^2/(4 v1)
+     M13 = -r v6/2
+     M33 = -v1
+     M22 = e4 + 2 h c4 a6/a4 - m5_minus^2/(4 a4^2 v9)
+     z1       = (a4 + r a9 - 0.5 r A0prime v6) v6
+     m1_plus = +r a4 v8 + z1           # c4 sector
+     m1_minus = -r a4 v8 + z1          # dA0/v9 Schur sector
+     m2       = 2 c5 v1 + (A0prime v1 + 0.5 phiprime v4) v6
+     m3_plus = a4 v1' + 0.5 A0prime v1 v6
+     m4       = 2 A0prime v1 + phiprime v4
+     m5_minus = a4 v13 - a6 v6
+     M12 = -r d3/2 - h c4 z1/(a4 v6) - r h a6 m2/(2 a4 v1) + r v5 v6/(4 v1)
+           - m1_minus m5_minus/(4 a4^2 v9)
+           + (1/4) d/dr [2 r h c4 + r(2 d2 v1-v4 v6)/(2 v1) + r v6 m5_minus/(2 a4 v9)]
+
+     M23 = h A0prime c4 v1/a4 + v5/2 + m3_plus m5_minus/(2 a4^2 v9)
+           - h a6 m4/(2 a4) - (1/4) d/dr [v4 + v1 m5_minus/(a4 v9)]
+The sign in m5_minus and the distinction m1_plus versus m1_minus are essential. Spline-based mass/angular scans that
+violated these identities were superseded.
+
+12. Why the old 41/41 tables could not simply be concatenated
+A diagnostic global 41-stream concatenation was intentionally attempted and rejected. It exposed two separate issues:
+1.    The archived outer 37/41 table was a repaired pure-SVT branch, not the complete same-action Horndeski+SVT handover.
+      Its coefficients became nonzero before the stored S_SVT partition actually turned on.
+
+
+
+
+                                                                                                                               Page 8
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+2.     At u=0.61, the re-solved outer repaired-SVT endpoint and the Sep-13 central exact SVT table are different action-jet
+       representatives on the same background. Their upper/background values f3,f4,N4 are close, but f3X, f2, f2X and Hessian
+       jets are drastically different.
+This is not a contradiction: background-constrained jets and background-null transverse jets are not unique. It does mean that a
+direct coefficient concatenation is not a proof of one same action.
+
+ Slot                                  outer at u=.61                     central at u=.61             scaled jump
+
+ e2                                    -38.3087                           56.5379                      1.68
+
+ c2                                    -32.9208                           54.7713                      1.6
+
+ c4                                    4.50106                            -10.8904                     1.41
+
+ d2                                    3.79646                            -9.34758                     1.41
+
+ c6                                    7.74055                            27.5645                      0.719
+
+ d3                                    66.2971                            20.1257                      0.696
+
+ c5                                    -2.14589                           -6.76487                     0.683
+
+ a6                                    0.108629                           0.669732                     0.561
+
+ v13                                   94.8701                            50.8563                      0.464
+
+ e4                                    375.383                            206.902                      0.449
+
+     Interpretation
+     The existing central_outer_matching_buffer in the global principal export is a characteristic/principal-basis matching section.
+     It does not by itself certify a finite-l action-level 41-slot handover between two different transverse representatives.
+
+
+
+13. Sep-16 outer finite-l endgame - what was tried and what each attempt taught
+us
+13.1 First simple cubic/Einstein-like MH member
+A deliberately simple G4=1/2, G5=0 Maxwell-Horndeski member was combined with the genuine-SVT Delta-C block. Its
+structural reduction was finite, but K became negative. Large scans of the genuine-SVT Hessian controls, including Delta v1
+variations far beyond the initial value, barely moved the bad kinetic direction. The problematic eigenvector was nearly scalar.
+Therefore the failure was not fixable by simply turning the radial f2 Hessian knobs.
+
+13.2 Control experiment with the archived strong-H carrier
+The same genuine-SVT Delta-C contribution combined at coefficient level with the already healthy strong-H principal carrier gave
+a high-L K with no negative rows in the diagnostic L=1000 run (minimum eigenvalue approximately 1.18e-6). This isolated the
+missing freedom to the Horndeski principal member, not the ZK emitter or the reducer.
+
+13.3 Recovery of the actual strong-H action data
+The archived file ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv was recovered. It directly stores the
+variable G4(phi), G4_phi and G3_X principal carrier. The strong-H table has F=G=H and a positive target scalar kinetic margin
+about 9.7423e-3. This was the correct input for a variable-G4(phi), G5=0 MH emitter.
+
+13.4 Auxiliary-V recanonicalization after hybrid assembly
+A major algebraic trap was discovered: adding two coefficient sets that had each already been auxiliary-V completed does not
+preserve the H0^2 identity. After summing the common unreduced blocks, the shared auxiliary V sector must be canonicalized
+once again. The required identity is v7=v2^2/(4v1) in the corresponding canonical route. A pre-recanonicalization residual around
+0.684 was therefore an assembly error, not physics. After common recanonicalization, the residual is exactly zero in the final
+audit.
+
+13.5 Final variable-G4 outer candidate - important on-shell caveat
+The final outer candidate used:
+
+
+
+                                                                                                                                 Page 9
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+         the variable-G4(phi), G5=0 healthy MH principal carrier reconstructed from the archived strong-H action data;
+         the re-solved outer geometry and A0' profile;
+         the genuine-SVT Delta-C block assembled before constraint elimination;
+         common auxiliary-V recanonicalization after assembly;
+         v12=-v6/(2h);
+         selected lower-order member v5=c3=e3=0;
+         a5 regenerated holonomically with JET9D8.
+All 41 slots are finite on the 2201-point outer grid, and several assembly identities close. However, this construction is not a strict
+certified same-action/on-shell member: the variable-G4 strong-H principal data were interpolated onto the already re-solved
+outer background that had been constructed for a different Horndeski representative, and the full background equations were not
+re-solved after that substitution. The file names containing FINAL_SAME_ACTION therefore overstate the status and should be
+read as historical run names. The candidate is nevertheless rejected because the symmetric kinetic quadratic form is negative
+over a large radial set.
+
+14. Final variable-G4 candidate operator audit - decisive for the candidate, not a
+theory no-go
+For this candidate, the symmetric part of the 3x3 kinetic quadratic form is not positive definite. The audit code explicitly
+diagonalizes Ks=(K+K^T)/2. This is the correct quadratic-form test even when a small numerical antisymmetric remainder is
+present. The detailed audit across L is:
+
+                                                                                                       max S sym
+    L                    min eig(K)         negative rows         min radial c^2   negative c^2 rows                      max |R|
+                                                                                                       residual
+
+
+    6                    -2.116849e+03      2113                  8.882930e-02     0                   2.53e-08           0.0e+00
+
+    12                   -6.688485e+02      2065                  9.061206e-02     0                   2.08e-08           0.0e+00
+
+    20                   -2.363717e+02      2025                  6.387482e-02     0                   1.51e-08           0.0e+00
+
+    42                   -1.286435e+01      1903                  2.852613e-03     0                   5.24e-09           0.0e+00
+
+    110                  -1.884584e+00      1576                  9.503906e-04     0                   1.08e-08           0.0e+00
+
+    420                  -2.505590e-01      1061                  2.541722e-04     0                   9.09e-09           0.0e+00
+
+    1000                 -1.064799e-01      629                   1.075190e-04     0                   1.71e-08           0.0e+00
+
+Additional checks: the H0 auxiliary identity and v12 identity close exactly, no forbidden higher-order operator keys appear, R=0,
+G is symmetric to floating-point accuracy, and S is antisymmetric at about 1e-8. The raw time-principal block P20/K, however,
+retains a nonzero antisymmetric numerical remainder in this transplanted candidate (for the stored L=6 and L=42 profiles the
+relative max asymmetry is about 1.6e-4; at L=1000 about 1.2e-6). This does not affect the quadratic form after symmetrization,
+but it is another reason not to label the candidate a fully clean final member. Constraint pivots remain nonzero.
+
+14.1 Spatial location of the kinetic failure
+Using the stored L=6,42,1000 matrix profiles, the negative region begins progressively farther inward as L increases:
+
+    L                                              negative-K interval on stored grid           location of most negative point
+
+    6                                              u about 0.552613 to 0.610000                 minimum near u=0.608139
+
+    42                                             u about 0.554474 to 0.610000                 minimum near u=0.608139
+
+    1000                                           u about 0.566913 to 0.600830                 minimum near u=0.583366
+The high-L weakening explains why principal-only or asymptotic diagnostics can look healthy while finite-l remains unacceptable.
+It also shows why QNM must wait for an explicitly finite-l healthy member.
+
+14.2 What the failure does and does not mean
+    Does mean
+    The Sep-16 variable-G4 transplant candidate must be rejected. Its symmetrized kinetic quadratic form has a negative
+    direction over a large part of the outer band, and it was not independently re-solved on the background after changing the
+    Horndeski principal member.
+
+
+
+
+                                                                                                                                    Page 10
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+  Does not mean
+  It does not show that a certified global same-action finite-l member has failed, because this candidate was not fully
+  background re-solved after the variable-G4 substitution. It also does not invalidate the P5 geometry, local strong-H witness,
+  central genuine-SVT light-ring witness, constructive same-action existence theorem, 41/41 coefficient completion, derivative
+  service, constraint maps, ZK emitter, MH emitter, or profile reducer.
+
+
+
+15. QNM status and why calculation stops here
+A coupled QNM spectrum is not scientifically meaningful at this stage. The last candidate is rejected and no certified center-to-
+infinity on-shell finite-l member has yet passed the gates. The QNM gate is therefore deliberately closed.
+Independent work on the asymptotic exterior remains useful: an outgoing Jost expansion was transported with order-10 error
+around 2.43e-12. The previously attempted inward shooting of damped modes on the real radial axis was rejected because the
+growing complementary solution contaminates the integration and candidate roots moved when the outer radius changed.
+Acceptable production approaches after a healthy global KRGM member exists include exterior complex scaling, compactified
+Jost/spectral determinants, or a continued-fraction-type formulation. Any eventual root must be tested for radial resolution,
+domain/outer-boundary, complex-scaling angle, basis normalization, branch tracking and determinant convergence.
+
+16. Superseded and rejected routes - do not accidentally reuse
+ Route                                             Status                                Reason
+
+
+ v12=+v6/(2h)                                      SUPERSEDED                            Accepted Appendix branch is v12=-v6/(2h).
+
+                                                                                         Correct a5 includes -a1 double prime and vector
+ a5 without -a1''                                  SUPERSEDED
+                                                                                         terms.
+
+ Spline-based negative mass/angular scans          SUPERSEDED                            They violated later action-level high-L identities.
+
+ Central member fundamentally nonholonomic         REJECTED                              Direct chain-rule tests close with JET9D8.
+
+ A2 requires +4h instead of +2h                    REJECTED                              Came from a manual derivative error.
+
+ Naive inner E_H+E_SVTg residual is the full                                             Re-solved handover includes omitted partition and
+                                                   SUPERSEDED
+ residual                                                                                lower-jet terms.
+
+ Eq. A2/131 repair member as production member     NOT ACCEPTED                          Diagnostic/existence probe only.
+
+ Old F3 inner 41/41 coefficient blend              CANDIDATE ONLY                        Pending direct action-level Appendix re-evaluation.
+
+                                                                                         It is a repaired pure-SVT branch, not the same-
+ Old outer repaired-SVT 37/41 as full handover     REJECTED FOR HANDOVER
+                                                                                         action partition.
+
+                                                                                         Too restrictive; produced negative scalar kinetic
+ Simple G4=1/2 outer candidate                     REJECTED
+                                                                                         channel.
+
+                                                                                         Negative sym(K); principal member was
+ Variable-G4 transplanted outer candidate          REJECTED CANDIDATE                    transplanted without a fresh full background re-
+                                                                                         solve.
+
+ Real-axis inward QNM shooting                     REJECTED                              Numerically contaminated for damped modes.
+
+
+
+17. Correct future continuation - one targeted control problem, not another
+tuning loop
+If the project is resumed, the next task should not be another hand-picked representative. The correct problem is to formulate the
+remaining Horndeski/SVT transverse jet freedom as a constrained continuation/optimization problem with the finite-l kinetic gate
+included explicitly.
+1. Freeze the already accepted geometry, partition functions, common basis, v12 sign, lower-order convention, JET9D8 service
+and reducer.
+2. Parameterize only genuinely background-null / representative-selection directions. Do not alter jets already fixed by the frozen
+background equations unless they are re-solved consistently.
+3. Use the full-rank Horndeski control family, not the over-restricted G4=constant subclass. Nonredundant principal targets are
+(F,H,a1,c4,c2).
+
+
+
+                                                                                                                                        Page 11
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+4. After selecting a new Horndeski principal member, re-solve the complete static background equations for the combined HSVT
+action before evaluating finite-l stability. Do not transplant principal jets onto a background solved for another member.
+5. Enforce exact background residuals and the common constraint pivots simultaneously with a finite-l lower bound K >= epsilon
+I on selected L gates, beginning with L=6 and L=42.
+6. Only after K>0, solve/check radial generalized eigenvalues and the angular large-L symbol. Then regenerate all 41
+coefficients directly from the chosen action jets.
+7. Build the action-level Outer->Central and Central->Inner matching sections; do not reuse the principal matching buffers as
+proof of finite-l action continuity.
+8. Freeze one global 41/41 stream and rerun the complete profile reducer. Only then open the QNM gate.
+The previously suggested 00/11 inversion/rotation idea remains a useful diagnostic only where the background inverse chart
+changes conditioning. The mathematically justified form is the E00, E11-E00 basis associated with kappa=-2X. It is not a
+substitute for kinetic stability control.
+
+18. Reproducibility cookbook
+18.1 Authoritative scripts as of this checkpoint
+ File                                                                     Role
+
+
+ ssz_p5_higher_jet_closure_2026-09-16.py                                  JET9D8 nonuniform radial derivative/jet service.
+
+ ssz_p5_holonomic_a5_closure_2026-09-16.py                                Accepted a5 holonomic reconstruction.
+
+ ssz_hybrid_full_constraint_maps_JET9D8(1).py                             Complete algebraic maps for h1,H2,H1,dA1,dA0.
+
+ ssz_hybrid_unreduced_even_kernel.py                                      Common unreduced action architecture / canonical slot basis.
+
+ ssz_hybrid_jet_aware_constraint_reducer.py                               First-stage generalized-psi reducer.
+
+ ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py                     Formal profile-aware T^dagger P T reducer producing K,G,S,M.
+
+ ssz_p5_F2b_action_derived_highL_mass_closure_2026-09-15.py               Independent high-L mass identities/regression.
+
+ ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py                         Complete Zhang-Kase Appendix-A 41-slot emitter.
+
+ ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py                     Variable-G4(phi), G5=0 Maxwell-Horndeski emitter after parser fixes.
+
+ build_outer_resolved_zk_delta_2026-09-16.py                              Outer resolved ZK raw and genuine-SVT Delta-C construction.
+
+                                                                          Final Sep-16 variable-G4 transplant candidate assembly/audit; historical
+ final_outer_variableG4_2026-09-16.py
+                                                                          naming overstates same-action status.
+
+
+18.2 Critical data products
+ File                                                                     Meaning
+
+
+ ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv         Central raw 41-slot ZK coefficient source.
+
+ ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv       Central exact principal/stability regression.
+
+ ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv      Recovered strong-H action/principal carrier including G4,G4_phi,G3X.
+
+ ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-
+                                                                          Archived strong-H coefficient regression target.
+ 14.csv
+
+ ssz_p5_F2_outer_same_action_RESOLVED_background_jets_2026-09-
+                                                                          Machine-zero outer background handover action jets and partition.
+ 15.csv
+
+ ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-
+                                                                          Machine-zero inner background handover action jets.
+ 15.csv
+
+ ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-
+                                                                          45,617-point global principal K/R/G witness.
+ 09-15(2).csv
+
+ ssz_p5_OUTER_GENUINE_SVT_DELTA_41of41_2026-09-16.csv                     Outer genuine-SVT beyond-shared coefficient contribution.
+
+ ssz_p5_MH_G4PHI_EMITTER_STRONGH_REGRESSION_2026-09-16.csv                Final MH emitter regression statistics.
+
+ ssz_p5_ZK_APPENDIX_A_EMITTER_OUTER_REGRESSION_2026-09-                   ZK emitter regression statistics.
+
+
+
+                                                                                                                                                     Page 12
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+    File                                                                  Meaning
+
+
+    16.csv
+
+                                                                          Historical filename: variable-G4 transplant candidate, not a freshly background-
+    ssz_p5_OUTER_FINAL_SAME_ACTION_41of41_2026-09-16.csv
+                                                                          re-solved same-action member; candidate fails sym(K).
+
+    ssz_p5_OUTER_FINAL_SAME_ACTION_OPERATOR_AUDIT_2026-09-                Finite-l audit of the rejected transplant candidate; decisive only for that
+    16.csv                                                                candidate.
+
+    SSZ_P5_FINAL_STOP_CHECKPOINT_2026-09-16.md                            Short frozen stop-state checkpoint.
+
+
+18.3 Minimal resume sequence
+         1. Read SSZ_P5_FINAL_STOP_CHECKPOINT_2026-09-16.md
+         2. Read this PDF, especially Sections 2, 10, 13-17
+         3. Do NOT regenerate 41/41 from scratch
+         4. Do NOT revert v12 sign or a5
+         5. Do NOT drop S
+         6. Do NOT add reduced operators sector-by-sector
+         7. Start from final_outer_variableG4_2026-09-16.py and replace only the
+         representative-selection/control layer
+         8. Impose K>0 at finite L as a target during the action-jet continuation
+         9. Re-solve background-constrained jets
+         10. Re-run full profile reducer and all acceptance gates
+         11. Only after PASS: construct coupled QNM determinant
+
+
+19. Literature and convention anchors
+The two perturbation formalisms used throughout the coefficient work are:
+          C. Zhang and R. Kase, Physical Review D 110, 044047 (2024), arXiv:2404.11910 - even-parity perturbations in U(1)-gauge-
+           invariant scalar-vector-tensor theories; Appendix-A coefficients and reduced K/G/S/M structure.
+          R. Kase and S. Tsujikawa, Physical Review D 107, 104045 (2023), arXiv:2301.10362 - odd/even black-hole perturbations in
+           Maxwell-Horndeski theories; full five-degree-of-freedom static-spherical formalism.
+Project conventions that must stay locked when comparing formulas: r_s=1; u=C=r_s/r; x=r/r_s=1/u; scalar phi=Xi; the accepted
+vector numbering uses the 13-slot Zhang-Kase schema after canonicalizing the Maxwell-Horndeski v1...v9 vector block; the
+selected lower-order member used in the final outer run has v5=c3=e3=0.
+
+20. Frozen final statement
+    What can safely be said as of 16 September 2026
+    P5 has a regular frozen geometry, healthy local principal witnesses in the exterior, genuine-SVT light-ring lobe and core,
+    constructive same-action handover existence, a complete common 41-slot unreduced coefficient language, a validated
+    derivative service, complete constraint maps, validated Zhang-Kase and Maxwell-Horndeski coefficient emitters, and a
+    profile-aware finite-l reducer including the antisymmetric S term. No certified global finite-l same-action member has yet been
+    completed. The last variable-G4 outer candidate is rejected because sym(K) is negative and, more fundamentally, the
+    changed Horndeski principal member was not followed by a fresh full background re-solve. Therefore coupled QNM remains
+    blocked. Future work should formulate a targeted transverse action-jet continuation/control problem with background
+    equations and finite-l K positivity imposed simultaneously.
+
+This report intentionally records both successes and the final failure so that a later continuation does not accidentally erase hard-
+won distinctions or redo already closed algebra.
+
+Appendix A. Exact final operator-audit rows
+A.1 Physical kinetic/radial gate and constraint pivots
+
+    L                  min eig K       neg K              min c^2         neg c^2               min |Dh1|             min |DeltaV|          min |2Lv9|
+
+
+    6                  -2116.84928     2113               0.08882930162   0                     3.387397372           0.1871260537          12.87893151
+
+    12                 -668.8484547    2065               0.09061205538   0                     14.11018473           0.1871260537          25.75786302
+
+    20                 -236.3716979    2025               0.06387482154   0                     39.81784118           0.1871260537          42.92977171
+
+
+
+
+                                                                                                                                                        Page 13
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+ L                  min eig K            neg K            min c^2            neg c^2            min |Dh1|        min |DeltaV|          min |2Lv9|
+
+
+ 42                 -12.86435355         1903             0.002852612567     0                  177.7549713      0.1871260537          90.15252058
+
+ 110                -1.884583715         1576             0.000950390561     0                  1227.614249      0.1871260537          236.1137444
+
+                                                          0.000254172238
+ 420                -0.2505590114        1061                                0                  17952.08463      0.1871260537          901.5252058
+                                                          4
+
+ 1000               -0.1064798939        629              0.000107519043     0                  101833.7002      0.1871260537          2146.488585
+
+A.2 Structural residuals of the same final runs
+
+ L                  H0 quadratic         P20 asym         P02 asym           P11 asym           S sym residual   max |R|               v12 residual
+
+
+ 6                  0                    1.43             1.78e-15           0                  2.53e-08         0                     0
+
+ 12                 0                    0.521            8.88e-16           0                  2.08e-08         0                     0
+
+ 20                 0                    0.229            8.88e-16           0                  1.51e-08         0                     0
+
+ 42                 0                    0.063            4.44e-16           0                  5.24e-09         0                     0
+
+ 110                0                    0.0104           2.22e-16           0                  1.08e-08         0                     0
+
+ 420                0                    0.000763         5.55e-17           0                  9.09e-09         0                     0
+
+ 1000               0                    0.000136         2.78e-17           0                  1.71e-08         0                     0
+
+
+
+Appendix B. Final emitter regression highlights
+Zhang-Kase outer regression: selected median scaled-relative values.
+
+ slot                           median                       p95                             max scaled                    max abs
+
+
+ a2                             6.3971216e-09                2.1848453e-08                   7.13428e-06                   7.13428e-06
+
+ a7                             1.5325416e-09                7.9848129e-09                   2.9541308e-06                 4.1852845e-06
+
+ c2                             3.8932921e-11                3.0284995e-10                   3.7652955e-10                 9.9212407e-09
+
+ c5                             5.6290558e-10                1.4581929e-09                   3.2625389e-07                 5.4396854e-07
+
+ c6                             6.4394103e-10                2.1054491e-09                   5.7237983e-07                 8.9151975e-07
+
+ d3                             1.1077117e-07                7.3913578e-07                   0.036320295                   0.096146351
+
+ e1                             9.2607537e-09                1.624784e-07                    6.9497323e-05                 6.9497323e-05
+
+ e4                             1.5017315e-06                1.7209745e-05                   0.25374308                    24.009088
+
+ v1                             6.9516516e-11                2.3093623e-10                   2.8907549e-10                 3.4672958e-09
+
+ v4                             1.1493828e-10                9.1617842e-10                   1.5155912e-09                 1.5155912e-09
+
+ v9                             5.3223806e-07                1.8204314e-06                   1.3474865e-05                 2.4951214e-05
+
+ v13                            6.8309907e-06                0.00015434887                   1.5038073                     13.171992
+
+Maxwell-Horndeski variable-G4 strong-H regression: selected values.
+
+ slot/quantity                           median                              p95                                 max
+
+
+ a1                                      1.5989224e-12                       7.7720018e-12                       2.2622793e-11
+
+ a2                                      2.4183403e-08                       1.1965377e-07                       3.5311115e-07
+
+ a7                                      1.0504046e-08                       6.001481e-08                        3.8532134e-07
+
+ b3                                      2.0813369e-10                       1.7727104e-09                       9.834189e-08
+
+ c2                                      0                                   0                                   0
+
+ c6                                      6.0049188e-13                       3.7273101e-12                       1.0817791e-11
+
+ d3                                      5.2794574e-11                       3.8395302e-10                       9.7565025e-08
+
+
+
+                                                                                                                                                Page 14
+SSZ P5 / Horndeski-SVT finite-l closure - technical memory - 16.09.2026
+
+
+
+ slot/quantity                          median                                     p95                                    max
+
+
+ e1                                     1.6026991e-07                              6.3109237e-07                          4.1328654e-06
+
+ e4                                     3.2637367e-08                              1.429779e-07                           6.0942887e-07
+
+ mu                                     2.3217498e-12                              1.3672322e-11                          3.4381303e-11
+
+ K_scalar                               4.6206209e-08                              2.4838841e-07                          1.4557856e-06
+
+
+
+Appendix C. Compact decision log
+ Stage                                              Finding                                                 Rule for future
+
+
+ Before Sep-16                                      41/41 local selected tables existed                     Keep: slot closure was real.
+
+                                                    Profile reducer initially treated lower radial first-
+ Sep-16 early                                                                                               Fixed by explicit antisymmetric S block.
+                                                    order term incorrectly
+
+ Sep-16                                             ZK Appendix-A emitter reconstructed                     Keep and reuse.
+
+                                                    Outer repaired-SVT endpoint found not identical to
+ Sep-16                                                                                                     Do not concatenate as same action.
+                                                    central Sep-13 action representative
+
+ Sep-16                                             Simple G4=1/2 MH outer member gave negative K           Reject that restricted member only.
+
+                                                    Hessian scans failed to move bad scalar kinetic
+ Sep-16                                                                                                     Do not waste time on f2 Hessian-only tuning.
+                                                    direction
+
+ Sep-16                                             Strong-H diagnostic restored positive high-L K          Horndeski principal freedom is relevant.
+
+ Sep-16                                             Recovered direct variable-G4 strong-H action data       Use as MH action anchor.
+
+ Sep-16                                             c6,d3,e4 parser/holonomic fixes completed               MH emitter regression closed.
+
+                                                    Auxiliary-V block found non-additive after separate
+ Sep-16                                                                                                     Always recanonicalize common V after assembly.
+                                                    completion
+
+                                                                                                            Rejected candidate: negative sym(K), nonzero raw
+                                                    Variable-G4 principal carrier transplanted into
+ Sep-16 final                                                                                               K asymmetry, and no fresh full background re-solve
+                                                    resolved outer grid and reduced
+                                                                                                            after transplant.
+
+                                                                                                            Resume only as constrained control/optimization
+ Stop rule                                          No more ad-hoc tuning in this run
+                                                                                                            problem.
+Generated from the frozen project artifacts present in the working archive on 16 September 2026. Numerical values in this report are intended as
+reproducibility anchors; the CSV and Python files listed in Section 18 remain the machine-readable source of truth.
+
+
+
+
+                                                                                                                                                       Page 15
+

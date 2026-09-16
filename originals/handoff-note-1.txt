@@ -1,0 +1,130 @@
+Ja. Jetzt haben wir daraus einen **eingefrorenen Codex-Handoff** gemacht. Der wissenschaftliche Status ist dabei bewusst präzise:
+
+$$
+\boxed{\text{FULL CONSTRUCTIVE CLOSURE = PASS}}
+$$
+
+Der finale Produktionsmember ist
+
+$$
+S_{\rm HSVT}
+=
+S_{\rm H,P5}
++
+\epsilon_Y\int d^4x\,\sqrt{-g}\,Y,
+\qquad
+\epsilon_Y=10^{-2},
+$$
+
+mit
+
+$$
+Y=
+\nabla_\mu\phi\,\nabla_\nu\phi\,
+F^{\mu\alpha}F^\nu{}_{\alpha},
+\qquad A_0'=0 .
+$$
+
+Der genuine-SVT-Term ist damit **nicht trivial**, aber auf dem P5-Background exakt background-null. Der Auditor bestätigt insbesondere den globalen Vektormargin
+
+$$
+Z_A=1-2\kappa\epsilon_Y,
+\qquad
+Z_{A,\min}=0.9872911806592305>0,
+$$
+
+sowie die finite-\(\ell\)-Gesundheit des Horndeski-Trägers für \(L=6,12,20,42,110,420,1000\). Es gibt **keinen konstruktiven und keinen numerischen Closure-Fail**.
+
+Ein Punkt bleibt mit Absicht separat:
+
+$$
+\boxed{\text{DIRECT GLOBAL KRGM EXPORT = OPEN IMPLEMENTATION GATE}}
+$$
+
+Das ist **kein offenes Physik-/Existenzproblem mehr**. Es bedeutet: Das zukünftige Repo soll aus der kovarianten Action selbst noch einmal einen einzigen center-to-infinity \(41/41\to K,R,G,S,M\)-Stream regenerieren, anstatt historische gerundete CSVs zusammenzukleben. Erst danach soll Codex den QNM-Solver freischalten. Genau diese Aufgabe steht bereits im Codex-Briefing.
+
+### Das komplette Paket
+
+[**Kompletter SSZ P5 FULL CLOSURE Codex-Handoff als ZIP - ca. 18 MB**](sandbox:/mnt/data/SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16.zip)
+
+Das ZIP enthält **64 Release-Dateien**, inklusive SHA-256-Manifest, Daten, Tests, Quellcode, Paper, Figuren, historische Provenienz und Superseded-Liste.
+
+### Die zwei Hauptdateien, die du wolltest
+
+[**Master-Python-Auditor - `ssz_p5_full_closure_auditor.py`**](sandbox:/mnt/data/ssz_p5_full_closure_auditor.py)
+
+Der kann die komplette Closure reproduzierbar prüfen. Der zentrale Volltest ist:
+
+```bash
+python ssz_p5_full_closure_auditor.py \
+    --data-dir . \
+    --full \
+    --json build/audit.json \
+    --csv build/gates.csv
+```
+
+Er prüft unter anderem P5-Geometrie, Center-Closure, beide Handovers, Backgroundgleichungen, Kontrollränge, Horndeski- und ZK-Grenzfälle, 41/41-Slots, \(a_5\), \(v_{12}\), Constraint-Maps, den echten \(\epsilon_Y Y\)-SVT-Term sowie finite-\(\ell\) \(K/G\)-Regressionen.
+
+[**Vollständiges Paper - 212 Seiten PDF**](sandbox:/mnt/data/SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16/paper/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf)
+
+[**LaTeX-Quelle des gesamten Papers**](sandbox:/mnt/data/SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16/paper/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.tex)
+
+Das Paper umfasst **212 A4-Seiten**. Ich habe alle 212 Seiten neu gerendert und visuell geprüft. Es geht von vorne bis hinten durch die Konstruktion: P5-Geometrie, Wirkung, Backgroundgleichungen, \(00/\Delta\)-Basis, Horndeski-Carrier, genuine SVT, tubulare/background-null Jets, Control-Ränge, Odd-/Even-Parity, komplette 41-Slot-Sprache, JET9D8, Holonomizität, Constraint-Elimination, \(K,G,S,M\), finite-\(\ell\)-Tests, Fehler- und Supersession-Historie, QNM-Schwelle, Reproduzierbarkeit und die Codex-Repoarchitektur.
+
+### Für Codex besonders wichtig
+
+[**README für Codex**](sandbox:/mnt/data/SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16/README_FOR_CODEX.md)
+
+[**Fertiger Codex-Auftrag**](sandbox:/mnt/data/SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16/CODEX_PROMPT.md)
+
+[**Gefrorener Closure-Status**](sandbox:/mnt/data/SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16/STATUS_FULL_CLOSURE.md)
+
+[**Exakte Definition des Produktions-Actionsmembers**](sandbox:/mnt/data/SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16/SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json)
+
+[**Dateiindex**](sandbox:/mnt/data/SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16/FILE_INDEX.md)
+
+[**SHA-256-Manifest**](sandbox:/mnt/data/SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16/MANIFEST.json)
+
+### Was Codex jetzt daraus bauen soll
+
+Im ZIP ist die gewünschte Repo-Struktur bereits vorbereitet:
+
+```text
+SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF/
+├── README_FOR_CODEX.md
+├── CODEX_PROMPT.md
+├── STATUS_FULL_CLOSURE.md
+├── SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json
+├── MANIFEST.json
+├── SHA256SUMS
+├── requirements.txt
+├── ssz_p5_full_closure_auditor.py
+├── src/
+├── tests/
+├── data/
+│   ├── authoritative/
+│   ├── regression/
+│   └── certificates/
+├── paper/
+│   ├── ...212-page PDF
+│   ├── ...LaTeX source
+│   ├── figures/
+│   └── appendices/
+├── tools/
+└── legacy_superseded/
+```
+
+Und Codex bekommt ausdrücklich die Regel:
+
+> **Nicht** alte `FINAL_*`-Dateien zusammenkleben und daraus einen PASS behaupten.
+> Es muss aus dem eingefrorenen Action-Member einen frischen globalen \(41/41\)-Stream erzeugen, daraus \(K,R,G,S,M\) generieren, alle Pure-Limit-Regressionen bestehen und erst dann `DIRECT_GLOBAL_KRGM_EXPORT=PASS` setzen.
+
+Danach kann die Repo-Pipeline automatisch
+
+```bash
+python ssz_p5_full_closure_auditor.py --require-direct-krgm
+```
+
+als endgültiges CI-Gate verwenden und anschließend die QNM-Schicht aktivieren.
+
+Damit haben wir jetzt genau das, was du wolltest: **ein externes Gedächtnis, einen maschinenprüfbaren Closure-Nachweis und ein komplettes Übergabepaket, aus dem Codex ohne unsere gesamte Chat-Historie ein ordentliches Forschungsrepo bauen kann.**

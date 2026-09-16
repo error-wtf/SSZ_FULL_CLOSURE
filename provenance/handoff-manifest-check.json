@@ -1,0 +1,413 @@
+{
+  "status": "INCOMPLETE",
+  "entries": [
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 477,
+      "sha256": "c09dab3bb58d5617a2d70bbf882b73089006884a74fb7472dcd98bc6c48eb201",
+      "status": "MISSING"
+    },
+    {
+      "path": "CODEX_PROMPT.md",
+      "size_bytes": 2414,
+      "sha256": "445c210a324a5abc2b3652b79964da277a5d1df432a7e29bc2435190ac512f2f",
+      "status": "VERIFIED",
+      "source_name": "CODEX_PROMPT.md"
+    },
+    {
+      "path": "FILE_INDEX.md",
+      "size_bytes": 1492,
+      "sha256": "1c7ba69ced40bc1cf7c28afebe1ab9042a9939c5710a9f32496b88921f76b82e",
+      "status": "VERIFIED",
+      "source_name": "FILE_INDEX.md"
+    },
+    {
+      "path": "README_FOR_CODEX.md",
+      "size_bytes": 2235,
+      "sha256": "55cd5ea1764c71880b1876928ce0b1625694e54e1ff567d52253fb60d5ea8280",
+      "status": "VERIFIED",
+      "source_name": "README_FOR_CODEX.md"
+    },
+    {
+      "path": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
+      "size_bytes": 840,
+      "sha256": "742d7c1dbfa06d9870b69f2b95ae1b764b1c3083aea16d968cae5d8e136cf684",
+      "status": "VERIFIED",
+      "source_name": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json"
+    },
+    {
+      "path": "STATUS_FULL_CLOSURE.md",
+      "size_bytes": 1003,
+      "sha256": "1e4713622998781c714862146c56b191403c2ade183d7f0d8e59e5237adb78ed",
+      "status": "VERIFIED",
+      "source_name": "STATUS_FULL_CLOSURE.md"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "size_bytes": 1042900,
+      "sha256": "4aecb2e3c539dba50a773579f3e740ba34811dba617b7cd6358e7de8a0375ad5",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "size_bytes": 12897599,
+      "sha256": "a11a0a214d5e01141a1838f48adf8978bb29095ed09cbfcfde59b131e2b2a407",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "size_bytes": 2809117,
+      "sha256": "253cfe04a924837da97e41b4d2dbbdb515079e86f11965ba5e93c443ac61a73b",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "size_bytes": 4302466,
+      "sha256": "4a614bc3b09e39b1dca5fa6ebafc82e025a41ba6f744818873d17f1f14ad0627",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv",
+      "size_bytes": 1422523,
+      "sha256": "5a831cbd4fd85b02a818c98bea808da07d34de86e50688147f7b1723eefda695",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_full_horndeski_principal_control_rank_2026-09-12.csv",
+      "size_bytes": 695180,
+      "sha256": "598bc3b37448896556b8f70b0cecc1d95014246f4df65d9b3d7f4c7a7b3aef14",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv",
+      "size_bytes": 1856486,
+      "sha256": "65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12(1).csv"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "size_bytes": 3697751,
+      "sha256": "09b10a19112543c96c023e9a6353a4fec48f9834f09ef4b6c14074d37e69d2c8",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "size_bytes": 3501678,
+      "sha256": "74b4812b9a43dfb6faf71f5eaf2375c359d69ac250a5b5414fea8647fed8e89c",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/certificates/SSZ_P5_FULL_CLOSURE_AUDIT_2026-09-16.json",
+      "size_bytes": 40570,
+      "sha256": "ac86f0ec8959f0e3866c581be612c59f2932a1b4e40a6db4293b6ac48abb9efe",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/certificates/SSZ_P5_FULL_CLOSURE_GATE_LEDGER_2026-09-16.csv",
+      "size_bytes": 23845,
+      "sha256": "f9a9f0b5984c39f4eb874e13e2e61b4b96cf194d950cdf4952e89bb47995d964",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/regression/ssz_p5_HSVT_EPSY001_STRONGH_41of41_2026-09-16.csv",
+      "size_bytes": 4643216,
+      "sha256": "53a5fcd6b59d6762180968c60150df68e26c4c98fb98c1a544ea9cf8a4a770bf",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/regression/ssz_p5_MH_G4PHI_EMITTER_STRONGH_REGRESSION_2026-09-16.csv",
+      "size_bytes": 2250,
+      "sha256": "d5d87a8bbf2770a23928ac6f07a22649b1622c9e2671e62d0efffc1d6ed0276c",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/regression/ssz_p5_ZK_APPENDIX_A_EMITTER_OUTER_REGRESSION_2026-09-16.csv",
+      "size_bytes": 3204,
+      "sha256": "21b4460ec43d05242cea79c9a2b2768e5d0b79a66271705c43bf566296fa02c6",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/regression/ssz_p5_carrier_corr_41of41_2026-09-16.csv",
+      "size_bytes": 4633807,
+      "sha256": "bc0303dd9d90f2219136cb8d304432e7e5ce513690efa2117be08b057380b72d",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/regression/ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16(1).csv",
+      "size_bytes": 1964,
+      "sha256": "80f3e9ad6fe299601c5b89ccc0f66a94a0f5e33285721e65e199db8209c49e0e",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16.csv"
+    },
+    {
+      "path": "data/regression/ssz_p5_holonomic_a5_gate_status_2026-09-16.csv",
+      "size_bytes": 302,
+      "sha256": "eb879cee6d061123240b892fc63b22d1aacc1cbc1062d4cc65832c8c05610784",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/regression/ssz_p5_profile_operator_internal_crosscheck_2026-09-16.csv",
+      "size_bytes": 1132,
+      "sha256": "71496c53be677b0512ccaa80892f77d83ae3c35da6a27e4e43597db15ff56d28",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/regression/ssz_p5_profile_operator_structural_audit_2026-09-16.csv",
+      "size_bytes": 1628,
+      "sha256": "37d4342840f8d6e846049b187bcccda32736ff1200a08f7d890110a0d6d17616",
+      "status": "MISSING"
+    },
+    {
+      "path": "data/regression/ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "size_bytes": 1002,
+      "sha256": "6204f8600d5de71da0ba9794ef6dd96467e05b07d19435bf07a4b7fd32515e2b",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_shared_baseline_assembly_validation_2026-09-16.csv"
+    },
+    {
+      "path": "legacy_superseded/README.md",
+      "size_bytes": 675,
+      "sha256": "9091282680778d299337b6c82b978ae7baa06d72e819a7fcbc8c6286e8505a9b",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf",
+      "size_bytes": 2621857,
+      "sha256": "a028d69bd8e66886b9552683376873801936362b25e90eb1516b7e800b837902",
+      "status": "VERIFIED",
+      "source_name": "SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf"
+    },
+    {
+      "path": "paper/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.tex",
+      "size_bytes": 99287,
+      "sha256": "153d750cd96f2762d182b79dbb4c7d71ddb1b45898c0cdbceff3b843d33ee54a",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/appendices/SSZ_P5_HSVT_FINITE_L_TECHNICAL_MEMORY_2026-09-16.pdf",
+      "size_bytes": 750805,
+      "sha256": "b25f47dc0e63285733c91faac3eabf26e7b185dd1332f6b778cf1df054b15a6d",
+      "status": "VERIFIED",
+      "source_name": "SSZ_P5_HSVT_FINITE_L_TECHNICAL_MEMORY_2026-09-16.pdf"
+    },
+    {
+      "path": "paper/appendices/SSZ_P5_Horndeski_SVT_CLOSURE_COMPLETE_2026-09-14.pdf",
+      "size_bytes": 643059,
+      "sha256": "cc3e6442c00fda1864c12791e2354c0ea9608a1a86585f7b68f2158da067b300",
+      "status": "VERIFIED",
+      "source_name": "SSZ_P5_Horndeski_SVT_CLOSURE_COMPLETE_2026-09-14.pdf"
+    },
+    {
+      "path": "paper/appendices/SSZ_P5_KRGM_TECHNISCHES_SICHERHEITSPROTOKOLL_2026-09-16.pdf",
+      "size_bytes": 563059,
+      "sha256": "016131521eb19effa93796be1a187f99fc677f603f99621123cfabf7efdcf56e",
+      "status": "VERIFIED",
+      "source_name": "SSZ_P5_KRGM_TECHNISCHES_SICHERHEITSPROTOKOLL_2026-09-16.pdf"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_hybrid_full_constraint_maps_JET9D8(1).py",
+      "size_bytes": 4918,
+      "sha256": "287185c4f3c660e27f0ff32dc19f7f1e1040726e46e08ba35685a00b0e562850",
+      "status": "VERIFIED",
+      "source_name": "ssz_hybrid_full_constraint_maps_JET9D8(1)(1).py"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_hybrid_jet_aware_constraint_reducer.py",
+      "size_bytes": 4378,
+      "sha256": "49ea2044d0ef2e6a66c030fe75538c246af035257d3d1a495275eafb4b1c264a",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_hybrid_unreduced_even_kernel.py",
+      "size_bytes": 8786,
+      "sha256": "1fc9c2a01b7be3968091cf795d104d444a48dba97cf93062c1c4c0df843b0aed",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_p5_F2b_action_derived_highL_mass_closure_2026-09-15.py",
+      "size_bytes": 7337,
+      "sha256": "9854a2de4fc09971b4d89a794921aec8e5f72862ca9549d7107c014d6a6375c1",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_p5_KGSM_highL_crosscheck_2026-09-16.py",
+      "size_bytes": 2310,
+      "sha256": "96204d99484469284dfa25df4f552ebe2e55ab88fce3b68d25bcaa1854ae2abc",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_KGSM_highL_crosscheck_2026-09-16.py"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_p5_full_closure_auditor.py",
+      "size_bytes": 22429,
+      "sha256": "fb63c86c281f21df02c13e5d3604aeb3d74d526eccb8a9ea0028be6711932059",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_full_closure_auditor.py"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_p5_higher_jet_closure_2026-09-16.py",
+      "size_bytes": 9304,
+      "sha256": "e102ec52304ef0729ee46483ef86b5e2b5fb28166f0b29486e44fd9b1003494c",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_p5_holonomic_a5_closure_2026-09-16.py",
+      "size_bytes": 5432,
+      "sha256": "65360a0913d0c0b54e6cc85a7c0d9e24431b68bd82ede3adb41e6bdf67814b0b",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py",
+      "size_bytes": 8719,
+      "sha256": "bb5ad60f0afd14f0ec8a410e7870ae6777fa01b59648042b6703662289b8e692",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py",
+      "size_bytes": 10083,
+      "sha256": "95156fc3e0124fdd599b891a287acac90d172ef7304824653da64799739e315d",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py"
+    },
+    {
+      "path": "paper/appendices/code_ascii/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py",
+      "size_bytes": 10815,
+      "sha256": "3fccaf95d3b4092f235c529949bc8272dc8ad06a43068461cf29a5d4d4acc8f6",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/figures/core_positive_invariants.png",
+      "size_bytes": 57473,
+      "sha256": "efb7b224db81d74585a09994581e43fd3e7f595171068fcbdb1b2dbd8e65c18e",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/figures/epsY_ZA_core.png",
+      "size_bytes": 38664,
+      "sha256": "45a264fe0efb578c10bef9758d9c1ad172427962c9cc1e187ccd33c6bb19da9d",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/figures/epsY_ZA_strongH.png",
+      "size_bytes": 55582,
+      "sha256": "c5b8d60f2c05bc72dda9d2eabbbd6a933b6b77faf276ccc9e223e235320a843d",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/figures/global_principal_speeds.png",
+      "size_bytes": 48534,
+      "sha256": "afe928360746299306ce2364a0a62a3e08862505abb6c5b13a1d951c8a135d92",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/figures/strongH_invariants.png",
+      "size_bytes": 50425,
+      "sha256": "29c02779c20f64a0c61eb0b8c5b3178b7e83b5a42eb05ecc264b48eb98790719",
+      "status": "MISSING"
+    },
+    {
+      "path": "paper/figures/zk_exact_radial_speeds.png",
+      "size_bytes": 59113,
+      "sha256": "5e307d4b5af1398028ff07e0f41a857e3e70c14184349755df3599a6d8349a32",
+      "status": "MISSING"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 64,
+      "sha256": "1f9801a9c5d15fcbc3e4f2d991909a2e706403b59669baae74899dc8b24ff87b",
+      "status": "MISSING"
+    },
+    {
+      "path": "src/__pycache__/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.cpython-313.pyc",
+      "size_bytes": 18286,
+      "sha256": "3d39ccf4d6e3c7822e3c541cdaa31f8f44c6ee87887b5c2755f86362c9e56820",
+      "status": "MISSING"
+    },
+    {
+      "path": "src/ssz_hybrid_full_constraint_maps_JET9D8(1).py",
+      "size_bytes": 4918,
+      "sha256": "287185c4f3c660e27f0ff32dc19f7f1e1040726e46e08ba35685a00b0e562850",
+      "status": "VERIFIED",
+      "source_name": "ssz_hybrid_full_constraint_maps_JET9D8(1)(1).py"
+    },
+    {
+      "path": "src/ssz_hybrid_jet_aware_constraint_reducer.py",
+      "size_bytes": 4378,
+      "sha256": "49ea2044d0ef2e6a66c030fe75538c246af035257d3d1a495275eafb4b1c264a",
+      "status": "MISSING"
+    },
+    {
+      "path": "src/ssz_hybrid_unreduced_even_kernel.py",
+      "size_bytes": 8786,
+      "sha256": "1fc9c2a01b7be3968091cf795d104d444a48dba97cf93062c1c4c0df843b0aed",
+      "status": "MISSING"
+    },
+    {
+      "path": "src/ssz_p5_F2b_action_derived_highL_mass_closure_2026-09-15.py",
+      "size_bytes": 7337,
+      "sha256": "9854a2de4fc09971b4d89a794921aec8e5f72862ca9549d7107c014d6a6375c1",
+      "status": "MISSING"
+    },
+    {
+      "path": "src/ssz_p5_KGSM_highL_crosscheck_2026-09-16.py",
+      "size_bytes": 2310,
+      "sha256": "96204d99484469284dfa25df4f552ebe2e55ab88fce3b68d25bcaa1854ae2abc",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_KGSM_highL_crosscheck_2026-09-16.py"
+    },
+    {
+      "path": "src/ssz_p5_higher_jet_closure_2026-09-16.py",
+      "size_bytes": 9309,
+      "sha256": "523587987738bfbe0c0ba20948c9a97e3f69e273201ac17d999469bfcb360527",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_higher_jet_closure_2026-09-16(1).py"
+    },
+    {
+      "path": "src/ssz_p5_holonomic_a5_closure_2026-09-16.py",
+      "size_bytes": 5437,
+      "sha256": "77dd57f9ee02081f6db2c4f6a6d7ff4127395e07c66140ec3e387cdfc115e870",
+      "status": "MISSING"
+    },
+    {
+      "path": "src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py",
+      "size_bytes": 8719,
+      "sha256": "bb5ad60f0afd14f0ec8a410e7870ae6777fa01b59648042b6703662289b8e692",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py"
+    },
+    {
+      "path": "src/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py",
+      "size_bytes": 10083,
+      "sha256": "95156fc3e0124fdd599b891a287acac90d172ef7304824653da64799739e315d",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py"
+    },
+    {
+      "path": "src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py",
+      "size_bytes": 10821,
+      "sha256": "fa94b2d147b10c1d697a18431abee6b58143dddcb3a7c040ec0c5e07b8cd45e0",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py"
+    },
+    {
+      "path": "ssz_p5_full_closure_auditor.py",
+      "size_bytes": 22429,
+      "sha256": "fb63c86c281f21df02c13e5d3604aeb3d74d526eccb8a9ea0028be6711932059",
+      "status": "VERIFIED",
+      "source_name": "ssz_p5_full_closure_auditor.py"
+    },
+    {
+      "path": "tests/test_release_auditor.py",
+      "size_bytes": 386,
+      "sha256": "d3eb49b7d25a2a10d8a606d30b2a73db35b8fa37364adccb2dcf6734e93cf9f9",
+      "status": "MISSING"
+    },
+    {
+      "path": "tools/build_ssz_p5_full_closure_monograph.py",
+      "size_bytes": 48047,
+      "sha256": "fb7856fa173d46ccdeb50d74e25e216d96c5bdebd89c43cc30f7abca6b4ba712",
+      "status": "MISSING"
+    }
+  ]
+}

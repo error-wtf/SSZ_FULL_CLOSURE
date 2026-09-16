@@ -1,0 +1,2841 @@
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                 29 August 2026
+
+
+                From Geometric Correction Orders to
+                     Detector-Centered Phase
+Exact Middle Transfer Bridge, Compactness Response, and Unified-Dynamics
+                               Constraints
+                                 Carmen N. Wrede              Lino P. Casu
+                                        with the help of Bingsi AI
+                                    Independent Research, Germany
+                                              29 August 2026
+
+
+Manuscript status. Technical research paper / derivation note. Not peer reviewed. Exact
+statements are exact only under their explicit hypotheses; source-locked model statements are not
+promoted to fundamental derivations; regression and technical checks are not counted as independent
+empirical confirmations. For vacuum electromagnetism the paper uses standard covariant Maxwell
+dynamics on the declared static SSZ background, so the eikonal/null-Hamiltonian/Fermat route is
+derived on that background. The canonical weak-field observable layer remains source-locked to
+βPPN = γPPN = 1; deriving that completion from a single unified action remains open. The paper
+does not claim a unique fundamental SSZ action, a globally regular interior, rotation/dynamical re-
+sponse, electromagnetic backreaction, plasma/material constitutive closure, or independent empirical
+confirmation of a new strong-field discriminator.
+Validation summary. Before the compactness-response extension was integrated, the available
+strong-field audit was re-executed successfully and reproduced its typed ledger: 18 PASS, 4 structural
+FLAG, 5 REJECTED_CANDIDATE, 1 CONDITIONAL_PASS, 1 OPEN_CANDIDATE, 1 REG-
+ULARITY_FLAG, and 1 INTERPRETIVE_RESULT. The lower Middle-Bridge proof/test lock
+remains 35/35 PASS and the independent consistency wrapper remains 15/15. The new compactness-
+response audit adds 13/13 PASS checks covering the exact variable transformation, pure-branch
+flow identities, transformed C 2 matching, the mean-value susceptibility bound, global polynomial
+extrema, and an independent numerical quadrature/optimization cross-check. These layers remain
+typed and are not added into a single empirical score.
+
+
+                                                  Abstract
+
+          This paper joins the full exact Middle Transfer Bridge with the strongest corrected strong-field
+     dynamics results and a new compactness-response       audit. At the scalar phase level, an absolutely
+     convergent   lifted   phase decomposition Φ =      ∆Φ n maps exactly to multiplicative U (1) transfer,
+                                                    P
+                                                      n
+                 =       , and the continuous scalar generator satisfies U ′ = iaU , hence U = exp[i a ds].
+     Q i∆Φn           iΦ
+                                                                                                    R
+        n e         e
+     For the declared Sagnac-type local law dtσ = ds/[c(1 − σβ)], the Neumann hierarchy is an exact
+     conditional corollary for |β| < 1; spatial path segmentation j and correction order n remain
+     independent indices, and counter-propagating parity removes even orders from the antisymmetric
+     difference. The paper keeps the finite-β frame/clock split explicit and distinguishes correction-order
+     convergence from spatial quadrature convergence.
+          For vacuum electromagnetic propagation on the declared static SSZ metric, standard covariant
+     Maxwell theory yields the WKB eikonal equation g µν kµ kν = 0, the null Hamiltonian, the
+     optical/Fermat formulation, and a detector endpoint-delay phase Uγ = eiω∆Tγ under the stated
+     Fourier convention. A local static observer measures c; coordinate travel time and local light
+     speed are not conflated. The full spacetime eikonal is constant along its own null ray, so the
+     detector transfer phase is not a photon proper-time accumulation. Killing frequency, local detector
+     frequency, source/node phases, and detector reference phase are kept as typed quantities.
+          The unified-dynamics audit uses the current public/static P0 profile: inner g2 , Ξs = 1 − e−φ/x
+     for 1 ≤ x < 1.8; a derivative-matched quintic C 2 transition on 1.8 ≤ x ≤ 2.2; and outer g1 ,
+     Ξo = 1/(2x) for x > 2.2. Formula domain is separated from physical regime: the project taxonomy
+     still labels 2.2 < x ≤ 3 photon-sphere context, 3 < x ≤ 10 physical strong field, and only x > 10
+
+
+                                                       1
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                   29 August 2026
+
+
+     physical weak field. The inner branch carries the differential fingerprint x2 Ξ′s + φ(1 − Ξs ) = 0; the
+     outer branch obeys xΞ′o + Ξo = 0 and 2xΞo = 1. Reversal of the fixed-endpoint Hermite bridge is
+     mathematically neutral; “strong-first” is therefore a research orientation, not a direction built into
+     the interpolation theorem.
+         Writing compactness as C = rs /r = 1/x and u = GM/(rc2 ) = C/2 gives an exact reparam-
+     eterization of the pure branches: g1 becomes Ξo = u, while g2 becomes Ξs = 1 − e−2φu . Their
+     pure-branch flow laws are u dΞo /du = Ξo and dΞs /du = 2φ(1 − Ξs ). The fixed transition window
+     maps to u ∈ [5/22, 5/18]. Any differentiable bridge with the canonical endpoint values must,
+     by the mean-value theorem, attain dΞ/du = 7.241123407889 somewhere, already far above the
+     pure-branch endpoint susceptibilities 1 and 1.317124872442. The canonical Hermite bridge has
+     a globally certified numerical maximum max dΞ/du = 12.688510828116 at x = 2.008739217432.
+     This susceptibility amplification is a property of the fixed endpoint values and narrow transition
+     window; interpreting it as a physical response mechanism remains an open dynamical hypothesis.
+         Reconstructing the Einstein-effective source gives pbr = −b    ρ, ρb = 2m
+                                                                                 b ′ /x2 , and pbt = −m
+                                                                                                      b ′′ /x.
+     The canonical endpoint masses, b  m(1.8) = 0.545334802123639 and b       m(2.2) = 0.369684499314129,
+                                                       R 2.2
+     imply the interpolation-independent identity 1.8 x2 ρb dx = −0.351300605619020 and force ρb ≤
+     −0.218833433733 somewhere for every differentiable Einstein-matter bridge with the same endpoint
+     metric values. The strong branch reaches m    b = 1/2 already at x∗ = 1.594811457889, while the
+     outer branch tends to 1/2 from below. With the outer endpoint fixed at x1 = 2.2, positive
+     density requires x0 ≤ 1.082828978184; the stronger tangential-NEC monotonicity gate requires
+     x0 ≤ 0.977946246457, outside the frozen exterior. Thus the current endpoint architecture cannot
+     be sourced by an everywhere-NEC ordinary Einstein-matter transition inside x ≥ 1.
+         Constrained mass-space constructions show that nonnegative density can be recovered after
+     moving the handoff to x = 1, with global critical-point numerical certificates for the stored floating-
+     point polynomials, but the fixed-x1 NEC theorem prevents an ordinary everywhere-NEC rescue
+     within the frozen exterior. Candidate-source filters reject, as sole exact sources, minimally coupled
+     static radial scalar sums, perfect fluid, pure linear Maxwell, linear Maxwell plus constant Λ, and
+     the simplest uncoupled global-monopole plus fixed-charge Maxwell model. A corrected magnetic-
+     NED diagnostic retains in-domain characteristic-sign zero crossings in the canonical transition,
+     while the pure branches admit a positive defect-like plus gauge-like algebraic decomposition.
+     This motivates generalized hedgehog/gauge, NED-coupled, or second-order/degenerate scalar-
+     vector-tensor dynamics, but no unique action is claimed. The canonical observable PPN layer
+     remains source-locked to βPPN = γPPN = 1, while its derivation from the same unified dynamics
+     remains open. The decisive next step is a concrete covariant action that derives the strong branch,
+     generates its own transition, recovers the canonical PPN limit, passes quadratic stability, and
+     yields a sealed prospective strong-field discriminator before target data are opened.
+
+Keywords: Sagnac effect; phase transfer; U (1); Neumann series; interferometry; detector-centered
+phase; JIF; Segmented Spacetime; forward prediction; anti-circular validation.
+ableofcontents
+
+
+
+
+                                                        2
+Wrede, Casu – Middle Bridge + Unified Dynamics                                      29 August 2026
+
+
+1 Scope, source lock, and claim boundary
+
+This paper is source-locked to the current project architecture and to a public Forward-Lab snapshot
+rather than to remembered intermediate drafts. The relevant sources are: the integrated JIF
+manuscript; the current SSZ regime documentation; the variational C 2 bridge manuscript; the
+FFT phase-segmentation manuscript; the May 2026 geometric Sagnac correction-series preprint;
+and the archived public repository error-wtf/ssz-jif-forward-lab. For the electromagnetic
+coupling layer, the final edition retains the source lock to the supplied SSZ helper corpus: the
+expanded integrated edition, the “Radial Scaling Gauge for Maxwell Fields” note, and the
+“Maxwell Waves as Rotating Space” note. Those sources state that practical electromagnetic
+calculations retain Maxwell theory, that the geometric-optics limit follows null geodesics of
+the effective metric, and that the radial scaling picture is a geometric reparameterization
+with invariant locally measured c [18, 19, 20]. The repository audit in this revision is tied to
+commit 90eb4eb594ca41f8ca92d3c4945b108d23a0dc5c (5 August 2026), whose preceding curated
+research snapshot is 6596d64db36bef7c9a7e1fe2529872cbfd2e8a8a. For weak-field observable
+routing, the final edition additionally locks to the public ssz-complete-documentation
+files     03_FORMULAS/ppn_formulas.md,             11_GUARDRAILS/prime_directive.md,             and
+11_GUARDRAILS/method_assignment.md             at     the     referenced      repository    snapshot
+b2bac976a75dd70f26599b7debd19d88a835f429,              and    to the implementation/tests in
+SSZ-METRIC_COMPLETE at snapshot b7643f437f46a170f05e492609b27ed2a8acae73.                      Those
+sources explicitly lock βPPN = γPPN = 1 and route light-path observables through PPN completion
+rather than a Ξ-only shortcut [21, 22, 23, 24].
+
+
+Canonical P0 and formula-domain lock. For the static exterior audit used in this paper,
+
+                       Ξs (x) = 1 − e−φ/x ,                     1 ≤ x < 1.8,                     (1)
+                                 1
+                       Ξo (x) =    ,                            x > 2.2,                         (2)
+                                2x
+with the derivative-matched quintic C√2 Hermite bridge on 1.8 ≤ x ≤ 2.2, D = (1 + Ξ)−1 , A = D2 ,
+x = r/rs , rs = 2GM/c2 , and φ = (1 + 5)/2. The theory-readiness freeze treats x ≥ 1 as the exterior
+comparison domain. The project regime taxonomy separately labels 2.2 < x ≤ 3 photon-sphere
+context, 3 < x ≤ 10 physical strong field, and x > 10 physical weak field. Calculations below x = 1
+are therefore formal continuation diagnostics, not frozen-exterior claims. The canonical observable
+PPN layer remains βPPN = γPPN = 1 as the source-locked weak-field completion; deriving it from the
+same unified dynamics remains an open structural task.
+The paper uses three evidence labels informally:
+
+ • Exact: follows as mathematics from explicitly stated assumptions.
+
+ • Regression/technical: checks algebra, code semantics, numerical composition, or reference
+   data processing.
+
+ • Empirical forward evidence: requires a frozen physical prediction compared with an indepen-
+   dent target under the declared anti-circular protocol.
+
+Only the first two categories are claimed here.
+
+
+Upstream validation context. Within the derivations below, the SSZ geometry is an input:
+this paper does not re-derive the background from a fundamental action. That does not mean the
+upstream geometry/clock stack is untested. The frozen cross-repository snapshot in ssz-all-tests
+
+
+                                                   3
+Wrede, Casu – Middle Bridge + Unified Dynamics                                        29 August 2026
+
+
+separately exercises the Ξ → D, s, metric, geodesic/PPN, clock/frequency and phase-adjacent layers
+across heterogeneous regression, benchmark and observational-data tests. The present paper maps
+those upstream checks onto the architecture in section 20.2. They support software/model consistency
+of the inputs but are not used as premises in the proofs of the U (1) factorization or scalar-generator
+theorems.
+
+
+2 Notation and reference discipline
+
+A recurring source of confusion is that “time”, “path”, and “phase” each have multiple physically
+distinct representatives. We therefore fix the notation before deriving anything.
+
+                               Table 1: Core variables and their roles.
+
+Symbol     Type                            Meaning
+s          path coordinate                 declared optical/null/path parameter used by the local
+                                           transfer law
+tax        coordinate time                 time of the non-rotating axle/laboratory frame in the ideal
+                                           circular Sagnac construction
+τD         proper time                     clock time of the co-rotating detector
+x = r/rs   SSZ gravitational coordinate    black-hole-centric radial coordinate used by the canonical
+                                           SSZ radial profile
+z/z0       jet coordinate                  source-model propagation coordinate along a jet
+R/R0       plasmoid coordinate             source-size/expansion coordinate of an expanding plasmoid
+ωt         coordinate-frequency            phase rate conjugate to a chosen coordinate time t
+ωD         detector frequency              phase rate conjugate to detector proper time τD
+Φ          lifted phase                    real, unwrapped phase when cycle history is retained
+eiΦ        U (1) phase                     wrapped scalar phase factor, insensitive to integer multi-
+                                           ples of 2π
+
+
+Conjugate-clock rule. A product ω dt is meaningful as a phase increment only when the angular
+frequency ω is conjugate to the same time coordinate as dt. If the clock variable is changed, the
+frequency must transform so that the scalar phase increment remains the same:
+
+                                        dΦ = ωt dt = ωD dτD .
+
+This rule is the clean way to prevent a hidden extra or missing Lorentz factor.
+
+
+3 Operational architecture: where the middle bridge sits
+
+The JIF program starts from counted phase,
+
+                                                        dΦ
+                                              dJ =         .
+                                                        2π
+For a massive or bound oscillator with proper frequency f0 , ordinary phase evolution gives
+
+                                    dΦ = 2πf0 dτ,         dJ = f0 dτ.
+
+Within the canonical static SSZ chain, Ξ(r) defines D(r) = 1/(1 + Ξ(r)), and a selected static observer
+family uses dτ = D(r)dT . This timelike branch is already operationally closed once the observer
+family and oscillator are specified.
+
+
+                                                    4
+Wrede, Casu – Middle Bridge + Unified Dynamics                                         29 August 2026
+
+
+The photon branch is different. A null signal is not assigned a timelike rest-frame clock. The current
+detector-centered JIF construction instead assembles the complete phase contribution at a common
+detection event,
+                            (a)    (a)     (a)      X (a)           (a)
+                          ΦD = ΦE + Φtransfer +         Φnode,m + Φdetector ,                      (3)
+                                                          m
+
+and only then forms
+                                                      (b)         (a)
+                                                 ΦD − ΦD
+                                            ∆JD =            .                                       (4)
+                                                     2π
+The architectural question solved in this paper is therefore: given a specified local transfer law, how
+does it become the transfer phase in equation (3)?
+
+
+
+
+Figure 1: Operational middle bridge. The timelike and photon branches use different physical middle
+layers and meet only at a referenced phase layer.
+
+
+4 A general exact U (1) bridge theorem
+
+The most robust form of the middle bridge does not depend on Sagnac geometry.
+Theorem 1 (additive phase to multiplicative U (1) transfer). Let {∆Φn }n≥0 ⊂ R satisfy
+                                             ∞
+                                             X
+                                                   |∆Φn | < ∞.
+                                             n=0
+
+Define Tn = exp(i∆Φn ). Then the infinite product converges and
+                                      ∞                     ∞
+                                                                        !
+                                            Tn = exp i            ∆Φn .                             (5)
+                                      Y                     X
+
+                                      n=0                   n=0
+
+
+Proof. The partial products satisfy identically
+                                       M                    PM
+                                             ei∆Φn = ei             ∆Φn
+                                       Y
+                                                              n=0         .
+                                       n=0
+
+Absolute convergence of the real phase series gives convergence of its partial sums to a finite limit;
+
+
+                                                      5
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                29 August 2026
+
+
+continuity of the exponential gives equation (5).                                                         □
+This is the group-homomorphism statement
+
+                ρ : (R, +) −→ U (1),      ρ(Φ) = eiΦ ,          ρ(Φ1 + Φ2 ) = ρ(Φ1 )ρ(Φ2 ).
+
+The theorem does not claim that every summand is a physically separate propagation episode. A
+correction hierarchy can be a mathematical decomposition of one physical transfer. The physically
+observable object is the completed referenced phase.
+
+
+4.1 Why the exponential appears: growth, rotation, and the generator
+
+The notation eiΦ is often introduced as a convenient shorthand for cos Φ + i sin Φ. For the present
+bridge it is more useful to state the dynamical reason. The real exponential is the unique normalized
+solution of
+                                         dy
+                                            = y,     y(0) = 1,
+                                         dx
+so y = ex . Replacing the real generator 1 by the imaginary generator i gives
+
+                                       dU
+                                          = iU,         U (0) = 1,
+                                       dΦ
+and therefore
+                                    U (Φ) = eiΦ = cos Φ + i sin Φ.
+Now the derivative is a quarter-turn of the state itself. In the real two-dimensional representation,
+multiplication by i maps (x, y) to (−y, x), which is tangent to the circle through (x, y). Consequently
+
+                              d                  dU
+                                                       
+                                |U |2 = 2 Re U ∗            = 2 Re(i|U |2 ) = 0,
+                             dΦ                  dΦ
+
+so |U | = 1 for all Φ. The exponential therefore changes role: ex describes self-proportional growth
+along the real direction, while eiΦ describes norm-preserving rotation along the imaginary direction.
+In Lie-group language, U (1) = {z ∈ C : |z| = 1} has Lie algebra u(1) = iR, and the exponential map
+sends the additive generator iΦ to the group element eiΦ . This is the structural reason that additive
+phase increments become multiplicative transfer factors.
+
+
+
+
+                                                    6
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                            29 August 2026
+
+
+
+
+                                                                 (b) Imaginary generator: U ′ = iU produces tangent
+ (a) Real generator: y = y produces e growth.
+                          ′           x
+                                                                 flow on U (1).
+
+Figure 2: The same exponential function describes growth or phase rotation depending on the
+generator. The Middle Bridge uses the unitary, imaginary-generator case.
+
+
+Three standard appearances of e should therefore be kept distinct:
+
+   Table 2: Three mathematically related but logically distinct appearances of the exponential.
+
+Construction                   Formula                                               Role in this paper
+Compound-growth limit          limN →∞ (1 + x/N )       N
+                                                                =e   x
+                                                                                     useful intuition, but not the proof of
+                                                                                     the bridge
+Power-series definition        ez =               m
+                                                                                     analytic definition of the exponential
+                                      P
+                                          m≥0 z       /m!
+                                                                                     itself
+Phase representation / flow    U = eiΦ , dU/dΦ = iU                                  the actual U (1) mechanism used by the
+                                                                                     bridge
+
+
+
+4.2 Continuous generator formulation and partition independence
+
+The homomorphism theorem has an equivalent differential form that makes the passage from local
+transfer to a continuum propagator explicit.
+Theorem 2 (scalar phase-flow propagator). Let a ∈ L1 ([s0 , s1 ], R) and let U satisfy
+
+                                 dU
+                                    = ia(s)U (s),                        U (s0 ) = 1.
+                                 ds
+Then the absolutely continuous solution is unique and is
+                                                             Z s1               
+                                  U (s1 , s0 ) = exp i                   a(s) ds .                                      (6)
+                                                                 s0
+
+
+It obeys the exact composition law
+
+                                  U (s2 , s0 ) = U (s2 , s1 )U (s1 , s0 ),
+
+
+
+
+                                                            7
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                       29 August 2026
+
+
+and |U | = 1. For any partition whose Riemann sums converge to the integral,
+                                                        P                          Z            
+                          Y ia(s∗ )∆s               i       a(s∗j )∆sj
+                                 e    j      j
+                                                 =e     j                −→ exp i         a(s)ds .
+                             j
+
+Thus the discrete product and the continuous solution are two representations of the same scalar
+phase accumulation. No noncommutative path ordering is required because the generator is scalar.
+Proof. Define A(s) = ss0 a(λ)dλ. Then U = eiA is absolutely continuous and satisfies U ′ =
+                         R
+
+iA′ eiA = iaU almost everywhere. Uniqueness follows from the linear first-order initial-value problem.
+Composition follows from additivity of the integral. The product statement is the finite homomorphism
+identity followed by convergence of the Riemann sum. □
+
+
+4.3 Dimensional discipline of the exponent
+
+The exponent of an exponential must be dimensionless. Therefore Φ is an angle in radians, a(s) =
+dΦ/ds has inverse-path units, and ω dt is valid only when ω is the angular frequency conjugate to the
+same time variable as dt. This simple dimensional statement is the local version of the conjugate-clock
+rule used later in the finite-β frame audit.
+
+
+4.4 Lifted phase and JIF
+
+The map R → U (1) is many-to-one because ei(Φ+2πm) = eiΦ . A long-duration JIF record therefore
+uses a continuous lift Φ
+                       e ∈ R or an equivalent cycle counter:
+
+                                                                     Φe
+                                                            J=          .
+                                                                     2π
+Cycle-slip control is not optional; a wrapped complex phase alone cannot recover the integer history.
+
+
+5 Sagnac-type Neumann hierarchy as a corollary
+
+Consider a deliberately restricted kinematic transfer law
+
+                                              ds
+                             dtσ =                  ,           σ ∈ {+1, −1},            |β| < 1.               (7)
+                                          c(1 − σβ)
+
+For a general routed problem, β should be read as the declared directional kinematic quantity entering
+this law; it is not automatically a global SSZ field variable.
+Because                                                    ∞
+                                                      1
+                                                         =   (σβ)n ,
+                                                           X
+                                                   1 − σβ n=0
+we obtain                                                                        ∞
+                                                  ds
+                                     dtσ,n =         (σβ)n ,             dtσ =         dtσ,n .                  (8)
+                                                                                 X
+                                                   c                             n=0
+
+If ωt is conjugate to the chosen time variable t, define kt = ωt /c. Then
+
+                                           dΦσ,n = ωt dtσ,n = kt ds(σβ)n ,                                      (9)
+
+and
+                                                 Tσ,n = exp[ikt ds(σβ)n ] .                                    (10)
+
+
+
+                                                                 8
+Wrede, Casu – Middle Bridge + Unified Dynamics                                          29 August 2026
+
+
+By Theorem 1,
+                                         ∞
+                                                          kt ds
+                                                                       
+                                            Tσ,n = exp i                                          (11)
+                                         Y
+                                                                .
+                                        n=0
+                                                         1 − σβ
+
+The exponential is not generated by a Trotter limit here. The geometric series reconstructs an additive
+transfer quantity; the exponential appears because additive phase is represented multiplicatively by
+U (1).
+
+
+5.1 Absolute and uniform convergence
+
+For |β| < 1,
+                                ∞                           ∞
+                                                                           |kt ds|
+                                      |dΦσ,n | ≤ |kt ds|          |β|n =
+                                X                           X
+                                                                                   .
+                                n=0                         n=0
+                                                                           1 − |β|
+If |β(s)| ≤ βmax < 1 along a finite path, the Weierstrass M-test gives uniform convergence, which
+justifies exchanging the correction-order sum with the path integral under the usual regularity
+assumptions.
+
+
+6 Spatial composition and the two-index (j, n) lattice
+
+Partition the physical route into spatial segments j = 1, . . . , N with lengths ∆sj . Define
+
+                                          ∆Φj,n = kt ∆sj (σβj )n .                                (12)
+
+Then
+                                                       N X
+                                                         M
+                                           (N,M )
+                                         Φtransfer =               ∆Φj,n ,
+                                                       X
+
+                                                       j=1 n=0
+
+and
+                                                       N Y
+                                                         M
+                                           (N,M )
+                                         Utransfer =
+                                                       Y
+                                                                  ei∆Φj,n .
+                                                       j=1 n=0
+
+The j and n axes have different meanings: j changes physical location; n changes correction order at
+fixed location. Under the uniform convergence bound, the order of these scalar sums/products may
+be exchanged.
+
+
+
+
+                                                        9
+Wrede, Casu – Middle Bridge + Unified Dynamics                                       29 August 2026
+
+
+
+
+Figure 3: The two-index transfer lattice. Conflating j with n conflates physical discretization error
+with geometric-series truncation error.
+
+
+For sufficiently regular β(s),
+                                                              ds
+                                                      Z               
+                                     Uσ = exp ikt                   .                            (13)
+                                                        γ 1 − σβ(s)
+The scalar generator is Aσ (s) = ikt /[1 − σβ(s)]. A path-ordering symbol is redundant because the
+scalar generators commute. Nontrivial path ordering appears only after introducing a genuinely
+matrix-valued internal space.
+
+
+7 Counter-propagating pair and parity
+
+For constant β and an axle-frame path length L,
+
+                                              L                        L
+                                  t+ =             ,        t− =            .
+                                          c(1 − β)                 c(1 + β)
+
+Thus the axle-frame coordinate-time difference is
+                                                          2Lβ
+                                            ∆tax =                 .                             (14)
+                                                       c(1 − β 2 )
+
+The Neumann difference is
+                                  1   1
+                                    −    = 2(β + β 3 + β 5 + · · · ).                            (15)
+                                 1−β 1+β
+
+All even orders cancel. This is exactly the odd part under β 7→ −β.
+
+
+7.1 Circular specialization: the historical finite-β fix
+
+For a circular path, L = 2πR, v = ΩR, A = πR2 , and β = ΩR/c. Then
+
+                                          4AΩ 2
+                                 ∆tax =       γ ,           γ = (1 − β 2 )−1/2 .                 (16)
+                                           c2
+
+
+                                                       10
+Wrede, Casu – Middle Bridge + Unified Dynamics                                         29 August 2026
+
+
+This is the exact return-time difference in the non-rotating axle frame for the idealized flat-spacetime
+moving-closure construction. It is not yet the proper-time reading of the rotating detector.
+The detector clock satisfies                      q
+                                                               dtax
+                                     dτD = dtax 1 − β 2 =           ,
+                                                                γ
+so the exact detector proper-time difference is
+
+                                                      4AΩ
+                                            ∆τD =         γ.                                        (17)
+                                                       c2
+
+This is the finite-β correction already distinguished in the May 2026 correction-series preprint and in
+standard relativistic Sagnac treatments. The leading term of both is
+
+                                                   4AΩ
+                                  ∆tax ≃ ∆τD ≃         ,       β ≪ 1.
+                                                    c2
+
+7.2 Phase consistency across frames
+
+If ωD is the proper angular frequency of the detector-local reference oscillator, then the same phase
+advance written in axle coordinate time uses ωax = ωD /γ:
+
+                                         ωax ∆tax = ωD ∆τD .                                        (18)
+
+Accordingly, a detector-centered exact phase can be written as
+
+                                                           4ωD AΩ
+                                    ∆ΦD = ωD ∆τD =                γ,                                (19)
+                                                             c2
+whereas ωax ∆tax is the equivalent coordinate representation. The earlier draft’s unqualified finite-β
+expression proportional to (1 − β 2 )−1 must therefore be read only as coordinate-time bookkeeping,
+not automatically as detector proper phase.
+
+
+
+
+Figure 4: Beyond leading order, coordinate return time and detector proper time carry different
+relativistic factors. The phase remains invariant when the conjugate frequency is transformed
+consistently.
+
+
+
+
+                                                  11
+Wrede, Casu – Middle Bridge + Unified Dynamics                                           29 August 2026
+
+
+Scope of the exact circular formulas. These expressions assume an idealized prescribed circular
+path in flat spacetime. At high peripheral speed, rotating-ring rigidity, material response, refractive
+media, path definition, and detector protocol must be specified. The paper therefore uses the exact
+factors primarily as a frame-consistency result and keeps the standard small-β Sagnac observable as
+the robust experimental limit.
+
+
+8 Correction-space transfer matrix
+
+The correction hierarchy itself is also a discrete transfer process, but along the correction index rather
+than along space. Let q = σβ, rn = q n , and Sn = n−1    m=0 q . Then
+                                                               m
+                                                      P
+
+
+                                        rn+1 = qrn ,            Sn+1 = Sn + rn ,
+
+so                                                     !              !     !
+                                              Sn+1              1 1       Sn
+                                                           =                 .                       (20)
+                                              rn+1              0 q       rn
+                                                               | {z }
+                                                                Mq
+
+Starting from (S0 , r0 )T = (0, 1)T ,
+                                                   !                             !
+                                               0           (1 − q N )/(1 − q)
+                                        MqN            =                      .
+                                               1                   qN
+
+This transfer matrix is mathematically independent of the physical spatial transfer U (1) product.
+The two may be organized on the same (j, n) lattice, but they must not be identified.
+
+
+9 Two distinct convergence mechanisms
+
+For one direction, truncation after order M has remainder
+
+                                                               (σβ)M +1
+                                               Rσ,M =                   .
+                                                                1 − σβ
+
+The one-direction phase error is
+                                                                    (σβ)M +1
+                                           |ϵσ,M | = |kt L|                  .
+                                                                     1 − σβ
+For the counter-propagating difference and 0 ≤ β < 1,
+
+                                                     2|kt L|β M +1
+                                                   
+                                                                          M even,
+                                                   
+                                                                  ,
+                                                        1−β
+                                                   
+                                                             2
+                                    |ϵ∆,M | =                                                        (21)
+                                                     2|k t L|β
+                                                               M +2
+                                                                          M odd.
+                                                   
+                                                                    ,
+                                                   
+                                                   
+                                                        1 − β2
+                                                   
+
+The repeated plateaus are exact parity consequences.
+Spatial quadrature is a different limit. For a smooth nonperiodic test profile, left-endpoint quadrature
+converges at first order and midpoint quadrature at second order. The familiar limit (1 + AL/N )N →
+eAL is yet another statement and is not the mechanism used in Theorem 1.
+
+
+
+
+                                                               12
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                     29 August 2026
+
+
+
+
+    (a) Geometric correction-order convergence.                          (b) Spatial quadrature convergence.
+
+               Figure 5: The M - and N -limits are different mathematical operations.
+
+
+10 Time-dependent transfer: the missing phase-rate layer
+
+A detector that identifies events from changes in phase rate requires a time-dependent transfer phase,
+not merely a constant final phase offset. Let
+
+                                                                                      1
+                                   Z b(t)
+                        τσ (t) =            Fσ (s, t) ds,        Fσ (s, t) =                   .               (22)
+                                    a(t)                                       c[1 − σβ(s, t)]
+
+Leibniz’ rule gives
+
+                                   τ̇σ (t) = Fσ (b(t), t)ḃ(t) − Fσ (a(t), t)ȧ(t)                             (23)
+                                                   Z b(t)
+                                                            σ ∂t β(s, t)
+                                               +                         2
+                                                                           ds.                                 (24)
+                                                    a(t) c[1 − σβ(s, t)]
+
+For fixed endpoints, only the integral term remains.
+If the detector/reference angular frequency may vary,
+
+                                             Φtransfer (t) = ωref (t)τσ (t)                                    (25)
+
+for the simplest single-frequency model, so
+
+                                            Φ̇transfer = ω̇ref τσ + ωref τ̇σ .                                 (26)
+
+A frozen frequency reduces this to Φ̇ = ωref τ̇ .
+This resolves an ambiguity exposed by the Forward-Lab phase estimator. A single permanent phase
+rotation can leave the subsequent phase rate unchanged and therefore need not trigger a rate-change
+detector. A physical M4 prediction must supply the time history of the complex observable or the
+transfer phase, not only a scalar lag.
+
+
+11 Reference-frequency discipline: carrier phase is not automatically the JIF
+   phase
+
+For long astrophysical delays, writing Φ = 2πνcarrier τ with a raw radio carrier can be formally true as
+a local wave relation but operationally useless unless coherence and cycle count are actually preserved
+across the measurement. The detector-centered phase must therefore declare its reference:
+
+• direct coherent carrier phase, if the instrument genuinely retains it;
+
+                                                            13
+Wrede, Casu – Middle Bridge + Unified Dynamics                                      29 August 2026
+
+
+• heterodyne/baseband phase relative to a local oscillator;
+
+• cross-spectral phase between measured bands;
+
+• another independently defined JIF phase variable.
+
+The symbol ωref in this paper means the angular frequency conjugate to the phase record actually
+used by the detector model. It must not be silently replaced by an astrophysical carrier frequency
+solely because that carrier appears in a source metadata table.
+
+
+12 Route and coordinate discipline
+
+The mathematical bridge is exact only after a physical route has been specified. It cannot determine
+which coordinate in one submodel is identical to a coordinate in another submodel.
+
+
+
+
+Figure 6: Route-type discipline. These coordinates have different semantics; aliasing them requires
+an explicit physical map.
+
+
+12.1 No-coordinate-alias rule
+
+The following identification is not licensed by notation alone:
+
+                                    Rplasmoid ?   rBH−centric
+                                              =x=             .
+                                       rs            rs
+
+In the audited Sgr A* family prior, R/R0 is the expansion radius of a plasmoid. In the canonical
+SSZ transport routine, x = r/rs is the gravitational radial coordinate. They can coincide only if
+an independent source model explicitly states that the plasmoid size equals its center-of-motion
+distance from the gravitating center, which the current Forward-Lab does not state. Therefore a
+numerical calculation obtained by substituting the plasmoid size trajectory directly into the SSZ
+radial transport integral is classified here as REJECT.
+
+
+12.2 No-double-counting rule
+
+The Forward-Lab observer layer already distinguishes three conceptually different contributions:
+
+
+                                                 14
+Wrede, Casu – Middle Bridge + Unified Dynamics                                       29 August 2026
+
+
+ 1. ballistic moving-source geometry, through 1 ∓ β cos i applied only to a declared propagation
+    component;
+
+ 2. an explicit signed path difference, when independently specified;
+
+ 3. additive observer-transfer terms such as plasma, scattering, lensing, detector, or an explicitly
+    supplied SSZ null correction.
+
+Applying ballistic geometry and an explicit path-difference correction to the same component without
+a derivation is rejected as double counting.
+
+
+13 Historical Forward-Lab audit: was the relevant fix already present?
+
+The answer is yes. A source-level audit of the archived public repository changes the interpretation
+of the earlier exploratory test.
+
+
+13.1 Ballistic geometry and path routing were already guarded
+
+The module observer_transfer.py implements
+
+                              gapp = 1 − β cos i,        grec = 1 + β cos i,
+
+and applies the factor only to propagation_s. If both ballistic geometry and explicit_path_
+difference_s are supplied, the code raises a double-counting error. The corresponding test suite
+checks the approaching/receding limits and explicitly expects the double-count case to fail. The
+stored path-variant matrix contains separate rows for same-origin/same-path, approaching ballistic,
+receding ballistic, nearer/farther explicit radio origin, plasma, scattering/detector, signed SSZ-null
+correction, full identified transfer, and an invalid double-count control.
+This means that multiplying the Sgr A* plasmoid expansion time by (1 − β) merely because an
+expansion speed exists is not the historical route semantics. The factor belongs to an identified
+ballistic displacement along the observer direction, not automatically to the growth of the source
+radius.
+
+
+13.2 The dimensional fix was already present
+
+The module physical_forward_v2.py contains an explicit correction note: engine, conversion, and
+opacity terms are already dimensional times in seconds and must not be multiplied again by GM/c3 .
+Only the geometric transport term is computed from a distance and speed. The regression test sets
+a negligible transport distance, an engine delay of 10 s, and z = 0.1; the expected observer time is
+exactly 11 s. Our independent numerical reproduction returns 11 s at both interval endpoints.
+
+
+13.3 Family-specific coordinates are deliberately different
+
+The v2 family head uses
+                                                         1
+                                                                   !
+                                            zν − z0
+                                     tjet ∝                 − cos i
+                                               c         βj
+for BHXRB jets, but Sgr A* uses a plasmoid expansion delay
+
+                                                    Rν − R0
+                                           tpl =            .
+                                                      vexp
+
+
+                                                    15
+Wrede, Casu – Middle Bridge + Unified Dynamics                                           29 August 2026
+
+
+This is direct code evidence that z, R, and the observer ballistic route are intentionally not treated
+as the same object.
+
+
+13.4 What the historical M1 path actually was
+
+The later M1 connected ablation uses frozen family-level geometry priors. For Sgr A* the lock
+contains x : 1.5 → 100 and local β = 0.1. Its reported SSZ multiplier is
+
+                                         1.0489215194943662.
+
+Our independent reintegration of the canonical D(x) profile reproduces this number exactly to double
+precision. Crucially, the M1 code labels this a fixed-geometry ablation; it is not the same thing as
+claiming that the Sgr A* plasmoid expands physically from 1.5rs to 100rs . The previous exploratory
+interpretation that compared this route with a supposed “actual x ∼ 2 → 4 plasmoid path” was
+therefore a category error. The historical path was read too literally, and the repo’s own routing
+semantics already contained the relevant fix.
+
+
+13.5 Physical M4 exists beyond the synthetic proxy
+
+The historical M1–M3 score correctly excludes M4 because the corresponding ablation uses a synthetic
+same-signal phase proxy. However, the audited repository also contains a separate physical M4
+adapter for typed, frozen complex observables and a real NICER/MAXI J1820+070 cross-spectral
+artifact. The artifact is target-free with respect to the radio-lag benchmark, uses a locked estimator,
+and returns M4_PHYSICAL_NO_ONSET. This negative result is retained rather than converted into a
+positive SSZ claim. It is useful technical evidence that the detector-centered phase machinery can
+ingest a real complex phase observable, but it is not a radio-lag or SSZ validation.
+
+
+14 Embedding the exact bridge into detector-centered JIF
+
+For each complete contribution/path a, the transfer term may now be represented as
+                                         (a)                       (a)
+                                        Φtransfer =            ∆Φj,n ,
+                                                      XX
+
+                                                      j    n
+
+with                                                  Y Y i∆Φ(a)
+                                          (a)
+                                        Utransfer =            e   j,n   .
+                                                      j    n
+
+This fills the previously abstract transfer slot of equation (3). It does not replace the source, node, or
+detector-reference terms. The final observable remains equation (4) at a common detection event.
+The resulting architecture is now typed by coupling class:
+                     
+                     vacuum + minimal metric coupling: null HJ/Hamilton/Fermat law,
+       Ξ, D, gµν →
+                     media/material/extra segment dynamics: separately specified                    (27)
+             → routed transfer history → dΦj,n → Tj,n → Utransfer → ∆ΦD → ∆JD .
+
+The arrows from a specified transfer history to phase and U (1) factors are exact. For the present
+vacuum electromagnetic branch, the project coupling is source-locked rather than refitted here:
+standard Maxwell dynamics on the declared effective/static SSZ geometry. The remaining model
+dependence lies in the source/detector boundary-value problem, media and non-vacuum constitutive
+
+
+                                                      16
+Wrede, Casu – Middle Bridge + Unified Dynamics                                             29 August 2026
+
+
+physics, rotating/generalized geometry, and any additional SSZ dynamics beyond the source-locked
+metric-Maxwell branch.
+
+
+15 Relation to the SSZ radial C 2 bridge
+
+The middle transfer bridge must not be confused with the radial strong-to-weak SSZ bridge. The
+canonical radial profile joins strong and weak branches across 1.8 ≤ x ≤ 2.2 by matching Ξ, Ξ′ , Ξ′′ .
+The variational bridge paper proves, conditional on fixed branches and endpoint two-jets, that
+the direct quintic Hermite connection is the unique global minimizer of a squared-third-derivative
+functional. That theorem chooses a smooth radial field connection. It does not determine a photon
+transfer route or identify a plasmoid size coordinate with the gravitational radius.
+The two bridges may be composed only after the route is declared:
+
+               radial SSZ profile → D(x), gµν (x) → physical route → Φtransfer → ∆JD .
+
+
+16 Metric-level null information and source-locked Maxwell vacuum completion
+
+The phrase “the SSZ null route remains open” was too broad. The integrated JIF/SSZ manuscript
+uses the static diagonal line element
+
+                              ds2 = −c2 D(r)2 dT 2 + D(r)−2 dr2 + r2 dΩ2 .                             (28)
+
+For a radial null curve, ds2 = 0 and dΩ = 0, hence
+
+                                               dr
+                                                  = ±cD2 .                                             (29)
+                                               dT
+
+A local static observer uses dℓ = D−1 dr and dτ = DdT , so
+
+                                                  dℓ
+                                                     = c.                                              (30)
+                                                  dτ
+
+Thus the declared metric already contains definite radial null kinematics and does not imply a locally
+measured violation of light-speed invariance.
+
+
+16.1 The vacuum electromagnetic coupling is already source locked
+
+The supplied helper corpus does not leave the vacuum electromagnetic law as an arbitrary new
+coupling to be chosen in this paper. Its quantitative layer retains Maxwell theory, its curved-spacetime
+discussion gives the covariant Maxwell system, and its geometric-optics discussion states that rays
+follow null geodesics of the effective metric while local light speed remains c [18, 20]. The radial-scaling
+note supplies the complementary gauge picture dρ = s(r) dr with standard local wave dynamics and
+explicitly treats this as a geometric reparameterization rather than a material medium [19]. The
+static SSZ metric used here independently fixes
+                                              1                       1
+                                  D(r) =            ,       s(r) =        .
+                                           1 + Ξ(r)                  D(r)
+
+Accordingly, v6 adopts the following source-locked background-field prescription:
+
+   fixed SSZ geometry + standard vacuum Maxwell dynamics =⇒ metric geometric optics.                   (31)
+
+
+
+                                                    17
+Wrede, Casu – Middle Bridge + Unified Dynamics                                       29 August 2026
+
+
+This is not a derivation of the background geometry from a joint field action and does not include
+electromagnetic backreaction on Ξ. The broader full-field action/coupling problem therefore remains
+distinct from the propagation problem solved on the declared background.
+
+
+16.2 Covariant Maxwell WKB derivation of the eikonal equation
+
+With the source lock in equation (31), the Maxwell-to-ray arrow can be shown explicitly rather than
+cited as a black box. In vacuum,
+
+                                   ∇µ F µν = 0,         ∇[α Fµν] = 0.                          (32)
+
+Write a high-frequency vector potential as
+                                    n                    o
+                            Aµ = ℜ [aµ + O(ϵ)] eiΘ/ϵ ,             kµ ≡ ∇µ Θ.
+
+At leading order, the Maxwell principal symbol is
+
+                                        kµ (k µ aν − k ν aµ ) = 0.                             (33)
+
+The leading Lorenz-gauge/transversality condition is kµ aµ = 0. For a nonzero transverse amplitude,
+equation (33) therefore requires
+                                          g µν kµ kν = 0.                                      (34)
+Because kµ is a gradient and the Levi-Civita connection is torsion free,
+
+                                                      1
+                               k ν ∇ν kµ = k ν ∇µ kν = ∇µ (k ν kν ) = 0,
+                                                      2
+
+so k µ generates affinely parametrized null geodesics. At the next WKB order the ampli-
+tude/polarization transport is governed by the usual geometric-optics transport equations; that
+amplitude layer is not required for the scalar phase theorem developed here. This is the standard
+metric route from Maxwell wave optics to null-ray optics [15, 16, 17].
+For equatorial motion θ = π/2, the inverse metric is
+
+                                     1                                        1
+                           gT T = − 2 2 ,         g rr = D2 ,        g φφ =      .
+                                   c D                                        r2
+Stationarity and spherical symmetry allow the separated eikonal
+
+                                        Θ = −ωT + ℓφ + W (r).                                  (35)
+
+Defining the impact parameter b = cℓ/ω, equation (34) gives
+                                                        s
+                                        ′     ω                 D2 b2
+                                    W (r) = ± 2          1−           .                        (36)
+                                             cD                  r2
+
+This is an endpoint phase-momentum relation, not yet a detector observable.
+
+
+16.3 Reconciliation with the radial scaling gauge: s versus s2
+
+The helper corpus also contains an older, pre-embedding radial-scaling representation with physical
+radial distance
+                                         dℓ = dρ = s(r) dr.
+
+
+                                                   18
+Wrede, Casu – Middle Bridge + Unified Dynamics                                           29 August 2026
+
+
+That note uses a wave-time symbol before the present metric embedding and at places describes its
+one-factor path time too loosely as coordinate-level. It cannot be identified simultaneously with the
+global static coordinate time T of equation (28) and retain dt = s dr/c: the metric fixes a two-factor
+coordinate arrival time. The current metric therefore supplies the authoritative typing. From the
+metric null law and s = 1/D,
+
+                                              dr           cD
+                                                  = cD2 =     ,                                      (37)
+                                             dT             s
+                                              dℓ      dr
+                                                  =s     = cD,                                       (38)
+                                             dT       dT
+                                           dτstat = D dT,                                            (39)
+                                            dℓ
+                                                  = c.                                               (40)
+                                           dτstat
+The metric-consistent local static-frame propagation-time element corresponding to the scaled-distance
+wave picture is therefore
+                                              dℓ   s dr
+                                       dtsg ≡    =      = D dT.                                    (41)
+                                              c      c
+Thus the two factors that appear in project notes have different types:
+
+                                       dℓ                      dT   s
+                                nℓ ≡      = s,     nT ≡ c         =   = s2 .                         (42)
+                                       dr                      dr   D
+
+The first is a radial length-scaling/physical-distance factor; the second is the areal-coordinate arrival-
+time index of the static metric. They agree only in flat space. This typing resolves the apparent
+s versus s2 ambiguity without changing locally measured c. It also records a genuine historical
+notation correction: the older one-factor scaled-distance time must not be substituted directly for
+the distant metric coordinate T . In v6, the metric-derived T semantics supersede that loose label
+while preserving the useful spatial-scaling construction.
+
+
+16.4 Null Hamiltonian and generic equatorial ray equations
+
+The same characteristics follow from
+
+                                                 1
+                                        H(x, p) = g µν pµ pν = 0,                                    (43)
+                                                 2
+
+with pT = −ω, pφ = ℓ. Explicitly,
+
+                                       1                   p2φ
+                                            "                            #
+                                           p2
+                                    H=   − 2 T 2 + D2 p2r + 2 .
+                                       2  c D              r
+
+Hamilton’s equations and the null constraint yield
+
+                                          dT    ω
+                                             = 2 2,                                                  (44)
+                                          dλ  c Ds
+                                          dr     ω             D2 b2
+                                             =±           1−         ,                               (45)
+                                          dλ     c              r2
+                                          dφ   ℓ
+                                             = 2,                                                    (46)
+                                          dλ  r
+
+
+
+
+                                                     19
+Wrede, Casu – Middle Bridge + Unified Dynamics                                       29 August 2026
+
+
+and hence the coordinate ray equations
+                                   s
+                      dr           D2 b2                  dφ         b
+                         = ±cD2 1 − 2 ,                      = ± 2p             .                (47)
+                      dT            r                     dr    r 1 − D2 b2 /r2
+
+For b = 0, equation (47) reduces exactly to equation (29). Thus generic vacuum ray kinematics is
+no longer an unspecified law in the present project lock; it is a consequence of the source-locked
+Maxwell/effective-metric prescription on the declared static background.
+
+
+16.5 Optical metric and Fermat arrival-time functional
+
+Setting equation (28) to zero gives
+
+                                   c2 dT 2 = D−4 dr2 + D−2 r2 dΩ2 .
+
+Therefore a spatial route γ has coordinate arrival-time functional
+
+                                          1
+                                              Z p
+                               ∆T [γ] =             D−4 dr2 + D−2 r2 dΩ2 .                       (48)
+                                          c   γ
+
+
+For a static spacetime this is the Riemannian optical/Fermat metric; stationary curves of the arrival
+time are the spatial projections of null geodesics [16, 17]. Substituting the orbit equation from
+equation (47) into equation (48) gives
+
+                                       dT         1
+                                          = ± 2p              ,
+                                       dr    cD 1 − D2 b2 /r2
+
+identical to the Hamiltonian result.
+
+
+
+
+Figure 7: Source-locked vacuum Maxwell/metric closure on the declared background. The metric fixes
+the geometric-optics null law; media, extra segment dynamics and source/detector boundary-value
+ownership remain separate layers.
+
+
+
+
+                                                     20
+Wrede, Casu – Middle Bridge + Unified Dynamics                                     29 August 2026
+
+
+16.6 The null-eikonal safeguard: endpoint phase, not worldline accumulation
+
+A subtle but essential point is that the full spacetime eikonal does not accumulate nonzero phase
+along its own null characteristic. Since dxµ /dλ = k µ up to affine rescaling,
+
+                                            dΘ
+                                               = kµ k µ = 0.                                   (49)
+                                            dλ
+
+Consequently, the line integral γ kµ dxµ along the geometric-optics ray is zero when interpreted as
+                               R
+
+the change of the full eikonal. It must not be advertised as a nonzero “photon phase accumulated
+along the null worldline”.
+The measurable transfer relation is instead an endpoint/delay statement. Define the spatial eikonal
+part
+                                         Wsp = ℓφ + W (r).
+Along a ray, equation (49) gives
+                                            ∆Wsp = ω ∆Tγ .                                     (50)
+
+The same identity follows differentially by substituting equations (36) and (47). If the stationary
+harmonic convention is e−iωT and the detector receives a delayed copy sD (T ) = sE (T − ∆Tγ ), then
+
+                                    Uγ (ω) = e+iω∆Tγ = ei∆Wsp .                                (51)
+
+Changing the Fourier sign convention changes the sign of the exponent but not the physical rel-
+ative phase. Equation equation (51), combined with the detector-centered source/node/reference
+bookkeeping, is the correct stationary metric-to-U (1) bridge for vacuum propagation.
+
+
+16.7 Killing frequency versus local detector frequency
+
+The stationary eikonal coefficient ω in equation (35) is conjugate to the Killing time T . A static
+observer has                                                
+                                       uµstat = D−1 , 0, 0, 0
+in the present coordinates, so the locally measured angular frequency is
+
+                                                            ω
+                                     ωloc = −kµ uµstat =        .                              (52)
+                                                           D(r)
+
+For static emission and detection events,
+
+                                             ωD   D(rE )
+                                                =        .                                     (53)
+                                             ωE   D(rD )
+
+This reproduces the detector-centered frequency-transfer rule already used in the integrated JIF
+layer and makes the clock semantics explicit: ω belongs to T , whereas ωE and ωD belong to the
+corresponding local proper times. The transfer factor in equation (51) therefore does not by itself
+replace the source and detector oscillator terms in equation (3); those terms are what convert the
+conserved stationary coordinate frequency into locally referenced measured frequencies.
+
+
+
+
+                                                  21
+Wrede, Casu – Middle Bridge + Unified Dynamics                                           29 August 2026
+
+
+16.8 Exact radial exterior transfer time
+
+In the exterior branch, with
+
+                                  m = GM/c2 ,        D = (1 + m/r)−1 ,
+
+radial outward propagation between fixed radii rE < rD obeys
+
+                                  1                    rD       1    1
+                                                                            
+                        ∆Trad =     (rD − rE ) + 2m ln    − m2    −                .                  (54)
+                                  c                    rE      rD   rE
+
+This follows by integrating dT = dr/(cD2 ). Under the convention of equation (51), its coordinate-
+frequency transfer factor is Urad = exp(iω∆Trad ). This is a metric-derived conditional result for the
+declared exterior branch. In the weak-field observable layer it must not be silently substituted for
+the project’s canonical PPN routing; the final edition keeps this radial transfer calculation separate
+from the canonical weak-field PPN routing.
+For the same exterior branch, the turning condition in equation (47) is b = r/D = r + m. Since
+d(r/D)/dr = 1, no finite circular null orbit occurs within that analytic exterior branch itself. Any
+critical null orbit of the full piecewise SSZ profile must therefore arise from transition/inner structure,
+consistent with the earlier critical-orbit audit.
+
+
+16.9 What remains open after the source-locked vacuum derivation
+
+Within the current source lock, the vacuum Maxwell-to-null differential law is closed on the declared
+background by equations (32), (34), (43) and (48); it is no longer an adjustable coupling choice inside
+this paper. A complete astrophysical prediction still requires a boundary-value problem: source
+event/worldline, detector worldline, route selection when multiple rays exist, detector reference
+phase, and ownership of lensing, plasma, dispersion, scattering and instrumental terms. Media
+require their own constitutive/plasma law and can make the optical problem frequency dependent. A
+future full field theory may also derive backreaction of electromagnetic stress-energy on Ξ; that is a
+different question from propagation on a fixed background. Any additional SSZ segment-transfer
+dynamics beyond the source-locked Maxwell/metric branch must be introduced as a separately
+testable extension. The remaining open layer is therefore best written as
+
+            typed boundary/medium problem on the locked vacuum law → Φtransfer (t),
+
+not “unknown vacuum light law” or “undecided vacuum coupling”.
+
+
+17 Canonical weak-field PPN routing and Shapiro normalization
+
+This section is a model-level and method-typing audit; it is not part of the U (1) theorem. The paper
+keeps only the canonical observable routing used by the project and the still-open requirement that a
+future unified dynamics derive that completion rather than insert it by hand.
+The current canonical documentation is explicit: classify the observable first, then select the method.
+In the weak-field sector the project lock is
+
+                                        βPPN = 1,        γPPN = 1.                                    (55)
+
+
+
+
+                                                    22
+Wrede, Casu – Middle Bridge + Unified Dynamics                                               29 August 2026
+
+
+The routing rule is
+                                            
+                                            null/light path                → PPN completion,
+                                            
+                                            
+           observable → class → method =        static clock/redshift       → Ξ, D,                    (56)
+                                            
+                                                timelike orbit              → PPN(β, γ, . . .).
+                                            
+                                            
+
+
+The open structural question is therefore precise: derive the canonical weak-field completion in
+equation (55) from a unified underlying metric/action or from an explicitly defined completion map
+while preserving the canonical strong-/transition-field architecture. Until that derivation exists,
+the paper reports the source-locked canonical weak-field layer as an input to the present transfer
+construction.
+For light deflection, the standard first-PN PPN result in terms of the project convention rs = 2GM/c2
+is
+                                                         rs
+                                             α = (1 + γ) ,                                        (57)
+                                                         b
+so γ = 1 gives α = 2rs /b = 4GM/(bc2 ), exactly the factor-of-two completion used by the canonical
+documentation.
+
+
+17.1 Shapiro normalization: PPN factor is not the round-trip factor
+
+The audit also found a narrower normalization issue in the helper documentation/code that is
+independent of whether γ = 1 is the canonical project value. Standard one-way 1PN Shapiro delay
+for a static point mass is
+
+                                                GM         1 + γ rs
+                             ∆t1way = (1 + γ)       ln R =          ln R,                              (58)
+                                                 c3          2 c
+where R denotes the usual geometric logarithmic ratio (for far conjunction, R ≃ 4r1 r2 /d2 ). A
+symmetric radar round trip doubles this:
+                                                                 rs
+                                ∆tround = 2∆t1way = (1 + γ)         ln R.                              (59)
+                                                                 c
+Thus, when rs = 2GM/c2 , the expression (1 + γ)(rs /c) ln R is round-trip-equivalent, not the one-
+way coefficient. This matters because the project Prime Directive already states that the PPN
+(1 + γ) factor and the independent one-way/round-trip factor must not be conflated. The present
+paper therefore types them separately and does not use a broad Cassini magnitude check to hide a
+normalization ambiguity.
+For the reference geometry r1 = 1 AU, r2 = 9.537 AU and d = 1.6R⊙ , the final normalization check
+gives approximately
+                           ∆t1way = 132.46 µs,    ∆tround = 264.92 µs,
+while the Cassini experiment constrains γ − 1 = (2.1 ± 2.3) × 10−5 rather than measuring a single
+geometry-independent absolute delay. This is a reference/typing check, not a new Cassini reanalysis.
+
+
+
+
+                                                  23
+Wrede, Casu – Middle Bridge + Unified Dynamics                                          29 August 2026
+
+
+
+
+Figure 8: Typed weak-field dispatch and Shapiro normalization. The canonical project-level weak-field
+observable lock is βPPN = γPPN = 1; Shapiro one-way and round-trip coefficients are separate factors
+when rs = 2GM/c2 .
+
+
+18 Relation to finite Fourier-block phase structure: corrected v4 status
+
+The finite-Fourier-block work is logically independent of the Sagnac/SSZ transfer derivation and is
+not evidence for it. Its relevance is methodological: different operations can look superficially like
+the same “phase change” unless their types are fixed. The corrected v4 manuscript proves for a real
+single tone and any fixed real diagonal quadratic spectral objective
+                                                             
+                                     J(ϕ) = J0 + 2 Re Ce2iϕ ,
+
+and strictly separates continuous waveform closure, stored-sample splice, and optimization of a
+declared spectral objective. For the reference case N = 256, ν = 10.3 cycles per record,
+                                                                                 πν
+                   ϕcont = 36◦ ,    ϕstore = 43.2421875◦ ,    ϕstore − ϕcont =      .
+                                                                                 N
+The far-tail objective has a max/min phase modulation ratio near 185.12, while two broader diagnostics
+report only about 1.0878 and 1.2357. The deterministic v4 script passes 19/19 checks and rejects
+both a universal multi-tone block-start angle and any physically privileged power-of-two grid. The
+lesson imported here is only one of type discipline: a common phase rotation, a physical time shift, a
+path coordinate, a sampling boundary, and a detector phase reference are not interchangeable.
+
+
+
+
+                                                 24
+Wrede, Casu – Middle Bridge + Unified Dynamics                                               29 August 2026
+
+
+
+
+(a) Continuous closure versus stored-sample splice.        (b) Objective dependence of the phase sensitivity.
+
+Figure 9: Selected Fourier-v4 cross-checks. They illustrate typed phase operations; they do not
+validate the Sagnac law or SSZ.
+
+
+19 Matrix-valued extension and genuine path ordering
+
+The scalar bridge is Abelian. If polarization, Jones vectors, spinors, a rotating local tetrad, or
+another multicomponent internal space is introduced, the generator may be matrix-valued, A(s) ∈
+u(2), su(2), . . ., and generally [A(s1 ), A(s2 )] ̸= 0. Then the correct object is
+                                                      Z          
+                                        U = P exp          A(s) ds .
+                                                       γ
+
+This is related in spirit to modern holonomy treatments of Sagnac interferometry, including polariza-
+tion transport in gravitational-wave backgrounds, but it is a distinct extension and is not claimed as
+part of the scalar theorem.
+
+
+20 Validation suite
+
+The validation is deliberately layered. The harmonized lower Middle-Bridge/JIF ledger is locked
+at 35/35 PASS: 15 core bridge checks, 11 vacuum-null checks, five Maxwell/scaling-gauge checks,
+and four canonical weak-field/PPN typing checks. The independent wrapper does not arithmetically
+merge those checks with the new dynamics classifications; instead it verifies the source/regime
+typing, strong-branch differential fingerprints, radial-direction reversal of the Hermite bridge, Phase-
+0/Phase-1 reproducibility, and the integrity of the locked 35/35 lower layer. The wrapper re-
+turns 15/15 PASS, while the Phase-1 action-search suite is freshly executed and retains its typed
+PASS/FLAG/REJECTED/CONDITIONAL/OPEN outcomes. The independent Fourier-v4 script
+remains a logically separate 19/19 phase-typing cross-check, and the historical exterior/variational
+23/23 ledger remains an archived cross-audit rather than being misreported as a fresh run.
+Before integrating the compactness-response section, the available strong-field audit executable
+was rerun and reproduced the stored status counts and decisive numerical values. A separate
+response audit then ran 13/13 PASS checks. In addition to analytic identity checks, it verifies the C 2
+change-of-variable matching, integrates χu back to the endpoint ∆Ξ, checks all real critical points of
+the susceptibility polynomial, and cross-checks the global maximum with an independent bounded
+optimizer and a one-million-point scan. This response suite is mathematical/regression evidence, not
+an empirical confirmation.
+
+
+
+
+                                                      25
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                               29 August 2026
+
+
+       Table 3: Core Middle-Bridge validation ledger. All 15 checks pass in the locked lower layer.
+
+Test                                                 Status          Result
+U (1) homomorphism, 2000 random phase sets           PASS            max complex error < 4 × 10−14
+Unit-norm preservation, 5000 phases                  PASS            ||eiΦ | − 1| at floating-point roundoff
+Tangent-generator identity dU/dΦ = iU                PASS            max derivative error 1.09 × 10−9 ; below the 10−8 validation
+                                                                     threshold; radial inner product zeroR
+                                                                                                       i   ads
+Continuous generator/product-integral, 120 ran-      PASS            midpoint product converges to e         ; max error below
+dom profiles                                                         3 × 10−7 at fixed N = 4096
+Propagator composition U (c, a) = U (c, b)U (b, a)   PASS            max complex error below 10−14
+Sagnac Neumann factorization, 1000 random            PASS            exact finite remainder and product identity within floating-
+cases                                                                point tolerance
+Counter-propagating parity/truncation, 1000          PASS            odd-sector identity and pair remainder reproduced
+cases
+Finite (j, n) reordering, 500 random grids           PASS            max complex discrepancy below 2 × 10−13
+Correction-space transfer matrix                     PASS            finite geometric-sum state reproduced over 1000 random cases
+Spatial quadrature order                             PASS            left rule first order; midpoint second order
+Time-dependent fixed-path derivative                 PASS            finite difference agrees with analytic derivative
+Moving-endpoint Leibniz derivative                   PASS            high-precision equality to < 10−45 in test units
+Coordinate/proper-time phase consistency             PASS            10,000-point finite-β sweep to β = 0.95; mismatch below
+                                                                     5 × 10−13
+Lifted-phase/wrapped-phase equivalence               PASS            ei(Φ+2πm) = eiΦ across random integer windings
+NICER Crab timing benchmark                          PASS            C(224 s) = 6632.544791144037 cycles; left rule first order,
+                                                                     midpoint exact for linear f (t) up to roundoff
+
+
+
+
+20.1 Vacuum-null and source-locked coupling validation
+
+The eleven inherited null checks target the metric-to-ray and ray-to-endpoint-phase derivation directly.
+The lower layer also contains five explicit Maxwell/coupling and scaling-gauge reconciliation checks
+and four canonical weak-field/PPN typing and normalization checks.
+
+                     Table 4: Vacuum-null checks. All 11 pass in the locked lower layer.
+
+Test                                                   Status         Result
+Inverse-metric algebra                                 PASS           gµα g αν = δµν symbolically
+
+Hamilton–Jacobi separation                             PASS           separated eikonal satisfies g µν ∂µ Θ∂ν Θ = 0 exactly
+Generic Hamilton ray equations, 5000 random            PASS           max |δ(dr/dT )| = 1.78 × 10−15 ; max orbit-equation error
+states                                                                4.44 × 10−16
+Radial reduction, 1000 random states                   PASS           recovers dr/dT = ±cD2 to 8.88 × 10−16
+Optical/Fermat vs Hamilton arrival-time integrand      PASS           max discrepancy 1.07 × 10−14 over 5000 random states
+Null-eikonal constancy                                 PASS           kµ ẋµ = 0 to 1.14 × 10−13 in random tests
+Endpoint spatial eikonal vs delay                      PASS           dWsp = ω dT to 2.84 × 10−14
+Raw-exterior radial closed form                        PASS           analytic equation (54) vs quadrature, max error 1.42×10−14
+Raw-exterior turning relation                          PASS           b = r/D = r + m to 7.11 × 10−15 ; d(r/D)/dr = 1
+Numerical nonradial Hamilton flow                      PASS           |H| < 2.24×10−15 ; optical-time error 2.84×10−14 ; endpoint-
+                                                                      eikonal error 5.68 × 10−14
+Stationary delay-transfer convention, 5000 random      PASS           s(T − τ )/s(T ) = e+iωτ for e−iωT , max complex error 4.55 ×
+cases                                                                 10−13
+
+
+
+
+Table 5: Source-locked Maxwell/scaling-gauge reconciliation checks. All 5 pass in the locked lower
+layer.
+
+Test                                                   Status         Result
+Maxwell WKB principal symbol                           PASS           transversality reduces the leading Maxwell symbol to k2 aν =
+                                                                      0; nontrivial transverse amplitude selects k2 = 0
+Gradient-eikonal geodesic identity                     PASS           kν ∇ν kµ = 12 ∇µ (k2 ) = 0 for the source-locked Levi-Civita
+                                                                      background
+Scaling-gauge/metric radial reconciliation, 10,000     PASS           dtsg = D dT , dℓ/dT = cD, dℓ/dτstat = c to floating-point
+random states                                                         precision
+Typed optical indices, 10,000 random states            PASS           nℓ = s and nT = s/D = s2 reproduced independently from
+                                                                      the metric null law
+Static-observer frequency transfer, 10,000 random      PASS           ωloc = ω/D and ωD /ωE = DE /DD reproduced exactly to
+endpoint pairs                                                        roundoff
+
+
+
+
+                                                                26
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                             29 August 2026
+
+
+       Table 6: Canonical weak-field/PPN typing checks. All 4 pass in the locked lower layer.
+
+Test                                               Status          Result
+Canonical PPN parameter lock                       PASS            project-typed values βPPN = γPPN = 1 are retained as the
+                                                                   canonical weak-field observable completion
+Lensing normalization                              PASS            (1 + γ)rs /b at γ = 1 equals 4GM/(bc2 ) to roundoff
+Shapiro one-way/round-trip typing                  PASS            one-way (1 + γ)rs /(2c) ln R and round-trip twice that; the
+                                                                   current helper/code coefficient (1 + γ)rs /c is identified as
+                                                                   round-trip-equivalent
+Cassini-scale normalization                        PASS            reference geometry gives 132.46 µs one-way and 264.92 µs
+                                                                   round-trip; γ = 1 lies within the quoted Cassini constraint
+
+
+
+A separate source audit also passes. The supplied electromagnetic helper corpus explicitly retains
+Maxwell dynamics for quantitative work, states null-geodesic geometric optics for the effective metric,
+and identifies the radial scaling picture as a geometric reparameterization with invariant locally
+measured c [18, 19, 20]. The public canonical weak-field documentation explicitly locks β = γ = 1
+and the observable-to-method dispatch [21, 22, 23, 24]. The real NICER physical-M4 artifact is
+frozen before scoring, records target_radio_lag_used=false and fit_to_target_lag=false, and
+returns M4_PHYSICAL_NO_ONSET [34]. These are provenance/typing audits, not empirical SSZ tests.
+
+
+20.2 Project-wide validation context: ssz-all-tests
+
+The 35/35 ledger above is the executable validation suite for this manuscript; it must not be mistaken
+for the complete historical SSZ test landscape. The separate repository error-wtf/ssz-all-tests
+documents a final frozen project-wide snapshot of 1296/1296 passed automated checks with zero
+failures across twelve listed domains [26, 27, 28, 29]. The integrity file records total_passed=1296,
+total_failed=0 and verdict=VERIFIED. The final status identifies the snapshot as a May-2026 run
+on Python 3.12/Windows 11.
+The master runner is deliberately heterogeneous: it dispatches native repository runners (pytest,
+dedicated scripts, combined suites and smoke tests) rather than treating all projects as one homo-
+geneous pytest package. Its directly dispatched list contains eleven repositories; the final status
+additionally contains 103 local chord-partition checks, closing the documented total from 1193 to
+1296. This detail matters for reproducibility and is one reason the 1296 figure must be read as a
+regression/validation corpus, not as a count of statistically independent experiments.
+
+
+Repository-level architecture map. The frozen 1296 snapshot can be mapped onto the present
+bridge without pretending that every test has the same scientific role. Table 7 is a repository-level
+classification: the count in a repository is assigned to its dominant architectural role. It is not a
+test-by-test causal attribution and not an independence claim.
+
+Table 7: Repository-level map of the frozen 1296-check snapshot to the current Middle-Bridge
+architecture. “Direct” means adjacent to one of the explicit arrows of the present chain; it does not
+mean an independent proof of that arrow.
+
+   Repository/domain                N    Bridge role                              Data level
+   ssz-qubits                   184      direct: Ξ, D and D → dτ → dΦ             formulas + published benchmarks
+   ssz-metric-pure               36      direct: D, s → gµν , null geometry       mathematics + benchmarks
+   segmented-
+   calculation-suite            158      direct: Ξ engine, regimes, C 2 bridge,   regression + curated objects
+                                         PPN
+   ssz-lensing                  279      direct: gµν → null path/WKB-EM           synthetic + published lens positions
+                                         phase
+   ssz-trajectories                 63   direct: radial/non-radial null-route     numerical
+                                         transport
+
+
+
+                                                            27
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                             29 August 2026
+
+
+   Repository/domain                N      Bridge role                              Data level
+   ssz-lagrange                     54     direct: Lagrange/Hamilton/effective-     mathematical
+                                           potential layer
+   frequency-
+   curvature-validation             82     direct: proper-frequency, Shapiro,       published experimental values
+                                           clock-loop layer
+   Unified-Results                 147     near:         strong-field/data/mass-    curated astronomy tables
+                                           projection phenomenology
+   ssz-schumann                    178     near: frequency modes and shift di-      mostly unit/synthetic in standard run
+                                           agnostics
+   g79-cygnus-tests                    5   near: nebula/velocity/temperature        observational CSV/catalogue
+                                           application
+   segmented-energy                    7   indirect: N -segment energy context      compiled astronomy parameters
+   chord-partition
+   (local)                         103     indirect: eigenmodes, φ, geometric       mathematical
+                                           identities
+   Total                          1296
+
+
+
+At this coarse repository level,
+
+                                       856 = 184 + 36 + 158 + 279 + 63 + 54 + 82
+
+checks lie immediately adjacent to a bridge layer,
+
+                                                    330 = 147 + 178 + 5
+
+are application/phenomenology-near, and
+
+                                                         110 = 7 + 103
+
+are indirect mathematical/energy-context checks. The partition 856 + 330 + 110 = 1296 is therefore
+an architecture classification, not a decomposition into independent evidence.
+The mapping also clarifies which parts of the present chain predate this paper:
+
+           Ξ
+           | →
+             {z D}            ,    D, s → gµν ,                  gµν → γnull               ,          dτ, ω → Φ              .
+                                   |       {z   }                |     {z     }                       |    {z    }
+  Calculation Suite, Qubits         Metric Pure          Trajectories, Lagrange, Lensing       Qubits, Frequency-Curvature
+
+These layers were already separately regression-tested. What the present manuscript newly closes at
+theorem/architecture level is the explicit additive-phase to U (1) factorization, the scalar continuous
+generator, the distinction between ray travel time and endpoint transfer phase, and the connection
+to a detector-relative lifted phase/JIF ledger.
+
+
+20.3 Data-level evidence hierarchy
+
+Test counts alone do not encode evidential depth. V10 therefore separates three data levels before
+discussing the newer JIF/NICER layer:
+
+
+
+
+                                                               28
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                   29 August 2026
+
+
+            Table 8: Data levels represented in the broader SSZ/JIF validation landscape.
+
+Level                  Typical examples                Scientific meaning
+A: published bench-    Pound–Rebka/Snider,             real experimental results used at already reduced
+mark values            GPS,           optical-clock,   value/parameter level; not raw instrument streams
+                       Cassini/Viking/Mariner-
+                       style reference values
+B: curated      ob-    lens     image     positions,   real observations reduced to catalogue/table/feature level;
+servational     ta-    spectroscopy/emission-line      dependence and preprocessing must be reported
+bles/features          tables, compiled astronomi-
+                       cal object parameters
+C:     event/signal-   NICER        event-list   to    closest here to raw-signal analysis; the analysis itself con-
+level      detector    soft/hard light curves to       structs the phase observable and must preserve prove-
+records                cross-spectrum to complex       nance, gating, unwrapping and estimator locks
+                       phase series
+
+
+The newer ssz-jif-forward-lab physical-M4/NICER path belongs to level C and is not part of the
+frozen 1296 snapshot. In the audited artifact, the source is a public NICER event list, the derived
+observable is a 1-Hz soft-versus-hard cross-spectral complex signal, the input is frozen before scoring,
+the radio-lag target is not used, and the locked estimator returns M4_PHYSICAL_NO_ONSET [13, 34].
+The negative result is retained as a negative result. This is evidence that the detector-centered phase
+machinery can ingest a real complex signal with explicit provenance; it is not a radio-lag success and
+not empirical confirmation of SSZ.
+For ssz-schumann, real-data support exists as a separate capability, but the standard frozen snapshot
+should not be summarized as “178 real-data tests” when the ordinary path can operate on syn-
+thetic/recovery data. This is precisely why the manuscript reports data levels rather than inferring
+evidence class from repository name or raw test count.
+
+
+20.4 Validation hierarchy: do not sum unlike suites
+
+The validation picture is therefore intentionally layered:
+
+Table 9: Validation hierarchy reported separately because suites overlap in content, age and abstraction
+level.
+
+Layer                                      Status                   Interpretation
+Legacy cross-repository validation         1296/1296                frozen broad regression/benchmark snapshot
+                                                                    across twelve domains; not 1296 independent
+                                                                    experiments
+Bridge/JIF integrated executable vali-     35/35                    current paper suite;         31 inherited
+dation                                                              phase/null/coupling checks plus 4 canonical
+                                                                    PPN/normalization typing checks
+Exterior/variational cross-audit           archived 23/23           historical independent consistency ledger;
+                                                                    overlapping metric identities are rerun in
+                                                                    the present suite
+Fourier phase validation                   fresh 19/19              logically independent phase-typing cross-
+                                                                    check; not evidence for SSZ or the Sagnac
+                                                                    law
+                                           M4_PHYSICAL
+Physical NICER signal audit                 _NO_ONSET               event/signal-level, frozen target-free estima-
+                                                                    tor; technical negative control, not a radio-
+                                                                    lag/SSZ score
+
+
+        These suites are reported separately because they overlap in mathematical con-
+
+                                                       29
+Wrede, Casu – Middle Bridge + Unified Dynamics                                            29 August 2026
+
+
+      tent, exercise different abstraction levels, and are not statistically independent.
+      Their counts must not be summed as independent empirical confirmations.
+
+Thus the manuscript does not advertise “1332”, “1351”, or any other summed test headline. The
+broad corpus shows that the new bridge is inserted into a mature regression environment; the
+paper-specific suite verifies the new logical connections; the NICER audit exercises a qualitatively
+newer signal-level ingestion path. None of those statements turns test multiplicity into a likelihood
+ratio for the underlying theory.
+
+
+20.5 Cross-paper consistency audits
+
+The archived exterior/variational ledger from the v4 cross-audit reports 23/23 PASS. Its original
+executable driver is not part of the present mounted analysis bundle, so this edition does not falsely
+label that historical 23/23 ledger as a fresh rerun. Instead, all exterior identities directly used by this
+manuscript (radial null law, closed radial integral, raw turning relation, Hamilton flow and canonical
+PPN typing) are independently covered by the current executable suite. The present paper reports
+the canonical PPN completion and Shapiro normalization checks used by the manuscript.
+The independent Fourier-block validation script was rerun unchanged on 25 August 2026 and again
+returns 19/19 PASS. These cross-domain ledgers are consistency checks only and are not merged
+into empirical evidence for the Middle Bridge.
+
+
+20.6 Correction-order regression
+
+For β = 0.2 and kL = 7.3, the axle-coordinate pair phase in the chosen coordinate-frequency
+convention is
+                                 2kLβ
+                        ∆Φax =         = 3.0416666666666665 rad.
+                                1 − β2
+The truncated values are:
+
+                               M       ∆ΦM [rad]         absolute error [rad]
+                                1    2.9200000000    1.2166666667 × 10−1
+                                2    2.9200000000    1.2166666667 × 10−1
+                                3    3.0368000000    4.8666666667 × 10−3
+                                4    3.0368000000    4.8666666667 × 10−3
+                                5    3.0414720000    1.9466666667 × 10−4
+                                6    3.0414720000    1.9466666667 × 10−4
+                                7    3.0416588800    7.7866666666 × 10−6
+                                8    3.0416588800    7.7866666666 × 10−6
+
+
+20.7 NICER Crab reference benchmark
+
+The official HEASARC example for Crab ObsID 3013010102 uses
+
+                     f0 = 29.6095750017 Hz,         f˙ = −368174.57 × 10−15 Hz s−1 ,
+
+and assigns phase through C(T ) = f0 T + 21 f˙T 2 . For T = 224 s,
+
+                                    Cexact = 6632.544791144037 cycles.
+
+
+
+
+                                                    30
+Wrede, Casu – Middle Bridge + Unified Dynamics                                         29 August 2026
+
+
+A left-endpoint discretization gives the expected first-order sequence, while midpoint quadrature is
+exact for the linear frequency model up to floating-point roundoff. For example, the left-rule cycle
+errors are 9.236764 × 10−6 at N = 1, 5.772972 × 10−7 at N = 16, and 9.020368 × 10−9 at N = 1024.
+
+
+
+
+Figure 10: NICER Crab timing benchmark. This validates local phase composition for a known
+nonconstant phase rate; it does not validate the Sagnac transfer law or SSZ.
+
+
+20.8 Real physical phase ingestion: MAXI J1820+070
+
+The audited Forward-Lab contains a separate frozen physical-M4 artifact based on public
+NICER ObsID 1200120106 data released for spectral-timing tutorials. The repository reports
+21,817,555 source rows reduced to 57 one-hertz cross-spectral phase samples. The artifact records
+pretarget_freeze=true, target_radio_lag_used=false, fit_to_target_lag=false, phase ref-
+erence ownership, the frozen threshold 4.511172510475388, and PHASE_EVENT_NO_ONSET; the outer
+result is therefore M4_PHYSICAL_NO_ONSET. The adapter source itself rejects target-contaminated
+or unfrozen inputs before running the phase estimator [34]. This source-level audit confirms that
+NICER is not merely a synthetic proxy in the audited repository. It remains a negative technical
+control, not a radio-lag or SSZ validation.
+
+
+21 Strong-field response and unified-dynamics audit
+
+21.1 Branch fingerprints and direction-neutral bridge
+
+The strong-first search uses the distinctive information content of the pure branches, not a directional
+property of the Hermite interpolant. The inner branch
+
+                                          Ξs (x) = 1 − e−φ/x                                        (60)
+
+obeys
+                                                                  x2 Ξ′s
+                              x2 Ξ′s + φ(1 − Ξs ) = 0,    φ=−            .                          (61)
+                                                                 1 − Ξs
+The outer branch obeys
+                                     xΞ′o + Ξo = 0,      2xΞo = 1.                                  (62)
+
+
+
+                                                  31
+Wrede, Casu – Middle Bridge + Unified Dynamics                                            29 August 2026
+
+
+High-precision reconstruction of φ in the final wrapper agrees to better than 10−32 on the tested
+domain. Reversing the normalized bridge coordinate, swapping the endpoint two-jets and reversing
+the first-derivative orientation reproduces the same quintic profile to approximately 5.6 × 10−16 .
+Thus the fixed-endpoint variational bridge is mathematically direction-neutral. Strong-first is an
+epistemic/model-search orientation: retain the more distinctive inner structure as the non-GR anchor
+and demand that a future dynamics generate the transition and outer/PPN limit.
+
+
+21.2 Compactness response and the transition-susceptibility theorem
+
+The radial variable itself already contains a dimensionless source-strength coordinate. Define
+
+                                        rs  1              GM    C    1
+                                 C≡        = ,       u≡        =   =    .                           (63)
+                                        r   x              rc2   2   2x
+
+This is a change of variables, not a new assumption. In these coordinates the two pure branches
+become
+                            g1 : Ξo (u) = u,  g2 : Ξs (u) = 1 − e−2φu .                    (64)
+The corresponding pure-branch flow laws are
+
+                                      dΞo             dΞs
+                                  u       = Ξo ,          = 2φ(1 − Ξs ).                            (65)
+                                      du              du
+
+Thus the outer branch has linear scale response, while the inner branch has an exponential saturation
+law. Because the outer g1 formula is used already for x > 2.2 even where the project still labels
+the physical regime “strong”, the precise statement is outer linear response versus inner saturating
+response; g1 is not synonymous with the physical weak-field label over its full formula domain.
+Likewise, Ξs → 1 is only the formal deeper-continuation limit; on the frozen exterior x ≥ 1 the inner
+branch reaches Ξ(1) = 1 − e−φ = 0.801711847138.
+The fixed canonical transition
+                                                 1.8 ≤ x ≤ 2.2                                      (66)
+corresponds exactly to
+                                                  5     5
+                                                    ≤u≤                                             (67)
+                                                 22     18
+or 5/11 ≤ C ≤ 5/9. Its endpoint responses are
+
+              5         5                               5
+                                                          
+           Ξ          =    = 0.227272727273,          Ξ          = 1 − e−5φ/9 = 0.592986030701.     (68)
+             22         22                              18
+Therefore every differentiable bridge with these same endpoint values and the same compactness
+window obeys the mean-value theorem: at some u∗ ,
+
+                                      dΞ   1 − e−5φ/9 − 5/22
+                         χu (u∗ ) ≡      =                   = 7.241123407889.                      (69)
+                                      du      5/18 − 5/22
+
+This is interpolation-independent. It already exceeds both pure-branch endpoint susceptibilities,
+
+                           χu,o = 1,       χu,s = 2φe−5φ/9 = 1.317124872442.                        (70)
+
+Hence a transient response amplification is forced by the locked endpoint values and transition width,
+regardless of which differentiable bridge is chosen.
+
+
+
+
+                                                      32
+Wrede, Casu – Middle Bridge + Unified Dynamics                                       29 August 2026
+
+
+
+
+Figure 11: The canonical profile written in the compactness variable u = GM/(rc2 ). Dashed curves
+show the analytic continuations of the two pure branch laws; the solid curve shows the operative
+piecewise response. The shaded interval is the fixed transition.
+
+
+For the declared quintic C 2 Hermite bridge, χu = −2x2 Ξ′ (x) is a degree-six polynomial in the
+normalized bridge coordinate after the x2 factor is included. Checking both endpoints and every real
+critical point of that stored polynomial gives the global numerical certificate
+
+                                    max       χu = 12.688510828116                               (71)
+                                  1.8≤x≤2.2
+
+
+at
+                           x = 2.008739217432,          u = 0.248912350424.                      (72)
+An independent bounded optimizer and a one-million-point scan reproduce the maximum. The
+susceptibility stays positive throughout the transition, and numerical quadrature of χu du reproduces
+the endpoint jump in Ξ. The peak is 1.7523 times the interpolation-independent mean-value lower
+bound and 9.6335 times the larger pure-branch endpoint susceptibility.
+
+
+
+
+                                                   33
+Wrede, Casu – Middle Bridge + Unified Dynamics                                       29 August 2026
+
+
+
+
+Figure 12: Canonical transition susceptibility χu = dΞ/du. The dotted line is the interpolation-
+independent mean-value requirement. The actual Hermite bridge overshoots that lower bound and
+both pure-branch response laws by a large factor before matching the inner and outer endpoint
+derivatives.
+
+
+The compactness rewrite therefore does not turn the prescribed bridge into either pure-branch flow
+equation. Defining
+                           R1 = uΞ,u − Ξ,      R2 = Ξ,u − 2φ(1 − Ξ),                          (73)
+the outer law has R1 = 0 and the inner law has R2 = 0, but the canonical transition has nonzero
+residuals in its interior while matching the appropriate endpoint two-jets. This is precisely where a
+future unified dynamics must do real work rather than merely reuse one pure-branch equation.
+
+
+
+
+                                                 34
+Wrede, Casu – Middle Bridge + Unified Dynamics                                            29 August 2026
+
+
+
+
+Figure 13: Residuals of the two pure-branch compactness-flow laws evaluated on the prescribed
+transition. The bridge matches each pure law at the corresponding endpoint but obeys neither law
+throughout its interior.
+
+
+The publication-safe interpretation is consequently narrow. The compactness transformation, the two
+pure-branch flow identities, and the fixed-window susceptibility lower bound are exact. The global
+maximum quoted for the Hermite bridge is a constructive numerical result with a full critical-point
+check. The stronger statement that compactness-driven susceptibility amplification is the physical
+mechanism of the regime change remains interpretive until one covariant dynamics derives the
+branches and transition without point-by-point fitting.
+
+
+21.3 Einstein-effective source identities
+
+For the declared static gauge gT T = −A, grr = A−1 , define
+
+                   1 − A − xA′                                                        A′′ A′
+                 ρb =           ,                    pbr = −ρb,               pbt =      + ,        (74)
+                        x2                                                            2   x
+                   x
+             m(x) = [1 − A(x)].                                                                     (75)
+                   2
+             b
+
+Then
+                                 2b
+                                  m′               b ′′
+                                                   m                2
+                          ρb =       ,   pbt = −        ,    ρb′ = − (ρb + pbt ).                   (76)
+                                 x2                x                x
+The equality pbr = −ρb is a metric-gauge identity of this ansatz, not an independently chosen matter
+equation of state. Tangential NEC therefore implies ρb′ ≤ 0.
+
+
+
+
+                                                    35
+Wrede, Casu – Middle Bridge + Unified Dynamics                                       29 August 2026
+
+
+21.4 Interpolation-independent endpoint no-go and geometric budget
+
+At the canonical transition endpoints,
+
+                                           m(1.8) = 0.545334802123639,
+                                           b                                                     (77)
+                                           m(2.2) = 0.369684499314129,
+                                           b                                                     (78)
+                                             ∆m
+                                              b = −0.175650302809510.                            (79)
+
+For every differentiable interpolation sharing those endpoint metric values,
+                            Z 2.2
+                                    x2 ρb(x) dx = 2∆m
+                                                    b = −0.351300605619020.                      (80)
+                             1.8
+
+The x2 -weighted mean is
+
+                                              6∆m
+                                  ρw =                = −0.218833433732778,                      (81)
+                                                b
+                                           2.2 − 1.83
+                                              3
+
+so at least one point satisfies
+                                               ρb ≤ −0.218833433733.                             (82)
+This is independent of the interpolation variable or polynomial family. The current Ξ-Hermite bridge
+reaches min ρb = −0.483042940701; direct C 2 interpolation of A improves this to −0.467926120437
+but cannot remove the endpoint theorem.
+
+
+
+
+Figure 14: Changing the interpolated variable changes the transition shape but not the endpoint
+mass no-go. The dashed line is the interpolation-independent weighted-mean bound.
+
+
+If a future completion retains the same endpoints while requiring nonnegative physical matter density,
+schematically ρbeff = ρbmatter + ρbgeom with ρbmatter ≥ 0, then the extra geometric/nonminimal sector
+must carry at least the negative weighted budget
+                                   Z 2.2
+                                           x2 ρbgeom dx ≤ −0.351300605619020.                    (83)
+                                    1.8
+
+
+
+
+                                                        36
+Wrede, Casu – Middle Bridge + Unified Dynamics                                          29 August 2026
+
+
+21.5 Strong-first handoff and the stronger NEC theorem
+
+For outer g1 ,
+                                4x2                  x(4x + 1)                   1
+                      Ao =             ,      bo =
+                                              m                 ,     lim m
+                                                                          bo =                      (84)
+                             (2x + 1)2               2(2x + 1)2      x→∞         2
+from below. The strong branch reaches the same mass normalization at
+
+                                                                        1
+                                x∗ = 1.594811457889,         b s (x∗ ) = .
+                                                             m                                      (85)
+                                                                        2
+
+In this metric gauge, m
+                      b = 1/2 is algebraically equivalent to A = 1 − 1/x, so this is also the known
+strong-branch DSSZ = DGR comparison intersection. If nonnegative Einstein-effective density is
+required, m
+          b cannot decrease; hence the current strong branch cannot be retained beyond x∗ on the
+way to the ADM-normalized outer branch. With the outer endpoint fixed at x1 = 2.2, endpoint mass
+monotonicity gives the stronger finite condition
+
+                                           x0 ≤ 1.082828978184.                                     (86)
+
+
+
+
+Figure 15: Strong-first endpoint tradeoff for nondecreasing Einstein mass. The required outer
+endpoint grows rapidly and diverges as x0 → x−∗.
+
+
+
+Tangential NEC gives an even sharper result. Since ρb + pbt ≥ 0 implies ρb′ ≤ 0, matching the fixed outer
+endpoint at x1 = 2.2 requires ρb(x) ≥ ρb(2.2) throughout the interval. Combining this monotonicity
+with the required mass integral yields the necessary threshold
+
+                                           x0 ≤ 0.977946246457.                                     (87)
+
+Because the frozen exterior requires x0 ≥ 1,
+
+      No everywhere-tangential-NEC ordinary Einstein-matter bridge to x1 = 2.2 exists within
+                                      the frozen exterior.
+
+This is stronger than the positive-density theorem.
+
+
+                                                     37
+Wrede, Casu – Middle Bridge + Unified Dynamics                                               29 August 2026
+
+
+21.6 Constrained transitions: feasibility, not replacement
+
+The endpoint theorem does not say that every SSZ-like interpolation must have negative density.
+Once the handoff is moved inward, higher-degree mass-space bridges can be constructed under explicit
+inequality constraints.
+
+Table 10: Constructive feasibility examples. Off-domain examples are continuation diagnostics, not
+frozen-exterior replacements.
+
+Construction           x0    x1    Match         Verified target         Domain
+C 2 positive density   1.0   2.2    C2        min ρb = 0.00426139        frozen exterior
+C 3 positive density   1.0   2.2    C3        min ρb = 0.00133767        frozen exterior
+C 2 density+NEC        0.9   2.2    C2     min(bρ + pbt ) = 0.00552588   formal off-domain
+C 2 DEC+pt ≥ 0         0.5   2.2    C2     min(b    pt |) = 0.00451952
+                                               ρ − |b                    formal off-domain
+
+
+The stored floating-point polynomials were checked on a 50,001-point dense grid and at every real
+critical point of each relevant stored constraint polynomial together with the endpoints. This is a
+global critical-point numerical certificate for the stored polynomial, stronger than a grid scan but not
+an exact rational/interval-arithmetic proof.
+
+
+
+
+Figure 16: Two in-domain positive-density constructions and off-domain stronger-energy-condition
+feasibility witnesses. The fixed-x1 NEC theorem prevents interpreting these as a full ordinary-matter
+rescue.
+
+
+21.7 Action-family discrimination
+
+The reconstructed tensor rejects several source classes as sole exact completions:
+
+   • any sum of minimally coupled static radial scalar sectors Li (Xi , ϕi ), which requires pt = −ρ;
+
+   • a perfect fluid, which requires pr = pt ;
+
+   • pure linear radial Maxwell, which requires pt = ρ exactly;
+
+   • linear Maxwell plus constant Λ, which would require (ρ − pt )/2 constant;
+
+                                                     38
+Wrede, Casu – Middle Bridge + Unified Dynamics                                       29 August 2026
+
+
+  • the simplest uncoupled global-monopole plus fixed-charge linear-Maxwell model, which would
+    require fixed x2 (ρ − pt ) and x4 pt scalings that the frozen strong branch does not obey exactly.
+
+These filters do not exclude generalized coupled hedgehog/gauge, scalar-vector-tensor, NED-coupled,
+nonminimal, or modified-gravity completions.
+
+
+21.8 Magnetic NED diagnostic with corrected sign convention
+
+For the formal magnetic-NED reconstruction used in the audit, take L = −ρ and F = x−4 . Then
+
+                                                                  x4
+                              2F LF = −(ρ + pt ),        LF = −      (ρ + pt ),                  (88)
+                                                                  2
+
+and
+                                                              x dLF
+                                     LF + 2F LF F = LF −            .                            (89)
+                                                              2 dx
+For the current transition,
+
+                                LF = 0 :      x = 2.034986003262, 2.199789272082,                (90)
+                    LF + 2F LF F = 0 :        x = 1.927207549701, 2.133996087105.                (91)
+
+These are in-domain kinetic/characteristic warnings for this one-field reconstruction. On the frozen
+exterior strong branch 1 ≤ x < 1.8, the corresponding factors keep their Maxwell-connected sign in
+the tested convention. The separate sign change near x ≃ 0.43358 belongs only to formal continuation
+below x = 1 and is not used as an exterior rejection.
+
+
+
+
+Figure 17: Formal magnetic-NED kinetic/characteristic proxies across the canonical transition, using
+the corrected sign convention.
+
+
+21.9 Defect-like to gauge-like structural clue
+
+On each pure frozen branch one may decompose algebraically
+
+                              ρ = ρD + ρG ,       ρG = pt ,    ρD = ρ − pt ,                     (92)
+
+                                                    39
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                 29 August 2026
+
+
+with schematic basis stresses D : diag(−1, −1, 0, 0) and G : diag(−1, −1, +1, +1). Both coefficients
+are nonnegative on the pure branches. On outer g1 ,
+                               6x + 1                     12                              3
+                    ρbo =                ,   pbt,o =             ,     x4 ρbo , x4 pbt,o → .             (93)
+                            x2 (2x + 1)3               (2x + 1)4                          4
+
+The outer tail is therefore Maxwell/gauge-like asymptotically. The formal continuation of the inner
+branch toward x → 0 is defect/global-monopole-like, but x < 1 is outside the frozen exterior and is
+used only as a model-building clue.
+
+
+
+
+Figure 18: Positive algebraic defect-like and gauge-like source components on the frozen pure branches.
+The transition is omitted because it leaves this positive cone; x = 10 marks a regime label, not a
+formula switch.
+
+
+21.10 Regularity filter
+
+The canonical bridge is C 2 but not C 3 . The audit finds
+
+           |∆A(3) | = 140.329289599 at x = 1.8,             |∆A(3) | = 311.400918663 at x = 2.2.         (94)
+
+The Einstein tensor is continuous at the joins, so ordinary second-order metric equations can be
+treated classically on this background. Generic fourth-order curvature equations are more sensitive
+and require a smoother bridge, junction sector, or special degeneracy/cancellation. This is a regularity
+flag, not a blanket rejection of all higher-derivative models. A future global interior must also replace
+or derive the off-domain continuation because its effective source diverges as x → 0.
+
+
+21.11 PPN completion and strong-first interpretation
+
+The publication-safe separation is
+
+        βPPN = γPPN = 1 as the canonical observable layer,              unified derivation: OPEN.        (95)
+
+The present audit treats this canonical PPN completion as a boundary condition on any future
+unified dynamics: the same theory that produces the strong branch and its transition must recover
+
+
+                                                       40
+Wrede, Casu – Middle Bridge + Unified Dynamics                                        29 August 2026
+
+
+the observable weak-field limit without inserting the PPN parameters by hand.
+The pure strong and outer branches have nonnegative Einstein-effective density and lie in the positive
+defect+gauge cone, whereas the canonical finite transition leaves that cone. This supports
+
+               strong branch + dynamical transition −→ derive outer g1 /PPN limit.                (96)
+
+The final ledger types this as INTERPRETIVE_RESULT, not PASS. The mathematics supports
+the search orientation; it does not prove that Nature must be “strong-first.”
+
+
+21.12 Phase-1 validation accounting
+
+The corrected Phase-1 ledger contains 31 typed outcomes:
+
+                               Status                          Count
+                               PASS                                18
+                               FLAG                                 4
+                               REJECTED_CANDIDATE                   5
+                               CONDITIONAL_PASS                     1
+                               OPEN_CANDIDATE                       1
+                               REGULARITY_FLAG                      1
+                               INTERPRETIVE_RESULT                  1
+
+These are not 31 independent empirical confirmations. Flags and rejections are successful discriminat-
+ing outcomes; open and interpretive statuses are not passes. The lower Middle-Bridge layer remains
+separately 35/35 PASS, and the independent final wrapper reports 15/15 consistency checks. None
+of these heterogeneous layers is arithmetically merged into an empirical success count.
+
+
+
+
+                                                 41
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                   29 August 2026
+
+
+22 Evidence and claim gates
+
+       Table 11: Principal statements and their publication-safe status in the present paper.
+
+Statement                           Status                   Interpretation
+Additive phase → U (1) factor-      exact                    Group-homomorphism identity for absolutely conver-
+ization                                                      gent lifted phase.
+Scalar generator U ′ = iaU          exact                    Unique norm-preserving scalar phase flow under the
+                                                             stated regularity assumptions.
+Sagnac Neumann decomposition        exact conditional        Valid for |β| < 1 once the local law is adopted; not a
+                                                             generic strong-gravity law.
+(j, n) lattice and two conver-      exact bookkeeping /      Separates route discretization from correction-order
+gences                              numerical                truncation.
+Finite-β frame split                exact in ideal circu-    Coordinate and detector proper time/frequency must
+                                    lar model                be transformed together.
+Maxwell → null/Fermat route         exact conditional        Standard vacuum Maxwell WKB on the declared
+                                                             fixed metric; local measured c remains invariant.
+Endpoint transfer phase             exact conditional        Detector delay phase;         not photon proper-
+                                                             time/worldline accumulation.
+Canonical PPN completion            source-locked model      βPPN = γPPN = 1; derivation from a unified action
+                                    layer                    remains open.
+Canonical endpoint density no-      exact         within     Same endpoint metric values force negative effective
+go                                  Einstein-effective       density somewhere, independent of interpolation.
+                                    interpretation
+Fixed-x1 tangential-NEC no-go       exact         within     Everywhere NEC would require x0 < 1, outside the
+                                    Einstein-effective       frozen exterior.
+                                    interpretation
+Constrained bridges                 constructive numer-      Global critical-point certificates for stored floating-
+                                    ical                     point polynomials; not canonical replacements or
+                                                             exact rational proofs.
+Minimal                             rejected as sole ex-     Algebraic/scaling identities do not match the frozen
+scalar/fluid/Maxwell/Λ/simple       act sources              effective tensor.
+monopole+Maxwell sources
+One-field magnetic NED              not cleared           Corrected in-domain characteristic-sign crossings re-
+                                                          main in the canonical transition.
+Compactness rewrite of g1 /g2       exact reparameteri- C = 1/x, u = C/2 give Ξo = u and Ξs = 1 − e−2φu
+                                    zation                with no new fitted parameter.
+Fixed-window       susceptibility   exact     for    any Mean-value theorem forces χu = 7.241123407889
+lower bound                         differentiable fixed- somewhere between the canonical endpoints.
+                                    endpoint bridge
+Canonical Hermite susceptibility    constructive numer- All real critical points plus endpoint checks give
+maximum                             ical                  max χu = 12.688510828116; independent optimiza-
+                                                          tion and dense scan agree.
+Physical response mechanism         interpretive/open     The response language is a dynamical target, not yet
+                                                          a derivation of why the transition occurs.
+Strong-first orientation            interpretive result   Supported as an inverse-search strategy; not a physi-
+                                                          cal theorem about Nature’s direction.
+NICER Crab benchmark                technical/reference   Tests phase composition; not SSZ evidence.
+MAXI J1820 M4 no-onset              technical negative Real physical phase ingestion; not radio-lag or SSZ
+                                    control               validation.
+Prospective SSZ confirmation        not claimed           Requires a sealed independent forward prediction and
+                                                          untouched target.
+
+
+23 Relation to prior work and novelty boundary
+
+The individual mathematical ingredients are standard: the Sagnac effect and its relativistic frame issues
+have a large literature; geometric/Neumann series are elementary; optical propagation commonly
+
+                                                        42
+Wrede, Casu – Middle Bridge + Unified Dynamics                                        29 August 2026
+
+
+uses exponential phase or transfer matrices; high-frequency covariant Maxwell theory gives the
+eikonal/null-geodesic limit; static-spacetime ray paths admit a Fermat/optical-metric formulation;
+path-ordered exponentials appear for noncommuting transport; and detector-relative phase is standard
+interferometry [15, 16, 17]. The authors’ May 2026 preprint already introduced the geometric
+correction-series reconstruction and explicitly separated axle coordinate time from detector proper
+time.
+A focused literature search for this revision found extensive Sagnac, geometric-phase, transfer-matrix,
+and holonomy treatments, including Post’s classic review, general-relativistic path treatments, modern
+geometric-phase reviews, and the 2026 gravitational-holonomy formulation of Javadinezhad and
+Seraj. We did not identify, in this focused rather than exhaustive search, a prior paper whose central
+organization is exactly the termwise map
+
+                                   (σβ)n → ∆tn → ∆Φn → ei∆Φn
+
+combined with an explicitly independent spatial index j and then inserted into the present detector-
+centered JIF architecture. Publication-safe novelty wording is therefore limited to: we provide an
+explicit termwise correspondence and two-index organization within this project architecture. No claim
+is made to discovering exponentials, U (1), transfer matrices, Sagnac physics, or holonomy.
+
+
+24 Falsifiable next steps
+
+A serious follow-up should preserve the Forward-Lab anti-circular architecture and now move from
+bridge algebra to dynamics:
+
+ 1. Declare one concrete second-order or degenerate hedgehog/gauge, scalar-vector-tensor, NED-
+    coupled, or modified-gravity action family before fitting the transition.
+
+ 2. Derive its Euler–Lagrange equations and test whether the pure compactness-flow targets uΞ,u = Ξ
+    on the outer branch and Ξ,u = 2φ(1 − Ξ) on the inner branch emerge without point-by-point
+    fitting.
+
+ 3. Generate the transition dynamically and test whether the derived solution satisfies the exact
+    fixed-endpoint susceptibility budget. If the canonical endpoints and width are retained, the
+    solution must attain χu ≥ 7.241123407889 somewhere; if it does not, the endpoint architecture
+    or transition width must change.
+
+ 4. Derive the canonical weak-field observable completion βPPN = γPPN = 1 from the same action or
+    a rigorously defined completion map.
+
+ 5. Derive the quadratic perturbation action and test ghosts, gradient signs, hyperbolicity, character-
+    istic cones, and whether the transition amplification introduces a pathological kinetic/gradient
+    scale.
+
+ 6. If a global interior is claimed, replace or derive the off-domain x < 1 continuation and establish
+    regularity.
+
+ 7. Produce a distinct strong-field observable; freeze source, transfer, detector, estimator and
+    uncertainty model; seal the prediction; only then open independent target data.
+
+The intended pipeline is
+
+                  declare action → derive solution/transition → derive PPN
+                                                                                                  (97)
+                                 → test stability → seal prediction → open target
+
+                                                  43
+Wrede, Casu – Middle Bridge + Unified Dynamics                                         29 August 2026
+
+
+25 Discussion
+
+The present paper combines the exact Middle-Bridge/JIF/Maxwell route with the corrected endpoint
+theorems, source-family filters, domain discipline, and the compactness-response audit. The purpose
+of the integration is not to inflate the evidence count, but to keep the phase-transfer mathematics, the
+radial transition constraints, and the open unified-dynamics problem in one claim-typed framework.
+The central mathematical bridge is modest but clean: additive phase is represented multiplicatively
+in U (1), and a real scalar generator integrates to a unitary phase flow. The geometric/Neumann
+series is one conditional source of additive transfer corrections, not the origin of the exponential
+map. This distinction prevents a category error that had obscured the middle arrow. The two-index
+(j, n) lattice and the separate convergence limits further prevent numerical segmentation from being
+confused with correction order.
+The propagation layer is now equally typed. On the declared static vacuum background, Maxwell
+WKB fixes null characteristics, the optical metric fixes the Fermat route, and stationary delay
+produces an endpoint phase. The same construction shows why a nonzero detector phase delay does
+not imply nonzero phase accumulation along a null worldline. Coordinate speed, local measured
+speed, Killing frequency and detector-local frequency are different objects with explicit transformation
+rules. Weak-field PPN routing remains separately source-locked until a unified dynamics derives the
+same observable completion.
+The strongest conceptual advance of the dynamics audit is that the canonical transition problem is
+not an interpolation-choice problem. The endpoint mass decrease fixes a negative weighted Einstein-
+effective density budget before any polynomial is chosen. The strong branch already overshoots the
+outer ADM-normalized mass at x = 1.8, and the stronger NEC theorem shows that moving the
+handoff merely to the frozen boundary x = 1 still cannot produce an everywhere-tangential-NEC
+Einstein-matter bridge to the fixed outer endpoint x1 = 2.2. Consequently, if the current inner
+branch and current outer endpoint architecture are retained, a future completion must either supply
+an extra geometric/nonminimal sector or dynamically alter the transition/endpoints.
+The compactness-response rewrite adds an independent geometric constraint of a different type. It
+does not depend on the Einstein-effective matter interpretation. Once u = GM/(rc2 ) is used, the two
+pure branches become a linear outer law and an exponential inner law, while the fixed endpoints force
+a large intermediate susceptibility by the mean-value theorem. The canonical Hermite bridge amplifies
+that susceptibility even further. This makes the missing dynamics more concrete: a successful theory
+must explain not merely why there are two branch formulas, but how a narrow transition carries
+the required response change without introducing an unacceptable instability. Conversely, a future
+dynamics is free to avoid the numerical amplification only by deriving different transition endpoints
+or a different transition width.
+The constrained bridge constructions remain useful precisely because they show what the no-go does
+not prove. Positive density is achievable after moving the handoff, so the obstruction is not “Hermite”
+or “interpolation” in the abstract. But the stronger energy-condition gate prevents turning those
+examples into a claim that ordinary matter has solved the transition. Likewise, the defect-to-gauge
+decomposition and NED diagnostics are action-search filters, not matter identifications. They reduce
+the candidate space while leaving the fundamental inverse problem open.
+Validation language is deliberately conservative. Exact mathematics, software regression, technical
+reference benchmarks, physical negative controls and empirical forward evidence are separate cate-
+gories. The 35/35 lower-layer suite, 15/15 wrapper, 31 typed Phase-1 outcomes, 19/19 Fourier checks
+and historical 1296/1296 project snapshot are not summed. A future positive claim must come from
+a prediction frozen before the final target observable is inspected.
+
+
+
+
+                                                  44
+Wrede, Casu – Middle Bridge + Unified Dynamics                                           29 August 2026
+
+
+26 Conclusion
+
+This paper closes the Middle Transfer Bridge under its stated assumptions and makes the next
+unresolved problem more precise. The scalar transfer core is exact:      ∆Φn and ei∆Φn are the
+                                                                      P            Q
+
+additive and multiplicative representations of the same lifted phase, with U ′ = iaU providing the
+continuous generator. The Sagnac Neumann hierarchy is conditional on the declared local law
+and |β| < 1; strong gravitational field by itself is not the convergence parameter. Spatial path
+segmentation remains distinct from correction order, and the ideal finite-β frame split requires
+conjugate clock/frequency semantics.
+For vacuum propagation on the declared static geometry, standard Maxwell WKB, the null Hamilto-
+nian and Fermat principle give one consistent null-route layer while preserving locally measured c.
+The observable stationary transfer is an endpoint delay phase, not photon proper time. This layer
+can feed the detector-centered JIF construction once the source, route, node and detector reference
+are fully typed.
+The strong-field dynamics result is sharper. The canonical 1.8 → 2.2 endpoints force a negative
+Einstein-effective weighted mass budget independently of interpolation. The strong branch reaches
+the outer ADM mass normalization at x∗ = 1.594811457889; with x1 = 2.2, positive density requires
+x0 ≤ 1.082828978184, and everywhere tangential NEC would require x0 ≤ 0.977946246457, outside
+the frozen exterior. Thus the present transition cannot be sourced by ordinary everywhere-NEC
+Einstein matter without changing the endpoint architecture or adding a nonminimal/geometric
+sector.
+The compactness-response audit supplies a second exact transition constraint. With u = GM/(rc2 ),
+the outer branch is Ξ = u and the inner branch is Ξ = 1 − e−2φu . The fixed canonical endpoints
+force an average transition susceptibility χu = 7.241123407889, while the actual Hermite bridge
+reaches 12.688510828116. The lower bound is interpolation-independent; the Hermite maximum is
+constructively and independently verified. These results do not derive the physical mechanism, but
+they give any future dynamics a precise response target.
+The action search is narrowed but not solved. Simple scalar, fluid, linear-Maxwell, constant-Λ, and
+standard uncoupled monopole+Maxwell sources fail exact gates. One-field magnetic NED remains
+problematic in the current transition. The positive defect-like/gauge-like branch decomposition
+motivates generalized hedgehog/gauge and second-order/degenerate scalar-vector-tensor families, but
+only an explicit action can decide the issue. That action must derive the strong branch, generate
+the transition, recover βPPN = γPPN = 1, pass quadratic stability, and produce a sealed prospective
+strong-field discriminator.
+The publication-safe endpoint is: the phase bridge is closed, the transition constraints are substantially
+sharpened, the candidate dynamics are restricted, and the remaining claims are left open exactly
+where the present evidence leaves them open.
+
+
+A Proof of uniform correction convergence
+
+Assume |β(s)| ≤ βmax < 1 on a path of finite length. Then
+
+                                         |kt (σβ(s))n | ≤ |kt |βmax
+                                                                n
+                                                                    .
+
+The majorant series n |kt |βmaxn   = |kt |/(1 − βmax ) converges. By the Weierstrass M-test, the
+                       P
+
+correction-order series converges uniformly. Thus, under the finite-path regularity assumptions,
+                              Z X                         XZ
+                                      kt (σβ(s))n ds =            kt (σβ(s))n ds.
+                                γ n                       n   γ
+
+
+
+
+                                                     45
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                             29 August 2026
+
+
+B Derivation of the pair truncation error
+
+From equation (15),
+                                                               ∞
+                                              ∆Φ = 2kt L
+                                                               X
+                                                                     β 2q+1 .
+                                                               q=0
+
+If M is odd, the next surviving power is M + 2, yielding
+
+                                                           2kt Lβ M +2
+                                               ϵ∆,M =                  .
+                                                             1 − β2
+
+If M is even, the next surviving power is M + 1, yielding
+
+                                                           2kt Lβ M +1
+                                               ϵ∆,M =                  .
+                                                             1 − β2
+
+
+C Moving-endpoint derivative check
+
+              R b(t)
+For τ (t) =    a(t) F (s, t)ds, the derivative is
+
+                                                                     Z b
+                                   τ̇ = F (b, t)ḃ − F (a, t)ȧ +          ∂t F (s, t)ds.
+                                                                       a
+
+With Fσ = [c(1 − σβ)]−1 ,
+                                                              σ∂t β
+                                               ∂t Fσ =                .
+                                                           c(1 − σβ)2
+The numerical regression used a smooth polynomial-affine test field and moving endpoints; central
+finite differences agreed with the analytic derivative to a maximum absolute discrepancy 5.2711×10−82
+in the test units.
+
+
+D Historical software-source audit
+
+
+  Source                                            Audited role
+  src/observer_transfer.py                          Implements 1 ∓ β cos i only on propagation, separate signed path differ-
+                                                    ence and transfer terms, and double-count rejection.
+  tests/test_observer_transfer_v1_5.py              Regression checks for approaching/receding factors, signed path differ-
+                                                    ence, redshift routing, and double-count failure.
+  results/path_variant_matrix_v1_5.csv              Stores independent route variants and an explicitly invalid double-count
+                                                    control.
+  src/physical_forward_v2.py                        Contains the dimensional fix: dimensional engine/conversion/opacity
+                                                    seconds are not multiplied by GM/c3 .
+  tests/test_physical_forward_v2.py                 Locks the dimensional regression to 11 s for a 10 s source term at z = 0.1
+                                                    when transport is negligible.
+  src/ssz_jif_forward_v2.py                         Separates BHXRB jet propagation, Sgr A* plasmoid expansion, and
+                                                    TDE delay heads.
+  src/ssz_native_closure_v3.py                      Defines canonical x = r/rs SSZ transport and explicitly distinguishes
+                                                    local material β from SSZ model quantities.
+  src/v2_ssz_jif_ablation.py                        Uses fixed family geometry priors as connected ablations; does not claim
+                                                    those priors are source trajectories.
+  src/jif/physical_m4.py                            Physical typed complex-observable adapter with frozen estima-
+                                                    tor/calibration gates.
+  results/physical_m4_real/
+  MAXIJ1820_NICER_CROSS_SPECTRAL_1HZ.json           Real public complex phase ingestion; retained no-onset result; no radio-
+                                                    lag benchmark score.
+
+
+
+
+                                                            46
+Wrede, Casu – Middle Bridge + Unified Dynamics                                            29 August 2026
+
+
+E Minimal reproducibility pseudocode
+
+# correction-order phase on one declared path segment
+for j in segments:
+    for n in orders:
+        dphi[j,n] = k_ref * ds[j] * (sigma * beta[j])**n
+        T[j,n] = exp(1j * dphi[j,n])
+
+Phi_transfer = sum(dphi[j,n] for j in segments for n in orders)
+U_transfer   = product(T[j,n] for j in segments for n in orders)
+assert close(U_transfer, exp(1j * Phi_transfer))
+
+# detector-centered composition
+Phi_D_a = Phi_emit_a + Phi_transfer_a + sum(Phi_nodes_a) + Phi_detector_a
+Phi_D_b = Phi_emit_b + Phi_transfer_b + sum(Phi_nodes_b) + Phi_detector_b
+Delta_J = unwrap(Phi_D_b - Phi_D_a) / (2*pi)
+
+# guardrails
+assert route_coordinate_is_typed
+assert not alias(R_over_R0, r_over_rs) unless explicit_physical_map
+assert not (ballistic_geometry and explicit_path_difference_for_same_component)
+assert frequency_reference_is_conjugate_to_phase_time_variable
+
+
+F Generator-flow proof and geometric interpretation
+
+For U ′ = ia(s)U with real a, multiplication by ia is anti-Hermitian in the one-dimensional complex
+Hilbert space. Hence
+
+                        d
+                           (U ∗ U ) = U ′∗ U + U ∗ U ′ = (−iaU ∗ )U + U ∗ (iaU ) = 0.
+                        ds
+The flow therefore remains on the unit circle. Writing U = eiΦ gives Φ′ = a wherever the lift is chosen
+continuously. Conversely, integrating the phase first gives Φ(s) − Φ(s0 ) = a ds and exponentiating
+                                                                            R
+
+reproduces the same solution. This establishes the equivalence of local phase density, lifted phase
+accumulation, and scalar unitary transport.
+
+
+G Source-locked Maxwell/null-law algebra and phase safeguard
+
+For the equatorial metric gµν = diag(−c2 D2 , D−2 , r2 ), the inverse is diag[−(c2 D2 )−1 , D2 , r−2 ]. Sub-
+stituting Θ = −ωT + ℓφ + W (r) into g µν ∂µ Θ∂ν Θ = 0 gives equation (36). Hamilton’s equations from
+equation (43) then give equation (47).
+For the endpoint relation, write Wsp = ℓφ + W . Along a ray,
+
+                         dWsp               dφ         ω            dT
+                              = W ′ (r) + ℓ    =                 =ω    .
+                          dr                dr   cD 1 − D b /r      dr
+                                                     p
+                                                   2     2 2   2
+
+
+Thus ∆Wsp = ω∆Tγ , while the full eikonal obeys ∆Θ = −ω∆Tγ + ∆Wsp = 0. This explicitly
+distinguishes a detector transfer phase from a fictitious accumulated photon proper phase.
+For the exterior D = r/(r + m), radial integration yields equation (54) because D−2 = (1 + m/r)2 .
+The same branch has r/D = r + m, so the null turning function is strictly monotone. These formulas
+
+
+                                                     47
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                29 August 2026
+
+
+were checked symbolically and numerically in the current executable ledger.
+
+
+H Strong-first reproducibility formulas
+
+For any A(x) in the present metric gauge,
+
+                   1 − A − xA′                                                       A′′ A′
+               ρb =               ,                    pbr = −ρb,              pbt =     + ,            (98)
+                        x2                                                            2        x
+                   x                                           2mb′                    mb ′′
+              mb = (1 − A),                             ρb =        ,          pbt = −       ,          (99)
+                   2                                            x2                      x
+                ′    2
+              ρb = − (ρb + pbt ).                                                                      (100)
+                     x
+For outer g1 , Ξo = 1/(2x),
+
+                                                           4x2
+                                                Ao =              ,                                    (101)
+                                                        (2x + 1)2
+                                                        x(4x + 1)
+                                                 mbo =              ,                                  (102)
+                                                        2(2x + 1)2
+                                                          6x + 1
+                                                  ρbo = 2             ,                                (103)
+                                                        x (2x + 1)3
+                                                            12
+                                                pbt,o =           .                                    (104)
+                                                        (2x + 1)4
+
+The endpoint identity is              Z x1
+                                              x2 ρb dx = 2[ b
+                                                           m(x1 ) − b
+                                                                    m(x0 )].                           (105)
+                                       x0
+
+For the magnetic-NED diagnostic with L = −ρ and F = x−4 ,
+                                                                               x ′
+                         2F LF = −(ρ + pt ),             LF + 2F LF F = LF −    L .                    (106)
+                                                                               2 F
+
+I Compactness-response reproducibility formulas
+
+For the response audit, the transition variable is t = (x − 1.8)/0.4 and the canonical bridge is the
+quintic Hermite polynomial that matches Ξ, Ξ′ , and Ξ′′ to the two pure branches. Under C = 1/x
+and u = C/2,
+                              dΞ                     dΞ
+                                  = −x2 Ξ′ (x),          = −2x2 Ξ′ (x),                        (107)
+                              dC                     du
+and
+                                    d2 Ξ
+                                         = 2x3 Ξ′ (x) + x4 Ξ′′ (x).                            (108)
+                                    dC 2
+Therefore C 2 matching in x remains C 2 matching in C and u because x 7→ 1/x is smooth and
+invertible on the frozen exterior. The global maximum of χu is certified numerically by solving the
+polynomial critical-point equation for all real roots in t ∈ [0, 1] and evaluating those roots together
+with both endpoints. A separate bounded scalar optimization and a one-million-point scan agree
+with the critical-point result, and trapezoidal integration on 200,001 compactness samples gives
+                                      Z 5/18
+                                               χu du = Ξ(5/18) − Ξ(5/22)                               (109)
+                                       5/22
+
+to better than 2 × 10−10 in the audit run.
+
+
+                                                          48
+Wrede, Casu – Middle Bridge + Unified Dynamics                                                29 August 2026
+
+
+J AI assistance disclosure
+
+This manuscript was prepared with AI assistance under human-directed source locks and explicit
+computational checks. AI was used for algebraic review, source comparison, code auditing, symbolic
+verification, source reconciliation, figure recovery, document integration and typesetting. The paper
+does not treat AI-generated wording or test counts as evidence. Claims are restricted to the declared
+assumptions, source-locked profile, mathematical derivations, and validation artifacts described in
+the paper; unresolved dynamics, stability, interior and empirical gates remain explicitly open.
+
+
+References
+
+ [1] C. N. Wrede and L. P. Casu, JIF as the Operational Phase Layer of Segmented Spacetime: Counted
+     Proper-Time Phase, Detector-Centered Photon Transfer, Regime-Resolved Dynamics, and Symplectic
+     Numerical Validation, integrated research manuscript v2.0, 25 July 2026, author-supplied manuscript.
+
+ [2] C. N. Wrede and L. P. Casu, Regime Boundaries – Segmented Spacetime, SSZ Research Portal documen-
+     tation snapshot, August 2026.
+
+ [3] C. N. Wrede, L. P. Casu, with the help of Bingsi AI, A Variational Selection Principle for the Canonical
+     C 2 Transition Bridge in Segmented Spacetime, technical research paper, 21 August 2026.
+
+ [4] C. Wrede and L. Casu, with the help of Bingsi AI, Phase-Offset Criticality in Finite Fourier Blocks:
+     Exact Single-Tone Laws, Boundary Regularity, Objective Dependence, and RF Validation, v4 research
+     manuscript, 2026.
+
+ [5] C. N. Wrede, L. P. Casu, Bingsi, “A Geometric Correction-Series Derivation of the Sagnac Return-Time
+     Difference,” preprint, May 2026, DOI: 10.13140/RG.2.2.15950.01609.
+
+ [6] E. J. Post, “Sagnac Effect,” Reviews of Modern Physics 39, 475–493 (1967), DOI: 10.1103/RevMod-
+     Phys.39.475.
+
+ [7] J. Frauendiener, “Notes on the Sagnac effect in general relativity,” General Relativity and Gravitation 50,
+     147 (2018), DOI: 10.1007/s10714-018-2470-5.
+
+ [8] M. L. Ruggiero, “Sagnac Effect, Ring Lasers and Terrestrial Tests of Gravity,” Galaxies 3, 84–102 (2015),
+     DOI: 10.3390/galaxies3020084.
+
+ [9] R. Gautier et al., “Accurate measurement of the Sagnac effect for matter waves,” Science Advances 8,
+     eabn8009 (2022), DOI: 10.1126/sciadv.abn8009.
+
+[10] NASA HEASARC, “NICER Data Analysis Threads – Barycenter Correction and Phase Resolved
+     Spectroscopy,” official Crab ObsID 3013010102 example, accessed 24 August 2026, https://heasarc.
+     gsfc.nasa.gov/docs/nicer/analysis_threads/bary_corr_phase_resolved_spectra/.
+
+[11] R. Javadinezhad and A. Seraj, “Gravitational holonomy in Sagnac interferometry,” Journal of High
+     Energy Physics 2026, 46 (2026), DOI: 10.1007/JHEP05(2026)046.
+
+[12] A. A. Kutsenko et al., “Method for calculating multiwave scattering by layered anisotropic media,” Wave
+     Motion 99, 102664 (2020), DOI: 10.1016/j.wavemoti.2020.102664.
+
+[13] M. Bachetti and D. Huppenkothen, “Barycentered NICER event list from ObsID 1200120106, used in
+     Stingray tutorial,” Zenodo (2024), DOI: 10.5281/zenodo.13149195.
+
+[14] B. C. Hall, Lie Groups, Lie Algebras, and Representations: An Elementary Introduction, 2nd ed., Springer,
+     2015.
+
+[15] V. Perlick, “Editorial note to: On the transition from wave optics to geometric optics in general relativity
+     by Jürgen Ehlers,” General Relativity and Gravitation 54, 39 (2022), DOI: 10.1007/s10714-021-02893-1.
+
+[16] V. Perlick, Ray Optics, Fermat’s Principle, and Applications to General Relativity, Lecture Notes in
+     Physics Monographs 61, Springer, 2000, DOI: 10.1007/3-540-46662-2.
+
+
+                                                      49
+Wrede, Casu – Middle Bridge + Unified Dynamics                                             29 August 2026
+
+
+[17] E. Caponio and M. A. Javaloyes, “On the formulations of the Fermat principle in general relativity and
+     beyond,” São Paulo Journal of Mathematical Sciences 20, 24 (2026), DOI: 10.1007/s40863-026-00549-z.
+
+[18] C. N. Wrede and L. P. Casu, with Bingsi, Segmented Spacetime – Expanded Integrated Edition with JIF
+     v1.0, author-supplied integrated reference manuscript, 2026. Relevant electromagnetic sections retain
+     Maxwell dynamics and state the geometric-optics/null-geodesic route.
+
+[19] C. N. Wrede, L. P. Casu, and Bingsi, Radial Scaling Gauge for Maxwell Fields – A Geometric
+     Reparametrization with Invariant Local Light Speed, author-supplied helper manuscript, 2026.
+
+[20] C. N. Wrede, L. P. Casu, and Bingsi, Segmented Spacetime – Maxwell Waves as Rotating Space, author-
+     supplied helper manuscript, 2026.
+
+[21] C. N. Wrede and L. P. Casu, PPN Formulas (Parametrized Post-Newtonian), canonical SSZ documentation,
+     ssz-complete-documentation/03_FORMULAS/ppn_formulas.md, source lock at the referenced repository
+     snapshot b2bac976a75dd70f26599b7debd19d88a835f429, accessed 25 August 2026, https://github.
+     com/error-wtf/ssz-complete-documentation/blob/main/03_FORMULAS/ppn_formulas.md.
+
+[22] C.   N.   Wrede   and   L.   P.  Casu,     Prime Directive,      canonical SSZ guardrail,
+     ssz-complete-documentation/11_GUARDRAILS/prime_directive.md, source lock at snapshot
+     b2bac976a75dd70f26599b7debd19d88a835f429, accessed 25 August 2026.
+
+[23] C. N. Wrede and L. P. Casu,             Method Assignment,       canonical SSZ guardrail,
+     ssz-complete-documentation/11_GUARDRAILS/method_assignment.md, source lock at snapshot
+     b2bac976a75dd70f26599b7debd19d88a835f429, accessed 25 August 2026.
+
+[24] C. N. Wrede and L. P. Casu, SSZ Parameterized Post-Newtonian Module and Weak-
+     Field  PPN     Domain    Tests,   SSZ-METRIC_COMPLETE/src/ssz_metric_pure/ppn.py   and
+     tests/test_weak_field_ppn_domain.py, source lock at the referenced repository snapshot
+     b7643f437f46a170f05e492609b27ed2a8acae73, accessed 25 August 2026.
+
+[25] C. N. Wrede and L. P. Casu, SSZ Consistency Check: Book Versions vs. Documentation
+     vs. Test Output, ssz-all-tests/CONSISTENCY_REPORT.md, 29 April 2026, repository snapshot
+     ed5359f15de3b7c12f5506d4acd7c8fe6a912952.
+
+[26] C. N. Wrede and L. P. Casu, SSZ All-Tests LIVE_STATUS.json, project-wide per-domain valida-
+     tion snapshot, accessed 25 August 2026, https://github.com/error-wtf/ssz-all-tests/blob/main/
+     LIVE_STATUS.json.
+
+[27] C. N. Wrede and L. P. Casu, SSZ Test Run Status – Final, ssz-all-tests/TEST_RUN_STATUS.md,
+     final status recording 1296/1296 passed, accessed 25 August 2026, https://github.com/error-wtf/
+     ssz-all-tests/blob/main/TEST_RUN_STATUS.md.
+
+[28] C. N. Wrede and L. P. Casu, SSZ All-Tests Integrity Check, ssz-all-tests/integrity-check.json,
+     recording total_passed=1296, total_failed=0, verdict=VERIFIED, accessed 25 August 2026, https:
+     //github.com/error-wtf/ssz-all-tests/blob/main/integrity-check.json.
+
+[29] C. N. Wrede and L. P. Casu, SSZ All-Tests Master Runner, ssz-all-tests/run_all_live.py, het-
+     erogeneous native-runner dispatcher, accessed 25 August 2026, https://github.com/error-wtf/
+     ssz-all-tests/blob/main/run_all_live.py.
+
+[30] C. N. Wrede and L. P. Casu, SSZ Research Portal static radial implementation, assets/js/physics.js,
+     source lock at the referenced repository snapshot 6c1589d2e478e8e8ed28c323011727c7b898625c, ac-
+     cessed 25 August 2026.
+
+[31] C. N. Wrede and L. P. Casu, with the help of Bingsi AI, SSZ Unified Dynamics Phase-1 Strong-First
+     Audit, executable validation/report bundle, 25 August 2026.
+
+[32] C. M. Will, “The Confrontation between General Relativity and Experiment,” Living Reviews in Relativity
+     9, 3 (2006), DOI: 10.12942/lrr-2006-3.
+
+[33] B. Bertotti, L. Iess, and P. Tortora, “A test of general relativity using radio links with the Cassini
+     spacecraft,” Nature 425, 374–376 (2003), DOI: 10.1038/nature01997.
+
+
+                                                    50
+Wrede, Casu – Middle Bridge + Unified Dynamics                           29 August 2026
+
+
+[34] C. N. Wrede and L. P. Casu, SSZ–JIF Forward Lab, archived public research snap-
+     shot, GitHub repository error-wtf/ssz-jif-forward-lab, code audit locked to commit
+     90eb4eb594ca41f8ca92d3c4945b108d23a0dc5c, 5 August 2026.
+
+
+
+
+                                            51
+

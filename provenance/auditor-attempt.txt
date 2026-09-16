@@ -1,0 +1,4 @@
+Command: python ssz_p5_full_closure_auditor.py --data-dir . --full --json build/audit.json --csv build/gates.csv
+Runtime: Python with numpy 2.3.5 and pandas 2.2.3
+Exit code: 4
+FATAL missing required input: ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv / ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15.csv
