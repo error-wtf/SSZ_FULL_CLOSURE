@@ -16,20 +16,12 @@ import math
 import numpy as np
 import pandas as pd
 
-B=Path('/mnt/data')
+from ssz_p5.paths import paths as B
 
-def deriv(x,y,order=1,window=9,degree=8):
-    x=np.asarray(x,float); y=np.asarray(y,float); n=len(x); out=np.empty(n)
-    half=window//2
-    for i in range(n):
-        lo=max(0,i-half); hi=min(n,lo+window); lo=max(0,hi-window)
-        xx=x[lo:hi]; yy=y[lo:hi]; x0=x[i]
-        sc=float(np.max(np.abs(xx-x0))) or 1.0
-        z=(xx-x0)/sc; deg=min(degree,len(xx)-1)
-        co=np.polynomial.polynomial.polyfit(z,yy,deg)
-        if order>deg: out[i]=np.nan
-        else: out[i]=math.factorial(order)*co[order]/sc**order
-    return out
+def deriv(x, y, order=1, window=9, degree=8):
+    from ssz_p5.jets.jet9d8 import derivative
+    return derivative(x, y, order, window=window, degree=degree)
+
 
 def emit(df, H=None, G4phi=None, G3X=None, c2_profile=None, window=9, degree=8):
     d=df.copy().reset_index(drop=True)

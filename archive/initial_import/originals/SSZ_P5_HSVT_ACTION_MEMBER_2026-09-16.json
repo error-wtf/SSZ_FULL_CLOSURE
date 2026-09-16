@@ -1,0 +1,26 @@
+{
+  "name": "SSZ P5 full-constructive-closure HSVT member",
+  "release": "2026-09-16",
+  "background": {
+    "geometry": "frozen P5",
+    "scalar": "phi = Xi(r_s/r)",
+    "vector_branch": "A0prime = 0"
+  },
+  "action": {
+    "base": "globally patched on-shell Horndeski P5 representative",
+    "genuine_svt_deformation": "Delta f2 = epsilon_Y * Y",
+    "epsilon_Y": 0.01,
+    "Y_definition": "nabla_mu phi nabla_nu phi F^{mu alpha} F^{nu}{}_alpha"
+  },
+  "exact_properties": {
+    "background_null": true,
+    "quadratically_nontrivial": true,
+    "quadratic_factorization_on_zero_vector_background": true,
+    "vector_margin": "Z_A = 1 - 2 h phi_r^2 epsilon_Y",
+    "global_Z_A_min_certified": 0.9872911806592305
+  },
+  "status": {
+    "FULL_CONSTRUCTIVE_CLOSURE": "PASS",
+    "DIRECT_GLOBAL_KRGM_EXPORT": "OPEN_IMPLEMENTATION_GATE"
+  }
+}

@@ -1,0 +1,9 @@
+TARGET REPOSITORY TREE
+
+See CODEX_IMPLEMENTATION_SPEC.md section 3. This file exists so Codex can copy the structure without parsing prose.
+
+src/ssz_p5/{geometry,action,jets,coefficients,constraints,reducer,stability,export,provenance,qnm}
+data/{authoritative,regression,generated,certificates}
+tests/{unit,regression,negative,integration}
+scripts/
+.github/workflows/

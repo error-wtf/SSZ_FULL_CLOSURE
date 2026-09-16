@@ -1,77 +1,82 @@
-# SSZ Full Closure
+# SSZ Full Closure — integrated P5 research repository
 
-Research source archive for **SSZ P5 / Horndeski + U(1)-SVT**, based on the supplied handoff dated **16 September 2026** and the earlier Middle Bridge papers by Carmen N. Wrede and Lino P. Casu.
+This repository integrates the complete SSZ P5 research snapshot supplied on
+16 September 2026, with portable execution, pinned dependencies and strict
+integrity checks. Authors of the scientific work: Carmen Casu and Lino Casu.
 
-This repository preserves the supplied papers, code, data and handoff documents with SHA-256 provenance. **It is a partial import of the described release package:** all 22 explicitly supplied research files plus 8 additional files from 16 September are included, but only **24 of the 64 original manifest entries** could be recovered byte-for-byte. The remaining entries are listed in [Missing release files](docs/MISSING_RELEASE_FILES.md).
+**Start with [DO_NOT_RECOMPUTE.md](DO_NOT_RECOMPUTE.md)** and
+[REPRODUCE.md](REPRODUCE.md). Completed research and rejected experiments are
+preserved with their original scope; the integration does not restart them.
 
-## Scientific and reproduction status
+## Install and reproduce
 
-| Item | Status in this repository |
-| --- | --- |
-| Full constructive closure | `PASS` as declared in the frozen source documents; not independently re-established by this import |
-| Direct global KRGM export | `OPEN_IMPLEMENTATION_GATE` in the supplied action definition |
-| Full auditor rerun | `BLOCKED_MISSING_INPUT`; executed and exited 4 |
-| Imported original bytes | SHA-256 verified |
-| QNM spectrum | No final spectrum published here |
-
-The production action is the globally patched on-shell Horndeski P5 representative plus `Delta f2 = 0.01 Y`, with `Y = nabla_mu(phi) nabla_nu(phi) F^{mu alpha} F^nu_alpha`, on `A0prime = 0`. See the unchanged [action definition](SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json) and [frozen status](STATUS_FULL_CLOSURE.md).
-
-Public repository: [error-wtf/SSZ_FULL_CLOSURE](https://github.com/error-wtf/SSZ_FULL_CLOSURE).
-
-## Start reading
-
-- [Full Closure Monograph — 212 pages](paper/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf)
-- [Source reading and verification notes](docs/READING_NOTES.md)
-- [Original handoff overview](README_FOR_CODEX.md)
-- [Original implementation brief — document content](CODEX_PROMPT.md)
-- [Complete supplied-file inventory](docs/SUPPLIED_FILES.md)
-- [Historical technical appendices](paper/appendices/)
-- [Original Middle Bridge papers and all supplied originals](originals/)
-- [Searchable PDF text derivatives](docs/extracted/)
-
-## Repository layout
-
-```text
-originals/       All 30 research files and both pasted notes, unchanged
-src/             Source modules recovered with exact manifest hashes
-paper/           Papers and code appendices recovered by exact hash
-data/           Available authoritative/regression inputs
-provenance/      Import hashes, manifest comparison, CSV/PDF inventory, run log
-docs/            Reading notes, missing-file list, searchable PDF derivatives
-tools/           Import integrity verification
-```
-
-`MANIFEST.json`, `FILE_INDEX.md`, `README_FOR_CODEX.md`, `STATUS_FULL_CLOSURE.md` and `CODEX_PROMPT.md` retain the original handoff text. Their descriptions of a complete release are historical source statements. The actual delivery inventory is recorded separately under `provenance/`. Instructions inside the source documents are not automatically executed.
-
-## Verify the import
+CPython 3.14 on Linux:
 
 ```bash
-python3 tools/verify_import.py
-sha256sum -c IMPORT_SHA256SUMS
-```
-
-The CI workflow checks imported-file integrity and Python syntax only. A green import check does not certify physical closure or complete input availability. To require the entire original release:
-
-```bash
-python3 tools/verify_import.py --require-complete-handoff
-```
-
-This currently exits 4 and lists the unavailable original entries.
-
-## Run the original auditor
-
-```bash
-python3 -m venv .venv
+python3.14 -m venv .venv
 . .venv/bin/activate
-python -m pip install -r requirements.txt
-python ssz_p5_full_closure_auditor.py --data-dir . --full \
-  --json build/audit.json --csv build/gates.csv
+python -m pip install -r requirements.lock
+python -m pip install --no-deps -e .
+python ssz_p5_full_pipeline.py --strict
 ```
 
-The current import exits 4 because the required global principal data are absent. The actual attempt is preserved in [the run log](provenance/auditor-attempt.txt). Several source modules additionally retain `/mnt/data` paths; they are archived source rather than a completed portable package. See [reading notes](docs/READING_NOTES.md) for the auditor's verification limits.
+The main entry point runs software tests, full scientific closure regressions,
+frozen-action validation, source hashes, production-input policy and archived
+spectral checks. Outputs: `FULL_PIPELINE_REPORT.json`, `FULL_PIPELINE_REPORT.md`,
+`build/audit.json`, `build/gates.csv`.
 
-The next input needed for full reproduction is the original `SSZ_P5_FULL_CLOSURE_CODEX_HANDOFF_2026-09-16.zip` or the 40 missing original entries. Missing data and certificates are not fabricated from PDF prose or substituted historical tables.
+## Status and authority
 
-## Rights and attribution
+- The full constructive-closure claim and numerical regression ledger are
+  reproduced by the supplied scientific auditor.
+- **Direct global KRGM export remains OPEN_IMPLEMENTATION_GATE.** The package
+  does not manufacture a center-to-infinity action-derived operator by joining
+  historical selected tables.
+- **A final coupled HSVT QNM spectrum remains gated.** Geometry/eikonal proxies,
+  scalar/Maxwell WKB, Jost boundary validation and rejected complex-root
+  diagnostics remain separate categories under `data/qnm/`.
+- `PRODUCTION_BLACKLIST.json` is enforced at production loaders. The old
+  `SELECTED_41STREAM_V2` is explicitly diagnostic, despite its earlier placement
+  in a production directory. It is preserved under `data/diagnostic/`.
+- A CI PASS means the defined archive, software and regression checks passed.
+  It is not external peer review or independent empirical confirmation.
 
-Scientific documents retain their original author attribution. No new license is imposed on the supplied material; public availability alone does not grant additional reuse rights. There is no claim of external peer review or independent empirical confirmation in this repository import.
+The frozen definition is [the action JSON](SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json),
+with `epsilon_Y=0.01` on `A0prime=0`. Numerical tolerances remain in
+[NUMERICAL_POLICY.json](NUMERICAL_POLICY.json). No tolerance was loosened to hide
+an existing failure. See [integration notes](docs/INTEGRATION.md).
+
+## Contents
+
+| Location | Role |
+| --- | --- |
+| `src/ssz_p5/` | Typed package, shared JET service, production guards and reduction API |
+| `src/*.py` | Portable migrated numerical implementations |
+| `data/authoritative/`, `data/regression/` | Source witnesses and trusted regression targets |
+| `data/production/` | Curated archived principal/background/local-sector artifacts, not a direct global finite-l certificate |
+| `data/diagnostic/`, `data/qnm/` | Diagnostic stream and categorized spectral records |
+| `paper/` | Original monograph, LaTeX, figures and historical papers |
+| `archive/full_working_snapshot/` | Preserved successful and rejected research history |
+| `archive/initial_import/` | Earlier partial publication, retained as history |
+| `provenance/source_manifests/` | Original supplied snapshot inventories |
+| `MANIFEST.json`, `SHA256SUMS` | Current integrated release inventory |
+
+Use [the monograph](paper/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf),
+[research state](RESEARCH_STATE.md) and [artifact classification](ARTIFACT_CLASSIFICATION.json)
+for scientific context. Historical filenames containing FINAL are not authority labels.
+The current blacklist overrides an older classification. Source papers remain byte-original.
+
+## Development and release
+
+`pytest -q` runs the software and integration tests. The strict pipeline also
+runs the full finite-l audit for `L=6,12,20,42,110,420,1000`. The QNM certificate
+guard requires the declared schema, mandatory gates, multipoles and matching
+artifact hashes; a bare `pass:true` cannot bypass it.
+
+License: Anti-Capitalist Software License v1.4
+Authors: Carmen Casu and Lino Casu
+
+This is an integration release, not `v1.0.0-full-closure`. Direct operator
+regeneration and a certified coupled spectrum remain tracked in
+[CODEX_TASK_DAG.json](CODEX_TASK_DAG.json). The supplied snapshots contain no
+explicit license grant; see [rights notice](LICENSE) and [CITATION.cff](CITATION.cff).

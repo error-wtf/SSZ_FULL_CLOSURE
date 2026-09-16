@@ -361,8 +361,9 @@ def gate_direct_global_krgm(root: Path) -> List[Gate]:
                      "dedicated direct regenerated-action certificate required",
                      "not inferred from old selected/split tables",level="implementation")]
     try:
-        obj=json.loads(cert.read_text(encoding="utf-8"))
-        ok=bool(obj.get("pass",False))
+        from ssz_p5.qnm.gate import require_direct_krgm_certificate
+        obj=require_direct_krgm_certificate(cert, root)
+        ok=True
     except Exception as e:
         return [Gate("DIRECT_GLOBAL_KRGM_EXPORT","FAIL",str(e),"valid JSON certificate",cert.name,level="implementation")]
     return [Gate("DIRECT_GLOBAL_KRGM_EXPORT","PASS" if ok else "FAIL",obj,"pass=true",cert.name,level="implementation")]
@@ -473,6 +474,8 @@ def main(argv=None) -> int:
         make_plots(root,ns.plots,gates,ns.epsilon_y)
 
     if summary["FULL_CONSTRUCTIVE_CLOSURE"]!="PASS": return 2
+    if summary["numerical_regression_failures"]: return 2
+    if any(g.status == "FAIL" for g in gates): return 2
     if ns.require_direct_krgm and summary["DIRECT_GLOBAL_KRGM_EXPORT"]!="PASS": return 3
     return 0
 

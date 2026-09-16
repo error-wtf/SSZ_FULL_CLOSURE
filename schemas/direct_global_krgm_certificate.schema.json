@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SSZ P5 Direct Global KRGM Certificate",
+  "type": "object",
+  "required": [
+    "pass",
+    "release",
+    "action_sha256",
+    "coefficient_stream_sha256",
+    "L_values",
+    "gates",
+    "artifacts"
+  ],
+  "properties": {
+    "pass": {
+      "type": "boolean",
+      "const": true
+    },
+    "release": {
+      "type": "string",
+      "const": "2026-09-16"
+    },
+    "action_sha256": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "coefficient_stream_sha256": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "L_values": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 6
+      },
+      "contains": {
+        "const": 6
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "status",
+          "criterion",
+          "evidence"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "PASS_EXACT",
+              "PASS_NUMERICAL"
+            ]
+          },
+          "value": {},
+          "criterion": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "minLength": 64,
+            "maxLength": 64
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

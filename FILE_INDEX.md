@@ -32,3 +32,14 @@ a5 service, high-L mass closure and regression cross-checks.
 ## Integrity
 - `MANIFEST.json` contains size and SHA-256 for every release file except itself and `SHA256SUMS`.
 - `SHA256SUMS` is the standard checksum list.
+
+## Token-saving implementation contracts
+- `CODEX_IMPLEMENTATION_SPEC.md` - exact architecture, algorithms, APIs, tests, CLI, CI and Definition of Done.
+- `CODEX_TASK_DAG.json` - machine-readable task dependency graph D0-D6.
+- `NUMERICAL_POLICY.json` - centralized tolerances and default multipoles.
+- `CODEX_API_SKELETON.py` - public target API signatures.
+- `PRODUCTION_BLACKLIST.json` - machine-readable forbidden production sources/methods.
+- `NEGATIVE_TESTS.md` - mandatory failure-regression suite.
+- `schemas/` - provenance and direct-KRGM certificate schemas.
+- `pyproject.toml.template` and `.github/workflows/ci.yml.template` - ready-to-adapt packaging/CI templates.
+- `HUMAN_DECISIONS_ONLY.md` - the few choices Codex must not guess.

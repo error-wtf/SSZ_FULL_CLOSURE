@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SSZ P5 artifact provenance",
+  "type": "object",
+  "required": [
+    "release",
+    "artifact",
+    "status",
+    "generator",
+    "git_commit",
+    "python_version",
+    "action_sha256",
+    "inputs",
+    "parameters",
+    "sha256"
+  ],
+  "properties": {
+    "release": {
+      "type": "string"
+    },
+    "artifact": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "authoritative",
+        "regression",
+        "generated",
+        "diagnostic",
+        "superseded"
+      ]
+    },
+    "generator": {
+      "type": "string"
+    },
+    "git_commit": {
+      "type": "string"
+    },
+    "python_version": {
+      "type": "string"
+    },
+    "dependency_lock_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "action_sha256": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "sha256": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

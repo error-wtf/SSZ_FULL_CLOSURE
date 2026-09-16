@@ -29,7 +29,7 @@ import importlib.util
 import numpy as np
 import pandas as pd
 
-B = Path('/mnt/data')
+from ssz_p5.paths import paths as B
 
 # Accepted derivative service.
 spec = importlib.util.spec_from_file_location('hj', B/'ssz_p5_higher_jet_closure_2026-09-16.py')

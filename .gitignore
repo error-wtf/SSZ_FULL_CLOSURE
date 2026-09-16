@@ -1,6 +1,13 @@
 __pycache__/
 *.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
 .venv/
 build/
-.env
+dist/
 *.env
+.env
+FULL_PIPELINE_REPORT.json
+FULL_PIPELINE_REPORT.md

@@ -1,0 +1,15 @@
+domain,test,value,status
+outer_handover,actual_residual_E00,1.8041124150158796e-16,PASS
+outer_handover,actual_residual_E11,3.226585665316861e-16,PASS
+outer_handover,vector_current_JA,1.6325426905854336e-15,PASS
+inner_handover,actual_residual_E00,8.881784197001252e-16,PASS
+inner_handover,actual_residual_E11,4.6629367034256575e-15,PASS
+inner_handover,vector_current_JA,3.072770957065496e-15,PASS
+outer_handover,naive_standard_sum_E00,2.1611046285840985e-12,DIAGNOSTIC_ONLY
+outer_handover,naive_standard_sum_E11,3.2033126151631564e-12,DIAGNOSTIC_ONLY
+inner_handover,naive_standard_sum_E00,9.900746643697207,DIAGNOSTIC_ONLY
+inner_handover,naive_standard_sum_E11,3.733177113215337,DIAGNOSTIC_ONLY
+inner_handover,f2_equals_S_times_fullSVT_reference,1.6653345369377348e-16,PASS
+inner_handover,f2X_equals_S_times_fullSVT_reference,5.329070518200751e-15,PASS
+inner_handover,f2F_approx_S_partition,3.012898912579942e-07,PASS_NUMERICAL
+outer_handover,f2F_approx_S_partition,9.368633746564825e-06,PASS_NUMERICAL

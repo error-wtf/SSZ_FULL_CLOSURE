@@ -1,0 +1,4 @@
+gate,passed,reported_value,criterion
+strong-H a5 identity regression,True,0.0006636211581147087,median <1e-5; max <1e-3
+core a5 selection convergence,True,0.00014958921099447644,median <1e-5; max <5e-4
+core selected a1 stays in archived control tube,True,0.00018774397198865095,median <1e-5; max <5e-4

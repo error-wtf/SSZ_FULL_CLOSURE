@@ -18,35 +18,15 @@ import math
 import numpy as np
 import pandas as pd
 
-B = Path('/mnt/data')
+from ssz_p5.paths import paths as B
 CFILE = B/'ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv'
 RFILE = B/'ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv'
 JFILE = B/'ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv'
 
 
 def local_poly_deriv(x, y, order=1, window=9, degree=8):
-    """Local polynomial derivative on a monotone, nonuniform grid.
-
-    The abscissa is centered/scaled in every stencil, avoiding the severe
-    condition-number growth of a direct Vandermonde fit in r.  For the default
-    9-point/degree-8 stencil this is the unique local interpolating polynomial.
-    """
-    x = np.asarray(x, float); y = np.asarray(y, float)
-    if x.ndim != 1 or y.ndim != 1 or len(x) != len(y):
-        raise ValueError('x,y must be equal-length 1-D arrays')
-    if window < degree + 1:
-        raise ValueError('window must be >= degree+1')
-    n = len(x); out = np.empty(n, float)
-    half = window // 2
-    for i in range(n):
-        lo = max(0, i-half); hi = min(n, lo+window); lo = max(0, hi-window)
-        xx = x[lo:hi]; yy = y[lo:hi]; x0 = x[i]
-        scale = float(np.max(np.abs(xx-x0))) or 1.0
-        z = (xx-x0)/scale
-        coef = np.polynomial.polynomial.polyfit(z, yy, min(degree, len(xx)-1))
-        out[i] = (math.factorial(order)*coef[order]/scale**order
-                  if order < len(coef) else 0.0)
-    return out
+    from ssz_p5.jets.jet9d8 import derivative
+    return derivative(x, y, order, window=window, degree=degree)
 
 
 def scaled_rel(a,b):

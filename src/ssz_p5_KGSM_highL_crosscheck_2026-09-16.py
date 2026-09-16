@@ -1,6 +1,6 @@
 from pathlib import Path
 import importlib.util, numpy as np, pandas as pd
-B=Path('/mnt/data')
+from ssz_p5.paths import paths as B
 # reducer
 spec=importlib.util.spec_from_file_location('op',B/'ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py')
 op=importlib.util.module_from_spec(spec); spec.loader.exec_module(op)

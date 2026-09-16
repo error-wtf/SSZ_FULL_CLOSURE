@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-16",
+  "rules": {
+    "production": "usable scientific input/result in current consolidated state",
+    "qnm": "spectral/QNM work already performed; scope must be preserved",
+    "regression": "reference output used to verify code/identities",
+    "checkpoint": "technical memory/status provenance",
+    "archive": "full working snapshot; may include rejected/superseded experiments"
+  },
+  "key_artifacts": [
+    {
+      "path": "data/diagnostic/ssz_p5_SELECTED_41STREAM_V2_2026-09-16.csv",
+      "class": "DIAGNOSTIC",
+      "note": "Preserved historical stream; PRODUCTION_BLACKLIST explicitly forbids it as production input."
+    },
+    {
+      "path": "data/production/ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "class": "production",
+      "note": "45,617-point canonical principal K/R/G center-to-infinity stream"
+    },
+    {
+      "path": "data/production/ssz_p5_F2_outer_same_action_RESOLVED_background_jets_2026-09-15.csv",
+      "class": "production",
+      "note": "outer re-solved same-action background jets"
+    },
+    {
+      "path": "data/production/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv",
+      "class": "production",
+      "note": "inner re-solved same-action background jets"
+    },
+    {
+      "path": "data/qnm/ssz_p5_F3_maxwell_l2_jost_convergence_2026-09-15.csv",
+      "class": "qnm",
+      "note": "complex-pole/Jost convergence study; finite-radius pole candidates not accepted as physical QNM frequencies"
+    },
+    {
+      "path": "data/qnm/SSZ_P5_POST_CLOSURE_SPECTRAL_PROBE_v2_2026-09-14.md",
+      "class": "qnm",
+      "note": "scalar/Maxwell WKB trapping thresholds and spectral diagnostics"
+    },
+    {
+      "path": "data/qnm/SSZ_P5_F3_COUPLED_QNM_EXECUTION_CHECKPOINT_2026-09-15.md",
+      "class": "qnm",
+      "note": "Jost-tail validation and coupled-QNM execution checkpoint"
+    },
+    {
+      "path": "data/qnm/SSZ_QNM_HISTORICAL_VS_V13_RECONCILIATION_v1_REPORT_2026-08-28.md",
+      "class": "qnm",
+      "note": "prevents mixing historical polynomial metric QNM proxy with current branch"
+    },
+    {
+      "path": "archive/full_working_snapshot",
+      "class": "archive",
+      "note": "all recovered working artifacts; never production by filename alone"
+    }
+  ]
+}

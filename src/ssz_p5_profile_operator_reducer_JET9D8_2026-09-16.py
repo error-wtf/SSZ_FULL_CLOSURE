@@ -14,7 +14,7 @@ import importlib.util
 import numpy as np
 import pandas as pd
 
-B=Path('/mnt/data')
+from ssz_p5.paths import paths as B
 
 # accepted derivative service
 spec=importlib.util.spec_from_file_location('hj',B/'ssz_p5_higher_jet_closure_2026-09-16.py')
@@ -30,39 +30,9 @@ SLOTS=[*[f'a{i}' for i in range(1,10)],*[f'b{i}' for i in range(1,6)],
        *[f'e{i}' for i in range(1,5)],*[f'v{i}' for i in range(1,14)]]
 
 
-_JET_CACHE={}
-def _jet_weights(r,order,window=9,degree=8):
-    r=np.asarray(r,float)
-    key=(r.shape, r.tobytes(), int(order), int(window), int(degree))
-    if key in _JET_CACHE: return _JET_CACHE[key]
-    n=len(r); half=window//2
-    inds=np.empty((n,window),dtype=int); weights=np.zeros((n,window),float)
-    import math
-    for i in range(n):
-        lo=max(0,i-half); hi=min(n,lo+window); lo=max(0,hi-window)
-        idx=np.arange(lo,hi,dtype=int); xx=r[idx]; x0=r[i]
-        scale=float(np.max(np.abs(xx-x0))) or 1.0
-        z=(xx-x0)/scale
-        deg=min(degree,len(idx)-1)
-        V=np.polynomial.polynomial.polyvander(z,deg)
-        # coef = solve(V,y), hence derivative weights are row(order) of inv(V)
-        if order<=deg:
-            inv=np.linalg.inv(V)
-            w=math.factorial(order)*inv[order,:]/scale**order
-        else:
-            w=np.zeros(len(idx))
-        inds[i,:len(idx)]=idx
-        if len(idx)<window: inds[i,len(idx):]=idx[-1]
-        weights[i,:len(idx)]=w
-    _JET_CACHE[key]=(inds,weights)
-    return inds,weights
-
-def deriv(r,a,order,window=9,degree=8):
-    a=np.asarray(a,float)
-    if order==0: return a
-    inds,w=_jet_weights(r,order,window,degree)
-    vals=a[inds]  # n,window,...
-    return np.einsum('nw,nw...->n...',w,vals,optimize=True)
+def deriv(r, a, order, window=9, degree=8):
+    from ssz_p5.jets.jet9d8 import profile_derivative
+    return profile_derivative(r, a, order, window, degree)
 
 
 def addop(dst,key,val):

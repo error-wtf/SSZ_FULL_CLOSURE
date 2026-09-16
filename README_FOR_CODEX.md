@@ -2,6 +2,20 @@
 
 This directory is intended to be sufficient for building a clean, reproducible research repository.
 
+
+## Zero-design start
+
+Codex should not spend tokens deciding architecture. The detailed implementation is frozen in:
+
+- `CODEX_IMPLEMENTATION_SPEC.md` — complete build algorithm, APIs, schemas, tests, CI and Definition of Done.
+- `CODEX_TASK_DAG.json` — strict implementation dependency order.
+- `NUMERICAL_POLICY.json` — centralized numerical policy.
+- `CODEX_API_SKELETON.py` — target public Python API.
+- `PRODUCTION_BLACKLIST.json` / `NEGATIVE_TESTS.md` — forbidden historical shortcuts and mandatory failure tests.
+- `schemas/` — provenance and direct-certificate JSON schemas.
+
+The final epsilon-Y production member is simpler than the historical electric-SVT construction: on `A0prime=0`, constant `epsilon_Y` modifies only `v1` and `v10` by the factor `Z_A=1-2*kappa*epsilon_Y`. Do not reconstruct the historical electric-SVT handovers for the production pipeline.
+
 ## First command
 
 ```bash

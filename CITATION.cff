@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this research release, cite the SSZ P5 Full Constructive Closure Monograph and preserve the release date and provenance manifest."
+title: "SSZ P5 / Horndeski + U(1)-SVT: Full Constructive Closure"
+version: "2026-09-16"
+date-released: "2026-09-16"
+type: software
+abstract: "Research/reproducibility release containing the constructive closure certificate, finite-l perturbation tooling, action definition, master auditor, and monograph."
+
+authors:
+  - family-names: Casu
+    given-names: Carmen
+  - family-names: Casu
+    given-names: Lino
+license: ACSL-1.4
+keywords: [SSZ, Horndeski, SVT, reproducibility]

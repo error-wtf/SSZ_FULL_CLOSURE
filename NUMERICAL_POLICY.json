@@ -1,0 +1,45 @@
+{
+  "release": "2026-09-16",
+  "jet9d8": {
+    "window": 9,
+    "degree": 8,
+    "allowed_regression_windows": [
+      7,
+      9,
+      11,
+      13
+    ],
+    "allowed_regression_degrees": [
+      6,
+      7,
+      8
+    ]
+  },
+  "multipoles_default": [
+    6,
+    12,
+    20,
+    42,
+    110,
+    420,
+    1000
+  ],
+  "epsilon_y": 0.01,
+  "exact_zero_abs": 1e-12,
+  "background_residual_abs": 1e-10,
+  "branch_identity_abs": 1e-10,
+  "matrix_symmetry_scaled": 1e-07,
+  "R_zero_scaled": 1e-10,
+  "pivot_floor": 1e-10,
+  "kinetic_eigenvalue_floor": 0.0,
+  "radial_speed2_floor": 0.0,
+  "za_floor": 0.0,
+  "finite_required": true,
+  "scaled_error_floor": 1.0,
+  "notes": [
+    "Strict positivity gates use >0; reported margins must be retained, not rounded to zero.",
+    "Exact analytic center certificate overrides finite-difference sign when the true signal is O(r^4).",
+    "Historical regression-specific thresholds remain encoded in their dedicated tests; do not globally loosen these values to make old rounded tables pass.",
+    "Before applying matrix eigenvalue gates, separately verify symmetry/antisymmetry residuals."
+  ]
+}

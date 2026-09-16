@@ -1,0 +1,27 @@
+name: SSZ P5 reproducibility
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - run: ruff check src/ssz_p5 tests tools/release_manifest.py ssz_p5_full_pipeline.py
+      - run: python tools/release_manifest.py --check
+      - run: python ssz_p5_full_pipeline.py --strict
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: closure-reproduction-report
+          path: |
+            FULL_PIPELINE_REPORT.json
+            FULL_PIPELINE_REPORT.md
+            build/audit.json
+            build/gates.csv

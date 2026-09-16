@@ -1,0 +1,27 @@
+{
+  "release": "2026-09-16",
+  "production_forbidden_patterns": [
+    "*OUTER_FINAL_SAME_ACTION*",
+    "*CENTRAL_V6_EQ433_OUTER_MATCH*",
+    "*ZK_EQ433_CLOSED_FINITE_L_K*",
+    "*SELECTED_41STREAM_V2*"
+  ],
+  "rules": [
+    {
+      "kind": "branch",
+      "forbid": "v12=+v6/(2h)"
+    },
+    {
+      "kind": "identity",
+      "forbid": "a5 missing -a1''"
+    },
+    {
+      "kind": "method",
+      "forbid": "Reduce(A)+Reduce(B) used as hybrid production result"
+    },
+    {
+      "kind": "source",
+      "forbid": "legacy_superseded as production input"
+    }
+  ]
+}

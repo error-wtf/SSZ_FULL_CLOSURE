@@ -1,0 +1,5 @@
+# Runtime dependencies inferred from the supplied Python imports.
+# This is not the missing original handoff requirements file.
+numpy==2.3.5
+pandas==2.2.3
+matplotlib>=3.8,<4

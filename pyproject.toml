@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ssz-p5"
+version = "0.2.0"
+description = "Reproducible SSZ P5 Horndeski + U(1)-SVT closure and perturbation pipeline"
+authors = [{name = "Carmen Casu"}, {name = "Lino Casu"}]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.0,<4",
+  "scipy>=1.11,<2",
+  "matplotlib>=3.8,<4",
+  "jsonschema>=4.22,<5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-cov>=5,<8", "ruff>=0.6,<1", "mypy>=1.11,<2"]
+
+[project.scripts]
+ssz-p5 = "ssz_p5.cli:main"
+ssz-p5-full-pipeline = "ssz_p5.cli:full_pipeline_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ssz_p5*"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E","F","I","UP","B"]

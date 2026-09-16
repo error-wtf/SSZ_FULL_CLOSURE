@@ -1,0 +1,1069 @@
+{
+  "summary": {
+    "release": "2026-09-16",
+    "action_member": {
+      "definition": "Horndeski_P5_global + epsilon*Y",
+      "epsilon_Y": 0.01,
+      "vector_background": "A0prime=0"
+    },
+    "FULL_CONSTRUCTIVE_CLOSURE": "PASS",
+    "DIRECT_GLOBAL_KRGM_EXPORT": "OPEN",
+    "numerical_regression_failures": [],
+    "constructive_failures": [],
+    "gate_counts": {
+      "OPEN": 1,
+      "PASS": 120,
+      "PASS_EXACT": 7
+    }
+  },
+  "gates": [
+    {
+      "name": "geometry_f_positive",
+      "status": "PASS",
+      "value": 0.2500000000000079,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "geometry_h_positive",
+      "status": "PASS",
+      "value": 0.3268566655925778,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "principal_cT2_positive",
+      "status": "PASS",
+      "value": 0.999262399874648,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "principal_cS2_positive",
+      "status": "PASS",
+      "value": 0.9037451776188076,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "principal_cV2_positive",
+      "status": "PASS",
+      "value": 1.0,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "global_principal_R_zero",
+      "status": "PASS",
+      "value": 0.0,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "principal_stream_rows",
+      "status": "PASS",
+      "value": 45617,
+      "criterion": ">=40000",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "outer_handover_actual_residual_E00",
+      "status": "PASS",
+      "value": 1.8041124150158799e-16,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "outer_handover_actual_residual_E11",
+      "status": "PASS",
+      "value": 3.226585665316861e-16,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "outer_handover_vector_current_JA",
+      "status": "PASS",
+      "value": 1.6325426905854336e-15,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "inner_handover_actual_residual_E00",
+      "status": "PASS",
+      "value": 8.881784197001252e-16,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "inner_handover_actual_residual_E11",
+      "status": "PASS",
+      "value": 4.6629367034256575e-15,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "inner_handover_vector_current_JA",
+      "status": "PASS",
+      "value": 3.072770957065496e-15,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_handover_rank",
+      "status": "PASS",
+      "value": 3.0,
+      "criterion": ">=3",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_handover_condition",
+      "status": "PASS",
+      "value": 2.449490659010719,
+      "criterion": "<10",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_handover_rel_residual",
+      "status": "PASS",
+      "value": 2.538375275598637e-08,
+      "criterion": "<1e-6",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_tensor_F",
+      "status": "PASS",
+      "value": 0.9999999770884102,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_tensor_H",
+      "status": "PASS",
+      "value": 0.9999996407448842,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "analytic_center_kinetic",
+      "status": "PASS_EXACT",
+      "value": 0.00274375128377,
+      "criterion": "coefficient of r^4 > 0",
+      "evidence": "F1b analytic Taylor certificate",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_F_tensor_positive",
+      "status": "PASS",
+      "value": 0.7848268111217971,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_G_tensor_positive",
+      "status": "PASS",
+      "value": 0.7848268111217971,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_H_tensor_positive",
+      "status": "PASS",
+      "value": 0.7848268111217971,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_K_scalar_positive",
+      "status": "PASS",
+      "value": 0.0097422527595834,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_crS2_positive",
+      "status": "PASS",
+      "value": 0.999999999999986,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_kappa_nonnegative",
+      "status": "PASS",
+      "value": 0.09883837302401212,
+      "criterion": ">=0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_F_tensor_positive",
+      "status": "PASS",
+      "value": 1.0,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_G_tensor_positive",
+      "status": "PASS",
+      "value": 0.9996310638951968,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_H_tensor_positive",
+      "status": "PASS",
+      "value": 0.9996310638951968,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_K_scalar_positive",
+      "status": "PASS",
+      "value": 7.331670016895128e-06,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_crS2_positive",
+      "status": "PASS",
+      "value": 0.9999999999999996,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_kappa_nonnegative",
+      "status": "PASS",
+      "value": 1.8582154272635095e-10,
+      "criterion": ">=0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "MH_finite_l_no_ghost_theorem",
+      "status": "PASS_EXACT",
+      "value": null,
+      "criterion": "F>0, G2F=1>0, K_scalar>0 on certified Horndeski patches",
+      "evidence": "Kase-Tsujikawa 2023 Eqs. 4.27-4.31",
+      "level": "constructive"
+    },
+    {
+      "name": "horndeski_control_rank",
+      "status": "PASS",
+      "value": 5.0,
+      "criterion": ">=5",
+      "evidence": "ssz_p5_full_horndeski_principal_control_rank_2026-09-12.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "horndeski_control_sigma_min",
+      "status": "PASS",
+      "value": 0.007141457821951,
+      "criterion": ">0",
+      "evidence": "ssz_p5_full_horndeski_principal_control_rank_2026-09-12.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_K_ZK_exact",
+      "status": "PASS",
+      "value": 10.541549191507215,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_even_tensor_cr2_exact",
+      "status": "PASS",
+      "value": 1.0050694018534372,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_even_scalar_cr2_exact",
+      "status": "PASS",
+      "value": 0.9037451776188076,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_even_vector_cr2_exact",
+      "status": "PASS",
+      "value": 9.458870488366266,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_Codd",
+      "status": "PASS",
+      "value": 0.7607210253614061,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_alpha4",
+      "status": "PASS",
+      "value": 0.0099958944316682,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_alpha7",
+      "status": "PASS",
+      "value": 2.001530117217264,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_alpha6_negative",
+      "status": "PASS",
+      "value": -0.3330268656461453,
+      "criterion": "<0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_K_e1_identity",
+      "status": "PASS",
+      "value": 2.1782398107461631e-10,
+      "criterion": "<1e-8",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "41_slot_schema_complete",
+      "status": "PASS",
+      "value": [],
+      "criterion": "no missing slots",
+      "evidence": "ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "41_slot_reference_finite_except_selected_LO",
+      "status": "PASS",
+      "value": [],
+      "criterion": "all raw slots finite except deliberately deferred c3/e3",
+      "evidence": "ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "41_slot_c3_e3_selected",
+      "status": "PASS",
+      "value": {
+        "rows": 4000,
+        "file": "ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv"
+      },
+      "criterion": "finite c3_selected/e3_selected action representative",
+      "evidence": "ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strong-H a5 identity regression",
+      "status": "PASS",
+      "value": 0.0006636211581147,
+      "criterion": "median <1e-5; max <1e-3",
+      "evidence": "ssz_p5_holonomic_a5_gate_status_2026-09-16.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core a5 selection convergence",
+      "status": "PASS",
+      "value": 0.0001495892109944,
+      "criterion": "median <1e-5; max <5e-4",
+      "evidence": "ssz_p5_holonomic_a5_gate_status_2026-09-16.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core selected a1 stays in archived control tube",
+      "status": "PASS",
+      "value": 0.0001877439719886,
+      "criterion": "median <1e-5; max <5e-4",
+      "evidence": "ssz_p5_holonomic_a5_gate_status_2026-09-16.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "constraint_map_audit_present",
+      "status": "PASS",
+      "value": 10,
+      "criterion": ">0 rows",
+      "evidence": "ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_nontrivial",
+      "status": "PASS_EXACT",
+      "value": 0.01,
+      "criterion": "epsilon != 0",
+      "evidence": "Delta f2=epsilon Y",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_background_null",
+      "status": "PASS_EXACT",
+      "value": 0.0,
+      "criterion": "Delta E00=Delta E11=Delta Ephi=Delta EA=0 at A0'=0",
+      "evidence": "Y is quadratic in F_mu_nu; epsilon constant",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_kappa_max",
+      "status": "PASS",
+      "value": 0.6354409670384762,
+      "criterion": "finite",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv, ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_ZA_min",
+      "status": "PASS_EXACT",
+      "value": 0.9872911806592305,
+      "criterion": ">0",
+      "evidence": "ZA=1-2*kappa*epsilon",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_odd_vector_stability",
+      "status": "PASS_EXACT",
+      "value": null,
+      "criterion": "alpha4>0, alpha6<0, alpha7>0, alpha2^2-alpha1*alpha5>0, alpha8^2-4alpha7*alpha9>0",
+      "evidence": "Zhang-Kase odd-sector formulas with A0'=0, f3=f4=0",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_quadratic_factorization",
+      "status": "PASS_EXACT",
+      "value": null,
+      "criterion": "no scalar/metric-vector mixing from epsilon Y at F_mu_nu=0",
+      "evidence": "constant epsilon; Appendix-A delta has only pure-vector slots v1,v10",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_direct_L6",
+      "status": "PASS",
+      "value": {
+        "min_eig_K": 0.0017061921843635336,
+        "min_radial": 0.04482171781358031
+      },
+      "criterion": "min eig K>0 and min eig(K^-1/2 G K^-1/2)>0",
+      "evidence": "ssz_p5_carrier_corr_41of41_2026-09-16.csv",
+      "level": "numerical"
+    },
+    {
+      "name": "strongH_direct_L12",
+      "status": "PASS",
+      "value": {
+        "min_eig_K": 0.0018518165739517655,
+        "min_radial": 0.07045219958232046
+      },
+      "criterion": "min eig K>0 and min eig(K^-1/2 G K^-1/2)>0",
+      "evidence": "ssz_p5_carrier_corr_41of41_2026-09-16.csv",
+      "level": "numerical"
+    },
+    {
+      "name": "strongH_direct_L20",
+      "status": "PASS",
+      "value": {
+        "min_eig_K": 0.0005868878577195103,
+        "min_radial": 0.08482412689288205
+      },
+      "criterion": "min eig K>0 and min eig(K^-1/2 G K^-1/2)>0",
+      "evidence": "ssz_p5_carrier_corr_41of41_2026-09-16.csv",
+      "level": "numerical"
+    },
+    {
+      "name": "strongH_direct_L42",
+      "status": "PASS",
+      "value": {
+        "min_eig_K": 0.00011248482008172187,
+        "min_radial": 0.0970702096475429
+      },
+      "criterion": "min eig K>0 and min eig(K^-1/2 G K^-1/2)>0",
+      "evidence": "ssz_p5_carrier_corr_41of41_2026-09-16.csv",
+      "level": "numerical"
+    },
+    {
+      "name": "strongH_direct_L110",
+      "status": "PASS",
+      "value": {
+        "min_eig_K": 1.4419103698320762e-05,
+        "min_radial": 0.1015342843916583
+      },
+      "criterion": "min eig K>0 and min eig(K^-1/2 G K^-1/2)>0",
+      "evidence": "ssz_p5_carrier_corr_41of41_2026-09-16.csv",
+      "level": "numerical"
+    },
+    {
+      "name": "strongH_direct_L420",
+      "status": "PASS",
+      "value": {
+        "min_eig_K": 9.236242703259943e-07,
+        "min_radial": 0.10309085330228254
+      },
+      "criterion": "min eig K>0 and min eig(K^-1/2 G K^-1/2)>0",
+      "evidence": "ssz_p5_carrier_corr_41of41_2026-09-16.csv",
+      "level": "numerical"
+    },
+    {
+      "name": "strongH_direct_L1000",
+      "status": "PASS",
+      "value": {
+        "min_eig_K": 1.6051628619744887e-07,
+        "min_radial": 0.10338138656343974
+      },
+      "criterion": "min eig K>0 and min eig(K^-1/2 G K^-1/2)>0",
+      "evidence": "ssz_p5_carrier_corr_41of41_2026-09-16.csv",
+      "level": "numerical"
+    },
+    {
+      "name": "DIRECT_GLOBAL_KRGM_EXPORT",
+      "status": "OPEN",
+      "value": null,
+      "criterion": "dedicated direct regenerated-action certificate required",
+      "evidence": "not inferred from old selected/split tables",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:CITATION.cff",
+      "status": "PASS",
+      "value": "c09dab3bb58d5617a2d70bbf882b73089006884a74fb7472dcd98bc6c48eb201",
+      "criterion": "c09dab3bb58d5617a2d70bbf882b73089006884a74fb7472dcd98bc6c48eb201",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:CODEX_PROMPT.md",
+      "status": "PASS",
+      "value": "445c210a324a5abc2b3652b79964da277a5d1df432a7e29bc2435190ac512f2f",
+      "criterion": "445c210a324a5abc2b3652b79964da277a5d1df432a7e29bc2435190ac512f2f",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:FILE_INDEX.md",
+      "status": "PASS",
+      "value": "1c7ba69ced40bc1cf7c28afebe1ab9042a9939c5710a9f32496b88921f76b82e",
+      "criterion": "1c7ba69ced40bc1cf7c28afebe1ab9042a9939c5710a9f32496b88921f76b82e",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:README_FOR_CODEX.md",
+      "status": "PASS",
+      "value": "55cd5ea1764c71880b1876928ce0b1625694e54e1ff567d52253fb60d5ea8280",
+      "criterion": "55cd5ea1764c71880b1876928ce0b1625694e54e1ff567d52253fb60d5ea8280",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
+      "status": "PASS",
+      "value": "742d7c1dbfa06d9870b69f2b95ae1b764b1c3083aea16d968cae5d8e136cf684",
+      "criterion": "742d7c1dbfa06d9870b69f2b95ae1b764b1c3083aea16d968cae5d8e136cf684",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:STATUS_FULL_CLOSURE.md",
+      "status": "PASS",
+      "value": "1e4713622998781c714862146c56b191403c2ade183d7f0d8e59e5237adb78ed",
+      "criterion": "1e4713622998781c714862146c56b191403c2ade183d7f0d8e59e5237adb78ed",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/authoritative/ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "status": "PASS",
+      "value": "4aecb2e3c539dba50a773579f3e740ba34811dba617b7cd6358e7de8a0375ad5",
+      "criterion": "4aecb2e3c539dba50a773579f3e740ba34811dba617b7cd6358e7de8a0375ad5",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/authoritative/ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "status": "PASS",
+      "value": "a11a0a214d5e01141a1838f48adf8978bb29095ed09cbfcfde59b131e2b2a407",
+      "criterion": "a11a0a214d5e01141a1838f48adf8978bb29095ed09cbfcfde59b131e2b2a407",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/authoritative/ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "status": "PASS",
+      "value": "253cfe04a924837da97e41b4d2dbbdb515079e86f11965ba5e93c443ac61a73b",
+      "criterion": "253cfe04a924837da97e41b4d2dbbdb515079e86f11965ba5e93c443ac61a73b",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/authoritative/ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "status": "PASS",
+      "value": "4a614bc3b09e39b1dca5fa6ebafc82e025a41ba6f744818873d17f1f14ad0627",
+      "criterion": "4a614bc3b09e39b1dca5fa6ebafc82e025a41ba6f744818873d17f1f14ad0627",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/authoritative/ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv",
+      "status": "PASS",
+      "value": "5a831cbd4fd85b02a818c98bea808da07d34de86e50688147f7b1723eefda695",
+      "criterion": "5a831cbd4fd85b02a818c98bea808da07d34de86e50688147f7b1723eefda695",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/authoritative/ssz_p5_full_horndeski_principal_control_rank_2026-09-12.csv",
+      "status": "PASS",
+      "value": "598bc3b37448896556b8f70b0cecc1d95014246f4df65d9b3d7f4c7a7b3aef14",
+      "criterion": "598bc3b37448896556b8f70b0cecc1d95014246f4df65d9b3d7f4c7a7b3aef14",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/authoritative/ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv",
+      "status": "PASS",
+      "value": "65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba",
+      "criterion": "65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/authoritative/ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "status": "PASS",
+      "value": "09b10a19112543c96c023e9a6353a4fec48f9834f09ef4b6c14074d37e69d2c8",
+      "criterion": "09b10a19112543c96c023e9a6353a4fec48f9834f09ef4b6c14074d37e69d2c8",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/authoritative/ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "status": "PASS",
+      "value": "74b4812b9a43dfb6faf71f5eaf2375c359d69ac250a5b5414fea8647fed8e89c",
+      "criterion": "74b4812b9a43dfb6faf71f5eaf2375c359d69ac250a5b5414fea8647fed8e89c",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/certificates/SSZ_P5_FULL_CLOSURE_AUDIT_2026-09-16.json",
+      "status": "PASS",
+      "value": "b96bae80ba87e8891e7123899e6e3acaf070d9a75c4b6d95f03bd81ef925f9db",
+      "criterion": "b96bae80ba87e8891e7123899e6e3acaf070d9a75c4b6d95f03bd81ef925f9db",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/certificates/SSZ_P5_FULL_CLOSURE_GATE_LEDGER_2026-09-16.csv",
+      "status": "PASS",
+      "value": "12e17991998e691830b71e0b0e021d15221abdef061d56d0570ef72fe257ae10",
+      "criterion": "12e17991998e691830b71e0b0e021d15221abdef061d56d0570ef72fe257ae10",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/regression/ssz_p5_HSVT_EPSY001_STRONGH_41of41_2026-09-16.csv",
+      "status": "PASS",
+      "value": "53a5fcd6b59d6762180968c60150df68e26c4c98fb98c1a544ea9cf8a4a770bf",
+      "criterion": "53a5fcd6b59d6762180968c60150df68e26c4c98fb98c1a544ea9cf8a4a770bf",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/regression/ssz_p5_MH_G4PHI_EMITTER_STRONGH_REGRESSION_2026-09-16.csv",
+      "status": "PASS",
+      "value": "d5d87a8bbf2770a23928ac6f07a22649b1622c9e2671e62d0efffc1d6ed0276c",
+      "criterion": "d5d87a8bbf2770a23928ac6f07a22649b1622c9e2671e62d0efffc1d6ed0276c",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/regression/ssz_p5_ZK_APPENDIX_A_EMITTER_OUTER_REGRESSION_2026-09-16.csv",
+      "status": "PASS",
+      "value": "21b4460ec43d05242cea79c9a2b2768e5d0b79a66271705c43bf566296fa02c6",
+      "criterion": "21b4460ec43d05242cea79c9a2b2768e5d0b79a66271705c43bf566296fa02c6",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/regression/ssz_p5_carrier_corr_41of41_2026-09-16.csv",
+      "status": "PASS",
+      "value": "bc0303dd9d90f2219136cb8d304432e7e5ce513690efa2117be08b057380b72d",
+      "criterion": "bc0303dd9d90f2219136cb8d304432e7e5ce513690efa2117be08b057380b72d",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/regression/ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16(1).csv",
+      "status": "PASS",
+      "value": "80f3e9ad6fe299601c5b89ccc0f66a94a0f5e33285721e65e199db8209c49e0e",
+      "criterion": "80f3e9ad6fe299601c5b89ccc0f66a94a0f5e33285721e65e199db8209c49e0e",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/regression/ssz_p5_holonomic_a5_gate_status_2026-09-16.csv",
+      "status": "PASS",
+      "value": "eb879cee6d061123240b892fc63b22d1aacc1cbc1062d4cc65832c8c05610784",
+      "criterion": "eb879cee6d061123240b892fc63b22d1aacc1cbc1062d4cc65832c8c05610784",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/regression/ssz_p5_profile_operator_internal_crosscheck_2026-09-16.csv",
+      "status": "PASS",
+      "value": "71496c53be677b0512ccaa80892f77d83ae3c35da6a27e4e43597db15ff56d28",
+      "criterion": "71496c53be677b0512ccaa80892f77d83ae3c35da6a27e4e43597db15ff56d28",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/regression/ssz_p5_profile_operator_structural_audit_2026-09-16.csv",
+      "status": "PASS",
+      "value": "37d4342840f8d6e846049b187bcccda32736ff1200a08f7d890110a0d6d17616",
+      "criterion": "37d4342840f8d6e846049b187bcccda32736ff1200a08f7d890110a0d6d17616",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:data/regression/ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "status": "PASS",
+      "value": "6204f8600d5de71da0ba9794ef6dd96467e05b07d19435bf07a4b7fd32515e2b",
+      "criterion": "6204f8600d5de71da0ba9794ef6dd96467e05b07d19435bf07a4b7fd32515e2b",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:legacy_superseded/README.md",
+      "status": "PASS",
+      "value": "9091282680778d299337b6c82b978ae7baa06d72e819a7fcbc8c6286e8505a9b",
+      "criterion": "9091282680778d299337b6c82b978ae7baa06d72e819a7fcbc8c6286e8505a9b",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf",
+      "status": "PASS",
+      "value": "a028d69bd8e66886b9552683376873801936362b25e90eb1516b7e800b837902",
+      "criterion": "a028d69bd8e66886b9552683376873801936362b25e90eb1516b7e800b837902",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.tex",
+      "status": "PASS",
+      "value": "153d750cd96f2762d182b79dbb4c7d71ddb1b45898c0cdbceff3b843d33ee54a",
+      "criterion": "153d750cd96f2762d182b79dbb4c7d71ddb1b45898c0cdbceff3b843d33ee54a",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/SSZ_P5_HSVT_FINITE_L_TECHNICAL_MEMORY_2026-09-16.pdf",
+      "status": "PASS",
+      "value": "b25f47dc0e63285733c91faac3eabf26e7b185dd1332f6b778cf1df054b15a6d",
+      "criterion": "b25f47dc0e63285733c91faac3eabf26e7b185dd1332f6b778cf1df054b15a6d",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/SSZ_P5_Horndeski_SVT_CLOSURE_COMPLETE_2026-09-14.pdf",
+      "status": "PASS",
+      "value": "cc3e6442c00fda1864c12791e2354c0ea9608a1a86585f7b68f2158da067b300",
+      "criterion": "cc3e6442c00fda1864c12791e2354c0ea9608a1a86585f7b68f2158da067b300",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/SSZ_P5_KRGM_TECHNISCHES_SICHERHEITSPROTOKOLL_2026-09-16.pdf",
+      "status": "PASS",
+      "value": "016131521eb19effa93796be1a187f99fc677f603f99621123cfabf7efdcf56e",
+      "criterion": "016131521eb19effa93796be1a187f99fc677f603f99621123cfabf7efdcf56e",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_hybrid_full_constraint_maps_JET9D8(1).py",
+      "status": "PASS",
+      "value": "287185c4f3c660e27f0ff32dc19f7f1e1040726e46e08ba35685a00b0e562850",
+      "criterion": "287185c4f3c660e27f0ff32dc19f7f1e1040726e46e08ba35685a00b0e562850",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_hybrid_jet_aware_constraint_reducer.py",
+      "status": "PASS",
+      "value": "49ea2044d0ef2e6a66c030fe75538c246af035257d3d1a495275eafb4b1c264a",
+      "criterion": "49ea2044d0ef2e6a66c030fe75538c246af035257d3d1a495275eafb4b1c264a",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_hybrid_unreduced_even_kernel.py",
+      "status": "PASS",
+      "value": "1fc9c2a01b7be3968091cf795d104d444a48dba97cf93062c1c4c0df843b0aed",
+      "criterion": "1fc9c2a01b7be3968091cf795d104d444a48dba97cf93062c1c4c0df843b0aed",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_p5_F2b_action_derived_highL_mass_closure_2026-09-15.py",
+      "status": "PASS",
+      "value": "9854a2de4fc09971b4d89a794921aec8e5f72862ca9549d7107c014d6a6375c1",
+      "criterion": "9854a2de4fc09971b4d89a794921aec8e5f72862ca9549d7107c014d6a6375c1",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_p5_KGSM_highL_crosscheck_2026-09-16.py",
+      "status": "PASS",
+      "value": "96204d99484469284dfa25df4f552ebe2e55ab88fce3b68d25bcaa1854ae2abc",
+      "criterion": "96204d99484469284dfa25df4f552ebe2e55ab88fce3b68d25bcaa1854ae2abc",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_p5_full_closure_auditor.py",
+      "status": "PASS",
+      "value": "fb63c86c281f21df02c13e5d3604aeb3d74d526eccb8a9ea0028be6711932059",
+      "criterion": "fb63c86c281f21df02c13e5d3604aeb3d74d526eccb8a9ea0028be6711932059",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_p5_higher_jet_closure_2026-09-16.py",
+      "status": "PASS",
+      "value": "e102ec52304ef0729ee46483ef86b5e2b5fb28166f0b29486e44fd9b1003494c",
+      "criterion": "e102ec52304ef0729ee46483ef86b5e2b5fb28166f0b29486e44fd9b1003494c",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_p5_holonomic_a5_closure_2026-09-16.py",
+      "status": "PASS",
+      "value": "65360a0913d0c0b54e6cc85a7c0d9e24431b68bd82ede3adb41e6bdf67814b0b",
+      "criterion": "65360a0913d0c0b54e6cc85a7c0d9e24431b68bd82ede3adb41e6bdf67814b0b",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py",
+      "status": "PASS",
+      "value": "bb5ad60f0afd14f0ec8a410e7870ae6777fa01b59648042b6703662289b8e692",
+      "criterion": "bb5ad60f0afd14f0ec8a410e7870ae6777fa01b59648042b6703662289b8e692",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py",
+      "status": "PASS",
+      "value": "95156fc3e0124fdd599b891a287acac90d172ef7304824653da64799739e315d",
+      "criterion": "95156fc3e0124fdd599b891a287acac90d172ef7304824653da64799739e315d",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/appendices/code_ascii/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py",
+      "status": "PASS",
+      "value": "3fccaf95d3b4092f235c529949bc8272dc8ad06a43068461cf29a5d4d4acc8f6",
+      "criterion": "3fccaf95d3b4092f235c529949bc8272dc8ad06a43068461cf29a5d4d4acc8f6",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/figures/core_positive_invariants.png",
+      "status": "PASS",
+      "value": "efb7b224db81d74585a09994581e43fd3e7f595171068fcbdb1b2dbd8e65c18e",
+      "criterion": "efb7b224db81d74585a09994581e43fd3e7f595171068fcbdb1b2dbd8e65c18e",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/figures/epsY_ZA_core.png",
+      "status": "PASS",
+      "value": "45a264fe0efb578c10bef9758d9c1ad172427962c9cc1e187ccd33c6bb19da9d",
+      "criterion": "45a264fe0efb578c10bef9758d9c1ad172427962c9cc1e187ccd33c6bb19da9d",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/figures/epsY_ZA_strongH.png",
+      "status": "PASS",
+      "value": "c5b8d60f2c05bc72dda9d2eabbbd6a933b6b77faf276ccc9e223e235320a843d",
+      "criterion": "c5b8d60f2c05bc72dda9d2eabbbd6a933b6b77faf276ccc9e223e235320a843d",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/figures/global_principal_speeds.png",
+      "status": "PASS",
+      "value": "afe928360746299306ce2364a0a62a3e08862505abb6c5b13a1d951c8a135d92",
+      "criterion": "afe928360746299306ce2364a0a62a3e08862505abb6c5b13a1d951c8a135d92",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/figures/strongH_invariants.png",
+      "status": "PASS",
+      "value": "29c02779c20f64a0c61eb0b8c5b3178b7e83b5a42eb05ecc264b48eb98790719",
+      "criterion": "29c02779c20f64a0c61eb0b8c5b3178b7e83b5a42eb05ecc264b48eb98790719",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:paper/figures/zk_exact_radial_speeds.png",
+      "status": "PASS",
+      "value": "5e307d4b5af1398028ff07e0f41a857e3e70c14184349755df3599a6d8349a32",
+      "criterion": "5e307d4b5af1398028ff07e0f41a857e3e70c14184349755df3599a6d8349a32",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:requirements.txt",
+      "status": "PASS",
+      "value": "1f9801a9c5d15fcbc3e4f2d991909a2e706403b59669baae74899dc8b24ff87b",
+      "criterion": "1f9801a9c5d15fcbc3e4f2d991909a2e706403b59669baae74899dc8b24ff87b",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/__pycache__/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.cpython-313.pyc",
+      "status": "PASS",
+      "value": "3d39ccf4d6e3c7822e3c541cdaa31f8f44c6ee87887b5c2755f86362c9e56820",
+      "criterion": "3d39ccf4d6e3c7822e3c541cdaa31f8f44c6ee87887b5c2755f86362c9e56820",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_hybrid_full_constraint_maps_JET9D8(1).py",
+      "status": "PASS",
+      "value": "287185c4f3c660e27f0ff32dc19f7f1e1040726e46e08ba35685a00b0e562850",
+      "criterion": "287185c4f3c660e27f0ff32dc19f7f1e1040726e46e08ba35685a00b0e562850",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_hybrid_jet_aware_constraint_reducer.py",
+      "status": "PASS",
+      "value": "49ea2044d0ef2e6a66c030fe75538c246af035257d3d1a495275eafb4b1c264a",
+      "criterion": "49ea2044d0ef2e6a66c030fe75538c246af035257d3d1a495275eafb4b1c264a",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_hybrid_unreduced_even_kernel.py",
+      "status": "PASS",
+      "value": "1fc9c2a01b7be3968091cf795d104d444a48dba97cf93062c1c4c0df843b0aed",
+      "criterion": "1fc9c2a01b7be3968091cf795d104d444a48dba97cf93062c1c4c0df843b0aed",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_p5_F2b_action_derived_highL_mass_closure_2026-09-15.py",
+      "status": "PASS",
+      "value": "9854a2de4fc09971b4d89a794921aec8e5f72862ca9549d7107c014d6a6375c1",
+      "criterion": "9854a2de4fc09971b4d89a794921aec8e5f72862ca9549d7107c014d6a6375c1",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_p5_KGSM_highL_crosscheck_2026-09-16.py",
+      "status": "PASS",
+      "value": "96204d99484469284dfa25df4f552ebe2e55ab88fce3b68d25bcaa1854ae2abc",
+      "criterion": "96204d99484469284dfa25df4f552ebe2e55ab88fce3b68d25bcaa1854ae2abc",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_p5_higher_jet_closure_2026-09-16.py",
+      "status": "PASS",
+      "value": "523587987738bfbe0c0ba20948c9a97e3f69e273201ac17d999469bfcb360527",
+      "criterion": "523587987738bfbe0c0ba20948c9a97e3f69e273201ac17d999469bfcb360527",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_p5_holonomic_a5_closure_2026-09-16.py",
+      "status": "PASS",
+      "value": "77dd57f9ee02081f6db2c4f6a6d7ff4127395e07c66140ec3e387cdfc115e870",
+      "criterion": "77dd57f9ee02081f6db2c4f6a6d7ff4127395e07c66140ec3e387cdfc115e870",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py",
+      "status": "PASS",
+      "value": "bb5ad60f0afd14f0ec8a410e7870ae6777fa01b59648042b6703662289b8e692",
+      "criterion": "bb5ad60f0afd14f0ec8a410e7870ae6777fa01b59648042b6703662289b8e692",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py",
+      "status": "PASS",
+      "value": "95156fc3e0124fdd599b891a287acac90d172ef7304824653da64799739e315d",
+      "criterion": "95156fc3e0124fdd599b891a287acac90d172ef7304824653da64799739e315d",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py",
+      "status": "PASS",
+      "value": "fa94b2d147b10c1d697a18431abee6b58143dddcb3a7c040ec0c5e07b8cd45e0",
+      "criterion": "fa94b2d147b10c1d697a18431abee6b58143dddcb3a7c040ec0c5e07b8cd45e0",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:ssz_p5_full_closure_auditor.py",
+      "status": "PASS",
+      "value": "fb63c86c281f21df02c13e5d3604aeb3d74d526eccb8a9ea0028be6711932059",
+      "criterion": "fb63c86c281f21df02c13e5d3604aeb3d74d526eccb8a9ea0028be6711932059",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:tests/test_release_auditor.py",
+      "status": "PASS",
+      "value": "d3eb49b7d25a2a10d8a606d30b2a73db35b8fa37364adccb2dcf6734e93cf9f9",
+      "criterion": "d3eb49b7d25a2a10d8a606d30b2a73db35b8fa37364adccb2dcf6734e93cf9f9",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    },
+    {
+      "name": "sha256:tools/build_ssz_p5_full_closure_monograph.py",
+      "status": "PASS",
+      "value": "fb7856fa173d46ccdeb50d74e25e216d96c5bdebd89c43cc30f7abca6b4ba712",
+      "criterion": "fb7856fa173d46ccdeb50d74e25e216d96c5bdebd89c43cc30f7abca6b4ba712",
+      "evidence": "MANIFEST.json",
+      "level": "implementation"
+    }
+  ]
+}

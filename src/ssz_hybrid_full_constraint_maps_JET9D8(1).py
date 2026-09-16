@@ -19,7 +19,7 @@ import importlib.util
 import numpy as np
 import pandas as pd
 
-B = Path('/mnt/data')
+from ssz_p5.paths import paths as B
 SLOTS = [*[f'a{i}' for i in range(1,10)],
          *[f'b{i}' for i in range(1,6)],
          *[f'c{i}' for i in range(1,7)],

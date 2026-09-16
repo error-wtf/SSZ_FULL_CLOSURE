@@ -1,0 +1,31 @@
+{
+  "base": "SSZ_P5_COMPLETE_RESEARCH_REPO_2026-09-16",
+  "earlier_unique_paths": [
+    "CODEX_PROMPT.md",
+    "SHA256SUMS",
+    "MANIFEST.json",
+    "README.md",
+    "Makefile",
+    "pyproject.toml",
+    ".pytest_cache/.gitignore",
+    ".pytest_cache/CACHEDIR.TAG",
+    ".pytest_cache/README.md",
+    "src/ssz_p5/cli.py",
+    "src/ssz_p5/__pycache__/types.cpython-313.pyc",
+    "src/ssz_p5/__pycache__/__init__.cpython-313.pyc",
+    "src/ssz_p5/__pycache__/config.cpython-313.pyc",
+    "src/ssz_p5/qnm/__pycache__/__init__.cpython-313.pyc",
+    "src/ssz_p5/qnm/__pycache__/gate.cpython-313.pyc",
+    "src/ssz_p5/action/__pycache__/eps_y.cpython-313.pyc",
+    "src/ssz_p5/action/__pycache__/__init__.cpython-313.pyc",
+    "src/ssz_p5/jets/__pycache__/__init__.cpython-313.pyc",
+    "src/ssz_p5/jets/__pycache__/jet9d8.cpython-313.pyc",
+    "tests/__pycache__/test_release_auditor.cpython-313-pytest-9.0.2.pyc",
+    "tests/unit/__pycache__/test_eps_y.cpython-313-pytest-9.0.2.pyc",
+    "tests/unit/__pycache__/test_jet9d8.cpython-313-pytest-9.0.2.pyc",
+    "tests/integration/__pycache__/test_constructive_audit.cpython-313-pytest-9.0.2.pyc",
+    "tests/negative/__pycache__/test_blacklist.cpython-313-pytest-9.0.2.pyc",
+    "tests/negative/__pycache__/test_qnm_guard.cpython-313-pytest-9.0.2.pyc",
+    ".pytest_cache/v/cache/nodeids"
+  ]
+}
