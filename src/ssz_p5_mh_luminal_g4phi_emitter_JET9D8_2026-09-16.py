@@ -25,6 +25,19 @@ def deriv(x, y, order=1, window=9, degree=8):
 
 def emit(df, H=None, G4phi=None, G3X=None, c2_profile=None, window=9, degree=8):
     d=df.copy().reset_index(drop=True)
+    # This emitter is explicitly G4(phi), G5=0. Never silently discard
+    # nonzero quartic/quintic action jets supplied by a core action profile.
+    from ssz_p5.policy import numerical_policy
+    tolerance = numerical_policy()["exact_zero_abs"]
+    for name in ("G4X", "G4XX", "G4phiX", "G5X", "G5phi", "G5phiX", "G5phiphi"):
+        if name in d:
+            values = d[name].to_numpy(float)
+            if not np.isfinite(values).all() or np.max(np.abs(values)) > tolerance:
+                i = int(np.argmax(np.abs(values)))
+                raise ValueError(
+                    f"luminal G4(phi), G5=0 emitter cannot emit nonzero {name}; "
+                    f"row={i}, value={values[i]:.17g}"
+                )
     r=(d['x'] if 'x' in d else d['r_over_rs']).to_numpy(float)
     f=d['f'].to_numpy(float); h=d['h'].to_numpy(float)
     if 'phi_r' in d: ph=d['phi_r'].to_numpy(float)

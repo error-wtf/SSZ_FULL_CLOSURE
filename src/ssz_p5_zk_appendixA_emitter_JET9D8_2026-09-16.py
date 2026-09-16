@@ -57,6 +57,18 @@ def emit(df: pd.DataFrame, *, window=9, degree=8,
     them absent.  f2 Hessians use names f2XX,f2XF,f2XY,f2FF,f2FY,f2YY.
     """
     d=df.copy().reset_index(drop=True)
+    # f4/f4XX here are SVT couplings, not Horndeski G4/G4XX.
+    # This implementation fixes the Einstein block (a1=0, a4=sqrt(f*h)/2).
+    from ssz_p5.policy import numerical_policy
+    tolerance = numerical_policy()["exact_zero_abs"]
+    for name in ("G3X", "G4X", "G4XX", "G4phi", "G4_phi", "G4phiX",
+                 "G5X", "G5phi", "G5phiX", "G5phiphi"):
+        if name in d:
+            values = d[name].to_numpy(float)
+            if not np.isfinite(values).all() or np.max(np.abs(values)) > tolerance:
+                raise ValueError(f"pure ZK SVT emitter does not implement Horndeski {name}")
+    if "G4" in d and not np.all(np.abs(d["G4"].to_numpy(float) - 0.5) <= tolerance):
+        raise ValueError("pure ZK SVT emitter requires the Einstein baseline G4=1/2")
     req=['x','f','h','phiprime','A0prime','X','f2X','f2F','f3','f3X','f4','f4X']
     miss=[k for k in req if k not in d.columns]
     if miss: raise KeyError(f'missing required action/background columns: {miss}')

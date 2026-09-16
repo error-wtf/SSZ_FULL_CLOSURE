@@ -66,9 +66,11 @@ def maps(df,L,window=9,degree=8):
     H21-=qq[:,None]*H11
     H21[:,1]-=p
 
-    # J1 = b3 dot dphi + b4 dot H2 + L b5 dot h1.
+    # J1 includes b2 dot(dphi_r), as required by action_terms.
+    # Omitting this source violates stationarity and generates spurious higher derivatives.
     J10=np.zeros((n,3)); J11=np.zeros((n,3))
     J10[:,1]+=q['b3']
+    J11[:,1]+=q['b2']
     J10+=q['b4'][:,None]*H20 + (L*q['b5'])[:,None]*H10
     J11+=q['b4'][:,None]*H21 + (L*q['b5'])[:,None]*H11
 

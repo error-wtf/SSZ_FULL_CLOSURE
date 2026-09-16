@@ -64,8 +64,8 @@
     },
     {
       "path": "LICENSE",
-      "size_bytes": 1618,
-      "sha256": "e5941ef14fe4b3f2c65933261d08236a44c6f78bbfb459e0151205f6544d7fd3"
+      "size_bytes": 1619,
+      "sha256": "f47ab5d9a5bdda18163a82833fdf6222f7e843e4787fed615f771dbf1a2b5a88"
     },
     {
       "path": "Makefile",
@@ -89,8 +89,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 4207,
-      "sha256": "100c2dc59b4b8ca5fa2426f461c9f5e408a52ad64d14b4d3745bf63157c3b17a"
+      "size_bytes": 7326,
+      "sha256": "1fd97260b25ff90f4518d5b0b0b0eb86eb333c7a581d5284efc43e24e77f03c2"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -109,8 +109,8 @@
     },
     {
       "path": "REPRODUCE.md",
-      "size_bytes": 1911,
-      "sha256": "f68447bd4beab9bd43b479444c82020ad0bb7f01cc6cf3d6c49c09d2829b8ee8"
+      "size_bytes": 2832,
+      "sha256": "de60b847fbbb75d8e68634f0bd6f78254e931ca9731e3492437015d17afba729"
     },
     {
       "path": "RESEARCH_STATE.md",
@@ -124,8 +124,8 @@
     },
     {
       "path": "STATUS_FULL_CLOSURE.md",
-      "size_bytes": 1003,
-      "sha256": "1e4713622998781c714862146c56b191403c2ade183d7f0d8e59e5237adb78ed"
+      "size_bytes": 1532,
+      "sha256": "3e010f8b7fb4fccc178652f909d6640739ab26b31558e4b3a9e2b8d896121b09"
     },
     {
       "path": "archive/full_working_snapshot/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16(1).md",
@@ -1238,6 +1238,11 @@
       "sha256": "f9a9f0b5984c39f4eb874e13e2e61b4b96cf194d950cdf4952e89bb47995d964"
     },
     {
+      "path": "data/diagnostic/PRODUCTION_SOURCE_CONTRACT.json",
+      "size_bytes": 4647,
+      "sha256": "ac1ea8e1048274153981dd2223ea032df08268cd13e5ad152517d0f0030e2e98"
+    },
+    {
       "path": "data/diagnostic/ssz_p5_SELECTED_41STREAM_V2_2026-09-16.csv",
       "size_bytes": 17036072,
       "sha256": "a95d97a60f24221847abdae7caeffc6a7bcfc285ca8c42bb21af7cd2e4926f34"
@@ -1411,6 +1416,11 @@
       "path": "data/regression/ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
       "size_bytes": 1002,
       "sha256": "6204f8600d5de71da0ba9794ef6dd96467e05b07d19435bf07a4b7fd32515e2b"
+    },
+    {
+      "path": "docs/DIRECT_IMPLEMENTATION_FINDINGS.md",
+      "size_bytes": 3632,
+      "sha256": "a7006083ab419b6bc729002f393e45cb771cc13448887d26a43215797a59246b"
     },
     {
       "path": "docs/INTEGRATION.md",
@@ -1684,8 +1694,8 @@
     },
     {
       "path": "src/ssz_hybrid_full_constraint_maps_JET9D8(1).py",
-      "size_bytes": 4932,
-      "sha256": "9a9262ec9353cde132902374a6828fbcc0ed177817d178c7fec283a63d9e9e9e"
+      "size_bytes": 5059,
+      "sha256": "1723d2fb9c9babfe156c136ec0d75e760612f937ca7a029557fda36af9dd5199"
     },
     {
       "path": "src/ssz_hybrid_jet_aware_constraint_reducer.py",
@@ -1761,6 +1771,11 @@
       "path": "src/ssz_p5/export/certificate.py",
       "size_bytes": 687,
       "sha256": "7dc490c17b7bdc882b21835140d76cd6a466ad173abd395b8e2b8010b42c558f"
+    },
+    {
+      "path": "src/ssz_p5/export/verification.py",
+      "size_bytes": 7729,
+      "sha256": "3c418cea8ee82ca78542bf6e43b7cf781731afdfd881b45be457569c53c3c2ea"
     },
     {
       "path": "src/ssz_p5/geometry/__init__.py",
@@ -1869,8 +1884,8 @@
     },
     {
       "path": "src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py",
-      "size_bytes": 8361,
-      "sha256": "547b7b3bc166329b0c99f102e90b213b8e194aa4f92a904c08ecefb5bfffcdb0"
+      "size_bytes": 9081,
+      "sha256": "3f0ce9ba6af851627b4bde529a4a6d6dd7d5c527eef550c5dbe2cf9ed8325f73"
     },
     {
       "path": "src/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py",
@@ -1879,8 +1894,8 @@
     },
     {
       "path": "src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py",
-      "size_bytes": 10835,
-      "sha256": "2d76d5ad29b6cfc1d4aeec45e65283838a07eaedf151ecbb388be045cd01bbd5"
+      "size_bytes": 11610,
+      "sha256": "fff0375177791543bbed531641091071dc1c1aecbc32afa2224495f4d906c476"
     },
     {
       "path": "ssz_p5_full_closure_auditor.py",
@@ -1889,8 +1904,8 @@
     },
     {
       "path": "ssz_p5_full_pipeline.py",
-      "size_bytes": 22270,
-      "sha256": "8df2b0064545911c98c86ca8489973a6f63faa100acb5ef541f0855d65ce1753"
+      "size_bytes": 23813,
+      "sha256": "a8d32124902013b282bb9a12b7eada7998682011e2bf47a06ff9ea86f8b6cec0"
     },
     {
       "path": "tests/integration/test_constructive_audit.py",
@@ -1898,9 +1913,14 @@
       "sha256": "90978d1a7fa0da57c346b63281970f32f1a94f080837ed0c85598d1b1d63694c"
     },
     {
+      "path": "tests/negative/test_absolute_closure.py",
+      "size_bytes": 3129,
+      "sha256": "c99e3c45ad05f9bf24b14fc63c73537b2ba1899d7fe1770400a62049d289f5af"
+    },
+    {
       "path": "tests/negative/test_blacklist.py",
-      "size_bytes": 660,
-      "sha256": "0a0a87e98b2c764ed42074748e9f6ac475946437147e267847436ca0e4b49d5c"
+      "size_bytes": 661,
+      "sha256": "a55c602a8882b5174a3d0edf90264145f444d877edb224e34e6c50c86913a7bd"
     },
     {
       "path": "tests/negative/test_certificate_provenance.py",
@@ -1911,6 +1931,11 @@
       "path": "tests/negative/test_matrix_guards.py",
       "size_bytes": 1315,
       "sha256": "bd2dc9debf7c96ea5d8d482b819a67dc800eafdac1eb5a67774330e9f7eebf74"
+    },
+    {
+      "path": "tests/negative/test_mh_action_domain.py",
+      "size_bytes": 816,
+      "sha256": "97633e4718dc8bfddd0a675fbfe945598efeed3c00af3272e804eac940367187"
     },
     {
       "path": "tests/negative/test_production_guards.py",
@@ -1933,6 +1958,11 @@
       "sha256": "faa2df4e4e7553c62955beaf48c95ee3dc210e1c8cfaad5892ed6c2d9eca0ee4"
     },
     {
+      "path": "tests/unit/test_constraint_stationarity.py",
+      "size_bytes": 1364,
+      "sha256": "907ef60f6e83dc257b0b615674917f0806536b83a8438e18adf7ffbd4415ab1f"
+    },
+    {
       "path": "tests/unit/test_eps_y.py",
       "size_bytes": 1107,
       "sha256": "1625e175157055eedd08e3a4643aa1a3b2a079c24f832b067e042dda3d4d1eea"
@@ -1941,6 +1971,11 @@
       "path": "tests/unit/test_jet9d8.py",
       "size_bytes": 293,
       "sha256": "4f1597f136840e5b3f198121de9230908add21585960b12d73a108f73b7734d4"
+    },
+    {
+      "path": "tools/audit_production_sources.py",
+      "size_bytes": 2348,
+      "sha256": "13bdb0cbb537dcf81e59f1583278cb4eab277f5223322fd9eda64bada645ceb9"
     },
     {
       "path": "tools/build_ssz_p5_full_closure_monograph.py",

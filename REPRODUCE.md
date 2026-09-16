@@ -1,45 +1,69 @@
-# Reproduce the integrated research snapshot
+# Reproduce and interpret the current repository
 
-Supported/tested environment: CPython 3.14, Linux, pinned `requirements.lock`.
+Supported environment: CPython 3.14 on Linux with the pinned dependency lock.
 
 ```bash
 git clone https://github.com/error-wtf/SSZ_FULL_CLOSURE.git
 cd SSZ_FULL_CLOSURE
 python3.14 -m venv .venv
-. .venv/bin/activate
+source .venv/bin/activate
 python -m pip install -r requirements.lock
 python -m pip install --no-deps -e .
+pytest -q
+python tools/release_manifest.py --check
 python ssz_p5_full_pipeline.py --strict
 ```
 
-The strict command executes pytest, verifies the complete manifest and hashes,
-runs the full closure auditor over the default multipoles, checks the frozen
-action and archive inventories, and checks the production blacklist. It writes
-`FULL_PIPELINE_REPORT.json`, `FULL_PIPELINE_REPORT.md`, `build/audit.json` and
-`build/gates.csv`. Missing required inputs or failed regressions produce a
-nonzero exit. `--strict --skip-tests` is rejected.
+## Expected results in this implementation checkpoint
 
-The report separates archive/constructive regression success from the still
-open direct global action-to-KRGM export. QNM archive checks verify preserved
-records and their labels; they do not rerun or certify a coupled spectrum.
+- Software tests and file-integrity verification succeed.
+- `python ssz_p5_full_pipeline.py` reproduces the archive/audit checks.
+- `python ssz_p5_full_pipeline.py --strict` exits **2** because the complete
+  direct-production and coupled spectral certificates have not been generated.
 
-Standalone commands:
+The strict failure is intentional evidence of an unfinished production chain;
+it must not be ignored when deciding whether to publish an absolute-closure
+release. See [implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md)
+for the exact source-to-emitter mismatch. The old archive-only meaning of
+`--strict` has been removed.
+
+## What strict mode requires
+
+Strict mode runs the software tests, current manifest/hash checks, the existing
+full closure auditor, blacklist checks and archived spectral-record checks. It
+additionally requires valid direct coefficient/matrix products for every default
+L, verifies their finite-L structure and stability, reproduces the matrices
+through the profile reducer, binds spectral results to those same operator
+hashes, and requires convergence and absolute-closure evidence.
+
+Runtime output is written to `FULL_PIPELINE_REPORT.json`,
+`FULL_PIPELINE_REPORT.md`, `build/audit.json` and `build/gates.csv`.
+These outputs and caches are excluded from the immutable release inventory.
+`--strict --skip-tests` is rejected.
+
+No archive-only PASS is a final coupled-spectrum certificate. No full-closure
+v1.0.0 archive is created while strict mode fails.
+
+## Reproduce the source contract finding
 
 ```bash
-pytest -q
-ssz-p5 audit --full
-ssz-p5-full-pipeline --strict
+python tools/audit_production_sources.py
+pytest -q tests/unit/test_constraint_stationarity.py tests/negative/test_mh_action_domain.py
+```
+
+The JSON source report records the input hashes, sampled radial coverage and
+action jets outside the restricted emitter's supported domain. The tests verify
+the repaired H1 source against the unreduced Euler equations and ensure that
+unsupported Horndeski jets are rejected instead of silently erased.
+
+## After intentional source changes
+
+Regenerate the manifest and SHA256 inventory only after the final file edits:
+
+```bash
+python tools/release_manifest.py
 python tools/release_manifest.py --check
 ```
 
-`ssz-p5 audit --require-direct-krgm` currently exits 3 because the dedicated
-certificate is absent. This is the expected scientific boundary, not a test
-to disable. `ssz-p5 build krgm` remains unavailable until D2-D5 have actually
-been implemented and certified.
-
-Development: regenerate the manifest only after intentional source changes
-using `python tools/release_manifest.py`, then repeat strict validation.
-Generated runtime outputs and Python caches are excluded from the manifest.
-Archived originals, including the initial published import and both prepared
-snapshot manifests, are immutable provenance. The final source ZIP is built
-from the committed Git tree, with runtime reports published separately by CI.
+Then test an exported clean tree in a fresh environment. Archived originals,
+including the initial import and supplied snapshot manifests, remain immutable.

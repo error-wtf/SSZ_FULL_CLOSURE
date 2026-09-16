@@ -1,3 +1,14 @@
+# Current executable status — 2026-09-17
+
+Absolute full closure is **NOT CERTIFIED**. Strict mode now rejects missing
+direct-production matrices and coupled spectral evidence. The H1 constraint
+source has been repaired; general quartic/quintic core emission remains to be
+implemented. See [current implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md).
+This is not a reported physical instability. The frozen historical statement
+below is retained for provenance and does not override current strict behavior.
+
+---
+
 # SSZ P5 / Horndeski + U(1)-SVT — Release Status
 
 **Release:** 2026-09-16

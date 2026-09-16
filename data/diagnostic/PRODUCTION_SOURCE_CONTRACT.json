@@ -1,0 +1,191 @@
+{
+  "scope": "source-to-emitter contract; not a claim of physical instability",
+  "sources": [
+    {
+      "path": "data/production/ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv",
+      "sha256": "65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba",
+      "rows": 5000,
+      "radius_min": 1.4084507042253522,
+      "radius_max": 1.813160724051259,
+      "columns": [
+        "r_over_rs",
+        "u",
+        "phi",
+        "f",
+        "h",
+        "H_equals_F_equals_G",
+        "G4",
+        "G4_phi",
+        "K_target",
+        "K_verified",
+        "Q",
+        "G3X",
+        "X",
+        "XG3X",
+        "a1_Horndeski",
+        "a4_Horndeski",
+        "c4_Horndeski",
+        "mu",
+        "P1"
+      ],
+      "jets_outside_luminal_emitter_domain": {}
+    },
+    {
+      "path": "data/production/ssz_p5_F1b_G4XX_transverse_core_candidate_2026-09-14.csv",
+      "sha256": "5cb6d2701f28ee0c7bf18361784ebb2f4ff105360b95cd81fde48dde4015b74b",
+      "rows": 3299,
+      "radius_min": 0.01,
+      "radius_max": 1.4084507042253522,
+      "columns": [
+        "r_over_rs",
+        "u",
+        "phi",
+        "A_f",
+        "B_h",
+        "X",
+        "F_tensor",
+        "H_tensor",
+        "XiH_target",
+        "G4_background",
+        "G4X",
+        "G4XX",
+        "G4phi",
+        "G4phiX",
+        "G4phiphi",
+        "G3",
+        "G3X",
+        "G3phi",
+        "G2",
+        "G2X",
+        "XiH_reconstructed",
+        "XiH_residual",
+        "background_rank",
+        "background_scaled_condition",
+        "background_residual_abs",
+        "background_residual_rel"
+      ],
+      "jets_outside_luminal_emitter_domain": {
+        "G4X": {
+          "value": -2614.697052627529,
+          "r": 0.3397096207927012
+        },
+        "G4XX": {
+          "value": 10938161873983.592,
+          "r": 0.01
+        },
+        "G4phiX": {
+          "value": -14813703771.322498,
+          "r": 0.01
+        }
+      }
+    },
+    {
+      "path": "data/production/ssz_p5_F1b_FULL_G5_subcore_onshell_candidate_2026-09-14.csv",
+      "sha256": "46d01a01771cceabe98eb7013f7b9915900b4a829435eec5419eb800b2bd5cf2",
+      "rows": 2401,
+      "radius_min": 0.003,
+      "radius_max": 0.02,
+      "columns": [
+        "r_over_rs",
+        "u",
+        "phi",
+        "f",
+        "h",
+        "X",
+        "subcore_s",
+        "G5X",
+        "G5phi",
+        "G5phiX",
+        "G5phiphi",
+        "G4",
+        "G4X",
+        "G4XX",
+        "G4phi",
+        "G4phiX",
+        "G4phiphi",
+        "G3",
+        "G3X",
+        "G3phi",
+        "G2",
+        "G2X",
+        "F_target",
+        "F_check",
+        "G_check",
+        "H_target",
+        "H_check",
+        "XiH_target",
+        "XiH_check",
+        "background_rank",
+        "background_scaled_condition",
+        "background_residual_abs",
+        "background_residual_rel"
+      ],
+      "jets_outside_luminal_emitter_domain": {
+        "G4X": {
+          "value": -6251.296272425007,
+          "r": 0.003
+        },
+        "G4XX": {
+          "value": 7414632685144.707,
+          "r": 0.0107704166666666
+        },
+        "G4phiX": {
+          "value": -17937411626.84573,
+          "r": 0.0030708333333333
+        },
+        "G5X": {
+          "value": 3368381.0805,
+          "r": 0.003
+        }
+      }
+    },
+    {
+      "path": "data/production/ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "sha256": "4aecb2e3c539dba50a773579f3e740ba34811dba617b7cd6358e7de8a0375ad5",
+      "rows": 2601,
+      "radius_min": 0.0025,
+      "radius_max": 0.012,
+      "columns": [
+        "r",
+        "u",
+        "S",
+        "phi",
+        "X",
+        "F",
+        "H",
+        "XiH",
+        "Kghost",
+        "G4",
+        "G4X",
+        "G4XX",
+        "G3X",
+        "G2",
+        "G2X",
+        "G3phi",
+        "rank",
+        "condition",
+        "res_abs",
+        "res_rel",
+        "XiH_check"
+      ],
+      "jets_outside_luminal_emitter_domain": {
+        "G4X": {
+          "value": -6089.5763790579285,
+          "r": 0.009266923076923
+        },
+        "G4XX": {
+          "value": 10938161873983.592,
+          "r": 0.0098186538461538
+        }
+      }
+    }
+  ],
+  "emitter": "src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py",
+  "emitter_domain": "G4=G4(phi), G4X=0, G5=0; c2 profile required",
+  "global_direct_generation": "NOT_ESTABLISHED",
+  "notes": [
+    "Finite sampled intervals do not themselves specify the analytic endpoints.",
+    "Core action jets require their quartic/quintic coefficient terms.",
+    "No electric handover slots or old reduced matrices are production inputs."
+  ]
+}

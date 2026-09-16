@@ -12,6 +12,9 @@ branches.  It validates and assembles the already completed research layers:
   5. QNM/spectral archive validation (Jost, WKB/test-field, eikonal records)
   6. final machine-readable + Markdown report
 
+Strict mode also requires direct matrices, same-operator spectral convergence, and
+an absolute-closure certificate. The default archive audit is separately labelled.
+
 The script is deliberately archive-first.  Files in data/superseded or
 archive/full_working_snapshot are NEVER promoted to production merely by name.
 
@@ -465,6 +468,32 @@ def check_blacklist(root: Path) -> list[Check]:
         return [Check("hygiene", "production_blacklist", "FAIL", repr(e), "valid JSON")]
 
 
+def check_absolute_closure(root: Path) -> list[Check]:
+    from ssz_p5.export.verification import verify_absolute_closure
+
+    try:
+        verify_absolute_closure(root)
+        return [
+            Check(
+                "absolute_closure",
+                "complete_production_chain",
+                "PASS",
+                True,
+                "direct matrices, finite-L gates, coupled convergence and bound certificate",
+            )
+        ]
+    except (OSError, RuntimeError, ValueError, KeyError, TypeError, AssertionError) as exc:
+        return [
+            Check(
+                "absolute_closure",
+                "complete_production_chain",
+                "FAIL",
+                str(exc),
+                "direct matrices, finite-L gates, coupled convergence and bound certificate",
+            )
+        ]
+
+
 def write_reports(root: Path, checks: list[Check], json_path: Path, md_path: Path) -> None:
     passed = sum(c.passed for c in checks)
     failed = sum(not c.passed for c in checks)
@@ -489,8 +518,15 @@ def write_reports(root: Path, checks: list[Check], json_path: Path, md_path: Pat
         },
         "checks": [asdict(c) for c in checks],
         "scientific_status": {
-            "direct_global_krgm_export": "OPEN_IMPLEMENTATION_GATE",
-            "coupled_hsvt_qnm": "BLOCKED_PENDING_DIRECT_EXPORT",
+            "absolute_closure": "PASS"
+            if any(c.stage == "absolute_closure" and c.passed for c in checks)
+            else "NOT_CERTIFIED",
+            "direct_global_krgm_export": "PASS"
+            if any(c.stage == "absolute_closure" and c.passed for c in checks)
+            else "NOT_CERTIFIED",
+            "coupled_hsvt_qnm": "PASS"
+            if any(c.stage == "absolute_closure" and c.passed for c in checks)
+            else "NOT_CERTIFIED",
             "scope": "archive, constructive audit and numerical regressions; "
             "not a direct-global export certificate",
         },
@@ -528,8 +564,8 @@ def write_reports(root: Path, checks: list[Check], json_path: Path, md_path: Pat
     lines += [
         "## Scientific scope",
         "",
-        "Direct global KRGM export: **OPEN_IMPLEMENTATION_GATE**.",
-        "Coupled HSVT QNM: **BLOCKED_PENDING_DIRECT_EXPORT**.",
+        "Absolute closure: **" + payload["scientific_status"]["absolute_closure"] + "**.",
+        "Coupled HSVT QNM: **" + payload["scientific_status"]["coupled_hsvt_qnm"] + "**.",
         "An archival pipeline PASS is not a direct-export or coupled-spectrum certificate.",
         "",
     ]
@@ -542,7 +578,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--repo", type=Path, default=DEFAULT_ROOT)
     p.add_argument("--skip-tests", action="store_true")
     p.add_argument(
-        "--strict", action="store_true", help="also require current SHA256SUMS to match exactly"
+        "--strict",
+        action="store_true",
+        help="require hashes, direct global matrices, spectral convergence and absolute closure",
     )
     p.add_argument("--json", type=Path, default=None)
     p.add_argument("--markdown", type=Path, default=None)
@@ -623,6 +661,9 @@ def main() -> int:
         )
     )
 
+    if ns.strict:
+        checks += check_absolute_closure(root)
+
     json_path = ns.json or root / "FULL_PIPELINE_REPORT.json"
     md_path = ns.markdown or root / "FULL_PIPELINE_REPORT.md"
     write_reports(root, checks, json_path, md_path)
@@ -643,7 +684,7 @@ def main() -> int:
         for c in failed:
             print(f"  - [{c.stage}] {c.name}: {c.value} ({c.criterion})")
         return 2
-    print("FULL_PIPELINE_ARCHIVE_AND_AUDIT = PASS")
+    print("ABSOLUTE_FULL_CLOSURE = PASS" if ns.strict else "FULL_PIPELINE_ARCHIVE_AND_AUDIT = PASS")
     return 0
 
 
