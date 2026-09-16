@@ -2,7 +2,7 @@
 
 Research source archive for **SSZ P5 / Horndeski + U(1)-SVT**, based on the supplied handoff dated **16 September 2026** and the earlier Middle Bridge papers by Carmen N. Wrede and Lino P. Casu.
 
-This repository preserves the supplied papers, code, data and handoff documents with SHA-256 provenance. **It is a partial import of the described release package:** all 22 explicitly supplied research files are included, but only **24 of the 64 original manifest entries** could be recovered byte-for-byte. The remaining entries are listed in [Missing release files](docs/MISSING_RELEASE_FILES.md).
+This repository preserves the supplied papers, code, data and handoff documents with SHA-256 provenance. **It is a partial import of the described release package:** all 22 explicitly supplied research files plus 8 additional files from 16 September are included, but only **24 of the 64 original manifest entries** could be recovered byte-for-byte. The remaining entries are listed in [Missing release files](docs/MISSING_RELEASE_FILES.md).
 
 ## Scientific and reproduction status
 
@@ -15,6 +15,8 @@ This repository preserves the supplied papers, code, data and handoff documents 
 | QNM spectrum | No final spectrum published here |
 
 The production action is the globally patched on-shell Horndeski P5 representative plus `Delta f2 = 0.01 Y`, with `Y = nabla_mu(phi) nabla_nu(phi) F^{mu alpha} F^nu_alpha`, on `A0prime = 0`. See the unchanged [action definition](SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json) and [frozen status](STATUS_FULL_CLOSURE.md).
+
+Public repository: [error-wtf/SSZ_FULL_CLOSURE](https://github.com/error-wtf/SSZ_FULL_CLOSURE).
 
 ## Start reading
 
@@ -30,7 +32,7 @@ The production action is the globally patched on-shell Horndeski P5 representati
 ## Repository layout
 
 ```text
-originals/       All 22 named files and both pasted notes, unchanged
+originals/       All 30 research files and both pasted notes, unchanged
 src/             Source modules recovered with exact manifest hashes
 paper/           Papers and code appendices recovered by exact hash
 data/           Available authoritative/regression inputs

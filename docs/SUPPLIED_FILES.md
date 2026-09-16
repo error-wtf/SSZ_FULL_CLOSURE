@@ -1,6 +1,6 @@
 # Supplied files
 
-Every listed file is retained byte-for-byte.
+All 30 research files and both pasted notes are retained byte-for-byte.
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
@@ -28,3 +28,11 @@ Every listed file is retained byte-for-byte.
 | [Wrede_Casu_SSZ_Middle_Bridge_and_Unified_Dynamics_FINAL_MASTER_v13_2026-08-25.pdf](../originals/Wrede_Casu_SSZ_Middle_Bridge_and_Unified_Dynamics_FINAL_MASTER_v13_2026-08-25.pdf) | 2175095 | `727f75991edf6e87a88196a9fdf8dfae50cefa11ce5d2b2ce96e6a7b2460cd26` |
 | [handoff-note-1.txt](../originals/handoff-note-1.txt) | 5379 | `7ba234b16c4b6179724fc90d438682af07daf45b962d5a824ce76eb423b926f0` |
 | [handoff-note-2.txt](../originals/handoff-note-2.txt) | 5379 | `7ba234b16c4b6179724fc90d438682af07daf45b962d5a824ce76eb423b926f0` |
+| [SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16.md](../originals/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16.md) | 21908 | `d56350410745446552abe9fd8150c6871c1ac9c58de20cb95219532a6c735d63` |
+| [SSZ_P5_K2PRIME_EQ433_REVERSE_AUDIT_2026-09-16.md](../originals/SSZ_P5_K2PRIME_EQ433_REVERSE_AUDIT_2026-09-16.md) | 2700 | `36a9e19e72f0ebc0bd7d0804ec0171df75e1c368b927a68fe13803f6785bd54c` |
+| [SSZ_P5_SHARED_BASELINE_ASSEMBLY_VALIDATION_2026-09-16.md](../originals/SSZ_P5_SHARED_BASELINE_ASSEMBLY_VALIDATION_2026-09-16.md) | 2398 | `f845e60caa09711bc92d31accd68072088a7437b5fda36f3c1135207831e433b` |
+| [ssz_hybrid_full_constraint_maps_JET9D8.py](../originals/ssz_hybrid_full_constraint_maps_JET9D8.py) | 4918 | `287185c4f3c660e27f0ff32dc19f7f1e1040726e46e08ba35685a00b0e562850` |
+| [ssz_p5_central_holonomic_chain_stencil_convergence_2026-09-16.csv](../originals/ssz_p5_central_holonomic_chain_stencil_convergence_2026-09-16.csv) | 3243 | `99c9d323011428d368b3d883321ea3a4b82b36492280f9c46cdf674a0a20a9e0` |
+| [ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16.csv](../originals/ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16.csv) | 1964 | `80f3e9ad6fe299601c5b89ccc0f66a94a0f5e33285721e65e199db8209c49e0e` |
+| [ssz_p5_inner_naive_vs_resolved_background_keypoints_2026-09-16.csv](../originals/ssz_p5_inner_naive_vs_resolved_background_keypoints_2026-09-16.csv) | 1236 | `3cb5c80478944237ef9a71e3549dde2fdf8b6b6b91f7a48f8d87374d2d8f939c` |
+| [ssz_p5_shared_baseline_assembly_validation_2026-09-16.csv](../originals/ssz_p5_shared_baseline_assembly_validation_2026-09-16.csv) | 1002 | `6204f8600d5de71da0ba9794ef6dd96467e05b07d19435bf07a4b7fd32515e2b` |

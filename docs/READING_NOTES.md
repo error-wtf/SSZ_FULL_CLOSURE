@@ -26,3 +26,16 @@ The untouched release auditor was executed with NumPy and pandas available. It e
 ## Verification boundaries observed in source
 
 The auditor's direct-export gate reads the truthiness of a certificate's `pass` field; it does not independently rebuild the operator. Some exact gates encode theorem statements. Optional inputs may be skipped, and numerical or manifest failures are not all reflected in the default exit status. Therefore this archival repository does not use a zero exit code alone as an independent proof or as a sufficient scientific release gate. These observations are recorded without changing the frozen auditor.
+
+## Additional files from 16 September
+
+The complete same-day JIF import adds 8 files. Earlier status notes describe intermediate electric-SVT/K2-prime and background-assembly questions; the later Full Closure Monograph and action JSON define the final supplied release claim. Additional CSVs are archived diagnostic records, not regenerated certificates. No source status was rewritten.
+
+- `SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16.md`
+- `SSZ_P5_K2PRIME_EQ433_REVERSE_AUDIT_2026-09-16.md`
+- `SSZ_P5_SHARED_BASELINE_ASSEMBLY_VALIDATION_2026-09-16.md`
+- `ssz_hybrid_full_constraint_maps_JET9D8.py`
+- `ssz_p5_central_holonomic_chain_stencil_convergence_2026-09-16.csv`
+- `ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16.csv`
+- `ssz_p5_inner_naive_vs_resolved_background_keypoints_2026-09-16.csv`
+- `ssz_p5_shared_baseline_assembly_validation_2026-09-16.csv`

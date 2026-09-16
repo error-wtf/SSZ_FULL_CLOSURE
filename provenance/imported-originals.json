@@ -143,6 +143,54 @@
       "source_name": "handoff-note-2.txt",
       "size_bytes": 5379,
       "sha256": "7ba234b16c4b6179724fc90d438682af07daf45b962d5a824ce76eb423b926f0"
+    },
+    {
+      "path": "originals/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16.md",
+      "source_name": "SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16.md",
+      "size_bytes": 21908,
+      "sha256": "d56350410745446552abe9fd8150c6871c1ac9c58de20cb95219532a6c735d63"
+    },
+    {
+      "path": "originals/SSZ_P5_K2PRIME_EQ433_REVERSE_AUDIT_2026-09-16.md",
+      "source_name": "SSZ_P5_K2PRIME_EQ433_REVERSE_AUDIT_2026-09-16.md",
+      "size_bytes": 2700,
+      "sha256": "36a9e19e72f0ebc0bd7d0804ec0171df75e1c368b927a68fe13803f6785bd54c"
+    },
+    {
+      "path": "originals/SSZ_P5_SHARED_BASELINE_ASSEMBLY_VALIDATION_2026-09-16.md",
+      "source_name": "SSZ_P5_SHARED_BASELINE_ASSEMBLY_VALIDATION_2026-09-16.md",
+      "size_bytes": 2398,
+      "sha256": "f845e60caa09711bc92d31accd68072088a7437b5fda36f3c1135207831e433b"
+    },
+    {
+      "path": "originals/ssz_hybrid_full_constraint_maps_JET9D8.py",
+      "source_name": "ssz_hybrid_full_constraint_maps_JET9D8.py",
+      "size_bytes": 4918,
+      "sha256": "287185c4f3c660e27f0ff32dc19f7f1e1040726e46e08ba35685a00b0e562850"
+    },
+    {
+      "path": "originals/ssz_p5_central_holonomic_chain_stencil_convergence_2026-09-16.csv",
+      "source_name": "ssz_p5_central_holonomic_chain_stencil_convergence_2026-09-16.csv",
+      "size_bytes": 3243,
+      "sha256": "99c9d323011428d368b3d883321ea3a4b82b36492280f9c46cdf674a0a20a9e0"
+    },
+    {
+      "path": "originals/ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16.csv",
+      "source_name": "ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16.csv",
+      "size_bytes": 1964,
+      "sha256": "80f3e9ad6fe299601c5b89ccc0f66a94a0f5e33285721e65e199db8209c49e0e"
+    },
+    {
+      "path": "originals/ssz_p5_inner_naive_vs_resolved_background_keypoints_2026-09-16.csv",
+      "source_name": "ssz_p5_inner_naive_vs_resolved_background_keypoints_2026-09-16.csv",
+      "size_bytes": 1236,
+      "sha256": "3cb5c80478944237ef9a71e3549dde2fdf8b6b6b91f7a48f8d87374d2d8f939c"
+    },
+    {
+      "path": "originals/ssz_p5_shared_baseline_assembly_validation_2026-09-16.csv",
+      "source_name": "ssz_p5_shared_baseline_assembly_validation_2026-09-16.csv",
+      "size_bytes": 1002,
+      "sha256": "6204f8600d5de71da0ba9794ef6dd96467e05b07d19435bf07a4b7fd32515e2b"
     }
   ]
 }

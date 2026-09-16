@@ -658,6 +658,144 @@
     }
   },
   {
+    "file": "ssz_p5_central_holonomic_chain_stencil_convergence_2026-09-16.csv",
+    "rows": 42,
+    "columns": [
+      "window",
+      "degree",
+      "identity",
+      "median_scaled_rel",
+      "p95_scaled_rel",
+      "max_scaled_rel"
+    ],
+    "numeric_summary": {
+      "window": {
+        "numeric_count": 42,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 7.0,
+        "max": 13.0
+      },
+      "degree": {
+        "numeric_count": 42,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 6.0,
+        "max": 10.0
+      },
+      "median_scaled_rel": {
+        "numeric_count": 42,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 7.999621690032573e-12,
+        "max": 2.9803625426232226e-05
+      },
+      "p95_scaled_rel": {
+        "numeric_count": 42,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 3.0557983435917134e-11,
+        "max": 0.000132650096774267
+      },
+      "max_scaled_rel": {
+        "numeric_count": 42,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 7.092260794950337e-11,
+        "max": 0.002015232002893219
+      }
+    }
+  },
+  {
+    "file": "ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16.csv",
+    "rows": 10,
+    "columns": [
+      "sector",
+      "L",
+      "min_abs_Dh1",
+      "min_abs_DeltaV",
+      "min_abs_2Lv9",
+      "max_abs_dphi2_cancel",
+      "max_abs_h1prime_cancel",
+      "max_abs_h1_map",
+      "max_abs_H1_map",
+      "max_abs_dA1_map",
+      "max_abs_dA0_map"
+    ],
+    "numeric_summary": {
+      "L": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 6.0,
+        "max": 1000.0
+      },
+      "min_abs_Dh1": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 11.987939931344817,
+        "max": 146441.60122796727
+      },
+      "min_abs_DeltaV": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 3.0428841014456243,
+        "max": 3.0428841014456243
+      },
+      "min_abs_2Lv9": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 0.11995073318001839,
+        "max": 19.9917888633364
+      },
+      "max_abs_dphi2_cancel": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "max_abs_h1prime_cancel": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 1.1102230246251565e-16,
+        "max": 2.842170943040401e-14
+      },
+      "max_abs_h1_map": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 0.06707543879234194,
+        "max": 29.660215015104782
+      },
+      "max_abs_H1_map": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 0.17502685851724067,
+        "max": 22.09165895226573
+      },
+      "max_abs_dA1_map": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 0.015775081892092174,
+        "max": 2.629180315348696
+      },
+      "max_abs_dA0_map": {
+        "numeric_count": 10,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 31753.989887914693,
+        "max": 2550475.76653224
+      }
+    }
+  },
+  {
     "file": "ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12(1).csv",
     "rows": 5000,
     "columns": [
@@ -814,6 +952,153 @@
         "nonnumeric_or_empty_count": 0,
         "min": 0.39728454649658385,
         "max": 0.5048711358527647
+      }
+    }
+  },
+  {
+    "file": "ssz_p5_inner_naive_vs_resolved_background_keypoints_2026-09-16.csv",
+    "rows": 4,
+    "columns": [
+      "u",
+      "x",
+      "T_H",
+      "S_SVT",
+      "metric_residual_14_x",
+      "metric_residual_15_x",
+      "E00_H",
+      "E11_H",
+      "E00_SVTg",
+      "E11_SVTg",
+      "E00_total_standard_assembled",
+      "E11_total_standard_assembled",
+      "metric_residual_14_y",
+      "metric_residual_15_y",
+      "JA"
+    ],
+    "numeric_summary": {
+      "u": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 0.71,
+        "max": 0.715
+      },
+      "x": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 1.3986013986013988,
+        "max": 1.4084507042253522
+      },
+      "T_H": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "S_SVT": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "metric_residual_14_x": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -1.1102230246251563e-16,
+        "max": 6.272140851165256e-17
+      },
+      "metric_residual_15_x": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -2.3314683517128287e-15,
+        "max": 0.0
+      },
+      "E00_H": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -8.510146317326923,
+        "max": 1.785303259041763
+      },
+      "E11_H": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -2.2372023065672804,
+        "max": 0.7605097648622445
+      },
+      "E00_SVTg": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -1.785303259040378,
+        "max": 4.440892098500626e-16
+      },
+      "E11_SVTg": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -1.8286004908749716,
+        "max": 0.0
+      },
+      "E00_total_standard_assembled": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -9.900746643697207,
+        "max": 1.3848922009174205e-12
+      },
+      "E11_total_standard_assembled": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -3.733177113215337,
+        "max": -4.674011178096293e-12
+      },
+      "metric_residual_14_y": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -1.1102230246251563e-16,
+        "max": 6.272140851165256e-17
+      },
+      "metric_residual_15_y": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -2.3314683517128287e-15,
+        "max": 0.0
+      },
+      "JA": {
+        "numeric_count": 4,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": -1.0817401916138436e-15,
+        "max": 2.740965690591959e-16
+      }
+    }
+  },
+  {
+    "file": "ssz_p5_shared_baseline_assembly_validation_2026-09-16.csv",
+    "rows": 14,
+    "columns": [
+      "domain",
+      "test",
+      "value",
+      "status"
+    ],
+    "numeric_summary": {
+      "value": {
+        "numeric_count": 14,
+        "nonfinite_count": 0,
+        "nonnumeric_or_empty_count": 0,
+        "min": 1.6653345369377348e-16,
+        "max": 9.900746643697207
       }
     }
   }
