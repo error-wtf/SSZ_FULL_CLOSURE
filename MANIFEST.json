@@ -28,6 +28,16 @@
       "sha256": "9b627b1190ede5c376b425b6a269a8f80157b9cf31275bf829b6009a825be93e"
     },
     {
+      "path": "CODEX_FINAL_EXECUTION_CONTRACT.md",
+      "size_bytes": 22952,
+      "sha256": "05f56e7f807110af3825aa4bb5821e92cf41c149c6aa0afae2575b75005cfe37"
+    },
+    {
+      "path": "CODEX_HANDOFF_VERIFICATION.json",
+      "size_bytes": 163,
+      "sha256": "316db7e2ac3b5f7c2f5ffd707ac4de61358545a4c965cb1601c326010db8cbd5"
+    },
+    {
       "path": "CODEX_IMPLEMENTATION_SPEC.md",
       "size_bytes": 27204,
       "sha256": "24e5a34bccf82f8bad15e3eb828eb19008f578071ec05049e6edb2a5c77ec5f5"
@@ -39,8 +49,8 @@
     },
     {
       "path": "CODEX_TASK_DAG.json",
-      "size_bytes": 2029,
-      "sha256": "c4848bfb24ecddd1ed8b7e641a0fe55451b1bd7f6df6f42f676641b0fc6a51e4"
+      "size_bytes": 2694,
+      "sha256": "ddb7e2b0354ec7e1619513f7f64fe462b879d6465032311cc48d22455fc54a28"
     },
     {
       "path": "DO_NOT_RECOMPUTE.md",
@@ -89,8 +99,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 7944,
-      "sha256": "395213ac2c1626b992d631c05a198b81f352a212591c0e76487198d0fbbd8f7b"
+      "size_bytes": 7717,
+      "sha256": "061b0659d99651f613d1d58966e778f97d7a6566d11ed5c44aa7a7cebd3dfbce"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -109,8 +119,8 @@
     },
     {
       "path": "REPRODUCE.md",
-      "size_bytes": 3708,
-      "sha256": "ea30b1d2b95d3eb59d1449df843db68a8039856cd802ebde8c02693b04d08660"
+      "size_bytes": 4428,
+      "sha256": "82407518cd0527ab37d984fa54d94ed4e5d936dd623d9e99fc020b56c0098766"
     },
     {
       "path": "RESEARCH_STATE.md",
@@ -123,9 +133,24 @@
       "sha256": "742d7c1dbfa06d9870b69f2b95ae1b764b1c3083aea16d968cae5d8e136cf684"
     },
     {
+      "path": "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json",
+      "size_bytes": 1658,
+      "sha256": "f8e7ba4749811942b75ad69838509a39a89ae03652fcd72c7c5dbbcc96304917"
+    },
+    {
+      "path": "START_HERE_CODEX.md",
+      "size_bytes": 2476,
+      "sha256": "c8898237e0439a1830242d5691202150f9e57e3aef0d4e98827c4d41dff9045c"
+    },
+    {
       "path": "STATUS_FULL_CLOSURE.md",
       "size_bytes": 1834,
       "sha256": "9e7051796fe50582615fed9b3f65e8b8719e9346264f7cce7d6aef9d2344c5e0"
+    },
+    {
+      "path": "archive/CODEX_TASK_DAG_before_regional_handoff.json",
+      "size_bytes": 2029,
+      "sha256": "c4848bfb24ecddd1ed8b7e641a0fe55451b1bd7f6df6f42f676641b0fc6a51e4"
     },
     {
       "path": "archive/full_working_snapshot/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16(1).md",
@@ -1203,9 +1228,19 @@
       "sha256": "4a614bc3b09e39b1dca5fa6ebafc82e025a41ba6f744818873d17f1f14ad0627"
     },
     {
+      "path": "data/authoritative/ssz_p5_F2a_EXPLICIT_GLOBAL_ACTION_COVER_2026-09-15.csv",
+      "size_bytes": 581,
+      "sha256": "83bded14a01d1a590feba33954ad68ed34856daea0c604f69275498b8827ea8d"
+    },
+    {
       "path": "data/authoritative/ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv",
       "size_bytes": 1422523,
       "sha256": "5a831cbd4fd85b02a818c98bea808da07d34de86e50688147f7b1723eefda695"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_GLOBAL_ACTION_COVER_2026-09-17.csv",
+      "size_bytes": 1777,
+      "sha256": "059f38f9b4f45252028636aa43ea73c546f24e3890291b540ac25aef48b58ac8"
     },
     {
       "path": "data/authoritative/ssz_p5_full_horndeski_principal_control_rank_2026-09-12.csv",
@@ -1253,6 +1288,11 @@
       "sha256": "ac1ea8e1048274153981dd2223ea032df08268cd13e5ad152517d0f0030e2e98"
     },
     {
+      "path": "data/diagnostic/REGIONAL_CENTRAL_KINETIC_GATE.json",
+      "size_bytes": 11432,
+      "sha256": "74105b4b26b9a0ace538481918e60e3c305d8ac44446f012d250b88f542c98fb"
+    },
+    {
       "path": "data/diagnostic/ssz_p5_SELECTED_41STREAM_V2_2026-09-16.csv",
       "size_bytes": 17036072,
       "sha256": "a95d97a60f24221847abdae7caeffc6a7bcfc285ca8c42bb21af7cd2e4926f34"
@@ -1271,6 +1311,36 @@
       "path": "data/generated/.gitkeep",
       "size_bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/prestaged/direct41/central_selected_corrected_41of41.csv",
+      "size_bytes": 3613972,
+      "sha256": "c98cce878586e0fa330f347246c3ae0fbd828130c3a39da16c475dea625351bd"
+    },
+    {
+      "path": "data/prestaged/direct41/core_selected_41of41.csv",
+      "size_bytes": 3024672,
+      "sha256": "08e39fa0f568f9154201318e221cb477553de2369810bb06a162d636dab2f82d"
+    },
+    {
+      "path": "data/prestaged/direct41/inner_selected_candidate_41of41.csv",
+      "size_bytes": 1459307,
+      "sha256": "59cb34633ac8da66b31b2d6e57fe407819370eb48fa7d75f572bbfb87b9f066f"
+    },
+    {
+      "path": "data/prestaged/direct41/outer_resolved_raw_41of41.csv",
+      "size_bytes": 2174422,
+      "sha256": "5e22d94aee168ed442cecff33c6f8ec8d05283c02ec943881327894970ea7711"
+    },
+    {
+      "path": "data/prestaged/direct41/weak_exterior_39of41.csv",
+      "size_bytes": 6673887,
+      "sha256": "8f98476599c9eb82bd3824c6312e5dd74262dcf6c5b5e9e3c2c2b2b6f2f869cd"
+    },
+    {
+      "path": "data/prestaged/odd/central_svt_odd_profile.csv",
+      "size_bytes": 1993401,
+      "sha256": "45c2b8e4abadef0727f1045ea0080750e22c254e52a1d83a3f400bf4da26bb32"
     },
     {
       "path": "data/production/ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
@@ -1441,6 +1511,11 @@
       "path": "docs/INTEGRATION.md",
       "size_bytes": 2326,
       "sha256": "d97759e2e0be205bf1a83a4137c423164309ecfa240429f527c76075eeb82db0"
+    },
+    {
+      "path": "docs/REGIONAL_KINETIC_GATE_2026-09-17.md",
+      "size_bytes": 5733,
+      "sha256": "7c3e34c1ff3d3ec68e5227a190cf825516fad18833019a247beaba2abe2951f4"
     },
     {
       "path": "docs/checkpoints/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16(1).md",
@@ -1794,8 +1869,8 @@
     },
     {
       "path": "src/ssz_p5/export/verification.py",
-      "size_bytes": 7729,
-      "sha256": "3c418cea8ee82ca78542bf6e43b7cf781731afdfd881b45be457569c53c3c2ea"
+      "size_bytes": 7667,
+      "sha256": "0a0babdcb2dba3f2592b1e73f6b52bf8bf151c1c3ef182bf418fdadb15bea31b"
     },
     {
       "path": "src/ssz_p5/geometry/__init__.py",
@@ -1814,8 +1889,8 @@
     },
     {
       "path": "src/ssz_p5/jets/jet9d8.py",
-      "size_bytes": 2902,
-      "sha256": "c8c3017f237dfdf6705d24a3d2054ab641613e110634d65a1631def68bc7508c"
+      "size_bytes": 3040,
+      "sha256": "60c68799ba4d602401dd54c855b570c882523a54bfedd5d7212c5e4393f0d3bb"
     },
     {
       "path": "src/ssz_p5/numerics.py",
@@ -1838,9 +1913,29 @@
       "sha256": "ea91637ea3e4eb3dcdad6aec7b63707c22ca011adbc65cff0c17f585b1283a9f"
     },
     {
+      "path": "src/ssz_p5/production/kinetic_audit.py",
+      "size_bytes": 7328,
+      "sha256": "ca94e8ce675847fd42cc682a6661b0fd9152fee36e2556bbf84a3b3ee028ea94"
+    },
+    {
+      "path": "src/ssz_p5/production/member.py",
+      "size_bytes": 1872,
+      "sha256": "70076571796996fb4071ed00aab8a4e6145e829724ead11a684b3b5e6f1e980f"
+    },
+    {
+      "path": "src/ssz_p5/production/regional_coefficients.py",
+      "size_bytes": 4514,
+      "sha256": "ceae1efa3bd0458eb099c0b0419e101bad28da5a4b3f05f9e70ca189c61d27bc"
+    },
+    {
       "path": "src/ssz_p5/production/regions.py",
-      "size_bytes": 1643,
-      "sha256": "62fd7fc32e296df4558cbfca36ee75bad05456c2782a7e101536450ae3661d9f"
+      "size_bytes": 4240,
+      "sha256": "75fe151047bc3ead6fbe85842332b78ffe4893bf1d7b8b807e800e38b37813f9"
+    },
+    {
+      "path": "src/ssz_p5/production/sources.py",
+      "size_bytes": 2611,
+      "sha256": "e41c8418dd99a6d9a61d5714aaadd468a34cde212a4156f5e74c478ccf6a65bc"
     },
     {
       "path": "src/ssz_p5/provenance/__init__.py",
@@ -1864,8 +1959,8 @@
     },
     {
       "path": "src/ssz_p5/qnm/gate.py",
-      "size_bytes": 2084,
-      "sha256": "dfd04093ed56d62622c83298c401ffc21f05e7bebdede07c5a4796257f79416b"
+      "size_bytes": 2159,
+      "sha256": "2343feb07ff951048dbdf4d0158200e2db79213fe8f8e72e06667588af033ab3"
     },
     {
       "path": "src/ssz_p5/reducer/__init__.py",
@@ -1876,6 +1971,11 @@
       "path": "src/ssz_p5/reducer/canonical.py",
       "size_bytes": 2793,
       "sha256": "7ebc16ab86dd09814249939594fc9f3d8faa0779e70aba23e185c6790ddedcee"
+    },
+    {
+      "path": "src/ssz_p5/reducer/kinetic_schur.py",
+      "size_bytes": 2544,
+      "sha256": "b648eb6a2886c5e29112271b8d22b1293908ea4db8e144223c853ae19b4132cf"
     },
     {
       "path": "src/ssz_p5/stability/__init__.py",
@@ -1919,8 +2019,8 @@
     },
     {
       "path": "src/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py",
-      "size_bytes": 8970,
-      "sha256": "86f22103377a4c3a692cfee3b9116ee04a343d30e8a193f1b5f235173d984f25"
+      "size_bytes": 8962,
+      "sha256": "821a98905f243da3b8a41ebaaede5cf1b0fc9b53a386cdfcb83bcdd08f9ffe8a"
     },
     {
       "path": "src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py",
@@ -1934,8 +2034,8 @@
     },
     {
       "path": "ssz_p5_full_pipeline.py",
-      "size_bytes": 24749,
-      "sha256": "a8663cdb529b33024f441617c83cd3e0f08c347da2cd3e12f3501b2a6d98a462"
+      "size_bytes": 25647,
+      "sha256": "c1f459c8fd11524cbaedd77e641ddc275de020c4d87780d11b3a9e88f4019471"
     },
     {
       "path": "tests/integration/test_constructive_audit.py",
@@ -1954,8 +2054,8 @@
     },
     {
       "path": "tests/negative/test_certificate_provenance.py",
-      "size_bytes": 2314,
-      "sha256": "96df3c647b5a8d6f2b81921d682e564aedb3c49880668c472b1e469d8ebd6789"
+      "size_bytes": 2330,
+      "sha256": "8b2bec808e5bd578aa046b027c3de22922a85a2d4a30ac366ee3f9dabfaf764e"
     },
     {
       "path": "tests/negative/test_matrix_guards.py",
@@ -2004,8 +2104,8 @@
     },
     {
       "path": "tests/unit/test_jet9d8.py",
-      "size_bytes": 293,
-      "sha256": "4f1597f136840e5b3f198121de9230908add21585960b12d73a108f73b7734d4"
+      "size_bytes": 806,
+      "sha256": "76ac08ccbe84ef36e604e0b369518a31fdda8c29483cc76fce94b728e096692c"
     },
     {
       "path": "tests/unit/test_onshell_identity.py",
@@ -2016,6 +2116,11 @@
       "path": "tests/unit/test_production_regions.py",
       "size_bytes": 773,
       "sha256": "115abad824c23ffc13b24849938c8d201aeb3a02ff19da8376143bb6412c3298"
+    },
+    {
+      "path": "tests/unit/test_regional_production.py",
+      "size_bytes": 3513,
+      "sha256": "f5ae8800508cbf073c99fb8bf7bf925a9eeceb462c39803c5b6b3d1255292f07"
     },
     {
       "path": "tools/audit_frozen_onshell.py",
@@ -2033,14 +2138,39 @@
       "sha256": "13bdb0cbb537dcf81e59f1583278cb4eab277f5223322fd9eda64bada645ceb9"
     },
     {
+      "path": "tools/audit_regional_kinetic.py",
+      "size_bytes": 988,
+      "sha256": "8a774cdbe9d10654a900e71cdee0a61aa88ae7ff938fc80c18d9679a3c967aa4"
+    },
+    {
       "path": "tools/build_ssz_p5_full_closure_monograph.py",
       "size_bytes": 48047,
       "sha256": "fb7856fa173d46ccdeb50d74e25e216d96c5bdebd89c43cc30f7abca6b4ba712"
     },
     {
+      "path": "tools/codex_start.sh",
+      "size_bytes": 296,
+      "sha256": "0c1b348df0a1183d1599e2dab37c4b50cefa4ec649988c6eac3497bc9dacf814"
+    },
+    {
+      "path": "tools/generate_global_action_cover.py",
+      "size_bytes": 1511,
+      "sha256": "2d254d5a93c325acb50d5b98cf88e4a3752073e0c4c5e474a53d47aa97d28ffe"
+    },
+    {
+      "path": "tools/regenerate_regional_coefficients.py",
+      "size_bytes": 2191,
+      "sha256": "6c7abc152f5bffc6f96032e4556369029ce18f6692308c04caeabe0dcf990689"
+    },
+    {
       "path": "tools/release_manifest.py",
       "size_bytes": 2382,
       "sha256": "6b79dc7c3683ae00e2cd41c471da4d80faccb7fd0e627cf945e944b0ac2d2d05"
+    },
+    {
+      "path": "tools/verify_codex_handoff.py",
+      "size_bytes": 3416,
+      "sha256": "fc7f0c9e4a71c47708d960e7f3969d83777c3c2cafe9eca7ed03324c775e4536"
     }
   ]
 }

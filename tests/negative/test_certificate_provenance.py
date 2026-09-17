@@ -15,14 +15,14 @@ def synthetic_certificate(tmp_path):
         repo_root() / "schemas/direct_global_krgm_certificate.schema.json",
         tmp_path / "schemas/direct_global_krgm_certificate.schema.json",
     )
-    for name in ("PRODUCTION_BLACKLIST.json", "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json"):
+    for name in ("PRODUCTION_BLACKLIST.json", "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json"):
         shutil.copyfile(repo_root() / name, tmp_path / name)
     artifact = tmp_path / "synthetic.csv"
     artifact.write_text("test fixture only\n")
     data = dict(
         pass_=True,
         release="2026-09-16",
-        action_sha256=sha256(tmp_path / "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json"),
+        action_sha256=sha256(tmp_path / "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json"),
         coefficient_stream_sha256=sha256(artifact),
         L_values=list(DEFAULT_L),
         gates=[

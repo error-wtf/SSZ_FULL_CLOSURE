@@ -1,0 +1,28 @@
+{
+  "name": "SSZ P5 regional Full-SVT production member",
+  "release": "2026-09-17",
+  "baseline": "regional-production correction equivalent to GitHub commit 17f8630",
+  "geometry": "frozen P5 geometry",
+  "production_regions": [
+    {"region":"weak_exterior_H","u_min":null,"u_max":0.5515230871346237,"vector_branch":"region-specific; pure-H exterior"},
+    {"region":"outer_same_action_H_SVT","u_min":0.5515230871346237,"u_max":0.61,"vector_branch":"resolved H+SVT handover"},
+    {"region":"central_exact_SVT","u_min":0.61,"u_max":0.71,"vector_branch":"genuine-SVT, A0prime generally nonzero"},
+    {"region":"inner_same_action_SVT_H","u_min":0.71,"u_max":0.715,"vector_branch":"resolved SVT+H handover"},
+    {"region":"punctured_H_core","u_min":0.715,"u_max":null,"vector_branch":"general Horndeski core"},
+    {"region":"analytic_center","u_min":null,"u_max":null,"vector_branch":"analytic Taylor/center chart"}
+  ],
+  "locked_conventions": {
+    "v12": "-v6/(2h)",
+    "a5": "a2' - a1'' - (A0' v4/2)' + A0' v5/2",
+    "derivatives": "JET9D8 window=9 degree=8",
+    "reduction": "assemble unreduced first, eliminate common constraints once, retain S antisymmetric"
+  },
+  "authoritative_region_resolver": "src/ssz_p5/production/regions.py",
+  "authoritative_source_registry": "src/ssz_p5/production/sources.py",
+  "historical_note": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json is retained as a historical alternative global A0prime=0 simplification and is not the regional production member for this closure run.",
+  "status": {
+    "HANDOFF_VERIFIED": true,
+    "ARCHIVE_AUDIT_PIPELINE": "PASS",
+    "ABSOLUTE_FULL_CLOSURE": "NOT_YET_CERTIFIED"
+  }
+}

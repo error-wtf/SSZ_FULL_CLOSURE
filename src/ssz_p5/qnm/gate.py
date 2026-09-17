@@ -6,6 +6,7 @@ from pathlib import Path
 import jsonschema
 
 from ..config import DEFAULT_L, repo_root
+from ..production.member import MEMBER_FILE, load_regional_member
 from ..provenance.blacklist import require_production_input
 from ..provenance.manifest import sha256
 
@@ -16,7 +17,7 @@ REQUIRED_GATES = {
     "a5",
     "v12",
     "auxiliary",
-    "epsilon_y",
+    "regional_member",
     "constraints",
     "operator_structure",
     "kinetic",
@@ -38,7 +39,8 @@ def require_direct_krgm_certificate(path: Path, root: Path | None = None) -> dic
             (root / "schemas/direct_global_krgm_certificate.schema.json").read_text()
         )
         jsonschema.validate(data, schema)
-        action = root / "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json"
+        load_regional_member(root)
+        action = root / MEMBER_FILE
         if data["action_sha256"] != sha256(action):
             raise ValueError("action hash mismatch")
         if not set(DEFAULT_L).issubset(data["L_values"]):

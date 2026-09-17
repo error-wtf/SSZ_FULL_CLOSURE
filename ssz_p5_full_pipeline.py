@@ -476,14 +476,40 @@ def check_frozen_onshell(root: Path) -> list[Check]:
         output = root / "data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json"
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(json.dumps(report, indent=2) + "\n")
-        return [Check(
-            "production_regions", "sector_specific_identity_scope", "PASS",
-            report["witnesses"],
-            "pure-H identities are not applied to central_exact_SVT",
-            str(output.relative_to(root)),
-        )]
+        return [
+            Check(
+                "production_regions",
+                "sector_specific_identity_scope",
+                "PASS",
+                report["witnesses"],
+                "pure-H identities are not applied to central_exact_SVT",
+                str(output.relative_to(root)),
+            )
+        ]
     except (OSError, ValueError, KeyError, TypeError) as exc:
         return [Check("production_regions", "sector_specific_identity_scope", "FAIL", str(exc))]
+
+
+def check_regional_kinetic(root: Path) -> list[Check]:
+    from ssz_p5.production.kinetic_audit import audit_central_kinetic
+
+    try:
+        report = audit_central_kinetic(root)
+        output = root / "build/REGIONAL_CENTRAL_KINETIC_GATE.json"
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
+        return [
+            Check(
+                "finite_l",
+                "central_regional_kinetic",
+                report["status"],
+                report["scans"],
+                "K positive for every required L in central_exact_SVT",
+                str(output.relative_to(root)),
+            )
+        ]
+    except (OSError, ValueError, KeyError, TypeError, np.linalg.LinAlgError) as exc:
+        return [Check("finite_l", "central_regional_kinetic", "FAIL", str(exc))]
 
 
 def check_absolute_closure(root: Path) -> list[Check]:
@@ -523,7 +549,7 @@ def write_reports(root: Path, checks: list[Check], json_path: Path, md_path: Pat
         "provenance": {
             "git_commit": run(["git", "rev-parse", "HEAD"], root)[1].strip(),
             "python_version": sys.version,
-            "action_sha256": sha256(root / "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json"),
+            "action_sha256": sha256(root / "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json"),
             "numerical_policy_sha256": sha256(root / "NUMERICAL_POLICY.json"),
             "dependency_lock_sha256": sha256(root / "requirements.lock"),
             "input_manifest_sha256": sha256(root / "MANIFEST.json"),
@@ -537,18 +563,12 @@ def write_reports(root: Path, checks: list[Check], json_path: Path, md_path: Pat
         },
         "checks": [asdict(c) for c in checks],
         "scientific_status": {
-            "frozen_carrier_necessary_onshell_identity": next(
-                (c.status for c in checks if c.stage == "frozen_onshell"), "NOT_RUN"
+            "regional_central_kinetic": next(
+                (c.status for c in checks if c.name == "central_regional_kinetic"), "NOT_RUN"
             ),
-            "absolute_closure": "PASS"
-            if absolute_pass
-            else "NOT_CERTIFIED",
-            "direct_global_krgm_export": "PASS"
-            if absolute_pass
-            else "NOT_CERTIFIED",
-            "coupled_hsvt_qnm": "PASS"
-            if absolute_pass
-            else "NOT_CERTIFIED",
+            "absolute_closure": "PASS" if absolute_pass else "NOT_CERTIFIED",
+            "direct_global_krgm_export": "PASS" if absolute_pass else "NOT_CERTIFIED",
+            "coupled_hsvt_qnm": "PASS" if absolute_pass else "NOT_CERTIFIED",
             "scope": "archive, constructive audit and numerical regressions; "
             "not a direct-global export certificate",
         },
@@ -639,17 +659,17 @@ def main() -> int:
     checks += check_production_artifacts(root)
     checks += check_qnm_archive(root)
     checks += check_blacklist(root)
-    from ssz_p5.action.model import load_action_member
+    from ssz_p5.production.member import load_regional_member
 
     try:
-        member = load_action_member(root / "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json")
+        member = load_regional_member(root)
         checks.append(
             Check(
                 "action",
                 "frozen_action_member",
                 "PASS",
-                member.epsilon_y,
-                "epsilon_Y=0.01; A0prime=0",
+                member["name"],
+                "locked six-region Full-SVT production cover",
             )
         )
     except (ValueError, KeyError, OSError) as exc:
@@ -685,6 +705,7 @@ def main() -> int:
 
     if ns.strict:
         checks += check_frozen_onshell(root)
+        checks += check_regional_kinetic(root)
         checks += check_absolute_closure(root)
 
     json_path = ns.json or root / "FULL_PIPELINE_REPORT.json"

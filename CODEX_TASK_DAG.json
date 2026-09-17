@@ -1,93 +1,55 @@
 {
-  "release": "2026-09-16",
+  "release": "2026-09-17-regional",
+  "baseline": "17f8630-equivalent regional production mapping",
+  "authoritative_member": "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json",
   "tasks": [
     {
-      "id": "D0",
-      "title": "Boot/package skeleton",
+      "id": "P0",
+      "title": "Verify pre-staged handoff once",
       "depends_on": [],
-      "done_when": [
-        "editable install",
-        "CLI help",
-        "legacy constructive audit PASS"
-      ]
+      "done_when": ["generate_global_action_cover succeeds", "verify_codex_handoff is 30/30", "pytest passes", "strict archive/audit pipeline passes"]
     },
     {
-      "id": "D1",
-      "title": "Port golden numerical modules",
-      "depends_on": [
-        "D0"
-      ],
-      "done_when": [
-        "JET9D8 regression",
-        "MH emitter regression",
-        "ZK emitter regression",
-        "constraint map regression",
-        "profile reducer regression"
-      ]
+      "id": "P1",
+      "title": "Complete direct regional 41-slot production",
+      "depends_on": ["P0"],
+      "done_when": ["weak direct reference normalized", "outer resolved direct regenerated/verified", "central exact SVT normalized/verified", "inner direct independently regenerated", "general Horndeski core direct emitter/regeneration completed where required", "analytic center attached", "regional interface tests pass"]
     },
     {
-      "id": "D2",
-      "title": "Regenerate pure Horndeski/Maxwell global 41 stream",
-      "depends_on": [
-        "D1"
-      ],
-      "done_when": [
-        "all 41 slots finite",
-        "accepted a5/v12",
-        "interfaces certified",
-        "pure-H exact oracles PASS"
-      ]
+      "id": "P2",
+      "title": "Freeze global Direct 41/41",
+      "depends_on": ["P1"],
+      "done_when": ["single region-resolved global stream exists", "all 41 slots finite", "region provenance recorded", "interfaces pass", "output hash frozen"]
     },
     {
-      "id": "D3",
-      "title": "Apply frozen epsilon-Y production deformation",
-      "depends_on": [
-        "D2"
-      ],
-      "done_when": [
-        "only v1/v10 differ from zero-vector baseline",
-        "ZA>0 everywhere",
-        "ZA_min reproduces certificate"
-      ]
+      "id": "P3",
+      "title": "Generate direct K,R,G,S,M",
+      "depends_on": ["P2"],
+      "done_when": ["current b2-corrected constraints used", "current profile-aware reducer used", "L=6,12,20,42,110,420,1000 exported", "matrix structure and pivots pass"]
     },
     {
-      "id": "D4",
-      "title": "Generate direct global KRGM",
-      "depends_on": [
-        "D3"
-      ],
-      "done_when": [
-        "all default L exported",
-        "pivots PASS",
-        "operator structure PASS",
-        "K>0",
-        "radial generalized eigenvalues >0",
-        "high-L regressions PASS"
-      ]
+      "id": "P4",
+      "title": "Close finite-l Odd/Even gates",
+      "depends_on": ["P3"],
+      "done_when": ["kinetic/radial gates pass", "pure-sector regressions pass", "central exact-SVT regression passes", "high-L M passes", "Odd certificate PASS", "Even certificate PASS", "Direct-KRGSM certificate PASS"]
     },
     {
-      "id": "D5",
-      "title": "Issue direct KRGM certificate",
-      "depends_on": [
-        "D4"
-      ],
-      "done_when": [
-        "schema valid",
-        "hashes valid",
-        "master auditor --require-direct-krgm exits 0"
-      ]
+      "id": "P5",
+      "title": "Close coupled spectral/QNM gate",
+      "depends_on": ["P4"],
+      "done_when": ["coupled radial operator built from the same Direct KRGSM", "existing Jost machinery reused/extended", "resolution/domain/asymptotic convergence demonstrated", "unstable-mode search domain recorded", "QNM certificate PASS"]
     },
     {
-      "id": "D6",
-      "title": "Enable coupled QNM",
-      "depends_on": [
-        "D5"
-      ],
-      "done_when": [
-        "QNM guard enforced",
-        "at least one convergent spectral method",
-        "resolution/domain convergence suite"
-      ]
+      "id": "P6",
+      "title": "Issue Absolute Full Closure certificate",
+      "depends_on": ["P5"],
+      "done_when": ["all mandatory gate ledger entries PASS", "ABSOLUTE_FULL_CLOSURE.json written with hashes", "strict pipeline requires and validates final certificates"]
+    },
+    {
+      "id": "P7",
+      "title": "Clean release",
+      "depends_on": ["P6"],
+      "done_when": ["fresh editable install PASS", "pytest PASS", "strict pipeline PASS", "manifest regenerated", "SHA256SUMS regenerated and verified", "release ZIP extracted and verified"]
     }
   ]
 }

@@ -2,21 +2,23 @@
 
 **Carmen Casu and Lino Casu · Anti-Capitalist Software License v1.4**
 
-Reproducible source, action profiles, perturbation tools and research records for
-P5 geometry with a Horndeski–Maxwell carrier and the frozen background-null
-scalar–vector–tensor deformation. Original papers and historical calculations
-are preserved alongside executable verification code.
+Research sources, action profiles, perturbation code and reproducible verification
+for the regional P5 Full-SVT member: weak Horndeski exterior, outer H/SVT
+handover, central genuine-SVT lobe, inner SVT/H handover, general Horndeski core,
+and an analytic center chart.
 
-> **Current production status: absolute full closure is not certified.**
-> The software tests and the archive audit pass. A sector-aware audit now assigns the disputed radii to the genuine-SVT
-> production lobe, where `A0prime != 0`; the pure-H null-vector identity is
-> therefore `NOT_APPLICABLE` to the global member. The strong-H file remains a
-> principal/control witness. Direct global coefficients and coupled spectral
-> products are still not certified. See the [region report](data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json).
+> **Current result: Absolute Full Closure is not certified.**
+> The selected central Full-SVT coefficient member fails the necessary finite-L
+> kinetic-positivity gate at L=6,12,20,42. At the interior point u≈0.690004,
+> L=6 gives a kinetic eigenvalue ≈−43.8617. An independent Schur calculation,
+> stencil/grid checks and basis rescalings reproduce the negative direction.
+> This is a statement about this coefficient member, not a no-go theorem for
+> P5 geometry. See the [reproducible execution report](docs/REGIONAL_KINETIC_GATE_2026-09-17.md)
+> and [machine evidence](data/diagnostic/REGIONAL_CENTRAL_KINETIC_GATE.json).
 
 ## Reproduce
 
-Use CPython **3.14** on Linux and run from the repository root:
+Use CPython **3.14** on Linux, from the repository root:
 
 ```bash
 git clone https://github.com/error-wtf/SSZ_FULL_CLOSURE.git
@@ -26,64 +28,59 @@ source .venv/bin/activate
 python -m pip install -r requirements.lock
 python -m pip install --no-deps -e .
 pytest -q
+python tools/regenerate_regional_coefficients.py
+python tools/audit_regional_kinetic.py
 python ssz_p5_full_pipeline.py --strict
 ```
 
-A strict exit code `2` currently reports the frozen-carrier on-shell identity
-failure and the missing direct-production closure certificate. Installation instructions and interpretation of the results are in
-[REPRODUCE.md](REPRODUCE.md).
+The regional regeneration command checks the Outer SVT-sector replay and central
+normalization. The kinetic audit and strict pipeline currently return **exit 2**:
+the frozen central member fails kinetic positivity and the complete global/spectral
+certificates are absent. Software tests verify implementations and rejection guards;
+their passing does not establish physical closure.
 
-To run the separately labelled historical archive and regression audit:
+For the separately labelled archive audit, run:
 
 ```bash
 python ssz_p5_full_pipeline.py
 ```
 
-Runtime reports are written to `FULL_PIPELINE_REPORT.json`,
-`FULL_PIPELINE_REPORT.md`, `build/audit.json` and `build/gates.csv`.
+The delivered handoff starts at [START_HERE_CODEX.md](START_HERE_CODEX.md), followed
+by the [execution contract](CODEX_FINAL_EXECUTION_CONTRACT.md) and
+[task DAG](CODEX_TASK_DAG.json). [tools/codex_start.sh](tools/codex_start.sh) performs
+the start checks and terminates with the actual strict result. The handoff's
+reported archive success must not be confused with a production-closure PASS.
 
-## The production chain
+## Production chain and verified scope
 
 ```text
-Frozen P5 action / background jets
-    → one global unreduced 41-slot stream
-    → epsilon_Y correction to v1 and v10
-    → common profile-aware constraint elimination
-    → K, R, G, S, M at L = 6, 12, 20, 42, 110, 420, 1000
+Locked regional Full-SVT action / background jets
+    → direct unreduced 41-slot regional emission
+    → common assembly with one shared-baseline subtraction
+    → same-basis K, R, G, S, M
     → finite-L / center / interface / pure-sector / high-L gates
-    → coupled spectral calculation using those same matrices
-    → convergence and bounded unstable-mode search
-    → absolute-closure certificate
+    → coupled spectrum and convergence from that same operator
+    → Absolute Full Closure certificate
 ```
 
-| Verification layer | Current result | Meaning |
+| Layer | Current result | Scope |
 | --- | --- | --- |
-| Software tests | PASS | Includes negative certificate tests and direct constraint stationarity |
-| Existing archive/audit checks | PASS | Reproduces the defined historical witnesses |
-| Frozen carrier, necessary on-shell identity | **FAIL** | Five numerical routes give a nonzero interior residual; no action member has been changed |
-| Direct global action → 41-slot regeneration | Not completed | General quartic/quintic core emission is not implemented by the existing restricted emitter |
-| Direct global finite-L matrices | Not certified | A complete same-action set of generated matrices is required |
-| Coupled spectral convergence | Not certified | Archived test-field calculations cannot substitute for the coupled operator |
-| Absolute closure / v1.0.0 | Not released | Strict mode rejects missing or invalid production evidence |
+| Regional source integration | Implemented | Active member, source registry, region resolver and certificate binding |
+| Outer raw SVT emission | Regression PASS | 41 slots, max scaled reference difference ≈9.03e-9; full H+SVT assembly is separate |
+| Central selected normalization | Regression PASS | Encoded lower-order member retained; max scaled difference ≈6.89e-12 |
+| Central finite-L kinetic gate | **FAIL** | Negative kinetic directions for L=6,12,20,42 |
+| Global direct 41 and KRGSM | Not certified | Remaining regional direct paths, center and interfaces are not claimed complete |
+| Coupled spectral convergence | Not run | Necessary kinetic gate fails; archived test-field roots are not a substitute |
+| Absolute closure / v1.0.0 | Not released | Strict mode rejects the failed gate and absent production evidence |
 
-The existing ZK emitter also uses a restricted Einstein/SVT action: its `f4XX`
-terms are not Horndeski `G4XX`, and it contains no general `G5` emission.
-Both active emitters reject unsupported nonzero Horndeski jets.
+## Selected member and numerical conventions
 
-The sector assignment is machine readable in [PRODUCTION_REGION_ASSIGNMENT.json](data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json).
-The concrete source-to-emitter comparison is machine readable in
-[data/diagnostic/PRODUCTION_SOURCE_CONTRACT.json](data/diagnostic/PRODUCTION_SOURCE_CONTRACT.json).
-[Implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md) record the
-verified constraint repair and the remaining emission boundary. These are
-implementation findings. The separately documented background inconsistency is
-not a computed perturbative instability or a no-go theorem for P5 geometry.
-
-## Frozen model and numerical conventions
-
-The [action member](SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json) fixes
-`epsilon_Y = 0.01` and `A0prime = 0`. With `kappa = h * phi_r**2 = -2X`,
-`ZA = 1 - 2 * epsilon_Y * kappa` multiplies only the Maxwell slots `v1` and
-`v10`. The other 39 slots retain the Horndeski/Maxwell baseline values.
+The active [regional member](SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json)
+allows nonzero A0prime in its electric SVT regions. The historical
+[epsilon-Y member](SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json) and strong-H carrier
+remain scoped alternatives/control witnesses; they do not replace the regional
+production action. In particular no global epsilon-Y-only slot modification or
+global A0prime=0 condition is imposed on this chain.
 
 - **41 slots:** `a1..a9`, `b1..b5`, `c1..c6`, `d1..d4`, `e1..e4`, `v1..v13`.
 - **Derivative service:** JET9D8, window 9 and degree 8.

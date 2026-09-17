@@ -20,12 +20,12 @@ python ssz_p5_full_pipeline.py --strict
 - `python ssz_p5_full_pipeline.py` reproduces the archive/audit checks.
 - `python ssz_p5_full_pipeline.py --strict` exits **2** because the complete
   direct-production and coupled spectral certificates have not been generated,
-  and the prescribed carrier fails a necessary on-shell background identity.
+  and the selected central Full-SVT coefficient member fails its finite-L kinetic gate.
 
 The strict failure is intentional evidence of an unfinished production chain;
 it must not be ignored when deciding whether to publish an absolute-closure
-release. See [implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md)
-for the exact source-to-emitter mismatch. The old archive-only meaning of
+release. See the [regional execution report](docs/REGIONAL_KINETIC_GATE_2026-09-17.md)
+for the selected-member evidence and independent reproduction. The old archive-only meaning of
 `--strict` has been removed.
 
 ## What strict mode requires
@@ -69,14 +69,15 @@ python tools/release_manifest.py --check
 Then test an exported clean tree in a fresh environment. Archived originals,
 including the initial import and supplied snapshot manifests, remain immutable.
 
-## Reproduce the frozen-carrier contradiction
+## Historical alternative-member diagnostic
 
 ```bash
 python tools/audit_frozen_onshell.py
 pytest -q tests/unit/test_onshell_identity.py tests/regression/test_frozen_onshell_diagnostic.py
 ```
 
-The diagnostic deliberately exits **2** for the supplied carrier and writes
+This historical diagnostic is not the regional production gate. It deliberately
+exits **2** for the separate zero-vector carrier and writes
 `build/FROZEN_ONSHELL_IDENTITY.json`. The seven test cases pass because they
 verify the identity on analytic controls and verify detection of the frozen
 input failure. Passing these tests is not a physical background PASS.
@@ -85,3 +86,17 @@ A committed snapshot with source hashes is in
 [data/diagnostic/FROZEN_ONSHELL_IDENTITY.json](data/diagnostic/FROZEN_ONSHELL_IDENTITY.json).
 [The derivation](docs/FROZEN_CARRIER_ONSHELL_CONTRADICTION.md) identifies the exact
 contradictory assumptions, radius, equation, and limits of the numerical check.
+
+## Current regional reproduction
+
+```bash
+python tools/regenerate_regional_coefficients.py
+python tools/audit_regional_kinetic.py
+```
+
+The first command independently replays the outer SVT sector and regenerates the
+encoded central lower-order member. Its PASS is limited to those operations. The
+second command runs the required L set and independently compares the kinetic
+Schur reduction with the full Euler-operator implementation, including stencil,
+resolution, field-normalization and localized velocity-packet checks. It returns
+2 for the current locked central coefficient member. Outputs are under `build/`.

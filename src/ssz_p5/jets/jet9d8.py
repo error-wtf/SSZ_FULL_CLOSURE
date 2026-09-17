@@ -69,7 +69,11 @@ def _jet_weights(r, order, window=9, degree=8):
         if order <= deg:
             rhs = np.zeros(deg + 1)
             rhs[order] = math.factorial(order) / scale**order
-            w = np.linalg.solve(V.T, rhs)
+            w = (
+                np.linalg.solve(V.T, rhs)
+                if V.shape[0] == V.shape[1]
+                else np.linalg.lstsq(V.T, rhs, rcond=None)[0]
+            )
         else:
             w = np.zeros(len(idx))
         inds[i, : len(idx)] = idx

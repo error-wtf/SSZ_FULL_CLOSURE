@@ -1,0 +1,7 @@
+{
+  "checks": 31,
+  "passed": 31,
+  "failed": 0,
+  "handoff_ready": true,
+  "note": "Handoff readiness is not the same as an Absolute Full Closure certificate."
+}

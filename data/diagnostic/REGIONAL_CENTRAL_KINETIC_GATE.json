@@ -1,0 +1,422 @@
+{
+  "status": "FAIL",
+  "validation": {
+    "central_reference_match": true,
+    "independent_replay_match": true,
+    "no_mixed_kinetic_order": true,
+    "nonzero_constraint_pivots": true,
+    "all_required_L_kinetic_positive": false
+  },
+  "scope": "necessary central finite-L kinetic gate only",
+  "region": "central_exact_SVT",
+  "basis": [
+    "psi",
+    "dphi",
+    "V"
+  ],
+  "action_sha256": "f8e7ba4749811942b75ad69838509a39a89ae03652fcd72c7c5dbbcc96304917",
+  "sources": [
+    {
+      "path": "data/production/ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "sha256": "74b4812b9a43dfb6faf71f5eaf2375c359d69ac250a5b5414fea8647fed8e89c"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv",
+      "sha256": "5a831cbd4fd85b02a818c98bea808da07d34de86e50688147f7b1723eefda695"
+    },
+    {
+      "path": "data/prestaged/direct41/central_selected_corrected_41of41.csv",
+      "sha256": "c98cce878586e0fa330f347246c3ae0fbd828130c3a39da16c475dea625351bd"
+    }
+  ],
+  "implementation": [
+    {
+      "path": "src/ssz_p5/reducer/kinetic_schur.py",
+      "sha256": "b648eb6a2886c5e29112271b8d22b1293908ea4db8e144223c853ae19b4132cf"
+    },
+    {
+      "path": "src/ssz_p5/production/regional_coefficients.py",
+      "sha256": "ceae1efa3bd0458eb099c0b0419e101bad28da5a4b3f05f9e70ca189c61d27bc"
+    },
+    {
+      "path": "src/ssz_p5/jets/jet9d8.py",
+      "sha256": "60c68799ba4d602401dd54c855b570c882523a54bfedd5d7212c5e4393f0d3bb"
+    },
+    {
+      "path": "src/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py",
+      "sha256": "821a98905f243da3b8a41ebaaede5cf1b0fc9b53a386cdfcb83bcdd08f9ffe8a"
+    },
+    {
+      "path": "src/ssz_hybrid_full_constraint_maps_JET9D8(1).py",
+      "sha256": "1723d2fb9c9babfe156c136ec0d75e760612f937ca7a029557fda36af9dd5199"
+    }
+  ],
+  "central_reference_max_scaled_error": 6.88519380398489e-12,
+  "scans": [
+    {
+      "L": 6,
+      "rows": 3809,
+      "min_eig_K": -692.1386032581054,
+      "x": 1.4084804682959815,
+      "u": 0.7099849962490622,
+      "negative_rows": 2007,
+      "min_abs_Dh1": 11.987939931309796,
+      "min_abs_auxiliary_determinant": 27.385956913010617,
+      "pass_kinetic": false
+    },
+    {
+      "L": 12,
+      "rows": 3809,
+      "min_eig_K": -242.0453776274169,
+      "x": 1.4084804682959815,
+      "u": 0.7099849962490622,
+      "negative_rows": 1549,
+      "min_abs_Dh1": 34.43859616969827,
+      "min_abs_auxiliary_determinant": 109.54382765204248,
+      "pass_kinetic": false
+    },
+    {
+      "L": 20,
+      "rows": 3809,
+      "min_eig_K": -82.78198847336463,
+      "x": 1.4084804682959815,
+      "u": 0.7099849962490622,
+      "negative_rows": 1159,
+      "min_abs_Dh1": 80.64814096522105,
+      "min_abs_auxiliary_determinant": 304.2884101445623,
+      "pass_kinetic": false
+    },
+    {
+      "L": 42,
+      "rows": 3809,
+      "min_eig_K": -0.04042982480059754,
+      "x": 1.4084804682959815,
+      "u": 0.7099849962490622,
+      "negative_rows": 435,
+      "min_abs_Dh1": 303.6326219680343,
+      "min_abs_auxiliary_determinant": 1341.9118887375205,
+      "pass_kinetic": false
+    },
+    {
+      "L": 110,
+      "rows": 3809,
+      "min_eig_K": 0.0005026165984795021,
+      "x": 1.639344262295082,
+      "u": 0.61,
+      "negative_rows": 0,
+      "min_abs_Dh1": 1882.188267533267,
+      "min_abs_auxiliary_determinant": 9204.72440687301,
+      "pass_kinetic": true
+    },
+    {
+      "L": 420,
+      "rows": 3809,
+      "min_eig_K": 4.604322833393884e-05,
+      "x": 1.4881135119143971,
+      "u": 0.6719917479369842,
+      "negative_rows": 0,
+      "min_abs_Dh1": 26106.615676791236,
+      "min_abs_auxiliary_determinant": 134191.18887375187,
+      "pass_kinetic": true
+    },
+    {
+      "L": 1000,
+      "rows": 3809,
+      "min_eig_K": 8.204377299581772e-06,
+      "x": 1.4896268110476,
+      "u": 0.6713090772693173,
+      "negative_rows": 0,
+      "min_abs_Dh1": 146441.60122796314,
+      "min_abs_auxiliary_determinant": 760721.0253614064,
+      "pass_kinetic": true
+    }
+  ],
+  "convergence": [
+    {
+      "stride": 1,
+      "window": 9,
+      "degree": 8,
+      "packet_kinetic_integral": -0.23438210571051687,
+      "packet_canonical_integral": -0.23438210564817122,
+      "x": 1.4492674838955182,
+      "u": 0.6900037509377344,
+      "A0prime": 1.449267483895518,
+      "eigenvalues": [
+        -43.861671769933494,
+        0.09070492967459966,
+        115.42430929014077
+      ],
+      "K": [
+        [
+          0.007052958079387328,
+          -1.7234131637999468,
+          1.3247738004885823
+        ],
+        [
+          -1.7234131637999468,
+          -34.68536928446974,
+          36.93019594840133
+        ],
+        [
+          1.3247738004885823,
+          36.93019594840131,
+          106.33165877627225
+        ]
+      ],
+      "negative_direction": [
+        0.04532109388325855,
+        0.9699850060284453,
+        -0.23890392740434646
+      ],
+      "rayleigh": -43.86167176993345,
+      "negative_inertia": [
+        1,
+        1,
+        1
+      ],
+      "min_abs_Dh1": 16.29636339435514,
+      "replay_scaled_max": 2.0336244688223815e-08,
+      "mixed_second_max": 8.326672684688674e-16,
+      "antisymmetric_cross_max": 6.217248937900877e-15
+    },
+    {
+      "stride": 2,
+      "window": 9,
+      "degree": 8,
+      "packet_kinetic_integral": -0.2343821168658522,
+      "packet_canonical_integral": -0.23438211661641617,
+      "x": 1.4492674838955182,
+      "u": 0.6900037509377344,
+      "A0prime": 1.449267483895518,
+      "eigenvalues": [
+        -43.86864047002009,
+        0.09070417257779559,
+        115.42388736389273
+      ],
+      "K": [
+        [
+          0.007043450761103173,
+          -1.7236778254459644,
+          1.3247738004887544
+        ],
+        [
+          -1.7236778254459635,
+          -34.6927511605829,
+          36.93019594841531
+        ],
+        [
+          1.324773800488754,
+          36.9301959484153,
+          106.33165877627223
+        ]
+      ],
+      "negative_direction": [
+        0.04531954494069599,
+        0.9699876514999016,
+        -0.2388934799948994
+      ],
+      "rayleigh": -43.86864047002009,
+      "negative_inertia": [
+        1,
+        1,
+        1
+      ],
+      "min_abs_Dh1": 16.296363394353094,
+      "replay_scaled_max": 3.0660913807878387e-09,
+      "mixed_second_max": 7.771561172376096e-16,
+      "antisymmetric_cross_max": 6.217248937900877e-15
+    },
+    {
+      "stride": 4,
+      "window": 9,
+      "degree": 8,
+      "packet_kinetic_integral": -0.23438219622065892,
+      "packet_canonical_integral": -0.23438219520563508,
+      "x": 1.4492674838955182,
+      "u": 0.6900037509377344,
+      "A0prime": 1.449267483895518,
+      "eigenvalues": [
+        -43.82922527845947,
+        0.0907082541691569,
+        115.42627430591565
+      ],
+      "K": [
+        [
+          0.007097147975881346,
+          -1.7221794917019269,
+          1.3247738004894265
+        ],
+        [
+          -1.722179491701926,
+          -34.65099864262274,
+          36.93019594843396
+        ],
+        [
+          1.3247738004894265,
+          36.93019594843396,
+          106.33165877627226
+        ]
+      ],
+      "negative_direction": [
+        0.04532828205104883,
+        0.9699726852406495,
+        -0.2389525826044684
+      ],
+      "rayleigh": -43.82922527845947,
+      "negative_inertia": [
+        1,
+        1,
+        1
+      ],
+      "min_abs_Dh1": 16.30449020318361,
+      "replay_scaled_max": 1.109786923369735e-09,
+      "mixed_second_max": 9.43689570931383e-16,
+      "antisymmetric_cross_max": 4.440892098500626e-15
+    },
+    {
+      "stride": 1,
+      "window": 7,
+      "degree": 6,
+      "packet_kinetic_integral": -0.234382105994555,
+      "packet_canonical_integral": -0.23438210593112158,
+      "x": 1.4492674838955182,
+      "u": 0.6900037509377344,
+      "A0prime": 1.449267483895518,
+      "eigenvalues": [
+        -43.8618729561927,
+        0.09070490745158659,
+        115.42429710859376
+      ],
+      "K": [
+        [
+          0.007052683463547746,
+          -1.7234208021589184,
+          1.3247738004885095
+        ],
+        [
+          -1.7234208021589175,
+          -34.685582399883145,
+          36.93019594842258
+        ],
+        [
+          1.3247738004885095,
+          36.93019594842257,
+          106.33165877627223
+        ]
+      ],
+      "negative_direction": [
+        0.04532104910457375,
+        0.9699850824107042,
+        -0.2389036257756667
+      ],
+      "rayleigh": -43.86187295619267,
+      "negative_inertia": [
+        1,
+        1,
+        1
+      ],
+      "min_abs_Dh1": 16.296363394353193,
+      "replay_scaled_max": 4.646031470656453e-08,
+      "mixed_second_max": 7.771561172376096e-16,
+      "antisymmetric_cross_max": 5.329070518200751e-15
+    },
+    {
+      "stride": 1,
+      "window": 11,
+      "degree": 8,
+      "packet_kinetic_integral": -0.23438210685614846,
+      "packet_canonical_integral": -0.2343821067938313,
+      "x": 1.4492674838955182,
+      "u": 0.6900037509377344,
+      "A0prime": 1.449267483895518,
+      "eigenvalues": [
+        -43.86249347316708,
+        0.09070483779803065,
+        115.42425953731171
+      ],
+      "K": [
+        [
+          0.0070518360295249854,
+          -1.7234443537232913,
+          1.3247738004883711
+        ],
+        [
+          -1.7234443537232909,
+          -34.686239710359104,
+          36.930195948408944
+        ],
+        [
+          1.3247738004883711,
+          36.93019594840893,
+          106.33165877627225
+        ]
+      ],
+      "negative_direction": [
+        0.04532091083496004,
+        0.9699853180014878,
+        -0.23890269546960374
+      ],
+      "rayleigh": -43.862493473167085,
+      "negative_inertia": [
+        1,
+        1,
+        1
+      ],
+      "min_abs_Dh1": 16.296363394357495,
+      "replay_scaled_max": 1.114356355289775e-08,
+      "mixed_second_max": 8.326672684688674e-16,
+      "antisymmetric_cross_max": 6.217248937900877e-15
+    },
+    {
+      "stride": 1,
+      "window": 13,
+      "degree": 8,
+      "packet_kinetic_integral": -0.2343821120658176,
+      "packet_canonical_integral": -0.23438211200348666,
+      "x": 1.4492674838955182,
+      "u": 0.6900037509377344,
+      "A0prime": 1.449267483895518,
+      "eigenvalues": [
+        -43.86625536387587,
+        0.09070443347584375,
+        115.42403176791314
+      ],
+      "K": [
+        [
+          0.007046705404067349,
+          -1.7235872548318905,
+          1.32477380048868
+        ],
+        [
+          -1.72358725483189,
+          -34.69022464416318,
+          36.93019594841139
+        ],
+        [
+          1.32477380048868,
+          36.93019594841139,
+          106.33165877627223
+        ]
+      ],
+      "negative_direction": [
+        0.045320075294994,
+        0.9699867460897456,
+        -0.23889705562330438
+      ],
+      "rayleigh": -43.86625536387588,
+      "negative_inertia": [
+        1,
+        1,
+        1
+      ],
+      "min_abs_Dh1": 16.2963633943524,
+      "replay_scaled_max": 1.450829500981854e-08,
+      "mixed_second_max": 7.771561172376096e-16,
+      "antisymmetric_cross_max": 5.329070518200751e-15
+    }
+  ],
+  "global_direct_status": "NOT_CERTIFIED",
+  "coupled_spectral_status": "NOT_RUN",
+  "absolute_closure": "NOT_CERTIFIED",
+  "interpretation": "The locked central unreduced coefficient member fails the required kinetic positivity test. This is not a no-go theorem for P5 geometry or all regional Full-SVT actions."
+}

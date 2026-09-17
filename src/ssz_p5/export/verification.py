@@ -13,6 +13,7 @@ from ..coefficients.schema41 import validate_41_schema
 from ..config import DEFAULT_L, SLOT_NAMES
 from ..geometry.p5 import from_frame
 from ..policy import numerical_policy
+from ..production.member import validate_stream_regions
 from ..provenance.blacklist import require_production_input
 from ..provenance.manifest import sha256
 from ..qnm.gate import require_direct_krgm_certificate
@@ -67,8 +68,7 @@ def verify_direct_products(root: Path):
     c = Coefficients41(bg, {s: frame[s].to_numpy(float) for s in SLOT_NAMES}, sha256(path))
     if any(g.status != "PASS" for g in validate_41_schema(c)):
         raise ValueError("invalid direct 41-slot stream")
-    if np.max(np.abs(bg.A0prime)) > numerical_policy()["exact_zero_abs"]:
-        raise ValueError("direct stream is not the frozen zero-vector branch")
+    validate_stream_regions(frame)
     operators = {}
     for record in records:
         if not record["path"].endswith(".npz"):

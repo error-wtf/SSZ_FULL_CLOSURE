@@ -188,7 +188,7 @@ def canonical_audit(df,L,window=9,degree=8):
       'max_time_first_sym_res':float(np.max(np.abs(0.5*(P10+np.swapaxes(P10,1,2))-0.5*P11p))),
       'max_radial_first_sym_res':float(np.max(np.abs(0.5*(P01+np.swapaxes(P01,1,2))-P02p))),
     }
-    high=[k for k in P if k[0]>2 or k[1]>2]
+    high=[k for k in P if sum(k)>2]
     diagnostics['higher_operator_keys']=str(sorted(high))
     diagnostics['max_high_order']=float(max([np.max(np.abs(P[k])) for k in high],default=0.0))
     diagnostics['max_S_sym']=float(np.max(np.abs(S+np.swapaxes(S,1,2))))

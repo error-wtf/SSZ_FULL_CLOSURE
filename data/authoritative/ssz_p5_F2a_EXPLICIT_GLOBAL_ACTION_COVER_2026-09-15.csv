@@ -1,0 +1,7 @@
+domain,u_start,u_end,data_level,status,min_abs_D_h1
+weak exterior H,0.020065706,0.551523087,explicit on-shell 39/41,PASS,0.1222069060667846
+outer cubic-H + SVT handover,0.551523087,0.61,explicit action-jet background + common H0,PASS,3.6183978643717385
+central genuine SVT,0.61,0.71,explicit exact 39/41,PASS,11.987939931361574
+inner SVT + H handover,0.71,0.715,explicit action-jet background + common H0,PASS,7.740685922843554
+punctured H core,0.715,100.0,explicit on-shell 39/41,PASS,4.4505324857229605
+analytic finite center,100.0,inf,finite Taylor action branch,PASS ANALYTIC,
