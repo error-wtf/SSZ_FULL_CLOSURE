@@ -67,7 +67,7 @@ Locked regional Full-SVT action / background jets
 | --- | --- | --- |
 | Regional source integration | Implemented | Active member, source registry, region resolver and certificate binding |
 | Outer raw SVT emission | Regression PASS | 41 slots, max scaled reference difference ≈9.03e-9; full H+SVT assembly is separate |
-| Central selected normalization | Regression PASS | Encoded lower-order member retained; max scaled difference ≈6.89e-12 |
+| Central selected normalization | **41/41 PASS** | 3,809 rows exported with source/output hashes; stored comparable ZK slots reproduce exactly. [Scoped certificate](data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json) |
 | Central finite-L kinetic gate | **FAIL** | Negative kinetic directions for L=6,12,20,42 |
 | Global direct 41 and KRGSM | Not certified | Remaining regional direct paths, center and interfaces are not claimed complete |
 | Coupled spectral convergence | Not run | Necessary kinetic gate fails; archived test-field roots are not a substitute |

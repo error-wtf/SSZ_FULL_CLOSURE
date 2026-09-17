@@ -99,8 +99,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 7717,
-      "sha256": "061b0659d99651f613d1d58966e778f97d7a6566d11ed5c44aa7a7cebd3dfbce"
+      "size_bytes": 7818,
+      "sha256": "d6faf6a8850f5ebb0dcd5989c1cc55f37c898c582c08460a24fcd38e112b941e"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -1313,6 +1313,31 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json",
+      "size_bytes": 3812,
+      "sha256": "26ba698029a74484bdf52681c630c4ad1b0b2123b1b127c52fd5af519f764190"
+    },
+    {
+      "path": "data/generated/central/CENTRAL_SLOT_COMPARISON.csv",
+      "size_bytes": 7310,
+      "sha256": "34bf4003d7a85f022ee7f840c6b7d173e02d9c8a333f163787cf41a00df35988"
+    },
+    {
+      "path": "data/generated/central/PARTIAL_ACTION_REPLAY_DIAGNOSTIC.csv",
+      "size_bytes": 8392,
+      "sha256": "bcc7a7dcf30296ad3933804eebbf96cd2f24602801c0345c17fa86952f243eb0"
+    },
+    {
+      "path": "data/generated/central/central_exact_SVT_41of41.csv",
+      "size_bytes": 3700370,
+      "sha256": "44c224e460275350193122feed0fc97b72b1f688b446d46eb48f45c5dad95609"
+    },
+    {
+      "path": "data/generated/central/central_exact_SVT_odd_reference.csv",
+      "size_bytes": 852319,
+      "sha256": "449b9931ee68c56e0e61d9dde5bc4b94506adf5dd56bbf5579fe10fec9b467e5"
+    },
+    {
       "path": "data/prestaged/direct41/central_selected_corrected_41of41.csv",
       "size_bytes": 3613972,
       "sha256": "c98cce878586e0fa330f347246c3ae0fbd828130c3a39da16c475dea625351bd"
@@ -1496,6 +1521,11 @@
       "path": "data/regression/ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
       "size_bytes": 1002,
       "sha256": "6204f8600d5de71da0ba9794ef6dd96467e05b07d19435bf07a4b7fd32515e2b"
+    },
+    {
+      "path": "docs/CENTRAL_PRODUCTION_EXPORT.md",
+      "size_bytes": 2899,
+      "sha256": "4fa6c7cc1169f710e2c030e62a49fa1517a38e9d0f5816983636c1b7b890643b"
     },
     {
       "path": "docs/DIRECT_IMPLEMENTATION_FINDINGS.md",
@@ -1913,6 +1943,16 @@
       "sha256": "ea91637ea3e4eb3dcdad6aec7b63707c22ca011adbc65cff0c17f585b1283a9f"
     },
     {
+      "path": "src/ssz_p5/production/central_action.py",
+      "size_bytes": 9215,
+      "sha256": "e814a594de5033d8db6edd71e007fc8c4e980fae7877f1bafdd453da3197cab1"
+    },
+    {
+      "path": "src/ssz_p5/production/central_export.py",
+      "size_bytes": 6230,
+      "sha256": "1d5454353e4d83effc511b9a6e864a77985309090b050e48ee3831cbb640caec"
+    },
+    {
       "path": "src/ssz_p5/production/kinetic_audit.py",
       "size_bytes": 7328,
       "sha256": "ca94e8ce675847fd42cc682a6661b0fd9152fee36e2556bbf84a3b3ee028ea94"
@@ -1934,8 +1974,8 @@
     },
     {
       "path": "src/ssz_p5/production/sources.py",
-      "size_bytes": 2611,
-      "sha256": "e41c8418dd99a6d9a61d5714aaadd468a34cde212a4156f5e74c478ccf6a65bc"
+      "size_bytes": 2998,
+      "sha256": "19f302148a76abcc4ef2b9d5e2dd4ba2f8f3b117c83bb54ef0494fe4d529b3b5"
     },
     {
       "path": "src/ssz_p5/provenance/__init__.py",
@@ -1976,6 +2016,11 @@
       "path": "src/ssz_p5/reducer/kinetic_schur.py",
       "size_bytes": 2544,
       "sha256": "b648eb6a2886c5e29112271b8d22b1293908ea4db8e144223c853ae19b4132cf"
+    },
+    {
+      "path": "src/ssz_p5/reducer/zk_kinetic.py",
+      "size_bytes": 1747,
+      "sha256": "4c11e295cfc9669355bab8740115a83ea9c47fb9d3671c06f959570b340dcb51"
     },
     {
       "path": "src/ssz_p5/stability/__init__.py",
@@ -2093,6 +2138,16 @@
       "sha256": "faa2df4e4e7553c62955beaf48c95ee3dc210e1c8cfaad5892ed6c2d9eca0ee4"
     },
     {
+      "path": "tests/unit/test_central_action.py",
+      "size_bytes": 2378,
+      "sha256": "bbbbfc1d36b0a06d352657c38420f61f57a88bc150e7a89dd55dbea72ed81d9f"
+    },
+    {
+      "path": "tests/unit/test_central_export.py",
+      "size_bytes": 1074,
+      "sha256": "ad5fc263e86fa7a984d8ffe64b5d20e3b91a352d5d0e457c9d318eb9ad8a67b6"
+    },
+    {
       "path": "tests/unit/test_constraint_stationarity.py",
       "size_bytes": 1364,
       "sha256": "907ef60f6e83dc257b0b615674917f0806536b83a8438e18adf7ffbd4415ab1f"
@@ -2123,6 +2178,11 @@
       "sha256": "f5ae8800508cbf073c99fb8bf7bf925a9eeceb462c39803c5b6b3d1255292f07"
     },
     {
+      "path": "tools/audit_central_action.py",
+      "size_bytes": 1001,
+      "sha256": "c68c4a4aede3d53659fb9243954625d56b2423e4c3f0a9f3b0b226b45223afdd"
+    },
+    {
       "path": "tools/audit_frozen_onshell.py",
       "size_bytes": 1028,
       "sha256": "a7b83fdff08f594f7591e6308186913eb0ce16d0073a8d959a1ab8edee270cf4"
@@ -2151,6 +2211,11 @@
       "path": "tools/codex_start.sh",
       "size_bytes": 296,
       "sha256": "0c1b348df0a1183d1599e2dab37c4b50cefa4ec649988c6eac3497bc9dacf814"
+    },
+    {
+      "path": "tools/export_central_production.py",
+      "size_bytes": 679,
+      "sha256": "5c44640491c0e63a0b31563ae0d902aa5d704aeabbb39b8825936fbda5dad754"
     },
     {
       "path": "tools/generate_global_action_cover.py",

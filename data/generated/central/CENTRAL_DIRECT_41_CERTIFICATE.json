@@ -1,0 +1,130 @@
+{
+  "CENTRAL_DIRECT_41": "PASS",
+  "certificate_scope": "authoritative central coefficient import and common-convention normalization",
+  "independent_action_to_41_verified": false,
+  "finite_L_stability_certified": false,
+  "exact_ZK_comparable_slots": "PASS",
+  "exact_ZK_slot_errors": {
+    "v1": 0.0,
+    "v4": 0.0,
+    "c2": 0.0,
+    "v13": 0.0,
+    "e4": 0.0
+  },
+  "stored_finite_L_matrix_available": false,
+  "region": "central_exact_SVT",
+  "rows": 3809,
+  "slots": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "a8",
+    "a9",
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13"
+  ],
+  "selection": "preserve principal slots and encoded v5; selected c3/e3; corrected a5 and v12",
+  "numerical_policy": "JET9D8 window=9 degree=8, derivatives before region trimming",
+  "tolerance": 1e-07,
+  "generator": "tools/export_central_production.py",
+  "git_commit": "9c85a30cc060647799c8256f12bba67899aba807",
+  "timestamp": "2026-09-17T19:06:31.588748+00:00",
+  "sources": [
+    {
+      "path": "archive/full_working_snapshot/ssz_p5_integrable_full_svt_lobe_corrected_profile_2026-09-12.csv",
+      "sha256": "d4e91f783730d9eda7a7cb5456f004c5b749921817805ce2bdb34149b37b71e8"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv",
+      "sha256": "5a831cbd4fd85b02a818c98bea808da07d34de86e50688147f7b1723eefda695"
+    },
+    {
+      "path": "data/prestaged/direct41/central_selected_corrected_41of41.csv",
+      "sha256": "c98cce878586e0fa330f347246c3ae0fbd828130c3a39da16c475dea625351bd"
+    },
+    {
+      "path": "data/prestaged/odd/central_svt_odd_profile.csv",
+      "sha256": "45c2b8e4abadef0727f1045ea0080750e22c254e52a1d83a3f400bf4da26bb32"
+    },
+    {
+      "path": "data/production/ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "sha256": "09b10a19112543c96c023e9a6353a4fec48f9834f09ef4b6c14074d37e69d2c8"
+    },
+    {
+      "path": "data/production/ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "sha256": "74b4812b9a43dfb6faf71f5eaf2375c359d69ac250a5b5414fea8647fed8e89c"
+    }
+  ],
+  "implementation": [
+    {
+      "path": "src/ssz_p5/production/central_export.py",
+      "sha256": "1d5454353e4d83effc511b9a6e864a77985309090b050e48ee3831cbb640caec"
+    },
+    {
+      "path": "src/ssz_p5/production/regional_coefficients.py",
+      "sha256": "ceae1efa3bd0458eb099c0b0419e101bad28da5a4b3f05f9e70ca189c61d27bc"
+    },
+    {
+      "path": "src/ssz_p5/production/sources.py",
+      "sha256": "19f302148a76abcc4ef2b9d5e2dd4ba2f8f3b117c83bb54ef0494fe4d529b3b5"
+    },
+    {
+      "path": "src/ssz_p5/jets/jet9d8.py",
+      "sha256": "60c68799ba4d602401dd54c855b570c882523a54bfedd5d7212c5e4393f0d3bb"
+    },
+    {
+      "path": "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json",
+      "sha256": "f8e7ba4749811942b75ad69838509a39a89ae03652fcd72c7c5dbbcc96304917"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/generated/central/central_exact_SVT_41of41.csv",
+      "sha256": "44c224e460275350193122feed0fc97b72b1f688b446d46eb48f45c5dad95609"
+    },
+    {
+      "path": "data/generated/central/CENTRAL_SLOT_COMPARISON.csv",
+      "sha256": "34bf4003d7a85f022ee7f840c6b7d173e02d9c8a333f163787cf41a00df35988"
+    },
+    {
+      "path": "data/generated/central/central_exact_SVT_odd_reference.csv",
+      "sha256": "449b9931ee68c56e0e61d9dde5bc4b94506adf5dd56bbf5579fe10fec9b467e5"
+    }
+  ],
+  "background_recalculation": "DIAGNOSTIC_ONLY",
+  "absolute_full_closure": "NOT_CERTIFIED"
+}

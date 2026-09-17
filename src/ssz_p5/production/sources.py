@@ -65,3 +65,13 @@ SOURCE_REGISTRY = {
         "role": "AUTHORITATIVE_ANALYTIC_CENTER",
     },
 }
+
+# The selected central representation combines unreduced coefficients with the
+# explicit lower-order completion. Partial action replays must not override it.
+CENTRAL_PRODUCTION_SOURCES = {
+    **SOURCE_REGISTRY["central_exact_SVT"],
+    "corrected_profile": (
+        "archive/full_working_snapshot/"
+        "ssz_p5_integrable_full_svt_lobe_corrected_profile_2026-09-12.csv"
+    ),
+}
