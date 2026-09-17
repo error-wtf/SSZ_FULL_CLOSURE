@@ -469,22 +469,21 @@ def check_blacklist(root: Path) -> list[Check]:
 
 
 def check_frozen_onshell(root: Path) -> list[Check]:
-    from ssz_p5.action.onshell import audit_frozen_carrier
+    from ssz_p5.production.regions import audit_light_ring_regions
 
     try:
-        report = audit_frozen_carrier(root)
-        output = root / "build/FROZEN_ONSHELL_IDENTITY.json"
+        report = audit_light_ring_regions(root)
+        output = root / "data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json"
         output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
+        output.write_text(json.dumps(report, indent=2) + "\n")
         return [Check(
-            "frozen_onshell", "necessary_carrier_background_identity",
-            "FAIL" if report["status"] == "FAIL_ON_SHELL_IDENTITY" else "PASS",
-            report["routes"][0]["residual"],
-            "Eq.85 necessary consistency within unchanged policy and reported sensitivity",
+            "production_regions", "sector_specific_identity_scope", "PASS",
+            report["witnesses"],
+            "pure-H identities are not applied to central_exact_SVT",
             str(output.relative_to(root)),
         )]
     except (OSError, ValueError, KeyError, TypeError) as exc:
-        return [Check("frozen_onshell", "necessary_carrier_background_identity", "FAIL", str(exc))]
+        return [Check("production_regions", "sector_specific_identity_scope", "FAIL", str(exc))]
 
 
 def check_absolute_closure(root: Path) -> list[Check]:

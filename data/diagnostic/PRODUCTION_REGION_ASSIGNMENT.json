@@ -1,0 +1,28 @@
+{
+  "cover": {
+    "weak_exterior_H": "u < 0.5515230871346237",
+    "outer_same_action_H_SVT": "0.5515230871346237 <= u < 0.61",
+    "central_exact_SVT": "0.61 <= u < 0.71",
+    "inner_same_action_SVT_H": "0.71 <= u < 0.715",
+    "punctured_H_core": "u >= 0.715"
+  },
+  "witnesses": [
+    {
+      "x_requested": 1.5999977950251312,
+      "x": 1.600019205031718,
+      "u": 0.6249924981245312,
+      "region": "central_exact_SVT",
+      "A0prime": 1.6000092819081309,
+      "pure_H_null_vector_gate": "NOT_APPLICABLE"
+    },
+    {
+      "x_requested": 1.41616064,
+      "x": 1.4161792906354749,
+      "u": 0.70612528132033,
+      "region": "central_exact_SVT",
+      "A0prime": 1.4161792906354749,
+      "pure_H_null_vector_gate": "NOT_APPLICABLE"
+    }
+  ],
+  "strong_H_carrier_role": "principal/control witness; never global production background"
+}

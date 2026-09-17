@@ -89,8 +89,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 7743,
-      "sha256": "52aa4dc67f98578e5e0abe5aca393ff378bd7c3501c2019b17286487cb21b2e4"
+      "size_bytes": 7944,
+      "sha256": "395213ac2c1626b992d631c05a198b81f352a212591c0e76487198d0fbbd8f7b"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -124,8 +124,8 @@
     },
     {
       "path": "STATUS_FULL_CLOSURE.md",
-      "size_bytes": 1835,
-      "sha256": "73bab179b9b069cd6faf65185f469ec3cc6ee2c293cb45db683af134075cb972"
+      "size_bytes": 1834,
+      "sha256": "9e7051796fe50582615fed9b3f65e8b8719e9346264f7cce7d6aef9d2344c5e0"
     },
     {
       "path": "archive/full_working_snapshot/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16(1).md",
@@ -1243,6 +1243,11 @@
       "sha256": "e2a4cd50e83414314de34fc3288be0b11debd9773bd9648832022da235a7bd45"
     },
     {
+      "path": "data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json",
+      "size_bytes": 851,
+      "sha256": "8dd169f7e431acada204ecbd36fa78b4786904c45c893be484c1bf6b2e54d19d"
+    },
+    {
       "path": "data/diagnostic/PRODUCTION_SOURCE_CONTRACT.json",
       "size_bytes": 4647,
       "sha256": "ac1ea8e1048274153981dd2223ea032df08268cd13e5ad152517d0f0030e2e98"
@@ -1429,8 +1434,8 @@
     },
     {
       "path": "docs/FROZEN_CARRIER_ONSHELL_CONTRADICTION.md",
-      "size_bytes": 7180,
-      "sha256": "4599d2202d3512dd876637e1be264b1f1d4ce47d44c30950e0a2df7d085e983e"
+      "size_bytes": 7514,
+      "sha256": "c0e4046fe7f528481eb3dbd5cfc35ba875898bfc7640b754c65e19de6060e914"
     },
     {
       "path": "docs/INTEGRATION.md",
@@ -1828,6 +1833,16 @@
       "sha256": "6661f849b96e679db650bac88a17f542c4c8027e11924c578eb867e1d0cf218e"
     },
     {
+      "path": "src/ssz_p5/production/__init__.py",
+      "size_bytes": 161,
+      "sha256": "ea91637ea3e4eb3dcdad6aec7b63707c22ca011adbc65cff0c17f585b1283a9f"
+    },
+    {
+      "path": "src/ssz_p5/production/regions.py",
+      "size_bytes": 1643,
+      "sha256": "62fd7fc32e296df4558cbfca36ee75bad05456c2782a7e101536450ae3661d9f"
+    },
+    {
       "path": "src/ssz_p5/provenance/__init__.py",
       "size_bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -1919,8 +1934,8 @@
     },
     {
       "path": "ssz_p5_full_pipeline.py",
-      "size_bytes": 24851,
-      "sha256": "3112f92fe8e226243ab631c7553ff7a9bbc8a4c0451c7e3750803d4b10e06c3e"
+      "size_bytes": 24749,
+      "sha256": "a8663cdb529b33024f441617c83cd3e0f08c347da2cd3e12f3501b2a6d98a462"
     },
     {
       "path": "tests/integration/test_constructive_audit.py",
@@ -1998,9 +2013,19 @@
       "sha256": "21dc76ff44f261466180303bf44c1967d55f3b2695b471fc7ab8b4ec2fcd38d3"
     },
     {
+      "path": "tests/unit/test_production_regions.py",
+      "size_bytes": 773,
+      "sha256": "115abad824c23ffc13b24849938c8d201aeb3a02ff19da8376143bb6412c3298"
+    },
+    {
       "path": "tools/audit_frozen_onshell.py",
       "size_bytes": 1028,
       "sha256": "a7b83fdff08f594f7591e6308186913eb0ce16d0073a8d959a1ab8edee270cf4"
+    },
+    {
+      "path": "tools/audit_production_regions.py",
+      "size_bytes": 554,
+      "sha256": "195c0662ef0afa98063f7fa46faf406fcd04f216ffcd4834171cab5f6dca8cd1"
     },
     {
       "path": "tools/audit_production_sources.py",

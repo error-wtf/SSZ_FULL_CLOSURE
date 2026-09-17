@@ -1,13 +1,12 @@
 # Current executable status — 2026-09-17
 
-Absolute full closure is **NOT CERTIFIED**. Strict mode now rejects missing
+Absolute full closure is **NOT CERTIFIED**. Strict mode still rejects missing
 direct-production matrices and coupled spectral evidence. The H1 constraint
 source has been repaired; general quartic/quintic core emission remains to be
-implemented. A necessary on-shell identity now reproducibly **FAILS** in the
-interior of the prescribed strong carrier for `A0prime=0`. See the
-[precise contradiction](docs/FROZEN_CARRIER_ONSHELL_CONTRADICTION.md).
-The claim that only core emission is missing is therefore not supported by
-the current direct check. See [current implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md).
+implemented. The former pure-H witness audit remains preserved, but the
+sector-aware production map assigns both disputed radii to `central_exact_SVT`
+with `A0prime != 0`; the pure-H identity is not a global-member gate. See
+[PRODUCTION_REGION_ASSIGNMENT.json](data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json). See [current implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md).
 This is not a reported physical instability. The frozen historical statement
 below is retained for provenance and does not override current strict behavior.
 

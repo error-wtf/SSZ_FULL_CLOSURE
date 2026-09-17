@@ -1,3 +1,5 @@
+> **Scope correction (2026-09-17):** This report evaluates a pure-H witness file. It is not a global production-member gate. The sector-aware production assignment places both disputed radii in `central_exact_SVT` with nonzero `A0prime`; see [PRODUCTION_REGION_ASSIGNMENT.json](../data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json).
+
 # Reproducible inconsistency in the prescribed zero-vector carrier
 
 **Status: FAIL_ON_SHELL_IDENTITY.** This is a necessary background-equation

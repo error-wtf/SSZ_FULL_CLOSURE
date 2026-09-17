@@ -8,11 +8,11 @@ scalar–vector–tensor deformation. Original papers and historical calculation
 are preserved alongside executable verification code.
 
 > **Current production status: absolute full closure is not certified.**
-> The software tests and the archive audit pass. A newly reproduced necessary
-> background identity fails for the prescribed strong carrier on `A0prime=0`.
-> This is an input consistency failure, in addition to the missing general core
-> emitter and coupled spectral products. `--strict` reports the failure.
-> See the [reproduction and derivation](docs/FROZEN_CARRIER_ONSHELL_CONTRADICTION.md).
+> The software tests and the archive audit pass. A sector-aware audit now assigns the disputed radii to the genuine-SVT
+> production lobe, where `A0prime != 0`; the pure-H null-vector identity is
+> therefore `NOT_APPLICABLE` to the global member. The strong-H file remains a
+> principal/control witness. Direct global coefficients and coupled spectral
+> products are still not certified. See the [region report](data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json).
 
 ## Reproduce
 
@@ -70,6 +70,7 @@ The existing ZK emitter also uses a restricted Einstein/SVT action: its `f4XX`
 terms are not Horndeski `G4XX`, and it contains no general `G5` emission.
 Both active emitters reject unsupported nonzero Horndeski jets.
 
+The sector assignment is machine readable in [PRODUCTION_REGION_ASSIGNMENT.json](data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json).
 The concrete source-to-emitter comparison is machine readable in
 [data/diagnostic/PRODUCTION_SOURCE_CONTRACT.json](data/diagnostic/PRODUCTION_SOURCE_CONTRACT.json).
 [Implementation findings](docs/DIRECT_IMPLEMENTATION_FINDINGS.md) record the
