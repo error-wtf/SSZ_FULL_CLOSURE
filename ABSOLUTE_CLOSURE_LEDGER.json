@@ -1,0 +1,11 @@
+{
+  "baseline": "0e13fb0",
+  "central_direct_41": "PASS",
+  "inner_direct_41": "FAIL",
+  "core_direct_41": "PENDING",
+  "analytic_center": "PENDING",
+  "global_direct_41": "PENDING",
+  "krgsm": "PENDING",
+  "qnm": "PENDING",
+  "inner_evidence": "data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json"
+}

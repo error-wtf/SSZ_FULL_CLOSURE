@@ -1,0 +1,82 @@
+{
+  "INNER_DIRECT_41": "FAIL",
+  "region": "inner_same_action_SVT_H",
+  "domain": "0.71 <= u < 0.715",
+  "rows": 1400,
+  "slot_count": 41,
+  "finite": true,
+  "DIRECT_ACTION_REPLAY_COMPLETE": false,
+  "AUTHORITATIVE_SELECTED_REPRESENTATION": true,
+  "SLOT_NORMALIZATION": "PASS",
+  "interface_values": "FAIL",
+  "radial_jets": "REPORTED; certification deferred until value continuity passes",
+  "reducer_compatibility": "SCHEMA_ONLY; no common operator certified across failed interfaces",
+  "background_max_abs": {
+    "JA": 3.072770957065496e-15,
+    "metric_residual_14": 8.881784197001252e-16,
+    "metric_residual_15": 4.6629367034256575e-15
+  },
+  "background_scope": "stored actual resolved residuals; no background re-solve",
+  "convention_a5": "a2_prime-a1_second-(A0prime*v4/2)_prime+A0prime*v5/2",
+  "convention_v12": "-v6/(2h)",
+  "derivative_policy": "JET9D8 before domain trimming",
+  "endpoint_method": "local polynomial interpolation with the JET9D8 policy; no spline",
+  "generator": "tools/export_inner_production.py",
+  "timestamp": "2026-09-17T20:56:29.877991+00:00",
+  "sources": [
+    {
+      "path": "data/production/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv",
+      "sha256": "18c7752c1ee2c5c1fe5260925bcb3cc4dce970ef5c51d879bc5012f96ae9b702"
+    },
+    {
+      "path": "data/prestaged/direct41/inner_selected_candidate_41of41.csv",
+      "sha256": "59cb34633ac8da66b31b2d6e57fe407819370eb48fa7d75f572bbfb87b9f066f"
+    },
+    {
+      "path": "data/generated/central/central_exact_SVT_41of41.csv",
+      "sha256": "44c224e460275350193122feed0fc97b72b1f688b446d46eb48f45c5dad95609"
+    },
+    {
+      "path": "data/prestaged/direct41/core_selected_41of41.csv",
+      "sha256": "08e39fa0f568f9154201318e221cb477553de2369810bb06a162d636dab2f82d"
+    }
+  ],
+  "implementation": [
+    {
+      "path": "src/ssz_p5/production/inner_export.py",
+      "sha256": "a873925e836021a91af775907900d1ec4252ef226342362fc559bc0530d44323"
+    },
+    {
+      "path": "src/ssz_p5/production/regional_coefficients.py",
+      "sha256": "ceae1efa3bd0458eb099c0b0419e101bad28da5a4b3f05f9e70ca189c61d27bc"
+    },
+    {
+      "path": "src/ssz_p5/jets/jet9d8.py",
+      "sha256": "60c68799ba4d602401dd54c855b570c882523a54bfedd5d7212c5e4393f0d3bb"
+    },
+    {
+      "path": "tools/export_inner_production.py",
+      "sha256": "39037dfc5887f75998618ceeee978ca11e7bc7401b1722341c625491aacba430"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/generated/inner/INNER_ENDPOINT_COMPARISON.csv",
+      "sha256": "e18dd5810332bf6738d40abd5914ecb681ad20d81343d16681d6b1e147fefa0e"
+    },
+    {
+      "path": "data/generated/inner/INNER_ENDPOINT_CONVERGENCE.csv",
+      "sha256": "d5ebe0185b2164be591b6a640ccc60fefc581425e0038cdb5e4102357d9145bf"
+    },
+    {
+      "path": "data/generated/inner/INNER_SLOT_COMPARISON.csv",
+      "sha256": "a8e293e49d1d1414619bd58a40ba9bf4c67c0284a0b30ff4b4f93d676467304a"
+    },
+    {
+      "path": "data/generated/inner/inner_same_action_SVT_H_41of41.csv",
+      "sha256": "e16262ef01e6f2d05fcc44fdf98d7a6113701b484bc376b5e7170cf3ea4cdf40"
+    }
+  ],
+  "central_changed": false,
+  "absolute_full_closure": "NOT_CERTIFIED"
+}
