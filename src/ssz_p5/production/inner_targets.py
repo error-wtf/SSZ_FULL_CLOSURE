@@ -1,0 +1,103 @@
+"""Inner lower-order targets from frozen central jets and the stored partition.
+
+Targets are not injected into production without a realized action-control map.
+The principal f2-Hessian map controls different slots and cannot fill that role.
+"""
+
+import json
+
+import numpy as np
+import pandas as pd
+
+from ..provenance.manifest import sha256
+from .sources import SOURCE_REGISTRY
+
+# v5/c3 multiply terms with at most one radial field derivative after constraints;
+# e3 multiplies dphi^2 directly. Cphi cancels v5 through a5 and v2=A0prime*v1.
+JET_ORDERS = {"v5": 1, "c3": 1, "e3": 0}
+
+
+def left_endpoint_jets(r, values, endpoint, order):
+    r, values = np.asarray(r, float), np.asarray(values, float)
+    candidates = np.flatnonzero(r >= endpoint)
+    if len(candidates) < 9:
+        raise ValueError("nine central-side samples required")
+    inds = candidates[np.argsort(abs(r[candidates] - endpoint))[:9]]
+    scale = float(np.max(abs(r[inds] - endpoint)))
+    coefficients = np.polynomial.polynomial.polyfit((r[inds] - endpoint) / scale, values[inds], 8)
+    result = [float(coefficients[0])]
+    if order:
+        result.append(float(coefficients[1] / scale))
+    return result
+
+
+def partitioned_target(r, S, jets, endpoint):
+    extension = np.full(len(r), jets[0], dtype=float)
+    if len(jets) > 1:
+        extension += jets[1] * (np.asarray(r) - endpoint)
+    return np.asarray(S) * extension
+
+
+def build_inner_targets(root, output):
+    output.mkdir(parents=True, exist_ok=True)
+    reg = SOURCE_REGISTRY
+    paths = [
+        reg["inner_same_action_SVT_H"]["background"],
+        reg["inner_same_action_SVT_H"]["coeff_reference"],
+        reg["central_exact_SVT"]["unreduced_even"],
+        reg["central_exact_SVT"]["lower_jets"],
+        reg["punctured_H_core"]["coeff_reference"],
+    ]
+    b, old, central, lower, core = [pd.read_csv(root / p) for p in paths]
+    if not np.allclose(central.x, lower.x, rtol=0, atol=1e-13):
+        raise ValueError("central lower-order source grid mismatch")
+    if not np.allclose(b.S_SVT + b.T_H, 1, rtol=0, atol=1e-12):
+        raise ValueError("invalid stored inner partition")
+    if b.S_SVT.iloc[0] != 1 or b.S_SVT.iloc[-1] != 0:
+        raise ValueError("wrong inner partition endpoints")
+    if not np.allclose(old.v2, old.A0prime * old.v1, rtol=1e-12, atol=1e-10):
+        raise ValueError("v5 cancellation prerequisite absent")
+    if np.max(abs(core[["v5", "c3", "e3"]].to_numpy())) > 1e-12:
+        raise ValueError("core lower-order endpoint is not zero")
+    central["c3"], central["e3"] = lower.c3_selected, lower.e3_selected
+    endpoint = 1 / 0.71
+    jets = {
+        name: left_endpoint_jets(central.x, central[name], endpoint, order)
+        for name, order in JET_ORDERS.items()
+    }
+    targets = b[["x", "u", "S_SVT", "T_H"]].copy()
+    for name, jet in jets.items():
+        targets[name + "_target"] = partitioned_target(b.x, b.S_SVT, jet, endpoint)
+    target_path = output / "INNER_LOWER_ORDER_TARGETS.csv"
+    targets.to_csv(target_path, index=False)
+    report = dict(
+        status="TARGETS_READY_ACTION_REALIZATION_PENDING",
+        production_changed=False,
+        central_changed=False,
+        central_endpoint_x=endpoint,
+        central_endpoint_radial_jets=jets,
+        required_radial_orders=JET_ORDERS,
+        core_endpoint_radial_jets={k: [0.0] * (v + 1) for k, v in JET_ORDERS.items()},
+        partition="stored S_SVT,T_H; no new transition function",
+        derivative_policy="9 point degree 8 local polynomial, central side of full source grid",
+        action_control_variables=None,
+        control_map_residual=None,
+        background_null_check="NOT_RUN",
+        action_control_status=(
+            "No executable lower-order response map registered; "
+            "raw principal map targets v1,v4,c2"
+        ),
+        existing_emitter_interface=(
+            "selected_v5, selected_c3, selected_e3 are supplied values, not inversion"
+        ),
+        sources=[dict(path=p, sha256=sha256(root / p)) for p in paths],
+        generator=dict(
+            path="src/ssz_p5/production/inner_targets.py",
+            sha256=sha256(root / "src/ssz_p5/production/inner_targets.py"),
+        ),
+        target_artifact=dict(path=str(target_path.relative_to(root)), sha256=sha256(target_path)),
+    )
+    (output / "INNER_LOWER_ORDER_CONTROL.json").write_text(
+        json.dumps(report, indent=2, allow_nan=False) + "\n"
+    )
+    return report

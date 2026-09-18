@@ -7,5 +7,10 @@
   "global_direct_41": "PENDING",
   "krgsm": "PENDING",
   "qnm": "PENDING",
-  "inner_evidence": "data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json"
+  "inner_evidence": "data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json",
+  "working_snapshot": "archive/working_2026-09-18/IMPORT_PROVENANCE.json",
+  "raw_principal_inverse": "IMPLEMENTED_TESTED",
+  "inner_lower_targets": "TARGETS_READY_ACTION_REALIZATION_PENDING",
+  "core_primitive_port": "PASS_BITWISE_SAME_INPUT_NOT_ACTION_CERTIFICATION",
+  "integration_evidence": "docs/WORKING_INTEGRATION_2026-09-18.md"
 }

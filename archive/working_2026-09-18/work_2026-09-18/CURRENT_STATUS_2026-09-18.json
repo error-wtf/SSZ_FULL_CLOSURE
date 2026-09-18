@@ -1,0 +1,11 @@
+{
+  "bundle_date": "2026-09-18",
+  "production_member": "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17",
+  "pytest": {"passed": 11, "failed": 0},
+  "full_pipeline": {"passed": 43, "total": 43, "status": "PASS"},
+  "constructive_closure": "PASS",
+  "direct_global_krgm_export": "OPEN",
+  "strict_require_direct_exit_code": 3,
+  "absolute_full_closure": "NOT_YET_CERTIFIED",
+  "note": "Best available working bundle. Includes 2026-09-18 direct-closure diagnostics and control experiments. No direct certificate has been fabricated."
+}

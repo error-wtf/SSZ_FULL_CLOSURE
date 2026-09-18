@@ -74,6 +74,31 @@ Locked regional Full-SVT action / background jets
 | Coupled spectral convergence | Not run | Necessary kinetic gate fails; archived test-field roots are not a substitute |
 | Absolute closure / v1.0.0 | Not released | Strict mode rejects the failed gate and absent production evidence |
 
+## September 18 working-snapshot integration
+
+The supplied working snapshot is preserved in
+[archive/working_2026-09-18](archive/working_2026-09-18/IMPORT_PROVENANCE.json).
+All 63 imported files retain their source hashes. Its historical success reports
+remain archive results, not a new global-closure certificate.
+
+The raw `f2FF/f2XF/f2XX` inverse now controls `v1/v4/c2` in the actual ZK
+normalization, including rejection of unreachable zero-electric-field targets.
+The general MH primitive emitter uses the existing JET9D8 service and reproduces
+the imported executable bitwise on the same 3,299-row input. It still consumes
+primitive profiles; this is not a complete raw G4/G5 action reconstruction.
+
+```bash
+python tools/audit_working_import.py
+python tools/build_inner_targets.py
+```
+
+The Inner lower-order targets preserve the frozen central endpoint jets and use
+the stored partition. They are deliberately separate from production: the supplied
+restoration script solves the principal Hessian channels, then supplies `v5/c3/e3`
+externally. Their action-control realization is still absent. See the
+[integration report](docs/WORKING_INTEGRATION_2026-09-18.md) and
+[continuation contract](CONTINUE_IMPLEMENTATION_2026-09-18.md).
+
 ## Selected member and numerical conventions
 
 The active [regional member](SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json)

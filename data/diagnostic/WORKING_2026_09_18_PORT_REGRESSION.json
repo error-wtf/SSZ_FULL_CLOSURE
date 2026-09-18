@@ -1,0 +1,68 @@
+{
+  "scope": "primitive-emitter port verification; not action-derived core certification",
+  "imported_files_verified": 63,
+  "same_input_executable_port": "PASS_BITWISE",
+  "finite_slots": true,
+  "rows": 3299,
+  "stored_csv_comparison": "DIAGNOSTIC_ONLY",
+  "max_scaled_slot_error": 8.780694998334242e-05,
+  "errors": {
+    "a1": 2.3918964417024535e-16,
+    "a2": 1.4244519539602374e-08,
+    "a3": 9.974659986866641e-17,
+    "a4": 8.326672684688674e-17,
+    "a5": 8.780694998334242e-05,
+    "a6": 4.0475845722811686e-08,
+    "a7": 5.627304178190684e-13,
+    "a8": 8.326672684688674e-17,
+    "a9": 7.706557719200233e-13,
+    "b1": 5.551115123125783e-17,
+    "b2": 2.395420278880566e-16,
+    "b3": 1.139561239815734e-07,
+    "b4": 2.2037821323484473e-16,
+    "b5": 1.1102230246251565e-16,
+    "c1": 2.432259082347511e-16,
+    "c2": 3.0761864921074634e-16,
+    "c3": 0.0,
+    "c4": 2.46399987637747e-16,
+    "c5": 4.0174125084815843e-13,
+    "c6": 1.0045401177549707e-09,
+    "d1": 5.551115123125783e-17,
+    "d2": 2.4648104239131057e-16,
+    "d3": 2.6704638662641535e-07,
+    "d4": 2.714060833521942e-16,
+    "e1": 1.7451887137411342e-07,
+    "e2": 1.6953615245062437e-12,
+    "e3": 0.0,
+    "e4": 1.205346983687528e-06,
+    "v1": 2.207566556256834e-16,
+    "v2": 0.0,
+    "v3": 0.0,
+    "v4": 0.0,
+    "v5": 0.0,
+    "v6": 0.0,
+    "v7": 0.0,
+    "v8": 0.0,
+    "v9": 2.2204455216405195e-16,
+    "v10": 8.326672684688674e-17,
+    "v11": 0.0,
+    "v12": 0.0,
+    "v13": 0.0
+  },
+  "sources": [
+    {
+      "path": "data/authoritative/ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "sha256": "253cfe04a924837da97e41b4d2dbbdb515079e86f11965ba5e93c443ac61a73b"
+    },
+    {
+      "path": "archive/working_2026-09-18/src/ssz_p5/coefficients/mh_general_primitives.py",
+      "sha256": "b08b5e043a710ea4993e93b4c4cd312d52cf527d278e716e5138e4059001c7ff"
+    },
+    {
+      "path": "archive/working_2026-09-18/artifacts/direct_krgm/core_general_mh_regenerated_41.csv",
+      "sha256": "6170ced0a0c9ac8a3229768383c9e1ff2591752c8a4fb24d3aff074b577cce4c"
+    }
+  ],
+  "generator_sha256": "2ebb8426f47a50cb4627d3703ada669062c69173d14a31a9ba88d565ca7a2950",
+  "ported_emitter_sha256": "f32124691ed5ec6752d882ceec4df62658edaa15713dcbdcf8f74ec1ad0609fb"
+}

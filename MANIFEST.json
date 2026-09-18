@@ -14,8 +14,8 @@
     },
     {
       "path": "ABSOLUTE_CLOSURE_LEDGER.json",
-      "size_bytes": 303,
-      "sha256": "4c666768b3c2adbef1242db1fd7505e2f5ba129d7f1c4b7d41d58402cf70ac2b"
+      "size_bytes": 641,
+      "sha256": "4176883c144bb59676f8a66629e59d27f8b94f99c97def37d8aaada1ad7f2178"
     },
     {
       "path": "ARTIFACT_CLASSIFICATION.json",
@@ -56,6 +56,11 @@
       "path": "CODEX_TASK_DAG.json",
       "size_bytes": 2694,
       "sha256": "ddb7e2b0354ec7e1619513f7f64fe462b879d6465032311cc48d22455fc54a28"
+    },
+    {
+      "path": "CONTINUE_IMPLEMENTATION_2026-09-18.md",
+      "size_bytes": 1921,
+      "sha256": "08bcede552ccdef2a6946bde0f0b51c3188c507ab3b135987d3c592204778e94"
     },
     {
       "path": "DO_NOT_RECOMPUTE.md",
@@ -104,8 +109,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 8024,
-      "sha256": "85a138fbb1c33a200094f2361dd767fa8948a33ff3d68bfadef1995d31cc8055"
+      "size_bytes": 9263,
+      "sha256": "53b78dc0a29e2a2a28c01b404e507c964f97e828cd7c20f5ecd3feb9d67b51d9"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -1213,6 +1218,326 @@
       "sha256": "15d67a04330656398588d7bfc8abacf6b3d23ff12844a46722d74125a40d26ac"
     },
     {
+      "path": "archive/working_2026-09-18/BUNDLE_SHA256SUMS.txt",
+      "size_bytes": 52179,
+      "sha256": "104cc9a61711c191b0ee4d62f7f6d0333caeee1fa979c0847bdb85515c5ac1bf"
+    },
+    {
+      "path": "archive/working_2026-09-18/FULL_PIPELINE_REPORT.json",
+      "size_bytes": 14680,
+      "sha256": "ae86e39df4eee24b48cd0e918ef7909f6e2aa108fce9b75e7834dae3d189476d"
+    },
+    {
+      "path": "archive/working_2026-09-18/IMPORT_PROVENANCE.json",
+      "size_bytes": 18020,
+      "sha256": "b9cdb75301b1b3be4c126ff23133b31fe67ebf288b20d71ef7d2d249ec19e0b3"
+    },
+    {
+      "path": "archive/working_2026-09-18/artifacts/direct_krgm/core_general_mh_regenerated_41.csv",
+      "size_bytes": 2870760,
+      "sha256": "6170ced0a0c9ac8a3229768383c9e1ff2591752c8a4fb24d3aff074b577cce4c"
+    },
+    {
+      "path": "archive/working_2026-09-18/src/ssz_p5/coefficients/mh_general_primitives.py",
+      "size_bytes": 9906,
+      "sha256": "b08b5e043a710ea4993e93b4c4cd312d52cf527d278e716e5138e4059001c7ff"
+    },
+    {
+      "path": "archive/working_2026-09-18/tools/audit_general_mh_core_emitter.py",
+      "size_bytes": 1328,
+      "sha256": "d73978d2e007196c4a98ee8b42b40f19f13c2f0dfd1c4cc53e686636c59fc67e"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/CONTINUE_FROM_HERE_2026-09-18.md",
+      "size_bytes": 1932,
+      "sha256": "a2ab45beaf008667c6de2bfacce30bac4825b19b62dd81dcf388fd5cfa143eee"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/CURRENT_STATUS_2026-09-18.json",
+      "size_bytes": 532,
+      "sha256": "04ba9f01166f2406eba92d669a564aa2c95626db6b54e3463813ec01337cba76"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_background_audit.csv",
+      "size_bytes": 843018,
+      "sha256": "ab782d24a929f1b33af829060500b7c603db17a7d1493d5bcd4659c85ad8e182"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_f4_action_jets.csv",
+      "size_bytes": 1946786,
+      "sha256": "04dabee0816bb26194d8761a5a885f4aec16ab7b35a512a3bd1cee7b0da9cef4"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_f4_background_audit.csv",
+      "size_bytes": 921423,
+      "sha256": "92f55b7856029b7724381dd27fe3f28f960daf0cbe8596fc37e22f984780d2d1"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_f4_operator_audit.csv",
+      "size_bytes": 389,
+      "sha256": "31bd6132b2ee1c50619159c22901f081accc8600026c064a48021b6efc40ede1"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_f4_resolved_41.csv",
+      "size_bytes": 4103423,
+      "sha256": "34b6c05df8803de81b0c393549d4782d104409d785766c9b41819527b5ec78e9"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_operator_audit.csv",
+      "size_bytes": 399,
+      "sha256": "a3507bf015e3ff4b728dee068831069274f6867944d542add5e2f4671fd62616"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_resolved_41.csv",
+      "size_bytes": 4103548,
+      "sha256": "ca8ea49e926b7af7876646f7f2dc09fb14a27fa4da8c91fb26073f7306e67f28"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_resolved_restored_41.csv",
+      "size_bytes": 4120493,
+      "sha256": "7a96a5c6291e5f17dd4d5fe5e0f51659e48312b06b7add943657946dfce688a2"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_restored_background_audit.csv",
+      "size_bytes": 843018,
+      "sha256": "ab782d24a929f1b33af829060500b7c603db17a7d1493d5bcd4659c85ad8e182"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_A2_restored_operator_audit.csv",
+      "size_bytes": 393,
+      "sha256": "c1bbfba88a491f4f058760cc46dcb5cca72fb8faa8998a13ee3b8463894f0c09"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_background_eom_audit.csv",
+      "size_bytes": 488493,
+      "sha256": "e32649c0756535005527acdf0c234b0e49d02cf68616b8082246cfb18a03cba8"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_metric_resolve_audit.csv",
+      "size_bytes": 783504,
+      "sha256": "03ffa4548d097b9cfcd8162bbe9407c6319677efceb9ed307f9b59558844bd42"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/central_metric_resolved_41.csv",
+      "size_bytes": 4324892,
+      "sha256": "8914e0f09ddbafe11dadc353970876eb9d5980479691058eca478e8cdb25ce41"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/check_central_background_eom.py",
+      "size_bytes": 2291,
+      "sha256": "3c77ea5f2d449922683151eab4f49e8af66dcdcdc0d9d125c1cea1409a6a2d3e"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/direct_central_emitted.csv",
+      "size_bytes": 4153981,
+      "sha256": "a1f0904413ad4d518bff3164990fd2dc385dde19c8e5940e89ed68524bca8f55"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/direct_central_fulljets.csv",
+      "size_bytes": 4326748,
+      "sha256": "4040a7700252fe38dc47a4fb9a3bed6d53c206dd889151a89841c953cceb2896"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/opt_endpoint_k.py",
+      "size_bytes": 2411,
+      "sha256": "97734ed906ddc974f73518b1b7f5a5790960af96b2fbc1e6c5892c4a32f08627"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/opt_endpoint_k_fast.py",
+      "size_bytes": 2440,
+      "sha256": "decc5269921151147752b297792aca13f4adcddbfce10e521e1f8325aaeb6ca8"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/opt_endpoint_k_fast2.py",
+      "size_bytes": 2387,
+      "sha256": "844ec68086db24983a917c68bede488ffc7aa32444b491a6124d3c329fe912f3"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/scan_central_controls.py",
+      "size_bytes": 2920,
+      "sha256": "d0e975caae4c3ca79024ba3305d85e3817122ed5cb5cfe22ebacf230e0b4c273"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/scan_central_fast.py",
+      "size_bytes": 2599,
+      "sha256": "90284be467e43a8f6208b0043869af6ac691cbd3edcd04eed621fe8fab8abfae"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/scan_endpoints.py",
+      "size_bytes": 2423,
+      "sha256": "6dd085bf3fc550198c79ef9089fd0df372a9419bedbf3fdff2470b6d6104596d"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/scan_v6_endpoint.py",
+      "size_bytes": 2460,
+      "sha256": "64ca1d0af8732181ef8771c56c3dc4619db0f2580ae1caf3076fedf1d33c0bc8"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/solve_central_A2_f4.py",
+      "size_bytes": 7615,
+      "sha256": "2ca4a86e66b5d9f04d148eb3bf19b797d05022e61f5ac0b6353afd386e47ee9d"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/solve_central_A2_f4X.py",
+      "size_bytes": 7698,
+      "sha256": "02cfb9151ac50a4c9fb7f31ddf43009bcf8d5ebe4e43e8fbacc3ac79241d3893"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/solve_central_A2_member.py",
+      "size_bytes": 8082,
+      "sha256": "bfc61a3c8fbf58280ea356293921e8c5a8e33517fbe3f36c2745b61f08ea5b58"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/solve_central_A2_member_restored.py",
+      "size_bytes": 9097,
+      "sha256": "be9ba3a595e9afb6c8137eff5497f16222cca0fe5d7efed6649133c41d5505a6"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/solve_central_metric_and_reduce.py",
+      "size_bytes": 3943,
+      "sha256": "348932afaef0ea12a4c606564def8a8aec1ddc5d311c5edca237513484429468"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/test_A2_ode.py",
+      "size_bytes": 1520,
+      "sha256": "e556a83ac079d9340b84eb6b01efe05c61485d2e4dfaae51c495a1931f04261c"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/test_corrected_central_full.py",
+      "size_bytes": 839,
+      "sha256": "ce6addf6ac17fecdd1d2baef5fc3455e527feb0a1680dfe582e105b7f3c62a37"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/test_direct_central.py",
+      "size_bytes": 2234,
+      "sha256": "ef4a8b842b033cd8ee9737a517f0ca3d4d46cf011de2689b7369b790bf915d14"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/test_direct_central_fulljets.py",
+      "size_bytes": 3375,
+      "sha256": "aa101e2cb2f04de8a7cc793276960b4fe81dc1e5ebb78deaaf268a656007a522"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/central_direct/test_eq429_directK2p.py",
+      "size_bytes": 1839,
+      "sha256": "5fdf50f903f067108a983c77827b16e77db5cc8561a488fcba15799e77a9d85e"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/baseline_where.py",
+      "size_bytes": 3706,
+      "sha256": "8e6de739994e9a6afc636d23bbff30229e6abb19d5cda55fa96f4c8aea63b35f"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/central_L6_pointwise_envelope.csv",
+      "size_bytes": 235366,
+      "sha256": "45f97336d025239bc4053e0e7560eef8d4fb12c447575eb8f22b78fd26e0325d"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/eq131_boundary_scan.csv",
+      "size_bytes": 132730,
+      "sha256": "a3075dcf7e439b59792596758424b5dfd672ad65e15f85e8a7efee20642e44bf"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/f4_bump_scan1.csv",
+      "size_bytes": 36886,
+      "sha256": "71d1d516db603bf71f7e5ce909186c1d4ca64544ab525ba91b5365f97f4243a3"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/f4_local_sensitivities.csv",
+      "size_bytes": 1577,
+      "sha256": "70674dca7e9adfb61ab0549dbb1e08c548c744772f96505a3319d89d1fa40833"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/opt_outer_exactK.py",
+      "size_bytes": 5294,
+      "sha256": "a96829e57ceaf63a082fd36807814b420ebd6244cd11d89a8f8d682c33310701"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/outer_control_grid.py",
+      "size_bytes": 3132,
+      "sha256": "0e88cb841febaa4f84f600c5d376ee073d046121e59f144f57fad802d5a47f84"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/outer_control_selected.py",
+      "size_bytes": 293,
+      "sha256": "60d53e870bbbb0becaf133ef1627afba7aaa9e2d7e4502f3b8a34b7fefde944b"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/outer_cubic_control_selected.py",
+      "size_bytes": 2240,
+      "sha256": "bb1447571e61c880cf8fa98021d2b202bd2104c62a92c8c29b2632395750db60"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/outer_model.py",
+      "size_bytes": 4127,
+      "sha256": "5efda0166094da887714f28a081b31c49eb6922a960724bf2a5d402a7cb2539f"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/outer_sqp.py",
+      "size_bytes": 6418,
+      "sha256": "4c21f82156166fda10df1b55f560aa68bb3a461ded43c5d03d0a9ad7e70e1925"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/scan_outer_a1.py",
+      "size_bytes": 294,
+      "sha256": "8ba350909ff73e8a8203294894c7fb03bcfdb1cf9ae2d75d134a991a43426df0"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/scan_outer_targeted.py",
+      "size_bytes": 393,
+      "sha256": "f3cc036debd0a90380b7a3eac01b743a828dccd72d37b9c3d2f25b2a0f6ec186"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/scan_outer_v_controls_new.py",
+      "size_bytes": 1056,
+      "sha256": "7fd1d3d053b2cd0d9bfb06829b80594add4c2490a16b35a28e43d07852f3d7af"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/test_outer_broad.py",
+      "size_bytes": 3199,
+      "sha256": "7771ca9c1d5466658a76f4f277ac944626535c52de3a74b787745be6ed0a4e88"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/outer_control/test_outer_controls.py",
+      "size_bytes": 1876,
+      "sha256": "b36855184f9a5c2fc11ca30526f090580b09a104371e993255b4009c1a505edd"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/reports/FULL_PIPELINE_REPORT.json",
+      "size_bytes": 14680,
+      "sha256": "3379aab6dbf92b10500779e239a46a2d5b792817fe457c46cda0efd765685ba9"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/reports/FULL_PIPELINE_REPORT.md",
+      "size_bytes": 4504,
+      "sha256": "77c4591a4aea7f691ceebd87138003cdb6f76d0cfc0c637f256ce01d2eed1975"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/reports/STRICT_AUDITOR_2026-09-18.json",
+      "size_bytes": 15369,
+      "sha256": "00b43d73d2ede566586fc92d6968d23858714d37d978b10c6e72fb7fd243446f"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/reports/STRICT_AUDITOR_2026-09-18.txt",
+      "size_bytes": 5377,
+      "sha256": "d5585189907c87d27729d79c72ba069f996ddc723a634531779cdf405cee9dea"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/reports/STRICT_AUDITOR_GATE_LEDGER_2026-09-18.csv",
+      "size_bytes": 7802,
+      "sha256": "8155308e60cd400be6cfa10da2b28a6886973fae5ecb1b34ac422e6f5fab2ec8"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/reports/STRICT_REQUIRE_DIRECT_2026-09-18.txt",
+      "size_bytes": 5377,
+      "sha256": "d5585189907c87d27729d79c72ba069f996ddc723a634531779cdf405cee9dea"
+    },
+    {
+      "path": "archive/working_2026-09-18/work_2026-09-18/reports/STRICT_REQUIRE_DIRECT_EXIT_CODE.txt",
+      "size_bytes": 2,
+      "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+    },
+    {
       "path": "data/authoritative/ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
       "size_bytes": 1042900,
       "sha256": "4aecb2e3c539dba50a773579f3e740ba34811dba617b7cd6358e7de8a0375ad5"
@@ -1298,6 +1623,11 @@
       "sha256": "74105b4b26b9a0ace538481918e60e3c305d8ac44446f012d250b88f542c98fb"
     },
     {
+      "path": "data/diagnostic/WORKING_2026_09_18_PORT_REGRESSION.json",
+      "size_bytes": 2269,
+      "sha256": "9385d675d4090a41d877b9a8cd39bf2b2aaf13860146bfd62f4c77c055ce574e"
+    },
+    {
       "path": "data/diagnostic/ssz_p5_SELECTED_41STREAM_V2_2026-09-16.csv",
       "size_bytes": 17036072,
       "sha256": "a95d97a60f24221847abdae7caeffc6a7bcfc285ca8c42bb21af7cd2e4926f34"
@@ -1366,6 +1696,16 @@
       "path": "data/generated/inner/inner_same_action_SVT_H_41of41.csv",
       "size_bytes": 1573386,
       "sha256": "e16262ef01e6f2d05fcc44fdf98d7a6113701b484bc376b5e7170cf3ea4cdf40"
+    },
+    {
+      "path": "data/generated/inner_controls/INNER_LOWER_ORDER_CONTROL.json",
+      "size_bytes": 2376,
+      "sha256": "1dea3b5e1b3efe7f97975247e7c66d042f89e4defc83b4a4fc52f3459f5d5d5e"
+    },
+    {
+      "path": "data/generated/inner_controls/INNER_LOWER_ORDER_TARGETS.csv",
+      "size_bytes": 181388,
+      "sha256": "0480f67b8aeb9bf88e5a92ffbb6c85e1fef6f9ff43d0c6ec9eaa0cbbe411a0a3"
     },
     {
       "path": "data/prestaged/direct41/central_selected_corrected_41of41.csv",
@@ -1581,6 +1921,11 @@
       "path": "docs/REGIONAL_KINETIC_GATE_2026-09-17.md",
       "size_bytes": 5733,
       "sha256": "7c3e34c1ff3d3ec68e5227a190cf825516fad18833019a247beaba2abe2951f4"
+    },
+    {
+      "path": "docs/WORKING_INTEGRATION_2026-09-18.md",
+      "size_bytes": 2518,
+      "sha256": "ccdee01adc5406190f53d124e3d1a33443ad41b752e8280de0594d68b6ab1564"
     },
     {
       "path": "docs/checkpoints/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16(1).md",
@@ -1908,6 +2253,11 @@
       "sha256": "482d971c7d42c37e0729f670747c48eac4b5e92809e74bb6726ae85f068905c3"
     },
     {
+      "path": "src/ssz_p5/coefficients/mh_general_primitives.py",
+      "size_bytes": 9827,
+      "sha256": "f32124691ed5ec6752d882ceec4df62658edaa15713dcbdcf8f74ec1ad0609fb"
+    },
+    {
       "path": "src/ssz_p5/coefficients/schema41.py",
       "size_bytes": 975,
       "sha256": "4808d906cd32e0e1e6c99eaa92ed3a8d9a8b1b6396c66f08577cc2bcc4079b2b"
@@ -1993,6 +2343,11 @@
       "sha256": "a873925e836021a91af775907900d1ec4252ef226342362fc559bc0530d44323"
     },
     {
+      "path": "src/ssz_p5/production/inner_targets.py",
+      "size_bytes": 4442,
+      "sha256": "a9e0035dea7d09170b2a77f2ff412cebbe3979bc6244b2751a8554e23f3a3353"
+    },
+    {
       "path": "src/ssz_p5/production/kinetic_audit.py",
       "size_bytes": 7328,
       "sha256": "ca94e8ce675847fd42cc682a6661b0fd9152fee36e2556bbf84a3b3ee028ea94"
@@ -2001,6 +2356,11 @@
       "path": "src/ssz_p5/production/member.py",
       "size_bytes": 1872,
       "sha256": "70076571796996fb4071ed00aab8a4e6145e829724ead11a684b3b5e6f1e980f"
+    },
+    {
+      "path": "src/ssz_p5/production/principal_controls.py",
+      "size_bytes": 3380,
+      "sha256": "44507a005ccdc1b83250019b471897d89a14881e3bb2216574827d756a632db2"
     },
     {
       "path": "src/ssz_p5/production/regional_coefficients.py",
@@ -2203,6 +2563,11 @@
       "sha256": "0c35ac6ff11a194733c12184e809705f04b46eb544c8916075ebcc468a5cf49a"
     },
     {
+      "path": "tests/unit/test_inner_targets.py",
+      "size_bytes": 631,
+      "sha256": "97db805036bbb420636d5eaccf1e46a2de05064a702c8ac31fd50c931f644e22"
+    },
+    {
       "path": "tests/unit/test_jet9d8.py",
       "size_bytes": 806,
       "sha256": "76ac08ccbe84ef36e604e0b369518a31fdda8c29483cc76fce94b728e096692c"
@@ -2211,6 +2576,11 @@
       "path": "tests/unit/test_onshell_identity.py",
       "size_bytes": 2229,
       "sha256": "21dc76ff44f261466180303bf44c1967d55f3b2695b471fc7ab8b4ec2fcd38d3"
+    },
+    {
+      "path": "tests/unit/test_principal_controls.py",
+      "size_bytes": 2049,
+      "sha256": "b4d4554b487177507701309649c8f4c63136683b08aec428c6df067e772ab6cb"
     },
     {
       "path": "tests/unit/test_production_regions.py",
@@ -2246,6 +2616,16 @@
       "path": "tools/audit_regional_kinetic.py",
       "size_bytes": 988,
       "sha256": "8a774cdbe9d10654a900e71cdee0a61aa88ae7ff938fc80c18d9679a3c967aa4"
+    },
+    {
+      "path": "tools/audit_working_import.py",
+      "size_bytes": 2951,
+      "sha256": "2ebb8426f47a50cb4627d3703ada669062c69173d14a31a9ba88d565ca7a2950"
+    },
+    {
+      "path": "tools/build_inner_targets.py",
+      "size_bytes": 498,
+      "sha256": "a004af167abecec851f4bf17a4b4a1e84f7ac66704a46cef204e2b15ec2a2ba8"
     },
     {
       "path": "tools/build_ssz_p5_full_closure_monograph.py",

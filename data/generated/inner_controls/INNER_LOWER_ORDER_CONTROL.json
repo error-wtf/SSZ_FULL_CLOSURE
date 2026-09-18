@@ -1,0 +1,74 @@
+{
+  "status": "TARGETS_READY_ACTION_REALIZATION_PENDING",
+  "production_changed": false,
+  "central_changed": false,
+  "central_endpoint_x": 1.4084507042253522,
+  "central_endpoint_radial_jets": {
+    "v5": [
+      -3873.246322762168,
+      346586.89998695423
+    ],
+    "c3": [
+      337.2044016680053,
+      -29233.669123790893
+    ],
+    "e3": [
+      323.0873587661293
+    ]
+  },
+  "required_radial_orders": {
+    "v5": 1,
+    "c3": 1,
+    "e3": 0
+  },
+  "core_endpoint_radial_jets": {
+    "v5": [
+      0.0,
+      0.0
+    ],
+    "c3": [
+      0.0,
+      0.0
+    ],
+    "e3": [
+      0.0
+    ]
+  },
+  "partition": "stored S_SVT,T_H; no new transition function",
+  "derivative_policy": "9 point degree 8 local polynomial, central side of full source grid",
+  "action_control_variables": null,
+  "control_map_residual": null,
+  "background_null_check": "NOT_RUN",
+  "action_control_status": "No executable lower-order response map registered; raw principal map targets v1,v4,c2",
+  "existing_emitter_interface": "selected_v5, selected_c3, selected_e3 are supplied values, not inversion",
+  "sources": [
+    {
+      "path": "data/production/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv",
+      "sha256": "18c7752c1ee2c5c1fe5260925bcb3cc4dce970ef5c51d879bc5012f96ae9b702"
+    },
+    {
+      "path": "data/prestaged/direct41/inner_selected_candidate_41of41.csv",
+      "sha256": "59cb34633ac8da66b31b2d6e57fe407819370eb48fa7d75f572bbfb87b9f066f"
+    },
+    {
+      "path": "data/production/ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "sha256": "74b4812b9a43dfb6faf71f5eaf2375c359d69ac250a5b5414fea8647fed8e89c"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv",
+      "sha256": "5a831cbd4fd85b02a818c98bea808da07d34de86e50688147f7b1723eefda695"
+    },
+    {
+      "path": "data/prestaged/direct41/core_selected_41of41.csv",
+      "sha256": "08e39fa0f568f9154201318e221cb477553de2369810bb06a162d636dab2f82d"
+    }
+  ],
+  "generator": {
+    "path": "src/ssz_p5/production/inner_targets.py",
+    "sha256": "a9e0035dea7d09170b2a77f2ff412cebbe3979bc6244b2751a8554e23f3a3353"
+  },
+  "target_artifact": {
+    "path": "data/generated/inner_controls/INNER_LOWER_ORDER_TARGETS.csv",
+    "sha256": "0480f67b8aeb9bf88e5a92ffbb6c85e1fef6f9ff43d0c6ec9eaa0cbbe411a0a3"
+  }
+}

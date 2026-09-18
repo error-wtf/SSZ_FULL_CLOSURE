@@ -1,0 +1,86 @@
+
+SSZ P5 FULL CLOSURE AUDIT
+==============================================================================
+{
+  "release": "2026-09-16",
+  "action_member": {
+    "definition": "Horndeski_P5_global + epsilon*Y",
+    "epsilon_Y": 0.01,
+    "vector_background": "A0prime=0"
+  },
+  "FULL_CONSTRUCTIVE_CLOSURE": "PASS",
+  "DIRECT_GLOBAL_KRGM_EXPORT": "OPEN",
+  "numerical_regression_failures": [],
+  "constructive_failures": [],
+  "gate_counts": {
+    "OPEN": 1,
+    "PASS": 49,
+    "PASS_EXACT": 7
+  }
+}
+
+GATES
+------------------------------------------------------------------------------
+PASS               constructive   geometry_f_positive | 0.2500000000000079
+PASS               constructive   geometry_h_positive | 0.3268566655925778
+PASS               constructive   principal_cT2_positive | 0.999262399874648
+PASS               constructive   principal_cS2_positive | 0.9037451776188076
+PASS               constructive   principal_cV2_positive | 1.0
+PASS               constructive   global_principal_R_zero | 0.0
+PASS               constructive   principal_stream_rows | 45617
+PASS               constructive   outer_handover_actual_residual_E00 | 1.8041124150158799e-16
+PASS               constructive   outer_handover_actual_residual_E11 | 3.226585665316861e-16
+PASS               constructive   outer_handover_vector_current_JA | 1.6325426905854336e-15
+PASS               constructive   inner_handover_actual_residual_E00 | 8.881784197001252e-16
+PASS               constructive   inner_handover_actual_residual_E11 | 4.6629367034256575e-15
+PASS               constructive   inner_handover_vector_current_JA | 3.072770957065496e-15
+PASS               constructive   center_handover_rank | 3.0
+PASS               constructive   center_handover_condition | 2.449490659010719
+PASS               constructive   center_handover_rel_residual | 2.538375275598637e-08
+PASS               constructive   center_tensor_F | 0.9999999770884102
+PASS               constructive   center_tensor_H | 0.9999996407448842
+PASS_EXACT         constructive   analytic_center_kinetic | 0.00274375128377
+PASS               constructive   strongH_F_tensor_positive | 0.7848268111217971
+PASS               constructive   strongH_G_tensor_positive | 0.7848268111217971
+PASS               constructive   strongH_H_tensor_positive | 0.7848268111217971
+PASS               constructive   strongH_K_scalar_positive | 0.0097422527595834
+PASS               constructive   strongH_crS2_positive | 0.999999999999986
+PASS               constructive   strongH_kappa_nonnegative | 0.09883837302401212
+PASS               constructive   core_F_tensor_positive | 1.0
+PASS               constructive   core_G_tensor_positive | 0.9996310638951968
+PASS               constructive   core_H_tensor_positive | 0.9996310638951968
+PASS               constructive   core_K_scalar_positive | 7.331670016895128e-06
+PASS               constructive   core_crS2_positive | 0.9999999999999996
+PASS               constructive   core_kappa_nonnegative | 1.8582154272635095e-10
+PASS_EXACT         constructive   MH_finite_l_no_ghost_theorem
+PASS               constructive   horndeski_control_rank | 5.0
+PASS               constructive   horndeski_control_sigma_min | 0.007141457821951
+PASS               constructive   ZK_K_ZK_exact | 10.541549191507215
+PASS               constructive   ZK_even_tensor_cr2_exact | 1.0050694018534372
+PASS               constructive   ZK_even_scalar_cr2_exact | 0.9037451776188076
+PASS               constructive   ZK_even_vector_cr2_exact | 9.458870488366266
+PASS               constructive   ZK_Codd | 0.7607210253614061
+PASS               constructive   ZK_alpha4 | 0.0099958944316682
+PASS               constructive   ZK_alpha7 | 2.001530117217264
+PASS               constructive   ZK_alpha6_negative | -0.3330268656461453
+PASS               constructive   ZK_K_e1_identity | 2.1782398107461631e-10
+PASS               constructive   41_slot_schema_complete | []
+PASS               constructive   41_slot_reference_finite_except_selected_LO | []
+PASS               constructive   41_slot_c3_e3_selected | {'rows': 4000, 'file': 'ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv'}
+PASS               constructive   strong-H a5 identity regression | 0.0006636211581147
+PASS               constructive   core a5 selection convergence | 0.0001495892109944
+PASS               constructive   core selected a1 stays in archived control tube | 0.0001877439719886
+PASS               constructive   constraint_map_audit_present | 10
+PASS_EXACT         constructive   HSVT_epsY_nontrivial | 0.01
+PASS_EXACT         constructive   HSVT_epsY_background_null | 0.0
+PASS               constructive   HSVT_epsY_kappa_max | 0.6354409670384762
+PASS_EXACT         constructive   HSVT_epsY_ZA_min | 0.9872911806592305
+PASS_EXACT         constructive   HSVT_epsY_odd_vector_stability
+PASS_EXACT         constructive   HSVT_epsY_quadratic_factorization
+OPEN               implementation DIRECT_GLOBAL_KRGM_EXPORT
+==============================================================================
+Interpretation:
+  FULL_CONSTRUCTIVE_CLOSURE is the mathematical/action/stability closure.
+  DIRECT_GLOBAL_KRGM_EXPORT is a stricter repository implementation gate.
+  An OPEN direct-export gate does not negate the constructive closure; it
+  means the repo must still regenerate a single bitwise global operator.
