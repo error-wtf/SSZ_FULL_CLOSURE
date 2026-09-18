@@ -14,8 +14,8 @@
     },
     {
       "path": "ABSOLUTE_CLOSURE_LEDGER.json",
-      "size_bytes": 1513,
-      "sha256": "ec490bb698b25d3ccf4c2c20df9d6aaa97068d31fb81f113753551ab7485e441"
+      "size_bytes": 1487,
+      "sha256": "3039e4601508a66cd1f1d496033d684f0a26bb71e4078c9b9d5ff9c3bbce66a2"
     },
     {
       "path": "ARTIFACT_CLASSIFICATION.json",
@@ -64,8 +64,8 @@
     },
     {
       "path": "CONTINUE_IMPLEMENTATION_2026-09-18.md",
-      "size_bytes": 2090,
-      "sha256": "bc55b32e5355bcb292c04e546981491939ecd2f038f4625a14e391de4925c934"
+      "size_bytes": 1921,
+      "sha256": "08bcede552ccdef2a6946bde0f0b51c3188c507ab3b135987d3c592204778e94"
     },
     {
       "path": "CURRENT_RELEASE_STATUS_2026-09-18.md",
@@ -129,8 +129,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 10099,
-      "sha256": "705ec9f2224e775ba85f4a918f5b13be7af2663adf47fb0f929c6ba7c2fba7d2"
+      "size_bytes": 9263,
+      "sha256": "53b78dc0a29e2a2a28c01b404e507c964f97e828cd7c20f5ecd3feb9d67b51d9"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -1658,11 +1658,6 @@
       "sha256": "74105b4b26b9a0ace538481918e60e3c305d8ac44446f012d250b88f542c98fb"
     },
     {
-      "path": "data/diagnostic/SNAPSHOT_IMPORT_STRICT_REPORT_2026-09-18.json",
-      "size_bytes": 19534,
-      "sha256": "c53c499382b237393e0336df021014c48aca0c7a15d6f7a0441bcda545c6d8d0"
-    },
-    {
       "path": "data/diagnostic/STRICT_DIRECT_CURRENT.csv",
       "size_bytes": 9155,
       "sha256": "0d9f72938678b45ff8935e7f0eacbbc1ff5c4cfb88f279266fb5140048029dfb"
@@ -1725,67 +1720,67 @@
     {
       "path": "data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json",
       "size_bytes": 5347,
-      "sha256": "57b01866cb52467ad53d38d0d6b01ba901222668f7a2dc0f87c9eb3a4eaab999"
+      "sha256": "0033a538b230c9f14332ccbceddf1480b58084bd91220945e1761ecd64ea8f11"
     },
     {
       "path": "data/generated/inner/INNER_ENDPOINT_COMPARISON.csv",
-      "size_bytes": 30260,
-      "sha256": "a3e5fea6fecd227b4c30005b1974f1c225f3f8dfa5db63441a37079f674d98f0"
+      "size_bytes": 30297,
+      "sha256": "37b789e1ef5ecb1b2d76d0a3767b8ea980056a4213c5ac636dedba42f0589578"
     },
     {
       "path": "data/generated/inner/INNER_ENDPOINT_CONVERGENCE.csv",
-      "size_bytes": 995,
-      "sha256": "6a191bfa39519ce479d2eb59e57588cfc7a37cbb834d6f4a7bede13579af63c7"
+      "size_bytes": 999,
+      "sha256": "cd354785de82ff3bae26a126af844aac009abab54ebe3c85a3a062785cdc3e3a"
     },
     {
       "path": "data/generated/inner/INNER_F2_HOLONOMIC_HESSIAN_AUDIT.csv",
-      "size_bytes": 802575,
-      "sha256": "f4875f42e5ebed91b4a6d760ed1c2f7c06858e7d7808136d4c03d95c31a50dff"
+      "size_bytes": 804794,
+      "sha256": "9aa04ad1b6a424799229e7788a6aca5065e743a0da5d5938d8dcc3f9f68c3534"
     },
     {
       "path": "data/generated/inner/INNER_F2_HOLONOMIC_HESSIAN_AUDIT.json",
       "size_bytes": 1371,
-      "sha256": "9051fc233f3bd9f18833215b968e765a335f3a30bd2d817b7bda906d2d349a0d"
+      "sha256": "0d6904260f9cc5502bd222b19fcd59a61d9a3f03e8a5e8eb72841890661c7fa6"
     },
     {
       "path": "data/generated/inner/INNER_PRINCIPAL_ACTION_CONTROLS.csv",
-      "size_bytes": 168081,
-      "sha256": "12363741c9e2eb2d7025b1eca0c1564678bb7e8b4c8242d658b89b6c930fc341"
+      "size_bytes": 168119,
+      "sha256": "a58502db9ea28e40339665bcad3147c8fda4884d693c2e198128e2bd1332bc48"
     },
     {
       "path": "data/generated/inner/INNER_PRINCIPAL_TARGETS.csv",
-      "size_bytes": 161655,
-      "sha256": "614df6934f2f0cf9ac4b867caabd1f278c7c8458c33454d73406b915a8ce2a54"
+      "size_bytes": 161643,
+      "sha256": "533b7d5905d1e1aee3c38e2e896aba65453b67d770ab2723a7f2e89fcf035420"
     },
     {
       "path": "data/generated/inner/INNER_SLOT_COMPARISON.csv",
-      "size_bytes": 5862,
-      "sha256": "87ad6764781f84b957a8ec0b525abff97e735f689a4a7ec5d18dcaa68bbd2f45"
+      "size_bytes": 5847,
+      "sha256": "dbe7afdb39b2b45fb6a7cd3597054d28932f5dea511b2d05625aefb369deb90b"
     },
     {
       "path": "data/generated/inner/inner_same_action_SVT_H_41of41.csv",
-      "size_bytes": 1650447,
-      "sha256": "64cc85076ab2135d08492bfbb42e51e50df52e004ae0ec0356618213833795f0"
+      "size_bytes": 1650376,
+      "sha256": "8faaabea2fe1dde95a266bcdea2fc0d47efbf5207d65fc6ced36d65c2cbc1a10"
     },
     {
       "path": "data/generated/inner_controls/INNER_LOWER_ORDER_ACTION_CONTROLS.csv",
-      "size_bytes": 315804,
-      "sha256": "52af81bd796b59f75b8b3a992f432dabcc28cf2852b180881a65f8181d7eecad"
+      "size_bytes": 315844,
+      "sha256": "18d54896058e9e88e0e8a7229740e8c200150e39fedb96d72c8e5bb156c0f02b"
     },
     {
       "path": "data/generated/inner_controls/INNER_LOWER_ORDER_CONTROL.json",
       "size_bytes": 4088,
-      "sha256": "4261ae7944b0403d506a716d23c9c385ff86d81904a5d58b5b7173caf28b2fa0"
+      "sha256": "31c456226e6697a6319cfa16916bd44f5fa924a6e5cbf1974a8819ecb1ae5d96"
     },
     {
       "path": "data/generated/inner_controls/INNER_LOWER_ORDER_REEMITTED.csv",
-      "size_bytes": 129361,
-      "sha256": "5690920efc2ad02be061e055b08ba8ba0123bf6e3b89aa11091b4d4c3dcdb100"
+      "size_bytes": 129333,
+      "sha256": "48ec0ad7810ee1e63f68bbd9a0c4be7e27b26ff08efb59f5b6024a4b909738ee"
     },
     {
       "path": "data/generated/inner_controls/INNER_LOWER_ORDER_TARGETS.csv",
-      "size_bytes": 181388,
-      "sha256": "0480f67b8aeb9bf88e5a92ffbb6c85e1fef6f9ff43d0c6ec9eaa0cbbe411a0a3"
+      "size_bytes": 181372,
+      "sha256": "26e84ad5dcdcc3c4e7eca1a629a519ddf86501eb2eb464d11660721806229462"
     },
     {
       "path": "data/generated/inner_holonomic/INNER_F2_HOLONOMIC_HESSIAN_AUDIT.csv",
@@ -2031,11 +2026,6 @@
       "path": "docs/REGIONAL_KINETIC_GATE_2026-09-17.md",
       "size_bytes": 5733,
       "sha256": "7c3e34c1ff3d3ec68e5227a190cf825516fad18833019a247beaba2abe2951f4"
-    },
-    {
-      "path": "docs/SNAPSHOT_INTEGRATION_2026-09-18.md",
-      "size_bytes": 2050,
-      "sha256": "1f4ad8a6889fcaafc14f61176ce51f4a6a7866d39e48a27eb45fda160aedc046"
     },
     {
       "path": "docs/WORKING_INTEGRATION_2026-09-18.md",
@@ -2288,26 +2278,6 @@
       "sha256": "c63845993d13cdf4b40316be5f91b0d2a55420809afbeadfe31401f0e1dddfdf"
     },
     {
-      "path": "provenance/source_manifests/snapshot_2026-09-18/SOURCE_MANIFEST.json",
-      "size_bytes": 113885,
-      "sha256": "b00102f3b4d8f1776d03705f49b9e9fdc3e9f60dbf23431a530c5c2fa1b6d6e2"
-    },
-    {
-      "path": "provenance/source_manifests/snapshot_2026-09-18/SOURCE_PIPELINE_REPORT.json",
-      "size_bytes": 15326,
-      "sha256": "c9d184f63b9624967f912e53e576636b087a121f9786b374230eaa9052bdf49d"
-    },
-    {
-      "path": "provenance/source_manifests/snapshot_2026-09-18/SOURCE_PIPELINE_REPORT.md",
-      "size_bytes": 4896,
-      "sha256": "89f13fdabeedbcf898f51856b431f31c8405f9e587e9ef45dfa7db26395934de"
-    },
-    {
-      "path": "provenance/source_manifests/snapshot_2026-09-18/SOURCE_SHA256SUMS",
-      "size_bytes": 72481,
-      "sha256": "b0eddf80aef3681122dd8365106b209dbe0eb09cf685819e8acee64720c6628d"
-    },
-    {
       "path": "pyproject.toml",
       "size_bytes": 980,
       "sha256": "8fd5538b6076828889e43a8ef4f2da6aac2513ce74d8b1b7aa976d26979350e5"
@@ -2479,23 +2449,23 @@
     },
     {
       "path": "src/ssz_p5/production/holonomic_hessian.py",
-      "size_bytes": 13108,
-      "sha256": "93e21b9d2dda3fef76434fedf6d89317dedabed1fd8d839206cb9abbe9a0c6d5"
+      "size_bytes": 13097,
+      "sha256": "1b874892f25a8058be96fe98632fc19b46e38af666c7cf6c3b19f4605abde1dc"
     },
     {
       "path": "src/ssz_p5/production/inner_export.py",
-      "size_bytes": 11267,
-      "sha256": "26c43b674a0749f704d198d508da27c34ae9b3119f7ad0d819f6c227daf2e7df"
+      "size_bytes": 11169,
+      "sha256": "62aa96ad9835563a712cc7344b9d50e6c6de4019b99e5ec89fc43b458a81a445"
     },
     {
       "path": "src/ssz_p5/production/inner_principal.py",
-      "size_bytes": 6147,
-      "sha256": "a2fc4eb104a8a8a43ec8846fb56b880203e87b5afdd1a0d7db985d2a14d4e9bd"
+      "size_bytes": 6102,
+      "sha256": "829d9fa158e7c2fc4a02fc0a4b8cb7c45ae3ab8dbb32e1f3d12c9a47b75f655b"
     },
     {
       "path": "src/ssz_p5/production/inner_targets.py",
-      "size_bytes": 5422,
-      "sha256": "e0db7465b8e03f0a8dc8128426e48a29584fdad90b7e847f8380f8cf00e5ecde"
+      "size_bytes": 5348,
+      "sha256": "b090ac9c8d7d49cfba1e9f7294c8f8825bccb7431f6d0069a7211180fd5f8338"
     },
     {
       "path": "src/ssz_p5/production/kinetic_audit.py",
@@ -2504,8 +2474,8 @@
     },
     {
       "path": "src/ssz_p5/production/lower_order_controls.py",
-      "size_bytes": 5871,
-      "sha256": "f4bfddda3c787cd4ebe18ee7ecd039723f99efd5d99ac7a782a8408038a5e23d"
+      "size_bytes": 5856,
+      "sha256": "4acf0cef567ed14f390c0b0b1f5527058816b68bfd259826f906c61c4276d166"
     },
     {
       "path": "src/ssz_p5/production/member.py",
@@ -2714,8 +2684,8 @@
     },
     {
       "path": "tests/unit/test_holonomic_hessian.py",
-      "size_bytes": 2960,
-      "sha256": "6feaf33fbb8f82bf6a9f91ee0be69b9c2b1205747e1b4015e8f05e3e2ba3a530"
+      "size_bytes": 2964,
+      "sha256": "22d76ba4f7914fec6fd50a2b47c0d4f20f8ba5517db2451ef1b2579651db099a"
     },
     {
       "path": "tests/unit/test_inner_export.py",
@@ -2724,8 +2694,8 @@
     },
     {
       "path": "tests/unit/test_inner_principal.py",
-      "size_bytes": 1302,
-      "sha256": "4a2cb82ee9e28f9e40aa790fc253ff290d5d59790b6fc8ccb49bd6fff4d7b87b"
+      "size_bytes": 1153,
+      "sha256": "dea12457f6635258a30a29eb9c5ae2df535091970bfafd1c120db4d9c6b8fd8f"
     },
     {
       "path": "tests/unit/test_inner_targets.py",
@@ -2739,8 +2709,8 @@
     },
     {
       "path": "tests/unit/test_lower_order_controls.py",
-      "size_bytes": 1353,
-      "sha256": "237583f721a00fd855b28743a2ad22b30c63ee52931137d70ebe32a40ffd6876"
+      "size_bytes": 1321,
+      "sha256": "8bc4033d202a5120cc7ec58424b15647d085a68646adbd0cb7a962cdcf2dc54b"
     },
     {
       "path": "tests/unit/test_onshell_identity.py",
@@ -2764,8 +2734,8 @@
     },
     {
       "path": "tests/unit/test_zk_action_selector.py",
-      "size_bytes": 1926,
-      "sha256": "f0aba5ec92c46ed93d86de001a2166d2b54f80411c6000b30453664e94557c6b"
+      "size_bytes": 1908,
+      "sha256": "4658a17a3199ba96e2289cf0bc64b7c92fca3a7fe43fed9119ccb9706c0bb540"
     },
     {
       "path": "tools/audit_central_action.py",

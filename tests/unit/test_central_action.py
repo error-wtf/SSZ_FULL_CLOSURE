@@ -67,3 +67,8 @@ def test_central_action_consumes_explicit_inputs():
     ref = central_selected(repo_root())
     np.testing.assert_allclose(out.v5, ref.v5, rtol=2e-8, atol=2e-8)
     np.testing.assert_allclose(out.v6, ref.v6, rtol=1e-10, atol=1e-10)
+    # d3 contains partial_phi(v6); the direct action selector must use the mixed
+    # action jets rather than the total on-curve radial derivative.
+    mask = (d.u >= 0.61) & (d.u < 0.71)
+    err = abs(out.loc[mask, "d3"] - ref.loc[mask, "d3"]) / np.maximum(1, abs(ref.loc[mask, "d3"]))
+    assert float(err.max()) < 3e-7

@@ -7,6 +7,15 @@ for the regional P5 Full-SVT member: weak Horndeski exterior, outer H/SVT
 handover, central genuine-SVT lobe, inner SVT/H handover, general Horndeski core,
 and an analytic center chart.
 
+The latest integrated source is the supplied `SSZ_FULL_CLOSURE` snapshot of
+September 18, including **93 passing software tests**, the Inner lower-order
+inverse, principal controls, explicit action derivative selector, and later
+intermediate artifacts. Its current implementation boundary is the coupled
+**four-dimensional `(phi, X, F, Y)` holonomic Hessian inverse**. See the
+[latest snapshot status](INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md).
+Earlier 85/86-test reports and the three-dimensional Hessian diagnostic are
+historical records; they do not certify common-action closure.
+
 > **Current result: Absolute Full Closure is not certified.**
 > The selected central Full-SVT coefficient member fails the necessary finite-L
 > kinetic-positivity gate at L=6,12,20,42. At the interior point u≈0.690004,
@@ -68,7 +77,7 @@ Locked regional Full-SVT action / background jets
 | Regional source integration | Implemented | Active member, source registry, region resolver and certificate binding |
 | Outer raw SVT emission | Regression PASS | 41 slots, max scaled reference difference ≈9.03e-9; full H+SVT assembly is separate |
 | Central selected normalization | **41/41 PASS** | 3,809 rows exported with source/output hashes; stored comparable ZK slots reproduce exactly. [Scoped certificate](data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json) |
-| Inner selected normalization | **41/41 PASS; interface FAIL** | 1,400 finite rows; selected zero lower-order slots disagree with the frozen central endpoint. [Evidence](docs/INNER_PRODUCTION_EXPORT.md) |
+| Inner selected normalization | **41/41 PASS; interface FAIL** | 1,400 finite rows; local lower/principal controls are implemented, while derivative-sensitive interface slots and common 4D action holonomy remain open. [Current status](INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md) |
 | Central finite-L kinetic gate | **FAIL** | Negative kinetic directions for L=6,12,20,42 |
 | Global direct 41 and KRGSM | Not certified | Remaining regional direct paths, center and interfaces are not claimed complete |
 | Coupled spectral convergence | Not run | Necessary kinetic gate fails; archived test-field roots are not a substitute |
@@ -93,11 +102,13 @@ python tools/build_inner_targets.py
 ```
 
 The Inner lower-order targets preserve the frozen central endpoint jets and use
-the stored partition. They are deliberately separate from production: the supplied
-restoration script solves the principal Hessian channels, then supplies `v5/c3/e3`
-externally. Their action-control realization is still absent. See the
-[integration report](docs/WORKING_INTEGRATION_2026-09-18.md) and
-[continuation contract](CONTINUE_IMPLEMENTATION_2026-09-18.md).
+the stored partition. The new snapshot implements local response inverses for
+both `v5/c3/e3` and `v1/v4/c2`, plus an explicit action-based `v6` partial-phi
+derivative selector. These replace the earlier missing local maps. Their joint
+realization as a smooth background-null action is still pending: the chain rules
+must include the `Y` sector. The older 3D audit remains diagnostic only.
+See the [latest status](INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md) and the
+[integration verification](docs/SNAPSHOT_INTEGRATION_2026-09-18.md).
 
 ## Selected member and numerical conventions
 

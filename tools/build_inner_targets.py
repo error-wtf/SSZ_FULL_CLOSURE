@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build target profiles only; never promote them to an action-realized stream."""
+"""Build Inner lower-order targets and their explicit background-null action controls."""
 
 import json
 from pathlib import Path

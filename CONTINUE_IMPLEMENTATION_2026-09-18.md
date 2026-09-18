@@ -3,16 +3,19 @@
 Work from this repository and its current commit. Do not replace it with an older
 43/43 archive snapshot. Do not interpret passing software tests as physical closure.
 
-1. Read `ABSOLUTE_CLOSURE_LEDGER.json` and
-   `docs/WORKING_INTEGRATION_2026-09-18.md` before changing code.
+1. Read `ABSOLUTE_CLOSURE_LEDGER.json`,
+   `INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md` and
+   `docs/SNAPSHOT_INTEGRATION_2026-09-18.md` before changing code.
 2. Preserve the central coefficient export. Do not repeat central/core searches
    or change the regional production member without explicit authorization.
 3. Reuse `principal_controls.restore_svt_principal`; it controls v1/v4/c2, not
    v5/c3/e3. Its endpoint rejection is intentional. Do not remove it to force PASS.
-4. The next Inner task is an executable action-control realization for the
-   lower-order targets in `data/generated/inner_controls`, including background
-   invariance and the required holonomic identities. Supplying target values to
-   `selected_v5/selected_c3/selected_e3` alone does not complete that task.
+4. Reuse the implemented `lower_order_controls` and `inner_principal` local
+   inverses. The next Inner task is their coupled 4D `(phi,X,F,Y)` holonomic
+   Hessian completion, including the reduced degenerate endpoint block and
+   background invariance. The previous 3D audit is historical diagnostic evidence,
+   not a production impossibility result. Supplying selected slot values alone
+   does not certify the common action.
 5. Only after action re-emission, recompute the locked a5 and v7 identities,
    verify both interfaces, and update the Inner production certificate.
 6. Continue core/G5 and exact-center action emission, common unreduced assembly,

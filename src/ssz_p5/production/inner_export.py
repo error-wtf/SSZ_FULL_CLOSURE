@@ -10,6 +10,9 @@ from ..config import SLOT_NAMES
 from ..jets.jet9d8 import profile_derivative
 from ..provenance.manifest import sha256
 from .central_export import slot_comparison
+from .holonomic_hessian import audit_existing_split_controls
+from .inner_principal import action_realize_principal
+from .inner_targets import build_inner_targets
 from .member import validate_stream_regions
 from .regional_coefficients import select_lower
 from .sources import SOURCE_REGISTRY
@@ -61,29 +64,65 @@ def export_inner(root, output):
     registry = SOURCE_REGISTRY["inner_same_action_SVT_H"]
     background = pd.read_csv(root / registry["background"])
     reference = pd.read_csv(root / registry["coeff_reference"])
+    control_dir = root / "data/generated/inner_controls"
+    control_report = build_inner_targets(root, control_dir)
+    lower = pd.read_csv(control_dir / "INNER_LOWER_ORDER_REEMITTED.csv")
+    if len(lower) != len(reference) or not np.allclose(lower.x, reference.x, rtol=0, atol=1e-12):
+        raise ValueError("inner lower-order action-control grid mismatch")
+    reference = reference.copy()
+    for name in ("v5", "c3", "e3"):
+        reference[name] = lower[name].to_numpy(float)
     for name in ("x", "u", "phi", "f", "h", "A0prime"):
         if not np.allclose(reference[name], background[name], rtol=0, atol=1e-12):
             raise ValueError(f"inner authoritative background mismatch: {name}")
+
+    central = pd.read_csv(root / CENTRAL_EXPORT)
+    core_path = SOURCE_REGISTRY["punctured_H_core"]["coeff_reference"]
+    core = select_lower(pd.read_csv(root / core_path))
+    principal, principal_controls, principal_targets, principal_report = action_realize_principal(
+        background, reference, lower, central, core
+    )
+    principal_controls.to_csv(output / "INNER_PRINCIPAL_ACTION_CONTROLS.csv", index=False)
+    principal_targets.to_csv(output / "INNER_PRINCIPAL_TARGETS.csv", index=False)
+
+    # A local lower inverse plus a local principal inverse is not yet one smooth
+    # background-null f2(phi,X,F).  Audit the six jets together before any
+    # Direct-Action claim is allowed.
+    lower_controls = pd.read_csv(control_dir / "INNER_LOWER_ORDER_ACTION_CONTROLS.csv")
+    holonomic_frame, holonomic_report = audit_existing_split_controls(
+        background, lower_controls, principal_controls
+    )
+    holonomic_frame.to_csv(output / "INNER_F2_HOLONOMIC_HESSIAN_AUDIT.csv", index=False)
+    (output / "INNER_F2_HOLONOMIC_HESSIAN_AUDIT.json").write_text(
+        json.dumps(holonomic_report, indent=2, allow_nan=False) + "\n"
+    )
+    reference = principal
     inner = select_lower(reference)
     # Stored residual columns are preserved, not recomputed from a sector subset.
     for name in ("JA", "metric_residual_14", "metric_residual_15"):
         inner[name] = background[name]
     inner["region"] = "inner_same_action_SVT_H"
-    inner["selected_member"] = "preserved selected v5=c3=e3=0; current a5 and v12"
+    # Recompute the dependent holonomic/constrained slots after the action-level
+    # lower-order realization. select_lower applies a5 and v12; v7 is the exact
+    # auxiliary identity and must be refreshed on the same stream.
+    inner["v7"] = inner.v2**2 / (4 * inner.v1)
+    inner["selected_member"] = "action-realized Cinf v5/c3/e3 handover; current a5,v7,v12"
     mask = (inner.u >= 0.71) & (inner.u < 0.715)
     production = inner.loc[mask].reset_index(drop=True)
     validate_stream_regions(production)
-    central = pd.read_csv(root / CENTRAL_EXPORT)
-    core_path = SOURCE_REGISTRY["punctured_H_core"]["coeff_reference"]
-    core = select_lower(pd.read_csv(root / core_path))
     endpoints = pd.concat(
         [compare_interface(inner, central, 0.71), compare_interface(inner, core, 0.715)],
         ignore_index=True,
     )
     endpoints.to_csv(output / "INNER_ENDPOINT_COMPARISON.csv", index=False)
     comparisons = slot_comparison(inner, reference)
+    allowed_changes = {"a5", "v5", "c3", "e3", "v7", "v12"}
     comparisons["change_policy"] = comparisons.slot.map(
-        lambda name: "locked convention normalization" if name in ("a5", "v12") else "preserve"
+        lambda name: (
+            "action-realized lower-order/holonomic completion"
+            if name in allowed_changes
+            else "preserve"
+        )
     )
     comparisons.to_csv(output / "INNER_SLOT_COMPARISON.csv", index=False)
     production.to_csv(output / "inner_same_action_SVT_H_41of41.csv", index=False)
@@ -110,11 +149,24 @@ def export_inner(root, output):
     # Value discontinuities must pass before any reduced operator can be certified.
     values = endpoints[endpoints.radial_order == 0]
     continuous = bool(values.finite.all() and (values.scaled_error < 1e-7).all())
-    unchanged = comparisons[~comparisons.slot.isin(["a5", "v12"])]
+    unchanged = comparisons[~comparisons.slot.isin(sorted(allowed_changes))]
     normalization = bool(finite and (unchanged.status == "PASS").all())
-    paths = [registry["background"], registry["coeff_reference"], CENTRAL_EXPORT, core_path]
+    paths = [
+        registry["background"],
+        registry["coeff_reference"],
+        CENTRAL_EXPORT,
+        core_path,
+        "data/generated/inner_controls/INNER_LOWER_ORDER_TARGETS.csv",
+        "data/generated/inner_controls/INNER_LOWER_ORDER_ACTION_CONTROLS.csv",
+        "data/generated/inner_controls/INNER_LOWER_ORDER_REEMITTED.csv",
+    ]
     code = [
         "src/ssz_p5/production/inner_export.py",
+        "src/ssz_p5/production/inner_targets.py",
+        "src/ssz_p5/production/lower_order_controls.py",
+        "src/ssz_p5/production/inner_principal.py",
+        "src/ssz_p5/production/principal_controls.py",
+        "src/ssz_p5/production/holonomic_hessian.py",
         "src/ssz_p5/production/regional_coefficients.py",
         "src/ssz_p5/jets/jet9d8.py",
         "tools/export_inner_production.py",
@@ -126,12 +178,31 @@ def export_inner(root, output):
         rows=len(production),
         slot_count=41,
         finite=finite,
-        DIRECT_ACTION_REPLAY_COMPLETE=False,
+        DIRECT_ACTION_REPLAY_COMPLETE=bool(
+            control_report["status"] == "ACTION_REALIZED_PASS"
+            and principal_report["status"] == "PASS"
+            and holonomic_report["status"] == "PASS"
+        ),
         AUTHORITATIVE_SELECTED_REPRESENTATION=True,
+        LOWER_ORDER_ACTION_CONTROL="PASS"
+        if control_report["status"] == "ACTION_REALIZED_PASS"
+        else "FAIL",
+        lower_order_control_residual=float(control_report["control_map_residual"]),
+        PRINCIPAL_ACTION_CONTROL=principal_report["status"],
+        principal_control_residual=float(principal_report["max_scaled_target_error"]),
+        HOLONOMIC_F2_HESSIAN=holonomic_report["status"],
+        holonomic_f2_hessian_max_normalized=max(
+            holonomic_report["max_normalized_chain_residual"].values()
+        ),
+        lower_order_background_null=control_report["background_null_check"],
         SLOT_NORMALIZATION="PASS" if normalization else "FAIL",
         interface_values="PASS" if continuous else "FAIL",
         radial_jets="REPORTED; certification deferred until value continuity passes",
-        reducer_compatibility="SCHEMA_ONLY; no common operator certified across failed interfaces",
+        reducer_compatibility=(
+            "READY"
+            if continuous and control_report["status"] == "ACTION_REALIZED_PASS"
+            else "SCHEMA_ONLY; common operator deferred until interfaces pass"
+        ),
         background_max_abs={
             name: float(abs(background[name]).max())
             for name in ("JA", "metric_residual_14", "metric_residual_15")

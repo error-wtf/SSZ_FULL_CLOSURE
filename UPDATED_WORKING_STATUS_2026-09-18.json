@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-18",
+  "production_member": "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json",
+  "pytest": {
+    "passed": 86,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "full_pipeline": {
+    "passed": 45,
+    "total": 45,
+    "status": "PASS"
+  },
+  "constructive_closure_auditor": {
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  "strict_direct_auditor": {
+    "exit_code": 3,
+    "status": "OPEN",
+    "open_gate": "DIRECT_GLOBAL_KRGM_EXPORT"
+  },
+  "inner": {
+    "lower_order_action_control": {
+      "status": "PASS",
+      "max_scaled_replay_error": 1.1973783193772385e-11
+    },
+    "principal_action_control": {
+      "status": "PASS",
+      "max_scaled_replay_error": 3.38391184951303e-16
+    },
+    "direct_41": {
+      "status": "FAIL_HIGHER_DERIVATIVE_JETS_ONLY",
+      "remaining_slots": [
+        "a5",
+        "d3",
+        "e4",
+        "v13",
+        "v9"
+      ]
+    },
+    "background_max_abs": {
+      "JA": 3.072770957065496e-15,
+      "metric_residual_14": 8.881784197001252e-16,
+      "metric_residual_15": 4.6629367034256575e-15
+    }
+  },
+  "locked_conventions": {
+    "derivatives": "JET9D8",
+    "v12": "-v6/(2h)",
+    "a5": "holonomic"
+  },
+  "absolute_full_closure": "NOT_YET_CERTIFIED"
+}

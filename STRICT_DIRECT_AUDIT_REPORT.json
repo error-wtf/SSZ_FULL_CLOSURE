@@ -1,0 +1,480 @@
+{
+  "summary": {
+    "release": "2026-09-16",
+    "action_member": {
+      "definition": "Horndeski_P5_global + epsilon*Y",
+      "epsilon_Y": 0.01,
+      "vector_background": "A0prime=0"
+    },
+    "FULL_CONSTRUCTIVE_CLOSURE": "PASS",
+    "DIRECT_GLOBAL_KRGM_EXPORT": "OPEN",
+    "numerical_regression_failures": [],
+    "constructive_failures": [],
+    "gate_counts": {
+      "OPEN": 1,
+      "PASS": 49,
+      "PASS_EXACT": 7
+    }
+  },
+  "gates": [
+    {
+      "name": "geometry_f_positive",
+      "status": "PASS",
+      "value": 0.2500000000000079,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "geometry_h_positive",
+      "status": "PASS",
+      "value": 0.3268566655925778,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "principal_cT2_positive",
+      "status": "PASS",
+      "value": 0.999262399874648,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "principal_cS2_positive",
+      "status": "PASS",
+      "value": 0.9037451776188076,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "principal_cV2_positive",
+      "status": "PASS",
+      "value": 1.0,
+      "criterion": "> 0",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "global_principal_R_zero",
+      "status": "PASS",
+      "value": 0.0,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "principal_stream_rows",
+      "status": "PASS",
+      "value": 45617,
+      "criterion": ">=40000",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "outer_handover_actual_residual_E00",
+      "status": "PASS",
+      "value": 1.8041124150158799e-16,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "outer_handover_actual_residual_E11",
+      "status": "PASS",
+      "value": 3.226585665316861e-16,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "outer_handover_vector_current_JA",
+      "status": "PASS",
+      "value": 1.6325426905854336e-15,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "inner_handover_actual_residual_E00",
+      "status": "PASS",
+      "value": 8.881784197001252e-16,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "inner_handover_actual_residual_E11",
+      "status": "PASS",
+      "value": 4.6629367034256575e-15,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "inner_handover_vector_current_JA",
+      "status": "PASS",
+      "value": 3.072770957065496e-15,
+      "criterion": "<1e-12",
+      "evidence": "ssz_p5_shared_baseline_assembly_validation_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_handover_rank",
+      "status": "PASS",
+      "value": 3.0,
+      "criterion": ">=3",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_handover_condition",
+      "status": "PASS",
+      "value": 2.449490659010719,
+      "criterion": "<10",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_handover_rel_residual",
+      "status": "PASS",
+      "value": 2.538375275598637e-08,
+      "criterion": "<1e-6",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_tensor_F",
+      "status": "PASS",
+      "value": 0.9999999770884102,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "center_tensor_H",
+      "status": "PASS",
+      "value": 0.9999996407448842,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "analytic_center_kinetic",
+      "status": "PASS_EXACT",
+      "value": 0.00274375128377,
+      "criterion": "coefficient of r^4 > 0",
+      "evidence": "F1b analytic Taylor certificate",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_F_tensor_positive",
+      "status": "PASS",
+      "value": 0.7848268111217971,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_G_tensor_positive",
+      "status": "PASS",
+      "value": 0.7848268111217971,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_H_tensor_positive",
+      "status": "PASS",
+      "value": 0.7848268111217971,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_K_scalar_positive",
+      "status": "PASS",
+      "value": 0.0097422527595834,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_crS2_positive",
+      "status": "PASS",
+      "value": 0.999999999999986,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strongH_kappa_nonnegative",
+      "status": "PASS",
+      "value": 0.09883837302401212,
+      "criterion": ">=0",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_F_tensor_positive",
+      "status": "PASS",
+      "value": 1.0,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_G_tensor_positive",
+      "status": "PASS",
+      "value": 0.9996310638951968,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_H_tensor_positive",
+      "status": "PASS",
+      "value": 0.9996310638951968,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_K_scalar_positive",
+      "status": "PASS",
+      "value": 7.331670016895128e-06,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_crS2_positive",
+      "status": "PASS",
+      "value": 0.9999999999999996,
+      "criterion": ">0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core_kappa_nonnegative",
+      "status": "PASS",
+      "value": 1.8582154272635095e-10,
+      "criterion": ">=0",
+      "evidence": "ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "MH_finite_l_no_ghost_theorem",
+      "status": "PASS_EXACT",
+      "value": null,
+      "criterion": "F>0, G2F=1>0, K_scalar>0 on certified Horndeski patches",
+      "evidence": "Kase-Tsujikawa 2023 Eqs. 4.27-4.31",
+      "level": "constructive"
+    },
+    {
+      "name": "horndeski_control_rank",
+      "status": "PASS",
+      "value": 5.0,
+      "criterion": ">=5",
+      "evidence": "ssz_p5_full_horndeski_principal_control_rank_2026-09-12.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "horndeski_control_sigma_min",
+      "status": "PASS",
+      "value": 0.007141457821951,
+      "criterion": ">0",
+      "evidence": "ssz_p5_full_horndeski_principal_control_rank_2026-09-12.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_K_ZK_exact",
+      "status": "PASS",
+      "value": 10.541549191507215,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_even_tensor_cr2_exact",
+      "status": "PASS",
+      "value": 1.0050694018534372,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_even_scalar_cr2_exact",
+      "status": "PASS",
+      "value": 0.9037451776188076,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_even_vector_cr2_exact",
+      "status": "PASS",
+      "value": 9.458870488366266,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_Codd",
+      "status": "PASS",
+      "value": 0.7607210253614061,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_alpha4",
+      "status": "PASS",
+      "value": 0.0099958944316682,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_alpha7",
+      "status": "PASS",
+      "value": 2.001530117217264,
+      "criterion": ">0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_alpha6_negative",
+      "status": "PASS",
+      "value": -0.3330268656461453,
+      "criterion": "<0",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "ZK_K_e1_identity",
+      "status": "PASS",
+      "value": 2.1782398107461631e-10,
+      "criterion": "<1e-8",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "41_slot_schema_complete",
+      "status": "PASS",
+      "value": [],
+      "criterion": "no missing slots",
+      "evidence": "ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "41_slot_reference_finite_except_selected_LO",
+      "status": "PASS",
+      "value": [],
+      "criterion": "all raw slots finite except deliberately deferred c3/e3",
+      "evidence": "ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "41_slot_c3_e3_selected",
+      "status": "PASS",
+      "value": {
+        "rows": 4000,
+        "file": "ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv"
+      },
+      "criterion": "finite c3_selected/e3_selected action representative",
+      "evidence": "ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "strong-H a5 identity regression",
+      "status": "PASS",
+      "value": 0.0006636211581147,
+      "criterion": "median <1e-5; max <1e-3",
+      "evidence": "ssz_p5_holonomic_a5_gate_status_2026-09-16.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core a5 selection convergence",
+      "status": "PASS",
+      "value": 0.0001495892109944,
+      "criterion": "median <1e-5; max <5e-4",
+      "evidence": "ssz_p5_holonomic_a5_gate_status_2026-09-16.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "core selected a1 stays in archived control tube",
+      "status": "PASS",
+      "value": 0.0001877439719886,
+      "criterion": "median <1e-5; max <5e-4",
+      "evidence": "ssz_p5_holonomic_a5_gate_status_2026-09-16.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "constraint_map_audit_present",
+      "status": "PASS",
+      "value": 10,
+      "criterion": ">0 rows",
+      "evidence": "ssz_p5_full_constraint_maps_JET9D8_audit_2026-09-16(1).csv",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_nontrivial",
+      "status": "PASS_EXACT",
+      "value": 0.01,
+      "criterion": "epsilon != 0",
+      "evidence": "Delta f2=epsilon Y",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_background_null",
+      "status": "PASS_EXACT",
+      "value": 0.0,
+      "criterion": "Delta E00=Delta E11=Delta Ephi=Delta EA=0 at A0'=0",
+      "evidence": "Y is quadratic in F_mu_nu; epsilon constant",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_kappa_max",
+      "status": "PASS",
+      "value": 0.6354409670384762,
+      "criterion": "finite",
+      "evidence": "ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv, ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_ZA_min",
+      "status": "PASS_EXACT",
+      "value": 0.9872911806592305,
+      "criterion": ">0",
+      "evidence": "ZA=1-2*kappa*epsilon",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_odd_vector_stability",
+      "status": "PASS_EXACT",
+      "value": null,
+      "criterion": "alpha4>0, alpha6<0, alpha7>0, alpha2^2-alpha1*alpha5>0, alpha8^2-4alpha7*alpha9>0",
+      "evidence": "Zhang-Kase odd-sector formulas with A0'=0, f3=f4=0",
+      "level": "constructive"
+    },
+    {
+      "name": "HSVT_epsY_quadratic_factorization",
+      "status": "PASS_EXACT",
+      "value": null,
+      "criterion": "no scalar/metric-vector mixing from epsilon Y at F_mu_nu=0",
+      "evidence": "constant epsilon; Appendix-A delta has only pure-vector slots v1,v10",
+      "level": "constructive"
+    },
+    {
+      "name": "DIRECT_GLOBAL_KRGM_EXPORT",
+      "status": "OPEN",
+      "value": null,
+      "criterion": "dedicated direct regenerated-action certificate required",
+      "evidence": "not inferred from old selected/split tables",
+      "level": "implementation"
+    }
+  ]
+}

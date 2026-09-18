@@ -72,6 +72,7 @@ def replay_central_action(d, *, window=9, degree=8):
         selected_v5=v5,
         selected_c3=d.selected_c3,
         selected_e3=d.selected_e3,
+        v6_phi_selector="action",
     )
 
 

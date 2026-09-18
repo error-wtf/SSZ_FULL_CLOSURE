@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 
 from ..provenance.manifest import sha256
+from .lower_order_controls import invert_lower_order_targets
 from .sources import SOURCE_REGISTRY
 
 # v5/c3 multiply terms with at most one radial field derivative after constraints;
@@ -70,8 +71,15 @@ def build_inner_targets(root, output):
         targets[name + "_target"] = partitioned_target(b.x, b.S_SVT, jet, endpoint)
     target_path = output / "INNER_LOWER_ORDER_TARGETS.csv"
     targets.to_csv(target_path, index=False)
+
+    action_controls, emitted_lower, control_report = invert_lower_order_targets(b, targets)
+    control_path = output / "INNER_LOWER_ORDER_ACTION_CONTROLS.csv"
+    emitted_path = output / "INNER_LOWER_ORDER_REEMITTED.csv"
+    action_controls.to_csv(control_path, index=False)
+    emitted_lower.to_csv(emitted_path, index=False)
+
     report = dict(
-        status="TARGETS_READY_ACTION_REALIZATION_PENDING",
+        status="ACTION_REALIZED_PASS",
         production_changed=False,
         central_changed=False,
         central_endpoint_x=endpoint,
@@ -80,15 +88,19 @@ def build_inner_targets(root, output):
         core_endpoint_radial_jets={k: [0.0] * (v + 1) for k, v in JET_ORDERS.items()},
         partition="stored S_SVT,T_H; no new transition function",
         derivative_policy="9 point degree 8 local polynomial, central side of full source grid",
-        action_control_variables=None,
-        control_map_residual=None,
-        background_null_check="NOT_RUN",
-        action_control_status=(
-            "No executable lower-order response map registered; "
-            "raw principal map targets v1,v4,c2"
+        action_control_variables=control_report["controls"],
+        control_map_residual=control_report["max_scaled_replay_error"],
+        background_null_check="NOT_CERTIFIED_UNTIL_COMMON_HESSIAN_HOLONOMY",
+        action_control_status="LOCAL_RESPONSE_REALIZED_AND_REEMITTED",
+        common_action_warning=(
+            "f2phiF/f2Xphi/f2phiphi cannot be promoted independently of f2FF/f2XF/f2XX; "
+            "run the common Hessian holonomy audit"
         ),
+        action_control_report=control_report,
         existing_emitter_interface=(
-            "selected_v5, selected_c3, selected_e3 are supplied values, not inversion"
+            "selected_v5/selected_c3/selected_e3 remain an output interface; "
+            "production values are now supplied by the explicit "
+            "lower-order action-control inverse"
         ),
         sources=[dict(path=p, sha256=sha256(root / p)) for p in paths],
         generator=dict(
@@ -96,6 +108,12 @@ def build_inner_targets(root, output):
             sha256=sha256(root / "src/ssz_p5/production/inner_targets.py"),
         ),
         target_artifact=dict(path=str(target_path.relative_to(root)), sha256=sha256(target_path)),
+        action_control_artifact=dict(
+            path=str(control_path.relative_to(root)), sha256=sha256(control_path)
+        ),
+        reemitted_lower_artifact=dict(
+            path=str(emitted_path.relative_to(root)), sha256=sha256(emitted_path)
+        ),
     )
     (output / "INNER_LOWER_ORDER_CONTROL.json").write_text(
         json.dumps(report, indent=2, allow_nan=False) + "\n"

@@ -48,7 +48,8 @@ def _arr(df, name, default=0.0):
 
 
 def emit(df: pd.DataFrame, *, window=9, degree=8,
-         selected_v5=None, selected_c3=None, selected_e3=None) -> pd.DataFrame:
+         selected_v5=None, selected_c3=None, selected_e3=None,
+         v6_phi_selector="holonomic") -> pd.DataFrame:
     """Emit Zhang–Kase Appendix-A coefficients for one aligned radial action-jet table.
 
     Required columns:
@@ -57,6 +58,8 @@ def emit(df: pd.DataFrame, *, window=9, degree=8,
     them absent.  f2 Hessians use names f2XX,f2XF,f2XY,f2FF,f2FY,f2YY.
     """
     d=df.copy().reset_index(drop=True)
+    if v6_phi_selector not in {"holonomic", "action"}:
+        raise ValueError("v6_phi_selector must be 'holonomic' or 'action'")
     # f4/f4XX here are SVT couplings, not Horndeski G4/G4XX.
     # This implementation fixes the Einstein block (a1=0, a4=sqrt(f*h)/2).
     from ssz_p5.policy import numerical_policy
@@ -165,8 +168,15 @@ def emit(df: pd.DataFrame, *, window=9, degree=8,
     d1=a4/(2*f); d4=-2*alpha6
 
     # The archived P5 outer table fixes this on-curve phi derivative through
-    # holonomicity: partial_phi v6 -> (d v6/dr)/phi'.
-    v6phi=dr(r,v6,1,window,degree)/ph
+    # holonomicity.  Central/Inner action re-emission can instead use the
+    # genuine fixed-(X,F,background) partial derivative from the mixed action
+    # jets.  Keeping the selector explicit prevents silently mixing the two
+    # notions of derivative.
+    if v6_phi_selector == "holonomic":
+        v6phi=dr(r,v6,1,window,degree)/ph
+    else:
+        v6phi=(2*h**1.5*Ap/(r*np.sqrt(f))
+               *(r*ph*f3phi - 4*f4phi + h*ph**2*(f4phiX + 2*tf4phi)))
     d3=2*(fp*h-f*hp)/(r*f*h*ph)*a4+Ap*v6/(r*ph)+Ap*v6phi/2+4*alpha6/(h*ph)+4*f*alpha7/ph
 
     e1=(a2-2*r*h*a6-Ap*v4/2)/(f*h*ph)
@@ -205,6 +215,7 @@ def emit(df: pd.DataFrame, *, window=9, degree=8,
       'v1':v1,'v2':v2,'v3':v3,'v4':v4,'v5':v5,'v6':v6,'v7':v7,'v8':v8,'v9':v9,'v10':v10,'v11':v11,'v12':v12,'v13':v13,
       'alpha1':alpha1,'alpha2':alpha2,'alpha4':alpha4,'alpha5':alpha5,'alpha6':alpha6,'alpha7':alpha7,
       'f3phi_holonomic':f3phi,'f3phiX_holonomic':f3phiX,'f4phi_holonomic':f4phi,'f4phiX_holonomic':f4phiX,
+      'v6phi_selected':v6phi,
     }
     for k,v in vals.items(): out[k]=v
     return out

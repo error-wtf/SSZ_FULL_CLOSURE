@@ -1,0 +1,40 @@
+{
+  "status": "FAIL",
+  "criterion": "symmetric f2(phi,X,F) Hessian must satisfy H @ (phi',X',F') = 0",
+  "tolerance": 1e-09,
+  "rows": 1401,
+  "max_abs_chain_residual": {
+    "phi_gradient": 588851.923492922,
+    "X_gradient": 906.8110468956994,
+    "F_gradient": 45827.99350941232
+  },
+  "median_abs_chain_residual": {
+    "phi_gradient": 137896.99822832338,
+    "X_gradient": 572.8926054835454,
+    "F_gradient": 9660.323671045262
+  },
+  "max_normalized_chain_residual": {
+    "phi_gradient": 1.0000000000000002,
+    "X_gradient": 1.0,
+    "F_gradient": 1.0
+  },
+  "median_normalized_chain_residual": {
+    "phi_gradient": 0.9986214407460534,
+    "X_gradient": 1.0,
+    "F_gradient": 0.8571491123199894
+  },
+  "first_chain_rule_lower_only": true,
+  "first_chain_rule_max_normalized_residual": 1.0000000000000002,
+  "principal_controls_can_repair_first_chain_rule": false,
+  "max_implied_holonomic_chain_abs": 1.3958174061023954e-09,
+  "max_scaled_response_change_if_principal_block_is_kept": {
+    "v5": 19.278793671083506,
+    "c3": 1.0454779035458222,
+    "e3": 38331.06045747068,
+    "v1": 0.0,
+    "v4": 0.0,
+    "c2": 0.0
+  },
+  "conclusion": "existing split lower/principal controls are not one background-null smooth f2 Hessian",
+  "closure_effect": "INNER_DIRECT_41 remains NOT_CERTIFIED until targets are redesigned on the 3-DOF holonomic Hessian manifold"
+}

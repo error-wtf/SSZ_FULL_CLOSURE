@@ -10,7 +10,16 @@
   "inner_evidence": "data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json",
   "working_snapshot": "archive/working_2026-09-18/IMPORT_PROVENANCE.json",
   "raw_principal_inverse": "IMPLEMENTED_TESTED",
-  "inner_lower_targets": "TARGETS_READY_ACTION_REALIZATION_PENDING",
+  "inner_lower_targets": "LOCAL_RESPONSE_INVERSE_PASS_COMMON_4D_ACTION_PENDING",
   "core_primitive_port": "PASS_BITWISE_SAME_INPUT_NOT_ACTION_CERTIFICATION",
-  "integration_evidence": "docs/WORKING_INTEGRATION_2026-09-18.md"
+  "integration_evidence": "docs/INNER_ACTION_CONTROL_UPDATE_2026-09-18.md",
+  "inner_lower_order_action_control": "LOCAL_RESPONSE_INVERSE_PASS_COMMON_4D_ACTION_PENDING",
+  "inner_principal_action_control": "LOCAL_RESPONSE_INVERSE_PASS_COMMON_4D_ACTION_PENDING",
+  "inner_remaining_blocker": "implement coupled 4D (phi,X,F,Y) background-null holonomic f2 Hessian inverse, reduced endpoint block, then guarded full Inner Direct-41 replay",
+  "software_tests": "93_PASS",
+  "central_d3_partial_phi_v6": "ACTION_SELECTOR_IMPLEMENTED_TESTED_MAX_SCALED_ERROR_LT_3E-7",
+  "inner_holonomic_f2_hessian": "3D_AUDIT_SUPERSEDED_BY_4D_Y_SECTOR_PENDING",
+  "inner_holonomic_evidence": "data/generated/inner_holonomic/INNER_F2_HOLONOMIC_HESSIAN_AUDIT.json (historical 3D diagnostic only)",
+  "y_sector_hessian_status": "IDENTIFIED_REQUIRED_NOT_YET_PRODUCTION_CERTIFIED",
+  "intermediate_status": "INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md"
 }
