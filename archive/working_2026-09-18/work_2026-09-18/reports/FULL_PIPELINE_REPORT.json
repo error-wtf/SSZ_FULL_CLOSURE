@@ -1,0 +1,375 @@
+{
+  "checks": [
+    {
+      "criterion": "exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/README.md",
+      "name": "README.md",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/RESEARCH_STATE.md",
+      "name": "RESEARCH_STATE.md",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/DO_NOT_RECOMPUTE.md",
+      "name": "DO_NOT_RECOMPUTE.md",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/STATUS_FULL_CLOSURE.md",
+      "name": "STATUS_FULL_CLOSURE.md",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/ARTIFACT_CLASSIFICATION.json",
+      "name": "ARTIFACT_CLASSIFICATION.json",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/PRODUCTION_BLACKLIST.json",
+      "name": "PRODUCTION_BLACKLIST.json",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/NUMERICAL_POLICY.json",
+      "name": "NUMERICAL_POLICY.json",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/pyproject.toml",
+      "name": "pyproject.toml",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/ssz_p5_full_closure_auditor.py",
+      "name": "ssz_p5_full_closure_auditor.py",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "directory exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/src/ssz_p5",
+      "name": "src/ssz_p5",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "directory exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/tests",
+      "name": "tests",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "directory exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/data/production",
+      "name": "data/production",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "directory exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/data/regression",
+      "name": "data/regression",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "directory exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/data/qnm",
+      "name": "data/qnm",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "directory exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/paper",
+      "name": "paper",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "directory exists",
+      "evidence": "/mnt/data/ssz_work/repo/repo/archive/full_working_snapshot",
+      "name": "archive/full_working_snapshot",
+      "stage": "repo",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "exit code 0",
+      "evidence": "...........                                                              [100%]\n11 passed in 2.27s",
+      "name": "pytest",
+      "stage": "software",
+      "status": "PASS",
+      "value": 0
+    },
+    {
+      "criterion": "exit code 0",
+      "evidence": "PASS               constructive   ZK_alpha7 | 2.001530117217264\nPASS               constructive   ZK_alpha6_negative | -0.3330268656461453\nPASS               constructive   ZK_K_e1_identity | 2.1782398107461631e-10\nPASS               constructive   41_slot_schema_complete | []\nPASS               constructive   41_slot_reference_finite_except_selected_LO | []\nPASS               constructive   41_slot_c3_e3_selected | {'rows': 4000, 'file': 'ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv'}\nPASS               constructive   strong-H a5 identity regression | 0.0006636211581147\nPASS               constructive   core a5 selection convergence | 0.0001495892109944\nPASS               constructive   core selected a1 stays in archived control tube | 0.0001877439719886\nPASS               constructive   constraint_map_audit_present | 10\nPASS_EXACT         constructive   HSVT_epsY_nontrivial | 0.01\nPASS_EXACT         constructive   HSVT_epsY_background_null | 0.0\nPASS               constructive   HSVT_epsY_kappa_max | 0.6354409670384762\nPASS_EXACT         constructive   HSVT_epsY_ZA_min | 0.9872911806592305\nPASS_EXACT         constructive   HSVT_epsY_odd_vector_stability\nPASS_EXACT         constructive   HSVT_epsY_quadratic_factorization\nPASS               numerical      strongH_direct_L6 | {'min_eig_K': 0.0017061921843635336, 'min_radial': 0.04482171781358031}\nPASS               numerical      strongH_direct_L12 | {'min_eig_K': 0.0018518165739517655, 'min_radial': 0.07045219958232046}\nPASS               numerical      strongH_direct_L20 | {'min_eig_K': 0.0005868878577195103, 'min_radial': 0.08482412689288205}\nPASS               numerical      strongH_direct_L42 | {'min_eig_K': 0.00011248482008172187, 'min_radial': 0.0970702096475429}\nPASS               numerical      strongH_direct_L110 | {'min_eig_K': 1.4419103698320762e-05, 'min_radial': 0.1015342843916583}\nPASS               numerical      strongH_direct_L420 | {'min_eig_K': 9.236242703259943e-07, 'min_radial': 0.10309085330228254}\nPASS               numerical      strongH_direct_L1000 | {'min_eig_K': 1.6051628619744887e-07, 'min_radial': 0.10338138656343974}\nOPEN               implementation DIRECT_GLOBAL_KRGM_EXPORT\n==============================================================================\nInterpretation:\n  FULL_CONSTRUCTIVE_CLOSURE is the mathematical/action/stability closure.\n  DIRECT_GLOBAL_KRGM_EXPORT is a stricter repository implementation gate.\n  An OPEN direct-export gate does not negate the constructive closure; it\n  means the repo must still regenerate a single bitwise global operator.",
+      "name": "full_closure_auditor",
+      "stage": "scientific_audit",
+      "status": "PASS",
+      "value": 0
+    },
+    {
+      "criterion": "0",
+      "evidence": "raw=[]",
+      "name": "auditor_constructive_failures",
+      "stage": "scientific_audit",
+      "status": "PASS",
+      "value": 0
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+      "name": "P5_global_principal_KRG",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_SELECTED_41STREAM_V2_2026-09-16.csv",
+      "name": "selected_41stream",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_SELECTED_41STREAM_V2_2026-09-16.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_F2_outer_same_action_RESOLVED_background_jets_2026-09-15.csv",
+      "name": "outer_handover_background",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_F2_outer_same_action_RESOLVED_background_jets_2026-09-15.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv",
+      "name": "inner_handover_background",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_F3_horndeski_carrier_SELECTED_41of41_2026-09-15.csv",
+      "name": "strongH_selected_41",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_F3_horndeski_carrier_SELECTED_41of41_2026-09-15.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_F3_core_SELECTED_41of41_2026-09-15.csv",
+      "name": "core_selected_41",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_F3_core_SELECTED_41of41_2026-09-15.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_F3_outer_same_action_SELECTED_41of41_2026-09-15.csv",
+      "name": "outer_selected_41",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_F3_outer_same_action_SELECTED_41of41_2026-09-15.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "name": "ZK_raw_41",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "name": "ZK_exact_regression",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv",
+      "name": "center_handover",
+      "stage": "production",
+      "status": "PASS",
+      "value": "data/production/ssz_p5_F1b_FINAL_Cinf_center_to_punctured_handover_2026-09-14.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "",
+      "name": "maxwell_jost",
+      "stage": "qnm_archive",
+      "status": "PASS_ARCHIVED",
+      "value": "data/qnm/ssz_p5_F3_maxwell_l2_jost_convergence_2026-09-15.csv"
+    },
+    {
+      "criterion": "present",
+      "evidence": "",
+      "name": "spectral_probe",
+      "stage": "qnm_archive",
+      "status": "PASS_ARCHIVED",
+      "value": "data/qnm/SSZ_P5_POST_CLOSURE_SPECTRAL_PROBE_v2_2026-09-14.md"
+    },
+    {
+      "criterion": "present",
+      "evidence": "",
+      "name": "qnm_checkpoint",
+      "stage": "qnm_archive",
+      "status": "PASS_ARCHIVED",
+      "value": "data/qnm/SSZ_P5_F3_COUPLED_QNM_EXECUTION_CHECKPOINT_2026-09-15.md"
+    },
+    {
+      "criterion": "present",
+      "evidence": "",
+      "name": "eikonal_proxy",
+      "stage": "qnm_archive",
+      "status": "PASS_ARCHIVED",
+      "value": "data/qnm/SSZ_CANONICAL_V13_EIKONAL_QNM_PROXY_v1_REPORT_2026-08-28.md"
+    },
+    {
+      "criterion": "present",
+      "evidence": "",
+      "name": "historical_reconciliation",
+      "stage": "qnm_archive",
+      "status": "PASS_ARCHIVED",
+      "value": "data/qnm/SSZ_QNM_HISTORICAL_VS_V13_RECONCILIATION_v1_REPORT_2026-08-28.md"
+    },
+    {
+      "criterion": "all finite",
+      "evidence": "rows=199 cols=7",
+      "name": "maxwell_jost_rows_finite",
+      "stage": "qnm_archive",
+      "status": "PASS",
+      "value": 199
+    },
+    {
+      "criterion": ">=3 Jost orders and >=3 outer radii",
+      "evidence": "",
+      "name": "maxwell_jost_parameter_coverage",
+      "stage": "qnm_archive",
+      "status": "PASS",
+      "value": {
+        "R": [
+          25.0,
+          30.0,
+          35.0,
+          40.0,
+          45.0
+        ],
+        "orders": [
+          6,
+          8,
+          10
+        ]
+      }
+    },
+    {
+      "criterion": "finite residuals",
+      "evidence": "archived convergence experiment; candidate poles are not auto-promoted",
+      "name": "maxwell_jost_residual_recorded",
+      "stage": "qnm_archive",
+      "status": "PASS",
+      "value": 1.2851121504250217e-06
+    },
+    {
+      "criterion": "archived scalar threshold",
+      "evidence": "",
+      "name": "scalar_WKB_threshold_256",
+      "stage": "qnm_archive",
+      "status": "PASS_ARCHIVED",
+      "value": 256
+    },
+    {
+      "criterion": "archived Maxwell threshold",
+      "evidence": "",
+      "name": "maxwell_WKB_threshold_257",
+      "stage": "qnm_archive",
+      "status": "PASS_ARCHIVED",
+      "value": 257
+    },
+    {
+      "criterion": "archived Schwarzschild-tail transport validation",
+      "evidence": "",
+      "name": "outgoing_jost_order10_validation",
+      "stage": "qnm_archive",
+      "status": "PASS_ARCHIVED",
+      "value": "~2.43e-12"
+    },
+    {
+      "criterion": "must remain rejected, not production QNM",
+      "evidence": "",
+      "name": "rejected_real_axis_poles_preserved_as_rejected",
+      "stage": "qnm_archive",
+      "status": "PASS",
+      "value": true
+    },
+    {
+      "criterion": "machine-readable blacklist present",
+      "evidence": "PRODUCTION_BLACKLIST.json",
+      "name": "production_blacklist",
+      "stage": "hygiene",
+      "status": "PASS",
+      "value": 13
+    },
+    {
+      "criterion": "exit code 0",
+      "evidence": "PASS  schema:outer: 41/41 slots; rows=2201\nPASS  domain:outer: u=[0.551523087135,0.61]\nPASS  schema:central: 41/41 slots; rows=4000\nPASS  domain:central: u=[0.61,0.715]\nPASS  schema:inner: 41/41 slots; rows=1401\nPASS  domain:inner: u=[0.71,0.715]\nPASS  schema:core: 41/41 slots; rows=3299\nPASS  domain:core: u=[0.71,100]\nPASS  schema:weak: 41/41 slots; rows=7996\nPASS  domain:weak: u=[0.0200657063208,0.551503984051]\nPASS  central_odd_profile: rows=7375\nPASS  x=1.599997795 region: central_exact_SVT\nPASS  stable-light-ring region: central_exact_SVT\nPASS  repo:START_HERE_CODEX.md: START_HERE_CODEX.md\nPASS  repo:CODEX_FINAL_EXECUTION_CONTRACT.md: CODEX_FINAL_EXECUTION_CONTRACT.md\nPASS  repo:LICENSE: LICENSE\nPASS  repo:CITATION.cff: CITATION.cff\n\n {\n  \"checks\": 30,\n  \"passed\": 30,\n  \"failed\": 0,\n  \"handoff_ready\": true,\n  \"note\": \"Handoff readiness is not the same as an Absolute Full Closure certificate.\"\n}",
+      "name": "self_contained_handoff",
+      "stage": "codex_handoff",
+      "status": "PASS",
+      "value": 0
+    }
+  ],
+  "generated_at_utc": "2026-09-18T00:39:22.316542+00:00",
+  "notes": [
+    "Pipeline validates the frozen repository and previously performed QNM/spectral work.",
+    "It does not promote historically rejected finite-radius QNM poles.",
+    "It does not reopen superseded action/core/handover derivations."
+  ],
+  "release": "2026-09-16",
+  "repository": "/mnt/data/ssz_work/repo/repo",
+  "summary": {
+    "checks": 43,
+    "failed": 0,
+    "passed": 43,
+    "pipeline_pass": true
+  }
+}
