@@ -114,9 +114,13 @@ def export_central(root, output):
         numerical_policy="JET9D8 window=9 degree=8, derivatives before region trimming",
         tolerance=1e-7,
         generator="tools/export_central_production.py",
-        git_commit=subprocess.check_output(
-            ["git", "rev-parse", "HEAD"], cwd=root, text=True
-        ).strip(),
+        git_commit=(
+            subprocess.run(
+                ["git", "rev-parse", "HEAD"], cwd=root, text=True,
+                stdout=subprocess.PIPE, stderr=subprocess.DEVNULL
+            ).stdout.strip()
+            or "NO_GIT_WORKTREE__MANIFEST_BOUND"
+        ),
         timestamp=datetime.now(UTC).isoformat(),
         sources=[dict(path=p, sha256=sha256(root / p)) for p in sources],
         implementation=[dict(path=p, sha256=sha256(root / p)) for p in code_paths],

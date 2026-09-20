@@ -19,7 +19,6 @@ nonzero.
 This is deliberately an audit/inversion layer.  It does not promote any Inner
 candidate or declare Direct-41 closure by itself.
 """
-
 from __future__ import annotations
 
 import numpy as np
@@ -86,10 +85,8 @@ def assemble_hessian(lower: pd.DataFrame, principal: pd.DataFrame) -> np.ndarray
     """Assemble H in coordinate order (phi, X, F) from existing control frames."""
     if len(lower) != len(principal):
         raise ValueError("lower/principal controls have different lengths")
-    if (
-        "x" in lower
-        and "x" in principal
-        and not np.array_equal(lower.x.to_numpy(float), principal.x.to_numpy(float))
+    if "x" in lower and "x" in principal and not np.array_equal(
+        lower.x.to_numpy(float), principal.x.to_numpy(float)
     ):
         # Exact identity is intentional: these are controls on one radial section.
         raise ValueError("lower/principal controls are not on the identical x grid")
@@ -200,7 +197,7 @@ def split_local_response(background: pd.DataFrame, H: np.ndarray) -> np.ndarray:
     c3 = 0.5 * r**2 * np.sqrt(f * h) * ph**2 * phiX
     e3 = -0.5 * r**2 * np.sqrt(f / h) * phiphi
     v1 = r**2 * h**1.5 * A**2 / (2 * f**1.5) * FF
-    v4 = -(h**1.5) * A * r**2 * ph / np.sqrt(f) * XF
+    v4 = -h**1.5 * A * r**2 * ph / np.sqrt(f) * XF
     c2 = (
         h**1.5 * A**2 * r**2 * ph / (2 * np.sqrt(f)) * XF
         - 0.5 * r**2 * np.sqrt(f * h) * h * ph**3 * XX
@@ -250,14 +247,17 @@ def response_from_hessian(
     FF = H[:, 2, 2]
 
     v5 = r**2 * np.sqrt(h / f) * A * phiF
-    c3 = 0.5 * r**2 * np.sqrt(f * h) * ph**2 * phiX - 0.5 * r**2 * A**2 * np.sqrt(h / f) * phiF
+    c3 = (
+        0.5 * r**2 * np.sqrt(f * h) * ph**2 * phiX
+        - 0.5 * r**2 * A**2 * np.sqrt(h / f) * phiF
+    )
     current_phi = r**2 * np.sqrt(f * h) * ph * phiX
     e3 = (
         -0.5 * profile_derivative(r, current_phi, 1, window, degree)
-        - 0.5 * r**2 * np.sqrt(f / h) * phiphi
+        -0.5 * r**2 * np.sqrt(f / h) * phiphi
     )
     v1 = r**2 * h**1.5 * A**2 / (2 * f**1.5) * FF
-    v4 = -(h**1.5) * A * r**2 * ph / np.sqrt(f) * XF
+    v4 = -h**1.5 * A * r**2 * ph / np.sqrt(f) * XF
     c2 = (
         h**1.5 * A**2 * r**2 * ph / (2 * np.sqrt(f)) * XF
         - 0.5 * r**2 * np.sqrt(f * h) * h * ph**3 * XX
@@ -279,7 +279,9 @@ def audit_existing_split_controls(
         background, lower, principal, window=window, degree=degree
     )
     H = assemble_hessian(lower, principal)
-    implied = implied_lower_from_transverse(background, principal, window=window, degree=degree)
+    implied = implied_lower_from_transverse(
+        background, principal, window=window, degree=degree
+    )
     H_implied = assemble_hessian(implied, principal)
     implied_residual = np.einsum("nij,nj->ni", H_implied, t)
 
@@ -287,7 +289,9 @@ def audit_existing_split_controls(
     # historical split inverses.  ``implied_response`` is what the same
     # transverse principal block produces after enforcing one smooth f2.
     current_response = split_local_response(background, H)
-    implied_response = response_from_hessian(background, H_implied, window=window, degree=degree)
+    implied_response = response_from_hessian(
+        background, H_implied, window=window, degree=degree
+    )
     response_error = np.abs(implied_response - current_response) / np.maximum(
         1.0, np.abs(current_response)
     )
@@ -337,9 +341,6 @@ def audit_existing_split_controls(
             if max_norm > tolerance
             else "existing split controls satisfy the common Hessian chain rules"
         ),
-        "closure_effect": (
-            "INNER_DIRECT_41 remains NOT_CERTIFIED until targets are redesigned "
-            "on the 3-DOF holonomic Hessian manifold"
-        ),
+        "closure_effect": "INNER_DIRECT_41 remains NOT_CERTIFIED until targets are redesigned on the 3-DOF holonomic Hessian manifold",
     }
     return out, report

@@ -100,3 +100,15 @@ second command runs the required L set and independently compares the kinetic
 Schur reduction with the full Euler-operator implementation, including stencil,
 resolution, field-normalization and localized velocity-packet checks. It returns
 2 for the current locked central coefficient member. Outputs are under `build/`.
+
+## Inspect repository status before running closure claims
+
+```bash
+python tools/show_repo.py
+python tools/show_reproduction_commands.py
+python tools/run_all_evidence.py
+```
+
+For a full software/integrity run use `python tools/run_all_evidence.py --full`.
+Expected exit code 2 for a rejected-member witness is encoded in
+`REPO_EVIDENCE_REGISTRY.json` and is not silently promoted to Absolute Closure.

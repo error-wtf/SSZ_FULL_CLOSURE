@@ -1,0 +1,122 @@
+{
+  "candidate": "SSZ_P5_HSVT_PRODUCTION_CANDIDATE_2026-09-18.json",
+  "epsilon_Y": 0.01,
+  "exterior": {
+    "6": {
+      "min_eig_K": 0.029985832204468897,
+      "min_radial": 0.21662703959885302,
+      "status": "PASS"
+    },
+    "12": {
+      "min_eig_K": 0.008595556830028677,
+      "min_radial": 0.2166270395988531,
+      "status": "PASS"
+    },
+    "20": {
+      "min_eig_K": 0.003225772789070107,
+      "min_radial": 0.21662703959885296,
+      "status": "PASS"
+    },
+    "42": {
+      "min_eig_K": 0.0006556534488640327,
+      "min_radial": 0.21662703959885293,
+      "status": "PASS"
+    },
+    "110": {
+      "min_eig_K": 8.633236411486819e-05,
+      "min_radial": 0.216627039598853,
+      "status": "PASS"
+    },
+    "420": {
+      "min_eig_K": 5.658794310324538e-06,
+      "min_radial": 0.2166270395988529,
+      "status": "PASS"
+    },
+    "1000": {
+      "min_eig_K": 9.889940870530442e-07,
+      "min_radial": 0.21662703959885296,
+      "status": "PASS"
+    }
+  },
+  "carrier": {
+    "6": {
+      "min_eig_K": 0.0017160138572492045,
+      "min_radial": 0.04477917366413854,
+      "status": "PASS"
+    },
+    "12": {
+      "min_eig_K": 0.0018468896003207957,
+      "min_radial": 0.0704101422573478,
+      "status": "PASS"
+    },
+    "20": {
+      "min_eig_K": 0.0005859866695785134,
+      "min_radial": 0.08479024984797127,
+      "status": "PASS"
+    },
+    "42": {
+      "min_eig_K": 0.00011240227973173078,
+      "min_radial": 0.09705603574969672,
+      "status": "PASS"
+    },
+    "110": {
+      "min_eig_K": 1.4417418590794101e-05,
+      "min_radial": 0.10153063188798231,
+      "status": "PASS"
+    },
+    "420": {
+      "min_eig_K": 9.235964247445764e-07,
+      "min_radial": 0.10243034155285621,
+      "status": "PASS"
+    },
+    "1000": {
+      "min_eig_K": 1.6051559271961315e-07,
+      "min_radial": 0.10243034155285619,
+      "status": "PASS"
+    }
+  },
+  "core": {
+    "6": {
+      "min_eig_K_from_current_direct_coefficient_path": -3184630.7348443824,
+      "negative_rows": 802,
+      "status": "FAIL_IMPLEMENTATION"
+    },
+    "12": {
+      "min_eig_K_from_current_direct_coefficient_path": -1210179.9096632977,
+      "negative_rows": 660,
+      "status": "FAIL_IMPLEMENTATION"
+    },
+    "20": {
+      "min_eig_K_from_current_direct_coefficient_path": -1212548.8266455233,
+      "negative_rows": 540,
+      "status": "FAIL_IMPLEMENTATION"
+    },
+    "42": {
+      "min_eig_K_from_current_direct_coefficient_path": -1214177.8937539533,
+      "negative_rows": 391,
+      "status": "FAIL_IMPLEMENTATION"
+    },
+    "110": {
+      "min_eig_K_from_current_direct_coefficient_path": -1215017.113533738,
+      "negative_rows": 209,
+      "status": "FAIL_IMPLEMENTATION"
+    },
+    "420": {
+      "min_eig_K_from_current_direct_coefficient_path": -1215383.2045401786,
+      "negative_rows": 74,
+      "status": "FAIL_IMPLEMENTATION"
+    },
+    "1000": {
+      "min_eig_K_from_current_direct_coefficient_path": -1215457.324594558,
+      "negative_rows": 53,
+      "status": "FAIL_IMPLEMENTATION"
+    }
+  },
+  "core_exact_invariant_context": {
+    "F_min": 1.0,
+    "G_min": 0.9996310638951968,
+    "H_min": 0.9996310638951968,
+    "K_scalar_min_archived_exact_invariant": 7.331670016895128e-06,
+    "interpretation": "Direct core coefficient/reducer failure is not promoted to a physical ghost while the exact Maxwell-Horndeski invariant gate remains positive; action-level G4XX/G5 core regeneration is required."
+  }
+}

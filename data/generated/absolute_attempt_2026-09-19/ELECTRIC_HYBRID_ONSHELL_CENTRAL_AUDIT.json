@@ -1,0 +1,102 @@
+{
+  "absolute_full_closure": false,
+  "angular": "NOT_YET_CERTIFIED",
+  "bulk": "0.62<u<0.70",
+  "diagnostics": {
+    "a2_nfev": 7232,
+    "a2_solve_success": true,
+    "g2_lift": {
+      "max_abs_chain_G2X": 1.1368683772161603e-13,
+      "max_abs_chain_G2phi": 6.821210263296962e-13,
+      "min_abs_dc2_dG2XX": 0.09333709023312578,
+      "q_max": -300.0317785080917,
+      "q_min": -999.9681259936748
+    },
+    "principal_replay_max_scaled": {
+      "c2": 1.799089963374113e-13,
+      "v1": 3.5980068211840325e-16,
+      "v4": 1.7763568394002505e-13
+    },
+    "production_rows": 3047,
+    "rows": 3809
+  },
+  "interfaces": "NOT_YET_CERTIFIED",
+  "outputs": [
+    "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_ONSHELL_CENTRAL_ACTION_JETS.csv",
+    "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_ONSHELL_CENTRAL_41.csv"
+  ],
+  "scans": [
+    {
+      "L": 6,
+      "max_R_abs": 0.0,
+      "max_S_sym": 7.815629032847937e-09,
+      "min_cr2": 0.013364327428284088,
+      "min_eig_K": 0.01346319409618893,
+      "negative_K_rows": 0,
+      "negative_radial_rows": 0,
+      "pass": true
+    },
+    {
+      "L": 12,
+      "max_R_abs": 0.0,
+      "max_S_sym": 4.6080685933702625e-09,
+      "min_cr2": 0.00885313859122102,
+      "min_eig_K": 0.012538378553507269,
+      "negative_K_rows": 0,
+      "negative_radial_rows": 0,
+      "pass": true
+    },
+    {
+      "L": 20,
+      "max_R_abs": 0.0,
+      "max_S_sym": 4.312369128456339e-09,
+      "min_cr2": 0.005948615572310152,
+      "min_eig_K": 0.010627830575867804,
+      "negative_K_rows": 0,
+      "negative_radial_rows": 0,
+      "pass": true
+    },
+    {
+      "L": 42,
+      "max_R_abs": 0.0,
+      "max_S_sym": 4.0324721339857206e-09,
+      "min_cr2": 0.0031032342262038437,
+      "min_eig_K": 0.004385220374792532,
+      "negative_K_rows": 0,
+      "negative_radial_rows": 0,
+      "pass": true
+    },
+    {
+      "L": 110,
+      "max_R_abs": 0.0,
+      "max_S_sym": 6.056779966456816e-09,
+      "min_cr2": 0.0012488588352244801,
+      "min_eig_K": 0.0006723488454477934,
+      "negative_K_rows": 0,
+      "negative_radial_rows": 0,
+      "pass": true
+    },
+    {
+      "L": 420,
+      "max_R_abs": 0.0,
+      "max_S_sym": 6.74299371894449e-09,
+      "min_cr2": 0.00033515123812328054,
+      "min_eig_K": 4.6832715039557534e-05,
+      "negative_K_rows": 0,
+      "negative_radial_rows": 0,
+      "pass": true
+    },
+    {
+      "L": 1000,
+      "max_R_abs": 0.0,
+      "max_S_sym": 6.086565917939879e-09,
+      "min_cr2": 0.00014147597641957568,
+      "min_eig_K": 8.282124160115536e-06,
+      "negative_K_rows": 0,
+      "negative_radial_rows": 0,
+      "pass": true
+    }
+  ],
+  "scope": "single-action Central electric-hybrid K/radial-G gate",
+  "status": "PASS"
+}

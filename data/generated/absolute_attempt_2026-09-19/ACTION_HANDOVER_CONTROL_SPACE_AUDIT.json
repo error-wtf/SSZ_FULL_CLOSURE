@@ -1,0 +1,229 @@
+{
+  "buffers": [
+    [
+      0.61,
+      0.62
+    ],
+    [
+      0.7,
+      0.71
+    ]
+  ],
+  "central_bulk_locked_u": [
+    0.62,
+    0.7
+  ],
+  "central_member": "ELECTRIC_HYBRID_ONSHELL_CENTRAL",
+  "certification": {
+    "cinf_partition_available": true,
+    "direct41_handover_certified": false,
+    "global_action_replay_complete": false,
+    "joint_background_E00_E11_Ephi_JA_resolve": false,
+    "one_control_f4_bridge": false,
+    "six_primitive_compact_control_rank_tested": true
+  },
+  "compact_six_primitive_rank": {
+    "inner": {
+      "background_eom_certified": false,
+      "band": "inner",
+      "condition_normalized": 6.945426256248392,
+      "controls": [
+        "a1",
+        "c2",
+        "c4",
+        "F_tensor",
+        "G_tensor",
+        "H_tensor"
+      ],
+      "endpoint_flat_by_construction": true,
+      "expected_rank": 6,
+      "finite_response_rows": 20541,
+      "grid_rows": 501,
+      "max_abs_endpoint_response": {
+        "F_tensor": 0.0,
+        "G_tensor": 0.0,
+        "H_tensor": 0.0,
+        "a1": 0.0,
+        "c2": 0.0,
+        "c4": 0.0
+      },
+      "rank": 6,
+      "response_norms": {
+        "F_tensor": 21.834109580951417,
+        "G_tensor": 13625.019343113638,
+        "H_tensor": 15857.134142349003,
+        "a1": 20594.805185923575,
+        "c2": 15.543754878571983,
+        "c4": 2211.5249701302105
+      },
+      "singular_values_normalized": [
+        1.399986039170513,
+        1.0011533631934266,
+        1.000324893108195,
+        0.9998026019413851,
+        0.9984215737572473,
+        0.20156949156447063
+      ],
+      "u_interval": [
+        0.7,
+        0.71
+      ]
+    },
+    "outer": {
+      "background_eom_certified": false,
+      "band": "outer",
+      "condition_normalized": 12.20757826303471,
+      "controls": [
+        "a1",
+        "c2",
+        "c4",
+        "F_tensor",
+        "G_tensor",
+        "H_tensor"
+      ],
+      "endpoint_flat_by_construction": true,
+      "expected_rank": 6,
+      "finite_response_rows": 20541,
+      "grid_rows": 501,
+      "max_abs_endpoint_response": {
+        "F_tensor": 0.0,
+        "G_tensor": 0.0,
+        "H_tensor": 0.0,
+        "a1": 0.0,
+        "c2": 0.0,
+        "c4": 0.0
+      },
+      "rank": 6,
+      "response_norms": {
+        "F_tensor": 56.694403504938535,
+        "G_tensor": 1228.0725133188366,
+        "H_tensor": 16840.4422700456,
+        "a1": 19727.436038078013,
+        "c2": 20.378266081471853,
+        "c4": 3005.410490873213
+      },
+      "singular_values_normalized": [
+        1.4165398880660443,
+        1.3907629079950625,
+        1.0000023246576326,
+        0.9989398516618734,
+        0.2187305277807708,
+        0.11603774782713565
+      ],
+      "u_interval": [
+        0.61,
+        0.62
+      ]
+    }
+  },
+  "endpoint_action_diagnostics": {
+    "inner": {
+      "central_edge_u": 0.7099849962490622,
+      "central_f2": 20.442212999436578,
+      "central_f2X": -48.44230895652325,
+      "central_f2phi": 726.3141014079615,
+      "central_f4": -3.343854965891546,
+      "central_v6": 2.5173969177641524,
+      "delta_v6": -18.161582481589747,
+      "old_edge_u": 0.71,
+      "old_f2": -0.4667644827636809,
+      "old_f2X": 17.358375152715766,
+      "old_f2phi": -18.25120976153584,
+      "old_f4": -3.347282619909285,
+      "old_v6": 20.6789793993539
+    },
+    "outer": {
+      "central_edge_u": 0.61,
+      "central_f2": 1.2987267182564373,
+      "central_f2X": 53.30772717580055,
+      "central_f2phi": 165.64927315302205,
+      "central_f4": -0.8432335872625503,
+      "central_v6": 3.21651562810936,
+      "delta_v6": 2.684804661701179e-06,
+      "old_edge_u": 0.61,
+      "old_f2": 1.298723911732196,
+      "old_f2X": -3.4102295534980627,
+      "old_f2phi": -0.6148954508948873,
+      "old_f4": -0.8432333746909688,
+      "old_v6": 3.216512943304698
+    }
+  },
+  "next_gate": "solve joint SVT + (a1,c2,c4,F,G,H) compact controls against full background EOM, then re-emit Direct-41",
+  "one_control_a2_probe": {
+    "inner": {
+      "accepted": false,
+      "band": "inner",
+      "expected_f4_endpoints": [
+        -2.009592261245374,
+        -3.347282619909285
+      ],
+      "f3X_bridge_range": [
+        -18.547382835406623,
+        2.964885852113764
+      ],
+      "interpretation": "REJECT_ONE_CONTROL",
+      "max_abs_A2_residual": 4.320099833421409e-12,
+      "max_abs_f4_endpoint_error": 126.96118989335086,
+      "min_abs_f4_sensitivity": 6.076553594321227,
+      "rows": 382,
+      "solved_f2F_range": [
+        -1286.130301208703,
+        8.67823296040354
+      ],
+      "solved_f3_range": [
+        -513.991700676021,
+        2.799746947145552
+      ],
+      "solved_f4_endpoints": [
+        -2.0101636613608327,
+        123.61390727344158
+      ],
+      "solved_f4_range": [
+        -2.0513639215180874,
+        232.1790757842341
+      ],
+      "u_interval": [
+        0.7,
+        0.71
+      ]
+    },
+    "outer": {
+      "accepted": false,
+      "band": "outer",
+      "expected_f4_endpoints": [
+        -0.8432333746909688,
+        -1.016117602751715
+      ],
+      "f3X_bridge_range": [
+        -24.20732420125972,
+        22.39076324979159
+      ],
+      "interpretation": "REJECT_ONE_CONTROL",
+      "max_abs_A2_residual": 1.9895196601282805e-13,
+      "max_abs_f4_endpoint_error": 20.544636611099698,
+      "min_abs_f4_sensitivity": 4.513546266787301,
+      "rows": 381,
+      "solved_f2F_range": [
+        -86.27086149290899,
+        69.12370754777078
+      ],
+      "solved_f3_range": [
+        -72.4417825689482,
+        52.24212785227331
+      ],
+      "solved_f4_endpoints": [
+        19.70140323640873,
+        -1.0159290268956591
+      ],
+      "solved_f4_range": [
+        -16.59854333858828,
+        19.70140323640873
+      ],
+      "u_interval": [
+        0.61,
+        0.62
+      ]
+    }
+  },
+  "status": "PENDING_JOINT_BACKGROUND_CONSTRAINED_SOLVE"
+}

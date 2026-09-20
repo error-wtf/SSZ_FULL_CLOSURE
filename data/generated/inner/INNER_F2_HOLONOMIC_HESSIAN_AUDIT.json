@@ -4,14 +4,14 @@
   "tolerance": 1e-09,
   "rows": 1401,
   "max_abs_chain_residual": {
-    "phi_gradient": 588851.9234928866,
-    "X_gradient": 906.8110468957763,
-    "F_gradient": 45827.99351050494
+    "phi_gradient": 588851.923492922,
+    "X_gradient": 906.8110468956994,
+    "F_gradient": 45827.99350941232
   },
   "median_abs_chain_residual": {
-    "phi_gradient": 137896.99822831963,
-    "X_gradient": 572.8926054840036,
-    "F_gradient": 9660.323671334158
+    "phi_gradient": 137896.99822832338,
+    "X_gradient": 572.8926054835454,
+    "F_gradient": 9660.323671045262
   },
   "max_normalized_chain_residual": {
     "phi_gradient": 1.0000000000000002,
@@ -19,18 +19,18 @@
     "F_gradient": 1.0
   },
   "median_normalized_chain_residual": {
-    "phi_gradient": 0.9986214407460525,
+    "phi_gradient": 0.9986214407460534,
     "X_gradient": 1.0,
-    "F_gradient": 0.8571491123231664
+    "F_gradient": 0.8571491123199894
   },
   "first_chain_rule_lower_only": true,
   "first_chain_rule_max_normalized_residual": 1.0000000000000002,
   "principal_controls_can_repair_first_chain_rule": false,
-  "max_implied_holonomic_chain_abs": 1.3731420445139975e-09,
+  "max_implied_holonomic_chain_abs": 1.3958174061023954e-09,
   "max_scaled_response_change_if_principal_block_is_kept": {
-    "v5": 19.278793671545007,
-    "c3": 56.88081754386796,
-    "e3": 38352.44673393451,
+    "v5": 19.278793671083506,
+    "c3": 56.88081754248965,
+    "e3": 38352.44673307635,
     "v1": 0.0,
     "v4": 0.0,
     "c2": 0.0

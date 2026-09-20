@@ -64,7 +64,7 @@ def main():
         return
     (ROOT / "MANIFEST.json").write_text(
         json.dumps(
-            {"release": "2026-09-16", "repository_edition": "2026-09-17", "files": files}, indent=2
+            {"release": "checkpoint-2026-09-19", "repository_edition": "electric-hybrid-search", "files": files}, indent=2
         )
         + "\n"
     )

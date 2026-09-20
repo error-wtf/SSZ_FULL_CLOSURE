@@ -1,0 +1,84 @@
+{
+  "WEAK_DIRECT_41": "PASS",
+  "region": "weak_exterior_H",
+  "scope": "direct action-derived pure-H regional 41-slot export",
+  "construction": "F2 action-derived region + v5=c3=e3=0 + v12=0 + frozen holonomic a5",
+  "historical_global_stream_used_as_input": false,
+  "historical_stream_role": "regression oracle only",
+  "a5_smoothing": 0.0,
+  "slots": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "a8",
+    "a9",
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13"
+  ],
+  "rows": 7996,
+  "max_regression_scaled_error": 3.0762932419466956e-16,
+  "timestamp": "2026-09-20T08:50:33.273412+00:00",
+  "source": {
+    "path": "data/regression/ssz_p5_F2_exterior_horndeski_unreduced_39of41_2026-09-14.csv",
+    "sha256": "8f98476599c9eb82bd3824c6312e5dd74262dcf6c5b5e9e3c2c2b2b6f2f869cd"
+  },
+  "implementation": [
+    {
+      "path": "src/ssz_p5/production/pure_h_export.py",
+      "sha256": "c6266b43216df1239f41e2db2d968bf12c2ba921a5438edeadb57059bb9b2f84"
+    },
+    {
+      "path": "src/ssz_p5_holonomic_a5_closure_2026-09-16.py",
+      "sha256": "58f4c0d48d7ec57ef597e759835a3377a6eba42c5d384914aff77173211d566d"
+    },
+    {
+      "path": "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json",
+      "sha256": "f8e7ba4749811942b75ad69838509a39a89ae03652fcd72c7c5dbbcc96304917"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/generated/pure_h/weak_exterior_H_DIRECT_41.csv",
+      "sha256": "0fa6dce417c9d6ce15b060b4f05a9a547ccd5bce518237763ddea53b41f3e54b"
+    },
+    {
+      "path": "data/generated/pure_h/WEAK_DIRECT_41_COMPARISON.csv",
+      "sha256": "0ff10036ef8e16718cbb2c712bd2be3221d577249e12cbbcc658cdf083e1c6bb"
+    }
+  ],
+  "absolute_full_closure": "NOT_CERTIFIED"
+}

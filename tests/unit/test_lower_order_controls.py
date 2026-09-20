@@ -11,19 +11,17 @@ def background():
     h = np.linspace(0.39, 0.41, n)
     ph = -np.linspace(1.25, 1.23, n)
     A = np.linspace(1.4, 0.0, n)
-    return pd.DataFrame(dict(u=u, x=1 / u, phi=u, f=f, h=h, phiprime=ph, A0prime=A))
+    return pd.DataFrame(dict(u=u, x=1/u, phi=u, f=f, h=h, phiprime=ph, A0prime=A))
 
 
 def test_lower_order_inverse_replays_targets_and_reduced_endpoint():
     b = background()
     J = response_diagonal(b)
-    q = np.column_stack(
-        [
-            np.linspace(-3, 0, len(b)),
-            np.linspace(2, 0, len(b)),
-            np.linspace(1, 0, len(b)),
-        ]
-    )
+    q = np.column_stack([
+        np.linspace(-3, 0, len(b)),
+        np.linspace(2, 0, len(b)),
+        np.linspace(1, 0, len(b)),
+    ])
     target = J * q
     action, emitted, report = invert_lower_order_targets(b, target)
     np.testing.assert_allclose(emitted[["v5", "c3", "e3"]], target, atol=1e-12)

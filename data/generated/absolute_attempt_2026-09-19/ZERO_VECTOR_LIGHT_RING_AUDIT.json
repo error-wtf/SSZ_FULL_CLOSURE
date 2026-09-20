@@ -1,0 +1,45 @@
+{
+  "status": "PASS_DIAGNOSTIC_ZERO_VECTOR_EXCLUDED_AT_INNER_LIGHT_RING",
+  "scope": "Local necessary on-shell Eq.85 diagnostic; not a no-go theorem for electric SVT members or P5 geometry",
+  "source_csv": "data/production/ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv",
+  "source_sha256": "65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba",
+  "derivatives": "JET9D8 window=9 degree=8",
+  "light_rings": [
+    {
+      "radius": 1.4161606552723742,
+      "f": 0.295876793067912,
+      "h": 0.37412980232784293,
+      "tensor_h": 0.9999699059644178,
+      "a4": 0.16635027979409078,
+      "geometric_factor": 1.8302026908571805,
+      "zero_vector_required_tensor_f": -1.638626777346889,
+      "zero_vector_required_f_over_h": -1.638676091723501,
+      "electric_q_for_f_equals_h": 1.5636514881801942
+    },
+    {
+      "radius": 1.4999999937556716,
+      "f": 0.33333333028806633,
+      "h": 0.3333333363761863,
+      "tensor_h": 0.9720791219735426,
+      "a4": 0.16201318684266958,
+      "geometric_factor": -1.3333330090815845,
+      "zero_vector_required_tensor_f": 0.9720788983685167,
+      "zero_vector_required_f_over_h": 0.9999997699724016,
+      "electric_q_for_f_equals_h": 1.4907001578681684e-07
+    }
+  ],
+  "inner_zero_vector_no_go": true,
+  "outer_zero_vector_consistency_check": true,
+  "logic": "At a light ring 2f-rf'=0, Eq.85 loses the a4' control. For A0prime=0 the inner P5 light ring requires tensor_F<0 while tensor_H>0 implies a4>0. The electric term -2rfh A0prime^2 v8 is therefore a necessary available control for a stable hybrid branch.",
+  "electric_seed": {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_EQ85_SEED.csv",
+    "definition": "pointwise Eq.85 solution for q=A0prime^2*v8 with tensor_F target fixed to tensor_H of the carrier witness",
+    "min": -0.19547630970541138,
+    "max": 1.733689982887512,
+    "median": -0.0327397112775948,
+    "positive_fraction": 0.2264,
+    "inner_light_ring_q_for_F_equals_H": 1.5636514881801942,
+    "outer_light_ring_q_for_F_equals_H": 1.4907001578681684e-07,
+    "warning": "This seed solves only the necessary background identity for a chosen tensor target; it is not a holonomic action reconstruction."
+  }
+}

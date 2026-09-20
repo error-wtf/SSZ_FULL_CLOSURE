@@ -1,0 +1,67 @@
+{
+  "outer_svt_raw_regression": "PASS",
+  "max_scaled_error": 2.4640791541505865e-16,
+  "slot_errors": {
+    "a1": 0.0,
+    "a2": 2.296912108572974e-16,
+    "a3": 5.551115123125783e-17,
+    "a4": 8.326672684688674e-17,
+    "a5": 2.2008465804397695e-16,
+    "a6": 9.90960785651751e-17,
+    "a7": 2.1716758613631718e-16,
+    "a8": 8.326672684688674e-17,
+    "a9": 2.2118537712294132e-16,
+    "b1": 5.551115123125783e-17,
+    "b2": 0.0,
+    "b3": 2.2857872923432415e-16,
+    "b4": 2.463469009273071e-16,
+    "b5": 0.0,
+    "c1": 0.0,
+    "c2": 2.0846513050663808e-16,
+    "c3": 0.0,
+    "c4": 2.329138682082803e-16,
+    "c5": 2.4640791541505865e-16,
+    "c6": 2.38400949212102e-16,
+    "d1": 5.551115123125783e-17,
+    "d2": 2.2726526589171033e-16,
+    "d3": 2.2125528480859311e-16,
+    "d4": 9.71445146547012e-17,
+    "e1": 2.2136630627104287e-16,
+    "e2": 2.2940779583876086e-16,
+    "e3": 0.0,
+    "e4": 2.3265771766593934e-16,
+    "v1": 2.433849966797838e-16,
+    "v2": 2.3796014214971484e-16,
+    "v3": 2.195786638147367e-16,
+    "v4": 2.447029236594018e-16,
+    "v5": 0.0,
+    "v6": 2.3626781609170366e-16,
+    "v7": 2.445979203548664e-16,
+    "v8": 2.447336362400112e-16,
+    "v9": 2.4119205035197564e-16,
+    "v10": 9.8879238130678e-17,
+    "v11": 2.212474602323639e-16,
+    "v12": 2.4436263306385895e-16,
+    "v13": 2.374412636146099e-16
+  },
+  "scope": "Outer ZK/SVT sector replay plus central existing-member normalization; not complete H+SVT assembly or global direct export",
+  "sources": [
+    {
+      "path": "data/production/ssz_p5_F2_outer_same_action_RESOLVED_background_jets_2026-09-15.csv",
+      "sha256": "f98d153837e27d9650052fc00394cd5330049265bb8ad7b393d036a816f76f41"
+    },
+    {
+      "path": "archive/full_working_snapshot/ssz_p5_outer_svt_repaired_integrable_transition_profile_2026-09-12.csv",
+      "sha256": "8b1c98fb12e122a71d9f8eb5ef67f8e5c530a83174901419faaf688f7d718763"
+    },
+    {
+      "path": "data/prestaged/direct41/outer_resolved_raw_41of41.csv",
+      "sha256": "5e22d94aee168ed442cecff33c6f8ec8d05283c02ec943881327894970ea7711"
+    },
+    {
+      "path": "data/production/ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "sha256": "74b4812b9a43dfb6faf71f5eaf2375c359d69ac250a5b5414fea8647fed8e89c"
+    }
+  ],
+  "global_direct_41": "NOT_CERTIFIED"
+}

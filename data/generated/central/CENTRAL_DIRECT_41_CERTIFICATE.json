@@ -61,8 +61,8 @@
   "numerical_policy": "JET9D8 window=9 degree=8, derivatives before region trimming",
   "tolerance": 1e-07,
   "generator": "tools/export_central_production.py",
-  "git_commit": "9c85a30cc060647799c8256f12bba67899aba807",
-  "timestamp": "2026-09-17T19:06:31.588748+00:00",
+  "git_commit": "NO_GIT_WORKTREE__MANIFEST_BOUND",
+  "timestamp": "2026-09-20T08:41:12.284551+00:00",
   "sources": [
     {
       "path": "archive/full_working_snapshot/ssz_p5_integrable_full_svt_lobe_corrected_profile_2026-09-12.csv",
@@ -92,7 +92,7 @@
   "implementation": [
     {
       "path": "src/ssz_p5/production/central_export.py",
-      "sha256": "1d5454353e4d83effc511b9a6e864a77985309090b050e48ee3831cbb640caec"
+      "sha256": "8ee9b8bfce8fdf3bd93ba68b96540e1823b9bed0916e81bd93e4c019c00b37c4"
     },
     {
       "path": "src/ssz_p5/production/regional_coefficients.py",
@@ -114,11 +114,11 @@
   "outputs": [
     {
       "path": "data/generated/central/central_exact_SVT_41of41.csv",
-      "sha256": "44c224e460275350193122feed0fc97b72b1f688b446d46eb48f45c5dad95609"
+      "sha256": "3da16b8e6d86ca5625aa7531c6c6c2882955198784ee7f92ac881f3e5af1c6de"
     },
     {
       "path": "data/generated/central/CENTRAL_SLOT_COMPARISON.csv",
-      "sha256": "34bf4003d7a85f022ee7f840c6b7d173e02d9c8a333f163787cf41a00df35988"
+      "sha256": "658859dbd2dfaf2f5b1acf3becc843d27f72ddaed4860b508b291a2811a11ea8"
     },
     {
       "path": "data/generated/central/central_exact_SVT_odd_reference.csv",

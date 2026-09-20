@@ -2,26 +2,31 @@
 
 **Carmen Casu and Lino Casu · Anti-Capitalist Software License v1.4**
 
+**Current working checkpoint: 2026-09-20 SAME_ACTION.** All 780 files in the
+new supplied ZIP match the unpacked source directory byte-for-byte. The supplied
+release records 119/119 software tests; the fresh Linux/Python 3.14.4 lockfile run
+returns **118 passed, 1 failed** (historical `a5` recipe regression). See the [current integration record](docs/SAME_ACTION_INTEGRATION_2026-09-20.md)
+for fresh verification and the continued Inner action-replay work.
+
+The imported regional certificates report Weak, Outer, Central and Core PASS
+within their declared scopes; Inner, global KRGSM and same-operator QNM remain
+open. Absolute Full Closure is not certified. Historical member diagnostics below
+remain scoped to their named members and do not replace the current checkpoint.
+
 Research sources, action profiles, perturbation code and reproducible verification
 for the regional P5 Full-SVT member: weak Horndeski exterior, outer H/SVT
 handover, central genuine-SVT lobe, inner SVT/H handover, general Horndeski core,
 and an analytic center chart.
 
-**Latest imported checkpoint: September 18, full-action gate.** The updated
-software suite passes **96 tests**. The 4D `(phi,X,F,Y)` Hessian completion and
-local reachability audit are implemented; the remaining Inner construction needs
-additional mixed `f3/f4` action-jet directions. See the
-[current status](INTERMEDIATE_STATUS_2026-09-18_FULL_ACTION_GATE.md) and
-[integration verification](docs/FULL_ACTION_SNAPSHOT_INTEGRATION_2026-09-18.md).
-
 > **Current result: Absolute Full Closure is not certified.**
-> The selected central Full-SVT coefficient member fails the necessary finite-L
-> kinetic-positivity gate at L=6,12,20,42. At the interior point u≈0.690004,
-> L=6 gives a kinetic eigenvalue ≈−43.8617. An independent Schur calculation,
-> stencil/grid checks and basis rescalings reproduce the negative direction.
-> This is a statement about this coefficient member, not a no-go theorem for
-> P5 geometry. See the [reproducible execution report](docs/REGIONAL_KINETIC_GATE_2026-09-17.md)
-> and [machine evidence](data/diagnostic/REGIONAL_CENTRAL_KINETIC_GATE.json).
+> Two concrete global members have now been rejected without discarding the
+> reusable P5/perturbation infrastructure. The 2026-09-17 regional electric
+> member fails Central finite-L kinetic positivity and common-action lower replay.
+> The 2026-09-18 global `A0prime=0` epsilon-Y member passes many component tests,
+> but a denominator-free Maxwell-Horndeski Eq.85 audit excludes it at the inner
+> P5 light ring: with positive tensor H/a4 it requires negative tensor F. The
+> corresponding historical electric-hybrid search is documented by the audit in
+> `data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json`.
 
 ## Reproduce
 
@@ -58,6 +63,29 @@ by the [execution contract](CODEX_FINAL_EXECUTION_CONTRACT.md) and
 the start checks and terminates with the actual strict result. The handoff's
 reported archive success must not be confused with a production-closure PASS.
 
+## Repository observability
+
+The repository can print its current truth state directly from machine-readable evidence:
+
+```bash
+python tools/show_repo.py
+python tools/show_gate_matrix.py
+python tools/show_member_matrix.py
+python tools/show_evidence_index.py
+```
+
+`REPO_EVIDENCE_REGISTRY.json` classifies current audits and intentional rejection
+witnesses, including their expected exit codes. Run all registered evidence with:
+
+```bash
+python tools/run_all_evidence.py
+# add --full to include pytest and the release-manifest check
+```
+
+This avoids conflating an expected failing audit of a rejected member with a failure
+of the active search, and avoids treating historical PASS reports as current Absolute
+Closure. See [REPO_OBSERVABILITY.md](REPO_OBSERVABILITY.md).
+
 ## Production chain and verified scope
 
 ```text
@@ -72,15 +100,18 @@ Locked regional Full-SVT action / background jets
 
 | Layer | Current result | Scope |
 | --- | --- | --- |
-| Regional source integration | Implemented | Active member, source registry, region resolver and certificate binding |
-| Outer raw SVT emission | Regression PASS | 41 slots, max scaled reference difference ≈9.03e-9; full H+SVT assembly is separate |
-| Central selected normalization | **41/41 PASS** | 3,809 rows exported with source/output hashes; stored comparable ZK slots reproduce exactly. [Scoped certificate](data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json) |
-| Inner selected normalization | **41/41 PASS** | 1,400 finite normalized rows; normalization is not yet a single-action Direct-41 certificate |
-| Inner action / Direct-41 closure | **OPEN / FAIL** | The old 3D `(phi,X,F)` Hessian exclusion is superseded by the `Y` sector, but the full 4D `f2(phi,X,F,Y)` audit shows that the current independently blended lower/principal target set is not reachable by a background-null `f2` Hessian alone. Full mixed `f3/f4` action-jet controls are now the next gate. |
-| Central finite-L kinetic gate | **FAIL for frozen selected member** | Negative kinetic directions remain recorded for L=6,12,20,42; the Inner action work does not supersede this gate |
-| Global direct 41 and KRGSM | Not certified | Remaining regional direct paths, center and interfaces are not claimed complete |
-| Coupled spectral convergence | Not run | Same-operator global KRGSM and kinetic gates are prerequisites |
-| Absolute closure / v1.0.0 | Not released | Strict production evidence remains incomplete |
+| P5 geometry / 41-slot / JET9D8 infrastructure | **PASS / retained** | Independent of the final action-member decision |
+| 2026-09-17 regional electric member | **Rejected for Absolute Closure** | Central finite-L kinetic FAIL at L=6,12,20,42; selected c3/e3 not a common direct-action replay |
+| 2026-09-18 zero-vector epsilon-Y member | **Rejected as global on-shell member** | Component-level finite-L/descriptor PASS evidence retained; inner light-ring Eq.85 forces tensor F/H≈-1.63868 for A0prime=0 |
+| Generalized-psi descriptor | **PASS** | H0/h1 constraints retained explicitly; validated on carrier and punctured Core |
+| Descriptor pullback equivalence | **PASS** | Same differential operator as established reduced KRGSM on Strong-H chart for L=6,12,20,42,110,420,1000 |
+| Singular radial DAE pencil | **PASS_STRUCTURE** | No explicit deep-Core D_h1 inversion |
+| Electric hybrid Eq.85 seed | **GENERATED** | Inner light ring needs q=A0prime^2*v8_background_identity≈1.56365 if F=H is used as a local diagnostic target |
+| Electric-hybrid Horndeski principal feasibility | **PARTIAL PASS / SEARCH** | Self-contained common-emitter recipe gives L6≈-3.24295, L12≈-0.130994, L20≈-0.0128774; L=42,110,420,1000 positive; constraint pivots remain large. Not background/on-shell certified |
+| Active electric hybrid action member | **SEARCH OPEN** | Must solve background/on-shell identities and finite-L K simultaneously from one holonomic action |
+| Global same-operator KRGSM | **OPEN** | Requires promoted electric hybrid Direct-41 member |
+| Coupled spectral convergence | **BLOCKED** | QNM gate remains closed until same-operator global certificate exists |
+| Absolute closure / v1.0.0 | **Not released** | No failed/open gate is relabeled PASS |
 
 ## September 18 working-snapshot integration
 
@@ -98,7 +129,6 @@ primitive profiles; this is not a complete raw G4/G5 action reconstruction.
 ```bash
 python tools/audit_working_import.py
 python tools/build_inner_targets.py
-python tools/audit_inner_y_hessian.py
 ```
 
 The Inner lower-order and principal target maps now have executable local response
@@ -111,49 +141,19 @@ static electric background their local algebraic response to
 leave that column space. Therefore the next production construction must use the
 **full action-jet control space**, including mixed `f3/f4` directions, rather than
 coefficient-level target matching. See
-[the machine-readable reachability audit](data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json) and
-[the continuation contract](CONTINUE_IMPLEMENTATION_2026-09-18.md).
-
-## Remaining production gates
-
-The Inner construction and the Central kinetic failure are independent gates.
-Completing Inner/Core does not by itself repair the negative Central directions.
-The remaining work is:
-
-1. **Common Inner action:** combine the `f2(phi,X,F,Y)` Hessian with mixed
-   `f3/f4` jets in one holonomic action-control space, deriving all six channels
-   `v5,c3,e3,v1,v4,c2` together.
-2. **Inner Direct-41:** emit the full guard grid, close `a5/v7/v12`, then trim
-   and verify Central–Inner and Inner–Core interfaces. Both `INNER_DIRECT_41`
-   and `DIRECT_ACTION_REPLAY_COMPLETE` require genuine action replay.
-3. **Core/G5:** complete the general quintic action emission and required
-   derivative orders for all 41 slots.
-4. **Exact center:** construct the regular Taylor chart at `r=0`, with finite
-   curvature invariants and compatible coefficient/operator limits.
-5. **Global Direct-41:** derive one exterior-to-center stream with common
-   conventions and basis, one shared baseline, and smooth action/jet matching.
-6. **Central kinetic gate:** test a complete action re-emission of the selected
-   member. If the negative mode persists, a changed Central action member must
-   pass background, holonomy, interface and stability checks. This is an open
-   physical selection problem; software completion alone does not guarantee PASS.
-7. **Global KRGSM:** jointly reduce that stream and check constraint pivots,
-   kinetic positivity, radial/angular gradients, matrix symmetries, canonical
-   `R=0`, sector limits, high-L behavior and interfaces.
-8. **Coupled spectrum:** use exactly that operator for converged resonance
-   branches and a documented search for unstable poles. Archived test-field
-   or WKB values cannot certify this gate.
-9. **Release:** reproduce all required certificates and the strict pipeline
-   from a fresh extraction, with a verified manifest and SHA256 inventory.
-   `ABSOLUTE_FULL_CLOSURE` and `v1.0.0` require strict exit code **0**.
+`data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json` and
+[the continuation contract](CONTINUE_IMPLEMENTATION_2026-09-19.md).
 
 ## Selected member and numerical conventions
 
-The active [regional member](SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json)
-allows nonzero A0prime in its electric SVT regions. The historical
-[epsilon-Y member](SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json) and strong-H carrier
-remain scoped alternatives/control witnesses; they do not replace the regional
-production action. In particular no global epsilon-Y-only slot modification or
-global A0prime=0 condition is imposed on this chain.
+There is currently **no promoted Absolute-Closure production member**. The
+2026-09-17 regional electric member and the 2026-09-18 global zero-vector epsilon-Y
+member are retained as rejected research witnesses with useful scoped evidence.
+The active search definition is
+[SSZ_P5_ELECTRIC_HYBRID_SEARCH_CANDIDATE_2026-09-19.json](SSZ_P5_ELECTRIC_HYBRID_SEARCH_CANDIDATE_2026-09-19.json).
+A future promotion must use one holonomic action with nonzero electric support
+through the inner light-ring region and must pass all background, Direct-41 and
+finite-L gates before QNM is reopened.
 
 - **41 slots:** `a1..a9`, `b1..b5`, `c1..c6`, `d1..d4`, `e1..e4`, `v1..v13`.
 - **Derivative service:** JET9D8, window 9 and degree 8.

@@ -20,7 +20,6 @@ At A0'=0 the v5 response vanishes.  The C-infinity Inner target also has
 v5=0 there, so the endpoint is handled by the reduced (c3,e3) block and no
 singular division is performed.
 """
-
 from __future__ import annotations
 
 import numpy as np
@@ -96,9 +95,7 @@ def invert_lower_order_targets(
     if max_error > tolerance:
         raise ValueError(f"lower-order control replay failed: {max_error:.3e}")
 
-    action = background[
-        [c for c in ("u", "x", "phi", "f", "h", "X", "A0prime", "S_SVT", "T_H") if c in background]
-    ].copy()
+    action = background[[c for c in ("u", "x", "phi", "f", "h", "X", "A0prime", "S_SVT", "T_H") if c in background]].copy()
     for j, name in enumerate(CONTROL_NAMES):
         action[name] = q[:, j]
     emitted = action[[c for c in ("u", "x") if c in action]].copy()

@@ -1,0 +1,19 @@
+{
+  "status": "CENTRAL_SELECTED_LOWER_NOT_SINGLE_ACTION_REPLAY",
+  "scope": "direct Appendix-A lower replay from one holonomic f2+f3+f4 action",
+  "errors": {
+    "v5": {
+      "max_scaled": 7.190060014039545e-08,
+      "median_scaled": 1.0303589211245596e-10
+    },
+    "c3": {
+      "max_scaled": 4.983695326668783,
+      "median_scaled": 2.3582196818060006
+    },
+    "e3": {
+      "max_scaled": 0.022282964633665817,
+      "median_scaled": 8.70590789301175e-05
+    }
+  },
+  "selected_member_must_be_replaced_for_absolute_closure": true
+}

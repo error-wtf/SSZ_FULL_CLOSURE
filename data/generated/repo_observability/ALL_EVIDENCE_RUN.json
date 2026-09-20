@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "absolute_full_closure": "NOT_INFERRED_FROM_THIS_RUN",
+  "selection": {
+    "full_checks_included": false,
+    "only": [
+      "regional_kinetic_rejected_member",
+      "frozen_onshell_rejected_zero_vector"
+    ],
+    "complete_registered_audits": false
+  },
+  "status": "PASS_SELECTED",
+  "runs": [
+    {
+      "id": "regional_kinetic_rejected_member",
+      "category": "expected_rejection",
+      "scope": "Expected finite-L kinetic failure of rejected 2026-09-17 regional electric member",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/audit_regional_kinetic.py"
+      ],
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "expectation_met": true,
+      "evidence": "build/REGIONAL_CENTRAL_KINETIC_GATE.json",
+      "stdout_tail": "Central Full-SVT kinetic gate: FAIL\nL=   6 min(K)=-692.138603 negative rows=2007\nL=  12 min(K)=-242.045378 negative rows=1549\nL=  20 min(K)=-82.7819885 negative rows=1159\nL=  42 min(K)=-0.0404298248 negative rows=435\nL= 110 min(K)=0.000502616601 negative rows=0\nL= 420 min(K)=4.60432283e-05 negative rows=0\nL=1000 min(K)=8.2043773e-06 negative rows=0\n/mnt/data/ssz_joint/SSZ_FULL_CLOSURE/build/REGIONAL_CENTRAL_KINETIC_GATE.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "frozen_onshell_rejected_zero_vector",
+      "category": "expected_rejection",
+      "scope": "Expected on-shell failure of the restricted frozen zero-vector carrier witness",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/audit_frozen_onshell.py"
+      ],
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "expectation_met": true,
+      "evidence": "build/FROZEN_ONSHELL_IDENTITY.json",
+      "stdout_tail": "FAIL_ON_SHELL_IDENTITY\nr/rs=1.599997795025131\nJET9D8, stride=1: residual=0.07097442387191553\nJET9D8, stride=2: residual=0.07097442558966049\nJET9D8, stride=3: residual=0.07097442580377993\nJET9D8, stride=4: residual=0.07097442561865269\naction jets and scalar chain rule; remaining derivatives JET9D8, stride=n/a: residual=0.07097442116687691\nReport: build/FROZEN_ONSHELL_IDENTITY.json\n",
+      "stderr_tail": ""
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "absolute_closure_check": {
+    "error": "RuntimeError: QNM disabled: invalid or absent direct-global-KRGM certificate: [Errno 2] No such file or directory: '/mnt/data/ssz_fullclosure_attempt_build/SSZ_FULL_CLOSURE/data/certificates/DIRECT_GLOBAL_KRGM_CERTIFICATE.json'",
+    "status": "NOT_CERTIFIED"
+  },
+  "attempt": "SSZ_P5_FULL_CLOSURE_ATTEMPT_2026-09-19",
+  "base_archive": "SSZ_P5_REPO_OBSERVABILITY_ELECTRIC_HYBRID_2026-09-19.zip",
+  "base_archive_sha256": "887019eaff0ded9dfcf1adfad42d518bff4ddb2c87cbfb3f1b269b73521069da",
+  "central_single_action": {
+    "angular": "NOT_YET_CERTIFIED",
+    "finite_L_pass": 7,
+    "finite_L_total": 7,
+    "interfaces": "NOT_YET_CERTIFIED",
+    "rows_action_jets": 3809,
+    "rows_direct41": 3809,
+    "status": "PASS"
+  },
+  "certification": {
+    "ABSOLUTE_FULL_CLOSURE": false,
+    "COUPLED_HSVT_QNM": false,
+    "DIRECT_GLOBAL_KRGM": false
+  },
+  "handover_control_space": {
+    "inner_f4_only_accepted": false,
+    "inner_rank": 6,
+    "outer_f4_only_accepted": false,
+    "outer_rank": 6,
+    "status": "PENDING_JOINT_BACKGROUND_CONSTRAINED_SOLVE"
+  },
+  "next_gate": "solve joint SVT + (a1,c2,c4,F,G,H) compact controls against full background EOM, then re-emit Direct-41",
+  "software_tests": {
+    "failed": 0,
+    "passed": 118,
+    "status": "PASS"
+  }
+}

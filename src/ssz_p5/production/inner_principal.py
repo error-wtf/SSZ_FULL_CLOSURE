@@ -10,7 +10,6 @@ No 41-slot coefficient is interpolated as a production operation: interpolation
 is used only to define smooth target functions.  The correction itself is
 obtained by re-emitting a background-null action-Hessian deformation.
 """
-
 from __future__ import annotations
 
 import numpy as np
@@ -96,9 +95,7 @@ def _svt_action_input(background):
     return d
 
 
-def action_realize_principal(
-    background, baseline_coeffs, lower_emitted, central, core, *, tolerance=2e-9
-):
+def action_realize_principal(background, baseline_coeffs, lower_emitted, central, core, *, tolerance=2e-9):
     """Return corrected Inner coefficients and explicit Hessian action controls."""
     targets, endpoint_jets = build_principal_targets(background, central, core)
     target = targets[[n + "_target" for n in TARGETS]].to_numpy(float)
@@ -123,9 +120,7 @@ def action_realize_principal(
     action, changed_emit, inverse_report = restore_svt_principal(
         d, pure_target, selected_lower=selected_lower, tolerance=tolerance
     )
-    delta_slots = changed_emit[list(SLOT_NAMES)].to_numpy(float) - base_emit[
-        list(SLOT_NAMES)
-    ].to_numpy(float)
+    delta_slots = changed_emit[list(SLOT_NAMES)].to_numpy(float) - base_emit[list(SLOT_NAMES)].to_numpy(float)
     corrected = baseline_coeffs.copy().reset_index(drop=True)
     corrected.loc[:, list(SLOT_NAMES)] = corrected[list(SLOT_NAMES)].to_numpy(float) + delta_slots
 
@@ -144,9 +139,7 @@ def action_realize_principal(
         "max_scaled_target_error": max_error,
         "inverse_report": inverse_report,
         "endpoint_target_jets": endpoint_jets,
-        "construction": (
-            "archived same-action baseline + re-emitted background-null f2-Hessian delta"
-        ),
+        "construction": "archived same-action baseline + re-emitted background-null f2-Hessian delta",
         "target_policy": "stored Cinf S_SVT/T_H partition between one-sided endpoint Taylor jets",
     }
     return corrected, controls, targets, report

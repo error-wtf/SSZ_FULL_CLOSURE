@@ -10,12 +10,12 @@ from ..config import SLOT_NAMES
 from ..jets.jet9d8 import profile_derivative
 from ..provenance.manifest import sha256
 from .central_export import slot_comparison
-from .holonomic_hessian import audit_existing_split_controls
-from .inner_principal import action_realize_principal
-from .inner_targets import build_inner_targets
 from .member import validate_stream_regions
 from .regional_coefficients import select_lower
 from .sources import SOURCE_REGISTRY
+from .inner_targets import build_inner_targets
+from .inner_principal import action_realize_principal
+from .holonomic_hessian import audit_existing_split_controls
 
 CENTRAL_EXPORT = "data/generated/central/central_exact_SVT_41of41.csv"
 
@@ -119,9 +119,7 @@ def export_inner(root, output):
     allowed_changes = {"a5", "v5", "c3", "e3", "v7", "v12"}
     comparisons["change_policy"] = comparisons.slot.map(
         lambda name: (
-            "action-realized lower-order/holonomic completion"
-            if name in allowed_changes
-            else "preserve"
+            "action-realized lower-order/holonomic completion" if name in allowed_changes else "preserve"
         )
     )
     comparisons.to_csv(output / "INNER_SLOT_COMPARISON.csv", index=False)
@@ -152,10 +150,7 @@ def export_inner(root, output):
     unchanged = comparisons[~comparisons.slot.isin(sorted(allowed_changes))]
     normalization = bool(finite and (unchanged.status == "PASS").all())
     paths = [
-        registry["background"],
-        registry["coeff_reference"],
-        CENTRAL_EXPORT,
-        core_path,
+        registry["background"], registry["coeff_reference"], CENTRAL_EXPORT, core_path,
         "data/generated/inner_controls/INNER_LOWER_ORDER_TARGETS.csv",
         "data/generated/inner_controls/INNER_LOWER_ORDER_ACTION_CONTROLS.csv",
         "data/generated/inner_controls/INNER_LOWER_ORDER_REEMITTED.csv",
@@ -183,21 +178,17 @@ def export_inner(root, output):
         AUTHORITATIVE_SELECTED_REPRESENTATION=True,
         LOWER_ORDER_ACTION_CONTROL=(
             "LOCAL_RESPONSE_PASS_NOT_COMMON_ACTION"
-            if control_report["status"] == "ACTION_REALIZED_PASS"
-            else "FAIL"
+            if control_report["status"] == "ACTION_REALIZED_PASS" else "FAIL"
         ),
         lower_order_control_residual=float(control_report["control_map_residual"]),
         PRINCIPAL_ACTION_CONTROL=(
             "LOCAL_RESPONSE_PASS_NOT_COMMON_ACTION"
-            if principal_report["status"] == "PASS"
-            else "FAIL"
+            if principal_report["status"] == "PASS" else "FAIL"
         ),
         principal_control_residual=float(principal_report["max_scaled_target_error"]),
         HOLONOMIC_F2_HESSIAN="3D_AUDIT_SUPERSEDED_BY_4D_Y_REACHABILITY",
         COMMON_ACTION_GATE="PENDING_FULL_ACTION_F3_F4",
-        holonomic_f2_hessian_max_normalized=max(
-            holonomic_report["max_normalized_chain_residual"].values()
-        ),
+        holonomic_f2_hessian_max_normalized=max(holonomic_report["max_normalized_chain_residual"].values()),
         lower_order_background_null=control_report["background_null_check"],
         SLOT_NORMALIZATION="PASS" if normalization else "FAIL",
         interface_values="PASS" if continuous else "FAIL",

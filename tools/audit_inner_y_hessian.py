@@ -4,7 +4,6 @@ by a background-null f2(phi,X,F,Y) Hessian deformation alone.
 
 This is a reachability diagnostic, not a closure certificate.
 """
-
 from __future__ import annotations
 
 import json
@@ -26,12 +25,8 @@ OUT = ROOT / "data/generated/inner_y_hessian"
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     reg = SOURCE_REGISTRY
-    background = pd.read_csv(ROOT / reg["inner_same_action_SVT_H"]["background"]).reset_index(
-        drop=True
-    )
-    current = pd.read_csv(ROOT / reg["inner_same_action_SVT_H"]["coeff_reference"]).reset_index(
-        drop=True
-    )
+    background = pd.read_csv(ROOT / reg["inner_same_action_SVT_H"]["background"]).reset_index(drop=True)
+    current = pd.read_csv(ROOT / reg["inner_same_action_SVT_H"]["coeff_reference"]).reset_index(drop=True)
     central = central_selected(ROOT).reset_index(drop=True)
     core = pd.read_csv(ROOT / reg["punctured_H_core"]["coeff_reference"]).reset_index(drop=True)
 
@@ -55,9 +50,7 @@ def main():
     for name in ("v1", "v4"):
         target.loc[zero_electric, name] = current.loc[zero_electric, name].to_numpy(float)
 
-    rhs = target[list(ALGEBRAIC_RESPONSES)].to_numpy(float) - current[
-        list(ALGEBRAIC_RESPONSES)
-    ].to_numpy(float)
+    rhs = target[list(ALGEBRAIC_RESPONSES)].to_numpy(float) - current[list(ALGEBRAIC_RESPONSES)].to_numpy(float)
     M = algebraic_response_matrix(background)
     records = []
     rank_counts: dict[int, int] = {}
@@ -96,24 +89,15 @@ def main():
         "max_local_rank": int(frame.local_rank.max()),
         "max_scaled_projection_residual": float(frame.max_scaled_projection_residual.max()),
         "median_scaled_projection_residual": float(frame.max_scaled_projection_residual.median()),
-        "worst_row": {
-            k: (int(v) if k in {"row", "local_rank"} else float(v))
-            for k, v in worst.to_dict().items()
-        },
+        "worst_row": {k: (int(v) if k in {"row", "local_rank"} else float(v)) for k, v in worst.to_dict().items()},
         "interpretation": (
-            "The Y sector supersedes the old 3D holonomy exclusion, but dimension counting "
-            "does not give six independent coefficient controls. "
-            "The current independently blended lower/principal target set violates the local "
-            "column space of the f2-only background-null response. "
-            "Full Inner closure therefore requires a joint action-jet construction with "
-            "additional mixed f3/f4 (and, if needed, lower Horndeski) control directions, "
-            "rather than separate coefficient targets."
+            "The Y sector supersedes the old 3D holonomy exclusion, but dimension counting does not give six independent coefficient controls. "
+            "The current independently blended lower/principal target set violates the local column space of the f2-only background-null response. "
+            "Full Inner closure therefore requires a joint action-jet construction with additional mixed f3/f4 (and, if needed, lower Horndeski) control directions, rather than separate coefficient targets."
         ),
         "inner_direct_41": "NOT_CERTIFIED",
     }
-    (OUT / "INNER_F2_4D_ALGEBRAIC_REACHABILITY.json").write_text(
-        json.dumps(report, indent=2) + "\n"
-    )
+    (OUT / "INNER_F2_4D_ALGEBRAIC_REACHABILITY.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps(report, indent=2))
 
 

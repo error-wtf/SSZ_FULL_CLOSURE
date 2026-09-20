@@ -1,42 +1,62 @@
 # Current release status — 2026-09-18
 
-This is the current reproducible intermediate state. It is not an Absolute Full Closure release.
+**Absolute Full Closure is not yet certified.**  The current best production
+candidate is now the explicit zero-vector HSVT member
+`P5 Horndeski global + epsilon_Y Y`, `epsilon_Y=0.01`.
 
-## Software status
+## Software
 
-- `pytest -q`: **96 / 96 PASS**.
-- New 4D `f2(phi,X,F,Y)` holonomic completion tests: PASS.
-- New Inner `f2`-only algebraic reachability audit: executed and preserved.
+All **103/103 tests PASS** when executed in bounded groups (52 unit, 2 regression,
+1 integration, 42 negative/guard, 1 release-auditor).
 
-## Corrected Inner finding
+## Production-member decision
 
-The previous 3D `(phi,X,F)` common-Hessian audit was incomplete because the SVT action
-contains the `Y` direction. The 4D background-null completion with transverse controls
-`(XX,XF,XY,FF,FY,YY)` is now implemented in
-`src/ssz_p5/production/holonomic_hessian_y.py`.
+The 2026-09-17 regional electric member is retained as a local research witness,
+but is rejected for an Absolute-Closure claim because:
 
-However, the six transverse Hessian entries do **not** become six independent coefficient
-controls on the static electric background. For the five algebraic channels
-`(v5,c3,v1,v4,c2)`, the audited local map has maximum rank **4**. The present lower/principal
-targets were built independently and have a maximum scaled projection residual of about
-`9.996e-1`; therefore they cannot be promoted as a single background-null `f2` action.
+- the direct finite-L Central kinetic gate fails for L=6,12,20,42; and
+- direct Appendix-A replay from one holonomic `f2+f3+f4` action reproduces `v5`
+  but not the frozen selected `c3/e3` pair.
 
-This does **not** imply that the Inner handover or P5 geometry is impossible. It means the
-control space must be enlarged to the full action jets already present in Appendix A, most
-importantly the mixed `f3/f4` directions, and the target should be constructed at action level
-rather than by independently blending six coefficient functions.
+The replacement candidate is `SSZ_P5_HSVT_PRODUCTION_CANDIDATE_2026-09-18.json`.
+Its full constructive audit has **56 PASS + 7 PASS_EXACT, zero failures**.
 
-Evidence:
+## Direct implementation status of the healthy candidate
 
-- `data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json`
-- `data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.csv`
+- Exterior direct finite-L KRGM: **PASS** at L=6,12,20,42,110,420,1000.
+- Strong-H carrier direct finite-L KRGM: **PASS** at all required L.
+- Punctured-Core exact Horndeski invariants: **PASS**.
+- Analytic-center / C-infinity handover: **PASS constructive**.
+- Punctured-Core direct 41-slot -> KRGM: **FAIL implementation**.  Historical
+  rounded/selected Core coefficients suffer the known deep-Core cancellation;
+  direct reducer eigenvalues cannot override the simultaneously positive exact
+  Horndeski invariants.  A covariant G4XX/G5 action emitter is still missing.
+- Global direct KRGM certificate: **OPEN, blocked by Core**.
+- Coupled QNM: **BLOCKED by design** until the same-operator global certificate exists.
+- v1.0.0 / Absolute Full Closure: **not released**.
 
-## Gates that remain unchanged
+See `ABSOLUTE_CLOSURE_ATTEMPT_2026-09-18.md` and
+`data/generated/absolute_attempt_2026-09-18/HSVT_DIRECT_REGION_AUDIT.json`.
 
-- `central_direct_41`: scoped normalization PASS.
-- Frozen selected Central finite-L kinetic gate: **FAIL** for `L=6,12,20,42`.
-- `inner_direct_41`: **NOT CERTIFIED**.
-- Core Direct-41 / analytic center / global Direct-41 / KRGSM / coupled QNM: pending.
-- `v1.0.0`: not released.
+## Generalized-psi Core descriptor checkpoint
 
-No tolerance or rejection gate was weakened.
+The former Core label `FAIL implementation deep-core cancellation` has been
+refined.  The direct 3-field Schur-reduced `M` block remains numerically
+ill-conditioned, but the constraint itself is no longer an unresolved blocker.
+A profile-aware eight-field descriptor now performs only the safe differential
+change of variables
+
+```text
+H2 = psi - (L a4/a3) h1 - (a1/a3) dphi'
+```
+
+and keeps `H0` and `h1` explicit instead of dividing by the deep-Core `D_h1`
+pivot.  On both the strong-H carrier and the punctured Core, for
+`L=6,12,20,42,110,420,1000`, the descriptor reproduces the closed JET9D8 H0
+constraint and cancels the forbidden `dphi''` and `h1'` terms.  The audit is
+`CORE_GENERALIZED_PSI_DESCRIPTOR = PASS`.
+
+The remaining implementation task is now narrower: linearize this validated
+constraint-preserving descriptor into the same-operator radial spectral/QNM
+problem without reintroducing an explicit deep-Core Schur complement.  QNM
+remains blocked until that descriptor-to-spectral equivalence is certified.

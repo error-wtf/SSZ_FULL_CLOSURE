@@ -1,0 +1,245 @@
+{
+  "witness_member": "P5 Horndeski + 0.01 Y, A0prime=0 (rejected globally on-shell; retained for descriptor/pencil audit)",
+  "radial_nodes_per_audit_pencil": 33,
+  "derivative_matrix": "local polynomial window=9 degree=8",
+  "time_variable": "lambda with d_t -> lambda",
+  "strong_H": {
+    "6": {
+      "status": "PASS",
+      "errors": {
+        "A0": {
+          "max_scaled": 8.049553122730389e-08,
+          "relative_frobenius": 2.156476084021258e-10
+        },
+        "A1": {
+          "max_scaled": 0.0,
+          "relative_frobenius": 0.0
+        },
+        "A2": {
+          "max_scaled": 9.387785582397845e-08,
+          "relative_frobenius": 8.988734832974726e-09
+        }
+      },
+      "dimension": 99
+    },
+    "12": {
+      "status": "PASS",
+      "errors": {
+        "A0": {
+          "max_scaled": 8.23985723761008e-08,
+          "relative_frobenius": 2.1818904618080892e-10
+        },
+        "A1": {
+          "max_scaled": 0.0,
+          "relative_frobenius": 0.0
+        },
+        "A2": {
+          "max_scaled": 2.456276986888436e-09,
+          "relative_frobenius": 6.770629644355485e-10
+        }
+      },
+      "dimension": 99
+    },
+    "20": {
+      "status": "PASS",
+      "errors": {
+        "A0": {
+          "max_scaled": 1.9938977121199438e-07,
+          "relative_frobenius": 2.1559508454527947e-10
+        },
+        "A1": {
+          "max_scaled": 0.0,
+          "relative_frobenius": 0.0
+        },
+        "A2": {
+          "max_scaled": 3.703546925314474e-10,
+          "relative_frobenius": 1.5528892691566692e-10
+        }
+      },
+      "dimension": 99
+    },
+    "42": {
+      "status": "PASS",
+      "errors": {
+        "A0": {
+          "max_scaled": 4.449744044628935e-08,
+          "relative_frobenius": 2.0546234893953895e-10
+        },
+        "A1": {
+          "max_scaled": 0.0,
+          "relative_frobenius": 0.0
+        },
+        "A2": {
+          "max_scaled": 2.2808051738645073e-10,
+          "relative_frobenius": 1.2756027125975597e-10
+        }
+      },
+      "dimension": 99
+    },
+    "110": {
+      "status": "PASS",
+      "errors": {
+        "A0": {
+          "max_scaled": 1.4269745666093003e-08,
+          "relative_frobenius": 1.539687541300497e-10
+        },
+        "A1": {
+          "max_scaled": 0.0,
+          "relative_frobenius": 0.0
+        },
+        "A2": {
+          "max_scaled": 1.6636741109952233e-11,
+          "relative_frobenius": 2.165074095794823e-11
+        }
+      },
+      "dimension": 99
+    },
+    "420": {
+      "status": "PASS",
+      "errors": {
+        "A0": {
+          "max_scaled": 1.453589301112868e-08,
+          "relative_frobenius": 6.400772798293904e-11
+        },
+        "A1": {
+          "max_scaled": 0.0,
+          "relative_frobenius": 0.0
+        },
+        "A2": {
+          "max_scaled": 1.7130377305409406e-10,
+          "relative_frobenius": 1.4868609580829534e-10
+        }
+      },
+      "dimension": 99
+    },
+    "1000": {
+      "status": "PASS",
+      "errors": {
+        "A0": {
+          "max_scaled": 1.4760211992266815e-08,
+          "relative_frobenius": 5.3128677776265514e-11
+        },
+        "A1": {
+          "max_scaled": 0.0,
+          "relative_frobenius": 0.0
+        },
+        "A2": {
+          "max_scaled": 5.336664267299817e-11,
+          "relative_frobenius": 4.607742305191389e-11
+        }
+      },
+      "dimension": 99
+    }
+  },
+  "deep_core": {
+    "6": {
+      "status": "PASS_STRUCTURE",
+      "x_min": 0.01,
+      "x_max": 1.4084507042253522,
+      "pencil": {
+        "dimension": 264,
+        "nnz_A0": 3661,
+        "nnz_A1": 696,
+        "nnz_A2": 198,
+        "rank_A2": 90,
+        "singular_kinetic_expected": true
+      },
+      "linearized_dimension": 528,
+      "finite_entries": true
+    },
+    "12": {
+      "status": "PASS_STRUCTURE",
+      "x_min": 0.01,
+      "x_max": 1.4084507042253522,
+      "pencil": {
+        "dimension": 264,
+        "nnz_A0": 3661,
+        "nnz_A1": 696,
+        "nnz_A2": 198,
+        "rank_A2": 90,
+        "singular_kinetic_expected": true
+      },
+      "linearized_dimension": 528,
+      "finite_entries": true
+    },
+    "20": {
+      "status": "PASS_STRUCTURE",
+      "x_min": 0.01,
+      "x_max": 1.4084507042253522,
+      "pencil": {
+        "dimension": 264,
+        "nnz_A0": 3677,
+        "nnz_A1": 696,
+        "nnz_A2": 198,
+        "rank_A2": 90,
+        "singular_kinetic_expected": true
+      },
+      "linearized_dimension": 528,
+      "finite_entries": true
+    },
+    "42": {
+      "status": "PASS_STRUCTURE",
+      "x_min": 0.01,
+      "x_max": 1.4084507042253522,
+      "pencil": {
+        "dimension": 264,
+        "nnz_A0": 3629,
+        "nnz_A1": 696,
+        "nnz_A2": 198,
+        "rank_A2": 90,
+        "singular_kinetic_expected": true
+      },
+      "linearized_dimension": 528,
+      "finite_entries": true
+    },
+    "110": {
+      "status": "PASS_STRUCTURE",
+      "x_min": 0.01,
+      "x_max": 1.4084507042253522,
+      "pencil": {
+        "dimension": 264,
+        "nnz_A0": 3709,
+        "nnz_A1": 696,
+        "nnz_A2": 198,
+        "rank_A2": 90,
+        "singular_kinetic_expected": true
+      },
+      "linearized_dimension": 528,
+      "finite_entries": true
+    },
+    "420": {
+      "status": "PASS_STRUCTURE",
+      "x_min": 0.01,
+      "x_max": 1.4084507042253522,
+      "pencil": {
+        "dimension": 264,
+        "nnz_A0": 3709,
+        "nnz_A1": 696,
+        "nnz_A2": 198,
+        "rank_A2": 90,
+        "singular_kinetic_expected": true
+      },
+      "linearized_dimension": 528,
+      "finite_entries": true
+    },
+    "1000": {
+      "status": "PASS_STRUCTURE",
+      "x_min": 0.01,
+      "x_max": 1.4084507042253522,
+      "pencil": {
+        "dimension": 264,
+        "nnz_A0": 3725,
+        "nnz_A1": 696,
+        "nnz_A2": 198,
+        "rank_A2": 90,
+        "singular_kinetic_expected": true
+      },
+      "linearized_dimension": 528,
+      "finite_entries": true
+    }
+  },
+  "STRONG_H_RADIAL_PENCIL_EQUIVALENCE": "PASS",
+  "DEEP_CORE_DESCRIPTOR_PENCIL": "PASS_STRUCTURE",
+  "PHYSICAL_QNM_BOUNDARY_CONDITIONS": "DEFERRED_UNTIL_ONSHELL_ELECTRIC_HYBRID_IS_PROMOTED",
+  "ABSOLUTE_QNM_CERTIFICATE": "BLOCKED_BY_MISSING_PROMOTED_GLOBAL_ACTION_MEMBER"
+}

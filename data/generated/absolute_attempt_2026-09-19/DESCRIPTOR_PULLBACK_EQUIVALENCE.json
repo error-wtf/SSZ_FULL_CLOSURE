@@ -1,0 +1,642 @@
+{
+  "witness_member": "P5 Horndeski + 0.01 Y, A0prime=0 (rejected globally on-shell; retained for representation audit)",
+  "region": "well-conditioned Strong-H carrier",
+  "identity": "T^dagger P_generalized_psi_descriptor T == P_established_3field_reducer",
+  "derivative_service": "JET9D8 window=9 degree=8",
+  "reason_for_operator_pullback": "A naive discretize-then-Schur operation is not a valid equivalence test for the H0 Lagrange-multiplier DAE. The differential constraint map must be applied before reduction.",
+  "multipoles": {
+    "6": {
+      "L": 6.0,
+      "operator_keys_descriptor_pullback": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "operator_keys_reference": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "per_key": {
+        "(0, 0)": {
+          "max_scaled": 4.158678866434725e-05,
+          "p99_scaled": 8.383047830691658e-06,
+          "relative_frobenius": 4.144760799646407e-07
+        },
+        "(0, 1)": {
+          "max_scaled": 9.386475659397967e-09,
+          "p99_scaled": 2.3508315849518666e-10,
+          "relative_frobenius": 1.8945224340914003e-10
+        },
+        "(0, 2)": {
+          "max_scaled": 4.163336342344337e-16,
+          "p99_scaled": 1.1102230246251565e-16,
+          "relative_frobenius": 1.733071508505123e-16
+        },
+        "(2, 0)": {
+          "max_scaled": 2.5193134801284095e-10,
+          "p99_scaled": 7.725716663631317e-12,
+          "relative_frobenius": 2.609965961811765e-12
+        },
+        "(2, 1)": {
+          "max_scaled": 6.377827199562046e-11,
+          "p99_scaled": 4.4441943107296443e-13,
+          "relative_frobenius": 7.204707664216942e-11
+        },
+        "(2, 2)": {
+          "max_scaled": 1.8769856312602684e-16,
+          "p99_scaled": 2.808985396493432e-17,
+          "relative_frobenius": 1.6483670632141865e-15
+        }
+      },
+      "principal_max_scaled": 9.386475659397967e-09,
+      "P00_relative_frobenius": 4.144760799646407e-07,
+      "pass": true
+    },
+    "12": {
+      "L": 12.0,
+      "operator_keys_descriptor_pullback": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "operator_keys_reference": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "per_key": {
+        "(0, 0)": {
+          "max_scaled": 2.5151479170815172e-05,
+          "p99_scaled": 4.669027343062842e-06,
+          "relative_frobenius": 5.816506793250421e-07
+        },
+        "(0, 1)": {
+          "max_scaled": 1.5133348907347965e-08,
+          "p99_scaled": 1.164201268721858e-10,
+          "relative_frobenius": 2.1530559075111392e-10
+        },
+        "(0, 2)": {
+          "max_scaled": 1.5265566588595902e-16,
+          "p99_scaled": 7.632783294297951e-17,
+          "relative_frobenius": 1.877419359718779e-16
+        },
+        "(2, 0)": {
+          "max_scaled": 6.123615503561552e-11,
+          "p99_scaled": 1.9384025634616736e-12,
+          "relative_frobenius": 9.710749107384458e-13
+        },
+        "(2, 1)": {
+          "max_scaled": 1.6678886864098692e-12,
+          "p99_scaled": 1.6247002270999016e-13,
+          "relative_frobenius": 7.339115674660675e-12
+        },
+        "(2, 2)": {
+          "max_scaled": 3.469446951953614e-17,
+          "p99_scaled": 1.1300868410400701e-17,
+          "relative_frobenius": 4.769535711604134e-16
+        }
+      },
+      "principal_max_scaled": 1.5133348907347965e-08,
+      "P00_relative_frobenius": 5.816506793250421e-07,
+      "pass": true
+    },
+    "20": {
+      "L": 20.0,
+      "operator_keys_descriptor_pullback": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "operator_keys_reference": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "per_key": {
+        "(0, 0)": {
+          "max_scaled": 4.609708985725547e-05,
+          "p99_scaled": 3.9361847349849185e-06,
+          "relative_frobenius": 4.3431191614179887e-07
+        },
+        "(0, 1)": {
+          "max_scaled": 9.134522522061261e-09,
+          "p99_scaled": 7.027862902742055e-11,
+          "relative_frobenius": 2.0601943859510165e-10
+        },
+        "(0, 2)": {
+          "max_scaled": 1.8041124150158794e-16,
+          "p99_scaled": 6.245004513516506e-17,
+          "relative_frobenius": 2.532236864968963e-16
+        },
+        "(2, 0)": {
+          "max_scaled": 4.2842396297260166e-12,
+          "p99_scaled": 1.3341205917782915e-12,
+          "relative_frobenius": 7.758586634973648e-13
+        },
+        "(2, 1)": {
+          "max_scaled": 4.351134872592149e-13,
+          "p99_scaled": 1.2203622469556716e-13,
+          "relative_frobenius": 4.913932778855172e-12
+        },
+        "(2, 2)": {
+          "max_scaled": 3.113750193841472e-17,
+          "p99_scaled": 8.673617379884035e-18,
+          "relative_frobenius": 3.304499509091047e-16
+        }
+      },
+      "principal_max_scaled": 9.134522522061261e-09,
+      "P00_relative_frobenius": 4.3431191614179887e-07,
+      "pass": true
+    },
+    "42": {
+      "L": 42.0,
+      "operator_keys_descriptor_pullback": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "operator_keys_reference": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "per_key": {
+        "(0, 0)": {
+          "max_scaled": 2.212300280068913e-05,
+          "p99_scaled": 1.7918055779614418e-06,
+          "relative_frobenius": 1.2794817736374785e-07
+        },
+        "(0, 1)": {
+          "max_scaled": 3.936431403062102e-09,
+          "p99_scaled": 3.34212829633529e-11,
+          "relative_frobenius": 1.4594683174474734e-10
+        },
+        "(0, 2)": {
+          "max_scaled": 1.942890293094024e-16,
+          "p99_scaled": 6.245004513516506e-17,
+          "relative_frobenius": 4.2053184719089636e-16
+        },
+        "(2, 0)": {
+          "max_scaled": 4.163808187129803e-12,
+          "p99_scaled": 1.1413664458004295e-12,
+          "relative_frobenius": 1.1572959419209225e-12
+        },
+        "(2, 1)": {
+          "max_scaled": 2.0164707162521017e-13,
+          "p99_scaled": 6.446217023821973e-14,
+          "relative_frobenius": 2.544338790585981e-12
+        },
+        "(2, 2)": {
+          "max_scaled": 1.2665956517542181e-17,
+          "p99_scaled": 4.410043344825374e-18,
+          "relative_frobenius": 1.7315213461967142e-16
+        }
+      },
+      "principal_max_scaled": 3.936431403062102e-09,
+      "P00_relative_frobenius": 1.2794817736374785e-07,
+      "pass": true
+    },
+    "110": {
+      "L": 110.0,
+      "operator_keys_descriptor_pullback": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "operator_keys_reference": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "per_key": {
+        "(0, 0)": {
+          "max_scaled": 5.054693862442707e-06,
+          "p99_scaled": 4.813342293506017e-07,
+          "relative_frobenius": 2.7202985595112892e-08
+        },
+        "(0, 1)": {
+          "max_scaled": 8.23569656915879e-10,
+          "p99_scaled": 1.3007004362464174e-11,
+          "relative_frobenius": 4.4506161451232657e-11
+        },
+        "(0, 2)": {
+          "max_scaled": 1.8041124150158794e-16,
+          "p99_scaled": 6.938893903907228e-17,
+          "relative_frobenius": 6.855160105548351e-16
+        },
+        "(2, 0)": {
+          "max_scaled": 8.879730284405696e-12,
+          "p99_scaled": 1.2175893626675944e-12,
+          "relative_frobenius": 1.8613636495796587e-12
+        },
+        "(2, 1)": {
+          "max_scaled": 8.549846154178561e-14,
+          "p99_scaled": 2.5828765252505112e-14,
+          "relative_frobenius": 9.984969374957644e-13
+        },
+        "(2, 2)": {
+          "max_scaled": 5.9858254106175736e-18,
+          "p99_scaled": 1.789483457495493e-18,
+          "relative_frobenius": 7.049752470558762e-17
+        }
+      },
+      "principal_max_scaled": 8.23569656915879e-10,
+      "P00_relative_frobenius": 2.7202985595112892e-08,
+      "pass": true
+    },
+    "420": {
+      "L": 420.0,
+      "operator_keys_descriptor_pullback": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "operator_keys_reference": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "per_key": {
+        "(0, 0)": {
+          "max_scaled": 1.0600655255225221e-06,
+          "p99_scaled": 1.0959598627969737e-07,
+          "relative_frobenius": 2.3221438048363265e-09
+        },
+        "(0, 1)": {
+          "max_scaled": 6.3483884815696e-10,
+          "p99_scaled": 5.8841909122975285e-12,
+          "relative_frobenius": 3.253445134268646e-11
+        },
+        "(0, 2)": {
+          "max_scaled": 2.498001805406602e-16,
+          "p99_scaled": 6.938893903907228e-17,
+          "relative_frobenius": 8.39222815796779e-16
+        },
+        "(2, 0)": {
+          "max_scaled": 5.139888514804625e-12,
+          "p99_scaled": 1.212546174578225e-12,
+          "relative_frobenius": 1.9184026304938326e-12
+        },
+        "(2, 1)": {
+          "max_scaled": 1.1639618755654589e-13,
+          "p99_scaled": 7.051073025092928e-15,
+          "relative_frobenius": 2.9317044838408097e-13
+        },
+        "(2, 2)": {
+          "max_scaled": 1.409462824231156e-18,
+          "p99_scaled": 4.938490881867132e-19,
+          "relative_frobenius": 1.8885893409735908e-17
+        }
+      },
+      "principal_max_scaled": 6.3483884815696e-10,
+      "P00_relative_frobenius": 2.3221438048363265e-09,
+      "pass": true
+    },
+    "1000": {
+      "L": 1000.0,
+      "operator_keys_descriptor_pullback": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "operator_keys_reference": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "per_key": {
+        "(0, 0)": {
+          "max_scaled": 4.2494685400506904e-07,
+          "p99_scaled": 4.500932880015277e-08,
+          "relative_frobenius": 4.211025111395595e-10
+        },
+        "(0, 1)": {
+          "max_scaled": 9.393748001684799e-10,
+          "p99_scaled": 5.1128018485613334e-12,
+          "relative_frobenius": 4.6324956150940105e-11
+        },
+        "(0, 2)": {
+          "max_scaled": 2.3592239273284576e-16,
+          "p99_scaled": 6.938893903907228e-17,
+          "relative_frobenius": 8.271177973844047e-16
+        },
+        "(2, 0)": {
+          "max_scaled": 1.3823497901910287e-11,
+          "p99_scaled": 1.300410890081595e-12,
+          "relative_frobenius": 2.047163969716871e-12
+        },
+        "(2, 1)": {
+          "max_scaled": 3.625644954081869e-14,
+          "p99_scaled": 2.9195759082705944e-15,
+          "relative_frobenius": 1.154526475793227e-13
+        },
+        "(2, 2)": {
+          "max_scaled": 7.091471551430676e-19,
+          "p99_scaled": 2.1923097750827467e-19,
+          "relative_frobenius": 8.237379282650713e-18
+        }
+      },
+      "principal_max_scaled": 9.393748001684799e-10,
+      "P00_relative_frobenius": 4.211025111395595e-10,
+      "pass": true
+    }
+  },
+  "DESCRIPTOR_TO_KRGSM_PULLBACK": "PASS",
+  "DEEP_CORE_POLICY": "KEEP_DESCRIPTOR_DAE_UNREDUCED_NO_EXPLICIT_D_h1_INVERSE",
+  "QNM_STATUS": "REPRESENTATION_VALIDATED; PRODUCTION_QNM_BLOCKED_UNTIL_ONSHELL_ELECTRIC_HYBRID_IS_PROMOTED"
+}

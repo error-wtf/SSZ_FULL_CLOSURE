@@ -1,0 +1,17 @@
+[
+  {
+    "member": "regional_electric_member_2026_09_17",
+    "status": "REJECTED_FOR_ABSOLUTE_CLOSURE",
+    "reason": "CENTRAL_FINITE_L_KINETIC_FAIL; SELECTED_C3_E3_NOT_COMMON_DIRECT_ACTION_REPLAY"
+  },
+  {
+    "member": "zero_vector_epsilon_y_member_2026_09_18",
+    "status": "REJECTED_AS_GLOBAL_ONSHELL_MEMBER",
+    "reason": "INNER_LIGHT_RING_EQ85_REQUIRES_NEGATIVE_TENSOR_F_FOR_A0PRIME_ZERO_WITH_POSITIVE_H"
+  },
+  {
+    "member": "SSZ_P5_ELECTRIC_HYBRID_SEARCH_CANDIDATE_2026-09-19.json",
+    "status": "SEARCH_OPEN",
+    "reason": "next_gate=JOINT_ELECTRIC_BACKGROUND_PLUS_HORNDESKI_ACTION_SOLVE"
+  }
+]

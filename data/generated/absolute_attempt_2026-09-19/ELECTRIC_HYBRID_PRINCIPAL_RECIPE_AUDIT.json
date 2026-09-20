@@ -1,0 +1,75 @@
+{
+  "status": "FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED",
+  "scope": "central 0.62<u<0.70 finite-L kinetic/pivot response of the stored primitive-control recipe",
+  "validation": {
+    "constraint_pivots_nonzero": true,
+    "high_L_positive_42_110_420_1000": true,
+    "all_required_L_positive": false
+  },
+  "scans": [
+    {
+      "L": 6,
+      "min_eig_K": -3.242946010051166,
+      "u": 0.6999287321830457,
+      "x": 1.4287168879052097,
+      "min_abs_Dh1": 151.0579218612038,
+      "min_abs_auxiliary_determinant": 441.87942773832293,
+      "pass_kinetic": false
+    },
+    {
+      "L": 12,
+      "min_eig_K": -0.13099372676010723,
+      "u": 0.6999287321830457,
+      "x": 1.4287168879052097,
+      "min_abs_Dh1": 556.9131348819283,
+      "min_abs_auxiliary_determinant": 1767.517710953292,
+      "pass_kinetic": false
+    },
+    {
+      "L": 20,
+      "min_eig_K": -0.012877363497566269,
+      "u": 0.6999812453113278,
+      "x": 1.4286097044717736,
+      "min_abs_Dh1": 1494.4047607133143,
+      "min_abs_auxiliary_determinant": 4909.771419314698,
+      "pass_kinetic": false
+    },
+    {
+      "L": 42,
+      "min_eig_K": 0.0012545874973988347,
+      "u": 0.6999812453113278,
+      "x": 1.4286097044717736,
+      "min_abs_Dh1": 6408.148567378528,
+      "min_abs_auxiliary_determinant": 21652.09195917783,
+      "pass_kinetic": true
+    },
+    {
+      "L": 110,
+      "min_eig_K": 0.00046476833515164125,
+      "u": 0.6999812453113278,
+      "x": 1.4286097044717736,
+      "min_abs_Dh1": 43253.85371835739,
+      "min_abs_auxiliary_determinant": 148520.58543426963,
+      "pass_kinetic": true
+    },
+    {
+      "L": 420,
+      "min_eig_K": 3.988493460747678e-05,
+      "u": 0.6999812453113278,
+      "x": 1.4286097044717736,
+      "min_abs_Dh1": 625909.5126805278,
+      "min_abs_auxiliary_determinant": 2165209.195917784,
+      "pass_kinetic": true
+    },
+    {
+      "L": 1000,
+      "min_eig_K": 7.316130648347141e-06,
+      "u": 0.6999812453113278,
+      "x": 1.4286097044717736,
+      "min_abs_Dh1": 3542794.478818028,
+      "min_abs_auxiliary_determinant": 12274428.548286732,
+      "pass_kinetic": true
+    }
+  ],
+  "interpretation": "The stored Horndeski primitive controls strongly reduce the old Central kinetic failure while preserving large constraint-pivot margins, but L=6,12,20 remain negative near the upper Central edge. Further principal-only shaping is not promoted as closure; the next control must come from the electric/background action sector."
+}

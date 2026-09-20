@@ -1,0 +1,116 @@
+[
+  {
+    "gate": "ABSOLUTE_FULL_CLOSURE",
+    "status": "NOT_CERTIFIED",
+    "evidence": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "note": ""
+  },
+  {
+    "gate": "SOFTWARE_TESTS",
+    "status": "115_PASS_GROUPED",
+    "evidence": "CURRENT_RELEASE_STATUS_2026-09-19.md",
+    "note": ""
+  },
+  {
+    "gate": "P5_GEOMETRY",
+    "status": "PASS",
+    "evidence": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "note": "reusable infrastructure"
+  },
+  {
+    "gate": "DIRECT_41_FRAMEWORK",
+    "status": "PASS_IMPLEMENTED",
+    "evidence": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "note": "reusable infrastructure"
+  },
+  {
+    "gate": "JET9D8",
+    "status": "PASS",
+    "evidence": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "note": "reusable infrastructure"
+  },
+  {
+    "gate": "CORE_CONDITIONED_PRINCIPAL_INVARIANTS",
+    "status": "PASS_EXACT_CONDITIONED",
+    "evidence": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "note": "reusable infrastructure"
+  },
+  {
+    "gate": "GENERALIZED_PSI_DESCRIPTOR",
+    "status": "PASS",
+    "evidence": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "note": "reusable infrastructure"
+  },
+  {
+    "gate": "DESCRIPTOR_PULLBACK_EQUIVALENCE",
+    "status": "PASS_L6_L12_L20_L42_L110_L420_L1000",
+    "evidence": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "note": "reusable infrastructure"
+  },
+  {
+    "gate": "RADIAL_DESCRIPTOR_DAE_PENCIL",
+    "status": "PASS_STRUCTURE",
+    "evidence": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "note": "reusable infrastructure"
+  },
+  {
+    "gate": "ACTIVE_SEARCH",
+    "status": "SEARCH_OPEN",
+    "evidence": "SSZ_P5_ELECTRIC_HYBRID_SEARCH_CANDIDATE_2026-09-19.json",
+    "note": ""
+  },
+  {
+    "gate": "HORNDESKI_PRINCIPAL_FEASIBILITY",
+    "status": "PARTIAL_PASS_NOT_BACKGROUND_CERTIFIED",
+    "evidence": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RECIPE_AUDIT.json",
+    "note": ""
+  },
+  {
+    "gate": "QNM",
+    "status": "BLOCKED_UNTIL_GLOBAL_SAME_OPERATOR_KRGSM",
+    "evidence": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "note": ""
+  },
+  {
+    "gate": "ZERO_VECTOR_LIGHT_RING_AUDIT",
+    "status": "PASS_DIAGNOSTIC_ZERO_VECTOR_EXCLUDED_AT_INNER_LIGHT_RING",
+    "evidence": "data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json",
+    "note": "Local necessary on-shell Eq.85 diagnostic; not a no-go theorem for electric SVT members or P5 geometry"
+  },
+  {
+    "gate": "DESCRIPTOR_PULLBACK_EQUIVALENCE",
+    "status": "PASS",
+    "evidence": "data/generated/absolute_attempt_2026-09-19/DESCRIPTOR_PULLBACK_EQUIVALENCE.json",
+    "note": "well-conditioned Strong-H carrier"
+  },
+  {
+    "gate": "RADIAL_DESCRIPTOR_PENCIL_AUDIT",
+    "status": "PASS",
+    "evidence": "data/generated/absolute_attempt_2026-09-19/RADIAL_DESCRIPTOR_PENCIL_AUDIT.json",
+    "note": ""
+  },
+  {
+    "gate": "CORE_GENERALIZED_PSI_DESCRIPTOR_AUDIT",
+    "status": "PASS",
+    "evidence": "data/generated/absolute_attempt_2026-09-18/CORE_GENERALIZED_PSI_DESCRIPTOR_AUDIT.json",
+    "note": ""
+  },
+  {
+    "gate": "INNER_F2_4D_ALGEBRAIC_REACHABILITY",
+    "status": "F2_ONLY_TARGET_SET_NOT_REACHABLE",
+    "evidence": "data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json",
+    "note": "background-null f2(phi,X,F,Y) Hessian deformation only"
+  },
+  {
+    "gate": "CENTRAL_DIRECT_41_CERTIFICATE",
+    "status": "UNCLASSIFIED",
+    "evidence": "data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json",
+    "note": "central_exact_SVT"
+  },
+  {
+    "gate": "INNER_DIRECT_41_CERTIFICATE",
+    "status": "FAIL",
+    "evidence": "data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json",
+    "note": "inner_same_action_SVT_H"
+  }
+]

@@ -3,9 +3,9 @@ a1,0.0,0.0,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and commo
 a2,-17.30635970894099,-17.30635970894099,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 a3,-0.237662911609577,-0.237662911609577,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 a4,0.1687406672427415,0.1687406672427415,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
-a5,-2031.0315818269985,696.6338853247729,2727.6654671517713,3.9154935248091256,3.9154935248091256,1.4084507042253522,15692.11723312634,4700.758271894513,FAIL,corrected derivative-of-product convention,action-realized lower-order/holonomic completion
+a5,-2031.031581827367,696.6338853247729,2727.66546715214,3.915493524809655,3.915493524809655,1.4084507042253522,15692.117233125924,4700.7582718969015,FAIL,corrected derivative-of-product convention,action-realized lower-order/holonomic completion
 a6,6.13781144166901,6.13781144166901,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
-a7,-658.5275489321342,-658.5275489321342,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
+a7,-658.5275489321347,-658.5275489321347,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 a8,-0.2168304015608256,-0.2168304015608256,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 a9,6.949960577871813,6.949960577871813,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 b1,0.2882437128285604,0.2882437128285604,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
@@ -14,26 +14,26 @@ b3,118.2512659122288,118.2512659122288,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative c
 b4,1.623908241287762,1.623908241287762,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 b5,-0.5764874256571211,-0.5764874256571211,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 c1,0.0,0.0,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
-c2,-42.731282150351646,-42.731282150351646,0.0,0.0,0.0,,0.0,0.0,PASS,selected f3XX versus the original principal coefficient/Hessian selection,preserve
-c3,337.2044016680053,337.2044016680053,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,action-realized lower-order/holonomic completion
+c2,-42.73128215035176,-42.73128215035176,0.0,0.0,0.0,,0.0,0.0,PASS,selected f3XX versus the original principal coefficient/Hessian selection,preserve
+c3,337.2044016680054,337.2044016680054,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,action-realized lower-order/holonomic completion
 c4,6.260952744772892,6.260952744772892,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 c5,-16.982907422254495,-16.982907422254495,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
-c6,327.80877313241393,327.80877313241393,0.0,0.0,0.0,,0.0,0.0,PASS,c2 propagated into c6,preserve
+c6,327.8087731324141,327.8087731324141,0.0,0.0,0.0,,0.0,0.0,PASS,c2 propagated into c6,preserve
 d1,0.2882437128285604,0.2882437128285604,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 d2,3.620666820007176,3.620666820007176,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 d3,371.0288029575941,371.0288029575941,0.0,0.0,0.0,,0.0,0.0,PASS,partial_phi(v6) versus the replay's total radial derivative/phiprime selector,preserve
 d4,3.2776850848130503,3.2776850848130503,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 e1,165.17195474626138,165.17195474626138,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
-e2,-29.45550226332226,-29.45550226332226,0.0,0.0,0.0,,0.0,0.0,PASS,c2 propagated into e2,preserve
-e3,323.0873587661293,323.0873587661293,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,action-realized lower-order/holonomic completion
+e2,-29.45550226332235,-29.45550226332235,0.0,0.0,0.0,,0.0,0.0,PASS,c2 propagated into e2,preserve
+e3,323.0873587659583,323.0873587659583,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,action-realized lower-order/holonomic completion
 e4,1354.2726271631511,1354.2726271631511,0.0,0.0,0.0,,0.0,0.0,PASS,"v13, c4_prime, v6_prime and alpha6_prime",preserve
-v1,643.5534218779832,643.5534218779832,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
-v2,906.4132702506804,906.4132702506804,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
-v3,-935.5385930676084,-935.5385930676084,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
+v1,643.5534218779836,643.5534218779836,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
+v2,906.413270250681,906.413270250681,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
+v3,-935.538593067609,-935.538593067609,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 v4,0.0,0.0,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
-v5,-3873.246322762168,-3873.246322762168,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,action-realized lower-order/holonomic completion
+v5,-3873.246322762169,-3873.246322762169,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,action-realized lower-order/holonomic completion
 v6,20.67897920001893,20.67897920001893,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
-v7,1.525143336883436,1.5251433368834344,1.5543122344752192e-15,1.0191253483435794e-15,1.0191253483435794e-15,,2.2737367544323206e-13,1.0191253483435794e-15,PASS,authoritative central coefficient and common convention,action-realized lower-order/holonomic completion
+v7,1.52514333689797,1.5251433368979688,1.3322676295501878e-15,8.735360128576005e-16,8.735360128576005e-16,,1.7053025658242404e-13,8.735360128576005e-16,PASS,authoritative central coefficient and common convention,action-realized lower-order/holonomic completion
 v8,-21.92100969177861,-21.92100969177861,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve
 v9,0.0100053618672969,0.0100053618672969,0.0,0.0,0.0,,0.0,0.0,PASS,stored odd alpha4 and radial background jets,preserve
 v10,-2.2374177338788725,-2.2374177338788725,0.0,0.0,0.0,,0.0,0.0,PASS,authoritative central coefficient and common convention,preserve

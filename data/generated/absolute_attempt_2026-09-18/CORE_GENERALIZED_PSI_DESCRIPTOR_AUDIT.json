@@ -1,0 +1,734 @@
+{
+  "candidate": "P5 Horndeski + 0.01 Y, A0prime=0",
+  "derivative_service": "JET9D8 window=9 degree=8",
+  "purpose": "Avoid explicit deep-core D_h1 inverse by retaining H0 and h1 as a descriptor constraint pair.",
+  "regions": {
+    "carrier": {
+      "rows": 5000,
+      "multipoles": {
+        "6": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 4.834466726854262e-09,
+          "max_forbidden_H0_term": 1.1102230246251565e-16,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "12": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 4.8344667256422776e-09,
+          "max_forbidden_H0_term": 2.220446049250313e-16,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "20": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 4.834466724026299e-09,
+          "max_forbidden_H0_term": 4.440892098500626e-16,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "42": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 4.834466719582357e-09,
+          "max_forbidden_H0_term": 8.881784197001252e-16,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "110": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 4.834466705846539e-09,
+          "max_forbidden_H0_term": 1.3877787807814457e-17,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "420": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 4.834466643227367e-09,
+          "max_forbidden_H0_term": 1.3877787807814457e-17,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "1000": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 4.834466526068921e-09,
+          "max_forbidden_H0_term": 2.842170943040401e-14,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        }
+      }
+    },
+    "core": {
+      "rows": 3299,
+      "multipoles": {
+        "6": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 5.859002727426343e-10,
+          "max_forbidden_H0_term": 1.7763568394002505e-15,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "12": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 6.558681375778974e-10,
+          "max_forbidden_H0_term": 1.7763568394002505e-15,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "20": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 3.703200281146568e-10,
+          "max_forbidden_H0_term": 1.7763568394002505e-15,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "42": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 7.191892636981834e-10,
+          "max_forbidden_H0_term": 1.7763568394002505e-15,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "110": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 5.203509666108555e-10,
+          "max_forbidden_H0_term": 3.552713678800501e-15,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "420": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 3.757382796347863e-10,
+          "max_forbidden_H0_term": 1.4210854715202004e-14,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        },
+        "1000": {
+          "status": "PASS",
+          "max_closed_formula_scaled_difference": 1.977445901468755e-09,
+          "max_forbidden_H0_term": 2.842170943040401e-14,
+          "H0_square_max_abs": 0.0,
+          "operator_structure": {
+            "fields": [
+              "H0",
+              "H1",
+              "H2",
+              "h1",
+              "dphi",
+              "dA0",
+              "dA1",
+              "V"
+            ],
+            "operator_keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_total_derivative_order": 3,
+            "max_time_derivative_order": 2,
+            "max_radial_derivative_order": 2
+          }
+        }
+      }
+    }
+  },
+  "CORE_GENERALIZED_PSI_DESCRIPTOR": "PASS",
+  "DIRECT_CORE_KRGM": "OPEN_DESCRIPTOR_DAE_SPECTRAL_LINEARIZATION",
+  "COUPLED_QNM": "BLOCKED_BY_DESCRIPTOR_TO_SPECTRAL_OPERATOR"
+}

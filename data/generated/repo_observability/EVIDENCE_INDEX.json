@@ -1,0 +1,247 @@
+[
+  {
+    "path": "ABSOLUTE_CLOSURE_LEDGER.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 2051,
+    "sha256": "2a285fc8a745dbd5cf2a35a352bcbdb1b6c08565ecec6cebe77df54fe7d227c6"
+  },
+  {
+    "path": "CLOSURE_AUDIT_REPORT.json",
+    "status": "PASS",
+    "scope": "",
+    "bytes": 17751,
+    "sha256": "634d35c7ffb7e825a707ea12e3df33770507d9e2889152d70c9aa2b97c9ac953"
+  },
+  {
+    "path": "PACKAGING_STATUS.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 678,
+    "sha256": "07793fb6e5c928948e1dc221424665843e7876630ad334499a91012dbdda07d4"
+  },
+  {
+    "path": "STRICT_DIRECT_AUDIT_REPORT.json",
+    "status": "PASS",
+    "scope": "",
+    "bytes": 15369,
+    "sha256": "00b43d73d2ede566586fc92d6968d23858714d37d978b10c6e72fb7fd243446f"
+  },
+  {
+    "path": "UPDATED_WORKING_STATUS_2026-09-18.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 1230,
+    "sha256": "fbeaf3eaf998a0b7064bf9d69ba886f79682b69039a71388b572e3a88ec25c30"
+  },
+  {
+    "path": "build/FROZEN_ONSHELL_IDENTITY.json",
+    "status": "FAIL_ON_SHELL_IDENTITY",
+    "scope": "Necessary frozen-carrier background identity, not a spectrum or theory no-go",
+    "bytes": 3573,
+    "sha256": "985e7bff30054b23fc244f56bb3aa977a8567ade6d10fd360f238d8255167e3d"
+  },
+  {
+    "path": "build/REGIONAL_CENTRAL_KINETIC_GATE.json",
+    "status": "FAIL",
+    "scope": "necessary central finite-L kinetic gate only",
+    "bytes": 11447,
+    "sha256": "e76ba208a0fed9add833780ffb18501b6e00079f1df0207f95fa53f7784bbf2a"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-18/CENTRAL_FULL_ACTION_LOWER_AUDIT.json",
+    "status": "CENTRAL_SELECTED_LOWER_NOT_SINGLE_ACTION_REPLAY",
+    "scope": "direct Appendix-A lower replay from one holonomic f2+f3+f4 action",
+    "bytes": 542,
+    "sha256": "8849c1e88db339e49c510c8d7916118504b56026bc504cd159a53eb1d53c2acb"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-18/CORE_GENERALIZED_PSI_DESCRIPTOR_AUDIT.json",
+    "status": "PASS",
+    "scope": "",
+    "bytes": 16501,
+    "sha256": "087fff44c0c17e89078443896a15a9791fb4824ecab47277d038d06a8dbe2f98"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-18/HSVT_DIRECT_REGION_AUDIT.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 3442,
+    "sha256": "5ce2174edcde9fe6b56426ede7e0970f208f09f8f651d3c44098fb7744eaaf52"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/DESCRIPTOR_PULLBACK_EQUIVALENCE.json",
+    "status": "PASS",
+    "scope": "well-conditioned Strong-H carrier",
+    "bytes": 14219,
+    "sha256": "c61a6c5007e0efd8e7ad883c98ab109f00c698ddfa3ea525a1b68d2a3d663670"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_HORNDESKI_PRIMITIVE_BASIS.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 375,
+    "sha256": "7373faf5e716801d917f1d8cfa71e527bf0f4a6f58f50317e5f0ec38a5a56c50"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_LATE_RAMP_FEASIBILITY.json",
+    "status": "PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED",
+    "scope": "",
+    "bytes": 1542,
+    "sha256": "71ac3b1172b7b9297f9fdd3fe45c9be3d176621d865a89cb75b12ef68a7ca8ac"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_LINEAR_FEASIBILITY.json",
+    "status": "PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED",
+    "scope": "",
+    "bytes": 1436,
+    "sha256": "18bc4488756f7c1fb68391d4aefcfdfaf0b25b8610da7e8baee8f9c470e97292"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_NEWTON_FEASIBILITY.json",
+    "status": "REJECTED_NEAR_SINGULAR_CONSTRAINT_BRANCH",
+    "scope": "",
+    "bytes": 2518,
+    "sha256": "1d659ab8a039b0043863f68bcbefe043fd38cb52296f2f83f84ce63cac3a8475"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_PIVOT_FEASIBILITY.json",
+    "status": "PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED",
+    "scope": "",
+    "bytes": 2276,
+    "sha256": "37ab5dc1d7f21709d0ee4392a8f6c66eae3d493b493443ffb253190ebf251bff"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_QUADRATIC_FEASIBILITY.json",
+    "status": "PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED",
+    "scope": "",
+    "bytes": 2067,
+    "sha256": "d4252006fbea66d9ae689379cfbf804fa7b70984cf4a6c9bd564515efc2af503"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RAMP2_FEASIBILITY.json",
+    "status": "PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED",
+    "scope": "",
+    "bytes": 1719,
+    "sha256": "c7a5b6b412e0f46f1fa0d484afb8cf8a0bf15a7f3e0e89d02e57e65c5291415a"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RAMP_FEASIBILITY.json",
+    "status": "PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED",
+    "scope": "",
+    "bytes": 1705,
+    "sha256": "4802b303761f2b0dbca191c557a71a2274584ee9013c42ebef4e2b90a96b433e"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RECIPE.json",
+    "status": "PRINCIPAL_FEASIBILITY_RECIPE_NOT_BACKGROUND_CERTIFIED",
+    "scope": "",
+    "bytes": 1750,
+    "sha256": "cd93384b9f6790ffea8153f324041d7f3d4bea8de68e3fa6a4d179cfbb97b9d4"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RECIPE_AUDIT.json",
+    "status": "FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED",
+    "scope": "central 0.62<u<0.70 finite-L kinetic/pivot response of the stored primitive-control recipe",
+    "bytes": 2481,
+    "sha256": "3b59158745079b4bffd33de2f1f62c690fb834e3476d374916fbfc8feff7f857"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/RADIAL_DESCRIPTOR_PENCIL_AUDIT.json",
+    "status": "PASS",
+    "scope": "",
+    "bytes": 6206,
+    "sha256": "cc467f8594b40711fa425db7d82a46d215bb125ab46c461fbe443058f06afdf2"
+  },
+  {
+    "path": "data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json",
+    "status": "PASS_DIAGNOSTIC_ZERO_VECTOR_EXCLUDED_AT_INNER_LIGHT_RING",
+    "scope": "Local necessary on-shell Eq.85 diagnostic; not a no-go theorem for electric SVT members or P5 geometry",
+    "bytes": 2248,
+    "sha256": "efaf5661323d9a8eea0a85f58ccafe6c2e41d97118f072c1626c3f8e00dbe1de"
+  },
+  {
+    "path": "data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json",
+    "status": "UNCLASSIFIED",
+    "scope": "central_exact_SVT",
+    "bytes": 3812,
+    "sha256": "26ba698029a74484bdf52681c630c4ad1b0b2123b1b127c52fd5af519f764190"
+  },
+  {
+    "path": "data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json",
+    "status": "FAIL",
+    "scope": "inner_same_action_SVT_H",
+    "bytes": 5657,
+    "sha256": "fb6736dd45827396f27fb3346314a7f94f089aefe791aeae9bd88e9e258ea97e"
+  },
+  {
+    "path": "data/generated/inner/INNER_F2_HOLONOMIC_HESSIAN_AUDIT.json",
+    "status": "FAIL",
+    "scope": "",
+    "bytes": 1370,
+    "sha256": "8f873ee5dd4390d3c5f45848d564787d78ab1d0f1e78decc87956ca19546bb1f"
+  },
+  {
+    "path": "data/generated/inner_controls/INNER_LOWER_ORDER_CONTROL.json",
+    "status": "ACTION_REALIZED_PASS",
+    "scope": "",
+    "bytes": 4088,
+    "sha256": "31c456226e6697a6319cfa16916bd44f5fa924a6e5cbf1974a8819ecb1ae5d96"
+  },
+  {
+    "path": "data/generated/inner_holonomic/INNER_F2_HOLONOMIC_HESSIAN_AUDIT.json",
+    "status": "FAIL",
+    "scope": "",
+    "bytes": 1371,
+    "sha256": "0d6904260f9cc5502bd222b19fcd59a61d9a3f03e8a5e8eb72841890661c7fa6"
+  },
+  {
+    "path": "data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json",
+    "status": "F2_ONLY_TARGET_SET_NOT_REACHABLE",
+    "scope": "background-null f2(phi,X,F,Y) Hessian deformation only",
+    "bytes": 1345,
+    "sha256": "f5fc52f0b16c4d4aa7a7058be914c2e8d0fa5b5a6c638ba423c4fd9ef7063a6e"
+  },
+  {
+    "path": "data/generated/repo_observability/ALL_EVIDENCE_RUN.json",
+    "status": "PASS_SELECTED",
+    "scope": "",
+    "bytes": 2139,
+    "sha256": "bfd50ead2e2b8a28e66a073d1b94b52c3c9ad5d3b7835d1bb5267700837720db"
+  },
+  {
+    "path": "data/generated/repo_observability/EVIDENCE_INDEX.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/generated/repo_observability/GATE_MATRIX.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 3590,
+    "sha256": "1f51ea9b915aca6f21a7ddf962f4b4392ac954d35a2f4aa8fbe58b1db6d9bba9"
+  },
+  {
+    "path": "data/generated/repo_observability/INVENTORY.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 2917,
+    "sha256": "bdf041df467836945d11a69b66f67c37b1917e59a4f3aa35aa911d67189b7043"
+  },
+  {
+    "path": "data/generated/repo_observability/MEMBER_MATRIX.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 612,
+    "sha256": "8b7096c8797a8cdac98fcb2b583db7c11debe1f6ecb8a2158f47f46e8cff453f"
+  },
+  {
+    "path": "data/generated/repo_observability/REPO_STATUS.json",
+    "status": "UNCLASSIFIED",
+    "scope": "",
+    "bytes": 19112,
+    "sha256": "0fa9b044f01dba1572f664e6d988a4814811d276482aaf277b405968be94d5f4"
+  }
+]

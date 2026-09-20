@@ -1,0 +1,14 @@
+{
+  "source_archive": "SSZ_P5_2026-09-20_FULL_CLOSURE_CHECKPOINT_SAME_ACTION.zip",
+  "archive_sha256": "6276934f1b359d874814aa8cde7f20ad05f36848121f37f2b215fc91aa4a1fd0",
+  "archive_files_compared": 780,
+  "changed_archive_files": 0,
+  "missing_archive_files": 0,
+  "source_reported_tests_passed": 119,
+  "fresh_tests": {"passed": 118, "failed": 1, "exit_code": 1},
+  "inner_total_action_replay": "UNREACHABLE_TOTAL_ACTION_TARGET",
+  "inner_unreachable_channel": "v1",
+  "inner_unreachable_rows": 72,
+  "absolute_full_closure": "NOT_CERTIFIED",
+  "next_action": "Complete explicit unreduced H/SVT/shared action assembly at Inner-Core endpoint before target solving"
+}

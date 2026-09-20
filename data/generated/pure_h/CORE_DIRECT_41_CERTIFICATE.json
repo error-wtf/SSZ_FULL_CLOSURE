@@ -1,0 +1,84 @@
+{
+  "CORE_DIRECT_41": "PASS",
+  "region": "punctured_H_core",
+  "scope": "direct action-derived pure-H regional 41-slot export",
+  "construction": "F2 action-derived region + v5=c3=e3=0 + v12=0 + frozen holonomic a5",
+  "historical_global_stream_used_as_input": false,
+  "historical_stream_role": "regression oracle only",
+  "a5_smoothing": 1e-08,
+  "slots": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "a8",
+    "a9",
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13"
+  ],
+  "rows": 3281,
+  "max_regression_scaled_error": 4.465060955998124e-16,
+  "timestamp": "2026-09-20T08:50:33.302081+00:00",
+  "source": {
+    "path": "data/authoritative/ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
+    "sha256": "253cfe04a924837da97e41b4d2dbbdb515079e86f11965ba5e93c443ac61a73b"
+  },
+  "implementation": [
+    {
+      "path": "src/ssz_p5/production/pure_h_export.py",
+      "sha256": "c6266b43216df1239f41e2db2d968bf12c2ba921a5438edeadb57059bb9b2f84"
+    },
+    {
+      "path": "src/ssz_p5_holonomic_a5_closure_2026-09-16.py",
+      "sha256": "58f4c0d48d7ec57ef597e759835a3377a6eba42c5d384914aff77173211d566d"
+    },
+    {
+      "path": "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json",
+      "sha256": "f8e7ba4749811942b75ad69838509a39a89ae03652fcd72c7c5dbbcc96304917"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/generated/pure_h/punctured_H_core_DIRECT_41.csv",
+      "sha256": "b9432b436c02df67443f873302f4cf2990c0cb3cfda64bcf0e3a7ef8573e8b6f"
+    },
+    {
+      "path": "data/generated/pure_h/CORE_DIRECT_41_COMPARISON.csv",
+      "sha256": "dc6dfe2767d6e1e1164c749b3c2acdc3ff40d060c0469b45dff8ff35311b8989"
+    }
+  ],
+  "absolute_full_closure": "NOT_CERTIFIED"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "SSZ P5 electric Horndeski/SVT hybrid search candidate",
+  "date": "2026-09-19",
+  "status": "ACTIVE_SEARCH_NOT_YET_PRODUCTION_MEMBER",
+  "geometry": "frozen P5",
+  "reason_for_search": {
+    "regional_electric_2026_09_17": "rejected: Central finite-L kinetic fail and selected c3/e3 are not a common direct-action replay",
+    "zero_vector_epsilon_Y_2026_09_18": "rejected as global member: necessary Eq.85 light-ring condition forces tensor_F<0 at the inner P5 light ring when A0prime=0, tensor_H>0 and a4>0"
+  },
+  "retained_infrastructure": [
+    "P5 geometry/background",
+    "41-slot emission framework",
+    "JET9D8 derivative service",
+    "generalized-psi constraint-preserving descriptor",
+    "descriptor pullback equivalence on the strong-H chart",
+    "singular DAE radial pencil",
+    "conditioned Core principal/kinetic invariants"
+  ],
+  "hard_local_seed": {
+    "equation": "Kase-Tsujikawa Eq.85 denominator-free form",
+    "inner_light_ring_r_over_rs": 1.4161606552723742,
+    "zero_vector_required_tensor_F_over_H": -1.638676091723501,
+    "electric_q_definition": "q=A0prime^2*v8_background_identity",
+    "q_required_if_tensor_F_equals_tensor_H": 1.5636514881801942,
+    "evidence": "data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json",
+    "seed_profile": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_EQ85_SEED.csv",
+    "caution": "The Eq.85 v8/background combination must be mapped to the selected action convention before promotion; the seed is not itself a holonomic action member."
+  },
+  "required_controls": [
+    "nonzero electric background through the inner light-ring region",
+    "general Horndeski scalar/tensor controls sufficient to make the Central finite-L scalar kinetic block positive",
+    "holonomic SVT action jets rather than coefficient-level slot transplantation",
+    "C-infinity action-level handovers to Core and exterior"
+  ],
+  "promotion_gates": [
+    "background equations/on-shell identities PASS on full grid",
+    "common-action Direct-41 replay PASS",
+    "finite-L K>0 for L=6,12,20,42,110,420,1000",
+    "radial/angular principal gates PASS",
+    "Core generalized-psi descriptor and DAE pencil PASS for the same member",
+    "global same-operator KRGSM certificate PASS",
+    "coupled QNM convergence and upper-half-plane exclusion PASS"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-20",
+  "release_kind": "REPAIRED_FULL_WORKING_SNAPSHOT",
+  "absolute_full_closure": false,
+  "tests": {
+    "negative": {"passed": 42, "total": 42},
+    "unit": {"passed": 67, "total": 67},
+    "regression_integration_release": {"passed": 10, "total": 10},
+    "overall": {"passed": 119, "total": 119}
+  },
+  "regional_direct_41": {
+    "weak": "PASS",
+    "outer": "PASS",
+    "central": "PASS",
+    "inner": "FAIL",
+    "core": "PASS"
+  },
+  "remaining_strict_blockers": [
+    "INNER_DIRECT_41 common holonomic action replay",
+    "DIRECT_GLOBAL_KRGM certificate derived from one center-to-infinity selected member",
+    "same-operator coupled QNM convergence certificate"
+  ]
+}

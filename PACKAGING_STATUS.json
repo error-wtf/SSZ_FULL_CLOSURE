@@ -1,8 +1,18 @@
 {
-  "date": "2026-09-18",
-  "artifact_class": "INTERMEDIATE_RESEARCH_SNAPSHOT",
-  "pytest": "96/96 PASS",
-  "inner_direct_41": "NOT_CERTIFIED",
-  "current_hard_gate": "joint full action-jet Inner construction with mixed f3/f4 controls",
-  "absolute_full_closure": false
+  "checkpoint": "electric-hybrid-principal-feasibility-observability-2026-09-19",
+  "absolute_full_closure": "NOT_CERTIFIED",
+  "tests": {
+    "unit": 67,
+    "regression": 4,
+    "integration": 1,
+    "negative_guard": 42,
+    "release_auditor": 1,
+    "total": 115,
+    "status": "PASS"
+  },
+  "zero_vector_light_ring_audit": "PASS_DIAGNOSTIC_ZERO_VECTOR_EXCLUDED_AT_INNER_LIGHT_RING",
+  "active_search": "SSZ_P5_ELECTRIC_HYBRID_SEARCH_CANDIDATE_2026-09-19.json",
+  "descriptor_pullback": "PASS_SCOPED_REPRESENTATION_WITNESS",
+  "radial_descriptor_pencil": "PASS_STRUCTURE_SCOPED_REPRESENTATION_WITNESS",
+  "qnm": "BLOCKED_UNTIL_ONSHELL_ELECTRIC_HYBRID_GLOBAL_KRGSM_PASS"
 }

@@ -1,0 +1,59 @@
+{
+  "status": "PRINCIPAL_FEASIBILITY_RECIPE_NOT_BACKGROUND_CERTIFIED",
+  "baseline": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_CENTRAL_SEARCH_BASELINE.csv",
+  "primitive_basis": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_HORNDESKI_PRIMITIVE_BASIS.csv",
+  "polynomial_center_u": 0.66,
+  "polynomial_scale_u": 0.05,
+  "polynomial_amplitudes": {
+    "a1": {
+      "const": 5.160587776377697,
+      "linear": 1.2479766344755616,
+      "quad": -11.511066944422113
+    },
+    "F_tensor": {
+      "const": -2832.3802480091595,
+      "linear": 127.57326956841416,
+      "quad": -4189.1303750487605
+    },
+    "H_tensor": {
+      "const": -11553.821300545966,
+      "linear": -12431.67004625333,
+      "quad": -6409.91843915161
+    }
+  },
+  "ramp_1": {
+    "center_u": 0.66,
+    "width_u": 0.02,
+    "power": 1,
+    "amplitudes": {
+      "a1": -9.391313827798772,
+      "F_tensor": -3831.641072848276,
+      "H_tensor": 4134.686478910938
+    }
+  },
+  "ramp_2": {
+    "center_u": 0.66,
+    "width_u": 0.02,
+    "power": 2,
+    "amplitudes": {
+      "a1": -4.728474646168231,
+      "F_tensor": -344.3737690302184,
+      "H_tensor": -2530.552926125409
+    }
+  },
+  "late_ramp": {
+    "center_u": 0.685,
+    "width_u": 0.008,
+    "power": 1,
+    "amplitudes": {
+      "a1": -2.2518009943632378,
+      "F_tensor": 133.34328789424634,
+      "H_tensor": -1725.4999437481374
+    }
+  },
+  "claim_boundary": "This is a principal/constraint-pivot feasibility construction only. It is not a background/on-shell or common-action certificate.",
+  "baseline_provenance": {
+    "source_pickle_sha256": "2d53e42dd4ecadbdd30ef7801c289e4e70bbc706c01262eef76e1d3bd7a0c5e1",
+    "role": "search baseline only, not a production certificate"
+  }
+}

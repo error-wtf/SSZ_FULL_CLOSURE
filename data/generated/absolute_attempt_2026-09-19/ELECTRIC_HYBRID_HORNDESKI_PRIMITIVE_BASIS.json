@@ -1,0 +1,13 @@
+{
+  "source_pickle_sha256": "2d53e42dd4ecadbdd30ef7801c289e4e70bbc706c01262eef76e1d3bd7a0c5e1",
+  "rows": 4000,
+  "controls": [
+    "a1_control",
+    "c2_control",
+    "c4_control",
+    "F_tensor_control",
+    "G_tensor_control",
+    "H_tensor_control"
+  ],
+  "reconstruction": "a1,c2,c4 direct; F from a6; G from d4; H from a4 using Maxwell-Horndeski primitive identities"
+}

@@ -17,7 +17,6 @@ controls on the static electric background.  In particular the five algebraic
 channels (v5,c3,v1,v4,c2) can have local rank below five.  Callers must audit
 reachability rather than infer it from Hessian dimension counting.
 """
-
 from __future__ import annotations
 
 import numpy as np
@@ -132,7 +131,7 @@ def complete_hessian(
     out = background[[c for c in ("u", "x") if c in background]].copy()
     for j, name in enumerate(TRANSVERSE):
         out[name] = q[:, j]
-    for values, name in zip((phiphi, phiX, phiF, phiY), MIXED, strict=True):
+    for values, name in zip((phiphi, phiX, phiF, phiY), MIXED):
         out[name] = values
     return H, out
 
@@ -164,28 +163,29 @@ def response_from_hessian(
     FF, FY, YY = H[:, 2, 2], H[:, 2, 3], H[:, 3, 3]
 
     v5 = x**2 * np.sqrt(h / f) * A * (phiF - 2.0 * h * ph**2 * phiY)
-    c3 = 0.5 * x**2 * np.sqrt(f * h) * ph**2 * phiX - 0.5 * x**2 * A**2 * np.sqrt(h / f) * (
-        phiF - 4.0 * h * ph**2 * phiY
+    c3 = (
+        0.5 * x**2 * np.sqrt(f * h) * ph**2 * phiX
+        - 0.5 * x**2 * A**2 * np.sqrt(h / f) * (phiF - 4.0 * h * ph**2 * phiY)
     )
     current = x**2 * np.sqrt(f * h) * ph * (phiX + 4.0 * F * phiY)
-    e3 = -0.5 * profile_derivative(x, current, 1, window, degree) - 0.5 * x**2 * np.sqrt(f / h) * pp
-    v1 = (
-        x**2
-        * h**1.5
-        * A**2
-        / (2.0 * f**1.5)
-        * (FF - 4.0 * h * ph**2 * FY + 4.0 * h**2 * ph**4 * YY)
+    e3 = (
+        -0.5 * profile_derivative(x, current, 1, window, degree)
+        - 0.5 * x**2 * np.sqrt(f / h) * pp
     )
-    v4 = 2.0 * x**2 * h**2.5 * ph * A**3 / f**1.5 * (
-        2.0 * h * ph**2 * YY - FY
-    ) + h**1.5 * A / np.sqrt(f) * (2.0 * h * ph**3 * x**2 * XY - x**2 * ph * XF)
+    v1 = x**2 * h**1.5 * A**2 / (2.0 * f**1.5) * (
+        FF - 4.0 * h * ph**2 * FY + 4.0 * h**2 * ph**4 * YY
+    )
+    v4 = (
+        2.0 * x**2 * h**2.5 * ph * A**3 / f**1.5 * (2.0 * h * ph**2 * YY - FY)
+        + h**1.5 * A / np.sqrt(f) * (2.0 * h * ph**3 * x**2 * XY - x**2 * ph * XF)
+    )
     c2 = (
-        -(x**2) * h**2.5 * ph * A**4 / f**1.5 * (4.0 * h * ph**2 * YY - FY)
+        -x**2 * h**2.5 * ph * A**4 / f**1.5 * (4.0 * h * ph**2 * YY - FY)
         - h**1.5 * A**2 / (2.0 * np.sqrt(f)) * (6.0 * h * ph**3 * x**2 * XY - ph * x**2 * XF)
         - 0.5 * x**2 * np.sqrt(f * h) * h * ph**3 * XX
     )
     out = background[[c for c in ("u", "x") if c in background]].copy()
-    for name, values in zip(RESPONSES, (v5, c3, e3, v1, v4, c2), strict=True):
+    for name, values in zip(RESPONSES, (v5, c3, e3, v1, v4, c2)):
         out[name] = values
     return out
 
@@ -200,9 +200,10 @@ def algebraic_response_matrix(
     n = len(background)
     M = np.zeros((n, 5, 6))
     M[:, 0, :] = (x**2 * np.sqrt(h / f) * A)[:, None] * (Bf - 2.0 * (h * ph**2)[:, None] * By)
-    M[:, 1, :] = (0.5 * x**2 * np.sqrt(f * h) * ph**2)[:, None] * Bx - (
-        0.5 * x**2 * A**2 * np.sqrt(h / f)
-    )[:, None] * (Bf - 4.0 * (h * ph**2)[:, None] * By)
+    M[:, 1, :] = (
+        (0.5 * x**2 * np.sqrt(f * h) * ph**2)[:, None] * Bx
+        - (0.5 * x**2 * A**2 * np.sqrt(h / f))[:, None] * (Bf - 4.0 * (h * ph**2)[:, None] * By)
+    )
     pref = x**2 * h**1.5 * A**2 / (2.0 * f**1.5)
     M[:, 2, 3] = pref
     M[:, 2, 4] = -4.0 * h * ph**2 * pref
@@ -215,8 +216,8 @@ def algebraic_response_matrix(
     M[:, 3, 2] += p2 * 2.0 * h * ph**3 * x**2
     M[:, 3, 1] -= p2 * x**2 * ph
 
-    p1 = -(x**2) * h**2.5 * ph * A**4 / f**1.5
-    p2 = -(h**1.5) * A**2 / (2.0 * np.sqrt(f))
+    p1 = -x**2 * h**2.5 * ph * A**4 / f**1.5
+    p2 = -h**1.5 * A**2 / (2.0 * np.sqrt(f))
     M[:, 4, 5] += p1 * 4.0 * h * ph**2
     M[:, 4, 4] -= p1
     M[:, 4, 2] += p2 * 6.0 * h * ph**3 * x**2

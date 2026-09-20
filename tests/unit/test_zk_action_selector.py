@@ -21,10 +21,8 @@ def test_action_selector_uses_mixed_action_jets_in_d3_only():
     holo = emitter.emit(d, v6_phi_selector="holonomic", **kwargs)
     action = emitter.emit(d, v6_phi_selector="action", **kwargs)
 
-    expected = (
-        0.5
-        * d.A0prime.to_numpy()
-        * (action.v6phi_selected.to_numpy() - holo.v6phi_selected.to_numpy())
+    expected = 0.5 * d.A0prime.to_numpy() * (
+        action.v6phi_selected.to_numpy() - holo.v6phi_selected.to_numpy()
     )
     np.testing.assert_allclose(action.d3 - holo.d3, expected, rtol=2e-13, atol=2e-13)
 

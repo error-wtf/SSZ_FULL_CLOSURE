@@ -5,15 +5,15 @@
   "central_endpoint_x": 1.4084507042253522,
   "central_endpoint_radial_jets": {
     "v5": [
-      -3873.246322762168,
-      346586.89998695423
+      -3873.246322762169,
+      346586.89998697984
     ],
     "c3": [
-      337.2044016680053,
-      -29233.669123790893
+      337.2044016680054,
+      -29233.669123789536
     ],
     "e3": [
-      323.0873587661293
+      323.0873587659583
     ]
   },
   "required_radial_orders": {
@@ -41,7 +41,7 @@
     "f2Xphi_control",
     "f2phiphi_control"
   ],
-  "control_map_residual": 1.1973783193771976e-11,
+  "control_map_residual": 1.1973783193772385e-11,
   "background_null_check": "NOT_CERTIFIED_UNTIL_COMMON_HESSIAN_HOLONOMY",
   "action_control_status": "LOCAL_RESPONSE_REALIZED_AND_REEMITTED",
   "common_action_warning": "f2phiF/f2Xphi/f2phiphi cannot be promoted independently of f2FF/f2XF/f2XX; run the common Hessian holonomy audit",
@@ -58,7 +58,7 @@
       "c3",
       "e3"
     ],
-    "max_scaled_replay_error": 1.1973783193771976e-11,
+    "max_scaled_replay_error": 1.1973783193772385e-11,
     "all_controls_finite": true,
     "vector_active_rows": 1359,
     "vector_free_rows": 42,
@@ -95,18 +95,18 @@
   ],
   "generator": {
     "path": "src/ssz_p5/production/inner_targets.py",
-    "sha256": "e0db7465b8e03f0a8dc8128426e48a29584fdad90b7e847f8380f8cf00e5ecde"
+    "sha256": "b090ac9c8d7d49cfba1e9f7294c8f8825bccb7431f6d0069a7211180fd5f8338"
   },
   "target_artifact": {
     "path": "data/generated/inner_controls/INNER_LOWER_ORDER_TARGETS.csv",
-    "sha256": "0480f67b8aeb9bf88e5a92ffbb6c85e1fef6f9ff43d0c6ec9eaa0cbbe411a0a3"
+    "sha256": "26e84ad5dcdcc3c4e7eca1a629a519ddf86501eb2eb464d11660721806229462"
   },
   "action_control_artifact": {
     "path": "data/generated/inner_controls/INNER_LOWER_ORDER_ACTION_CONTROLS.csv",
-    "sha256": "52af81bd796b59f75b8b3a992f432dabcc28cf2852b180881a65f8181d7eecad"
+    "sha256": "18d54896058e9e88e0e8a7229740e8c200150e39fedb96d72c8e5bb156c0f02b"
   },
   "reemitted_lower_artifact": {
     "path": "data/generated/inner_controls/INNER_LOWER_ORDER_REEMITTED.csv",
-    "sha256": "5690920efc2ad02be061e055b08ba8ba0123bf6e3b89aa11091b4d4c3dcdb100"
+    "sha256": "48ec0ad7810ee1e63f68bbd9a0c4be7e27b26ff08efb59f5b6024a4b909738ee"
   }
 }

@@ -1,0 +1,112 @@
+{
+  "status": "ACTION_REALIZED_PASS",
+  "production_changed": false,
+  "central_changed": false,
+  "central_endpoint_x": 1.4084507042253522,
+  "central_endpoint_radial_jets": {
+    "v5": [
+      -3873.246322762169,
+      346586.89998697984
+    ],
+    "c3": [
+      337.2044016680054,
+      -29233.669123789536
+    ],
+    "e3": [
+      323.0873587659583
+    ]
+  },
+  "required_radial_orders": {
+    "v5": 1,
+    "c3": 1,
+    "e3": 0
+  },
+  "core_endpoint_radial_jets": {
+    "v5": [
+      0.0,
+      0.0
+    ],
+    "c3": [
+      0.0,
+      0.0
+    ],
+    "e3": [
+      0.0
+    ]
+  },
+  "partition": "stored S_SVT,T_H; no new transition function",
+  "derivative_policy": "9 point degree 8 local polynomial, central side of full source grid",
+  "action_control_variables": [
+    "f2phiF_control",
+    "f2Xphi_control",
+    "f2phiphi_control"
+  ],
+  "control_map_residual": 1.1973783193772385e-11,
+  "background_null_check": "NOT_CERTIFIED_UNTIL_COMMON_HESSIAN_HOLONOMY",
+  "action_control_status": "LOCAL_RESPONSE_REALIZED_AND_REEMITTED",
+  "common_action_warning": "f2phiF/f2Xphi/f2phiphi cannot be promoted independently of f2FF/f2XF/f2XX; run the common Hessian holonomy audit",
+  "action_control_report": {
+    "status": "PASS",
+    "map": "triangular lower-order normal-jet response",
+    "controls": [
+      "f2phiF_control",
+      "f2Xphi_control",
+      "f2phiphi_control"
+    ],
+    "targets": [
+      "v5",
+      "c3",
+      "e3"
+    ],
+    "max_scaled_replay_error": 1.1973783193772385e-11,
+    "all_controls_finite": true,
+    "vector_active_rows": 1359,
+    "vector_free_rows": 42,
+    "min_abs_full_det_vector_active": 1.2978126701006538e-14,
+    "min_abs_reduced_c3_e3_det": 0.42504901880873774,
+    "background_null": false,
+    "background_null_reason": "local second-jet response only; a smooth deformation is background-null only after the common Hessian chain rules H@(phi',X',F')=0 are satisfied",
+    "principal_symbol_unchanged": false,
+    "principal_symbol_reason": "holonomic completion generally induces f2XX/f2XF/f2FF, so unchanged principal symbol cannot be certified from the split lower inverse alone",
+    "endpoint_rule": "when A0prime=0 require v5_target=0 and use reduced c3/e3 block"
+  },
+  "existing_emitter_interface": "selected_v5/selected_c3/selected_e3 remain an output interface; production values are now supplied by the explicit lower-order action-control inverse",
+  "sources": [
+    {
+      "path": "data/production/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv",
+      "sha256": "18c7752c1ee2c5c1fe5260925bcb3cc4dce970ef5c51d879bc5012f96ae9b702"
+    },
+    {
+      "path": "data/prestaged/direct41/inner_selected_candidate_41of41.csv",
+      "sha256": "59cb34633ac8da66b31b2d6e57fe407819370eb48fa7d75f572bbfb87b9f066f"
+    },
+    {
+      "path": "data/production/ssz_p5_integrable_svt_unreduced_even_coefficients_2026-09-12.csv",
+      "sha256": "74b4812b9a43dfb6faf71f5eaf2375c359d69ac250a5b5414fea8647fed8e89c"
+    },
+    {
+      "path": "data/authoritative/ssz_p5_F2b_central_c3_e3_SELECTED_REPRESENTATIVE_2026-09-15.csv",
+      "sha256": "5a831cbd4fd85b02a818c98bea808da07d34de86e50688147f7b1723eefda695"
+    },
+    {
+      "path": "data/prestaged/direct41/core_selected_41of41.csv",
+      "sha256": "08e39fa0f568f9154201318e221cb477553de2369810bb06a162d636dab2f82d"
+    }
+  ],
+  "generator": {
+    "path": "src/ssz_p5/production/inner_targets.py",
+    "sha256": "b090ac9c8d7d49cfba1e9f7294c8f8825bccb7431f6d0069a7211180fd5f8338"
+  },
+  "target_artifact": {
+    "path": "data/generated/tmp_targets2/INNER_LOWER_ORDER_TARGETS.csv",
+    "sha256": "26e84ad5dcdcc3c4e7eca1a629a519ddf86501eb2eb464d11660721806229462"
+  },
+  "action_control_artifact": {
+    "path": "data/generated/tmp_targets2/INNER_LOWER_ORDER_ACTION_CONTROLS.csv",
+    "sha256": "18d54896058e9e88e0e8a7229740e8c200150e39fedb96d72c8e5bb156c0f02b"
+  },
+  "reemitted_lower_artifact": {
+    "path": "data/generated/tmp_targets2/INNER_LOWER_ORDER_REEMITTED.csv",
+    "sha256": "48ec0ad7810ee1e63f68bbd9a0c4be7e27b26ff08efb59f5b6024a4b909738ee"
+  }
+}

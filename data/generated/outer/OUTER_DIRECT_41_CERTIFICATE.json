@@ -1,0 +1,74 @@
+{
+  "OUTER_DIRECT_41": "PASS",
+  "region": "outer_same_action_H_SVT",
+  "scope": "direct ZK/SVT action-jet replay on authoritative re-solved H/SVT background",
+  "background_inverse_repeated": false,
+  "rows": 2200,
+  "slots": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "a8",
+    "a9",
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13"
+  ],
+  "max_scaled_regression_error": 2.4640791541505865e-16,
+  "target_role": "direct regression target required by CODEX_FINAL_EXECUTION_CONTRACT section 11",
+  "timestamp": "2026-09-20T08:53:22.831095+00:00",
+  "sources": [
+    {
+      "path": "data/production/ssz_p5_F2_outer_same_action_RESOLVED_background_jets_2026-09-15.csv",
+      "sha256": "f98d153837e27d9650052fc00394cd5330049265bb8ad7b393d036a816f76f41"
+    },
+    {
+      "path": "data/prestaged/direct41/outer_resolved_raw_41of41.csv",
+      "sha256": "5e22d94aee168ed442cecff33c6f8ec8d05283c02ec943881327894970ea7711"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/generated/outer/outer_same_action_H_SVT_DIRECT_41.csv",
+      "sha256": "fa0bd5b6a68bfbad981df23b61a5acc907de81e4178b1af0462fe12d92b6d581"
+    },
+    {
+      "path": "data/generated/outer/OUTER_DIRECT_41_COMPARISON.csv",
+      "sha256": "81a9838860501341405923d0b037555209f1e9ba08da193838bd4f07c763d2e3"
+    }
+  ],
+  "absolute_full_closure": "NOT_CERTIFIED"
+}

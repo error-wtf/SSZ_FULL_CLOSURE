@@ -8,9 +8,9 @@
   "DIRECT_ACTION_REPLAY_COMPLETE": false,
   "AUTHORITATIVE_SELECTED_REPRESENTATION": true,
   "LOWER_ORDER_ACTION_CONTROL": "LOCAL_RESPONSE_PASS_NOT_COMMON_ACTION",
-  "lower_order_control_residual": 1.1973783193771976e-11,
+  "lower_order_control_residual": 1.1973783193772385e-11,
   "PRINCIPAL_ACTION_CONTROL": "LOCAL_RESPONSE_PASS_NOT_COMMON_ACTION",
-  "principal_control_residual": 4.24788691681646e-16,
+  "principal_control_residual": 3.38391184951303e-16,
   "HOLONOMIC_F2_HESSIAN": "3D_AUDIT_SUPERSEDED_BY_4D_Y_REACHABILITY",
   "COMMON_ACTION_GATE": "PENDING_FULL_ACTION_F3_F4",
   "holonomic_f2_hessian_max_normalized": 1.0000000000000002,
@@ -30,7 +30,7 @@
   "derivative_policy": "JET9D8 before domain trimming",
   "endpoint_method": "local polynomial interpolation with the JET9D8 policy; no spline",
   "generator": "tools/export_inner_production.py",
-  "timestamp": "2026-09-18T17:29:17.184424+00:00",
+  "timestamp": "2026-09-20T08:40:49.231961+00:00",
   "sources": [
     {
       "path": "data/production/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv",
@@ -42,7 +42,7 @@
     },
     {
       "path": "data/generated/central/central_exact_SVT_41of41.csv",
-      "sha256": "44c224e460275350193122feed0fc97b72b1f688b446d46eb48f45c5dad95609"
+      "sha256": "3da16b8e6d86ca5625aa7531c6c6c2882955198784ee7f92ac881f3e5af1c6de"
     },
     {
       "path": "data/prestaged/direct41/core_selected_41of41.csv",
@@ -50,33 +50,33 @@
     },
     {
       "path": "data/generated/inner_controls/INNER_LOWER_ORDER_TARGETS.csv",
-      "sha256": "0480f67b8aeb9bf88e5a92ffbb6c85e1fef6f9ff43d0c6ec9eaa0cbbe411a0a3"
+      "sha256": "26e84ad5dcdcc3c4e7eca1a629a519ddf86501eb2eb464d11660721806229462"
     },
     {
       "path": "data/generated/inner_controls/INNER_LOWER_ORDER_ACTION_CONTROLS.csv",
-      "sha256": "52af81bd796b59f75b8b3a992f432dabcc28cf2852b180881a65f8181d7eecad"
+      "sha256": "18d54896058e9e88e0e8a7229740e8c200150e39fedb96d72c8e5bb156c0f02b"
     },
     {
       "path": "data/generated/inner_controls/INNER_LOWER_ORDER_REEMITTED.csv",
-      "sha256": "5690920efc2ad02be061e055b08ba8ba0123bf6e3b89aa11091b4d4c3dcdb100"
+      "sha256": "48ec0ad7810ee1e63f68bbd9a0c4be7e27b26ff08efb59f5b6024a4b909738ee"
     }
   ],
   "implementation": [
     {
       "path": "src/ssz_p5/production/inner_export.py",
-      "sha256": "f6be760f743a04330c87d2250b2236683d12189de27a1da6d8727af80c544f4e"
+      "sha256": "90f3400f66b50ebbfd9f5aa27e24bddd8e94ee60f171e14b4f26545ce6c6e44a"
     },
     {
       "path": "src/ssz_p5/production/inner_targets.py",
-      "sha256": "e0db7465b8e03f0a8dc8128426e48a29584fdad90b7e847f8380f8cf00e5ecde"
+      "sha256": "b090ac9c8d7d49cfba1e9f7294c8f8825bccb7431f6d0069a7211180fd5f8338"
     },
     {
       "path": "src/ssz_p5/production/lower_order_controls.py",
-      "sha256": "f4bfddda3c787cd4ebe18ee7ecd039723f99efd5d99ac7a782a8408038a5e23d"
+      "sha256": "4acf0cef567ed14f390c0b0b1f5527058816b68bfd259826f906c61c4276d166"
     },
     {
       "path": "src/ssz_p5/production/inner_principal.py",
-      "sha256": "a2fc4eb104a8a8a43ec8846fb56b880203e87b5afdd1a0d7db985d2a14d4e9bd"
+      "sha256": "829d9fa158e7c2fc4a02fc0a4b8cb7c45ae3ab8dbb32e1f3d12c9a47b75f655b"
     },
     {
       "path": "src/ssz_p5/production/principal_controls.py",
@@ -84,11 +84,11 @@
     },
     {
       "path": "src/ssz_p5/production/holonomic_hessian.py",
-      "sha256": "93e21b9d2dda3fef76434fedf6d89317dedabed1fd8d839206cb9abbe9a0c6d5"
+      "sha256": "1b874892f25a8058be96fe98632fc19b46e38af666c7cf6c3b19f4605abde1dc"
     },
     {
       "path": "src/ssz_p5/production/holonomic_hessian_y.py",
-      "sha256": "d2332239217eea980e503c1c8e538cfbfd4bb8588f5e679ab0fa2700a3c906fe"
+      "sha256": "657f58bf83ab090ed98c0ab70505ad5ef816a4f3a5b023603fc9431864fb333e"
     },
     {
       "path": "src/ssz_p5/production/regional_coefficients.py",
@@ -106,31 +106,31 @@
   "outputs": [
     {
       "path": "data/generated/inner/INNER_ENDPOINT_COMPARISON.csv",
-      "sha256": "a3e5fea6fecd227b4c30005b1974f1c225f3f8dfa5db63441a37079f674d98f0"
+      "sha256": "e56e5492b53f90e28aa0e60f0483731f0f501995da6ae33a39c87d27b0ab80e9"
     },
     {
       "path": "data/generated/inner/INNER_ENDPOINT_CONVERGENCE.csv",
-      "sha256": "6a191bfa39519ce479d2eb59e57588cfc7a37cbb834d6f4a7bede13579af63c7"
+      "sha256": "c0b9237c191371c8fe42f397bc0c95da8624a2be1a59575e072ae048c357483c"
     },
     {
       "path": "data/generated/inner/INNER_F2_HOLONOMIC_HESSIAN_AUDIT.csv",
-      "sha256": "f4875f42e5ebed91b4a6d760ed1c2f7c06858e7d7808136d4c03d95c31a50dff"
+      "sha256": "0d6918079dbad6b1e1d6782eb7f99b70e770231b1c10fd490eb4dc1a84ef9072"
     },
     {
       "path": "data/generated/inner/INNER_PRINCIPAL_ACTION_CONTROLS.csv",
-      "sha256": "12363741c9e2eb2d7025b1eca0c1564678bb7e8b4c8242d658b89b6c930fc341"
+      "sha256": "a58502db9ea28e40339665bcad3147c8fda4884d693c2e198128e2bd1332bc48"
     },
     {
       "path": "data/generated/inner/INNER_PRINCIPAL_TARGETS.csv",
-      "sha256": "614df6934f2f0cf9ac4b867caabd1f278c7c8458c33454d73406b915a8ce2a54"
+      "sha256": "533b7d5905d1e1aee3c38e2e896aba65453b67d770ab2723a7f2e89fcf035420"
     },
     {
       "path": "data/generated/inner/INNER_SLOT_COMPARISON.csv",
-      "sha256": "87ad6764781f84b957a8ec0b525abff97e735f689a4a7ec5d18dcaa68bbd2f45"
+      "sha256": "dbe7afdb39b2b45fb6a7cd3597054d28932f5dea511b2d05625aefb369deb90b"
     },
     {
       "path": "data/generated/inner/inner_same_action_SVT_H_41of41.csv",
-      "sha256": "64cc85076ab2135d08492bfbb42e51e50df52e004ae0ec0356618213833795f0"
+      "sha256": "8faaabea2fe1dde95a266bcdea2fc0d47efbf5207d65fc6ced36d65c2cbc1a10"
     }
   ],
   "central_changed": false,

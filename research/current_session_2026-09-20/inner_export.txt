@@ -1,0 +1,12 @@
+{
+  "INNER_DIRECT_41": "FAIL",
+  "SLOT_NORMALIZATION": "PASS",
+  "finite": true,
+  "rows": 1400,
+  "interface_values": "FAIL",
+  "background_max_abs": {
+    "JA": 3.072770957065496e-15,
+    "metric_residual_14": 8.881784197001252e-16,
+    "metric_residual_15": 4.6629367034256575e-15
+  }
+}

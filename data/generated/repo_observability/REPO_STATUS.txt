@@ -1,0 +1,192 @@
+SSZ P5 REPOSITORY STATUS
+================================================================================
+Absolute Full Closure : NOT_CERTIFIED
+Software tests        : 115_PASS_GROUPED
+
+MEMBERS
+member                                                  | status                            | reason                                                                  
+--------------------------------------------------------+-----------------------------------+-------------------------------------------------------------------------
+regional_electric_member_2026_09_17                     | REJECTED_FOR_ABSOLUTE_CLOSURE     | CENTRAL_FINITE_L_KINETIC_FAIL; SELECTED_C3_E3_NOT_COMMON_DIRECT_ACTION_…
+zero_vector_epsilon_y_member_2026_09_18                 | REJECTED_AS_GLOBAL_ONSHELL_MEMBER | INNER_LIGHT_RING_EQ85_REQUIRES_NEGATIVE_TENSOR_F_FOR_A0PRIME_ZERO_WITH_…
+SSZ_P5_ELECTRIC_HYBRID_SEARCH_CANDIDATE_2026-09-19.json | SEARCH_OPEN                       | next_gate=JOINT_ELECTRIC_BACKGROUND_PLUS_HORNDESKI_ACTION_SOLVE         
+
+GATES
+gate                                  | status                                                   | evidence                                                                
+--------------------------------------+----------------------------------------------------------+-------------------------------------------------------------------------
+ABSOLUTE_FULL_CLOSURE                 | NOT_CERTIFIED                                            | ABSOLUTE_CLOSURE_LEDGER.json                                            
+SOFTWARE_TESTS                        | 115_PASS_GROUPED                                         | CURRENT_RELEASE_STATUS_2026-09-19.md                                    
+P5_GEOMETRY                           | PASS                                                     | ABSOLUTE_CLOSURE_LEDGER.json                                            
+DIRECT_41_FRAMEWORK                   | PASS_IMPLEMENTED                                         | ABSOLUTE_CLOSURE_LEDGER.json                                            
+JET9D8                                | PASS                                                     | ABSOLUTE_CLOSURE_LEDGER.json                                            
+CORE_CONDITIONED_PRINCIPAL_INVARIANTS | PASS_EXACT_CONDITIONED                                   | ABSOLUTE_CLOSURE_LEDGER.json                                            
+GENERALIZED_PSI_DESCRIPTOR            | PASS                                                     | ABSOLUTE_CLOSURE_LEDGER.json                                            
+DESCRIPTOR_PULLBACK_EQUIVALENCE       | PASS_L6_L12_L20_L42_L110_L420_L1000                      | ABSOLUTE_CLOSURE_LEDGER.json                                            
+RADIAL_DESCRIPTOR_DAE_PENCIL          | PASS_STRUCTURE                                           | ABSOLUTE_CLOSURE_LEDGER.json                                            
+ACTIVE_SEARCH                         | SEARCH_OPEN                                              | SSZ_P5_ELECTRIC_HYBRID_SEARCH_CANDIDATE_2026-09-19.json                 
+HORNDESKI_PRINCIPAL_FEASIBILITY       | PARTIAL_PASS_NOT_BACKGROUND_CERTIFIED                    | data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RE…
+QNM                                   | BLOCKED_UNTIL_GLOBAL_SAME_OPERATOR_KRGSM                 | ABSOLUTE_CLOSURE_LEDGER.json                                            
+ZERO_VECTOR_LIGHT_RING_AUDIT          | PASS_DIAGNOSTIC_ZERO_VECTOR_EXCLUDED_AT_INNER_LIGHT_RING | data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT…
+DESCRIPTOR_PULLBACK_EQUIVALENCE       | PASS                                                     | data/generated/absolute_attempt_2026-09-19/DESCRIPTOR_PULLBACK_EQUIVALE…
+RADIAL_DESCRIPTOR_PENCIL_AUDIT        | PASS                                                     | data/generated/absolute_attempt_2026-09-19/RADIAL_DESCRIPTOR_PENCIL_AUD…
+CORE_GENERALIZED_PSI_DESCRIPTOR_AUDIT | PASS                                                     | data/generated/absolute_attempt_2026-09-18/CORE_GENERALIZED_PSI_DESCRIP…
+INNER_F2_4D_ALGEBRAIC_REACHABILITY    | F2_ONLY_TARGET_SET_NOT_REACHABLE                         | data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json  
+CENTRAL_DIRECT_41_CERTIFICATE         | UNCLASSIFIED                                             | data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json               
+INNER_DIRECT_41_CERTIFICATE           | FAIL                                                     | data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json                   
+
+EVIDENCE INDEX
+path                                                                     | status                                                   | scope                                                                   
+-------------------------------------------------------------------------+----------------------------------------------------------+-------------------------------------------------------------------------
+ABSOLUTE_CLOSURE_LEDGER.json                                             | UNCLASSIFIED                                             |                                                                         
+CLOSURE_AUDIT_REPORT.json                                                | PASS                                                     |                                                                         
+PACKAGING_STATUS.json                                                    | UNCLASSIFIED                                             |                                                                         
+STRICT_DIRECT_AUDIT_REPORT.json                                          | PASS                                                     |                                                                         
+UPDATED_WORKING_STATUS_2026-09-18.json                                   | UNCLASSIFIED                                             |                                                                         
+build/FROZEN_ONSHELL_IDENTITY.json                                       | FAIL_ON_SHELL_IDENTITY                                   | Necessary frozen-carrier background identity, not a spectrum or theory …
+build/REGIONAL_CENTRAL_KINETIC_GATE.json                                 | FAIL                                                     | necessary central finite-L kinetic gate only                            
+data/generated/absolute_attempt_2026-09-18/CENTRAL_FULL_ACTION_LOWER_AU… | CENTRAL_SELECTED_LOWER_NOT_SINGLE_ACTION_REPLAY          | direct Appendix-A lower replay from one holonomic f2+f3+f4 action       
+data/generated/absolute_attempt_2026-09-18/CORE_GENERALIZED_PSI_DESCRIP… | PASS                                                     |                                                                         
+data/generated/absolute_attempt_2026-09-18/HSVT_DIRECT_REGION_AUDIT.json | UNCLASSIFIED                                             |                                                                         
+data/generated/absolute_attempt_2026-09-19/DESCRIPTOR_PULLBACK_EQUIVALE… | PASS                                                     | well-conditioned Strong-H carrier                                       
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_HORNDESKI_PR… | UNCLASSIFIED                                             |                                                                         
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_LA… | PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED      |                                                                         
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_LI… | PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED      |                                                                         
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_NE… | REJECTED_NEAR_SINGULAR_CONSTRAINT_BRANCH                 |                                                                         
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_PI… | PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED      |                                                                         
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_QU… | PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED      |                                                                         
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RA… | PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED      |                                                                         
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RA… | PRINCIPAL_FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED      |                                                                         
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RE… | PRINCIPAL_FEASIBILITY_RECIPE_NOT_BACKGROUND_CERTIFIED    |                                                                         
+data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RE… | FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED                | central 0.62<u<0.70 finite-L kinetic/pivot response of the stored primi…
+data/generated/absolute_attempt_2026-09-19/RADIAL_DESCRIPTOR_PENCIL_AUD… | PASS                                                     |                                                                         
+data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT… | PASS_DIAGNOSTIC_ZERO_VECTOR_EXCLUDED_AT_INNER_LIGHT_RING | Local necessary on-shell Eq.85 diagnostic; not a no-go theorem for elec…
+data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json                | UNCLASSIFIED                                             | central_exact_SVT                                                       
+data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json                    | FAIL                                                     | inner_same_action_SVT_H                                                 
+data/generated/inner/INNER_F2_HOLONOMIC_HESSIAN_AUDIT.json               | FAIL                                                     |                                                                         
+data/generated/inner_controls/INNER_LOWER_ORDER_CONTROL.json             | ACTION_REALIZED_PASS                                     |                                                                         
+data/generated/inner_holonomic/INNER_F2_HOLONOMIC_HESSIAN_AUDIT.json     | FAIL                                                     |                                                                         
+data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json   | F2_ONLY_TARGET_SET_NOT_REACHABLE                         | background-null f2(phi,X,F,Y) Hessian deformation only                  
+data/generated/repo_observability/ALL_EVIDENCE_RUN.json                  | PASS_SELECTED                                            |                                                                         
+
+INVENTORY
+{
+  "total_files": 652,
+  "total_bytes": 430733792,
+  "by_suffix": {
+    ".py": 237,
+    ".csv": 204,
+    ".json": 74,
+    ".md": 71,
+    ".pdf": 20,
+    ".txt": 19,
+    "<none>": 9,
+    ".png": 6,
+    ".template": 2,
+    ".tsv": 2,
+    ".yml": 2,
+    ".cff": 1,
+    ".docx": 1,
+    ".lock": 1,
+    ".sh": 1,
+    ".tex": 1,
+    ".toml": 1
+  },
+  "by_top_level": {
+    "archive": 276,
+    "data": 124,
+    "src": 68,
+    "tests": 36,
+    "tools": 30,
+    "paper": 22,
+    "docs": 19,
+    "legacy_reference_code": 10,
+    "provenance": 5,
+    "build": 2,
+    "schemas": 2,
+    ".github": 1,
+    ".gitignore": 1,
+    "ABSOLUTE_CLOSURE_ATTEMPT_2026-09-18.md": 1,
+    "ABSOLUTE_CLOSURE_LEDGER.json": 1,
+    "ARTIFACT_CLASSIFICATION.json": 1,
+    "CITATION.cff": 1,
+    "CLOSURE_AUDIT_REPORT.json": 1,
+    "CODEX_API_SKELETON.py": 1,
+    "CODEX_FINAL_EXECUTION_CONTRACT.md": 1,
+    "CODEX_HANDOFF_VERIFICATION.json": 1,
+    "CODEX_IMPLEMENTATION_SPEC.md": 1,
+    "CODEX_PROMPT.md": 1,
+    "CODEX_TASK_DAG.json": 1,
+    "CONTINUE_IMPLEMENTATION_2026-09-18.md": 1,
+    "CONTINUE_IMPLEMENTATION_2026-09-19.md": 1,
+    "CURRENT_RELEASE_STATUS_2026-09-18.md": 1,
+    "CURRENT_RELEASE_STATUS_2026-09-19.md": 1,
+    "DO_NOT_RECOMPUTE.md": 1,
+    "ELECTRIC_HYBRID_CHECKPOINT_2026-09-19.md": 1,
+    "ELECTRIC_HYBRID_PRINCIPAL_SEARCH_2026-09-19.md": 1,
+    "FILE_INDEX.md": 1,
+    "FILE_MANIFEST.tsv": 1,
+    "FULL_PIPELINE_REPORT.json": 1,
+    "FULL_PIPELINE_REPORT.md": 1,
+    "HUMAN_DECISIONS_ONLY.md": 1,
+    "INTERMEDIATE_STATUS_2026-09-18_FULL_ACTION_GATE.md": 1,
+    "INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md": 1,
+    "LICENSE": 1,
+    "MANIFEST.json": 1,
+    "Makefile": 1,
+    "NEGATIVE_TESTS.md": 1,
+    "NUMERICAL_POLICY.json": 1,
+    "PACKAGING_STATUS.json": 1,
+    "PRODUCTION_BLACKLIST.json": 1,
+    "README.md": 1,
+    "README_FOR_CODEX.md": 1,
+    "RELEASE_NOTES_2026-09-16.md": 1,
+    "REPO_EVIDENCE_REGISTRY.json": 1,
+    "REPO_OBSERVABILITY.md": 1,
+    "REPO_TREE_TARGET.txt": 1,
+    "REPRODUCE.md": 1,
+    "RESEARCH_STATE.md": 1,
+    "SHA256SUMS": 1,
+    "SSZ_P5_ELECTRIC_HYBRID_SEARCH_CANDIDATE_2026-09-19.json": 1,
+    "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json": 1,
+    "SSZ_P5_HSVT_PRODUCTION_CANDIDATE_2026-09-18.json": 1,
+    "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json": 1,
+    "START_HERE_CODEX.md": 1,
+    "STATUS_FULL_CLOSURE.md": 1,
+    "STRICT_DIRECT_AUDIT_REPORT.json": 1,
+    "UPDATED_WORKING_STATUS_2026-09-18.json": 1,
+    "UPDATED_WORKING_STATUS_2026-09-18.md": 1,
+    "legacy_superseded": 1,
+    "pyproject.toml": 1,
+    "requirements.lock": 1,
+    "requirements.txt": 1,
+    "ssz_p5_full_closure_auditor.py": 1,
+    "ssz_p5_full_pipeline.py": 1
+  },
+  "important_files": [
+    "README.md",
+    "RESEARCH_STATE.md",
+    "ABSOLUTE_CLOSURE_LEDGER.json",
+    "CURRENT_RELEASE_STATUS_2026-09-19.md",
+    "CONTINUE_IMPLEMENTATION_2026-09-19.md",
+    "MANIFEST.json",
+    "SHA256SUMS"
+  ]
+}
+
+REPRODUCTION COMMANDS
+  python tools/show_repo.py
+  python tools/show_gate_matrix.py
+  python tools/show_member_matrix.py
+  python tools/show_evidence_index.py
+  python tools/show_repo_tree.py
+  python tools/show_code_map.py
+  python tools/run_all_evidence.py
+  python tools/audit_zero_vector_light_ring.py
+  python tools/audit_electric_hybrid_principal_feasibility.py
+  python tools/audit_descriptor_pullback_equivalence.py
+  python tools/audit_radial_descriptor_pencil.py
+  python tools/audit_core_generalized_psi_descriptor.py
+  python tools/audit_inner_y_hessian.py
+  python tools/audit_regional_kinetic.py  # expected FAIL for rejected 2026-09-17 member
+  python tools/audit_frozen_onshell.py    # expected FAIL for rejected zero-vector witness
+  pytest -q
+  python tools/release_manifest.py --check

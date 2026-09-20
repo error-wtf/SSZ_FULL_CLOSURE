@@ -17,7 +17,7 @@ def background(n=41):
     ph = -np.linspace(1.25, 1.20, n)
     X = -0.5 * h * ph**2
     A = np.linspace(1.2, 0.3, n)
-    return pd.DataFrame(dict(u=1 / x, x=x, f=f, h=h, phiprime=ph, X=X, A0prime=A))
+    return pd.DataFrame(dict(u=1/x, x=x, f=f, h=h, phiprime=ph, X=X, A0prime=A))
 
 
 def principal(n=41):
@@ -83,14 +83,14 @@ def test_appendix_a_lower_response_contains_cross_and_radial_terms():
     phiphi = H[:, 0, 0]
 
     expected_c3 = (
-        0.5 * r**2 * np.sqrt(f * h) * ph**2 * phiX - 0.5 * r**2 * A**2 * np.sqrt(h / f) * phiF
+        0.5 * r**2 * np.sqrt(f * h) * ph**2 * phiX
+        - 0.5 * r**2 * A**2 * np.sqrt(h / f) * phiF
     )
     np.testing.assert_allclose(got[:, 1], expected_c3, rtol=0, atol=1e-12)
 
     from ssz_p5.jets.jet9d8 import profile_derivative
-
     expected_e3 = (
         -0.5 * profile_derivative(r, r**2 * np.sqrt(f * h) * ph * phiX, 1, 9, 8)
-        - 0.5 * r**2 * np.sqrt(f / h) * phiphi
+        -0.5 * r**2 * np.sqrt(f / h) * phiphi
     )
     np.testing.assert_allclose(got[:, 2], expected_e3, rtol=0, atol=1e-12)

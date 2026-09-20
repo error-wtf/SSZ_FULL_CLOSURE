@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-19",
+  "absolute_full_closure": false,
+  "checkpoint_type": "advanced_working_checkpoint",
+  "radial_central_base": "7/7 finite-L K/G PASS in packaged production audit",
+  "interface_control_rank": {
+    "outer": "6/6",
+    "inner": "6/6"
+  },
+  "slot_space_angular_existence_witness": {
+    "accepted_as_action_certificate": false,
+    "min_cOmega_minus2": 0.9147506333592901,
+    "min_cOmega_plus2": 54.535957134605965,
+    "min_cond55": 69.26309766130805,
+    "min_cond56": 803.1587044795431,
+    "min_discriminant": 1584.7418797217242,
+    "essential_target_slots": [
+      "c4",
+      "c5",
+      "e4",
+      "a9"
+    ]
+  },
+  "a2_family": {
+    "materialized_shifts": [
+      -1.5,
+      -1.8
+    ],
+    "shift_minus_1p8": {
+      "min_cOmega_minus2": -118.27836843648466,
+      "min_cOmega_plus2": -118.27836843648466,
+      "min_cond55": -236.5567368729693,
+      "min_cond56": -820.4690378513294,
+      "min_discriminant": -74271.59374866784,
+      "min_vector_angular": 0.045645783004934326,
+      "min_alpha7": 3.0778571121438407
+    },
+    "shift_minus_2p0": "attempt did not complete during checkpoint packaging"
+  },
+  "remaining_gates": [
+    "action_level_angular_full_pass",
+    "same_member_background_replay",
+    "same_member_radial_7L_replay",
+    "outer_inner_HSVT_handovers",
+    "global_Direct41",
+    "global_KRGSM",
+    "same_operator_QNM"
+  ],
+  "fresh_test_suite": "started but not completed during packaging; no new full-suite PASS claim"
+}

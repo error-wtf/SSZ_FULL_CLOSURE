@@ -1,0 +1,37 @@
+{
+  "name": "SSZ P5 HSVT absolute-closure production candidate",
+  "release_candidate": "2026-09-18",
+  "geometry": "frozen P5",
+  "scalar": "phi=Xi(r_s/r)",
+  "vector_background": "A0prime=0",
+  "action": {
+    "base": "globally patched on-shell Horndeski P5 representative",
+    "deformation": "Delta f2 = epsilon_Y * Y",
+    "epsilon_Y": 0.01,
+    "background_null": true,
+    "quadratically_nontrivial": true
+  },
+  "selection_reason": "The 2026-09-17 regional electric member fails finite-L kinetic positivity and its selected Central c3/e3 do not replay from the frozen common action jets. The zero-vector epsilon_Y member passes all constructive and available finite-L direct carrier gates.",
+  "locked_conventions": {
+    "v12": "-v6/(2h)",
+    "a5": "a2' - a1'' on A0prime=0",
+    "derivatives": "JET9D8 window=9 degree=8",
+    "reduction": "unreduced action first; common constraints once; retain antisymmetric S"
+  },
+  "status": {
+    "FULL_CONSTRUCTIVE_CLOSURE": "PASS",
+    "DIRECT_EXTERIOR_KRGM": "PASS_NUMERICAL_L6_12_20_42_110_420_1000",
+    "DIRECT_CARRIER_KRGM": "PASS_NUMERICAL_L6_12_20_42_110_420_1000",
+    "DIRECT_CORE_KRGM": "OPEN_DESCRIPTOR_DAE_SPECTRAL_LINEARIZATION",
+    "ANALYTIC_CENTER": "PASS_CONSTRUCTIVE",
+    "DIRECT_GLOBAL_KRGM_EXPORT": "OPEN_BLOCKED_BY_DESCRIPTOR_TO_SPECTRAL_OPERATOR",
+    "COUPLED_QNM": "BLOCKED_BY_DESCRIPTOR_TO_SPECTRAL_OPERATOR",
+    "ABSOLUTE_FULL_CLOSURE": "REJECTED_FOR_THIS_MEMBER",
+    "DIRECT_CORE_PRINCIPAL_CONDITIONED": "PASS_EXACT_CONDITIONED",
+    "CORE_GENERALIZED_PSI_DESCRIPTOR": "PASS",
+    "CANDIDATE_DECISION_2026_09_19": "REJECTED_AS_GLOBAL_ONSHELL_MEMBER_INNER_LIGHT_RING_EQ85",
+    "COMPONENT_LEVEL_RESULTS": "RETAINED_AS_VALID_WITNESS_TESTS"
+  },
+  "superseded_by_search": "SSZ_P5_ELECTRIC_HYBRID_SEARCH_CANDIDATE_2026-09-19.json",
+  "light_ring_evidence": "data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json"
+}
