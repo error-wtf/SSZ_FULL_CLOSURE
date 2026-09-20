@@ -7,14 +7,12 @@ for the regional P5 Full-SVT member: weak Horndeski exterior, outer H/SVT
 handover, central genuine-SVT lobe, inner SVT/H handover, general Horndeski core,
 and an analytic center chart.
 
-The latest integrated source is the supplied `SSZ_FULL_CLOSURE` snapshot of
-September 18, including **93 passing software tests**, the Inner lower-order
-inverse, principal controls, explicit action derivative selector, and later
-intermediate artifacts. Its current implementation boundary is the coupled
-**four-dimensional `(phi, X, F, Y)` holonomic Hessian inverse**. See the
-[latest snapshot status](INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md).
-Earlier 85/86-test reports and the three-dimensional Hessian diagnostic are
-historical records; they do not certify common-action closure.
+**Latest imported checkpoint: September 18, full-action gate.** The updated
+software suite passes **96 tests**. The 4D `(phi,X,F,Y)` Hessian completion and
+local reachability audit are implemented; the remaining Inner construction needs
+additional mixed `f3/f4` action-jet directions. See the
+[current status](INTERMEDIATE_STATUS_2026-09-18_FULL_ACTION_GATE.md) and
+[integration verification](docs/FULL_ACTION_SNAPSHOT_INTEGRATION_2026-09-18.md).
 
 > **Current result: Absolute Full Closure is not certified.**
 > The selected central Full-SVT coefficient member fails the necessary finite-L
@@ -77,11 +75,12 @@ Locked regional Full-SVT action / background jets
 | Regional source integration | Implemented | Active member, source registry, region resolver and certificate binding |
 | Outer raw SVT emission | Regression PASS | 41 slots, max scaled reference difference ≈9.03e-9; full H+SVT assembly is separate |
 | Central selected normalization | **41/41 PASS** | 3,809 rows exported with source/output hashes; stored comparable ZK slots reproduce exactly. [Scoped certificate](data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json) |
-| Inner selected normalization | **41/41 PASS; interface FAIL** | 1,400 finite rows; local lower/principal controls are implemented, while derivative-sensitive interface slots and common 4D action holonomy remain open. [Current status](INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md) |
-| Central finite-L kinetic gate | **FAIL** | Negative kinetic directions for L=6,12,20,42 |
+| Inner selected normalization | **41/41 PASS** | 1,400 finite normalized rows; normalization is not yet a single-action Direct-41 certificate |
+| Inner action / Direct-41 closure | **OPEN / FAIL** | The old 3D `(phi,X,F)` Hessian exclusion is superseded by the `Y` sector, but the full 4D `f2(phi,X,F,Y)` audit shows that the current independently blended lower/principal target set is not reachable by a background-null `f2` Hessian alone. Full mixed `f3/f4` action-jet controls are now the next gate. |
+| Central finite-L kinetic gate | **FAIL for frozen selected member** | Negative kinetic directions remain recorded for L=6,12,20,42; the Inner action work does not supersede this gate |
 | Global direct 41 and KRGSM | Not certified | Remaining regional direct paths, center and interfaces are not claimed complete |
-| Coupled spectral convergence | Not run | Necessary kinetic gate fails; archived test-field roots are not a substitute |
-| Absolute closure / v1.0.0 | Not released | Strict mode rejects the failed gate and absent production evidence |
+| Coupled spectral convergence | Not run | Same-operator global KRGSM and kinetic gates are prerequisites |
+| Absolute closure / v1.0.0 | Not released | Strict production evidence remains incomplete |
 
 ## September 18 working-snapshot integration
 
@@ -99,16 +98,53 @@ primitive profiles; this is not a complete raw G4/G5 action reconstruction.
 ```bash
 python tools/audit_working_import.py
 python tools/build_inner_targets.py
+python tools/audit_inner_y_hessian.py
 ```
 
-The Inner lower-order targets preserve the frozen central endpoint jets and use
-the stored partition. The new snapshot implements local response inverses for
-both `v5/c3/e3` and `v1/v4/c2`, plus an explicit action-based `v6` partial-phi
-derivative selector. These replace the earlier missing local maps. Their joint
-realization as a smooth background-null action is still pending: the chain rules
-must include the `Y` sector. The older 3D audit remains diagnostic only.
-See the [latest status](INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md) and the
-[integration verification](docs/SNAPSHOT_INTEGRATION_2026-09-18.md).
+The Inner lower-order and principal target maps now have executable local response
+inverses, but those split inverses are **not** a common single-action certificate.
+The former 3D common-Hessian audit omitted the `Y` dependence of `f2` and is retained
+only as historical diagnostic evidence. The corrected 4D audit uses the six transverse
+`(XX,XF,XY,FF,FY,YY)` directions and shows a second, more useful limitation: on the
+static electric background their local algebraic response to
+`(v5,c3,v1,v4,c2)` has maximum rank 4, and the currently independent target blends
+leave that column space. Therefore the next production construction must use the
+**full action-jet control space**, including mixed `f3/f4` directions, rather than
+coefficient-level target matching. See
+[the machine-readable reachability audit](data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json) and
+[the continuation contract](CONTINUE_IMPLEMENTATION_2026-09-18.md).
+
+## Remaining production gates
+
+The Inner construction and the Central kinetic failure are independent gates.
+Completing Inner/Core does not by itself repair the negative Central directions.
+The remaining work is:
+
+1. **Common Inner action:** combine the `f2(phi,X,F,Y)` Hessian with mixed
+   `f3/f4` jets in one holonomic action-control space, deriving all six channels
+   `v5,c3,e3,v1,v4,c2` together.
+2. **Inner Direct-41:** emit the full guard grid, close `a5/v7/v12`, then trim
+   and verify Central–Inner and Inner–Core interfaces. Both `INNER_DIRECT_41`
+   and `DIRECT_ACTION_REPLAY_COMPLETE` require genuine action replay.
+3. **Core/G5:** complete the general quintic action emission and required
+   derivative orders for all 41 slots.
+4. **Exact center:** construct the regular Taylor chart at `r=0`, with finite
+   curvature invariants and compatible coefficient/operator limits.
+5. **Global Direct-41:** derive one exterior-to-center stream with common
+   conventions and basis, one shared baseline, and smooth action/jet matching.
+6. **Central kinetic gate:** test a complete action re-emission of the selected
+   member. If the negative mode persists, a changed Central action member must
+   pass background, holonomy, interface and stability checks. This is an open
+   physical selection problem; software completion alone does not guarantee PASS.
+7. **Global KRGSM:** jointly reduce that stream and check constraint pivots,
+   kinetic positivity, radial/angular gradients, matrix symmetries, canonical
+   `R=0`, sector limits, high-L behavior and interfaces.
+8. **Coupled spectrum:** use exactly that operator for converged resonance
+   branches and a documented search for unstable poles. Archived test-field
+   or WKB values cannot certify this gate.
+9. **Release:** reproduce all required certificates and the strict pipeline
+   from a fresh extraction, with a verified manifest and SHA256 inventory.
+   `ABSOLUTE_FULL_CLOSURE` and `v1.0.0` require strict exit code **0**.
 
 ## Selected member and numerical conventions
 

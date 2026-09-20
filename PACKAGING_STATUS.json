@@ -1,20 +1,8 @@
 {
-  "scope": "Updated working closure snapshot after Inner lower-order and principal action-control realization.",
-  "production_member": "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json",
-  "absolute_full_closure": "NOT_YET_CERTIFIED",
-  "artifact": "SSZ_P5_UPDATED_INNER_ACTION_CONTROLS_2026-09-18.zip",
-  "pytest": "86/86 PASS",
-  "full_pipeline": "45/45 PASS",
-  "full_pipeline_status": "PASS",
-  "constructive_closure_auditor": "PASS (exit 0)",
-  "strict_direct_gate": "OPEN",
-  "strict_direct_gate_name": "DIRECT_GLOBAL_KRGM_EXPORT",
-  "strict_direct_expected_exit_code": 3,
-  "inner_lower_order_action_control": "PASS",
-  "inner_principal_action_control": "PASS",
-  "inner_direct_41": "FAIL_HIGHER_DERIVATIVE_JETS_ONLY",
-  "inner_remaining_blocker": ["a5", "d3", "e4", "v13", "v9"],
-  "perfect_pass": false,
-  "updated_at": "2026-09-18",
-  "note": "No tolerance relaxed; no failed gate overwritten. This is the current reproducible continuation checkpoint toward absolute full closure."
+  "date": "2026-09-18",
+  "artifact_class": "INTERMEDIATE_RESEARCH_SNAPSHOT",
+  "pytest": "96/96 PASS",
+  "inner_direct_41": "NOT_CERTIFIED",
+  "current_hard_gate": "joint full action-jet Inner construction with mixed f3/f4 controls",
+  "absolute_full_closure": false
 }

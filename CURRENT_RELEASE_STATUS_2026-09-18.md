@@ -1,31 +1,42 @@
 # Current release status — 2026-09-18
 
-This file records the exact working state packaged into `SSZ_P5_BEST_AVAILABLE_WORKING_2026-09-18.zip` after the latest Inner lower-order-control integration.
+This is the current reproducible intermediate state. It is not an Absolute Full Closure release.
 
-## Reproducible software / archive checks
+## Software status
 
-- Focused lower-order-control tests: **2 / 2 PASS**.
-- `python -m pytest -q`: **85 / 85 PASS**.
-- The full release pipeline is regenerated after manifest refresh before packaging.
+- `pytest -q`: **96 / 96 PASS**.
+- New 4D `f2(phi,X,F,Y)` holonomic completion tests: PASS.
+- New Inner `f2`-only algebraic reachability audit: executed and preserved.
 
-## New Inner implementation
+## Corrected Inner finding
 
-The Inner handover now contains an explicit background-null lower-order action-control inverse for
-`q1=f2_{phi F}`, `q2=f2_{X phi}`, `q3=f2_{phi phi}` -> `v5,c3,e3`.
+The previous 3D `(phi,X,F)` common-Hessian audit was incomplete because the SVT action
+contains the `Y` direction. The 4D background-null completion with transverse controls
+`(XX,XF,XY,FF,FY,YY)` is now implemented in
+`src/ssz_p5/production/holonomic_hessian_y.py`.
 
-The control replay is PASS, finite, background-null by transverse-jet construction, and preserves the frozen Central member and the principal-symbol Hessian controls. The generated artifacts are:
+However, the six transverse Hessian entries do **not** become six independent coefficient
+controls on the static electric background. For the five algebraic channels
+`(v5,c3,v1,v4,c2)`, the audited local map has maximum rank **4**. The present lower/principal
+targets were built independently and have a maximum scaled projection residual of about
+`9.996e-1`; therefore they cannot be promoted as a single background-null `f2` action.
 
-- `data/generated/inner_controls/INNER_LOWER_ORDER_TARGETS.csv`
-- `data/generated/inner_controls/INNER_LOWER_ORDER_ACTION_CONTROLS.csv`
-- `data/generated/inner_controls/INNER_LOWER_ORDER_REEMITTED.csv`
-- `data/generated/inner_controls/INNER_LOWER_ORDER_CONTROL.json`
+This does **not** imply that the Inner handover or P5 geometry is impossible. It means the
+control space must be enlarged to the full action jets already present in Appendix A, most
+importantly the mixed `f3/f4` directions, and the target should be constructed at action level
+rather than by independently blending six coefficient functions.
 
-`SLOT_NORMALIZATION = PASS` and the 1,400-row Inner stream is finite. `INNER_DIRECT_41` remains **FAIL** because the current interface certification still finds dependent-slot / derivative continuity residuals, dominated by `a5`; that is the next implementation target.
+Evidence:
 
-## Strict closure
+- `data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json`
+- `data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.csv`
 
-- `FULL_CONSTRUCTIVE_CLOSURE = PASS`
-- `DIRECT_GLOBAL_KRGM_EXPORT = OPEN`
-- `PERFECT_PASS = false`
+## Gates that remain unchanged
 
-No tolerance or rejection gate has been weakened.
+- `central_direct_41`: scoped normalization PASS.
+- Frozen selected Central finite-L kinetic gate: **FAIL** for `L=6,12,20,42`.
+- `inner_direct_41`: **NOT CERTIFIED**.
+- Core Direct-41 / analytic center / global Direct-41 / KRGSM / coupled QNM: pending.
+- `v1.0.0`: not released.
+
+No tolerance or rejection gate was weakened.

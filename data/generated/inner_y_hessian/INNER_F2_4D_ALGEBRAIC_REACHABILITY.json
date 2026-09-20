@@ -1,0 +1,40 @@
+{
+  "status": "F2_ONLY_TARGET_SET_NOT_REACHABLE",
+  "scope": "background-null f2(phi,X,F,Y) Hessian deformation only",
+  "transverse_controls": [
+    "XX",
+    "XF",
+    "XY",
+    "FF",
+    "FY",
+    "YY"
+  ],
+  "algebraic_targets": [
+    "v5",
+    "c3",
+    "v1",
+    "v4",
+    "c2"
+  ],
+  "rank_counts": {
+    "1": 54,
+    "2": 45,
+    "3": 733,
+    "4": 569
+  },
+  "max_local_rank": 4,
+  "max_scaled_projection_residual": 0.9996426927970493,
+  "median_scaled_projection_residual": 0.12506554905381678,
+  "worst_row": {
+    "row": 152,
+    "u": 0.7105428571428571,
+    "x": 1.4073746431300012,
+    "A0prime": 1.4069427413524045,
+    "local_rank": 3,
+    "max_scaled_projection_residual": 0.9996426927970493,
+    "l2_scaled_projection_residual": 1.4129716530333012,
+    "smallest_retained_singular": 0.004801319378821837
+  },
+  "interpretation": "The Y sector supersedes the old 3D holonomy exclusion, but dimension counting does not give six independent coefficient controls. The current independently blended lower/principal target set violates the local column space of the f2-only background-null response. Full Inner closure therefore requires a joint action-jet construction with additional mixed f3/f4 (and, if needed, lower Horndeski) control directions, rather than separate coefficient targets.",
+  "inner_direct_41": "NOT_CERTIFIED"
+}

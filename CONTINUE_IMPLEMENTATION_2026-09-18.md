@@ -1,31 +1,28 @@
 # Execution contract: continue the implemented state
 
 Work from this repository and its current commit. Do not replace it with an older
-43/43 archive snapshot. Do not interpret passing software tests as physical closure.
+archive snapshot. Passing software tests are implementation checks, not physical closure.
 
-1. Read `ABSOLUTE_CLOSURE_LEDGER.json`,
-   `INTERMEDIATE_STATUS_2026-09-18_Y_HESSIAN.md` and
-   `docs/SNAPSHOT_INTEGRATION_2026-09-18.md` before changing code.
-2. Preserve the central coefficient export. Do not repeat central/core searches
-   or change the regional production member without explicit authorization.
-3. Reuse `principal_controls.restore_svt_principal`; it controls v1/v4/c2, not
-   v5/c3/e3. Its endpoint rejection is intentional. Do not remove it to force PASS.
-4. Reuse the implemented `lower_order_controls` and `inner_principal` local
-   inverses. The next Inner task is their coupled 4D `(phi,X,F,Y)` holonomic
-   Hessian completion, including the reduced degenerate endpoint block and
-   background invariance. The previous 3D audit is historical diagnostic evidence,
-   not a production impossibility result. Supplying selected slot values alone
-   does not certify the common action.
-5. Only after action re-emission, recompute the locked a5 and v7 identities,
-   verify both interfaces, and update the Inner production certificate.
-6. Continue core/G5 and exact-center action emission, common unreduced assembly,
-   one constraint elimination, all finite-L gates, and coupled spectral convergence
-   from that same operator. Reuse the stored QNM/Jost code and regression evidence.
-7. Never mark a missing or failed check PASS, discard failing grid points, switch
-   to a witness member, or alter tolerances for a preferred result. Report an
-   actual contradictory result with its reproducible inputs and numerical residual.
-8. At a release milestone run the strict pipeline from a freshly extracted
-   archive, preserve its report and exit code, and publish the actual status.
-   Use PERFECT_PASS or ABSOLUTE_FULL_CLOSURE only when all required gates pass.
+1. Read `ABSOLUTE_CLOSURE_LEDGER.json`, `INTERMEDIATE_STATUS_2026-09-18_FULL_ACTION_GATE.md`,
+   and `data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json`.
+2. Preserve the frozen central coefficient export and the recorded finite-L kinetic FAIL
+   until a separately defined central action/member is actually regenerated and retested.
+3. Treat the old 3D `(phi,X,F)` Hessian audit as superseded diagnostic evidence only.
+   The correct background-null `f2` control space is 4D in `(phi,X,F,Y)`.
+4. Do **not** infer six independent coefficient controls from the six transverse Hessian
+   entries. The audited local map to `(v5,c3,v1,v4,c2)` has maximum rank 4 and the current
+   independently blended targets are not `f2`-only reachable.
+5. The next Inner task is a joint action-jet construction using the additional mixed
+   `f3/f4` (and, if required, lower-Horndeski) control directions. Recompute `v5,c3,e3`
+   from Appendix-A/background-equation action derivatives rather than injecting selected
+   coefficient columns.
+6. Re-emit the complete guarded Inner 41-slot stream from that one action, recompute the
+   locked `a5` and `v7` identities, and verify both interfaces before promoting
+   `INNER_DIRECT_41`.
+7. Only then continue core/G5, exact center, one center-to-infinity direct stream, common
+   KRGSM reduction, finite-L gates, and coupled same-operator spectral convergence.
+8. Never mark a missing or failed check PASS, discard failing rows, switch members, or
+   relax tolerances to obtain a preferred result.
 
-The working ZIP is a preservation artifact. It is not the absolute-closure release.
+Current software checkpoint: **96/96 pytest PASS**. The working ZIP is a preservation
+artifact, not an Absolute Full Closure release.

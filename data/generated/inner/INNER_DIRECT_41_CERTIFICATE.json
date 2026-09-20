@@ -7,17 +7,18 @@
   "finite": true,
   "DIRECT_ACTION_REPLAY_COMPLETE": false,
   "AUTHORITATIVE_SELECTED_REPRESENTATION": true,
-  "LOWER_ORDER_ACTION_CONTROL": "PASS",
+  "LOWER_ORDER_ACTION_CONTROL": "LOCAL_RESPONSE_PASS_NOT_COMMON_ACTION",
   "lower_order_control_residual": 1.1973783193771976e-11,
-  "PRINCIPAL_ACTION_CONTROL": "PASS",
+  "PRINCIPAL_ACTION_CONTROL": "LOCAL_RESPONSE_PASS_NOT_COMMON_ACTION",
   "principal_control_residual": 4.24788691681646e-16,
-  "HOLONOMIC_F2_HESSIAN": "FAIL",
+  "HOLONOMIC_F2_HESSIAN": "3D_AUDIT_SUPERSEDED_BY_4D_Y_REACHABILITY",
+  "COMMON_ACTION_GATE": "PENDING_FULL_ACTION_F3_F4",
   "holonomic_f2_hessian_max_normalized": 1.0000000000000002,
   "lower_order_background_null": "NOT_CERTIFIED_UNTIL_COMMON_HESSIAN_HOLONOMY",
   "SLOT_NORMALIZATION": "PASS",
   "interface_values": "FAIL",
   "radial_jets": "REPORTED; certification deferred until value continuity passes",
-  "reducer_compatibility": "SCHEMA_ONLY; common operator deferred until interfaces pass",
+  "reducer_compatibility": "SCHEMA_ONLY; common single-action operator not certified",
   "background_max_abs": {
     "JA": 3.072770957065496e-15,
     "metric_residual_14": 8.881784197001252e-16,
@@ -29,7 +30,7 @@
   "derivative_policy": "JET9D8 before domain trimming",
   "endpoint_method": "local polynomial interpolation with the JET9D8 policy; no spline",
   "generator": "tools/export_inner_production.py",
-  "timestamp": "2026-09-18T15:17:28.838340+00:00",
+  "timestamp": "2026-09-18T17:29:17.184424+00:00",
   "sources": [
     {
       "path": "data/production/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv",
@@ -63,7 +64,7 @@
   "implementation": [
     {
       "path": "src/ssz_p5/production/inner_export.py",
-      "sha256": "26c43b674a0749f704d198d508da27c34ae9b3119f7ad0d819f6c227daf2e7df"
+      "sha256": "f6be760f743a04330c87d2250b2236683d12189de27a1da6d8727af80c544f4e"
     },
     {
       "path": "src/ssz_p5/production/inner_targets.py",
@@ -84,6 +85,10 @@
     {
       "path": "src/ssz_p5/production/holonomic_hessian.py",
       "sha256": "93e21b9d2dda3fef76434fedf6d89317dedabed1fd8d839206cb9abbe9a0c6d5"
+    },
+    {
+      "path": "src/ssz_p5/production/holonomic_hessian_y.py",
+      "sha256": "d2332239217eea980e503c1c8e538cfbfd4bb8588f5e679ab0fa2700a3c906fe"
     },
     {
       "path": "src/ssz_p5/production/regional_coefficients.py",

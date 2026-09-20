@@ -85,9 +85,9 @@ def export_inner(root, output):
     principal_controls.to_csv(output / "INNER_PRINCIPAL_ACTION_CONTROLS.csv", index=False)
     principal_targets.to_csv(output / "INNER_PRINCIPAL_TARGETS.csv", index=False)
 
-    # A local lower inverse plus a local principal inverse is not yet one smooth
-    # background-null f2(phi,X,F).  Audit the six jets together before any
-    # Direct-Action claim is allowed.
+    # Historical 3D split-control diagnostic.  It is retained for comparison,
+    # but is superseded as a certification gate by the 4D (phi,X,F,Y) audit.
+    # Neither split inverse is a common-action certificate.
     lower_controls = pd.read_csv(control_dir / "INNER_LOWER_ORDER_ACTION_CONTROLS.csv")
     holonomic_frame, holonomic_report = audit_existing_split_controls(
         background, lower_controls, principal_controls
@@ -167,6 +167,7 @@ def export_inner(root, output):
         "src/ssz_p5/production/inner_principal.py",
         "src/ssz_p5/production/principal_controls.py",
         "src/ssz_p5/production/holonomic_hessian.py",
+        "src/ssz_p5/production/holonomic_hessian_y.py",
         "src/ssz_p5/production/regional_coefficients.py",
         "src/ssz_p5/jets/jet9d8.py",
         "tools/export_inner_production.py",
@@ -178,19 +179,22 @@ def export_inner(root, output):
         rows=len(production),
         slot_count=41,
         finite=finite,
-        DIRECT_ACTION_REPLAY_COMPLETE=bool(
-            control_report["status"] == "ACTION_REALIZED_PASS"
-            and principal_report["status"] == "PASS"
-            and holonomic_report["status"] == "PASS"
-        ),
+        DIRECT_ACTION_REPLAY_COMPLETE=False,
         AUTHORITATIVE_SELECTED_REPRESENTATION=True,
-        LOWER_ORDER_ACTION_CONTROL="PASS"
-        if control_report["status"] == "ACTION_REALIZED_PASS"
-        else "FAIL",
+        LOWER_ORDER_ACTION_CONTROL=(
+            "LOCAL_RESPONSE_PASS_NOT_COMMON_ACTION"
+            if control_report["status"] == "ACTION_REALIZED_PASS"
+            else "FAIL"
+        ),
         lower_order_control_residual=float(control_report["control_map_residual"]),
-        PRINCIPAL_ACTION_CONTROL=principal_report["status"],
+        PRINCIPAL_ACTION_CONTROL=(
+            "LOCAL_RESPONSE_PASS_NOT_COMMON_ACTION"
+            if principal_report["status"] == "PASS"
+            else "FAIL"
+        ),
         principal_control_residual=float(principal_report["max_scaled_target_error"]),
-        HOLONOMIC_F2_HESSIAN=holonomic_report["status"],
+        HOLONOMIC_F2_HESSIAN="3D_AUDIT_SUPERSEDED_BY_4D_Y_REACHABILITY",
+        COMMON_ACTION_GATE="PENDING_FULL_ACTION_F3_F4",
         holonomic_f2_hessian_max_normalized=max(
             holonomic_report["max_normalized_chain_residual"].values()
         ),
@@ -198,11 +202,7 @@ def export_inner(root, output):
         SLOT_NORMALIZATION="PASS" if normalization else "FAIL",
         interface_values="PASS" if continuous else "FAIL",
         radial_jets="REPORTED; certification deferred until value continuity passes",
-        reducer_compatibility=(
-            "READY"
-            if continuous and control_report["status"] == "ACTION_REALIZED_PASS"
-            else "SCHEMA_ONLY; common operator deferred until interfaces pass"
-        ),
+        reducer_compatibility="SCHEMA_ONLY; common single-action operator not certified",
         background_max_abs={
             name: float(abs(background[name]).max())
             for name in ("JA", "metric_residual_14", "metric_residual_15")
