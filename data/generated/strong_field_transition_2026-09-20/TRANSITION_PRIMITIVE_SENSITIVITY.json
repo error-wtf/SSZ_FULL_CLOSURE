@@ -1,0 +1,165 @@
+{
+  "status": "PASS_DIAGNOSTIC_ACTION_DIRECTION_IDENTIFIED",
+  "scope": "mode-projected primitive sensitivity only; not a background-preserving continuation member",
+  "u_light_ring_grid": 0.70612528132033,
+  "finite_difference_amplitude": 0.001,
+  "shape": "stored primitive basis multiplied by C-infinity compact bump on 0.70<=u<=0.715",
+  "controls": {
+    "a1": {
+      "6": {
+        "baseline_lambda_min": -0.0689335723437269,
+        "lambda_minus_eps": -0.06914511997288199,
+        "lambda_plus_eps": -0.06872199129779259,
+        "d_lambda_min_d_amplitude": 0.21156433754469794,
+        "linear_amplitude_to_zero_if_positive_slope": 0.325827940302855,
+        "weakest_vector": [
+          0.9963883002683851,
+          -0.0849137965166406,
+          -4.7427932868674125e-05
+        ]
+      },
+      "20": {
+        "baseline_lambda_min": -0.3678132846845222,
+        "lambda_minus_eps": -0.37213304826880367,
+        "lambda_plus_eps": -0.3635499184518421,
+        "d_lambda_min_d_amplitude": 4.2915649084807885,
+        "linear_amplitude_to_zero_if_positive_slope": 0.08570609848115471,
+        "weakest_vector": [
+          0.8486112337619959,
+          -0.5287882003047116,
+          0.015556771883882386
+        ]
+      },
+      "42": {
+        "baseline_lambda_min": -6.091487706475125,
+        "lambda_minus_eps": -6.114288445092698,
+        "lambda_plus_eps": -6.068691162923948,
+        "d_lambda_min_d_amplitude": 22.798641084374793,
+        "linear_amplitude_to_zero_if_positive_slope": 0.26718643817108767,
+        "weakest_vector": [
+          0.0442901797778415,
+          -0.997877547541842,
+          0.047736569704218995
+        ]
+      },
+      "1000": {
+        "baseline_lambda_min": -11.734007617896562,
+        "lambda_minus_eps": -11.7715969981718,
+        "lambda_plus_eps": -11.696418789783003,
+        "d_lambda_min_d_amplitude": 37.58910419439854,
+        "linear_amplitude_to_zero_if_positive_slope": 0.3121651305445354,
+        "weakest_vector": [
+          -0.0009656353505475292,
+          0.9987013283061659,
+          -0.050938437234274235
+        ]
+      }
+    },
+    "F_tensor": {
+      "6": {
+        "baseline_lambda_min": -0.0689335723437269,
+        "lambda_minus_eps": -0.06893357261884164,
+        "lambda_plus_eps": -0.06893357206849489,
+        "d_lambda_min_d_amplitude": 2.7517337714000334e-07,
+        "linear_amplitude_to_zero_if_positive_slope": 250509.59893062158,
+        "weakest_vector": [
+          0.9963883002683851,
+          -0.0849137965166406,
+          -4.7427932868674125e-05
+        ]
+      },
+      "20": {
+        "baseline_lambda_min": -0.3678132846845222,
+        "lambda_minus_eps": -0.3678132896177505,
+        "lambda_plus_eps": -0.3678132797519443,
+        "d_lambda_min_d_amplitude": 4.932903113763487e-06,
+        "linear_amplitude_to_zero_if_positive_slope": 74563.24930815524,
+        "weakest_vector": [
+          0.8486112337619959,
+          -0.5287882003047116,
+          0.015556771883882386
+        ]
+      },
+      "42": {
+        "baseline_lambda_min": -6.091487706475125,
+        "lambda_minus_eps": -6.091487735361085,
+        "lambda_plus_eps": -6.091487677588682,
+        "d_lambda_min_d_amplitude": 2.888620143082221e-05,
+        "linear_amplitude_to_zero_if_positive_slope": 210878.8073455506,
+        "weakest_vector": [
+          0.0442901797778415,
+          -0.997877547541842,
+          0.047736569704218995
+        ]
+      },
+      "1000": {
+        "baseline_lambda_min": -11.734007617896562,
+        "lambda_minus_eps": -11.734007663885446,
+        "lambda_plus_eps": -11.734007571907679,
+        "d_lambda_min_d_amplitude": 4.598888381224242e-05,
+        "linear_amplitude_to_zero_if_positive_slope": 255148.78042708494,
+        "weakest_vector": [
+          -0.0009656353505475292,
+          0.9987013283061659,
+          -0.050938437234274235
+        ]
+      }
+    },
+    "H_tensor": {
+      "6": {
+        "baseline_lambda_min": -0.0689335723437269,
+        "lambda_minus_eps": -0.06893346515236241,
+        "lambda_plus_eps": -0.06893367953696768,
+        "d_lambda_min_d_amplitude": -0.0001071923026313426,
+        "linear_amplitude_to_zero_if_positive_slope": null,
+        "weakest_vector": [
+          0.9963883002683851,
+          -0.0849137965166406,
+          -4.7427932868674125e-05
+        ]
+      },
+      "20": {
+        "baseline_lambda_min": -0.3678132846845222,
+        "lambda_minus_eps": -0.36781088826987407,
+        "lambda_plus_eps": -0.3678156814047357,
+        "d_lambda_min_d_amplitude": -0.002396567430812402,
+        "linear_amplitude_to_zero_if_positive_slope": null,
+        "weakest_vector": [
+          0.8486112337619959,
+          -0.5287882003047116,
+          0.015556771883882386
+        ]
+      },
+      "42": {
+        "baseline_lambda_min": -6.091487706475125,
+        "lambda_minus_eps": -6.091475750989175,
+        "lambda_plus_eps": -6.091499661752973,
+        "d_lambda_min_d_amplitude": -0.011955381899131368,
+        "linear_amplitude_to_zero_if_positive_slope": null,
+        "weakest_vector": [
+          0.0442901797778415,
+          -0.997877547541842,
+          0.047736569704218995
+        ]
+      },
+      "1000": {
+        "baseline_lambda_min": -11.734007617896562,
+        "lambda_minus_eps": -11.733989503477577,
+        "lambda_plus_eps": -11.734025732315558,
+        "d_lambda_min_d_amplitude": -0.018114418990577974,
+        "linear_amplitude_to_zero_if_positive_slope": null,
+        "weakest_vector": [
+          -0.0009656353505475292,
+          0.9987013283061659,
+          -0.050938437234274235
+        ]
+      }
+    }
+  },
+  "interpretation": {
+    "dominant_positive_direction": "a1",
+    "F_tensor": "near-null for the failing kinetic mode",
+    "H_tensor": "weak and negative at the sampled light-ring point",
+    "promotion_rule": "a1 must be realized together with compensating Horndeski/SVT action jets satisfying the background EOM; primitive sensitivity alone is never a closure certificate"
+  }
+}

@@ -99,9 +99,14 @@ def export_central(root, output):
     sources = sorted({v for k, v in CENTRAL_PRODUCTION_SOURCES.items() if k != "role"})
     cert = dict(
         CENTRAL_DIRECT_41="PASS" if passed else "FAIL",
+        certificate_class="SCOPED_IMPORT_NORMALIZATION_ONLY",
         certificate_scope=(
-            "authoritative central coefficient import and common-convention normalization"
+            "authoritative central coefficient import and common-convention normalization; "
+            "NOT a physical Central closure certificate"
         ),
+        physical_closure_status="FAIL_FINITE_L_FOR_THIS_HISTORICAL_MEMBER",
+        eligible_as_final_production_member=False,
+        superseded_for_physical_closure_by="ELECTRIC_HYBRID_ONSHELL_CENTRAL_PRODUCTION_CANDIDATE",
         independent_action_to_41_verified=False,
         finite_L_stability_certified=False,
         exact_ZK_comparable_slots="PASS" if max(exact_errors.values()) < 1e-7 else "FAIL",

@@ -30,7 +30,7 @@
   "derivative_policy": "JET9D8 before domain trimming",
   "endpoint_method": "local polynomial interpolation with the JET9D8 policy; no spline",
   "generator": "tools/export_inner_production.py",
-  "timestamp": "2026-09-20T08:40:49.231961+00:00",
+  "timestamp": "2026-09-20T19:09:12.577022+00:00",
   "sources": [
     {
       "path": "data/production/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv",

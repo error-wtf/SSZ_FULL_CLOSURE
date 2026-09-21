@@ -1,0 +1,13 @@
+{
+  "shape": [
+    80,
+    112
+  ],
+  "rank": 38,
+  "active_columns": 93,
+  "max_scaled_residual": 0.010605538316949454,
+  "rms_scaled_residual": 0.0011874090251844916,
+  "max_abs_parameter": 5252433647551748.0,
+  "status": "INTERFACE_LINEAR_OPEN",
+  "added_order": 3
+}

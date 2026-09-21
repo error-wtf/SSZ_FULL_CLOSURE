@@ -1,17 +1,12 @@
 # SSZ P5 — Full Closure Research Repository
 
+Current Angular checkpoint: [Eq47 projection and dense action audit](CURRENT_WORKING_STATE_2026-09-21_EQ47.md).
+The projection hypothesis and genuine-SVT finite-L/Laurent checks pass. Dense
+angular positivity fails; the mixed-branch formal leading order remains unresolved.
+Continuation beyond u≈0.708 and global QNM are held. Absolute Full Closure is false.
+See [machine status](FULL_CLOSURE_WORKING_STATUS_2026-09-21_EQ47.json).
+
 **Carmen Casu and Lino Casu · Anti-Capitalist Software License v1.4**
-
-**Current working checkpoint: 2026-09-20 SAME_ACTION.** All 780 files in the
-new supplied ZIP match the unpacked source directory byte-for-byte. The supplied
-release records 119/119 software tests; the fresh Linux/Python 3.14.4 lockfile run
-returns **118 passed, 1 failed** (historical `a5` recipe regression). See the [current integration record](docs/SAME_ACTION_INTEGRATION_2026-09-20.md)
-for fresh verification and the continued Inner action-replay work.
-
-The imported regional certificates report Weak, Outer, Central and Core PASS
-within their declared scopes; Inner, global KRGSM and same-operator QNM remain
-open. Absolute Full Closure is not certified. Historical member diagnostics below
-remain scoped to their named members and do not replace the current checkpoint.
 
 Research sources, action profiles, perturbation code and reproducible verification
 for the regional P5 Full-SVT member: weak Horndeski exterior, outer H/SVT
@@ -25,7 +20,8 @@ and an analytic center chart.
 > The 2026-09-18 global `A0prime=0` epsilon-Y member passes many component tests,
 > but a denominator-free Maxwell-Horndeski Eq.85 audit excludes it at the inner
 > P5 light ring: with positive tensor H/a4 it requires negative tensor F. The
-> corresponding historical electric-hybrid search is documented by the audit in
+> active path is therefore an **on-shell electric Horndeski/SVT hybrid**, seeded
+> by the machine light-ring audit in
 > `data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json`.
 
 ## Reproduce

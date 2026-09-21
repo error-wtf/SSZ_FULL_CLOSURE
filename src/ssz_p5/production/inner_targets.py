@@ -18,6 +18,27 @@ from .lower_order_controls import invert_lower_order_targets
 JET_ORDERS = {"v5": 1, "c3": 1, "e3": 0}
 
 
+def endpoint_derivative_orders(name: str) -> tuple[int, ...]:
+    """Return the *contractual* endpoint derivative orders for one target.
+
+    This is the single source of truth for handover endpoint constraints.  A
+    solver must not silently add higher derivative conditions: if ``e3`` is
+    declared order 0, only its endpoint value is a hard patch condition.
+    """
+    if name not in JET_ORDERS:
+        raise KeyError(f"unknown inner endpoint target: {name}")
+    return tuple(range(JET_ORDERS[name] + 1))
+
+
+def endpoint_constraint_count(names=None, sides: int = 2) -> int:
+    """Number of scalar endpoint equations required by the frozen contract."""
+    if names is None:
+        names = tuple(JET_ORDERS)
+    if sides <= 0:
+        raise ValueError("sides must be positive")
+    return sides * sum(len(endpoint_derivative_orders(name)) for name in names)
+
+
 def left_endpoint_jets(r, values, endpoint, order):
     r, values = np.asarray(r, float), np.asarray(values, float)
     candidates = np.flatnonzero(r >= endpoint)

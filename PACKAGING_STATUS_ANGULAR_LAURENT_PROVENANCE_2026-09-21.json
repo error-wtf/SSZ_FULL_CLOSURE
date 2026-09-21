@@ -1,0 +1,11 @@
+{
+  "absolute_full_closure": false,
+  "angular_method_pipeline": "PASS_METHOD_PIPELINE",
+  "checkpoint": "ANGULAR_LAURENT_PROVENANCE",
+  "continuation_0p708_to_0p715": "HELD",
+  "date": "2026-09-21",
+  "dense_branch_angular": "OPEN",
+  "grouped_tests_passed": 132,
+  "intended_archive": "SSZ_P5_2026-09-21_ANGULAR_LAURENT_PROVENANCE_CHECKPOINT.zip",
+  "manifest_file_count": 898
+}

@@ -1,81 +1,100 @@
 {
   "status": "NUMERICAL_TARGET_REPLAY_OPEN",
-  "construction": "same-action 14-profile background-preserving solve; five interior channels targeted; e3 only endpoint value/first/second jets constrained",
+  "construction": "same-action 14-profile background-preserving diagnostic; five historical interior channels targeted; e3 endpoints constrained strictly from JET_ORDERS",
+  "endpoint_contract": {
+    "v5": [
+      0,
+      1
+    ],
+    "c3": [
+      0,
+      1
+    ],
+    "e3": [
+      0
+    ]
+  },
   "rows": 1401,
   "unknowns": 19614,
-  "equations_total": 7011,
-  "equations_after_zero_rows": 6864,
+  "equations_total": 7007,
+  "equations_after_zero_rows": 6860,
   "solver": "regularized row-Gram minimum norm + iterative refinement",
   "gram_lambda": 1e-14,
-  "initial_max_row_normalized_residual": 0.0008557114724802705,
+  "initial_max_row_normalized_residual": 0.0008557113639362996,
   "refinements": 40,
-  "final_max_row_normalized_residual": 0.0002950715504235002,
+  "final_max_row_normalized_residual": 0.0002950715508768986,
   "operator_prediction_errors": {
     "v5": {
-      "max_scaled": 3.026522424068945e-13,
-      "p99_scaled": 1.816150192650084e-13,
-      "median_scaled": 4.343345865381158e-15
+      "max_scaled": 3.350411002684879e-13,
+      "p99_scaled": 2.1638018179985828e-13,
+      "median_scaled": 4.477575510977061e-15
     },
     "c3": {
-      "max_scaled": 4.291062253881969e-05,
-      "p99_scaled": 4.19271828245657e-06,
-      "median_scaled": 1.108812858761579e-12
+      "max_scaled": 4.29106226047549e-05,
+      "p99_scaled": 4.192718269364872e-06,
+      "median_scaled": 9.658324910044748e-13
     },
     "v1": {
-      "max_scaled": 4.0743327242015075e-15,
-      "p99_scaled": 2.3810116190340948e-15,
-      "median_scaled": 1.6073379974474074e-16
+      "max_scaled": 4.463006929555011e-15,
+      "p99_scaled": 2.9325507771165357e-15,
+      "median_scaled": 1.6170294818062385e-16
     },
     "v4": {
-      "max_scaled": 7.275957614183426e-12,
-      "p99_scaled": 4.092726157978177e-12,
+      "max_scaled": 6.366462912410498e-12,
+      "p99_scaled": 4.547473508864641e-12,
       "median_scaled": 2.2737367544323206e-13
     },
     "c2": {
       "max_scaled": 7.783166870456437e-05,
       "p99_scaled": 7.5497968833881934e-06,
-      "median_scaled": 1.494081495341791e-14
+      "median_scaled": 1.5483681495034774e-14
     },
     "e3_endpoint_jets": {
-      "max_scaled": 113613627392.00343,
-      "median_scaled": 99974.9739981017
+      "max_scaled": 0.0010481500571855934,
+      "median_scaled": 0.0008135521987103253,
+      "required_orders": [
+        0
+      ]
     }
   },
   "direct_emitter_target_errors": {
     "v5": {
-      "max_scaled": 9.077925742540527e-10,
-      "p99_scaled": 6.579666796583911e-10
+      "max_scaled": 1.537069553973059e-09,
+      "p99_scaled": 7.543628326478999e-10
     },
     "c3": {
-      "max_scaled": 4.291062253920277e-05,
-      "p99_scaled": 4.192718282463979e-06
+      "max_scaled": 4.291062260513961e-05,
+      "p99_scaled": 4.192718269371804e-06
     },
     "v1": {
       "max_scaled": 1.4860988029252043e-11,
-      "p99_scaled": 9.291234901987539e-13
+      "p99_scaled": 9.171261826723308e-13
     },
     "v4": {
-      "max_scaled": 9.65094670846156e-12,
-      "p99_scaled": 6.558309451065725e-12
+      "max_scaled": 9.556799795973347e-12,
+      "p99_scaled": 6.323830348264892e-12
     },
     "c2": {
       "max_scaled": 7.783166870456437e-05,
       "p99_scaled": 7.5497968833881934e-06
     },
     "e3_endpoint_jets": {
-      "max_scaled": 21631913984.003433
+      "max_scaled": 0.0014224041525257593,
+      "required_orders": [
+        0
+      ]
     }
   },
   "operator_vs_direct_emitter_max_scaled": {
-    "v5": 9.079486292649826e-10,
-    "c3": 3.5901885090242612e-09,
+    "v5": 1.5370634254631067e-09,
+    "c3": 1.0335933192226081e-08,
     "v1": 1.7326237775235065e-11,
-    "v4": 8.535394613318203e-12,
-    "c2": 2.2595258997171186e-12,
-    "e3": 0.0004972897062282031
+    "v4": 8.546052754354605e-12,
+    "c2": 1.8474111129762605e-12,
+    "e3": 0.002473146438292077
   },
   "max_abs_control": 963989899.5344805,
-  "e3_interior_min": -1643400357430.9473,
-  "e3_interior_max": 1490939392540.4272,
+  "e3_interior_min": -4123909333995.6045,
+  "e3_interior_max": 1208653872622.6216,
   "absolute_full_closure": "NOT_EVALUATED_DOWNSTREAM"
 }

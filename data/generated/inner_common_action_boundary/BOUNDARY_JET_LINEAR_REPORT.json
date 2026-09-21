@@ -1,0 +1,11 @@
+{
+  "shape": [
+    80,
+    84
+  ],
+  "rank": 35,
+  "active": 76,
+  "max_scaled_residual": 0.010605538316949454,
+  "rms_scaled_residual": 0.0011874109152799814,
+  "max_abs_parameter": 74110802605606.5
+}

@@ -1,0 +1,169 @@
+{
+  "status": "PASS_PROJECTED_CONTROLLABILITY_NUMERICS",
+  "scope": "finite-difference/localization robustness for pre-continuation tangent diagnostics",
+  "joint_H_SVT_projected_tangent": {
+    "light_ring_fd_scan": [
+      {
+        "epsilon": 2e-05,
+        "metric_vector_common_gain": 0.19860426207461485,
+        "with_scalar_identity_common_gain": 0.06082220423592435,
+        "all_L_structurally_controllable_with_scalar_identity": true
+      },
+      {
+        "epsilon": 1e-05,
+        "metric_vector_common_gain": 0.19860239582461456,
+        "with_scalar_identity_common_gain": 0.0608221954808265,
+        "all_L_structurally_controllable_with_scalar_identity": true
+      },
+      {
+        "epsilon": 5e-06,
+        "metric_vector_common_gain": 0.19860161468939458,
+        "with_scalar_identity_common_gain": 0.0608220811710258,
+        "all_L_structurally_controllable_with_scalar_identity": true
+      }
+    ],
+    "relative_spread_scalar_identity_common_gain": 2.0233562561861636e-06,
+    "fd_converged": true
+  },
+  "horndeski_a1_null_bundle": {
+    "nominal_half_width_u": 0.00125,
+    "nominal_max_abs_linear_background_residual": 6.1991578670749195e-15,
+    "amplitude_scan": [
+      {
+        "epsilon": 0.01,
+        "slopes": {
+          "6": 0.11198328650874334,
+          "20": 3.7079567331761014,
+          "42": 13.626704863913952,
+          "1000": 11.334743804554925
+        },
+        "all_positive": true
+      },
+      {
+        "epsilon": 0.003,
+        "slopes": {
+          "6": 0.11197743949330208,
+          "20": 3.7005208433274666,
+          "42": 13.626754733253144,
+          "1000": 11.334745267598478
+        },
+        "all_positive": true
+      },
+      {
+        "epsilon": 0.001,
+        "slopes": {
+          "6": 0.11197692591719682,
+          "20": 3.6998646885363917,
+          "42": 13.626759101651675,
+          "1000": 11.334745396219148
+        },
+        "all_positive": true
+      },
+      {
+        "epsilon": 0.0003,
+        "slopes": {
+          "6": 0.1119768714834731,
+          "20": 3.699790799118752,
+          "42": 13.626759645447944,
+          "1000": 11.334745410813698
+        },
+        "all_positive": true
+      },
+      {
+        "epsilon": 0.0001,
+        "slopes": {
+          "6": 0.11197685592219397,
+          "20": 3.6997849526901327,
+          "42": 13.626759844664882,
+          "1000": 11.334745412039382
+        },
+        "all_positive": true
+      },
+      {
+        "epsilon": 3e-05,
+        "slopes": {
+          "6": 0.11197691476422245,
+          "20": 3.6997845700168877,
+          "42": 13.626763392811842,
+          "1000": 11.334745412513078
+        },
+        "all_positive": true
+      },
+      {
+        "epsilon": 1e-05,
+        "slopes": {
+          "6": 0.11197688675954053,
+          "20": 3.699768859136143,
+          "42": 13.626759678819765,
+          "1000": 11.33474541283874
+        },
+        "all_positive": true
+      }
+    ],
+    "amplitude_derivative_sign_stable": true,
+    "width_scan": [
+      {
+        "half_width_u": 0.0008,
+        "max_abs_linear_background_residual": 3.736025553283532e-15,
+        "slopes": {
+          "6": 0.03279402929642905,
+          "20": 1.9309142598586404,
+          "42": 4.916177996330262,
+          "1000": -1.7588340156837745
+        },
+        "all_positive": false
+      },
+      {
+        "half_width_u": 0.001,
+        "max_abs_linear_background_residual": 5.296783845913237e-15,
+        "slopes": {
+          "6": 0.08107776178732651,
+          "20": 3.009527216953356,
+          "42": 10.227674385228092,
+          "1000": 6.22530401602539
+        },
+        "all_positive": true
+      },
+      {
+        "half_width_u": 0.00125,
+        "max_abs_linear_background_residual": 6.1991578670749195e-15,
+        "slopes": {
+          "6": 0.11197685592219397,
+          "20": 3.6997849526901327,
+          "42": 13.626759844664882,
+          "1000": 11.334745412039382
+        },
+        "all_positive": true
+      },
+      {
+        "half_width_u": 0.0015,
+        "max_abs_linear_background_residual": 9.4531541492231e-15,
+        "slopes": {
+          "6": 0.12876075587947566,
+          "20": 4.07472073827575,
+          "42": 15.473089111353033,
+          "1000": 14.11011132399942
+        },
+        "all_positive": true
+      },
+      {
+        "half_width_u": 0.0018,
+        "max_abs_linear_background_residual": 1.2749045833918353e-14,
+        "slopes": {
+          "6": 0.14041591783621465,
+          "20": 4.335083905701864,
+          "42": 16.755224050450934,
+          "1000": 16.037393627277297
+        },
+        "all_positive": true
+      }
+    ],
+    "all_L_sign_robust_to_width": false,
+    "interpretation": "The projected a1 direction is a genuine on-shell Horndeski tangent clue. Its all-L stabilizing sign is localization dependent, so a1 alone is not promoted as a universal one-dimensional repair."
+  },
+  "promotion": {
+    "joint_projected_tangent_ready_for_predictor_corrector_trial": true,
+    "a1_alone_promoted_to_transition_solution": false,
+    "next": "solve a joint H+SVT null-bundle predictor with kinetic/radial/angular inequality guards, then nonlinear correct and absolutely re-emit"
+  }
+}

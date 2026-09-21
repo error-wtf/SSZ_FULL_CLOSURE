@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-21",
+  "checkpoint": "ANGULAR_LAURENT_PROVENANCE",
+  "monolithic_pytest": "NOT_CLAIMED; earlier monolithic unit invocation hit execution timeout without a reported failure",
+  "grouped_tests": {
+    "unit": {"passed": 80, "failed": 0},
+    "negative": {"passed": 42, "failed": 0},
+    "regression": {"passed": 8, "failed": 0},
+    "integration": {"passed": 1, "failed": 0},
+    "release": {"passed": 1, "failed": 0}
+  },
+  "grouped_total": {"passed": 132, "failed": 0},
+  "angular_method_pipeline": "PASS_METHOD_PIPELINE"
+}

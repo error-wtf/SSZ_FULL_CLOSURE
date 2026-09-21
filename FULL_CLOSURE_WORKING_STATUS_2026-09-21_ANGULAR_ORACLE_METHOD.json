@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-21",
+  "checkpoint": "ANGULAR_ORACLE_METHOD",
+  "absolute_full_closure": false,
+  "dense_strong_field_branch": {
+    "kinetic": "PASS_PRESERVED",
+    "radial": "PASS_PRESERVED",
+    "angular": "OPEN"
+  },
+  "angular": {
+    "published_svt_oracle": "PASS",
+    "legacy_sep13_reference": "LEGACY_CONVENTION_MISMATCH",
+    "mixed_h_svt_universal_reducer": "OPEN",
+    "dense_branch_physical_angular_gate": "OPEN",
+    "universal_reducer_contract": "docs/ANGULAR_UNIVERSAL_REDUCER_CONTRACT_2026-09-21.md",
+    "required_regressions": [
+      "published_genuine_SVT_Eq86_95",
+      "published_Maxwell_Horndeski_angular_limit",
+      "mixed_to_SVT_epsilon_1e-2_to_1e-5",
+      "mixed_to_MH_epsilon_1e-2_to_1e-5",
+      "eigenvector_overlap_mode_tracking"
+    ]
+  },
+  "continuation_0p708_to_0p715": "HELD_PENDING_UNIVERSAL_ANGULAR_REDUCER_VALIDATION",
+  "next_required_step": "derive universal large-L H+SVT angular reducer from the common 41-slot action and validate it against genuine-SVT and Maxwell-Horndeski published limits before evaluating or extending the dense mixed branch"
+}

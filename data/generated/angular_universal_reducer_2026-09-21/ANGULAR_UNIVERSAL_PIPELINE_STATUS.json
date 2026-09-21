@@ -1,0 +1,10 @@
+{
+  "absolute_full_closure": false,
+  "continuation_0p708_to_0p715": "HELD",
+  "dense_branch_angular": "OPEN",
+  "first_divergent_stage": "M23_0",
+  "laurent_engine": "PASS_FINITE_L_REGRESSION",
+  "m5_symbolic": "PASS",
+  "scope": "ANGULAR_METHOD_ONLY_NO_DENSE_GATE_NO_CONTINUATION",
+  "status": "PASS_METHOD_PIPELINE"
+}

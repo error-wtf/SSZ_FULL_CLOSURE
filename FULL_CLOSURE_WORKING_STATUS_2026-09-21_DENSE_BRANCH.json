@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-21",
+  "checkpoint": "STRONG_FIELD_ACTION_BRANCH_CONTINUATION",
+  "absolute_full_closure": false,
+  "dense_branch": {
+    "domain_u": [0.7002175543885971, 0.7079894973743436],
+    "rows": 297,
+    "Ls": [6, 12, 20, 42, 110, 420, 1000],
+    "inner_light_ring_u": 0.7061346,
+    "kinetic": {
+      "status": "PASS",
+      "min_lambda": 1.2603117420917508e-05,
+      "L": 1000,
+      "u": 0.7048124531132783
+    },
+    "radial": {
+      "status": "PASS",
+      "min_cr2": 0.0003647320775286289,
+      "L": 1000,
+      "u": 0.7002175543885971
+    }
+  },
+  "open_gates": [
+    "validated_angular_gate",
+    "continuation_0.708_to_0.715",
+    "analytic_high_L_principal_symbol",
+    "combined_absolute_H_plus_SVT_emitter_provenance",
+    "global_direct_41_KRGSM",
+    "same_operator_coupled_QNM"
+  ],
+  "historical_inner_final_member_allowed": false
+}

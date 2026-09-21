@@ -1,0 +1,182 @@
+{
+  "status": "PASS_A1_SURVIVES_BACKGROUND_NULL_PROJECTION",
+  "scope": "local quartic-G5=0 Horndeski tangent projection and kinetic sensitivity; not a finite transition member",
+  "action_coordinates": [
+    "G4XX",
+    "G3X",
+    "G2",
+    "G2X"
+  ],
+  "background_rows": [
+    "E00",
+    "E11",
+    "E22"
+  ],
+  "rank_policy": {
+    "relative_svd_tolerance": 1e-10,
+    "reason": "the third singular scale can sit at the numerical/identity floor; use the full SVD nullspace rather than the historically singular preferred 2x2 pivot"
+  },
+  "sample_points": [
+    {
+      "u_requested": 0.7013,
+      "u_grid": 0.7012940735183796,
+      "rank": 2,
+      "null_dim": 2,
+      "singular_values": [
+        1.7910126851251476,
+        0.5865115897402859,
+        1.97591295393833e-13
+      ],
+      "relative_svd_tolerance": 1e-10,
+      "projected_norm": 0.19941314096121612,
+      "raw_norm": 0.20749675309920057,
+      "projected_fraction": 0.9610422234697822,
+      "a1_gain_unit_direction": 0.19941314096121607,
+      "background_residual_norm": 5.5423173329786276e-14,
+      "best_unit_null_direction": {
+        "G4XX": 0.25130763036432074,
+        "G3X": 0.9378486201927063,
+        "G2": -1.7661945167966534e-11,
+        "G2X": -0.23934168154190544
+      },
+      "c4_gain_unit_direction": 0.2749691502417676
+    },
+    {
+      "u_requested": 0.703,
+      "u_grid": 0.7030007501875468,
+      "rank": 2,
+      "null_dim": 2,
+      "singular_values": [
+        1.7890924783418163,
+        0.5783733076066465,
+        1.3417741065090952e-13
+      ],
+      "relative_svd_tolerance": 1e-10,
+      "projected_norm": 0.2059374687521345,
+      "raw_norm": 0.21647882074094427,
+      "projected_fraction": 0.9513053888933348,
+      "a1_gain_unit_direction": 0.20593746875213448,
+      "background_residual_norm": 5.6595572649576925e-14,
+      "best_unit_null_direction": {
+        "G4XX": 0.3997334888890108,
+        "G3X": 0.8740920783852416,
+        "G2": 1.676205015202823e-11,
+        "G2X": -0.27600031950124215
+      },
+      "c4_gain_unit_direction": 0.28134658695804216
+    },
+    {
+      "u_requested": 0.7061345733,
+      "u_grid": 0.70612528132033,
+      "rank": 2,
+      "null_dim": 2,
+      "singular_values": [
+        1.7941727408317052,
+        0.5994881502372867,
+        3.1812932042996714e-16
+      ],
+      "relative_svd_tolerance": 1e-10,
+      "projected_norm": 0.22469864874560141,
+      "raw_norm": 0.25232489648727935,
+      "projected_fraction": 0.8905131910236583,
+      "a1_gain_unit_direction": 0.22469864874560147,
+      "background_residual_norm": 4.889327520864827e-16,
+      "best_unit_null_direction": {
+        "G4XX": 0.6303836374187407,
+        "G3X": 0.6505738292495068,
+        "G2": -5.042329630687627e-12,
+        "G2X": -0.42352114748894326
+      },
+      "c4_gain_unit_direction": 0.2994958684087722
+    },
+    {
+      "u_requested": 0.708,
+      "u_grid": 0.7079894973743436,
+      "rank": 2,
+      "null_dim": 2,
+      "singular_values": [
+        1.8062741784752352,
+        0.6449807610732804,
+        8.49131775456699e-15
+      ],
+      "relative_svd_tolerance": 1e-10,
+      "projected_norm": 0.2354108821156967,
+      "raw_norm": 0.28671721505272296,
+      "projected_fraction": 0.821055973469916,
+      "a1_gain_unit_direction": 0.2354108821156967,
+      "background_residual_norm": 6.0507813842438135e-15,
+      "best_unit_null_direction": {
+        "G4XX": 0.701919566533773,
+        "G3X": 0.47071818190919396,
+        "G2": -1.6122141023615625e-12,
+        "G2X": -0.5345402841106958
+      },
+      "c4_gain_unit_direction": 0.3080102107399101
+    },
+    {
+      "u_requested": 0.709,
+      "u_grid": 0.7089872468117029,
+      "rank": 2,
+      "null_dim": 2,
+      "singular_values": [
+        1.8169473265912022,
+        0.6804943327554749,
+        1.2174966912413989e-13
+      ],
+      "relative_svd_tolerance": 1e-10,
+      "projected_norm": 0.2399564684863384,
+      "raw_norm": 0.30899549661381637,
+      "projected_fraction": 0.7765694682153792,
+      "a1_gain_unit_direction": 0.2399564684863384,
+      "background_residual_norm": 9.089059965131173e-14,
+      "best_unit_null_direction": {
+        "G4XX": 0.7187228990849291,
+        "G3X": 0.3699517684192251,
+        "G2": -1.5056069758490827e-11,
+        "G2X": -0.5887045807316627
+      },
+      "c4_gain_unit_direction": 0.31063742655088705
+    }
+  ],
+  "light_ring_bundle": {
+    "u_light_ring_grid": 0.70612528132033,
+    "compact_half_width_u": 0.00125,
+    "max_abs_linear_background_residual": 6.1991578670749195e-15,
+    "delta_a1_at_light_ring": 0.22468623196704762,
+    "delta_c4_at_light_ring": 0.2994793183587537,
+    "kinetic_sensitivity": {
+      "6": {
+        "baseline_lambda_min": -0.06893357234372828,
+        "lambda_minus_eps": -0.06894477149437364,
+        "lambda_plus_eps": -0.0689223761231892,
+        "d_lambda_min_d_bundle_amplitude": 0.11197685592219397
+      },
+      "20": {
+        "baseline_lambda_min": -0.3678132846846479,
+        "lambda_minus_eps": -0.3681834961025746,
+        "lambda_plus_eps": -0.3674435391120366,
+        "d_lambda_min_d_bundle_amplitude": 3.6997849526901327
+      },
+      "42": {
+        "baseline_lambda_min": -6.091487706474927,
+        "lambda_minus_eps": -6.092850401328561,
+        "lambda_plus_eps": -6.090125049359628,
+        "d_lambda_min_d_bundle_amplitude": 13.626759844664882
+      },
+      "1000": {
+        "baseline_lambda_min": -11.734007617896573,
+        "lambda_minus_eps": -11.735141093564714,
+        "lambda_plus_eps": -11.732874144482306,
+        "d_lambda_min_d_bundle_amplitude": 11.334745412039382
+      }
+    },
+    "all_tested_L_improve": true,
+    "interpretation": "The raw a1 clue survives projection onto a genuine local Horndeski background-null tangent. However the a1-maximizing on-shell Horndeski bundle is not a common all-L stabilizer if any reported slope is non-positive. The next predictor must therefore solve the joint H+SVT null-bundle feasibility problem rather than patching a1 alone."
+  },
+  "promotion": {
+    "a1_offshell_clue_upgraded_to_onshell_tangent_clue": true,
+    "a1_bundle_is_finite_transition_solution": false,
+    "a1_bundle_is_common_all_L_stabilizer": true,
+    "joint_H_SVT_continuation_required": true
+  }
+}

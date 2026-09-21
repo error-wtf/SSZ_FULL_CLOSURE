@@ -1,0 +1,86 @@
+{
+  "baseline_background": {
+    "E00": {
+      "max_abs": 1.1095291352347658e-12,
+      "median_abs": 2.0167201242315969e-13
+    },
+    "E11": {
+      "max_abs": 1.1466660954084773e-12,
+      "median_abs": 2.102207297127734e-13
+    },
+    "Ephi_direct": {
+      "max_abs": 7.674524599821098e-06,
+      "max_scaled": 4.333893337087058e-07,
+      "median_abs": 7.131640700208663e-08
+    },
+    "JA": {
+      "max_abs": 5.418811462710504e-15,
+      "median_abs": 5.154924806462482e-16
+    },
+    "JA_prime": {
+      "max_abs": 1.4371863426015225e-10,
+      "median_abs": 1.0557012190230528e-11
+    },
+    "Jphi": {
+      "max_abs": 9.158017917870355,
+      "median_abs": 5.882089594420865
+    },
+    "Pphi": {
+      "max_abs": 48.17697177501393,
+      "median_abs": 20.030338603021843
+    }
+  },
+  "interpretation": "Scalar identity can be solved at strict precision, but it may not be promoted unless the same action member simultaneously preserves E00, E11 and JA. A failure of E11 here is evidence for a joint scalar+metric action solve, not permission to loosen tolerances.",
+  "production_member_modified": false,
+  "promotion_eligible": false,
+  "release_tolerance": 1e-10,
+  "scalar_only_trial_background": {
+    "E00": {
+      "max_abs": 1.1095291352347658e-12,
+      "median_abs": 2.0167201242315969e-13
+    },
+    "E11": {
+      "max_abs": 8.790049426665725e-07,
+      "median_abs": 3.3307554275774365e-07
+    },
+    "Ephi_direct": {
+      "max_abs": 0.03794949677854831,
+      "max_scaled": 0.004762034027922357,
+      "median_abs": 0.0004595440211758728
+    },
+    "JA": {
+      "max_abs": 5.418811462710504e-15,
+      "median_abs": 5.154924806462482e-16
+    },
+    "JA_prime": {
+      "max_abs": 1.4371863426015225e-10,
+      "median_abs": 1.0557012190230528e-11
+    },
+    "Jphi": {
+      "max_abs": 9.158019137516257,
+      "median_abs": 5.8820905334422235
+    },
+    "Pphi": {
+      "max_abs": 48.17697503178046,
+      "median_abs": 20.030339307852127
+    }
+  },
+  "scope": "non-production scalar-only f3X identity solve with all other action controls frozen",
+  "simultaneous_strict_gates": {
+    "E00": true,
+    "E11": false,
+    "Ephi_identity": true,
+    "JA": true
+  },
+  "solve": {
+    "identity": "A(r) q'(r) + B(r) q(r) + C(r) = 0",
+    "initial_u": 0.61,
+    "max_abs_q_shift_production": 1.6239479592172756e-06,
+    "nfev": 43082,
+    "scalar_identity_max_abs_production": 1.1368683772161603e-13,
+    "success": true,
+    "terminal_u": 0.7099849962490622,
+    "unknown": "q=f3X"
+  },
+  "status": "DIAGNOSTIC_COUPLING_OPEN"
+}

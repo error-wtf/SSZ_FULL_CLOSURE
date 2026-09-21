@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "minimax_t": 8.393650919831577e-05,
+  "actual_max_scaled_residual": 1642.469371304318,
+  "rms_scaled_residual": 183.63368799838253,
+  "status": "PRIMITIVE_INTERFACE_OPEN",
+  "active_columns": 105,
+  "note": "primitive/coefficient reachability only, not common G_i action certificate"
+}

@@ -1,0 +1,14 @@
+{
+  "shape": [
+    80,
+    120
+  ],
+  "rank": 38,
+  "active_columns": 101,
+  "max_scaled_residual": 0.010605538316949454,
+  "rms_scaled_residual": 0.0011874090251844925,
+  "max_abs_parameter": 1.539275777371597e+17,
+  "g3_max_abs_parameter": 1.539275777371597e+17,
+  "status": "G3_TUBULAR_INTERFACE_OPEN",
+  "interpretation": "all added Horndeski columns are exact background-null G3 tubular action jets; no primitive coefficient patching"
+}

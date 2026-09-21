@@ -146,7 +146,7 @@ def emit_from_primitives(
     c5 = -h * ph * c4 - 0.5 * sqfh * G / r - 0.5 * fp * a4 / f
     c6 = (
         fp * ph * a1 / (8.0 * f)
-        + fp * a4 / (2.0 * r * f)
+        + 0.5 * fp * r * a4 / f
         - 0.25 * ph * c2
         + 0.5 * h * ph * r * c4
         + 0.25 * sqfh * G

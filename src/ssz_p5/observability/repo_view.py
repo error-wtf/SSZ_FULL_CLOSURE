@@ -59,6 +59,19 @@ def _scope(data: dict[str, Any]) -> str:
     return ""
 
 
+def _working_status(root: Path) -> tuple[dict[str, Any], str]:
+    """Return the newest explicit working-status snapshot without rewriting history."""
+    for name in (
+        "FULL_CLOSURE_WORKING_STATUS_2026-09-21_PROJECTED_CONTROLLABILITY.json",
+        "FULL_CLOSURE_WORKING_STATUS_2026-09-20_STRONG_FIELD.json",
+        "FULL_CLOSURE_WORKING_STATUS_2026-09-21_PROJECTED_CONTROLLABILITY.json",
+    ):
+        p = root / name
+        if p.exists():
+            return _read_json(p), name
+    return {}, ""
+
+
 def build_evidence_index(root: Path) -> list[dict[str, Any]]:
     roots = [root / "data" / "generated", root / "build"]
     paths: list[Path] = []
@@ -71,6 +84,7 @@ def build_evidence_index(root: Path) -> list[dict[str, Any]]:
         "STRICT_DIRECT_AUDIT_REPORT.json",
         "PACKAGING_STATUS.json",
         "UPDATED_WORKING_STATUS_2026-09-18.json",
+        "FULL_CLOSURE_WORKING_STATUS_2026-09-20_STRONG_FIELD.json",
     ):
         p = root / name
         if p.exists():
@@ -97,6 +111,7 @@ def build_evidence_index(root: Path) -> list[dict[str, Any]]:
 
 def build_gate_matrix(root: Path) -> list[dict[str, Any]]:
     ledger = _read_json(root / "ABSOLUTE_CLOSURE_LEDGER.json")
+    working, working_name = _working_status(root)
     rows: list[dict[str, Any]] = []
 
     def add(name: str, status: Any, evidence: str = "", note: str = "") -> None:
@@ -115,6 +130,40 @@ def build_gate_matrix(root: Path) -> list[dict[str, Any]]:
         if isinstance(pf, dict):
             add("HORNDESKI_PRINCIPAL_FEASIBILITY", pf.get("status", "UNKNOWN"), str(pf.get("audit", "")))
     add("QNM", ledger.get("qnm", "UNKNOWN"), "ABSOLUTE_CLOSURE_LEDGER.json")
+    if working:
+        central = working.get("central", {})
+        transition = working.get("right_strong_field_transition", {})
+        downstream = working.get("downstream", {})
+        tests = working.get("tests", {}).get("grouped_complete_matrix", {})
+        add(
+            "SOFTWARE_TESTS_CURRENT",
+            f"{tests.get('passed')}/{tests.get('total')}_PASS_GROUPED_COMPLETE_MATRIX" if tests.get("status") == "PASS" else tests.get("status", "UNKNOWN"),
+            working_name,
+            "current repaired checkpoint; historical release test counts remain preserved separately",
+        )
+        add(
+            "CENTRAL_DIRECT41_NORMALIZATION",
+            central.get("historical_direct41_normalization", "UNKNOWN"),
+            working_name,
+            "scoped reproduction only; not physical closure",
+        )
+        add(
+            "ELECTRIC_HYBRID_BULK",
+            central.get("electric_hybrid_bulk_0p62_0p70", "UNKNOWN"),
+            "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_ONSHELL_CENTRAL_AUDIT.json",
+        )
+        add(
+            "RIGHT_STRONG_FIELD_TRANSITION",
+            transition.get("status", "UNKNOWN"),
+            "data/generated/strong_field_transition_2026-09-20/STRONG_FIELD_TRANSITION_AUDIT.json",
+            "one action solve on 0.70<=u<=0.715; u=0.71 is not a physical seam",
+        )
+        add("GLOBAL_ABSOLUTE_DIRECT41", downstream.get("global_absolute_direct41", "UNKNOWN"), working_name)
+        add("GLOBAL_KRGSM", downstream.get("global_KRGSM", "UNKNOWN"), working_name)
+        add("SAME_OPERATOR_QNM", downstream.get("same_operator_QNM", "UNKNOWN"), working_name)
+        projected = working.get("local_projected_controllability", {})
+        if projected:
+            add("PROJECTED_ONSHELL_CONTROLLABILITY", projected.get("status", "UNKNOWN"), "data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY.json", "local tangent existence gate; not a finite transition member")
 
     evidence = {row["path"]: row for row in build_evidence_index(root)}
     preferred = [
@@ -137,7 +186,28 @@ def build_gate_matrix(root: Path) -> list[dict[str, Any]]:
 
 def build_member_matrix(root: Path) -> list[dict[str, str]]:
     ledger = _read_json(root / "ABSOLUTE_CLOSURE_LEDGER.json")
+    working, _working_name = _working_status(root)
     rows: list[dict[str, str]] = []
+    if working:
+        central = working.get("central", {})
+        transition = working.get("right_strong_field_transition", {})
+        rows.extend([
+            {
+                "member": "historical_central_direct41",
+                "status": str(central.get("historical_direct41_normalization", "UNKNOWN")),
+                "reason": "normalization/reproduction scope only; not final physical member",
+            },
+            {
+                "member": "electric_hybrid_bulk_0p62_0p70",
+                "status": str(central.get("electric_hybrid_bulk_0p62_0p70", "UNKNOWN")),
+                "reason": "7/7 finite-L K/radial bulk pass; scalar/angular/high-L final gates remain",
+            },
+            {
+                "member": "historical_inner",
+                "status": "REJECTED_AS_FINAL_MEMBER" if not transition.get("historical_inner_member_final_production_eligible", True) else "UNKNOWN",
+                "reason": "replaced by one action-first strong-field transition on 0.70<=u<=0.715",
+            },
+        ])
     for key in ("regional_electric_member_2026_09_17", "zero_vector_epsilon_y_member_2026_09_18"):
         data = ledger.get(key, {})
         if isinstance(data, dict):
@@ -197,6 +267,7 @@ def reproduction_commands() -> list[str]:
         "python tools/show_code_map.py",
         "python tools/run_all_evidence.py",
         "python tools/audit_zero_vector_light_ring.py",
+        "python tools/audit_strong_field_transition.py",
         "python tools/audit_electric_hybrid_principal_feasibility.py",
         "python tools/audit_descriptor_pullback_equivalence.py",
         "python tools/audit_radial_descriptor_pencil.py",
@@ -212,10 +283,20 @@ def reproduction_commands() -> list[str]:
 def build_repo_snapshot(root: Path) -> dict[str, Any]:
     ledger = _read_json(root / "ABSOLUTE_CLOSURE_LEDGER.json")
     packaging = _read_json(root / "PACKAGING_STATUS.json")
+    working, _working_name = _working_status(root)
+    grouped = working.get("tests", {}).get("grouped_complete_matrix", {}) if working else {}
+    if grouped.get("status") == "PASS":
+        software = f"{grouped.get('passed')}/{grouped.get('total')}_PASS_GROUPED_COMPLETE_MATRIX"
+    else:
+        software = ledger.get("software_tests", packaging.get("tests", {}).get("status", "UNKNOWN"))
     return {
-        "absolute_full_closure": ledger.get("absolute_full_closure", "UNKNOWN"),
-        "software_tests": ledger.get("software_tests", packaging.get("tests", {}).get("status", "UNKNOWN")),
-        "active_search": ledger.get("active_search", {}),
+        "absolute_full_closure": ledger.get("absolute_full_closure", "NOT_CERTIFIED"),
+        "software_tests": software,
+        "active_search": {
+            "status": working.get("right_strong_field_transition", {}).get("status", "UNKNOWN"),
+            "member": "RIGHT_STRONG_FIELD_TRANSITION_0p70_0p715",
+            "next_gate": "rank-resolved action continuation"
+        } if working else ledger.get("active_search", {}),
         "members": build_member_matrix(root),
         "gates": build_gate_matrix(root),
         "evidence": build_evidence_index(root),

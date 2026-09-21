@@ -1,0 +1,18 @@
+{
+  "status": "PASS_INTERFACE_ACTION_PRIMITIVES",
+  "scope": "quartic G5=0 action->primitive bridge; deep full-G5 subcore excluded",
+  "interface_x_min": 1.398,
+  "interface_x_max": 1.4084507042253522,
+  "interface_max_scaled": {
+    "F_tensor": 6.017408793467986e-14,
+    "G_tensor": 5.995204332975845e-14,
+    "H_tensor": 5.995204332975845e-14,
+    "a1": 5.2735593669694936e-15,
+    "c4": 2.0793451430134446e-07
+  },
+  "dc2_dG2XX_at_u_0p71": 0.2716043392425632,
+  "archived_dc2_dG2XX_at_u_0p71": 0.2716043073757684,
+  "dc2_dG2XX_relative_error": 1.1732801707725225e-07,
+  "gate": true,
+  "note": "This establishes the missing quartic action->primitive bridge at the Inner/Core edge. It does not by itself certify the full inner common-action handover or the G5 subcore."
+}

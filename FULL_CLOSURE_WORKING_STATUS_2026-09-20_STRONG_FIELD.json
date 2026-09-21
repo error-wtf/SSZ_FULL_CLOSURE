@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-20",
+  "status_kind": "ANTI_TARGET_FITTING_STRONG_FIELD_WORKING_STATUS",
+  "absolute_full_closure": false,
+  "historical_release_status_preserved": "RELEASE_STATUS_2026-09-20.json",
+  "semantics": {
+    "direct41_reproduction_is_physical_closure": false,
+    "coefficient_profile_is_action_member": false,
+    "delta_response_is_absolute_reemission": false
+  },
+  "central": {
+    "historical_direct41_normalization": "PASS_SCOPED_ONLY",
+    "historical_member_final_production_eligible": false,
+    "electric_hybrid_bulk_0p62_0p70": "PRODUCTION_CANDIDATE_BULK_PASS",
+    "finite_L_kinetic_and_radial": "PASS_7_OF_7",
+    "scalar_identity": "OPEN",
+    "odd_angular": "OPEN_UNTIL_ORACLE_REGRESSION",
+    "analytic_high_L": "OPEN"
+  },
+  "right_strong_field_transition": {
+    "domain_u": [
+      0.7,
+      0.715
+    ],
+    "historical_seam_u": 0.71,
+    "historical_seam_is_physical_boundary": false,
+    "inner_light_ring_u": 0.7061345733,
+    "status": "OPEN_ACTION_CONTINUATION_REQUIRED",
+    "left_anchor": "electric-hybrid action at u=0.70",
+    "right_anchor": "pure-Horndeski core action at u=0.715",
+    "historical_inner_member_final_production_eligible": false,
+    "historical_coefficient_profiles_are_targets": false,
+    "absolute_action_to_41_reemission_required": true,
+    "electric_support_required_through_inner_light_ring": true,
+    "dehair_only_after_inner_light_ring": true,
+    "electric_constitutive_nondegeneracy_required": true,
+    "mode_tracking_required": true
+  },
+  "falsification_findings": {
+    "unmodified_hybrid_right_extension": "KINETIC_FAIL_BEFORE_INNER_LIGHT_RING",
+    "first_zero_u_approximately": 0.7013,
+    "G2XX_existing_background_null_lift_repairs_right_transition_kinetic_obstruction": false,
+    "one_channel_G4XX_background_null_patch": "REJECTED_RANK_DEFICIENT",
+    "historical_inner_member": "REJECTED_AS_FINAL_MEMBER",
+    "dominant_sampled_Horndeski_primitive_kinetic_direction": "a1",
+    "a1_requires_joint_background_preserving_realization": true
+  },
+  "downstream": {
+    "global_absolute_direct41": "NOT_RUN",
+    "global_KRGSM": "NOT_RUN",
+    "same_operator_QNM": "NOT_RUN",
+    "qnm_boundary_conditions": "regular center + outgoing infinity"
+  },
+  "primary_evidence": [
+    "data/generated/strong_field_transition_2026-09-20/STRONG_FIELD_TRANSITION_AUDIT.json",
+    "data/generated/strong_field_transition_2026-09-20/HYBRID_RIGHT_TRANSITION_MODE_SCAN.csv",
+    "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_ONSHELL_CENTRAL_AUDIT.json",
+    "data/generated/central/CENTRAL_DIRECT_41_CERTIFICATE.json",
+    "data/generated/strong_field_transition_2026-09-20/TRANSITION_PRIMITIVE_SENSITIVITY.json",
+    "data/generated/absolute_attempt_2026-09-20/ELECTRIC_HYBRID_C6_REFERENCE_MIGRATION.json"
+  ],
+  "tests": {
+    "unit": {
+      "passed": 73,
+      "total": 73,
+      "status": "PASS"
+    },
+    "negative_regression_integration_release": {
+      "passed": 52,
+      "total": 52,
+      "status": "PASS"
+    },
+    "grouped_complete_matrix": {
+      "passed": 125,
+      "total": 125,
+      "status": "PASS"
+    },
+    "monolithic_pytest": {
+      "status": "TIMEOUT_NO_FAILURE_OBSERVED_BEFORE_TIMEOUT",
+      "timeout_seconds": 240
+    },
+    "tolerances_relaxed": false
+  },
+  "status": "OPEN_ACTION_CONTINUATION_REQUIRED"
+}

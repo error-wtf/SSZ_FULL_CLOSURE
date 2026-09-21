@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-21",
+  "checkpoint": "ANGULAR_ORACLE_METHOD",
+  "absolute_full_closure": false,
+  "dense_kinetic_gate": "PASS_PRESERVED",
+  "dense_radial_gate": "PASS_PRESERVED",
+  "mixed_h_svt_angular_gate": "OPEN",
+  "published_svt_oracle": "PASS",
+  "legacy_sep13_reference": "LEGACY_CONVENTION_MISMATCH",
+  "continuation_0p708_to_0p715": "HELD_PENDING_UNIVERSAL_ANGULAR_REDUCER_VALIDATION",
+  "universal_reducer_contract": "docs/ANGULAR_UNIVERSAL_REDUCER_CONTRACT_2026-09-21.md",
+  "packaging_policy": "checkpoint only; no claim of angular PASS or absolute full closure"
+}

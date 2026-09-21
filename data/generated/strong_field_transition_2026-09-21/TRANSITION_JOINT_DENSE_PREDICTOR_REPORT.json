@@ -1,0 +1,108 @@
+{
+  "status": "FINITE_JOINT_PREDICTOR_K_FAIL",
+  "linear_margin": 1.619017038029757e-05,
+  "SVT_coefficients": {
+    "f3:B0": -0.0,
+    "f3:B1": -0.0,
+    "f3:B2": -0.0,
+    "f3:B3": -0.0,
+    "f4:B0": -0.0,
+    "f4:B1": -0.0,
+    "f4:B2": -0.0,
+    "f4:B3": -0.0,
+    "f4X:B0": -0.0,
+    "f4X:B1": -0.0,
+    "f4X:B2": -0.0,
+    "f4X:B3": -0.0
+  },
+  "H_coefficients": [
+    -0.06585091947675406,
+    -0.17021255590861337,
+    -0.23056751857328417,
+    0.13968648906338155
+  ],
+  "H_action_bundle": [
+    {
+      "basis": 0,
+      "amplitude": -0.06585091947675406,
+      "max_abs_G4XX": 0.045618281368772655,
+      "max_abs_G3X": 0.03772389078294896,
+      "max_abs_G2": 9.565227981945357e-12,
+      "max_abs_G2X": 0.03474095514879717
+    },
+    {
+      "basis": 1,
+      "amplitude": -0.17021255590861337,
+      "max_abs_G4XX": 0.02465355047020372,
+      "max_abs_G3X": 0.02526250962780752,
+      "max_abs_G2": 8.191992565962021e-12,
+      "max_abs_G2X": 0.02151280547949102
+    },
+    {
+      "basis": 2,
+      "amplitude": -0.23056751857328417,
+      "max_abs_G4XX": 0.011010078470116808,
+      "max_abs_G3X": 0.013151293469193293,
+      "max_abs_G2": 3.6767199884761185e-12,
+      "max_abs_G2X": 0.00965535079258883
+    },
+    {
+      "basis": 3,
+      "amplitude": 0.13968648906338155,
+      "max_abs_G4XX": 0.0022100961322334195,
+      "max_abs_G3X": 0.003584740972567356,
+      "max_abs_G2": 7.380423897878145e-13,
+      "max_abs_G2X": 0.0019381563446596456
+    }
+  ],
+  "max_abs_H_background_linear_residual": 5.6546417543831675e-14,
+  "finite_worst_K": [
+    -4.793032906273931,
+    1000,
+    0.7079894973743436
+  ],
+  "finite_K_by_L": {
+    "6": {
+      "min_K": -0.029267248887207203,
+      "u_at_min": 0.7079894973743436,
+      "negative_rows": 110
+    },
+    "12": {
+      "min_K": -0.03383460653720299,
+      "u_at_min": 0.7079894973743436,
+      "negative_rows": 110
+    },
+    "20": {
+      "min_K": -0.050406080523319255,
+      "u_at_min": 0.7079894973743436,
+      "negative_rows": 110
+    },
+    "42": {
+      "min_K": -1.8157927780941039,
+      "u_at_min": 0.7079894973743436,
+      "negative_rows": 110
+    },
+    "110": {
+      "min_K": -4.10516228878717,
+      "u_at_min": 0.7079894973743436,
+      "negative_rows": 110
+    },
+    "420": {
+      "min_K": -4.715092119339804,
+      "u_at_min": 0.7079894973743436,
+      "negative_rows": 110
+    },
+    "1000": {
+      "min_K": -4.793032906273931,
+      "u_at_min": 0.7079894973743436,
+      "negative_rows": 110
+    }
+  },
+  "scalar_identity_max_dense": 1.5113356312213e-05,
+  "SVT_background_E00_max_dense": 7.454037387333301e-13,
+  "SVT_background_E11_max_dense": 1.0138001549364617e-12,
+  "SVT_background_JA_max_dense": 7.825388119746632e-15,
+  "radial": {},
+  "radial_all_positive": null,
+  "note": "Horndeski part is an exact action-derived background-null contribution but total H+SVT absolute combined emitter remains a promotion gate."
+}

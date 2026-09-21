@@ -1,0 +1,17 @@
+{
+  "appendix_substitution": "v12=-v6/(2h)",
+  "checks": {
+    "global_deltaA0_sign_invariant": true,
+    "minus_plus_difference": true,
+    "source_to_minus": true
+  },
+  "classification": "PUBLISHED_REDUCED_SHORTCUT_CONFLICT",
+  "m5_action_minus": "a4*v13 - a6*v6",
+  "m5_published_plus_comparator": "a4*v13 + a6*v6",
+  "minus_minus_plus_cross_term": "a6*v13*v6/(a4*v9)",
+  "schur_minus": "-(a4*v13 - a6*v6)**2/(4*a4**2*v9)",
+  "schur_plus": "-(a4*v13 + a6*v6)**2/(4*a4**2*v9)",
+  "source_after_appendix": "v13 - a6*v6/a4",
+  "status": "PASS",
+  "unreduced_scalar_source": "v13 + 2*a6*h*v12/a4"
+}

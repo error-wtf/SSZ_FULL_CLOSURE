@@ -5,7 +5,9 @@
     {
       "id": "zero_vector_light_ring",
       "category": "member_rejection",
-      "command": ["tools/audit_zero_vector_light_ring.py"],
+      "command": [
+        "tools/audit_zero_vector_light_ring.py"
+      ],
       "expected_exit": 0,
       "evidence": "data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json",
       "scope": "Analytic/light-ring exclusion of global A0prime=0 member and electric seed generation"
@@ -13,15 +15,39 @@
     {
       "id": "electric_hybrid_principal_feasibility",
       "category": "active_search",
-      "command": ["tools/audit_electric_hybrid_principal_feasibility.py"],
+      "command": [
+        "tools/audit_electric_hybrid_principal_feasibility.py"
+      ],
       "expected_exit": 0,
       "evidence": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RECIPE_AUDIT.json",
       "scope": "Current pivot-safe Central principal feasibility checkpoint"
     },
     {
+      "id": "strong_field_transition",
+      "category": "active_search",
+      "command": [
+        "tools/audit_strong_field_transition.py"
+      ],
+      "expected_exit": 0,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/STRONG_FIELD_TRANSITION_AUDIT.json",
+      "scope": "Action-first 0.70<=u<=0.715 transition diagnostics, mode tracking, electric nondegeneracy, and falsification of single-channel shortcuts"
+    },
+    {
+      "id": "transition_primitive_sensitivity",
+      "category": "active_search",
+      "command": [
+        "tools/audit_transition_primitive_sensitivity.py"
+      ],
+      "expected_exit": 0,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/TRANSITION_PRIMITIVE_SENSITIVITY.json",
+      "scope": "Mode-projected kinetic sensitivity of compact Horndeski primitive directions at the inner light ring; diagnostic only"
+    },
+    {
       "id": "descriptor_pullback",
       "category": "reusable_infrastructure",
-      "command": ["tools/audit_descriptor_pullback_equivalence.py"],
+      "command": [
+        "tools/audit_descriptor_pullback_equivalence.py"
+      ],
       "expected_exit": 0,
       "evidence": "data/generated/absolute_attempt_2026-09-19/DESCRIPTOR_PULLBACK_EQUIVALENCE.json",
       "scope": "Generalized-psi descriptor to established reducer operator equivalence"
@@ -29,7 +55,9 @@
     {
       "id": "radial_descriptor_pencil",
       "category": "reusable_infrastructure",
-      "command": ["tools/audit_radial_descriptor_pencil.py"],
+      "command": [
+        "tools/audit_radial_descriptor_pencil.py"
+      ],
       "expected_exit": 0,
       "evidence": "data/generated/absolute_attempt_2026-09-19/RADIAL_DESCRIPTOR_PENCIL_AUDIT.json",
       "scope": "Singular DAE quadratic radial pencil structure and Strong-H equivalence"
@@ -37,7 +65,9 @@
     {
       "id": "core_generalized_psi_descriptor",
       "category": "reusable_infrastructure",
-      "command": ["tools/audit_core_generalized_psi_descriptor.py"],
+      "command": [
+        "tools/audit_core_generalized_psi_descriptor.py"
+      ],
       "expected_exit": 0,
       "evidence": "data/generated/absolute_attempt_2026-09-18/CORE_GENERALIZED_PSI_DESCRIPTOR_AUDIT.json",
       "scope": "Core/Carrier H0 constraint structure without explicit bad Schur inversion"
@@ -45,7 +75,9 @@
     {
       "id": "inner_y_hessian",
       "category": "historical_blocker_resolution",
-      "command": ["tools/audit_inner_y_hessian.py"],
+      "command": [
+        "tools/audit_inner_y_hessian.py"
+      ],
       "expected_exit": 0,
       "evidence": "data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json",
       "scope": "4D f2(phi,X,F,Y) reachability; proves f2-only controls are insufficient"
@@ -53,7 +85,9 @@
     {
       "id": "central_action",
       "category": "reusable_infrastructure",
-      "command": ["tools/audit_central_action.py"],
+      "command": [
+        "tools/audit_central_action.py"
+      ],
       "expected_exit": 0,
       "evidence": "data/generated/absolute_attempt_2026-09-18/CENTRAL_FULL_ACTION_LOWER_AUDIT.json",
       "scope": "Direct central lower action replay diagnostic"
@@ -61,7 +95,9 @@
     {
       "id": "regional_kinetic_rejected_member",
       "category": "expected_rejection",
-      "command": ["tools/audit_regional_kinetic.py"],
+      "command": [
+        "tools/audit_regional_kinetic.py"
+      ],
       "expected_exit": 2,
       "evidence": "build/REGIONAL_CENTRAL_KINETIC_GATE.json",
       "scope": "Expected finite-L kinetic failure of rejected 2026-09-17 regional electric member"
@@ -69,7 +105,9 @@
     {
       "id": "frozen_onshell_rejected_zero_vector",
       "category": "expected_rejection",
-      "command": ["tools/audit_frozen_onshell.py"],
+      "command": [
+        "tools/audit_frozen_onshell.py"
+      ],
       "expected_exit": 2,
       "evidence": "build/FROZEN_ONSHELL_IDENTITY.json",
       "scope": "Expected on-shell failure of the restricted frozen zero-vector carrier witness"
@@ -77,7 +115,9 @@
     {
       "id": "production_sources",
       "category": "provenance",
-      "command": ["tools/audit_production_sources.py"],
+      "command": [
+        "tools/audit_production_sources.py"
+      ],
       "expected_exit": 0,
       "evidence": "",
       "scope": "Production source registry and provenance audit"
@@ -85,22 +125,91 @@
     {
       "id": "production_regions",
       "category": "provenance",
-      "command": ["tools/audit_production_regions.py"],
+      "command": [
+        "tools/audit_production_regions.py"
+      ],
       "expected_exit": 0,
       "evidence": "",
       "scope": "Regional production resolver audit"
+    },
+    {
+      "id": "transition_projected_controllability",
+      "category": "active_search",
+      "command": [
+        "tools/audit_transition_projected_controllability.py"
+      ],
+      "expected_exit": 0,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY.json",
+      "scope": "Projected local action-tangent controllability of the right strong-field transition; no historical coefficient targets"
+    },
+    {
+      "id": "transition_horndeski_a1_projection",
+      "category": "active_search",
+      "command": [
+        "tools/audit_transition_horndeski_a1_projection.py"
+      ],
+      "expected_exit": 0,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/TRANSITION_HORNDESKI_A1_PROJECTION.json",
+      "scope": "Full local Horndeski background-null projection of the primitive a1 clue"
+    },
+    {
+      "id": "transition_projection_convergence",
+      "category": "active_search",
+      "command": [
+        "tools/audit_transition_projection_convergence.py"
+      ],
+      "expected_exit": 0,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY_CONVERGENCE.json",
+      "scope": "Finite-difference and localization robustness for projected-controllability diagnostics"
+    },
+    {
+      "id": "angular_m5_symbolic_provenance",
+      "category": "angular_method",
+      "command": [
+        "tools/audit_angular_m5_symbolic.py"
+      ],
+      "expected_exit": 0,
+      "evidence": "data/generated/angular_universal_reducer_2026-09-21/ANGULAR_M5_SYMBOLIC_PROVENANCE.json",
+      "scope": "Exact symbolic delta-A0 source, Appendix v12 identity, m5 minus branch, and minus/plus cross-term provenance"
+    },
+    {
+      "id": "angular_universal_provenance",
+      "category": "angular_method",
+      "command": [
+        "tools/audit_angular_universal_provenance.py"
+      ],
+      "expected_exit": 0,
+      "evidence": "data/generated/angular_universal_reducer_2026-09-21/ANGULAR_UNIVERSAL_PROVENANCE_AUDIT.json",
+      "scope": "Formal Laurent vs finite-L regression, Eq83-style component mapping, characteristic-polynomial comparison, and first-divergent-stage localization"
+    },
+    {
+      "id": "angular_universal_pipeline",
+      "category": "angular_method",
+      "command": [
+        "tools/run_angular_universal_pipeline.py"
+      ],
+      "expected_exit": 0,
+      "evidence": "data/generated/angular_universal_reducer_2026-09-21/ANGULAR_UNIVERSAL_PIPELINE_STATUS.json",
+      "scope": "Held method-only angular pipeline; explicitly does not evaluate Dense branch or advance continuation"
     }
   ],
   "full_checks": [
     {
       "id": "pytest",
-      "command": ["-m", "pytest", "-q"],
+      "command": [
+        "-m",
+        "pytest",
+        "-q"
+      ],
       "expected_exit": 0,
       "scope": "Complete software test suite"
     },
     {
       "id": "release_manifest",
-      "command": ["tools/release_manifest.py", "--check"],
+      "command": [
+        "tools/release_manifest.py",
+        "--check"
+      ],
       "expected_exit": 0,
       "scope": "Immutable release manifest/hash verification"
     }

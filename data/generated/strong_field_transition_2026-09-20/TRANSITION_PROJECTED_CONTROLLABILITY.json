@@ -1,0 +1,2096 @@
+{
+  "status": "PASS_LOCAL_TANGENT_CONTROLLABILITY",
+  "scope": "pre-continuation local action tangent/rank audit; not a finite transition member",
+  "action_member": "ELECTRIC_HYBRID_ONSHELL_CENTRAL diagnostic extension on u<0.71",
+  "sample_points": [
+    {
+      "u_requested": 0.7013,
+      "u_grid": 0.7012940735183796,
+      "bump_width_u": 0.0007,
+      "rows_local_grid": 183,
+      "absolute_reemit_max_scaled_vs_global": 1.7543804820458439e-10,
+      "baseline_background": {
+        "E00": -3.270717030545711e-13,
+        "E11": 3.57297524899991e-13,
+        "JA": -1.902907538739179e-15,
+        "Ephi_identity": -1.5953569345583674e-06
+      },
+      "B_rank_metric_vector": 3,
+      "B_rank_with_scalar_identity": 4,
+      "per_L": {
+        "6": {
+          "lambda_min": 0.00013471251974524255,
+          "weakest_vector": [
+            0.9970798459117161,
+            -0.07636609769098171,
+            -3.4595558389083024e-07
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.269647425044465,
+              1.578894238105389,
+              0.5400670922498715
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2711519857459814,
+              1.6224156132309602,
+              0.9269342143617593,
+              0.5350776682843716
+            ],
+            "native_gradient_norm": 0.140476696163635,
+            "native_projected_gradient_norm": 0.06275728221936937,
+            "native_projected_fraction": 0.4467451465847846,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.05239789962574894
+              },
+              {
+                "direction": "f3X",
+                "component": -0.025264070801600286
+              },
+              {
+                "direction": "f2X",
+                "component": 0.015765383336906625
+              },
+              {
+                "direction": "f3",
+                "component": -0.012720162656244247
+              },
+              {
+                "direction": "f4",
+                "component": -0.011260830083129647
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.004168802941417613
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.2806120964428636,
+              1.5534640246208158,
+              0.4915727065460963,
+              0.35420299880502015
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2823008123817976,
+              1.5628644299471575,
+              1.057331673263789,
+              0.4226308587945773,
+              0.18312882277573966
+            ],
+            "native_gradient_norm": 0.140476696163635,
+            "native_projected_gradient_norm": 0.01903639823123516,
+            "native_projected_fraction": 0.135512855520609,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f3X",
+                "component": 0.012700420712482433
+              },
+              {
+                "direction": "f4X",
+                "component": 0.011570581650211825
+              },
+              {
+                "direction": "f2X",
+                "component": 0.00597143751895651
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.003915885497207721
+              },
+              {
+                "direction": "f2",
+                "component": -0.003107702312977421
+              },
+              {
+                "direction": "f2F",
+                "component": -0.002559999399147526
+              }
+            ]
+          }
+        },
+        "20": {
+          "lambda_min": 0.00013438427798957378,
+          "weakest_vector": [
+            0.9970998178257633,
+            -0.07610488098120238,
+            -1.95618536115601e-05
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.269688752040877,
+              1.5790222352621028,
+              0.5400743345933108
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2711962514389747,
+              1.622564661096266,
+              0.9268852462794442,
+              0.5350829708746163
+            ],
+            "native_gradient_norm": 0.1397952111502496,
+            "native_projected_gradient_norm": 0.06245228220465544,
+            "native_projected_fraction": 0.4467412130271956,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.05214305749386816
+              },
+              {
+                "direction": "f3X",
+                "component": -0.02514153621298491
+              },
+              {
+                "direction": "f2X",
+                "component": 0.01568893009032153
+              },
+              {
+                "direction": "f3",
+                "component": -0.012658386619191499
+              },
+              {
+                "direction": "f4",
+                "component": -0.01120611974871257
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.004148593526538453
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.2806281551564336,
+              1.553493345681183,
+              0.4915825387956006,
+              0.35420813113172117
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2823174064509346,
+              1.562893904602502,
+              1.0573352366443105,
+              0.4226341520716272,
+              0.18312733219525237
+            ],
+            "native_gradient_norm": 0.1397952111502496,
+            "native_projected_gradient_norm": 0.018943633849115418,
+            "native_projected_fraction": 0.13550989117041437,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f3X",
+                "component": 0.012638498138678707
+              },
+              {
+                "direction": "f4X",
+                "component": 0.01151410622686859
+              },
+              {
+                "direction": "f2X",
+                "component": 0.005942569881513461
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.0038968140306906906
+              },
+              {
+                "direction": "f2",
+                "component": -0.0030925709674316424
+              },
+              {
+                "direction": "f2F",
+                "component": -0.002547534809040629
+              }
+            ]
+          }
+        },
+        "42": {
+          "lambda_min": 0.00013305282201183012,
+          "weakest_vector": [
+            0.9971657320500191,
+            -0.0752362430781718,
+            -0.00010272600120384137
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.2698535881342385,
+              1.5795326872706232,
+              0.5401031814537667
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2713728040379606,
+              1.6231586986637838,
+              0.9266905167430417,
+              0.5351040819747639
+            ],
+            "native_gradient_norm": 0.13704798174408578,
+            "native_projected_gradient_norm": 0.061222815043645115,
+            "native_projected_fraction": 0.4467254042308226,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.05111577155387706
+              },
+              {
+                "direction": "f3X",
+                "component": -0.024647629368178187
+              },
+              {
+                "direction": "f2X",
+                "component": 0.015380719304155693
+              },
+              {
+                "direction": "f3",
+                "component": -0.012409367751302192
+              },
+              {
+                "direction": "f4",
+                "component": -0.010985579817596586
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.004067093370754734
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.280692114444689,
+              1.5536101323759308,
+              0.4916217028574936,
+              0.3542285691220722
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2823835330495528,
+              1.5630111335274939,
+              1.0573495507854804,
+              0.4226472853164454,
+              0.183121671071001
+            ],
+            "native_gradient_norm": 0.13704798174408578,
+            "native_projected_gradient_norm": 0.018569669827587357,
+            "native_projected_fraction": 0.13549757968901077,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f3X",
+                "component": 0.012388856315132882
+              },
+              {
+                "direction": "f4X",
+                "component": 0.01128643847488499
+              },
+              {
+                "direction": "f2X",
+                "component": 0.005826177162189174
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.0038199725603168403
+              },
+              {
+                "direction": "f2",
+                "component": -0.0030315802002748612
+              },
+              {
+                "direction": "f2F",
+                "component": -0.002497293083305496
+              }
+            ]
+          }
+        },
+        "1000": {
+          "lambda_min": 1.526059674701141e-05,
+          "weakest_vector": [
+            0.9999380171997183,
+            -0.008036241374989617,
+            -0.0077058797848757726
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.2740637777854826,
+              1.5925254888024853,
+              0.5408193954094521
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2758703138380665,
+              1.637570919425038,
+              0.9229106509242807,
+              0.5357245983032641
+            ],
+            "native_gradient_norm": 0.0018092296105081647,
+            "native_projected_gradient_norm": 0.0008049498285836111,
+            "native_projected_fraction": 0.44491303033533813,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.0006710727359755479
+              },
+              {
+                "direction": "f3X",
+                "component": -0.0003253979671801583
+              },
+              {
+                "direction": "f2X",
+                "component": 0.00020305623384612477
+              },
+              {
+                "direction": "f3",
+                "component": -0.0001632454404892746
+              },
+              {
+                "direction": "f4",
+                "component": -0.0001446586601185076
+              },
+              {
+                "direction": "f4XX",
+                "component": 5.369375880155737e-05
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.282276942213555,
+              1.5565099494988248,
+              0.4925944171191193,
+              0.354734282742185
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.284093718951198,
+              1.5655919616055245,
+              1.0581005890359239,
+              0.423042433265349,
+              0.1824633413062388
+            ],
+            "native_gradient_norm": 0.0018092296105081647,
+            "native_projected_gradient_norm": 0.00024266094872514379,
+            "native_projected_fraction": 0.1341239095998361,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f3X",
+                "component": 0.0001618532932117822
+              },
+              {
+                "direction": "f4X",
+                "component": 0.00014707883144442232
+              },
+              {
+                "direction": "f2X",
+                "component": 7.735686968537002e-05
+              },
+              {
+                "direction": "f4XX",
+                "component": -5.006832188204907e-05
+              },
+              {
+                "direction": "f2",
+                "component": -3.908623172761979e-05
+              },
+              {
+                "direction": "f2F",
+                "component": -3.219765590806893e-05
+              }
+            ]
+          }
+        }
+      },
+      "simultaneous_all_L": {
+        "metric_vector_tangent": {
+          "success": true,
+          "max_common_first_order_gain_native_box": 0.0013774598149887186,
+          "all_required_L_gain_positive": true,
+          "gains": {
+            "6": 0.10716642246042303,
+            "20": 0.10664594580339917,
+            "42": 0.10454784565302871,
+            "1000": 0.0013774598145116694
+          },
+          "max_abs_native_component": 1.0,
+          "dominant_native_components": [
+            {
+              "direction": "f2",
+              "component": 1.0
+            },
+            {
+              "direction": "f2X",
+              "component": 1.0
+            },
+            {
+              "direction": "f4X",
+              "component": 1.0
+            },
+            {
+              "direction": "f3X",
+              "component": -1.0
+            },
+            {
+              "direction": "f4XX",
+              "component": 1.0
+            },
+            {
+              "direction": "H_G2XX",
+              "component": -1.0
+            },
+            {
+              "direction": "H_G3XX_TUBULAR",
+              "component": -1.0
+            },
+            {
+              "direction": "f2F",
+              "component": 0.8237595304978503
+            }
+          ],
+          "induced_a1_first_order": 0.0
+        },
+        "with_scalar_identity_tangent": {
+          "success": true,
+          "max_common_first_order_gain_native_box": 0.0005008420769084025,
+          "all_required_L_gain_positive": true,
+          "gains": {
+            "6": 0.039287767391275666,
+            "20": 0.039096462137240835,
+            "42": 0.03832527852679604,
+            "1000": 0.0005008420774721878
+          },
+          "max_abs_native_component": 1.0,
+          "dominant_native_components": [
+            {
+              "direction": "f2",
+              "component": -1.0
+            },
+            {
+              "direction": "f2X",
+              "component": 1.0
+            },
+            {
+              "direction": "f4XX",
+              "component": -1.0
+            },
+            {
+              "direction": "f3X",
+              "component": 1.0
+            },
+            {
+              "direction": "H_G3XX_TUBULAR",
+              "component": -1.0
+            },
+            {
+              "direction": "H_G2XX",
+              "component": -1.0
+            },
+            {
+              "direction": "f4X",
+              "component": 0.9917322643397817
+            },
+            {
+              "direction": "f2F",
+              "component": -0.8237595305908632
+            }
+          ],
+          "induced_a1_first_order": 0.0
+        }
+      }
+    },
+    {
+      "u_requested": 0.703,
+      "u_grid": 0.7030007501875468,
+      "bump_width_u": 0.0008,
+      "rows_local_grid": 183,
+      "absolute_reemit_max_scaled_vs_global": 1.6167094174654313e-10,
+      "baseline_background": {
+        "E00": 3.2085445411667024e-14,
+        "E11": 4.852784840636559e-13,
+        "JA": -1.9168214396022804e-15,
+        "Ephi_identity": 6.289205657594721e-06
+      },
+      "B_rank_metric_vector": 3,
+      "B_rank_with_scalar_identity": 4,
+      "per_L": {
+        "6": {
+          "lambda_min": -0.02021541125236335,
+          "weakest_vector": [
+            0.9967950545240666,
+            -0.0799976184636475,
+            1.7790661512069674e-05
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.2563687418499776,
+              1.5870292751397024,
+              0.5423699998766006
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.257443814850146,
+              1.6236454415908896,
+              0.9391852002089821,
+              0.5382203067690793
+            ],
+            "native_gradient_norm": 0.17911517771005434,
+            "native_projected_gradient_norm": 0.07698087526642605,
+            "native_projected_fraction": 0.429784210643724,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.06387170077447003
+              },
+              {
+                "direction": "f3X",
+                "component": -0.03190567563883432
+              },
+              {
+                "direction": "f2X",
+                "component": 0.019353479543139793
+              },
+              {
+                "direction": "f3",
+                "component": -0.014680421815230096
+              },
+              {
+                "direction": "f4",
+                "component": -0.01420497208575826
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.005337743851311862
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9198587944394645,
+              1.5169725874928623,
+              1.3103124411792104,
+              0.455527408902129
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.924740350818901,
+              1.558011633482061,
+              1.3319548795133842,
+              0.8933679615444735,
+              0.45524910944657965
+            ],
+            "native_gradient_norm": 0.17911517771005434,
+            "native_projected_gradient_norm": 0.07485504339297322,
+            "native_projected_fraction": 0.4179156917352144,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.06620830559359452
+              },
+              {
+                "direction": "f2X",
+                "component": 0.023611441151623214
+              },
+              {
+                "direction": "f3X",
+                "component": -0.016445705941241274
+              },
+              {
+                "direction": "f4",
+                "component": -0.013964922179718757
+              },
+              {
+                "direction": "f3",
+                "component": -0.01128440025174268
+              },
+              {
+                "direction": "f2",
+                "component": 0.006425616596790021
+              }
+            ]
+          }
+        },
+        "20": {
+          "lambda_min": -0.029855040880213776,
+          "weakest_vector": [
+            0.9911018378434655,
+            -0.13307011827210796,
+            0.0030806892657813697
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.239164131236888,
+              1.522065526014975,
+              0.5379253102695353
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2394621679248248,
+              1.5473482871618771,
+              0.9614715965286446,
+              0.5347877684175034
+            ],
+            "native_gradient_norm": 0.3923518079918698,
+            "native_projected_gradient_norm": 0.16773129592281075,
+            "native_projected_fraction": 0.4275022887782549,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.1390221133077897
+              },
+              {
+                "direction": "f3X",
+                "component": -0.06967606459744824
+              },
+              {
+                "direction": "f2X",
+                "component": 0.042264411413927845
+              },
+              {
+                "direction": "f3",
+                "component": -0.03190312340680865
+              },
+              {
+                "direction": "f4",
+                "component": -0.031058382964372563
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.011656699612084528
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9038813559139152,
+              1.490568323260938,
+              1.2633306833269897,
+              0.45302794598898416
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9072958920184004,
+              1.5157236356339803,
+              1.286430391420027,
+              0.9234078853442158,
+              0.45278675441454436
+            ],
+            "native_gradient_norm": 0.3923518079918698,
+            "native_projected_gradient_norm": 0.16311731387237374,
+            "native_projected_fraction": 0.4157424804724076,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.14410354576857698
+              },
+              {
+                "direction": "f2X",
+                "component": 0.05152423325330967
+              },
+              {
+                "direction": "f3X",
+                "component": -0.03605514966088965
+              },
+              {
+                "direction": "f4",
+                "component": -0.03053634458853154
+              },
+              {
+                "direction": "f3",
+                "component": -0.02451776920870144
+              },
+              {
+                "direction": "f2",
+                "component": 0.014494696201675606
+              }
+            ]
+          }
+        },
+        "42": {
+          "lambda_min": -0.9566699967611376,
+          "weakest_vector": [
+            -0.1473222148139215,
+            0.9865635224046897,
+            -0.07062988944329712
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9942870604423457,
+              0.9707688631851932,
+              0.3081990627019504
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9943245337062125,
+              1.0022190597766796,
+              0.9684040652400554,
+              0.3081880989467027
+            ],
+            "native_gradient_norm": 18.77727083779,
+            "native_projected_gradient_norm": 8.064477494524011,
+            "native_projected_fraction": 0.42948081029400353,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 6.689867040444186
+              },
+              {
+                "direction": "f3X",
+                "component": -3.3443494849205258
+              },
+              {
+                "direction": "f2X",
+                "component": 2.0286299586521475
+              },
+              {
+                "direction": "f3",
+                "component": -1.5389941762322756
+              },
+              {
+                "direction": "f4",
+                "component": -1.4875758420655334
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.5595042502600477
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.5715507707923846,
+              1.4138090700026953,
+              0.6921135366791994,
+              0.26528150232266684
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.5716969564935446,
+              1.4138205190806004,
+              1.0002206430306302,
+              0.6914466013979426,
+              0.2652617842347518
+            ],
+            "native_gradient_norm": 18.77727083779,
+            "native_projected_gradient_norm": 7.841051369573018,
+            "native_projected_fraction": 0.4175820563759773,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 6.935041137145081
+              },
+              {
+                "direction": "f2X",
+                "component": 2.4754072153806406
+              },
+              {
+                "direction": "f3X",
+                "component": -1.7221735505873796
+              },
+              {
+                "direction": "f4",
+                "component": -1.462388006110277
+              },
+              {
+                "direction": "f3",
+                "component": -1.182658131561801
+              },
+              {
+                "direction": "f2",
+                "component": 0.6707862687445969
+              }
+            ]
+          }
+        },
+        "1000": {
+          "lambda_min": -3.3866564069210843,
+          "weakest_vector": [
+            -0.0013374767901623117,
+            0.9966790220920168,
+            -0.0814195190205481
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9934942206274024,
+              0.9699534088441677,
+              0.3066223384699888
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9935291522813323,
+              1.0010116216840548,
+              0.9688415203558903,
+              0.30660959238826024
+            ],
+            "native_gradient_norm": 24.024357087753803,
+            "native_projected_gradient_norm": 10.634289033316577,
+            "native_projected_fraction": 0.44264614426403565,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 8.866813820195553
+              },
+              {
+                "direction": "f3X",
+                "component": -4.358237877374641
+              },
+              {
+                "direction": "f2X",
+                "component": 2.643638351584104
+              },
+              {
+                "direction": "f3",
+                "component": -2.075297576183624
+              },
+              {
+                "direction": "f4",
+                "component": -1.908445976622455
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.7291255881671169
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.5703475207596083,
+              1.4133876622089399,
+              0.6910883673970925,
+              0.26356291327356574
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.570455298241632,
+              1.4134029185194612,
+              1.0001017943518598,
+              0.6906743574581944,
+              0.263537927961959
+            ],
+            "native_gradient_norm": 24.024357087753803,
+            "native_projected_gradient_norm": 10.32477138577753,
+            "native_projected_fraction": 0.42976265079911286,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 9.198068607139556
+              },
+              {
+                "direction": "f2X",
+                "component": 3.2472792214006874
+              },
+              {
+                "direction": "f3X",
+                "component": -2.1665155431479053
+              },
+              {
+                "direction": "f4",
+                "component": -1.8744146847967198
+              },
+              {
+                "direction": "f3",
+                "component": -1.5938518519161453
+              },
+              {
+                "direction": "f2",
+                "component": 0.6459758258356744
+              }
+            ]
+          }
+        }
+      },
+      "simultaneous_all_L": {
+        "metric_vector_tangent": {
+          "success": true,
+          "max_common_first_order_gain_native_box": 0.13511704388650708,
+          "all_required_L_gain_positive": true,
+          "gains": {
+            "6": 0.13511704499915872,
+            "20": 0.29542339748673124,
+            "42": 14.151794808359986,
+            "1000": 18.177240919248447
+          },
+          "max_abs_native_component": 1.0,
+          "dominant_native_components": [
+            {
+              "direction": "f2",
+              "component": 1.0
+            },
+            {
+              "direction": "f2X",
+              "component": 1.0
+            },
+            {
+              "direction": "f4X",
+              "component": 1.0
+            },
+            {
+              "direction": "f3X",
+              "component": -1.0
+            },
+            {
+              "direction": "f4XX",
+              "component": 1.0
+            },
+            {
+              "direction": "H_G2XX",
+              "component": -1.0
+            },
+            {
+              "direction": "H_G3XX_TUBULAR",
+              "component": -1.0
+            },
+            {
+              "direction": "f2F",
+              "component": 0.8118438574543052
+            }
+          ],
+          "induced_a1_first_order": 0.0
+        },
+        "with_scalar_identity_tangent": {
+          "success": true,
+          "max_common_first_order_gain_native_box": 0.12542722449517585,
+          "all_required_L_gain_positive": true,
+          "gains": {
+            "6": 0.12542722560782749,
+            "20": 0.2742697531465208,
+            "42": 13.136133770036677,
+            "1000": 16.85082510432119
+          },
+          "max_abs_native_component": 1.0,
+          "dominant_native_components": [
+            {
+              "direction": "f2",
+              "component": 1.0
+            },
+            {
+              "direction": "f2X",
+              "component": 1.0
+            },
+            {
+              "direction": "f4X",
+              "component": 1.0
+            },
+            {
+              "direction": "f3X",
+              "component": -1.0
+            },
+            {
+              "direction": "H_G3XX_TUBULAR",
+              "component": -1.0
+            },
+            {
+              "direction": "H_G2XX",
+              "component": -1.0
+            },
+            {
+              "direction": "f2F",
+              "component": 0.8118438574586674
+            },
+            {
+              "direction": "f4XX",
+              "component": -0.5948783250456029
+            }
+          ],
+          "induced_a1_first_order": 0.0
+        }
+      }
+    },
+    {
+      "u_requested": 0.7061345733,
+      "u_grid": 0.70612528132033,
+      "bump_width_u": 0.0008,
+      "rows_local_grid": 183,
+      "absolute_reemit_max_scaled_vs_global": 3.1341277450080975e-10,
+      "baseline_background": {
+        "E00": 1.836308882730009e-13,
+        "E11": 4.0878411766698264e-13,
+        "JA": -2.2982766102089004e-15,
+        "Ephi_identity": -4.636041467165342e-06
+      },
+      "B_rank_metric_vector": 3,
+      "B_rank_with_scalar_identity": 4,
+      "per_L": {
+        "6": {
+          "lambda_min": -0.0689335723437269,
+          "weakest_vector": [
+            0.9963883002683851,
+            -0.0849137965166406,
+            -4.7427932868674125e-05
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.230634307218023,
+              1.5914728234469233,
+              0.5465847276399778
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2308818133459214,
+              1.61862364268964,
+              0.9569422154472015,
+              0.5429138599271113
+            ],
+            "native_gradient_norm": 0.27165354594038077,
+            "native_projected_gradient_norm": 0.10937656429085378,
+            "native_projected_fraction": 0.40263256609526615,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.08961112936141048
+              },
+              {
+                "direction": "f3X",
+                "component": -0.047620901332606595
+              },
+              {
+                "direction": "f2X",
+                "component": 0.027381647582681645
+              },
+              {
+                "direction": "f4",
+                "component": -0.020762870660399523
+              },
+              {
+                "direction": "f3",
+                "component": -0.01851513455368344
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.008165406183838094
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.2794519044392088,
+              1.5435944469806404,
+              0.49514461460238435,
+              0.33803587355706666
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2814619520099493,
+              1.5446347796006847,
+              1.0634826927482899,
+              0.43265191579408185,
+              0.16992022759429684
+            ],
+            "native_gradient_norm": 0.27165354594038077,
+            "native_projected_gradient_norm": 0.033048795681531164,
+            "native_projected_fraction": 0.12165788437300323,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f3X",
+                "component": 0.02177484239912764
+              },
+              {
+                "direction": "f4X",
+                "component": 0.021248003947724206
+              },
+              {
+                "direction": "f2X",
+                "component": 0.010780324892165587
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.006817812590261487
+              },
+              {
+                "direction": "f3",
+                "component": 0.001439290905401165
+              },
+              {
+                "direction": "f4",
+                "component": -0.0009791805375876839
+              }
+            ]
+          }
+        },
+        "20": {
+          "lambda_min": -0.3678132846845222,
+          "weakest_vector": [
+            0.8486112337619959,
+            -0.5287882003047116,
+            0.015556771883882386
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.0106109300882746,
+              1.0011430086713171,
+              0.3453981980586379
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.0114491827781307,
+              1.0109049555451914,
+              0.9885454184571133,
+              0.3450577673765093
+            ],
+            "native_gradient_norm": 5.831424638942129,
+            "native_projected_gradient_norm": 2.303111388389812,
+            "native_projected_fraction": 0.3949483241212934,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 1.8781862971151695
+              },
+              {
+                "direction": "f3X",
+                "component": -1.010827931352496
+              },
+              {
+                "direction": "f2X",
+                "component": 0.581219039790769
+              },
+              {
+                "direction": "f4",
+                "component": -0.4409606146361069
+              },
+              {
+                "direction": "f3",
+                "component": -0.3872273615458142
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.17332356404402996
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.019192041874207,
+              1.0416142929731704,
+              0.3367155310032651,
+              0.1795466217735131
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.0191985492095803,
+              1.0631628712689323,
+              0.984722558424721,
+              0.32591945676766226,
+              0.1559842753552059
+            ],
+            "native_gradient_norm": 5.831424638942129,
+            "native_projected_gradient_norm": 0.686212300941162,
+            "native_projected_fraction": 0.11767489823304086,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f3X",
+                "component": 0.4524466159452041
+              },
+              {
+                "direction": "f4X",
+                "component": 0.4366854785884171
+              },
+              {
+                "direction": "f2X",
+                "component": 0.2311645315717123
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.1426117007106441
+              },
+              {
+                "direction": "f3",
+                "component": 0.033530473302136175
+              },
+              {
+                "direction": "f4",
+                "component": -0.023802894989141243
+              }
+            ]
+          }
+        },
+        "42": {
+          "lambda_min": -6.091487706475125,
+          "weakest_vector": [
+            0.0442901797778415,
+            -0.997877547541842,
+            0.047736569704218995
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9891784792545897,
+              0.9791709526503924,
+              0.30891330553660656
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9892146515972475,
+              1.0023092263058888,
+              0.9767336211160624,
+              0.30891248808661864
+            ],
+            "native_gradient_norm": 21.73559756257909,
+            "native_projected_gradient_norm": 9.019743037788903,
+            "native_projected_fraction": 0.4149756183063339,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 7.438471283517858
+              },
+              {
+                "direction": "f3X",
+                "component": -3.8899884208569167
+              },
+              {
+                "direction": "f2X",
+                "component": 2.2367133726230226
+              },
+              {
+                "direction": "f4",
+                "component": -1.671577754742452
+              },
+              {
+                "direction": "f3",
+                "component": -1.566398541266743
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.6670048851847281
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.984993260402873,
+              0.9833150829548071,
+              0.30074300056825637,
+              0.1533728355703147
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9849960194873355,
+              1.0013504011568324,
+              0.9824508467933122,
+              0.30006220442666104,
+              0.15138546536945705
+            ],
+            "native_gradient_norm": 21.73559756257909,
+            "native_projected_gradient_norm": 2.793940591602931,
+            "native_projected_fraction": 0.12854215687233259,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f3X",
+                "component": 1.818067570811202
+              },
+              {
+                "direction": "f4X",
+                "component": 1.815351958862424
+              },
+              {
+                "direction": "f2X",
+                "component": 0.8711933225816486
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.5654201469410286
+              },
+              {
+                "direction": "f2",
+                "component": -0.2708276718076223
+              },
+              {
+                "direction": "f2F",
+                "component": -0.213611978031428
+              }
+            ]
+          }
+        },
+        "1000": {
+          "lambda_min": -11.734007617896562,
+          "weakest_vector": [
+            -0.0009656353505475292,
+            0.9987013283061659,
+            -0.050938437234274235
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.988688125812445,
+              0.9789220563503654,
+              0.30820533697614644
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9887304442657858,
+              1.0012255317958212,
+              0.9775841213949836,
+              0.30820013631438886
+            ],
+            "native_gradient_norm": 25.054943131662007,
+            "native_projected_gradient_norm": 10.859721960878721,
+            "native_projected_fraction": 0.4334363045173013,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 9.02951690731778
+              },
+              {
+                "direction": "f3X",
+                "component": -4.604820170627834
+              },
+              {
+                "direction": "f2X",
+                "component": 2.6477352970558745
+              },
+              {
+                "direction": "f3",
+                "component": -1.9517490775831328
+              },
+              {
+                "direction": "f4",
+                "component": -1.936677780251615
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.7895749519400937
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9841438846952095,
+              0.9822487353702811,
+              0.29971572834396326,
+              0.15293498033487732
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9841447272138888,
+              1.00109087518767,
+              0.9814929342080294,
+              0.29929850465647917,
+              0.15144948211240197
+            ],
+            "native_gradient_norm": 25.054943131662007,
+            "native_projected_gradient_norm": 3.5404340928708904,
+            "native_projected_fraction": 0.1413068101678041,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 2.2981234402784225
+              },
+              {
+                "direction": "f3X",
+                "component": 2.2282503358679673
+              },
+              {
+                "direction": "f2X",
+                "component": 1.0130816087272871
+              },
+              {
+                "direction": "f2",
+                "component": -0.6984488548621648
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.6857517005625967
+              },
+              {
+                "direction": "f2F",
+                "component": -0.5508928996988159
+              }
+            ]
+          }
+        }
+      },
+      "simultaneous_all_L": {
+        "metric_vector_tangent": {
+          "success": true,
+          "max_common_first_order_gain_native_box": 0.19860239582461456,
+          "all_required_L_gain_positive": true,
+          "gains": {
+            "6": 0.19860239554983436,
+            "20": 4.219726240074975,
+            "42": 16.004894384023338,
+            "1000": 18.56895556023997
+          },
+          "max_abs_native_component": 1.0,
+          "dominant_native_components": [
+            {
+              "direction": "f2",
+              "component": 1.0
+            },
+            {
+              "direction": "f2X",
+              "component": 1.0
+            },
+            {
+              "direction": "f4X",
+              "component": 1.0
+            },
+            {
+              "direction": "f3X",
+              "component": -1.0
+            },
+            {
+              "direction": "f4XX",
+              "component": 1.0
+            },
+            {
+              "direction": "H_G2XX",
+              "component": -1.0
+            },
+            {
+              "direction": "H_G3XX_TUBULAR",
+              "component": -1.0
+            },
+            {
+              "direction": "f2F",
+              "component": 0.7887376374580363
+            }
+          ],
+          "induced_a1_first_order": 0.0
+        },
+        "with_scalar_identity_tangent": {
+          "success": true,
+          "max_common_first_order_gain_native_box": 0.0608221954808265,
+          "all_required_L_gain_positive": true,
+          "gains": {
+            "6": 0.06082219535849665,
+            "20": 1.2639970899287774,
+            "42": 5.121525050477095,
+            "1000": 6.348989165161194
+          },
+          "max_abs_native_component": 1.0,
+          "dominant_native_components": [
+            {
+              "direction": "f2X",
+              "component": 1.0
+            },
+            {
+              "direction": "f4XX",
+              "component": -1.0
+            },
+            {
+              "direction": "f4X",
+              "component": 1.0
+            },
+            {
+              "direction": "f3X",
+              "component": 1.0
+            },
+            {
+              "direction": "H_G3XX_TUBULAR",
+              "component": -1.0
+            },
+            {
+              "direction": "H_G2XX",
+              "component": -1.0
+            },
+            {
+              "direction": "f2",
+              "component": -0.10961668162231372
+            },
+            {
+              "direction": "f2F",
+              "component": -0.08645880249647618
+            }
+          ],
+          "induced_a1_first_order": 0.0
+        }
+      }
+    },
+    {
+      "u_requested": 0.708,
+      "u_grid": 0.7079894973743436,
+      "bump_width_u": 0.0008,
+      "rows_local_grid": 168,
+      "absolute_reemit_max_scaled_vs_global": 9.701159103618455e-10,
+      "baseline_background": {
+        "E00": -3.668176873361517e-13,
+        "E11": -5.838940442259855e-13,
+        "JA": 4.817555121695954e-15,
+        "Ephi_identity": 4.550357061816612e-06
+      },
+      "B_rank_metric_vector": 3,
+      "B_rank_with_scalar_identity": 4,
+      "per_L": {
+        "6": {
+          "lambda_min": -0.10788632374227111,
+          "weakest_vector": [
+            0.9962177118243051,
+            -0.08689222782956743,
+            -0.00010672563114070561
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.215295675483244,
+              1.5815903625938261,
+              0.5486982908398758
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2152988997301843,
+              1.6035018532279195,
+              0.9665788339642266,
+              0.5449685940641458
+            ],
+            "native_gradient_norm": 0.3485905039896259,
+            "native_projected_gradient_norm": 0.13523977003887264,
+            "native_projected_fraction": 0.38796171579848143,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 0.10991333164211484
+              },
+              {
+                "direction": "f3X",
+                "component": -0.06055865085432516
+              },
+              {
+                "direction": "f2X",
+                "component": 0.033704451306057016
+              },
+              {
+                "direction": "f4",
+                "component": -0.02586521108257623
+              },
+              {
+                "direction": "f3",
+                "component": -0.02115210701311597
+              },
+              {
+                "direction": "f2",
+                "component": 0.010554129643997715
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              2.2750272450085394,
+              1.5397621136688657,
+              0.49717717210064793,
+              0.3285546994197128
+            ],
+            "singular_values_augmented_equilibrated": [
+              2.2770824778255303,
+              1.5402825180366424,
+              1.063061366065307,
+              0.43491089227763785,
+              0.15788560655806194
+            ],
+            "native_gradient_norm": 0.3485905039896259,
+            "native_projected_gradient_norm": 0.039112225718776046,
+            "native_projected_fraction": 0.11220106477696831,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f3X",
+                "component": 0.025786585862679182
+              },
+              {
+                "direction": "f4X",
+                "component": 0.025265374451191674
+              },
+              {
+                "direction": "f2X",
+                "component": 0.0124733587109385
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.008041405085592212
+              },
+              {
+                "direction": "f3",
+                "component": 0.002186673660312037
+              },
+              {
+                "direction": "f4",
+                "component": -0.001148487324607043
+              }
+            ]
+          }
+        },
+        "20": {
+          "lambda_min": -1.531566815275123,
+          "weakest_vector": [
+            -0.46533879099463793,
+            0.8849028811385173,
+            -0.02016681800383289
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9859539950217477,
+              0.9833709181412245,
+              0.311211782242853
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9859543101847097,
+              1.0133950546054895,
+              0.9695688661315842,
+              0.31118573454410475
+            ],
+            "native_gradient_norm": 17.749043651588696,
+            "native_projected_gradient_norm": 6.760928423154285,
+            "native_projected_fraction": 0.3809178993454739,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 5.468756821001756
+              },
+              {
+                "direction": "f3X",
+                "component": -3.0516340560033424
+              },
+              {
+                "direction": "f2X",
+                "component": 1.6984114493999911
+              },
+              {
+                "direction": "f4",
+                "component": -1.3014990996628324
+              },
+              {
+                "direction": "f3",
+                "component": -1.0527714375644672
+              },
+              {
+                "direction": "f2",
+                "component": 0.5712069210488592
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.98707327000714,
+              0.9816692932398116,
+              0.3054115459577783,
+              0.14413554076777343
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9871834969854385,
+              1.0032009104265858,
+              0.9790662764366861,
+              0.3042415520088217,
+              0.1405063528357965
+            ],
+            "native_gradient_norm": 17.749043651588696,
+            "native_projected_gradient_norm": 1.926917423621812,
+            "native_projected_fraction": 0.10856457741875776,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f3X",
+                "component": 1.2706257606865787
+              },
+              {
+                "direction": "f4X",
+                "component": 1.2314592254163432
+              },
+              {
+                "direction": "f2X",
+                "component": 0.635627885680467
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.39902866854680746
+              },
+              {
+                "direction": "f3",
+                "component": 0.11551853083203163
+              },
+              {
+                "direction": "f4",
+                "component": -0.06423221661013444
+              }
+            ]
+          }
+        },
+        "42": {
+          "lambda_min": -10.215655830706666,
+          "weakest_vector": [
+            -0.03652940215088734,
+            0.9986901448820966,
+            -0.0358273260776641
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.985993461889151,
+              0.984454121135187,
+              0.30948809841843683
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9860282410325873,
+              1.0024323162534747,
+              0.9819070007223357,
+              0.30948788253070286
+            ],
+            "native_gradient_norm": 24.120648178725023,
+            "native_projected_gradient_norm": 9.752872099669627,
+            "native_projected_fraction": 0.4043370653808503,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 8.005892996534083
+              },
+              {
+                "direction": "f3X",
+                "component": -4.312582008504786
+              },
+              {
+                "direction": "f2X",
+                "component": 2.400205771090458
+              },
+              {
+                "direction": "f4",
+                "component": -1.8086824298950994
+              },
+              {
+                "direction": "f3",
+                "component": -1.5816227360521709
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.7499981565569575
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9854139042015324,
+              0.981574550907901,
+              0.302359138272744,
+              0.14248949346350795
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9854151613307307,
+              1.001145014167506,
+              0.9808523700149044,
+              0.3017188776647961,
+              0.14075126675733934
+            ],
+            "native_gradient_norm": 24.120648178725023,
+            "native_projected_gradient_norm": 2.926510564764553,
+            "native_projected_fraction": 0.12132802332176976,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 1.9228232839196924
+              },
+              {
+                "direction": "f3X",
+                "component": 1.8924595746847876
+              },
+              {
+                "direction": "f2X",
+                "component": 0.8744723616027453
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.5847246850392659
+              },
+              {
+                "direction": "f2",
+                "component": -0.32505985201697457
+              },
+              {
+                "direction": "f2F",
+                "component": -0.25170273348220357
+              }
+            ]
+          }
+        },
+        "1000": {
+          "lambda_min": -18.522265817644573,
+          "weakest_vector": [
+            -0.0008633609750750867,
+            0.9992282607642269,
+            -0.03927005854242279
+          ],
+          "metric_vector_tangent": {
+            "rank_B": 3,
+            "rank_B_plus_g": 4,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9856743426303087,
+              0.9844926915868824,
+              0.30923740815340695
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9857219400863633,
+              1.0014460236871505,
+              0.9829262373567653,
+              0.30923531426123413
+            ],
+            "native_gradient_norm": 25.736001937370872,
+            "native_projected_gradient_norm": 10.97877390680209,
+            "native_projected_fraction": 0.42659205316813303,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 9.11007469286243
+              },
+              {
+                "direction": "f3X",
+                "component": -4.754966502474134
+              },
+              {
+                "direction": "f2X",
+                "component": 2.646419335550579
+              },
+              {
+                "direction": "f4",
+                "component": -1.9435473425509842
+              },
+              {
+                "direction": "f3",
+                "component": -1.8609451375746535
+              },
+              {
+                "direction": "f4XX",
+                "component": 0.8269340522229397
+              }
+            ]
+          },
+          "with_scalar_identity_tangent": {
+            "rank_B": 4,
+            "rank_B_plus_g": 5,
+            "structurally_controllable": true,
+            "singular_values_B_equilibrated": [
+              1.9848924173254041,
+              0.9811786076404956,
+              0.3016557484119852,
+              0.14243410931810604
+            ],
+            "singular_values_augmented_equilibrated": [
+              1.9848950086522676,
+              1.001057965213473,
+              0.9804443580458286,
+              0.3012212240541427,
+              0.14093411354199006
+            ],
+            "native_gradient_norm": 25.736001937370872,
+            "native_projected_gradient_norm": 3.539809953765905,
+            "native_projected_fraction": 0.13754311809503708,
+            "dominant_native_projected_components": [
+              {
+                "direction": "f4X",
+                "component": 2.3149496630696476
+              },
+              {
+                "direction": "f3X",
+                "component": 2.176407847124629
+              },
+              {
+                "direction": "f2X",
+                "component": 0.9420908025235833
+              },
+              {
+                "direction": "f2",
+                "component": -0.830861438672228
+              },
+              {
+                "direction": "f4XX",
+                "component": -0.6640251208996539
+              },
+              {
+                "direction": "f2F",
+                "component": -0.6433587353646545
+              }
+            ]
+          }
+        }
+      },
+      "simultaneous_all_L": {
+        "metric_vector_tangent": {
+          "success": true,
+          "max_common_first_order_gain_native_box": 0.2491402753852094,
+          "all_required_L_gain_positive": true,
+          "gains": {
+            "6": 0.24914027365048588,
+            "20": 12.544024945736995,
+            "42": 17.44187510338343,
+            "1000": 18.772862672918826
+          },
+          "max_abs_native_component": 1.0,
+          "dominant_native_components": [
+            {
+              "direction": "f2",
+              "component": 1.0
+            },
+            {
+              "direction": "f2X",
+              "component": 1.0
+            },
+            {
+              "direction": "f4X",
+              "component": 1.0
+            },
+            {
+              "direction": "f3X",
+              "component": -1.0
+            },
+            {
+              "direction": "f4XX",
+              "component": 1.0
+            },
+            {
+              "direction": "H_G2XX",
+              "component": -1.0
+            },
+            {
+              "direction": "H_G3XX_TUBULAR",
+              "component": -1.0
+            },
+            {
+              "direction": "f2F",
+              "component": 0.7743273494339052
+            }
+          ],
+          "induced_a1_first_order": 0.0
+        },
+        "with_scalar_identity_tangent": {
+          "success": true,
+          "max_common_first_order_gain_native_box": 0.07174148945721381,
+          "all_required_L_gain_positive": true,
+          "gains": {
+            "6": 0.07174148866074982,
+            "20": 3.540448462072835,
+            "42": 5.3220699009312815,
+            "1000": 6.204442480274126
+          },
+          "max_abs_native_component": 1.0,
+          "dominant_native_components": [
+            {
+              "direction": "f2X",
+              "component": 1.0
+            },
+            {
+              "direction": "f4XX",
+              "component": -1.0
+            },
+            {
+              "direction": "f4X",
+              "component": 1.0
+            },
+            {
+              "direction": "f3X",
+              "component": 1.0
+            },
+            {
+              "direction": "H_G3XX_TUBULAR",
+              "component": -1.0
+            },
+            {
+              "direction": "H_G2XX",
+              "component": -1.0
+            },
+            {
+              "direction": "f2",
+              "component": -0.08173953971658457
+            },
+            {
+              "direction": "f2F",
+              "component": -0.06329316106646557
+            }
+          ],
+          "induced_a1_first_order": 0.0
+        }
+      }
+    }
+  ],
+  "requested_right_seed_diagnostic": {
+    "u_requested": 0.712,
+    "status": "NOT_EVALUATED_NO_CERTIFIABLE_ABSOLUTE_ACTION_SEED",
+    "reason": "The accepted Electric-Hybrid absolute action table ends below u=0.71. The old Inner background/action data remain useful seeds but the full absolute H+SVT 41-emitter right of the historical seam is not yet certified.  Using the historical Inner 41 stream here would violate the action-first contract.",
+    "next_requirement": "extend the joint action continuation across u=0.71, then rerun this identical tangent audit"
+  },
+  "directions": [
+    "f2",
+    "f2X",
+    "f2F",
+    "f3",
+    "f3X",
+    "f4",
+    "f4X",
+    "f4XX",
+    "H_G2XX",
+    "H_G3XX_TUBULAR"
+  ],
+  "finite_difference_epsilon": 1e-05,
+  "required_L": [
+    6,
+    20,
+    42,
+    1000
+  ],
+  "global_summary": {
+    "metric_vector_tangent_has_one_direction_improving_all_required_L_at_all_sampled_points": true,
+    "extended_scalar_identity_tangent_has_one_direction_improving_all_required_L_at_all_sampled_points": true,
+    "all_per_L_gradients_have_nonzero_projection_in_extended_tangent": true,
+    "interpretation": "A positive result is a local first-order controllability statement only. It licenses a predictor-corrector continuation attempt; it does not prove a finite healthy branch."
+  },
+  "promotion": {
+    "finite_strong_field_transition": false,
+    "absolute_direct41_transition": false,
+    "global_KRGSM": false,
+    "same_operator_QNM": false
+  }
+}

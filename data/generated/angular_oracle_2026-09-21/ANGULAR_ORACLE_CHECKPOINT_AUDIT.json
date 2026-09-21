@@ -1,0 +1,120 @@
+{
+  "dense_branch_angular_physical_gate": "OPEN",
+  "dense_branch_svt_formula_diagnostic": {
+    "classification": "NOT_A_PHYSICAL_GATE_FOR_MIXED_H_SVT",
+    "negative_cminus_rows": 476,
+    "note": "SVT-specific simplified angular formula evaluated on a mixed H+SVT member; retained only as a falsification/diagnostic artifact.",
+    "rows": 476
+  },
+  "files": [
+    {
+      "Disc": {
+        "max": 1.8053331347600708e+16,
+        "min": 382487.9346139357,
+        "negative_count": 0,
+        "nonfinite_count": 0
+      },
+      "cV": {
+        "max": 1.000000000000001,
+        "min": 0.9999999999999992,
+        "negative_count": 0,
+        "nonfinite_count": 0
+      },
+      "cminus": {
+        "max": 5520474.784101889,
+        "min": 20.95426095455969,
+        "negative_count": 0,
+        "nonfinite_count": 0
+      },
+      "cplus": {
+        "max": 139883160.629543,
+        "min": 639.4192682983761,
+        "negative_count": 0,
+        "nonfinite_count": 0
+      },
+      "file": "data/generated/angular_oracle_2026-09-21/angular_oracle_eq86_95.csv",
+      "rows": 4000,
+      "u_max": 0.715,
+      "u_min": 0.61
+    },
+    {
+      "cV": {
+        "max": 1.000000000000001,
+        "min": 0.9999999999999992,
+        "negative_count": 0,
+        "nonfinite_count": 0
+      },
+      "cminus": {
+        "max": 32928.34609458601,
+        "min": -55587399.107167184,
+        "negative_count": 1775,
+        "nonfinite_count": 0
+      },
+      "cplus": {
+        "max": 62120034.39530294,
+        "min": -6131.777385912621,
+        "negative_count": 16,
+        "nonfinite_count": 0
+      },
+      "disc": {
+        "max": 3856559428908908.0,
+        "min": -2144142846.2602017,
+        "negative_count": 56,
+        "nonfinite_count": 0
+      },
+      "file": "data/generated/angular_oracle_2026-09-21/angular_exact_plus.csv",
+      "rows": 3809,
+      "u_max": 0.7099849962490622,
+      "u_min": 0.61
+    },
+    {
+      "cV": {
+        "max": 0.1253047247825714,
+        "min": 0.0384706557716213,
+        "negative_count": 0,
+        "nonfinite_count": 0
+      },
+      "cminus": {
+        "max": -157.22534974584602,
+        "min": -283491.3474450813,
+        "negative_count": 476,
+        "nonfinite_count": 0
+      },
+      "cplus": {
+        "max": 522496.0318757086,
+        "min": -3153.7962743849857,
+        "negative_count": 61,
+        "nonfinite_count": 0
+      },
+      "disc": {
+        "max": 273387278126.21667,
+        "min": -15106591.298664572,
+        "negative_count": 36,
+        "nonfinite_count": 0
+      },
+      "file": "data/generated/angular_oracle_2026-09-21/dense_paper_angular.csv",
+      "rows": 476,
+      "u_max": 0.7099849962490622,
+      "u_min": 0.6975131282820705
+    }
+  ],
+  "legacy_reference": {
+    "classification": "LEGACY_CONVENTION_MISMATCH",
+    "negative_cminus_rows": 1775,
+    "negative_discriminant_rows": 56,
+    "note": "Historical data retained for provenance; it is not used as the published-convention oracle."
+  },
+  "status": "ANGULAR_ORACLE_METHOD_CHECKPOINT",
+  "svt_published_oracle": {
+    "all_coupled_positive": true,
+    "cminus_min": 20.95426095455969,
+    "cplus_min": 639.4192682983761,
+    "range": [
+      0.62,
+      0.7
+    ],
+    "rows": 3047,
+    "vector_branch_max_abs_error_from_1": 1.1102230246251565e-15
+  },
+  "universal_mixed_h_svt_reducer": "OPEN"
+}

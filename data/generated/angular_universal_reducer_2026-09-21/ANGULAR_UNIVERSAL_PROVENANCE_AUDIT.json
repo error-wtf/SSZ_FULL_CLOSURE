@@ -1,0 +1,202 @@
+{
+  "absolute_full_closure": false,
+  "characteristic_polynomial": {
+    "normalized_polynomial_difference": {
+      "max": 388393734232981.4,
+      "median": 266644579.5906468,
+      "p90": 439589797802.1258,
+      "p99": 1856584851097.022,
+      "p999": 72628713152221.3
+    },
+    "published_reconstruction": "(z-cV)*(z^2-B1*z+B2) from the same Eq83-style extracted coefficients",
+    "raw_definition": "det[(r^2/f)*eps*M_project - z*K] with z=c_Omega^2",
+    "representative": {
+      "leading_eps_power": 2,
+      "published_normalized_coefficients": [
+        -1298760.0944923526,
+        1306649.8585695203,
+        -7890.764077167496,
+        1.0
+      ],
+      "published_roots": [
+        0.9999999999999999,
+        168.19907547335288,
+        7721.565001694144
+      ],
+      "raw_normalized_coefficients": [
+        114560.0,
+        -114261.33333333333,
+        -341.3333333333333,
+        1.0
+      ],
+      "raw_roots": [
+        -208.72403318928107,
+        0.999637494791875,
+        549.0577290278228
+      ],
+      "u": 0.6500150037509377
+    }
+  },
+  "continuation_0p708_to_0p715": "HELD",
+  "dense_branch_angular_gate": "HELD_OPEN",
+  "eq83_mapping": {
+    "component_gates": {
+      "M11_0": true,
+      "M12_0": true,
+      "M13_0": true,
+      "M22_0": true,
+      "M23_0": false,
+      "M33_0": true
+    },
+    "components": {
+      "M11_0": {
+        "minus": {
+          "max": 2.8492608050711965e-08,
+          "median": 2.5501378786429996e-11,
+          "p90": 4.8716780831625795e-09,
+          "p99": 1.4255368705473614e-08,
+          "p999": 2.3032769087105736e-08
+        },
+        "minus_better_median": false,
+        "plus": {
+          "max": 2.8492608050711965e-08,
+          "median": 2.5501378786429996e-11,
+          "p90": 4.8716780831625795e-09,
+          "p99": 1.4255368705473614e-08,
+          "p999": 2.3032769087105736e-08
+        }
+      },
+      "M12_0": {
+        "minus": {
+          "max": 7.903675974140528e-10,
+          "median": 5.615880505423829e-13,
+          "p90": 4.3358538741610504e-12,
+          "p99": 3.5043677794115385e-11,
+          "p999": 1.694154348078871e-10
+        },
+        "minus_better_median": true,
+        "plus": {
+          "max": 273.80593790109106,
+          "median": 1.3400815335440124,
+          "p90": 3.629612297183696,
+          "p99": 18.32531992714215,
+          "p999": 124.4079168383955
+        }
+      },
+      "M13_0": {
+        "minus": {
+          "max": 4.584099307135735e-08,
+          "median": 3.9584793909678607e-11,
+          "p90": 8.135969991205518e-09,
+          "p99": 2.360329264251375e-08,
+          "p999": 3.7267964919347626e-08
+        },
+        "minus_better_median": false,
+        "plus": {
+          "max": 4.584099307135735e-08,
+          "median": 3.9584793909678607e-11,
+          "p90": 8.135969991205518e-09,
+          "p99": 2.360329264251375e-08,
+          "p999": 3.7267964919347626e-08
+        }
+      },
+      "M22_0": {
+        "minus": {
+          "max": 3.111009183579662e-14,
+          "median": 3.6333580561268413e-16,
+          "p90": 2.1446795587820035e-15,
+          "p99": 1.187862052252976e-14,
+          "p999": 1.9449473041705052e-14
+        },
+        "minus_better_median": true,
+        "plus": {
+          "max": 4.588036771395135,
+          "median": 1.7732201591632943,
+          "p90": 4.312761261686314,
+          "p99": 4.5556212076916305,
+          "p999": 4.586141858890116
+        }
+      },
+      "M23_0": {
+        "minus": {
+          "max": 0.037415661199496374,
+          "median": 5.633261390124123e-07,
+          "p90": 0.0003422220917296522,
+          "p99": 0.006695207718731186,
+          "p999": 0.021316225673149704
+        },
+        "minus_better_median": true,
+        "plus": {
+          "max": 423.16833179947264,
+          "median": 3.207582936535022,
+          "p90": 6.496197671887231,
+          "p99": 21.49686566012102,
+          "p999": 57.68814416060615
+        }
+      },
+      "M33_0": {
+        "minus": {
+          "max": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p99": 0.0,
+          "p999": 0.0
+        },
+        "minus_better_median": false,
+        "plus": {
+          "max": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p99": 0.0,
+          "p999": 0.0
+        }
+      }
+    },
+    "first_divergent_component": "M23_0",
+    "project_to_paper_mass_sign": "M_paper = - M_project"
+  },
+  "first_divergent_stage": "M23_0",
+  "genuine_svt_m5_provenance": {
+    "action_branch": "m5_minus = a4*v13 - a6*v6",
+    "classification": "PUBLISHED_REDUCED_SHORTCUT_CONFLICT",
+    "m22_minus_plus_cross_identity": {
+      "max": 1.8039607530445687e-13,
+      "median": 1.651601151374651e-16,
+      "p90": 4.3175308098116523e-16,
+      "p99": 2.7782737701678386e-15,
+      "p999": 4.3526764852048374e-14
+    },
+    "note": "Minus/plus are compared only as provenance branches; the common action is never edited to hit the plus shortcut.",
+    "published_shortcut_comparator": "m5_plus = a4*v13 + a6*v6"
+  },
+  "laurent_engine": {
+    "classification": "PASS_FINITE_L_REGRESSION",
+    "finite_L_rows": [
+      {
+        "L": 1000.0,
+        "max_abs_K": 4.121147867408581e-13,
+        "max_abs_M": 0.01935887336730957,
+        "max_scaled_K": 1.5216989394998073e-14,
+        "max_scaled_M": 4.93718764787987e-07
+      },
+      {
+        "L": 10000.0,
+        "max_abs_K": 4.263256414560601e-14,
+        "max_abs_M": 0.00033772666938602924,
+        "max_scaled_K": 6.606893648307768e-16,
+        "max_scaled_M": 1.1944555029415268e-07
+      }
+    ],
+    "note": "Formal eps=1/L algebra is compared against the accepted full finite-L common-action reducer."
+  },
+  "maxwell_horndeski_audit_B": {
+    "classification": "EXACT_GM_GHS_REPLAY_NOT_PRESENT_IN_INPUT_CHECKPOINT",
+    "expected_exact_characteristic": "(1-z)^3",
+    "note": "The attached safety checkpoint predates the user-reported GM-GHS replay. The follow-up pipeline includes the oracle hook but does not fabricate a rerun without the exact input artifact."
+  },
+  "outputs": [
+    "data/generated/angular_universal_reducer_2026-09-21/ANGULAR_EQ83_COMPONENT_MAPPING.csv",
+    "data/generated/angular_universal_reducer_2026-09-21/ANGULAR_CHARACTERISTIC_POLYNOMIAL_COMPARISON.csv"
+  ],
+  "status": "ANGULAR_UNIVERSAL_PROVENANCE_PIPELINE"
+}

@@ -1,0 +1,13 @@
+{
+  "shape": [
+    80,
+    136
+  ],
+  "rank": 51,
+  "active_columns": 109,
+  "max_scaled_residual": 2.998413793261676e-07,
+  "rms_scaled_residual": 6.035455445787546e-08,
+  "max_abs_parameter": 1.8670931342996954e+18,
+  "status": "PRIMITIVE_INTERFACE_OPEN",
+  "interpretation": "coefficient/primitive reachability only; not yet a G2/G3/G4 common-action certificate"
+}

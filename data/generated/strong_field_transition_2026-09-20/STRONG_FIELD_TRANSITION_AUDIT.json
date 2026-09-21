@@ -1,0 +1,294 @@
+{
+  "status": "OPEN_ACTION_CONTINUATION_REQUIRED",
+  "scope": "physical right strong-field transition, not historical Inner target replay",
+  "physical_domain": [
+    0.7,
+    0.715
+  ],
+  "historical_seam_u": 0.71,
+  "historical_seam_is_physical_boundary": false,
+  "inner_light_ring_u": 0.7061345733,
+  "left_anchor": "ELECTRIC_HYBRID_ONSHELL_CENTRAL at u=0.70",
+  "right_anchor": "punctured pure-Horndeski core at u=0.715",
+  "hybrid_bulk_0p62_0p70": {
+    "all_required_L_K_and_radial_positive": true,
+    "scans": [
+      {
+        "L": 6,
+        "min_eig_K": 0.01346319409618893,
+        "negative_K_rows": 0,
+        "min_cr2": 0.013364327428284088,
+        "negative_radial_rows": 0,
+        "max_R_abs": 0.0,
+        "max_S_sym": 7.815629032847937e-09,
+        "pass": true
+      },
+      {
+        "L": 12,
+        "min_eig_K": 0.012538378553507269,
+        "negative_K_rows": 0,
+        "min_cr2": 0.00885313859122102,
+        "negative_radial_rows": 0,
+        "max_R_abs": 0.0,
+        "max_S_sym": 4.6080685933702625e-09,
+        "pass": true
+      },
+      {
+        "L": 20,
+        "min_eig_K": 0.010627830575867804,
+        "negative_K_rows": 0,
+        "min_cr2": 0.005948615572310152,
+        "negative_radial_rows": 0,
+        "max_R_abs": 0.0,
+        "max_S_sym": 4.312369128456339e-09,
+        "pass": true
+      },
+      {
+        "L": 42,
+        "min_eig_K": 0.004385220374792532,
+        "negative_K_rows": 0,
+        "min_cr2": 0.0031032342262038437,
+        "negative_radial_rows": 0,
+        "max_R_abs": 0.0,
+        "max_S_sym": 4.0324721339857206e-09,
+        "pass": true
+      },
+      {
+        "L": 110,
+        "min_eig_K": 0.0006723488454477934,
+        "negative_K_rows": 0,
+        "min_cr2": 0.0012488588352244801,
+        "negative_radial_rows": 0,
+        "max_R_abs": 0.0,
+        "max_S_sym": 6.056779966456816e-09,
+        "pass": true
+      },
+      {
+        "L": 420,
+        "min_eig_K": 4.6832715039557534e-05,
+        "negative_K_rows": 0,
+        "min_cr2": 0.00033515123812328054,
+        "negative_radial_rows": 0,
+        "max_R_abs": 0.0,
+        "max_S_sym": 6.74299371894449e-09,
+        "pass": true
+      },
+      {
+        "L": 1000,
+        "min_eig_K": 8.282124160115536e-06,
+        "negative_K_rows": 0,
+        "min_cr2": 0.00014147597641957568,
+        "negative_radial_rows": 0,
+        "max_R_abs": 0.0,
+        "max_S_sym": 6.086565917939879e-09,
+        "pass": true
+      }
+    ]
+  },
+  "right_buffer_background_diagnostic": {
+    "E00": {
+      "max_abs": 6.591061030292167e-11,
+      "median_abs": 1.6076029396572267e-13
+    },
+    "E11": {
+      "max_abs": 1.5380419160493375e-11,
+      "median_abs": 1.9215184998699897e-13
+    },
+    "JA": {
+      "max_abs": 1.0789782467904025e-14,
+      "median_abs": 1.9439564500070887e-15
+    },
+    "JA_prime": {
+      "max_abs": 4.410772229786824e-09,
+      "median_abs": 4.354908066085227e-11
+    },
+    "Jphi": {
+      "max_abs": 6.411685141213259,
+      "median_abs": 6.2498627055561595
+    },
+    "Pphi": {
+      "max_abs": 20.428500521849404,
+      "median_abs": 18.9579973008878
+    },
+    "Ephi_direct": {
+      "max_abs": 0.0007848862078851937,
+      "median_abs": 4.506955143313007e-06,
+      "max_scaled": 3.1875190932789296e-05
+    }
+  },
+  "electric_branch_nondegeneracy": {
+    "definition": "chi_E = partial J_A / partial A0prime at fixed phi,X using f2FF+4X f2FY",
+    "light_ring_u_grid": 0.70612528132033,
+    "light_ring_A0prime": 1.4161792906354749,
+    "light_ring_chi_E": 669.7931653241517,
+    "min_abs_chi_E_where_A0prime_nonzero": 357.22925553469906,
+    "finite": true
+  },
+  "unmodified_hybrid_right_extension": {
+    "6": {
+      "first_min_eigenvalue_zero_u": 0.7013064157830835,
+      "min_eig_K_transition": -0.16188299174804774,
+      "light_ring_u_grid": 0.70612528132033,
+      "light_ring_min_eig_K": -0.06893357234372828,
+      "light_ring_weakest_vector": [
+        0.9963883002683851,
+        -0.0849137965166406,
+        -4.7427932868674125e-05
+      ],
+      "min_abs_Dh1": 10.842226571531565,
+      "min_abs_auxiliary_determinant": 29.018123108444716
+    },
+    "12": {
+      "first_min_eigenvalue_zero_u": 0.7013064064565043,
+      "min_eig_K_transition": -0.2540228808022042,
+      "light_ring_u_grid": 0.70612528132033,
+      "light_ring_min_eig_K": -0.08940989487460067,
+      "light_ring_weakest_vector": [
+        0.9919664447693832,
+        -0.1264973860796118,
+        0.0009918500971892153
+      ],
+      "min_abs_Dh1": 32.76969908694433,
+      "min_abs_auxiliary_determinant": 116.07249243377888
+    },
+    "20": {
+      "first_min_eigenvalue_zero_u": 0.7013063818297991,
+      "min_eig_K_transition": -3.7723918361447106,
+      "light_ring_u_grid": 0.70612528132033,
+      "light_ring_min_eig_K": -0.3678132846846479,
+      "light_ring_weakest_vector": [
+        0.8486112337619959,
+        -0.5287882003047116,
+        0.015556771883882386
+      ],
+      "min_abs_Dh1": 79.25004501997581,
+      "min_abs_auxiliary_determinant": 322.4235900938301
+    },
+    "42": {
+      "first_min_eigenvalue_zero_u": 0.7013062423914105,
+      "min_eig_K_transition": -15.925106702334963,
+      "light_ring_u_grid": 0.70612528132033,
+      "light_ring_min_eig_K": -6.091487706474927,
+      "light_ring_weakest_vector": [
+        0.0442901797778415,
+        -0.997877547541842,
+        0.047736569704218995
+      ],
+      "min_abs_Dh1": 308.6857508223334,
+      "min_abs_auxiliary_determinant": 1421.8880323137914
+    },
+    "110": {
+      "first_min_eigenvalue_zero_u": 0.7013051468330876,
+      "min_eig_K_transition": -23.629817978170543,
+      "light_ring_u_grid": 0.70612528132033,
+      "light_ring_min_eig_K": -9.830521630216854,
+      "light_ring_weakest_vector": [
+        0.009236016164226955,
+        -0.9983338005877738,
+        0.05695892036709041
+      ],
+      "min_abs_Dh1": 1960.096564891522,
+      "min_abs_auxiliary_determinant": 9753.313600338362
+    },
+    "420": {
+      "first_min_eigenvalue_zero_u": 0.7012942383150294,
+      "min_eig_K_transition": -27.23573219126812,
+      "light_ring_u_grid": 0.70612528132033,
+      "light_ring_min_eig_K": -11.418500883742713,
+      "light_ring_weakest_vector": [
+        0.0020813378811501888,
+        -0.9983558115023401,
+        0.057282996361297044
+      ],
+      "min_abs_Dh1": 27529.824814482814,
+      "min_abs_auxiliary_determinant": 142188.80323137896
+    },
+    "1000": {
+      "first_min_eigenvalue_zero_u": 0.7012940913864436,
+      "min_eig_K_transition": -27.98282633536881,
+      "light_ring_u_grid": 0.70612528132033,
+      "light_ring_min_eig_K": -11.734007617896573,
+      "light_ring_weakest_vector": [
+        -0.0009656353505475292,
+        0.9987013283061659,
+        -0.050938437234274235
+      ],
+      "min_abs_Dh1": 154845.01648716195,
+      "min_abs_auxiliary_determinant": 806058.9752345758
+    }
+  },
+  "g2xx_kinetic_direction": {
+    "amplitude": 10000.0,
+    "shape": "C-infinity compact bump on 0.70<u<0.715",
+    "response": {
+      "6": {
+        "max_abs_delta_K": 0.0,
+        "max_abs_delta_min_eigenvalue": 0.0
+      },
+      "12": {
+        "max_abs_delta_K": 0.0,
+        "max_abs_delta_min_eigenvalue": 0.0
+      },
+      "20": {
+        "max_abs_delta_K": 0.0,
+        "max_abs_delta_min_eigenvalue": 0.0
+      },
+      "42": {
+        "max_abs_delta_K": 0.0,
+        "max_abs_delta_min_eigenvalue": 0.0
+      },
+      "110": {
+        "max_abs_delta_K": 0.0,
+        "max_abs_delta_min_eigenvalue": 0.0
+      },
+      "420": {
+        "max_abs_delta_K": 0.0,
+        "max_abs_delta_min_eigenvalue": 0.0
+      },
+      "1000": {
+        "max_abs_delta_K": 0.0,
+        "max_abs_delta_min_eigenvalue": 0.0
+      }
+    },
+    "interpretation": "G2XX is a null/near-null direction for the right-transition even kinetic obstruction if all reported deltas are negligible."
+  },
+  "g4xx_single_channel_background_null_test": {
+    "status": "REJECTED_RANK_DEFICIENT_AS_SINGLE_CHANNEL",
+    "reason": "quartic tubular background pivot too small: 0.0",
+    "required_next_step": "joint Horndeski normal bundle / rank-resolved background-preserving solve"
+  },
+  "historical_inner_probe": {
+    "source": "data/prestaged/direct41/inner_selected_candidate_41of41.csv",
+    "L": 6,
+    "eig_min_near_u_0p71": -693.8636628000966,
+    "min_eig_0p710_to_0p714": -26626.446134566027,
+    "u_of_min": 0.7107678571428571,
+    "final_member_eligible": false
+  },
+  "high_L_diagnostic": {
+    "finite_sample_log_slope_min_eig_K": -1.9916163676821672,
+    "finite_sample_log_slope_min_cr2": -0.9862570252807886,
+    "certification": "NOT_A_HIGH_L_PROOF",
+    "required_next_gate": "analytic high-L reduction of the unreduced principal symbol / canonically normalized characteristics"
+  },
+  "solver_contract": {
+    "action_first": true,
+    "historical_coefficient_profiles_are_targets": false,
+    "single_transition_0p70_to_0p715": true,
+    "electric_support_required_through_inner_light_ring": true,
+    "dehair_only_after_light_ring": true,
+    "background_null_controls_preferred": true,
+    "mode_tracking_required": true,
+    "rank_loss_is_physical_event_not_regularization_target": true,
+    "absolute_action_to_41_reemission_required": true,
+    "angular_gate_must_regress_exact_SVT_oracle_before_hybrid": true,
+    "qnm_boundary_conditions": "regular center + outgoing infinity"
+  },
+  "promotion": {
+    "strong_field_transition": false,
+    "global_direct41": false,
+    "global_KRGSM": false,
+    "same_operator_QNM": false,
+    "absolute_full_closure": false
+  }
+}

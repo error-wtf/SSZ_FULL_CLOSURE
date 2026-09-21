@@ -159,6 +159,111 @@ def evaluate_svt_background(
     )
 
 
+
+@dataclass(frozen=True)
+class ScalarODEIdentity:
+    """Linear on-shell scalar equation A q' + B q + C = 0 for q=f3X.
+
+    The decomposition differentiates only smooth coefficient factors and keeps
+    the cancellation-prone total current derivative out of the strict gate.
+    It is the algebraic/identity form used to solve and certify the electric
+    Central scalar background equation.
+    """
+    A: np.ndarray
+    B: np.ndarray
+    C: np.ndarray
+    q: np.ndarray
+    q_prime: np.ndarray
+    residual: np.ndarray
+
+
+def scalar_ode_identity(
+    d: pd.DataFrame,
+    *,
+    q_prime: np.ndarray | None = None,
+    window: int = 9,
+    degree: int = 8,
+) -> ScalarODEIdentity:
+    """Evaluate the scalar EOM as a linear first-order identity for ``f3X``.
+
+    On the selected electric branch the background scalar equation is linear in
+    ``q=f3X`` and its radial derivative.  Writing it as ``A q' + B q + C``
+    avoids differentiating the full current ``J_phi`` after large cancellations.
+    No release tolerance is relaxed; this is a different, algebraically
+    equivalent evaluation route.
+    """
+    r = _col(d, "x")
+    f = _col(d, "f")
+    h = _col(d, "h")
+    ph = _col(d, "phiprime")
+    ap = _col(d, "A0prime")
+    X = _col(d, "X")
+    q = _col(d, "f3X")
+
+    def dr(y: np.ndarray) -> np.ndarray:
+        return profile_derivative(r, np.asarray(y, float), 1, window, degree)
+
+    fp, hp, Xp = dr(f), dr(h), dr(X)
+    F = h * ap**2 / (2.0 * f)
+    Fp = dr(F)
+    Y = 4.0 * X * F
+    Yp = dr(Y)
+
+    f2 = _col(d, "f2")
+    f2x = _col(d, "f2X")
+    f2f = _col(d, "f2F")
+    f2y = _col(d, "f2Y")
+    if "f2phi" in d:
+        f2phi = _col(d, "f2phi")
+    else:
+        f2phi = (dr(f2) - f2x * Xp - f2f * Fp - f2y * Yp) / ph
+
+    f3 = _col(d, "f3")
+    f3r = dr(f3)
+    f4 = _col(d, "f4")
+    f4x = _col(d, "f4X")
+    f4xx = _col(d, "f4XX")
+    tf4 = _col(d, "tf4")
+    f4phi = (dr(f4) - f4x * Xp) / ph
+    f4phix = (dr(f4x) - f4xx * Xp) / ph
+    tf4phi = dr(tf4) / ph
+
+    s = np.sqrt(h / f)
+    sp = 0.5 * s * (hp / h - fp / f)
+    pinv = 1.0 / np.sqrt(f * h)
+
+    # J_phi = -s [B0 + Cq*q].
+    Cq = 2.0 * r * h**2 * ap**2 * ph**2
+    Cqp = dr(Cq)
+    B0 = (
+        r**2 * f * f2x * ph
+        - 2.0 * h * ap**2 * (2.0 * h * tf4 + (3.0 * h - 2.0) * f4x) * ph
+        + h**3 * ap**2 * f4xx * ph**3
+        - 2.0 * r * h * ap**2 * f3
+    )
+    B0p = dr(B0)
+
+    # P_phi = P0 + Pq*q after f3phi=(f3'-q X')/phi'.
+    f3phi_q0 = f3r / ph
+    P0 = pinv * (
+        r**2 * f * f2phi
+        + h
+        * ap**2
+        * (
+            4.0 * f4phi
+            + 2.0 * h * (r * ph * f3phi_q0 - 2.0 * f4phi)
+            + h**2 * (f4phix + 2.0 * tf4phi) * ph**2
+        )
+    )
+    Pq = -pinv * 2.0 * r * h**2 * ap**2 * Xp
+
+    A = -s * Cq
+    B = -(sp * Cq + s * Cqp) - Pq
+    C = -sp * B0 - s * B0p - P0
+    qp = dr(q) if q_prime is None else np.asarray(q_prime, float)
+    residual = A * qp + B * q + C
+    return ScalarODEIdentity(A=A, B=B, C=C, q=q, q_prime=qp, residual=residual)
+
 def residual_metrics(values: SVTBackgroundResiduals, mask: np.ndarray) -> Dict[str, Dict[str, float]]:
     mask = np.asarray(mask, bool)
     out: Dict[str, Dict[str, float]] = {}

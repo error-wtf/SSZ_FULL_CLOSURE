@@ -1,0 +1,16 @@
+{
+  "status": "PASS_CORRECTED_REFERENCE_VERSIONED",
+  "reason": "confirmed c6 Appendix transcription correction; legacy frozen search checkpoint retained unmodified",
+  "legacy_reference": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_LATE_RAMP_FEASIBILITY.csv",
+  "legacy_sha256": "14392bdbcc2c20a88e63a29dda105deccd0a6b3b9024c75f94bb9824246727e1",
+  "corrected_reference": "data/generated/absolute_attempt_2026-09-20/ELECTRIC_HYBRID_PRINCIPAL_LATE_RAMP_FEASIBILITY_C6_CORRECTED.csv",
+  "corrected_sha256": "f76c26f4ae3ab8a50e233059c644d311c73cd8eb2940007a68732c832fc2cfc9",
+  "regression_tolerance": 5e-08,
+  "slots_exceeding_tolerance_against_legacy": {
+    "c6": 1.0463223146208034
+  },
+  "all_non_c6_slots_within_original_tolerance": true,
+  "tolerance_changed": false,
+  "legacy_reference_overwritten": false,
+  "corrected_c6_formula": "c6 includes +(f_prime*r/(2*f))*a4 in the general Maxwell-Horndeski primitive emitter"
+}

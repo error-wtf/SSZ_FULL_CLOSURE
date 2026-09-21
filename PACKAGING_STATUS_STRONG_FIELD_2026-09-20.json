@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-20",
+  "checkpoint": "STRONG_FIELD_ACTION_CONTINUATION",
+  "absolute_full_closure": false,
+  "intended_archive": "SSZ_P5_2026-09-20_STRONG_FIELD_ACTION_CONTINUATION_CHECKPOINT.zip",
+  "tests": {
+    "unit": "73/73 PASS",
+    "negative_regression_integration_release": "52/52 PASS",
+    "grouped_complete_matrix": "125/125 PASS",
+    "monolithic_pytest": "TIMEOUT_NO_FAILURE_OBSERVED_BEFORE_TIMEOUT",
+    "tolerance_relaxation": false
+  },
+  "required_active_gate": "joint rank-resolved Horndeski+SVT action continuation on 0.70<=u<=0.715",
+  "not_promoted": [
+    "right strong-field transition",
+    "global absolute Direct-41",
+    "global KRGSM",
+    "same-operator QNM",
+    "absolute full closure"
+  ]
+}

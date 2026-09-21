@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-21",
+  "checkpoint": "ANGULAR_LAURENT_PROVENANCE",
+  "absolute_full_closure": false,
+  "dense_strong_field_branch": {
+    "kinetic": "PASS_PRESERVED",
+    "radial": "PASS_PRESERVED",
+    "angular": "OPEN"
+  },
+  "angular": {
+    "formal_laurent_engine": "PASS_FINITE_L_REGRESSION",
+    "genuine_svt_action_minus_branch": "PASS_SYMBOLIC_AND_NUMERIC_PROVENANCE",
+    "published_reduced_m5_plus": "PUBLISHED_REDUCED_SHORTCUT_CONFLICT",
+    "eq83_component_mapping": "OPEN_FIRST_DIVERGENCE_M23_0",
+    "raw_vs_published_characteristic": "OPEN_MISMATCH_BEFORE_ROOT_SORTING",
+    "maxwell_horndeski_exact_gm_ghs": "UPSTREAM_REPORTED_PASS_NOT_REPLAYED_FROM_ATTACHED_INPUT",
+    "dense_branch_physical_angular_gate": "OPEN"
+  },
+  "continuation_0p708_to_0p715": "HELD_PENDING_UNIVERSAL_ANGULAR_REDUCER_VALIDATION",
+  "next_required_step": "close the componentwise common-action Laurent -> published tilde K/M convention mapping, starting with the first divergent M23_0 subleading component; do not evaluate the dense branch until that mapping is closed"
+}
