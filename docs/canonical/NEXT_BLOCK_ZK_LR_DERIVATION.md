@@ -51,8 +51,25 @@ only after assembly. If after all specializations only
 C_A0 ∝ A0prime^2 * v8^Eq85 survives electric support and v8 = -16.824455 is
 confirmed -> THIS member is structurally dead. If an additional term
 A0prime^2 * S_SVT (or another nonvanishing genuine-SVT combination) survives ->
-THAT is the sought support operator: "not more electricity, but the right
-SVT-support operator". Do not prejudge which branch.
+that operator can make LR-COMPATIBILITY possible in the first place — it does
+NOT by itself enable Full Closure (Joint-DAE, Same-Member, K, c_r^2, c_Omega^2
+and interfaces must still pass). Do not prejudge which branch.
+
+CASE B PRECISE WORDING: v8^Eq85 < 0 AND the full ZK-LR identity contains no
+additional positive support channel => THIS MEMBER is locally excluded at the
+stable LR (state exactly WHERE and WHY) — not a statement that the theory is dead.
+
+STEP 1 REQUIRED FINAL FORM — three-channel, dimension- and sign-clear:
+
+  Delta_LR^full = (-W'' a4)            [geometric load]
+                + (A0_u^2 * Xi_MH)     [Eq.85 channel]
+                + (Sigma_SVT)          [genuine SVT]
+
+  with F = (sqrt(h)/f^(3/2)) * Delta_LR^full.
+
+Each channel is then separately checkable: sgn Xi_MH, sgn Sigma_SVT,
+Delta_LR^full > 0. This exposes WHICH operator actually works against the
+positive curvature of the stable optical potential.
 
 ## STEP 1 — General ZK-LR identity, symbolically, undivided
 

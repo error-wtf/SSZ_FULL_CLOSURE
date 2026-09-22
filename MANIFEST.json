@@ -3244,8 +3244,8 @@
     },
     {
       "path": "docs/canonical/NEXT_BLOCK_ZK_LR_DERIVATION.md",
-      "size_bytes": 4636,
-      "sha256": "7c6db96d756d0e1b4c2e4e82519553d5406e0eda6881d824dca11fce98321957"
+      "size_bytes": 5453,
+      "sha256": "027f32904cc073b79988c7480e172833dc877253cb9605a6d96528778c0e94c6"
     },
     {
       "path": "docs/canonical/PASS_SURVIVAL_MATRIX.csv",
