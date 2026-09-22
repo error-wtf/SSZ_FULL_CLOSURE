@@ -1,0 +1,33 @@
+{
+ "rows_replay": 19411,
+ "rows_archived": 19411,
+ "columns_identical": true,
+ "region_identical": true,
+ "slot_max_scaled_deviation": 1.686577872358268e-08,
+ "slots_below_1e-10": 40,
+ "worst5": [
+  [
+   "a5",
+   1.686577872358268e-08
+  ],
+  [
+   "a1",
+   0.0
+  ],
+  [
+   "a2",
+   0.0
+  ],
+  [
+   "a3",
+   0.0
+  ],
+  [
+   "a4",
+   0.0
+  ]
+ ],
+ "verdict": "HISTORICAL_REPLAY_PASS",
+ "replay_dir": "/tmp/opencode/hist_replay",
+ "generator": "archive/full_working_snapshot/build_ssz_p5_selected_41stream_v2_2026-09-16.py (only B output path redirected)"
+}
