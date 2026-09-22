@@ -2653,6 +2653,11 @@
       "sha256": "988438c6de69bfeb15e2da2b03f3a71f247b28bb71966c36744227ef0e229f3d"
     },
     {
+      "path": "data/generated/phase2_q2/STEP2_EPHI_MAX_LOCALIZATION.json",
+      "size_bytes": 240,
+      "sha256": "5b155e97c51a72753896422b1206c5e5ee21bc530aa2d0e64b9d6771873c058e"
+    },
+    {
       "path": "data/generated/phase2_q2/STEP2_EPHI_ODE_COEFFICIENTS.json",
       "size_bytes": 845,
       "sha256": "bb3d22ffff1c80dc3ad847702939a5bbe391bce9b3cdae8c6c35a9b942df5177"
@@ -3279,8 +3284,8 @@
     },
     {
       "path": "docs/canonical/NEXT_BLOCK_ZK_LR_DERIVATION.md",
-      "size_bytes": 10417,
-      "sha256": "047a9453d87d20c84a3a53bcd00be7e86d9f75bb70f3816fdf86c82c6290b4dd"
+      "size_bytes": 11291,
+      "sha256": "f1f3ed07b840cc580ce8c5cf201d5f8f6d498d01a053e1b961a0444d4c9c00b2"
     },
     {
       "path": "docs/canonical/PASS_SURVIVAL_MATRIX.csv",

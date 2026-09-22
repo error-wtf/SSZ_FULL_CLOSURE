@@ -1,0 +1,9 @@
+{
+ "u_at_max": 0.6975131282820705,
+ "res_max": 0.00034368803960660443,
+ "is_boundary_row(<=3 from edge)": true,
+ "position": "BOUNDARY",
+ "rows_total": 476,
+ "interior_max": 1.6350069927284494e-05,
+ "interior_argmax_u": 0.7085408852213053
+}

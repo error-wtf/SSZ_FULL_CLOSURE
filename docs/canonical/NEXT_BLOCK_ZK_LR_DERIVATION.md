@@ -221,3 +221,26 @@ actual symbolic LR identity.
    These results enter the UNDIVIDED Eq.85-generating combination — not the
    reverse. Then ring limit, then subtract geometry + MH-electric; only the
    remainder is Sigma_SVT.
+
+## FULL-CLOSURE END-RUN (frozen execution plan, owner 2026-09-22)
+
+STEP 2 RESULT: the 3.44e-4 E_phi window-max is a BOUNDARY artifact (row 0, u=0.69751,
+the handover edge); interior max = 1.64e-5 (u=0.70854) — derivative level.
+Classified per rule: boundary/stencil effect, documented; interior clean.
+
+Execution order (frozen):
+ 1. E_phi maximum localize/classify            [DONE — boundary artifact, interior 1.64e-5]
+ 2. C_bg from the integrated unsplit same-action member
+ 3. Ring limit
+ 4. Sigma_SVT exact extraction
+ 5. Delta_LR^full on shell
+ 6. Joint DAE over the full relevant window
+ 7. Same-member gate, ONE hash (E00/E11/J_A/E_phi ~ 0 + full light-ring condition)
+ 8. K > 0
+ 9. c_r^2 > 0
+10. c_Omega^2 > 0
+11. Interfaces / continuation
+12. QNM/trapping LAST
+
+No new branch search. No fitting. No old slot loops. From here: close the
+remaining proof chain.
