@@ -1,0 +1,25 @@
+{
+  "step": "TEIL-SKRIPT 2 — electric factor separation + Sigma_SVT extraction rule",
+  "date": "2026-09-22",
+  "geometric_term_analytic": {
+    "result": "G_r = (u/r_s) W''(u) AT THE RING — EXACT by chain rule (numerical ratio 1.000000 = regression only)",
+    "derivation": "u=r_s/r, W=u^2 f: du/dr = -u^2/r_s, f_r = -(u^2/r_s) f_u; ring condition r f_r - 2f = 0 <=> u f_u + 2f = 0 <=> W_u = 0; at W_u=0 the cross terms vanish and G_r = (u/r_s) W_uu",
+    "consequence": "the ratio-1.000000 replay is a regression test; the identity itself is analytic and does not depend on the carrier table"
+  },
+  "factor_trap_frozen": {
+    "raw_eq85_numerator_electric": "E_raw^(A) = (2 u^3 / r_s) f h A0_u^2 v8",
+    "normalized_LR_balance_electric": "E_LRnorm^(A) = 2 u^2 f h A0_u^2 v8",
+    "relation": "E_raw^(A) = (u/r_s) * E_LRnorm^(A)",
+    "rule": "NEVER mix: raw is the Eq.85 numerator factor, normalized is the LR-balance factor after multiplying the whole ring equation by r_s/u"
+  },
+  "MH_limit_target_form": {
+    "equation": "W'' a4 + f^(3/2)/sqrt(h) F - 2 u^2 f h A0_u^2 v8 = 0",
+    "solved": "F = (sqrt(h)/f^(3/2)) * (2 u^2 f h A0_u^2 v8 - W'' a4)"
+  },
+  "sigma_svt_extraction_rule": {
+    "legitimate": "Sigma_SVT := (undivided background-EOM combination that reduces to Eq.85 in the MH limit) MINUS geometry term MINUS MH-electric term, evaluated at the ring",
+    "forbidden": "Sigma_SVT := 'everything left in E_phi' — that is a different combination whose MH limit is not Eq.85",
+    "rag_sources": ["SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16.md sha d56350... (independent E00/E11/E_phi/E_A architecture)", "ZK emitter sha fa94b2... (f2Y/f3/f4/tilde-f4 structures present)"],
+    "rag_does_not_prejudge": "whether any of those structures survives at the ring as support is the derivation result"
+  }
+}

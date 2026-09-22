@@ -144,3 +144,11 @@ unknowns:
     source_files: [data/generated/phase2_q2/STEP0_EQ85_V8_PROVENANCE.json]
     consequence: "the corrected necessary-condition gate PASSES on the correctly mapped slot; the electric support channel is structurally OPEN on this member"
     next_session: "STEP 1 full ZK-LR identity (symbolic) + joint E11+E_phi DAE; then A0_u vs threshold on the actual background"
+
+  - id: FACT:ELECTRIC_FACTOR_TRAP_RAW_VS_NORMALIZED
+    statement: "raw Eq.85 numerator electric term = (2u^3/r_s) f h A0_u^2 v8; normalized LR-balance electric term = 2u^2 f h A0_u^2 v8; relation E_raw = (u/r_s) E_LRnorm. Mixing them produces a spurious u-factor error."
+    status: SOURCE_ESTABLISHED (chain-rule derivation + numerical ratio 1.000000)
+    source_files: [data/generated/phase2_q2/STEP1_GEOM_TRANSFORMATION_CHECK.json, data/generated/phase2_q2/STEP1_TEIL2_FACTOR_SEPARATION.json]
+  - id: FACT:GEOMETRIC_TERM_ANALYTIC
+    statement: "G_r = (u/r_s) W''(u) at the ring is EXACT by chain rule (ring condition r f_r - 2f = 0 <=> u f_u + 2f = 0 <=> W_u = 0); the numerical ratio-1.000000 replay is only the regression test"
+    status: PROVEN
