@@ -3093,6 +3093,26 @@
       "sha256": "f845e60caa09711bc92d31accd68072088a7437b5fda36f3c1135207831e433b"
     },
     {
+      "path": "docs/phase1/COMPLETION_RULE_HASHES.json",
+      "size_bytes": 1880,
+      "sha256": "3d842623af4ff79979ab100d309e8808c2d90d020ff76f4a26a8084306b59260"
+    },
+    {
+      "path": "docs/phase1/PHASE1_BLINDING_AUDIT.json",
+      "size_bytes": 2507,
+      "sha256": "8138e2477651e882cfa045536a32969ed745a49915a756a16deb4a85f7b4ebfd"
+    },
+    {
+      "path": "docs/phase1/PRE_REGISTERED_COMPLETION_ENSEMBLE.json",
+      "size_bytes": 9989,
+      "sha256": "b3627d0853de4550299385c80b58f655af70771aa18ed57bfafac29603100b50"
+    },
+    {
+      "path": "docs/phase1/PRE_REGISTRATION.md",
+      "size_bytes": 14193,
+      "sha256": "dcc34127cb04f0150aa0dd764cc976f5e6ad85e60765c63db2a92607f521c4e4"
+    },
+    {
       "path": "docs/research_notes/KAPPA_Y_TRANSITION_NOTE_2026-09-18.md",
       "size_bytes": 14257,
       "sha256": "3f0afec67fda90d7b01d2ce9c63e07df337cf7675780fcfcfc6f9489f0b4abdb"
@@ -4581,6 +4601,11 @@
       "path": "tools/generate_global_action_cover.py",
       "size_bytes": 1511,
       "sha256": "2d254d5a93c325acb50d5b98cf88e4a3752073e0c4c5e474a53d47aa97d28ffe"
+    },
+    {
+      "path": "tools/phase1_freeze_hashes.py",
+      "size_bytes": 2490,
+      "sha256": "a0ec3a4ff0a84ef7623b10ab350d3c51a6b99e01bc974e32659646c9211e025a"
     },
     {
       "path": "tools/refreeze_dense_baseline.py",

@@ -1,0 +1,174 @@
+{
+  "package": "PRE_REGISTERED_COMPLETION_ENSEMBLE",
+  "phase": 1,
+  "created_utc": "2026-09-22",
+  "NO_STABILITY_INFORMATION_USED": true,
+  "forbidden_inputs_not_used": [
+    "K", "lambda_min(K)", "c_r^2", "c_Omega^2", "angular roots", "QNM",
+    "published perturbation roots", "historical PASS/FAIL of tangent directions",
+    "tangent sensitivity gradients"
+  ],
+  "construction_constraints": [
+    "Xi_weak = r_s/(2r)",
+    "Xi_strong = 1 - exp(-phi_gold * r_s/r)  (decay form, canon global)",
+    "Hermite C2 quintic bridge on x in [1.8, 2.2], J[u] = int (u''')^2 dt",
+    "phi_gold = 1.618033988749895 (structural constant, not a fit parameter)",
+    "U(1) gauge invariance (Zhang-Kase 13-slot vector schema)",
+    "second-order degenerate field equations (Horndeski class)",
+    "weak-field GR/PPN limit (beta = gamma = 1, exact)",
+    "regularity and asymptotics"
+  ],
+  "phi_audit": {
+    "phi_gold": "1.618033988749895 = (1+sqrt(5))/2; structural constant of the SSZ layer",
+    "phi_P5": "Xi(C); dynamical segmentation scalar of the P5 action; NOT the golden ratio",
+    "collision_ruling": "never numerically identified; phi_gold inside an action family would be NEW_THEORY_HYPOTHESIS",
+    "Xi_max_ruling": "decay form canonical for global channel; Xi_max = 1 - exp(-phi_gold) = 0.801712 only as derived horizon value; Xi_max = 1.000 reading excluded",
+    "sources": [
+      "02_FOUNDATIONS/segment_density.md",
+      "02_FOUNDATIONS/structural_constants.md",
+      "02_FOUNDATIONS/phi_geometry.md",
+      "02_FOUNDATIONS/intersection_invariance.md",
+      "03_FORMULAS/formula_compendium.md",
+      "03_FORMULAS/forbidden_formulas.md",
+      "hilfsdateien/SSZ_CANONICAL_FORMULAS_2026.md",
+      "hilfsdateien/CANONICAL_XI_AND_BLEND_RESOLUTION.md",
+      "jif/SSZ_Middle_Bridge_Unified_Dynamics.pdf",
+      "jif/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16.md"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "C0",
+      "name": "HISTORICAL_BASELINE_TRANSVERSE_ZERO",
+      "role": "control",
+      "status": "FROZEN_FALSIFIED_WITNESS",
+      "frozen_result": "K_GHOST_FAIL",
+      "modification": "none allowed",
+      "classification": "DERIVED_FROM_CANON",
+      "NO_STABILITY_INFORMATION_USED": "not applicable (pre-existing archived witness)"
+    },
+    {
+      "id": "C1",
+      "name": "MINIMAL_COVARIANT_OPERATOR_COMPLETION",
+      "theoretical_motivation": "minimal covariant operator structure within the canon-closed Horndeski+U(1)-SVT family that reproduces the canonical SSZ background exactly",
+      "rag_sources": [
+        "jif/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf (ch. 5, Eq. 5.1-5.3)",
+        "jif/SSZ_P5_Horndeski_SVT_CLOSURE_COMPLETE_2026-09-14 (full L2-L5 + same-action closure)",
+        "jif/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16.md (convention lock)"
+      ],
+      "mathematical_definition": "lexicographic minimisation over admissible operator subsets: (1) min number of independent operators, (2) min maximal derivative order, (3) min analytic degree in (phi_P5, X, F, Y), (4) min number of additional free couplings; subject to background EOM JA=E00=E11=0 on the canonical profile, regime structure, U(1) gauge, second-order degeneracy, regularity, asymptotics",
+      "covariant_action_family": "S = int d^4x sqrt(-g) (L_H[g,phi] + L_SVT[g,phi,F]); hybrid rule C_HSVT = C_MH + (C_SVT - C_shared)",
+      "allowed_operators": "Horndeski L2-L5 terms and U(1)-SVT terms of the closed canon family",
+      "forbidden_operators": "everything outside the closed family; any operator chosen for stability reasons",
+      "free_parameters_before_EOM": "operator-set dependent; minimised lexicographically",
+      "free_parameters_after_EOM": "fixed by background solve + boundary conditions",
+      "transverse_jet_freedoms": "determined by the lexicographic minimum; none left free by hand",
+      "selection_functional": "lexicographic order above (no stability)",
+      "boundary_conditions": "canonical SSZ profile, regular centre, asymptotic GR/Maxwell",
+      "regularity_conditions": "canon guardrails",
+      "weak_field_constraints": "beta = gamma = 1 exact; Xi_weak branch",
+      "strong_field_constraints": "Xi_strong decay branch; saturation intrinsic",
+      "unique_member": "expected; FAIL_BACKGROUND is a possible outcome",
+      "ensemble": false,
+      "classification": "CANON_MOTIVATED_HYPOTHESIS",
+      "NO_STABILITY_INFORMATION_USED": true
+    },
+    {
+      "id": "C2",
+      "name": "ANALYTIC_SATURATION_COMPLETION",
+      "theoretical_motivation": "exponential saturation Xi_strong = 1 - exp(-phi_gold C) as intrinsic analytic generator; off-curve extension fixed by the same generator (D = exp(sigma))",
+      "rag_sources": [
+        "02_FOUNDATIONS/segment_density.md",
+        "03_FORMULAS/formula_compendium.md",
+        "jif/SSZ_Middle_Bridge_Unified_Dynamics.pdf (section 21.10, fingerprints)"
+      ],
+      "mathematical_definition": "couplings as covariant functions of (phi_P5, X, F, Y) whose on-shell reduction reproduces the exponential-in-C saturation; off-curve fixed by the same analytic generator",
+      "status": "UNDERDETERMINED",
+      "reason": "infinitely many covariant extensions reduce to the same on-shell exponential; no canon criterion selects one; embedding phi_gold would be NEW_THEORY_HYPOTHESIS",
+      "unique_member": false,
+      "ensemble": false,
+      "classification": "CANON_MOTIVATED_HYPOTHESIS",
+      "NO_STABILITY_INFORMATION_USED": true
+    },
+    {
+      "id": "C3",
+      "name": "VARIATIONAL_COMPLETION",
+      "theoretical_motivation": "canonical bridge principle J[u] = int (u''')^2 dt (EL: Xi^(6)=0, quintic unique) promoted minimally and consistently to the free transverse jets",
+      "rag_sources": [
+        "jif/SSZ_Variational_Bridge_Paper_Wrede_Casu_BingsiAI_v2.pdf (SHA 2c93df70...)",
+        "jif/SSZ_Middle_Bridge_Unified_Dynamics.pdf (bridge structure)",
+        "jif/SSZ_P5_HSVT_FINITE_L_TECHNICAL_MEMORY_2026-09-16.pdf (holonomicity chain rules)"
+      ],
+      "mathematical_definition": "J_C = integral ds gamma_FS(J^3_T, J^3_T); J^3_T = third transverse jet components of the coupling functions not fixed by (a) background EOM, (b) holonomicity identities, (c) convention identities (v12 = -v6/(2h), corrected a5), (d) regularity/asymptotics; gamma_FS = flat unit-norm field-space metric in the invariant chart (phi_P5, X, F, Y), jet-order scaling L^(2k) per k-th jet",
+      "covariance_justification": "gamma_FS is a true field-space tensor; contraction with jet-bundle tensors is redefinition-invariant; the chart is for components only",
+      "dimension_justification": "jet scaling L^(2k) renders every summand dimensionless; no new dimensionful constant",
+      "redefinition_dependence": "none beyond the declared gamma_FS",
+      "new_theory_hypothesis_component": "the flat gamma_FS choice in the invariant chart",
+      "unique_member": true,
+      "ensemble": false,
+      "classification": "CANON_MOTIVATED_HYPOTHESIS + NEW_THEORY_HYPOTHESIS component (declared)",
+      "NO_STABILITY_INFORMATION_USED": true
+    },
+    {
+      "id": "C4",
+      "name": "MINIMAL_ANALYTIC_JET_COMPLETION",
+      "theoretical_motivation": "basis-invariant minimality of the free jets",
+      "status": "NOT_WELL_DEFINED",
+      "reason": "basis-invariant minimality requires a field-space measure, i.e. exactly the object C3 had to postulate; without it, any frozen basis would reintroduce the falsified TRANSVERSE_ZERO as a 'principle'; with gamma_FS accepted, C4 collapses into a lower-jet variant of C3 (non-distinct)",
+      "unique_member": false,
+      "ensemble": false,
+      "classification": "DERIVED_FROM_CANON",
+      "NO_STABILITY_INFORMATION_USED": true
+    },
+    {
+      "id": "C5",
+      "name": "STRUCTURAL_GAUGE_NED_COMPLETION",
+      "theoretical_motivation": "NED diagnostics and defect-to-gauge decomposition as action-selection principles",
+      "rag_sources": [
+        "jif/SSZ_Middle_Bridge_Unified_Dynamics.pdf sections 21.7-21.9 (NED L_F zeros; rho = rho_D + rho_G; stress signatures; rejected single-sector filters)"
+      ],
+      "mathematical_definition": "none unique",
+      "status": "FAMILY_NOT_UNIQUE",
+      "free_dimensions": [
+        "NED function family L(F, G)",
+        "constitutive relation",
+        "defect/gauge split"
+      ],
+      "canon_quote": "action-search filters, not matter identifications ... reduce the candidate space while leaving the fundamental inverse problem open",
+      "unique_member": false,
+      "ensemble": false,
+      "classification": "DERIVED_FROM_CANON",
+      "NO_STABILITY_INFORMATION_USED": true
+    },
+    {
+      "id": "C6",
+      "name": "SYMMETRY_GENERATOR_COMPLETION",
+      "theoretical_motivation": "sigma = ln D with D = exp(sigma) (R+ generator) alongside U(1) = exp(i Phi) (phase generator) as a joint generator principle",
+      "rag_sources": [
+        "jif/SSZ_Middle_Bridge_Unified_Dynamics.pdf (U(1) chapter)",
+        "hilfsdateien/JIF_FOUNDATION_CANONICAL.md (phase chain; exclusion list)"
+      ],
+      "mathematical_definition": "none follows",
+      "status": "INTERPRETIVE_ONLY_NOT_ACTION_PRINCIPLE",
+      "reason": "formal similarity only; no canon Noether current, connection, or field-space structure joins the generators; JIF foundation refuses absolute-phase physics and any force on light",
+      "unique_member": false,
+      "ensemble": false,
+      "classification": "DERIVED_FROM_CANON",
+      "NO_STABILITY_INFORMATION_USED": true
+    }
+  ],
+  "phase2_plan": {
+    "members_to_replay": ["C1", "C3"],
+    "chain": [
+      "action", "background EOM", "background solve", "41-slot emission",
+      "constraints", "K/G/S/M", "finite-L K", "radial characteristics",
+      "angular determinant", "odd sector", "global continuation", "QNM"
+    ],
+    "rules": [
+      "no member changed after seeing results",
+      "no survivor selection",
+      "FAIL_BACKGROUND is a valid outcome",
+      "whole-distribution reporting"
+    ]
+  }
+}

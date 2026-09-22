@@ -1,0 +1,35 @@
+{
+  "audit": "PHASE1_BLINDING_AUDIT",
+  "phase": 1,
+  "created_utc": "2026-09-22",
+  "purpose": "certify that the Phase-1 pre-registration was built without reading historical stability artifacts, and separate Phase-1 documents from Phase-2 stability machinery",
+  "forbidden_artifacts_list": [
+    "data/generated/angular_eq47_projection_2026-09-21/DENSE_ACTION_TANGENT_SENSITIVITY.csv",
+    "data/generated/dense_angular_direct_2026-09-22/DENSE_ANGULAR_DIRECT.csv",
+    "data/generated/dense_angular_direct_2026-09-22/DENSE_ANGULAR_DIRECT_SUMMARY.json",
+    "data/generated/dense_angular_direct_2026-09-22/DENSE_DIRECT_FINITE_L_CROSS.csv",
+    "data/generated/strong_field_transition_2026-09-21/TRANSITION_DENSE_H_CONTINUATION_REPORT.json",
+    "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE.json",
+    "data/generated/angular_eq47_projection_2026-09-21/EQ47_PROJECTION_AUDIT.json",
+    "build/gates.csv",
+    "build/audit.json"
+  ],
+  "forbidden_uses_in_phase1": [
+    "K", "lambda_min(K)", "c_r^2", "c_Omega^2", "angular roots", "QNM",
+    "published perturbation roots",
+    "historical PASS/FAIL information of individual tangent directions",
+    "tangent sensitivity gradients"
+  ],
+  "verification_method": {
+    "document_scan": "PRE_REGISTRATION.md and PRE_REGISTERED_COMPLETION_ENSEMBLE.json cite only canon sources (foundations, formulas, monograph, bridge papers, closure document, status/convention locks); their only mentions of stability-related files are the forbidden-list entries in this audit",
+    "commit_scan": "the Phase-1 commit touches only docs/phase1/*, tools/phase1_freeze_hashes.py, MANIFEST.json, SHA256SUMS; no stability artifact is modified or consumed",
+    "known_context_disclaimer": "the agent session context necessarily contains earlier stability findings (they were reported to the owner before Phase 1); the blinding claim is therefore a DOCUMENT-LEVEL and CODE-LEVEL claim: no forbidden artifact was loaded as input to the principle definitions, and Phase-2 tooling will recompute all stability quantities blind from the frozen definitions"
+  },
+  "phase1_outputs": [
+    "docs/phase1/PRE_REGISTRATION.md",
+    "docs/phase1/PRE_REGISTERED_COMPLETION_ENSEMBLE.json",
+    "docs/phase1/COMPLETION_RULE_HASHES.json",
+    "docs/phase1/PHASE1_BLINDING_AUDIT.json"
+  ],
+  "phase2_gate": "Phase 2 (blind forward replay of C1 and C3) may start only after the commit containing this package is pushed and its hash recorded in the Phase-2 run log"
+}

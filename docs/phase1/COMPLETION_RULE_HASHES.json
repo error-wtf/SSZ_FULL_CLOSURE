@@ -1,0 +1,28 @@
+{
+  "package": "COMPLETION_RULE_HASHES",
+  "phase": 1,
+  "algorithm": "sha256",
+  "rule_hashes": {
+    "C0": "89109f73087ac8b29f8f4d0167e1a80be62253b423b4a247a3ad21e357e310f2",
+    "C1": "5c73c0b5b2cd941b75c30acc1a485512b429e1f0730fda34febae1edc862df39",
+    "C2": "c15b7563f584ba0661065e140311ee49e4d08ad265dd183804ea49764547e7fe",
+    "C3": "b0830e923f6cbc1e9e4c27aa3dd9e7f378005568e53d2a52e0494517c1e2e421",
+    "C4": "55ced092c5e36e17ca84ea70510c58d0db02c72bd7d78613f3286a142cc7d0fe",
+    "C5": "48c7e274c7938e4afe03873c23d91c9ce7f4cfdb7af7847a16bae5df7398b4de",
+    "C6": "f2d151d1754a1bc1bc46f56a4206e0ffa0644faabd4e82c136afc6d7596e57bb"
+  },
+  "registration_document_hashes": {
+    "PRE_REGISTRATION.md": "dcc34127cb04f0150aa0dd764cc976f5e6ad85e60765c63db2a92607f521c4e4",
+    "PRE_REGISTERED_COMPLETION_ENSEMBLE.json": "b3627d0853de4550299385c80b58f655af70771aa18ed57bfafac29603100b50"
+  },
+  "canon_source_hashes": {
+    "paper/SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.tex": "153d750cd96f2762d182b79dbb4c7d71ddb1b45898c0cdbceff3b843d33ee54a",
+    "src/ssz_p5/production/strong_field_transition.py": "d406cb41c85cea67c9e60b092dfb3723868a928f034ba3459e39199df7989d65",
+    "src/ssz_p5/production/strong_field_continuation.py": "dad790c76de2b60eae49ccb74d1d2715ad8ca517ce04a355bc6becae3dcfe89a",
+    "src/ssz_p5/coefficients/mh_general_primitives.py": "ae4be39fc859d712b97aad8157f8188442a7180a6b3419e9a1fc9dcd660158dd",
+    "src/ssz_p5/production/full_action_lower.py": "9a2b97ef5bee4378ff68ff0f54d076df2af8042c2cac785c0846b98834377438",
+    "src/ssz_p5/paths.py": "fe2665967727c0e96c37906bc4a7eb54bb0bff8096d305300298f40f54a5bc08",
+    "tools/build_prospective_member_v2.py": "a8902fd9b70aec7fcfa9c79fa09f18ff8a2f3434246eafc2692175ee79abf018",
+    "tools/advance_transition_dense_h_continuation.py": "380a00aceff73ad51ba8fbb093b4c0da396b89e3b306be148a6ff4bc966b2a7c"
+  }
+}
