@@ -1,0 +1,38 @@
+{
+ "eq85_replay": "PASS (analytic LR form, undivided implementation, independent of the old audit code)",
+ "rings": {
+  "inner": {
+   "u": 0.7061440086348676,
+   "f": 0.2958688855234647,
+   "h": 0.3741639038366438,
+   "a4": 0.1663556752464993,
+   "W2": 2.5931407936441246,
+   "F_LR_required": -1.6396294833387808,
+   "sign": "F<0 required"
+  },
+  "outer": {
+   "u": 0.6666602563043873,
+   "f": 0.3333397437099408,
+   "h": 0.3333397450409506,
+   "a4": 0.1620145850869304,
+   "W2": -2.000371944595827,
+   "F_LR_required": 0.9722495963525903,
+   "sign": "F>0 possible"
+  }
+ },
+ "regression_checks": {
+  "inner_matches_documented_-1.6386/-1.6336": true,
+  "outer_matches_documented_+0.9721/+1.0": true,
+  "inner_sign_conflict_with_F_gt_0": true,
+  "W2_signs": {
+   "inner_positive": true,
+   "outer_negative": true
+  }
+ },
+ "electric_margin_gate": {
+  "gate": "ELECTRIC_LIGHT_RING_SUPPORT_MARGIN",
+  "definition": "Delta_LR = 2 u^2 f h A0_u^2 v8 - W a4",
+  "requirement": "Delta_LR > 0 at the inner stable ring for F>0 to be possible",
+  "this_carrier": "A0prime=0 (pure Horndeski carrier) -> Delta_LR = -W2*a4 = -0.4314 at inner ring (FAIL expected \u2014 this is the excluded zero-electric representative)"
+ }
+}

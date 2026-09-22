@@ -2583,6 +2583,11 @@
       "sha256": "0a452646fc41a57efc69280276f9bf14e290723665b4702281e40bbdd4f6b209"
     },
     {
+      "path": "data/generated/phase2_q2/EQ85_LIGHT_RING_REPLAY.json",
+      "size_bytes": 1209,
+      "sha256": "bc4d94401db414ca147ea7d26a90f881b537775730176e6cdc49bfeb78ffcded"
+    },
+    {
       "path": "data/generated/phase2_q2/HISTORICAL_GENERATOR_REPLAY.csv",
       "size_bytes": 17035982,
       "sha256": "b4f7c221c37efb1b855765807bcdac5cf8252bc102df909900fc1c0946d6187d"
@@ -3224,8 +3229,8 @@
     },
     {
       "path": "docs/canonical/CANONICAL_FACTS.yaml",
-      "size_bytes": 8945,
-      "sha256": "8b5048ff55b551c1983494824b5f9a3469fc83dd23f25ab1359aa0f41d157249"
+      "size_bytes": 10347,
+      "sha256": "d47f51b2e65440633664fc9cad96d96e87b37aec5fa5b23908c062e9e6666735"
     },
     {
       "path": "docs/canonical/KNOWLEDGE_CONTINUITY_AUDIT.json",
@@ -3321,6 +3326,16 @@
       "path": "docs/checkpoints/SSZ_P5_SHARED_BASELINE_ASSEMBLY_VALIDATION_2026-09-16(1).md",
       "size_bytes": 2398,
       "sha256": "f845e60caa09711bc92d31accd68072088a7437b5fda36f3c1135207831e433b"
+    },
+    {
+      "path": "docs/handoff/CHATGPT_HANDOFF_2026-09-22.md",
+      "size_bytes": 5914,
+      "sha256": "0fca5e7cea15a2cea8751703db5fc815a1f7adaa8a1f710008c4cf9b8fff1e54"
+    },
+    {
+      "path": "docs/handoff/REPRODUCE_HANDOFF.md",
+      "size_bytes": 1658,
+      "sha256": "5f7d6c99b8c9029a3150bd91a40d0fad11d71b96e129c471abafce7c2eba0403"
     },
     {
       "path": "docs/phase1/C3_FIELDSPACE_FOUNDATION_AUDIT.md",
@@ -4771,6 +4786,11 @@
       "path": "tools/augment_inner_boundary_g3_tubular.py",
       "size_bytes": 3111,
       "sha256": "af8c7e6329dce84084978e5a19af21dd64c41adbf01c13b8c2455ac5ef510ce4"
+    },
+    {
+      "path": "tools/build_chatgpt_handoff_zip.py",
+      "size_bytes": 8224,
+      "sha256": "2a653459a2abda95684f60d0b9d34e00f884e724312cda1462c24394ffb3f609"
     },
     {
       "path": "tools/build_inner_targets.py",

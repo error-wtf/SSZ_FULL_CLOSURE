@@ -105,7 +105,7 @@ unknowns:
 
   - id: FACT:EPSILON_Y_MEMBER_SUPERSESSION_REPLAY_PENDING
     statement: "the epsilon-Y member (A0prime=0) exclusion at the inner light ring is DOCUMENTED (ZERO_VECTOR_LIGHT_RING_AUDIT.json: inner ring requires tensor_F=-1.6386 while tensor_H=+0.99997; outer ring consistent +0.9721) but NOT yet replayed by an independent Eq.85 implementation"
-    status: REPLAY_PENDING
+    status: SUPERSEDED_REPLAYED (was REPLAY_PENDING; independently replayed 2026-09-22, see FACT:EPSILON_Y_MEMBER_SUPERSEDED_REPLAYED)
     scope: "A0prime=0 branch only; explicitly not a no-go for electric (A0prime!=0) members"
     member: [SSZ_P5_HSVT_ACTION_MEMBER_2026_09_16]
     source_files: [data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json]
@@ -117,3 +117,13 @@ unknowns:
     status: REPLAY_PENDING_BLOCKED_ON_PRIMARY_SOURCE_RETRIEVAL
     next_step: "retrieve arXiv:2301.10362 Eq.85 text (RAG established-physics corpora or fetch), implement independently, evaluate at both light rings on the carrier CSV (sha 65b32db2...), then verdict A/B per the frozen directive"
     note: "no verdict fabricated; the epsilon-Y member remains REPLAY_PENDING, neither active nor superseded-as-replayed"
+
+  - id: FACT:EPSILON_Y_MEMBER_SUPERSEDED_REPLAYED
+    statement: "the epsilon-Y/A0prime=0 member is structurally excluded at the inner stable light ring: the independently implemented undivided Eq.85/LR condition reproduces F_LR_required = -1.63963 (inner, W''=+2.59314>0) and +0.97225 (outer, W''=-2.00037) on the carrier CSV — matching the documented audit within derivative context"
+    status: SUPERSEDED_REPLAYED
+    member: [EPSILON_Y_ZERO_VECTOR_MEMBER]
+    source_files: [data/generated/phase2_q2/EQ85_LIGHT_RING_REPLAY.json]
+    primary_source: "Kase & Tsujikawa arXiv:2301.10362 Eq. (85) (owner-transcribed) + light-ring condition r f' - 2f = 0; LR form: W'' a4 + f^(3/2)/sqrt(h) F - 2 u^2 f h A0_u^2 v8 = 0"
+    scope: "A0prime=0 branch only; the electric term 2u^2 f h A0_u^2 v8 is the documented necessary control for stable-ring compatibility of electric branches"
+    new_gate_registered: "ELECTRIC_LIGHT_RING_SUPPORT_MARGIN: Delta_LR = 2 u^2 f h A0_u^2 v8 - W'' a4 > 0 required at the inner stable ring BEFORE K/radial/angular"
+    note: "generalization caveat per owner: eps_Y Y lives in the larger gauge-invariant SVT space; whether the general ZK background equations reduce to (LR) at A0prime=0 with Delta f2 = eps_Y Y must be derived before any broader SVT no-go claim"
