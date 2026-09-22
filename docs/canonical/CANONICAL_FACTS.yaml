@@ -127,3 +127,12 @@ unknowns:
     scope: "A0prime=0 branch only; the electric term 2u^2 f h A0_u^2 v8 is the documented necessary control for stable-ring compatibility of electric branches"
     new_gate_registered: "ELECTRIC_LIGHT_RING_SUPPORT_MARGIN: Delta_LR = 2 u^2 f h A0_u^2 v8 - W'' a4 > 0 required at the inner stable ring BEFORE K/radial/angular"
     note: "generalization caveat per owner: eps_Y Y lives in the larger gauge-invariant SVT space; whether the general ZK background equations reduce to (LR) at A0prime=0 with Delta f2 = eps_Y Y must be derived before any broader SVT no-go claim"
+  - id: FACT:LR_GATE_CORRECTED_NORMALIZED_FORM
+    statement: "the zero-electric light-ring condition is F/H = -(h/(2f)) W''(u) with a4 = (sqrt(f h)/2) H; at the outer ring this gives F/H = +1 exactly (closing the 0.9721-vs-1.0 question: the carrier has H(2/3) = 0.9720791, so F_req = H * 1 = 0.9721 is the CORRECT normalized value, not a deviation from 1); at the inner ring F/H = -1.639678 (documented -1.63868, derivative context)"
+    status: SOURCE_ESTABLISHED_TWO_SOURCES (owner primary-source transcription + carrier replay)
+    member: [STRONG_H_CARRIER]
+    evidence: "outer F/H = +1.000186; inner F/H = -1.639678; replay in session log + EQ85_LIGHT_RING_REPLAY.json"
+  - id: FACT:V_SLOT_MAPPING_GUARD
+    statement: "Kase-Tsujikawa Eq.85 'v8' corresponds to canonical ZK V9, NOT the 13-slot v8 column (ssz_hybrid_unreduced_even_kernel.py: 'V7=MH v6, V8=MH v7, V9=MH v8, V10=MH v9'). Additionally q_r = A0_r^2 v8_MH and q_u = A0_u^2 v8_MH differ by q_r = (u^4/r_s^2) q_u — never compared raw."
+    status: SOURCE_ESTABLISHED (kernel source line 52 + owner convention analysis)
+    rule: "any Eq.85 evaluation must use the V9=MH-v8 coefficient; a regression test must fail on accidental canonical-v8 use"

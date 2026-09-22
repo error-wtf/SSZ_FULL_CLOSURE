@@ -3229,8 +3229,8 @@
     },
     {
       "path": "docs/canonical/CANONICAL_FACTS.yaml",
-      "size_bytes": 10347,
-      "sha256": "d47f51b2e65440633664fc9cad96d96e87b37aec5fa5b23908c062e9e6666735"
+      "size_bytes": 11562,
+      "sha256": "11d13ea8616fa797de630c62edb38ed453f6a96b6daf66c01e363df000b8616b"
     },
     {
       "path": "docs/canonical/KNOWLEDGE_CONTINUITY_AUDIT.json",
@@ -4471,6 +4471,11 @@
       "path": "tests/regression/test_electric_hybrid_principal_checkpoint.py",
       "size_bytes": 850,
       "sha256": "01737a527853e1661acebecf498c26456e3a406b53b883bac1eedf0f2f568de1"
+    },
+    {
+      "path": "tests/regression/test_eq85_naming_guard.py",
+      "size_bytes": 848,
+      "sha256": "88881ad8cad9222f2580d4b3d5133f52618b5f9d3dd9b316916336f6611d515a"
     },
     {
       "path": "tests/regression/test_frozen_onshell_diagnostic.py",
