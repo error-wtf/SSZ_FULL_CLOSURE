@@ -162,3 +162,29 @@ The most interesting concrete measurement after STEP 1:
 for the REAL background. Under Eq.85-only: S_LR > 1 <=> A0_u^2 > 0.2230195.
 If the actual on-shell value (from J_A = 0 and the joint background EOM) lies
 above: first ON-SHELL electric support of the same member.
+
+## STEP 1 TARGET — FINAL FORMULATION (owner, 2026-09-22, session close)
+
+  C_LR^full = C_bg |_(2f - r f' = 0)
+
+where C_bg is formed UNDIVIDED beforehand from the COMPLETE SVT background EOM.
+Then group by origin:
+
+  C_LR^full = C_geom + C_MH-electric + C_genuine SVT
+
+Three hard checks (in order):
+  1. A0prime = 0 AND Delta f2 = eps_Y Y  =>  C_epsY =? 0
+  2. MH limit  =>  C_LR^full  ->  -W'' a4 + 2 u^2 f h A0_u^2 v8
+  3. Real inner ring: insert v8^Eq85 = +17.521313 with the on-shell A0_u of the
+     SAME member; then S_LR^Eq85 = (2u^2 f h A0_u^2 v8)/(W'' a4) > 1?
+
+If S_LR > 1 AND STEP 1 produces no additional negative SVT load:
+first genuine ON-SHELL electric support of the same member.
+If additional genuine-SVT terms survive: evaluate the complete balance.
+
+The electric channel is no longer merely formally possible: its sign is correct
+and its necessary Eq.85 threshold is analytically known. What remains is pure
+mathematics: does the full ZK background theory carry this channel alone, or
+does it bring a further support operator?
+
+Protocol refinement CLOSED. No further meta-work.
