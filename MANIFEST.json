@@ -2658,6 +2658,11 @@
       "sha256": "bb3d22ffff1c80dc3ad847702939a5bbe391bce9b3cdae8c6c35a9b942df5177"
     },
     {
+      "path": "data/generated/phase2_q2/STEP2_F3X_INTEGRATION.json",
+      "size_bytes": 1703,
+      "sha256": "fec363328798685c466b57f37c71272f9ee8ed87bb6a0c0291fa3eb4943466ba"
+    },
+    {
       "path": "data/generated/phase2_q2/q2_export/POST_SELECTION_central_exact_SVT.csv",
       "size_bytes": 3742865,
       "sha256": "8278a6ab2dd5a9161470f71910944752b52a92930e915b7142c3127ac15b69c1"

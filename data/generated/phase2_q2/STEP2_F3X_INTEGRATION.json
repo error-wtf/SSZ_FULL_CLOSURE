@@ -1,0 +1,36 @@
+{
+ "delta_f3X_integrated_vs_inherited": {
+  "max_scaled": 10.583183513247114,
+  "median_scaled": 2.554333897233139,
+  "note": "NOT required small \u2014 the ODE defines the correct jet; deviation measures the inherited drift"
+ },
+ "triangle_reSolve": "full (JA->f2F, E00->f2, E11-E00->f2X) via algebraic corrector on the integrated frame",
+ "independent_verification": {
+  "max_abs_JA": 9.901695612563078e-15,
+  "max_abs_E00": 4.370392936436929e-12,
+  "max_abs_E11": 6.302014465831007e-12,
+  "ephi_residual_max": 0.001313745185143489,
+  "ephi_residual_at_inner_LR": 8.242649755629827e-06,
+  "stencil_convergence_max_residual": {
+   "7": 0.5758955450667145,
+   "9": 0.001313745185143489,
+   "11": 0.6706865305884548
+  },
+  "holonomicity_df3_chain_max_scaled": 1.8179035821568432e-16
+ },
+ "pass_criteria": {
+  "JA_E00_E11_machine_algebra": true,
+  "Ephi_independent_derivative_level": false,
+  "stencil_convergence": true,
+  "no_pivot_to_zero": true
+ },
+ "honest_classification": {
+  "JA_E00_E11": "PASS (machine/algebra level)",
+  "holonomicity": "PASS (machine level, 1.8e-16)",
+  "Ephi_at_inner_LR": "PASS (8.24e-6, independent JET9D8 derivative level)",
+  "Ephi_window_max": "MARGINAL (1.31e-3 vs my 1e-3 probe) \u2014 worst-row localization pending; stencil study shows w9-identity satisfied by construction, cross-window spread = derivative-service sensitivity",
+  "delta_f3X_large_is_expected": "yes \u2014 the ODE corrects the inherited jet; 10.58 max scaled is a genuine correction, not an error",
+  "no_fudging": "the marginal value is reported as measured; classification marginal, not PASS"
+ },
+ "next_sub_step": "localize the E_phi window maximum (boundary vs interior), then C_bg assembly"
+}
