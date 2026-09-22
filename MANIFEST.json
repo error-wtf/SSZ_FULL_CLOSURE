@@ -2628,6 +2628,11 @@
       "sha256": "8359d1766ee3fb37b8f0a9872ca1ef147c4c66aeb23d039f9c053e9a84b1841d"
     },
     {
+      "path": "data/generated/phase2_q2/STEP0_EQ85_V8_PROVENANCE.json",
+      "size_bytes": 1097,
+      "sha256": "6b1cb4ca8b51014a3b166783a7097e65e53714aa3d622afa47e0325d21eec2f6"
+    },
+    {
       "path": "data/generated/phase2_q2/q2_export/POST_SELECTION_central_exact_SVT.csv",
       "size_bytes": 3742865,
       "sha256": "8278a6ab2dd5a9161470f71910944752b52a92930e915b7142c3127ac15b69c1"
@@ -3229,8 +3234,8 @@
     },
     {
       "path": "docs/canonical/CANONICAL_FACTS.yaml",
-      "size_bytes": 12666,
-      "sha256": "bc11edb0ce553ddcf6fda7d949c47952159ec0d41a7cf6c8a1dabed7fd634286"
+      "size_bytes": 12720,
+      "sha256": "43440c62ccd466747a307d74e2caadbcb8cfff5e709fe4c2880a8826ee36a351"
     },
     {
       "path": "docs/canonical/KNOWLEDGE_CONTINUITY_AUDIT.json",

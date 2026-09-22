@@ -138,9 +138,9 @@ unknowns:
     rule: "any Eq.85 evaluation must use the V9=MH-v8 coefficient; a regression test must fail on accidental canonical-v8 use"
 
   - id: FACT:V8_SIGN_DEAD_INNER_RING_CURRENT_MEMBER
-    statement: "on the current electric central member (dense base stream), the ZK-canonical v8 coefficient at the inner stable ring is v8 = -16.824455 < 0; since A0_u^2 >= 0, the Eq.85 electric support term 2u^2 f h A0_u^2 v8 cannot be positive for ANY A0_u — the electric channel through this coupling is sign-dead at the inner ring on this member"
-    status: CURRENT_SCOPE_LIMITED
-    scope: "this member's emitted action family; whether v8's ring-sign is fixed across the whole coupling class requires the analytic v8 form (next session)"
-    source_files: [data/generated/phase2/PHASE2_C1_MEMBER_TOTAL41.csv]
-    consequence: "the user's new necessary-condition rejector (v8>0) fires immediately — before K/radial/angular; W''=+2.59314, a4=+0.166350, u=0.706125, f=0.295885, h=0.374096"
-    next_session: "derive the analytic v8 form from the emitter/coupling functions to determine whether the sign is family-fixed or completion-dependent"
+    statement: "CORRECTED (STEP 0, case A wrong slot): the Eq.85 coefficient is the ZK-canonical V9 = 41-slot column v9 (NOT v8); at the inner stable ring v9 = +17.521313 > 0 — the necessary condition PASSES and the electric support channel is OPEN; threshold: A0_u^2 > 0.223 (computed from W''=2.59314, a4=0.166350, u=0.706125, f=0.295885, h=0.374096, v9=17.521313); the earlier -16.824455 was read from the wrong column"
+    status: CURRENT_SCOPE_LIMITED (case A resolved; correct slot v9 positive)
+    scope: "this member's emitted action family; case C (additional genuine-SVT support terms in the full ZK-LR identity) remains STEP 1"
+    source_files: [data/generated/phase2_q2/STEP0_EQ85_V8_PROVENANCE.json]
+    consequence: "the corrected necessary-condition gate PASSES on the correctly mapped slot; the electric support channel is structurally OPEN on this member"
+    next_session: "STEP 1 full ZK-LR identity (symbolic) + joint E11+E_phi DAE; then A0_u vs threshold on the actual background"

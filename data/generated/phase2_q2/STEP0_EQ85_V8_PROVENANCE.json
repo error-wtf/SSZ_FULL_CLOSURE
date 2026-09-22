@@ -1,0 +1,25 @@
+{
+ "audit": "STEP0_EQ85_V8_PROVENANCE",
+ "date": "2026-09-22",
+ "verdict": "CASE_A_WRONG_SLOT",
+ "member_identity": "CONFIRMED (C1 member, machine-identical to C0 witness; row u=0.706125 matches inner LR 0.706135)",
+ "mapping": "Eq.85 (arXiv:2301.10362) v8 = MH numbering = ZK-canonical V9 = 41-slot column v9 (kernel line 52 + Monograph chunk 38, two sources)",
+ "corrected_reading": {
+  "slot": "v9",
+  "value": 17.521313,
+  "sign": "POSITIVE",
+  "necessary_condition_v8gt0": "PASS"
+ },
+ "misattributed_reading": {
+  "slot": "v8",
+  "value": -16.824455,
+  "status": "WRONG SLOT \u2014 discarded, case A"
+ },
+ "threshold": {
+  "A0_u_squared_gt": 0.22303991499360273,
+  "A0_u_gt": 0.4722710185831889,
+  "meaning": "Delta_LR = 2u^2 f h A0_u^2 v9 - W'' a4 > 0 <=> A0_u^2 > threshold (computed, no fitting)"
+ },
+ "consequence": "the electric channel through the Eq.85 coupling is OPEN on this member; the earlier 'sign-dead' registration is CORRECTED (case A: wrong slot); case C (additional genuine-SVT support terms) remains the STEP-1 question",
+ "no_physics_interpretation_beyond_mapping": true
+}
