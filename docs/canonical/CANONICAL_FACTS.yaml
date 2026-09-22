@@ -138,7 +138,7 @@ unknowns:
     rule: "any Eq.85 evaluation must use the V9=MH-v8 coefficient; a regression test must fail on accidental canonical-v8 use"
 
   - id: FACT:V8_SIGN_DEAD_INNER_RING_CURRENT_MEMBER
-    statement: "CORRECTED (STEP 0, case A wrong slot): the Eq.85 coefficient is the ZK-canonical V9 = 41-slot column v9 (NOT v8); at the inner stable ring v9 = +17.521313 > 0 — the necessary condition PASSES and the electric support channel is OPEN; threshold: A0_u^2 > 0.223 (computed from W''=2.59314, a4=0.166350, u=0.706125, f=0.295885, h=0.374096, v9=17.521313); the earlier -16.824455 was read from the wrong column"
+    statement: "CORRECTED (STEP 0, case A wrong slot): the Eq.85 coefficient is the ZK-canonical V9 = 41-slot column v9 (NOT v8); at the inner stable ring v9 = +17.521313 > 0 — the necessary condition PASSES and the electric support channel is OPEN; threshold: A0_u^2 > 0.2230195 (owner-recomputed, no fit; computed from W''=2.59314, a4=0.166350, u=0.706125, f=0.295885, h=0.374096, v9=17.521313) — this is the EQ.85-ONLY threshold under Sigma_SVT=0; if the full ZK-SVT-LR identity contains additional genuine-SVT terms, the universal condition is the complete LR balance, not this number alone; the earlier -16.824455 was read from the wrong column"
     status: CURRENT_SCOPE_LIMITED (case A resolved; correct slot v9 positive)
     scope: "this member's emitted action family; case C (additional genuine-SVT support terms in the full ZK-LR identity) remains STEP 1"
     source_files: [data/generated/phase2_q2/STEP0_EQ85_V8_PROVENANCE.json]

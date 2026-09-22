@@ -143,3 +143,22 @@ inner ring: F/H = -1.639678 (documented -1.63868); W''=+2.59314; v8(current memb
 Y and all first variations of Delta f2 = eps_Y Y vanish on the F-tilde = 0
 background (Monograph, chunk 3, SHA a028d69b...) — the ZK step is a
 primary-source/generality check, not an open physics guess.
+
+
+## ORDERING FREEZE (owner, 2026-09-22 final)
+
+STEP 1 and STEP 2 must NOT be merged logically:
+  STEP 1: derive AND FREEZE the full ZK-LR identity.
+  STEP 2: joint E11 + E_phi DAE on exactly THAT identity.
+Rationale: otherwise the DAE could presuppose a form of the LR balance that
+STEP 1 is supposed to prove.
+
+Threshold semantics: 0.2230195 is the EQ.85-ONLY threshold under
+Sigma_SVT = 0 until STEP 1 decides. v9 > 0 at the inner ring remains the
+standing proof that the Eq.85 channel itself has the correct sign.
+
+The most interesting concrete measurement after STEP 1:
+  S_LR^Eq85 = (2 u^2 f h A0_u^2 v9) / (W'' a4)
+for the REAL background. Under Eq.85-only: S_LR > 1 <=> A0_u^2 > 0.2230195.
+If the actual on-shell value (from J_A = 0 and the joint background EOM) lies
+above: first ON-SHELL electric support of the same member.

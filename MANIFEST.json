@@ -3234,8 +3234,8 @@
     },
     {
       "path": "docs/canonical/CANONICAL_FACTS.yaml",
-      "size_bytes": 12720,
-      "sha256": "43440c62ccd466747a307d74e2caadbcb8cfff5e709fe4c2880a8826ee36a351"
+      "size_bytes": 12950,
+      "sha256": "e1e45e0052c0b6074a5c68002eb070a5b08773e123a1ff282d3c1fbbe58a5648"
     },
     {
       "path": "docs/canonical/KNOWLEDGE_CONTINUITY_AUDIT.json",
@@ -3249,8 +3249,8 @@
     },
     {
       "path": "docs/canonical/NEXT_BLOCK_ZK_LR_DERIVATION.md",
-      "size_bytes": 6797,
-      "sha256": "b043e0171dcb7acd56954e9a01c4bd4efd67a5e79f1c0812e7aa5a9da1d8fe54"
+      "size_bytes": 7632,
+      "sha256": "d55379b55bc3d9c9cc28a1728947ec27ea2152355a2fb48bc1b88915af899602"
     },
     {
       "path": "docs/canonical/PASS_SURVIVAL_MATRIX.csv",
