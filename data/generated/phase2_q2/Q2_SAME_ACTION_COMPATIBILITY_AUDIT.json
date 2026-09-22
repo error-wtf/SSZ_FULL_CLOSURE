@@ -1,0 +1,53 @@
+{
+  "audit": "Q2_SAME_ACTION_MONTAGE_COMPATIBILITY_AUDIT",
+  "phase": "2-Q2 (frozen interim status; neither PASS nor FAIL yet)",
+  "created": "2026-09-22",
+  "overlaps": [
+    {
+      "pair": "central member <-> dense base (H5)",
+      "result": "SAME_ACTION_EXACT",
+      "evidence": "corrector no-op: f2 6.9e-12, f2X 1.2e-11, f2F 0.0; streams machine-identical (dev 0.0)"
+    },
+    {
+      "pair": "strong-H carrier <-> central/dense (Horndeski slots, u 0.61-0.71)",
+      "result": "CONSISTENT_WITH_HYBRID_COMPOSITION - UNDETERMINED",
+      "mismatch_scaled": {
+        "a4": {"max": 8.769e-03, "median": 2.55e-03},
+        "a1": {"max": 1.469e-01, "median": 1.26e-01},
+        "c4": {"max": 1.075, "median": 9.34e-01}
+      },
+      "reading": "hybrid rule total = MH + (SVT - shared): a4 nearly pure Horndeski (0.3%); a1 ~13% and c4 ~93% SVT contribution - consistent with composition IF residuals equal the lobe SVT contributions",
+      "blocker": "decisive test requires the lobe member's 41-slot emission under the CURRENT emitter (regression CSV lacks f2F/f2Y primitives)"
+    },
+    {
+      "pair": "genuine-SVT lobe <-> central (SVT primitives)",
+      "result": "NOT_CLASSIFIABLE_AT_NAIVE_LEVEL",
+      "mismatch_scaled": {"f2": 1.8987, "f2X": 4.0072, "f3": 4.2989, "f3X": 2.5006, "f4": 2.5006},
+      "split_full_test": {
+        "ratio_f2_lobe_over_central": [-0.0519, -0.805, -0.6039, -0.2393, 0.4714],
+        "smooth": false,
+        "conclusion": "erratic ratio; the HSVT-memory split convention f2 = S_SVT * f2_full could explain IF S_SVT(u) is steep/zero-crossing - S_SVT u-profile absent from compared tables",
+        "classification_candidate": "CHART_TRANSFORMATION_ONLY (unresolved) or GENUINELY_INCOMPATIBLE (unresolved)"
+      }
+    }
+  ],
+  "construction_inputs_integrity": {
+    "v7_identity": "belongs to assembled 41-slot level - PENDING",
+    "no_41_splicing_performed": true,
+    "no_partition_of_unity_used": true,
+    "no_stability_inputs": true
+  },
+  "q2_status": "OPEN - precise unblocking list frozen",
+  "unblocking_steps": [
+    "1. re-run/recover the genuine-SVT lobe construction to emit its 41 slots under the CURRENT emitter (needs f2F/f2Y on the lobe background)",
+    "2. recover the S_SVT(u) split map (HSVT memory: f2 = S_SVT * f2_full) and map lobe full-SVT primitives into the hybrid split convention",
+    "3. then J0/J1/J2 comparison lobe-SVT vs (central minus strong-H) residuals; v7 identity on the assembled emission",
+    "4. only then classify per overlap: SAME_ACTION_* / CHART_TRANSFORMATION_ONLY / INCOMPATIBLE"
+  ],
+  "hard_rules_respected": {
+    "no_41_interpolation": true,
+    "no_splicing": true,
+    "no_stability_inputs": true,
+    "no_new_operators": true
+  }
+}
