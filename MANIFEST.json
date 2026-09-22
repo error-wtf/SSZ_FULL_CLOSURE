@@ -4474,8 +4474,8 @@
     },
     {
       "path": "tests/regression/test_eq85_naming_guard.py",
-      "size_bytes": 848,
-      "sha256": "88881ad8cad9222f2580d4b3d5133f52618b5f9d3dd9b316916336f6611d515a"
+      "size_bytes": 835,
+      "sha256": "85ea887bb0cce3600b2184723c7c396f909e7f4281c220006d695c8a7c901ee5"
     },
     {
       "path": "tests/regression/test_frozen_onshell_diagnostic.py",

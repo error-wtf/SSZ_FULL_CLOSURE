@@ -4,9 +4,9 @@ import numpy as np
 
 def test_v_slot_mapping_is_documented():
     src = open('src/ssz_hybrid_unreduced_even_kernel.py').read()
-    assert 'V9=MH v8' in src.replace(' ', '') or 'V9 = MH v8' in src, \
-        "kernel must document V9=MH v8 mapping"
-    assert 'V8=MH v7' in src.replace(' ', '') or 'V8 = MH v7' in src
+    flat = src.replace(' ', '')
+    assert 'V9=MHv8' in flat, "kernel must document V9=MH v8 mapping"
+    assert 'V8=MHv7' in flat and 'V7=MHv6' in flat and 'V10=MHv9' in flat
 
 def test_q_conventions_must_not_be_mixed():
     # q_r = A0_r^2 v8_MH ; q_u = A0_u^2 v8_MH ; A0_r = -(u^2/r_s) A0_u
