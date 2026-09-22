@@ -6,5 +6,9 @@
  "f3X_prime_rhs_at_inner_LR": 1128.1754572503546,
  "actual_f3X_prime_at_inner_LR": 1128.1754603274883,
  "Ephi_residual_at_inner_LR": -4.6357433802768355e-06,
- "max_abs_residual_over_window": 0.00034368803960660443
+ "max_abs_residual_over_window": 0.00034368803960660443,
+ "step": "STEP 2 input: E_phi ODE after triangular back-substitution (f2F,f2,f2X already solved by JA/E00/E11)",
+ "regularity_check": "A(r) != 0 everywhere in the window (min |A| = 1.329) - the ODE is regular and explicitly solvable",
+ "role": "input for the STEP 2 joint DAE: f3X integration (certified boundary value, not fitted), then f2X dragging via E11, then C_bg assembly",
+ "no_fit_no_optimization": true
 }
