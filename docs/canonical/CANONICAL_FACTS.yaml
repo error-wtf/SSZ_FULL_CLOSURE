@@ -112,3 +112,8 @@ unknowns:
     source_csv_sha256: 65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba
     replay_spec: "implement Kase-Tsujikawa Eq.85 from the closure document; evaluate at both light rings on the carrier CSV; confirm required-tensor_F signs; only then is the supersession REPLAYED"
     note: "owner correction 2026-09-22: sources can be outdated — documented supersession is a claim until replayed"
+  - id: FACT:EQ85_INDEPENDENT_REPLAY_BLOCKED_ON_PRIMARY_SOURCE
+    statement: "the independent Eq.85 replay is BLOCKED on retrieving the primary-source formula text (arXiv:2301.10362 Eq. 85); the repo module src/ssz_p5/action/light_ring_electric.py is the historical implementation (geom = r f'' - r f'^2/f + 2f' - 2f/r; at the ring (2f - r f') a4' = 0 removes the a4' control — mechanism structurally confirmed) but copying it is forbidden by the independence rule"
+    status: REPLAY_PENDING_BLOCKED_ON_PRIMARY_SOURCE_RETRIEVAL
+    next_step: "retrieve arXiv:2301.10362 Eq.85 text (RAG established-physics corpora or fetch), implement independently, evaluate at both light rings on the carrier CSV (sha 65b32db2...), then verdict A/B per the frozen directive"
+    note: "no verdict fabricated; the epsilon-Y member remains REPLAY_PENDING, neither active nor superseded-as-replayed"
