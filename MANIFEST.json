@@ -153,6 +153,11 @@
       "sha256": "b98715f9b6157b2cd40a441821b74ace36afc0c1f07f8b3a9b7ea72630d1828f"
     },
     {
+      "path": "EMITTER_ERA_LEDGER.csv",
+      "size_bytes": 685,
+      "sha256": "3bef7c0c922f7d48df4be4fe6e345e21850e69c22cde14aca0a43f4f0bab49f1"
+    },
+    {
       "path": "FILE_INDEX.md",
       "size_bytes": 2238,
       "sha256": "1614ea82f24d5b105d2fb62a58f790569dcc845a9c8c51f69c7c4e67ea6c01e1"
@@ -201,6 +206,11 @@
       "path": "FULL_CLOSURE_WORKING_STATUS_2026-09-21_PROJECTED_CONTROLLABILITY.json",
       "size_bytes": 4772,
       "sha256": "b76aae98a9ea8f9e45a577ca37bbbb1ed9f70f1dfb5ce385508c35d75b84ff25"
+    },
+    {
+      "path": "HISTORICAL_DATA_LINEAGE.json",
+      "size_bytes": 1449,
+      "sha256": "af18d4ccb1f46fff79b320497b0f5df1022f9fe36a1d487551387ecab32a9e7d"
     },
     {
       "path": "HUMAN_DECISIONS_ONLY.md",
@@ -261,6 +271,11 @@
       "path": "PRODUCTION_BLACKLIST.json",
       "size_bytes": 567,
       "sha256": "e8558c7c939e0c5723e80bfbe7bfcad6dc86ef7eb3d599092b81567fdf5c54a0"
+    },
+    {
+      "path": "Q2_ARCHIVE_RECOVERY_LEDGER.json",
+      "size_bytes": 2155,
+      "sha256": "d8586ec6ae5fd54f281022d014fff0a05cbe3ce618dcba6b2525e7b26bc600eb"
     },
     {
       "path": "README.md",

@@ -1,0 +1,4 @@
+ERA_ID,commit,date,defining_change,affected_slots,physics_or_representation
+ERA_ZK_SEP13_16,9ef9247(import; work Sept-13..16),2026-09-13..16,ZK emitter era; selected stream v5=c3=e3=0; v12 Appendix-minus; holonomic a5,c3/e3/v5 + all,representation (selection documented in build_ssz_p5_selected_41stream_v2_2026-09-16.py:17,22)
+ERA_SELECTION_SEP17_21,55411e6/e7a9b4a/1ff011f,2026-09-18..21,direct Appendix-A c3/e3 via emit_lower_slots; v5 from direct route; c6 relation corrected (fp*a4/(2rf) -> 0.5*fp*r*a4/f),c3/e3/v5/c6,representation+formula correction (derivation documented in 1ff011f)
+ERA_CURRENT,1ff011f..HEAD,2026-09-21..,current emitter state (manifest-verified),all,current

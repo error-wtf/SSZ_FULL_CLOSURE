@@ -1,0 +1,12 @@
+{
+  "audit": "Q2_ARCHIVE_RECOVERY_LEDGER",
+  "date": "2026-09-22",
+  "SAME_ERA_COMPONENTS_RECOVERED": "no — C_MH/C_SVT/C_shared were never serialized as separate streams; git -S searches for C_shared/C_HSVT hit only this session's commits; the Sept-16 generator assembled by REGION PRIORITY (piecewise selection), not by serialized components",
+  "ORIGINAL_GENERATOR_RECOVERED": "yes — archive/full_working_snapshot/build_ssz_p5_selected_41stream_v2_2026-09-16.py (108 lines): region-priority map (weak_exterior_H, strong_H_carrier, outer_same_action_H_SVT, central_exact_SVT, inner_same_action_SVT_H, punctured_H_core), explicit selection d['v5']=d['c3']=d['e3']=0.0, member label 'v5=c3=e3=0; v12 Appendix-minus; corrected holonomic a5', INTERFACE_JUMPS export (the construction itself recorded interface discontinuities); plus final_outer_variableG4_2026-09-16.py and scan_* for the outer carrier",
+  "HISTORICAL_REPLAY": "possible_not_yet_run — generator + archived regional inputs (F2/F3/OUTER_FINAL CSVs with S_SVT/T_H columns) exist; replay would reproduce the STITCHED selected stream, whose interface jumps are documented artifacts of region-priority selection",
+  "F2Y_STATUS": "never serialized (no f2Y column in any archived CSV header); recovery only via alpha5 inversion after component decomposition",
+  "Q2_CAN_REOPEN": "yes — on a corrected construction basis: the decomposition must NOT use the Sept-16 stitched/selected streams as single-action totals; the four same-era objects must be GENERATED from the recovered region constructors under one emitter era (construction task, not archive recovery)",
+  "emitter_era_ledger": "EMITTER_ERA_LEDGER.csv (3 eras: ERA_ZK_SEP13_16, ERA_SELECTION_SEP17_21, ERA_CURRENT)",
+  "interface_mismatch_root_cause": "c3/e3/v5 max=1.000 explained: Sept-16 chain stored them as 0 by documented selection; current emitter computes direct Appendix-A values; remaining e4/e2/c2/d3/v13/a5/c6-class mismatches consistent with the c6 relation change (1ff011f) plus region-priority selection boundaries",
+  "no_reconstruction_by_plausibility": "enforced — every answer above cites file/line/commit"
+}

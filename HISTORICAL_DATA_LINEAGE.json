@@ -1,0 +1,13 @@
+{
+  "lineage": "historical same-action chain (as archived)",
+  "nodes": [
+    {"id":"region_constructors","what":"regional action constructions (outer variableG4, strong-H F=G=H, central exact SVT with f3X integrated, inner same-action)","source":"archive build/scan scripts + regional CSVs","commit":"9ef9247 import"},
+    {"id":"partition_weights","what":"stored C-infinity partition columns S_SVT/T_H","source":"5 chain CSVs; enforced identity inner_targets.py:76-78"},
+    {"id":"selected_41stream_v2","what":"region-priority stitched 41-slot stream with v5=c3=e3=0 selection and INTERFACE_JUMPS record","source":"build_ssz_p5_selected_41stream_v2_2026-09-16.py","era":"ERA_ZK_SEP13_16"},
+    {"id":"outer_final_strongh_hybrid","what":"outer region 41of41 hybrid with partitions","source":"final_outer_variableG4_2026-09-16.py era; imported 9ef9247","era":"ERA_ZK_SEP13_16"},
+    {"id":"dense_continuation","what":"absolute_reemit base + tangent K-repair","source":"advance_transition_dense_h_continuation.py","era":"ERA_SELECTION_SEP17_21 (commit 1ff011f)"},
+    {"id":"current_emission","what":"current emitter (c6 corrected, direct c3/e3)","source":"1ff011f lineage","era":"ERA_CURRENT"}
+  ],
+  "orphan_check": "no orphaned decisive artifact found; the stitched selected stream is a documented piecewise construction, NOT a single-action emission — never use as Q2 total",
+  "rule": "arrows above are file/line-cited; no inferred arrows"
+}
