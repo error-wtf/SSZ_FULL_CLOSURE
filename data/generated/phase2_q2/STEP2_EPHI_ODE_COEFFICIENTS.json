@@ -1,0 +1,10 @@
+{
+ "coefficient_of_f3X_prime_A_at_inner_LR": -1.506513522666564,
+ "A_min_abs_over_window": 1.328607605660584,
+ "A_neq0_everywhere": true,
+ "ODE_explicit": "f3X_prime = -(B*f3X + C)/A  (from A*f3X' + B*f3X + C = 0)",
+ "f3X_prime_rhs_at_inner_LR": 1128.1754572503546,
+ "actual_f3X_prime_at_inner_LR": 1128.1754603274883,
+ "Ephi_residual_at_inner_LR": -4.6357433802768355e-06,
+ "max_abs_residual_over_window": 0.00034368803960660443
+}
