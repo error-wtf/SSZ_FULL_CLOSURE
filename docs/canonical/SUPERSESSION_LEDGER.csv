@@ -1,0 +1,12 @@
+old_claim,old_source,new_claim,new_source,reason,date,scope
+eps^2 angular leading order,spline/naive Laurent era,structurally cancelled; eps^3 physical leading order (rank-1 leading block),tools/audit_dense_angular_direct.py + angular_universal_laurent.py,cancellation-aware order detection,2026-09-22,angular determinant production
+reduced angular 84.912/643.142,ZK regression CSV 2026-09-13,SUPERSEDED_NUMERICS for production angular closure,direct eps^3 determinant,reduced-era quantity,2026-09-22,production angular
+Eq4.47 suspected first divergence,early EQ47 hypothesis,closes in scope; literal residual predicted by (R-1)rh phi' K22 K33,EQ47_PROJECTION_AUDIT (prediction 8.09e-9),provenance audit,2026-09-21,0.62<=u<0.70 method identity
+m5_plus printed shortcut,Zhang-Kase printed,kept as PUBLISHED_COMPARATOR_ONLY; m5_minus is primary-action route,action_m5_mass_shortcuts,provenance separation,2026-09-21,m5 channel
+spline-sensitive mass calculation,historical spline scans,superseded by JET9D8/action route where applicable,JET9D8 emitter+reducer,derivative service,2026-09-16,sensitive mass channels
+v12=+v6/(2h),old builder,SUPERSEDED: v12=-v6/(2h),canon supersede list section 16,regression ~1e-14,2026-09-16,vector numbering
+a5 without -a1'',old builder,SUPERSEDED: a5 = a2'-a1''-(A0'v4/2)'+A0'v5/2,HOLONOMIC_A5_CLOSURE_2026-09-16,regression 8.1e-7 median,2026-09-16,a5 channel
+central healthy-K lobe as production witness,K_ZK_exact 10.54 (2026-09-13/16),SUPERSEDED_NUMERICS: full finite-L central gate FAILS (L=6,12,20,42),REGIONAL_KINETIC_GATE_2026-09-17 + commit 9c85a30,full-matrix vs reduced combination,2026-09-17,central region finite-L
+healthy K does not exist (Phase-2 overstrong reading),Phase-2 draft interpretation,RETRACTED: healthy representatives exist (strong-H carrier 1.6e-7@L1000; exterior 9.9e-7),HSVT_DIRECT_REGION_AUDIT_2026-09-18,forensic audit,2026-09-22,architectural existence claim
+E00=1.04 as background fail,Phase-2 diagnostic,evaluator-input artifact; corrector machine-precision PASS,FORENSIC_PROVENANCE_AUDIT,primitive-column defaults,2026-09-22,background residual semantics
+single-factor S_SVT maps lobe->central,Q2 continuation hypothesis,route disagreement; relation scope is OUTER_HANDOVER only,Q2_SPLIT_RECOVERY_AUDIT,three-route recovery FAIL,2026-09-22,SVT split scope

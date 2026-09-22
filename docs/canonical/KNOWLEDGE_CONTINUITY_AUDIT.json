@@ -1,0 +1,22 @@
+{
+  "audit": "KNOWLEDGE_CONTINUITY_AUDIT",
+  "date": "2026-09-22",
+  "canonical_facts": 13,
+  "unknown_pending_source_recovery": 6,
+  "member_ids": 9,
+  "scoped_conventions_registered": 2,
+  "superseded_claims_mapped": 11,
+  "orphan_artifacts": "not yet fully inventoried (v2 task)",
+  "contradictions_resolved": 4,
+  "contradictions_still_open": 1,
+  "open_contradiction": "lobe-central f2-family difference: additive composition (HYPOTHESIS) vs genuine action difference — decomposition test pending, Q2 paused",
+  "root_cause_identified": "checkpoint-local work lost scope/provenance/supersession context; correct facts were applied outside their registered scope",
+  "policy_changes": [
+    "git repo = canonical living state; ZIPs = immutable snapshots only",
+    "RAG = provenance archive; hits are not automatically current truth",
+    "MEMBER_ID + EQUATION_ID + CONVENTION_ID + source mandatory for project facts",
+    "UNKNOWN_PENDING_SOURCE_RECOVERY is an acceptable, preferred result over guessing",
+    "tools/context_guard.py must run before major status promotions"
+  ],
+  "q2_status": "PAUSED until lobe/central/strong-H facts have provenance+scope+member+convention+supersession status"
+}

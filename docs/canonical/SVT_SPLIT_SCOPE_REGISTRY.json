@@ -1,0 +1,29 @@
+{
+  "registry": "SVT_SPLIT_SCOPE_REGISTRY",
+  "purpose": "prevent scope-generalization of split/normalization relations",
+  "relations": [
+    {
+      "relation": "f2_split = S_SVT * f2_full ; f2X_split = S_SVT * f2X_full ; f2F_split ~ S_SVT",
+      "documented_scope": "OUTER_HANDOVER (shared-baseline assembly)",
+      "sources": [
+        "SSZ_P5_SHARED_BASELINE_ASSEMBLY_VALIDATION_2026-09-16.md (outer handover f2F-S_SVT residual 9.37e-6)",
+        "SSZ_P5_HSVT_FINITE_L_TECHNICAL_MEMORY_2026-09-16.pdf (f2 = S_SVT * f2_full warning)",
+        "SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf"
+      ],
+      "tested_extensions": [
+        {"target": "LOBE_CENTRAL", "result": "FAILED (three-route S_SVT recovery disagreement 2026-09-22)", "verdict": "NOT_SOURCE_ESTABLISHED"}
+      ],
+      "rule": "do not apply outside OUTER_HANDOVER without an explicit source"
+    },
+    {
+      "relation": "emitter reference path f2F = 1, f2Y = 0",
+      "documented_scope": "UNsplit full-SVT normalization reference ONLY",
+      "rule": "never apply to HYBRID_SPLIT_SVT streams without source"
+    }
+  ],
+  "open_questions": [
+    "S_SVT(u) authoritative profile: UNKNOWN_PENDING_SOURCE_RECOVERY",
+    "f2Y_split historical value: UNKNOWN_PENDING_SOURCE_RECOVERY (alpha5 combination available, emitter line 112)",
+    "lobe-central f2-family difference: composition (HYPOTHESIS) vs genuine action difference — decomposition test pending"
+  ]
+}

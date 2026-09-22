@@ -3113,6 +3113,41 @@
       "sha256": "ccdee01adc5406190f53d124e3d1a33443ad41b752e8280de0594d68b6ab1564"
     },
     {
+      "path": "docs/canonical/ACTION_MEMBER_REGISTRY.yaml",
+      "size_bytes": 3652,
+      "sha256": "ffd3ff799f1f3150dd884f6672c68f1d45986ba0d3e3f562370c9ad170d5db8a"
+    },
+    {
+      "path": "docs/canonical/CANONICAL_FACTS.yaml",
+      "size_bytes": 7040,
+      "sha256": "5bb22b2b4c8df93a5acfb6633bc60c0f6fe6e415e7510a3d3bf3bde3bdb6a14d"
+    },
+    {
+      "path": "docs/canonical/KNOWLEDGE_CONTINUITY_AUDIT.json",
+      "size_bytes": 1207,
+      "sha256": "623c5f4708d920130b3ad6247a72bac0a5dc16caec4b820c1acd675693e1fb69"
+    },
+    {
+      "path": "docs/canonical/KNOWLEDGE_CONTINUITY_AUDIT.md",
+      "size_bytes": 1420,
+      "sha256": "e5c275b8784fdf6e32eaf884997ffb4af59396b7e6a57bdda6fa68390689863d"
+    },
+    {
+      "path": "docs/canonical/PASS_SURVIVAL_MATRIX.csv",
+      "size_bytes": 1348,
+      "sha256": "6666152d548389be73440fcfeba54fc801d2cc235d9fa7053e166a5b7662f5dd"
+    },
+    {
+      "path": "docs/canonical/SUPERSESSION_LEDGER.csv",
+      "size_bytes": 2324,
+      "sha256": "2d023895df0518a4ab1c65375682aee629df5e14ca8d4fd7a5fcc2cccd8da086"
+    },
+    {
+      "path": "docs/canonical/SVT_SPLIT_SCOPE_REGISTRY.json",
+      "size_bytes": 1439,
+      "sha256": "e6d5fdd1754b827930a24311e826dd006e10ba388205882490bd0d7e31d45cdb"
+    },
+    {
       "path": "docs/checkpoints/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16(1).md",
       "size_bytes": 21908,
       "sha256": "d56350410745446552abe9fd8150c6871c1ac9c58de20cb95219532a6c735d63"
@@ -4626,6 +4661,11 @@
       "path": "tools/codex_start.sh",
       "size_bytes": 296,
       "sha256": "0c1b348df0a1183d1599e2dab37c4b50cefa4ec649988c6eac3497bc9dacf814"
+    },
+    {
+      "path": "tools/context_guard.py",
+      "size_bytes": 3849,
+      "sha256": "b27f0e47e54cb09faa7ecf602d631ceefb715cfb3898ade1b5aff3f53c5bc47f"
     },
     {
       "path": "tools/diagnose_electric_hybrid_scalar_identity.py",

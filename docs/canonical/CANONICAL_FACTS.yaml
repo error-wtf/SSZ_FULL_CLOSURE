@@ -1,0 +1,104 @@
+# CANONICAL FACTS — v1 (knowledge consolidation 2026-09-22)
+# Scope: facts verified in the 2026-09-22 session (forensics, blind replay, Q2 audit)
+# plus archive records recovered with file+hash provenance.
+# Rule: every fact carries source, scope, member, status. No guessing.
+# Items marked UNKNOWN_PENDING_SOURCE_RECOVERY are explicit knowledge gaps.
+
+facts:
+  - id: FACT:C0_K_GHOST
+    statement: "TRANSVERSE_ZERO member (c=0, base stream) has a finite-L kinetic ghost"
+    member: C0_TRANSVERSE_ZERO
+    status: FALSIFIED_MEMBER
+    source_files: [data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE.json]
+    date_established: 2026-09-22
+    evidence: "min K = -18.522265817831975 at L=1000, u=0.7079894973743436"
+
+  - id: FACT:C1_C3_PREDICT_MINIMAL_STREAM
+    statement: "C1 (minimal covariant operators) and C3 (field-space third-jet minimality) both select the zero-displacement stream, machine-identical to C0"
+    member: [C1_MINIMAL, C3_FIELDSPACE_MINIMAL]
+    status: CURRENT
+    source_files: [data/generated/phase2/PHASE2_K_GATES_C1_C3.json, data/generated/phase2/PHASE2_RESULTS_C1.json, data/generated/phase2/PHASE2_RESULTS_C3.json]
+    date_established: 2026-09-22
+    evidence: "corrector no-op (f2 6.9e-12, f2X 1.2e-11, f2F 0.0); C3 Gram positive definite (1.54e9..4.30e10), unique minimizer c=0 (trivial, per owner rule)"
+
+  - id: FACT:C1_C3_GHOST_UNIVERSAL
+    statement: "minimal completion class necessarily fails / new non-minimal physics logically forced"
+    status: RETRACTED_OVERSTRONG
+    superseded_by: FACT:HEALTHY_K_REPRESENTATIVES_EXIST
+    reason: "healthy finite-L K representatives exist in-architecture (strong-H carrier, exterior); Q1=YES"
+
+  - id: FACT:HEALTHY_K_REPRESENTATIVES_EXIST
+    statement: "healthy finite-L K representatives exist inside the used Horndeski/SVT architecture"
+    member: [STRONG_H_CARRIER, EXTERIOR_REGION]
+    status: CURRENT_SCOPE_LIMITED
+    scope: "carrier representative and exterior region only; Q2 same-action assembly NOT established; Q3 NOT established"
+    source_files: [data/generated/absolute_attempt_2026-09-18/HSVT_DIRECT_REGION_AUDIT.json]
+    evidence: "carrier min_eig_K 1.6051559271961315e-07 at L=1000, positive all tested L, min_radial 0.1024; exterior 9.8899e-07"
+
+  - id: FACT:LOBE_K_ZK_EXACT_REDUCED
+    statement: "genuine-SVT lobe K_ZK_exact min = 10.541549191507217 is a REDUCED even-sector ZK combination, not the full finite-L Schur minimum"
+    member: GENUINE_SVT_LOBE_FULL
+    status: SUPERSEDED_NUMERICS
+    scope: "reduced even-sector combination only"
+    superseded_by: "2026-09-17 full-matrix central finite-L kinetic gate (FAIL: -43.86/0.09/115.42 at u=0.69, L=6; commit 9c85a30)"
+    source_files: [data/production/ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv]
+    evidence: "internal column K_even_corrected min = 0.963915063812136"
+
+  - id: FACT:ANGULAR_84912_643142_SUPERSEDED
+    statement: "historical reduced angular values 84.912 / 643.142 are superseded for production angular closure by the direct eps^3 action determinant"
+    status: SUPERSEDED_NUMERICS
+    source_files: [SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16 section 16 supersede list]
+    evidence: "direct eps^3 scan on dense branch: cminus^2 < 0 on 297/297 (DENSE_ANGULAR_ACTION_DIRECT_FAIL)"
+
+  - id: FACT:EQ47_CLOSES_IN_SCOPE
+    statement: "Eq. 4.47 (ZK) closes against the action-derived coefficients in the same basis/scaling; the literal shortcut residual is predicted by (R-1)*r*h*phi_prime*K22*K33"
+    status: CURRENT_SCOPE_LIMITED
+    evidence: "prediction_scaled 8.09e-9; reference error 2.52e-14 (EQ47_PROJECTION_AUDIT)"
+
+  - id: FACT:E00_104_EVALUATOR_ARTIFACT
+    statement: "the Phase-2 diagnostic E00=1.04/E11=0.043 was an evaluator-input artifact (41-slot stream lacks primitive columns; defaults 0)"
+    status: DIAGNOSTIC_ONLY
+    superseded_by: "corrector machine-precision residuals E00=4.37e-12, E11=6.30e-12, JA=9.90e-15"
+    source_files: [data/generated/phase2_forensics/HISTORICAL_MEMBER_PROVENANCE_COMPARISON.json]
+
+  - id: FACT:F3X_RETAINED_SHARED
+    statement: "f3X is retained and background-consistent: central frame scalar identity residual 2.79e-4, after corrector 3.43e-4 (historical lobe level 1e-12); f3X_integrated(lobe) == f3X(central) to max scaled 0.0"
+    member: [CENTRAL_MEMBER, GENUINE_SVT_LOBE_FULL]
+    status: CURRENT
+    source_files: [data/generated/phase2_q2/Q2_SPLIT_RECOVERY_AUDIT.json]
+
+  - id: FACT:SVT_SPLIT_SCOPE_OUTER_HANDOVER
+    statement: "the relation f2_split = S_SVT * f2_full (f2F ~ S_SVT) is documented for the OUTER HANDOVER (shared-baseline assembly, residual 9.37e-6), NOT for the lobe-central pair"
+    scope: OUTER_HANDOVER
+    status: SOURCE_ESTABLISHED_SCOPE_LIMITED
+    source_files: [SSZ_P5_SHARED_BASELINE_ASSEMBLY_VALIDATION_2026-09-16.md, SSZ_P5_HSVT_FINITE_L_TECHNICAL_MEMORY_2026-09-16.pdf]
+    forbidden_extension: "applying it to LOBE_CENTRAL without explicit source"
+
+  - id: FACT:Q2_LOBE_CENTRAL_NAIVE_MISMATCH
+    statement: "naive lobe-vs-central primitive comparison mismatches 190-430% (f2/f2X/f3/f3X/f4); single-factor S_SVT recovery FAILED on this pair (three routes disagree: 1.85-11.5 / -15.5..11.7 / ~0.3)"
+    status: OPEN
+    open_because: "decomposition test (SVT_part = CENTRAL_TOTAL - STRONG_H contribution) not yet executed; composition vs incompatibility undecided"
+
+  - id: FACT:Q2_ADDITIVE_COMPOSITION
+    statement: "central f2-family = Horndeski part + genuine-SVT part (additive composition)"
+    status: HYPOTHESIS_NOT_ESTABLISHED
+    note: "working hypothesis only; requires the decomposition test; do not use as established truth (epistemic directive section 15)"
+
+  - id: FACT:DENSE_ANGULAR_FAIL
+    statement: "K-repaired dense member: direct eps^3 angular determinant fails, cminus^2 < 0 on 297/297 trusted points, min -1473.21 at u=0.7063353"
+    member: DENSE_K_REPAIRED_MEMBER
+    status: FALSIFIED_MEMBER
+    evidence_files: [data/generated/dense_angular_direct_2026-09-22/]
+
+  - id: FACT:BACKGROUND_PASS_SEMANTICS
+    statement: "BACKGROUND=PASS is justified by the corrector's machine-precision residuals; raw-absolute residual acceptance requires the primitive-complete frame"
+    status: CURRENT
+    evidence: "E00=4.370392936436929e-12, E11=6.2957972168931065e-12, JA=9.901695612563078e-15"
+
+unknowns:
+  - UNKNOWN_PENDING_SOURCE_RECOVERY: "S_SVT(u) authoritative profile and its exact scope/domain"
+  - UNKNOWN_PENDING_SOURCE_RECOVERY: "f2Y_split historical value (alpha5 combination f2F - 2h phi'^2 f2Y, emitter line 112)"
+  - UNKNOWN_PENDING_SOURCE_RECOVERY: "lobe member 41-slot emission under current emitter (needs f2F/f2Y on lobe background)"
+  - UNKNOWN_PENDING_SOURCE_RECOVERY: "whether lobe-central f2-family difference is compositional (additive) or a genuine action difference"
+  - UNKNOWN_PENDING_SOURCE_RECOVERY: "inner/core carrier same-action status (deep-core was FAIL_IMPLEMENTATION 2026-09-18)"
+  - UNKNOWN_PENDING_SOURCE_RECOVERY: "Q2 overall verdict (paused for consolidation)"

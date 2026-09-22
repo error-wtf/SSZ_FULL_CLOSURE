@@ -1,0 +1,54 @@
+# ACTION MEMBER REGISTRY v1 — permanent IDs (2026-09-22 consolidation)
+# Rule: no calculation without MEMBER_ID. Unknown fields are UNKNOWN, not guessed.
+members:
+  - id: C0_TRANSVERSE_ZERO
+    construction: base stream of build_bundle() (no tangent displacement)
+    domain: u 0.7002-0.7080
+    background: canonical SSZ profile (hash pending: BACKGROUND_HASH registry v2)
+    stability_selected: false
+    K_status: FAIL (min -18.522265817831975 @ L=1000, u=0.70799)
+    angular_status: (diagnostic, stream-identical to central data)
+    role: falsification witness / control
+    source: data/generated/strong_field_transition_2026-09-21/TRANSITION_PROSPECTIVE_V2_TOTAL41.csv
+    commit: 587d776
+  - id: C1_MINIMAL
+    construction: identical stream to C0 (corrector no-op measured)
+    K_status: FAIL (same value)
+    role: falsified preregistered hypothesis (rule hash 038a03d2...)
+  - id: C3_FIELDSPACE_MINIMAL
+    construction: J_C minimizer c=0 (Gram PD; trivial per declared risk)
+    classification: NEW_THEORY_HYPOTHESIS_WITH_FIXED_FIELDSPACE_METRIC (never rename)
+    K_status: FAIL (same value)
+    role: falsified preregistered hypothesis (rule hash 15df4caf...)
+  - id: CENTRAL_MEMBER
+    construction: build_onshell_central(ROOT) frame (3809 rows, u 0.61-0.70998)
+    primitives: f2/f2X/f2F/f3/f3X(nontrivial [-18.49,44.73])/f4 present
+    scalar_identity_residual: 2.79e-4 (frame), 3.43e-4 (after corrector window)
+    K_status_full_finite_L: FAIL region near u~0.708-0.7099 (L=1000: -27.84); consistent with 2026-09-17 central gate FAIL
+    slot_emission: NOT stored in primitives frame (emission exists only via re-run)
+    source: build_onshell_central (electric_hybrid_onshell_central.py)
+  - id: DENSE_BASE_MEMBER
+    note: = C0 stream (same construction); alias for the dense-window base
+  - id: DENSE_K_REPAIRED_MEMBER
+    construction: base + background-null tangent LP repair (historical c, frozen)
+    K_status: PASS min 1.2603117195246649e-05 @ L=1000, u=0.7048124531132783
+    angular_status: FAIL_ROBUST (direct eps^3: cminus^2<0 on 297/297, min -1473.21 @ u=0.7063353)
+    role: falsification witness (angular)
+    source: TRANSITION_DENSE_H_CONTINUATION_TOTAL41.csv (+ .2026-09-21_frozen)
+  - id: STRONG_H_CARRIER
+    construction: Horndeski carrier F=G=H; table ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv (5000 rows, u 0.5515-0.71) with a1/a4/c4_Horndeski; 39of41 emission ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv
+    K_status: PASS min 1.6051559271961315e-07 @ L=1000 (all tested L positive), min_radial 0.1024
+    same_action_status: UNKNOWN_PENDING_SOURCE_RECOVERY (Horndeski restriction consistent: a4 0.3% median; decisive lobe-SVT decomposition pending)
+    role: Q1 witness (healthy K exists in-architecture)
+  - id: GENUINE_SVT_LOBE_FULL
+    construction: central exact SVT with f3X integrated from scalar ODE (residual ~1e-12 historical)
+    domain: u 0.61-0.715
+    K_status_reduced: K_ZK_exact min 10.5415 (SUPERSEDED_NUMERICS as full finite-L witness; internal K_even_corrected min 0.9639)
+    angular_reduced: 84.912/643.142 (SUPERSEDED_NUMERICS)
+    source: data/production/ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv
+    relation_to_central: UNKNOWN_PENDING_SOURCE_RECOVERY (naive primitive mismatch 190-430%; S_SVT single-factor map FAILED; decomposition test pending)
+  - id: OUTER_H_CARRIER
+    status: exterior finite-L K PASS 9.8899e-07 @ L=1000 (scope: exterior)
+    source: HSVT_DIRECT_REGION_AUDIT_2026-09-18
+  - id: INNER_H_CORE
+    status: deep-core FAIL_IMPLEMENTATION (2026-09-18); UNKNOWN_PENDING_SOURCE_RECOVERY
