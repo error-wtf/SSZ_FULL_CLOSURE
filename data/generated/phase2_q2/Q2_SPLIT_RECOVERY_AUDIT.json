@@ -1,0 +1,38 @@
+{
+  "audit": "Q2_SPLIT_RECOVERY_AUDIT",
+  "phase": "2-Q2 continuation (split recovery)",
+  "created": "2026-09-22",
+  "directive_section1_result": "STOP_AND_DIAGNOSE",
+  "s_svt_three_route_recovery": {
+    "route1_f2F_split": {"range": [1.8488, 11.5075], "note": "central frame f2F"},
+    "route2_f2_split_over_f2_full": {"range": [-15.48, 11.74], "erratic": true},
+    "route3_f2X_split_over_f2X_full": {"range": [0.2663, 0.3361], "note": "roughly 1/3 scale, opposite trend to route1 near u=0.705 (-0.316)"},
+    "agreement": "FAIL — routes disagree far beyond numerical uncertainty",
+    "per_directive": "stop and diagnose (done below); no single multiplicative S_SVT(u) maps lobe CSV primitives to central frame primitives"
+  },
+  "diagnosis": {
+    "finding": "the documented split relation (f2_split = S_SVT * f2_full, f2F ~ S_SVT; outer-handover residual 9.37e-6 in SHARED_BASELINE_ASSEMBLY_VALIDATION) applies to the OUTER HANDOVER pair, not to the lobe-CSV <-> central-frame pair",
+    "composition_hypothesis": "central f2-family = Horndeski carrier part + genuine-SVT part (ADDITIVE composition via hybrid rule C_HSVT = C_MH + (C_SVT - C_shared)), while the lobe CSV records the genuine-SVT part in its own normalization; a multiplicative single-factor map cannot represent an additive composition — explains the erratic route-2 ratios",
+    "confirming_evidence": {
+      "f3X_bit_identical": "f3X_integrated(lobe) == f3X(central) to 0.0 max scaled on 37-point overlap — the background-determined scalar structure is SHARED, exactly as a same-action composition requires",
+      "strongH_a4_consistency": "a4_Horndeski vs central a4: 0.3% median mismatch — consistent with SVT contributing ~nothing to a4",
+      "alpha5_f2Y_formula": "emitter line 112: alpha5 = -(sqrt(f h)/(2 r)) * (r*(f2F - 2*h*ph^2*f2Y) + 2*h*ph*f3 + ...) — the f2Y recovery combination exists exactly as the directive stated"
+    }
+  },
+  "f2Y_recovery_status": {
+    "formula_located": true,
+    "executed": false,
+    "reason": "route disagreement must be resolved first: f2F_split is only known once the composition decomposition (central total minus strong-H contribution) is done; f2F alone is NOT S_SVT on this pair",
+    "fallback_classification_if_undetermined": "F2Y_UNDERDETERMINED_FROM_AVAILABLE_ARCHIVE"
+  },
+  "decisive_next_step": {
+    "test": "primitive-level decomposition SVT_part = CENTRAL_TOTAL - STRONG_H_contribution using the F2 39of41 carrier emission (data/authoritative/ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv), then compare SVT_part against the lobe CSV primitives (f2, f2X) with the S_SVT map applied to THAT pair",
+    "prediction_if_composition_true": "SVT_part(f2) = S_SVT(u) * lobe_f2 with a single smooth S_SVT, and f2F_part ~ S_SVT"
+  },
+  "answers": {
+    "A_split_convention_artifact": "NOT confirmed at the naive single-factor level; composition-level artifact still likely (f3X identity + a4 consistency support it)",
+    "B_residual_action_jet_mismatch": "not yet established — decomposition test pending",
+    "C_split_not_uniquely_reconstructible": "the single-factor split is not reconstructible for the lobe-central pair; the additive composition route is the remaining hypothesis"
+  },
+  "hard_rules_respected": {"no_stability_inputs": true, "no_fitting": true, "no_new_theory": true, "no_41_interpolation": true}
+}
