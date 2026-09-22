@@ -3,6 +3,37 @@
 This is the canonical continuation state. Earlier M23-first-divergence reports
 are historical and superseded by this audit. Absolute Full Closure is false.
 
+## Direct epsilon^3 angular determinant on the dense branch (2026-09-22)
+
+The exact rank-1 null-vector elimination (the project's authoritative route to
+the first nonzero angular characteristic) was applied to all 297 trusted dense
+points; the raw leading-power cubic diagnostic is superseded by this
+factorized reduction. Route oracles: witness anchor 1.12e-15 (B1/B2 at the
+canonical representative), rank-1 condition 2.34e-15, Eq. 4.46 residuals
+1.39e-10, vector-root consistency 1.01e-15. The alpha7 kinetic identity holds
+on the central genuine-SVT member (4.37e-13) and is classified as diagnostic
+only on the hybrid dense member (max scaled deviation 0.80, healthy magnitudes,
+structural not numerical).
+
+Result: the scalar-gravity angular branch is negative on ALL 297 trusted
+points; minimum cminus^2 = -1473.2079063534215 at u = 0.7063353338334584,
+adjacent to the stable light ring. The vector branch stays positive
+(min +0.048412752850779846 at the upper edge) and the third branch positive
+(min +2514.1881725342664). All discriminants positive; no root degeneracies;
+mode tracking via the exact vector-root identity, gaps 231.09/2514.09. The
+independent finite-L route (L=1000, existing DENSE_FINITE_L_ANGULAR.csv) is
+negative at exactly the same u points (Jaccard agreement 1.0): eikonal and
+finite-L agree qualitatively; the instability is not a high-L artifact.
+
+Classification: CANDIDATE_PHYSICAL_FALSIFICATION_GATE for the CURRENT member.
+This is not yet a falsification of the theory family: the H+SVT transverse
+completion is underdetermined by the background. Under the NO-FIT contract a
+repair may NOT select jets by stability margins; an independent selection
+principle must be registered before any repair attempt. Before any tangent
+sensitivity statement the tangent baseline replay mismatch (1.5626839589798224e-05
+against 1e-7) must be resolved. Evidence:
+data/generated/dense_angular_direct_2026-09-22/.
+
 ## Derived and numerically tested
 
 The Eq46 common K/M ratio and the pure kinetic identity imply the mixed identity

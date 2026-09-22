@@ -79,6 +79,34 @@
     0.0003910867902219236
   ],
   "dense_branch_angular": "DENSE_ANGULAR_FAIL",
+  "dense_angular_direct_2026-09-22": {
+    "route": "DIRECT_NULL_VECTOR_EPS3_DETERMINANT",
+    "tool": "tools/audit_dense_angular_direct.py",
+    "evidence": "data/generated/dense_angular_direct_2026-09-22/",
+    "witness_anchor_scaled": 1.1218116118742811e-15,
+    "witness_anchor_u": 0.6500150037509377,
+    "max_rank1_scaled": 2.338202021749017e-15,
+    "max_eq46_scaled": 1.3929715924098487e-10,
+    "max_eq46_vec_scaled": 1.0124898603612985e-15,
+    "alpha7_kinetic_identity": {
+      "scope": "central genuine-SVT member oracle; diagnostic only on the hybrid dense member",
+      "witness_representative_scaled": 4.3728552898183773e-13,
+      "dense_max_scaled": 0.8022350435833089
+    },
+    "trusted_points": 297,
+    "n_cminus_negative": 297,
+    "min_cminus": -1473.2079063534215,
+    "u_at_min_cminus": 0.7063353338334584,
+    "min_cV": 0.048412752850779846,
+    "min_cplus": 2514.1881725342664,
+    "n_disc_negative": 0,
+    "mode_tracking": "vector root identity-based; gaps 231.09/2514.09; no degeneracies",
+    "method_agreement_jaccard_negative_u_vs_finiteL1000": 1.0,
+    "verdict": "DENSE_ANGULAR_ACTION_DIRECT_FAIL",
+    "classification": "CANDIDATE_PHYSICAL_FALSIFICATION_GATE_FOR_CURRENT_MEMBER",
+    "repair_constraint": "NO stability fitting; any transverse-completion selection principle must be registered independently of stability margins before repair is attempted",
+    "next_bounded_work": "resolve tangent baseline replay mismatch (1.5626839589798224e-05 vs 1e-7) before any tangent sensitivity statement"
+  },
   "dense_summary": {
     "trusted_points": 297,
     "high_L_minimum": -3.0762041738033584e+59,

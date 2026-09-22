@@ -129,8 +129,8 @@
     },
     {
       "path": "CURRENT_WORKING_STATE_2026-09-21_EQ47.md",
-      "size_bytes": 3973,
-      "sha256": "849f257ea08de7786dfaa130e895b2c8308b5faf5cefa0a53697b1b47d7a84a7"
+      "size_bytes": 5906,
+      "sha256": "d3f53373b4b8bfc8ab7873378a8c0d6843cbde1ad4f654703f03bbdb52d4dca7"
     },
     {
       "path": "CURRENT_WORKING_STATE_2026-09-21_PROJECTED_CONTROLLABILITY.md",
@@ -194,8 +194,8 @@
     },
     {
       "path": "FULL_CLOSURE_WORKING_STATUS_2026-09-21_EQ47.json",
-      "size_bytes": 4383,
-      "sha256": "cdfce89e8d7e4742d2409d40caa1b9f61c1a2bd2db02a2bc0c4cbef051ef4923"
+      "size_bytes": 5925,
+      "sha256": "cab37639d77c73ec1e892024b24cd502efc6052c5eaf86178bef8b63ba1ccb27"
     },
     {
       "path": "FULL_CLOSURE_WORKING_STATUS_2026-09-21_PROJECTED_CONTROLLABILITY.json",
@@ -2201,6 +2201,21 @@
       "path": "data/generated/central/central_exact_SVT_odd_reference.csv",
       "size_bytes": 852319,
       "sha256": "449b9931ee68c56e0e61d9dde5bc4b94506adf5dd56bbf5579fe10fec9b467e5"
+    },
+    {
+      "path": "data/generated/dense_angular_direct_2026-09-22/DENSE_ANGULAR_DIRECT.csv",
+      "size_bytes": 225069,
+      "sha256": "070519fabe0a4c84192cb08c35de7dfa8cb196cc33345b056edbaefbdfe04fe2"
+    },
+    {
+      "path": "data/generated/dense_angular_direct_2026-09-22/DENSE_ANGULAR_DIRECT_SUMMARY.json",
+      "size_bytes": 1874,
+      "sha256": "661087fea5ca9411d0d344a2c2d8da215e159b1da338e8feb96a4dd94f786bcd"
+    },
+    {
+      "path": "data/generated/dense_angular_direct_2026-09-22/DENSE_DIRECT_FINITE_L_CROSS.csv",
+      "size_bytes": 685,
+      "sha256": "4b4ca9fe98ae946e0da18183e139a54be891db7bd9e0b430172347f69637b7ab"
     },
     {
       "path": "data/generated/inner/INNER_DIRECT_41_CERTIFICATE.json",
@@ -4366,6 +4381,11 @@
       "path": "tools/audit_core_generalized_psi_descriptor.py",
       "size_bytes": 2268,
       "sha256": "d728027861ae21587b108ecfef3ea2238ee778d8a47f318f3bb85a680755ccb5"
+    },
+    {
+      "path": "tools/audit_dense_angular_direct.py",
+      "size_bytes": 12034,
+      "sha256": "7472f0f4b19cee80c9fb77a2515912a8411d02a3d70b0d4e141e598b513f1a44"
     },
     {
       "path": "tools/audit_descriptor_pullback_equivalence.py",
