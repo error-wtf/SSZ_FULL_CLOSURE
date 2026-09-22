@@ -55,15 +55,12 @@ def main():
         'canon_source_hashes': {s: sha(ROOT / s) for s in CANON_SOURCES},
     }
     for c in ens['candidates']:
-        fields = [
-            f"id: {c['id']}",
-            f"name: {c['name']}",
-            f"motivation: {c.get('theoretical_motivation', '')}",
-            f"definition: {c.get('mathematical_definition', '')}",
-            f"status: {c.get('status', 'DEFINED')}",
-            f"classification: {c.get('classification', '')}",
-        ]
-        out['rule_hashes'][c['id']] = shatxt('\n'.join(fields))
+        # Hash the FULL candidate object (canonical JSON, sorted keys) so that
+        # every declared structure -- including the C3 field-space metric,
+        # chart, connection, Lambda prescription, projector and boundary
+        # conditions -- is covered by the rule hash.
+        blob = json.dumps(c, sort_keys=True, ensure_ascii=False)
+        out['rule_hashes'][c['id']] = shatxt(blob)
     PHASE1.joinpath('COMPLETION_RULE_HASHES.json').write_text(
         json.dumps(out, indent=2) + '\n')
     print(json.dumps({'rule_hashes': out['rule_hashes'],

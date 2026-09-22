@@ -4,8 +4,14 @@
   "created_utc": "2026-09-22",
   "NO_STABILITY_INFORMATION_USED": true,
   "forbidden_inputs_not_used": [
-    "K", "lambda_min(K)", "c_r^2", "c_Omega^2", "angular roots", "QNM",
-    "published perturbation roots", "historical PASS/FAIL of tangent directions",
+    "K",
+    "lambda_min(K)",
+    "c_r^2",
+    "c_Omega^2",
+    "angular roots",
+    "QNM",
+    "published perturbation roots",
+    "historical PASS/FAIL of tangent directions",
     "tangent sensitivity gradients"
   ],
   "construction_constraints": [
@@ -107,7 +113,24 @@
       "unique_member": true,
       "ensemble": false,
       "classification": "CANON_MOTIVATED_HYPOTHESIS + NEW_THEORY_HYPOTHESIS component (declared)",
-      "NO_STABILITY_INFORMATION_USED": true
+      "NO_STABILITY_INFORMATION_USED": true,
+      "phase15_audit": {
+        "audit_document": "docs/phase1/C3_FIELDSPACE_FOUNDATION_AUDIT.md",
+        "final_classification": "C3_NEW_THEORY_HYPOTHESIS_WITH_FIXED_FIELDSPACE_METRIC",
+        "C3_FIELDSPACE_COVARIANCE": "PASS_WITH_DECLARED_CONNECTION (naive-jet covariance FAIL recorded; nonlinear reparam test showed inhomogeneous jet terms 6*alpha*u'*u'')",
+        "C3_FIELDSPACE_METRIC_IS_ADDITIONAL_POSTULATE": true,
+        "added_theory_structures": [
+          "invariant chart (phi_P5, X, F, Y), on-curve shorthand Y = 4XF",
+          "flat field-space connection nabla^FS of the privileged chart",
+          "gamma_FS = delta_AB components in the privileged chart",
+          "Lambda = r_s with jet scaling r_s^(2k), canon units r_s = 1",
+          "metric-free transversality projector ker N(q) of constraint covectors (JA, E00, E11, holonomicity)",
+          "boundary conditions: lower jets fixed everywhere; no endpoint third-jet data"
+        ],
+        "EL_statement": "d^3/ds^3(gamma_AB u^B) = 0; constant gamma in privileged chart -> u^(6) = 0 -> quintic per component",
+        "nontriviality_risk_declared": "unique minimiser is the vanishing covariant third jet; mechanical stream comparison against the C0 witness is a mandatory Phase-2 step; both outcomes reportable",
+        "proceeds_to_phase2": true
+      }
     },
     {
       "id": "C4",
@@ -158,11 +181,23 @@
     }
   ],
   "phase2_plan": {
-    "members_to_replay": ["C1", "C3"],
+    "members_to_replay": [
+      "C1",
+      "C3"
+    ],
     "chain": [
-      "action", "background EOM", "background solve", "41-slot emission",
-      "constraints", "K/G/S/M", "finite-L K", "radial characteristics",
-      "angular determinant", "odd sector", "global continuation", "QNM"
+      "action",
+      "background EOM",
+      "background solve",
+      "41-slot emission",
+      "constraints",
+      "K/G/S/M",
+      "finite-L K",
+      "radial characteristics",
+      "angular determinant",
+      "odd sector",
+      "global continuation",
+      "QNM"
     ],
     "rules": [
       "no member changed after seeing results",

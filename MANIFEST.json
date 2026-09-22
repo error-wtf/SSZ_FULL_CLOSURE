@@ -3093,9 +3093,14 @@
       "sha256": "f845e60caa09711bc92d31accd68072088a7437b5fda36f3c1135207831e433b"
     },
     {
+      "path": "docs/phase1/C3_FIELDSPACE_FOUNDATION_AUDIT.md",
+      "size_bytes": 8465,
+      "sha256": "78d0a0f90a6d2892d227422873f295a7a7a4183c478d824bd8e693f5e7fa1788"
+    },
+    {
       "path": "docs/phase1/COMPLETION_RULE_HASHES.json",
       "size_bytes": 1880,
-      "sha256": "3d842623af4ff79979ab100d309e8808c2d90d020ff76f4a26a8084306b59260"
+      "sha256": "e98f440f167f62b9975a04752a2393a00dc0631535a16560a5a9755074dc4a10"
     },
     {
       "path": "docs/phase1/PHASE1_BLINDING_AUDIT.json",
@@ -3104,8 +3109,8 @@
     },
     {
       "path": "docs/phase1/PRE_REGISTERED_COMPLETION_ENSEMBLE.json",
-      "size_bytes": 9989,
-      "sha256": "b3627d0853de4550299385c80b58f655af70771aa18ed57bfafac29603100b50"
+      "size_bytes": 11426,
+      "sha256": "b26565aae6c6c4a54bf59521ea474f147db1d950fdc9ccf062eb20ed001a0d70"
     },
     {
       "path": "docs/phase1/PRE_REGISTRATION.md",
@@ -4604,8 +4609,8 @@
     },
     {
       "path": "tools/phase1_freeze_hashes.py",
-      "size_bytes": 2490,
-      "sha256": "a0ec3a4ff0a84ef7623b10ab350d3c51a6b99e01bc974e32659646c9211e025a"
+      "size_bytes": 2481,
+      "sha256": "ae09943b79766e9d059e33cc64d5cc662fec10d22c0a28e12ef09f456baece6f"
     },
     {
       "path": "tools/refreeze_dense_baseline.py",
