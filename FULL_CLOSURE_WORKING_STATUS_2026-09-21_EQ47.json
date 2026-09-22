@@ -108,12 +108,22 @@
       "cause": "TOTAL41 emitted with an intermediate holonomic re-emission chain during 1ff011f development; e3 channel drifted 1.5626839589798224e-05 vs finalized sources",
       "action": "REFREEZE_BASELINE_FROM_CURRENT_SOURCES with historical predictor c (no re-optimization); provenance in REFREEZE_PROVENANCE.json; frozen originals kept as *.2026-09-21_frozen",
       "post_refreeze_replay_scaled_error": 0.0,
-      "dense_K_after_refreeze": {"min_K": 1.2603117195246649e-05, "L": 1000, "u": 0.7048124531132783, "status": "DENSE_K_PASS_UNCHANGED"}
+      "dense_K_after_refreeze": {
+        "min_K": 1.2603117195246649e-05,
+        "L": 1000,
+        "u": 0.7048124531132783,
+        "status": "DENSE_K_PASS_UNCHANGED"
+      }
     },
     "tangent_sensitivity_2026-09-22": {
       "status": "EVALUATED_TWO_STEPS_L1000",
       "evidence": "data/generated/angular_eq47_projection_2026-09-21/DENSE_ACTION_TANGENT_SENSITIVITY.csv",
-      "derivatives_d_root_dc_axis": [-2429.8344175349484, 1074.147858548713, 269.02924520300076, -193.94225691939934],
+      "derivatives_d_root_dc_axis": [
+        -2429.8344175349484,
+        1074.147858548713,
+        269.02924520300076,
+        -193.94225691939934
+      ],
       "worst_point_u": 0.7063353338334584,
       "finite_L1000_worst_root": -1481.4835824739075,
       "mode_character": "pure project-psi branch (psi_coordinate_weight 0.99997)",
@@ -174,7 +184,10 @@
       "chain_termination": "FIRST_FAILING_GATE_K",
       "verdict": "K_GHOST_FAIL",
       "evidence": "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE.json",
-      "per_L_min_K_at_umax": {"6": -0.10788632373974315, "1000": -18.522265817831975},
+      "per_L_min_K_at_umax": {
+        "6": -0.10788632373974315,
+        "1000": -18.522265817831975
+      },
       "meaning": "The background-forced action alone contains a kinetic ghost on the certified dense branch; the historical K>0 transverse repair was necessary, not cosmetic. The minimal-completion hypothesis is refuted."
     },
     "structural_consequence": "Within this background-null bundle the viable member set is governed by TWO construction constraints: K>0 (forces c!=0) and angular c_Omega>0 (open for every K-viable member). Any member selected to satisfy both can classify neither gate as INDEPENDENT_PREDICTION. Absolute Full Closure with all gates as independent predictions is therefore unreachable within this bundle; breaking the circularity requires an independent covariant completion principle that fixes the transverse jets from theory rather than from stability.",
@@ -186,5 +199,30 @@
       "finding": "Our two falsification results are live instances of the canon's own warnings: effective/one-dimensional constructions promoted to Lorentzian actions introduce extra degrees of freedom and stability problems (Variational Bridge section 20), and the transition must carry the required response change without unacceptable instability (Middle Bridge). The V3 program therefore continues the canon's own stated research target: a deeper SSZ vacuum/phase/segmentation dynamics from which the effective principles reduce."
     }
   },
-  "method_pipeline": "PASS"
+  "method_pipeline": "PASS",
+  "phase2_blind_forward_replay_2026-09-22": {
+    "members": [
+      "C1",
+      "C3"
+    ],
+    "unblinding_log": "data/generated/phase2/PHASE2_UNBLINDING_LOG.json",
+    "git_commit_before_unblind": "54332690b61cd3f4291b371e41ac47c19b68492d",
+    "C1": {
+      "result": "K_GHOST_FAIL",
+      "stream": "identical to C0 witness (machine precision)",
+      "ledger": "data/generated/phase2/PHASE2_RESULTS_C1.json",
+      "absolute_full_closure": false,
+      "scope_limit": "C1_SCOPE_LIMIT registered"
+    },
+    "C3": {
+      "result": "K_GHOST_FAIL",
+      "classification": "NEW_THEORY_HYPOTHESIS_WITH_FIXED_FIELDSPACE_METRIC (never renamed)",
+      "nontriviality_check": "TRIVIAL (Gram positive definite; unique minimizer c=0)",
+      "stream": "identical to C0 witness (machine precision)",
+      "ledger": "data/generated/phase2/PHASE2_RESULTS_C3.json",
+      "absolute_full_closure": false
+    },
+    "interpretation": "Both pre-registered, stability-blind completion hypotheses select the already-falsified minimal stream: the kinetic ghost is the genuine prediction of both C1 and C3. Per frozen semantics: no repair, no new completion, no optimization; downstream gates NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL / DIAGNOSTIC_AFTER_UPSTREAM_FAIL.",
+    "no_repair_performed": true
+  }
 }

@@ -1,0 +1,37 @@
+{
+  "PHASE2_UNBLINDING_LOG": true,
+  "created_utc": "2026-09-22T13:27:45.589866+00:00",
+  "git_commit_before_unblind": "54332690b61cd3f4291b371e41ac47c19b68492d",
+  "theory_hashes": {
+    "PRE_REGISTRATION.md": "dcc34127cb04f0150aa0dd764cc976f5e6ad85e60765c63db2a92607f521c4e4",
+    "PRE_REGISTERED_COMPLETION_ENSEMBLE.json": "b26565aae6c6c4a54bf59521ea474f147db1d950fdc9ccf062eb20ed001a0d70"
+  },
+  "rule_hashes": {
+    "C0": "e13a06e36b93011d5e71d770e7de44d7d2b51332b178465fa1a50473d666ca19",
+    "C1": "038a03d2123f57ff5bf7ba3c865f1b894b13bfa2effe0086a2243e310e778b45",
+    "C2": "d129cacc4c9796802bfaf70a0b25a9eda2c57b3c38e91d956e5eeaba113be66d",
+    "C3": "15df4cafabe4cfb9239980dd6ff8650269ca7bd5830d58d44b3f7d93420a6666",
+    "C4": "69e1eebf0b27964242ee769d3da226ca70493dd6c2a4a769a65768b55664e28d",
+    "C5": "6d11566aa7b48a46d33805093e66f8e357ad4085eddcc8f52060a805ec3d0ef6",
+    "C6": "21c7160312fd69f95edabd81f5c1f0a234435e1730cebd427c2b2e2fd49174cf"
+  },
+  "first_stability_file_reads": [
+    "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE.json",
+    "data/generated/phase2/PHASE2_K_GATES_C1_C3.json"
+  ],
+  "members": [
+    "C1",
+    "C3"
+  ],
+  "frozen": true,
+  "gram_evidence": {
+    "C1": {
+      "stream_identical_to_C0_machine_precision": true,
+      "max_scaled_dev": 0.0
+    },
+    "C3": {
+      "stream_identical_to_C0_machine_precision": true,
+      "max_scaled_dev": 0.0
+    }
+  }
+}

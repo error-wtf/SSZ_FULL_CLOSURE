@@ -1,0 +1,63 @@
+{
+  "member_id": "C1_MINIMAL_COVARIANT_OPERATOR_COMPLETION",
+  "theory_hash_ref": "docs/phase1/COMPLETION_RULE_HASHES.json",
+  "unblinding_log": "data/generated/phase2/PHASE2_UNBLINDING_LOG.json",
+  "gate_chain": {
+    "BACKGROUND": {
+      "verdict": "PASS",
+      "note": "JA=E00=E11=0 solved by frozen algebraic corrector (construction); raw diagnostics on re-emitted stream: see PHASE2_BACKGROUND_RESIDUALS.json (E00=1.036, E11=0.0429, JA=0.0; recorded caveat, identical for the C0 witness)"
+    },
+    "SLOT_41": {
+      "verdict": "PASS",
+      "note": "41-slot absolute re-emission via frozen machinery"
+    },
+    "CONSTRAINTS": {
+      "verdict": "PASS",
+      "note": "constraint pivots of the frozen construction; no gate failure recorded"
+    },
+    "K": {
+      "verdict": "FAIL",
+      "min_K": -18.522265817831975,
+      "L": 1000,
+      "u": 0.7079894973743436,
+      "first_cause": "kinetic ghost in the (2,2) scalar sector of the minimal construction",
+      "margin": "-18.522265817831975 (min eigenvalue at L=1000)",
+      "reproducible": true,
+      "evidence": "data/generated/phase2/PHASE2_K_GATES_C1_C3.json"
+    },
+    "RADIAL": {
+      "verdict": "NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL"
+    },
+    "ANGULAR": {
+      "verdict": "DIAGNOSTIC_AFTER_UPSTREAM_FAIL",
+      "note": "stream machine-identical to the C0 witness (max scaled dev 0.0); witness angular results carry over by stream identity: DENSE_ANGULAR_ACTION_DIRECT_FAIL, cminus^2<0 on 297/297",
+      "evidence": "data/generated/dense_angular_direct_2026-09-22/"
+    },
+    "ODD": {
+      "verdict": "NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL"
+    },
+    "CONTINUATION": {
+      "verdict": "NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL"
+    },
+    "GLOBAL": {
+      "verdict": "NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL"
+    },
+    "PPN": {
+      "verdict": "NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL"
+    },
+    "REGULARITY": {
+      "verdict": "NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL"
+    },
+    "QNM": {
+      "verdict": "NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL"
+    },
+    "TRAPPING": {
+      "verdict": "NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL"
+    }
+  },
+  "absolute_full_closure": false,
+  "no_repair_performed": true,
+  "operational_realization": "the frozen canon machinery's minimal on-shell construction (three EOM-forced first jets, zero transverse content); scope limit: operator-subset minimisation below this construction would require covariant builder infrastructure not present in the frozen machinery (registered as C1_SCOPE_LIMIT, not silently skipped)",
+  "prediction_statement": "C1 predicts: the minimal covariant operator completion coincides with the background-forced stream and carries its kinetic ghost. K_GHOST_FAIL.",
+  "member_file": "data/generated/phase2/PHASE2_C1_MEMBER_TOTAL41.csv"
+}

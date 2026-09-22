@@ -1,0 +1,12 @@
+{
+  "gram_eigenvalues": [
+    1539888182.442726,
+    4058824784.148392,
+    14838834317.785948,
+    42998544563.056564
+  ],
+  "positive_definite": true,
+  "unique_minimizer": "c = 0 (vanishing covariant third jet)",
+  "nontriviality_check": "TRIVIAL \u2014 per owner directive this is C3 genuine prediction",
+  "note": "first quadrature attempt used descending u and produced unphysical negative eigenvalues; corrected to ascending"
+}

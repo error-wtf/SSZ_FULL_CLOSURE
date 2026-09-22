@@ -194,8 +194,8 @@
     },
     {
       "path": "FULL_CLOSURE_WORKING_STATUS_2026-09-21_EQ47.json",
-      "size_bytes": 11770,
-      "sha256": "9a98215fe28a033cb8e0a961aea08d7bfedcf86563f38ee6c26516efe08ec286"
+      "size_bytes": 13164,
+      "sha256": "1c4668250fad46dc7c0c41809db592cbbed8ba42f19f8310d10ddb55deae092e"
     },
     {
       "path": "FULL_CLOSURE_WORKING_STATUS_2026-09-21_PROJECTED_CONTROLLABILITY.json",
@@ -2516,6 +2516,46 @@
       "path": "data/generated/outer/outer_same_action_H_SVT_DIRECT_41.csv",
       "size_bytes": 2306771,
       "sha256": "fa0bd5b6a68bfbad981df23b61a5acc907de81e4178b1af0462fe12d92b6d581"
+    },
+    {
+      "path": "data/generated/phase2/PHASE2_BACKGROUND_RESIDUALS.json",
+      "size_bytes": 99,
+      "sha256": "2bc9db758775201cac27bf07f075bb2d6c4899c98ef611ddf00fae565327c10d"
+    },
+    {
+      "path": "data/generated/phase2/PHASE2_C1_MEMBER_TOTAL41.csv",
+      "size_bytes": 526898,
+      "sha256": "8e3f26b34e61ac148224d60e79f032b1ddb181112e26406fa1ac5ab3656ad58a"
+    },
+    {
+      "path": "data/generated/phase2/PHASE2_C3_GRAM.json",
+      "size_bytes": 435,
+      "sha256": "164b504841059b83b06ee5f3ece0378a67357a6ce53e90333992ae1af18f9add"
+    },
+    {
+      "path": "data/generated/phase2/PHASE2_C3_MEMBER_TOTAL41.csv",
+      "size_bytes": 526898,
+      "sha256": "8e3f26b34e61ac148224d60e79f032b1ddb181112e26406fa1ac5ab3656ad58a"
+    },
+    {
+      "path": "data/generated/phase2/PHASE2_K_GATES_C1_C3.json",
+      "size_bytes": 309,
+      "sha256": "5dfdddb7dfb6e1233bab35fbff66ac5efdd8184ec1a7b047501a92b58dff227a"
+    },
+    {
+      "path": "data/generated/phase2/PHASE2_RESULTS_C1.json",
+      "size_bytes": 2766,
+      "sha256": "2018b7c8644ea79ba0fd046a1410dcb801f1a9759f40971e041e022d7c06ae15"
+    },
+    {
+      "path": "data/generated/phase2/PHASE2_RESULTS_C3.json",
+      "size_bytes": 3294,
+      "sha256": "1518371982b83fde7783999ebd6d03e628a2dbdeacbcbcdbb8a75367465313f8"
+    },
+    {
+      "path": "data/generated/phase2/PHASE2_UNBLINDING_LOG.json",
+      "size_bytes": 1433,
+      "sha256": "8b940397a7bb6758e78b14357dea10b0ba059f24046e808d82c6003ce5913b34"
     },
     {
       "path": "data/generated/pure_h/CORE_DIRECT_41_CERTIFICATE.json",
