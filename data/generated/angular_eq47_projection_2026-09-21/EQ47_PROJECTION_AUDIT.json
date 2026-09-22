@@ -81,19 +81,31 @@
   "dense_branch_angular": "DENSE_ANGULAR_FAIL",
   "dense_summary": {
     "trusted_points": 297,
-    "high_L_minimum": -3.0762041738033584e+59,
+    "high_L_minimum": -3.0762041735249907e+59,
     "u_at_minimum": 0.7002175543885971,
     "finite_L_all_positive": false,
     "high_L_order_status": "UNRESOLVED_NONUNIFORM_LEADING_ORDER",
     "high_L_minimum_scope": "raw diagnostic only when order unresolved",
     "leading_order_counts": {
-      "1": 101,
-      "3": 196
+      "1": 94,
+      "3": 203
     },
     "coordinate_weights_scope": "project differential basis; not invariant physical mode fractions",
-    "tangent_bundle_sensitivity": "HELD_BASELINE_REPLAY_MISMATCH",
+    "tangent_bundle_sensitivity": "EVALUATED_TWO_STEPS_L1000",
     "oracle_scope": "GM_GHS input absent; diagnostic scan does not release continuation",
-    "tangent_baseline_replay_scaled_error": 1.5626839589798224e-05
+    "tangent_baseline_replay_scaled_error": 2.9064985628996796e-16,
+    "finite_L1000_worst": {
+      "u": 0.7063353338334584,
+      "x": 1.415758142202444,
+      "L": 1000,
+      "mode": 0,
+      "root_re": -1481.4835824739075,
+      "root_im": 0.0,
+      "psi_coordinate_weight": 0.9999746514757097,
+      "scalar_coordinate_weight": 4.3857111664472253e-07,
+      "vector_coordinate_weight": 2.4909953173611988e-05,
+      "positive": false
+    }
   },
   "eq47_only_shortcut_correction": "DETERMINANT_RECONSTRUCTION_WITH_LITERAL_MASS_SLOTS_M5_PLUS",
   "coupled_quadratic_derivation": {

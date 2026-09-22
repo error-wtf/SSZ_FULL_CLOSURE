@@ -34,6 +34,33 @@ sensitivity statement the tangent baseline replay mismatch (1.5626839589798224e-
 against 1e-7) must be resolved. Evidence:
 data/generated/dense_angular_direct_2026-09-22/.
 
+## Tangent baseline resolved; sensitivity evaluated (2026-09-22, autopilot run)
+
+The 1.5626839589798224e-05 replay mismatch was localized: the frozen TOTAL41
+was emitted with an intermediate holonomic re-emission chain (e3 channel,
+dr-composition in absolute_reemit) that predates the finalized sources of the
+same commit; the stored STATE.npz carried no source hashes. The baseline was
+re-frozen from the committed canonical sources using the HISTORICAL predictor
+coefficients c (no re-optimization, no fitting); frozen originals are kept as
+*.2026-09-21_frozen; provenance with full source hashes is in
+REFREEZE_PROVENANCE.json. Post-refreeze replay error: 0.0 (guard 1e-7 PASS).
+The dense K gate is unchanged (min_K = 1.2603117195246649e-05 at L=1000,
+u=0.7048124531132783; DENSE_K_PASS).
+
+With the guard satisfied, the tangent sensitivity was evaluated for the first
+time (DENSE_ACTION_TANGENT_SENSITIVITY.csv): all four background-null axes
+reach the angular margin at the worst point u=0.7063353338334584
+(d(root)/d(axis) = -2429.83, +1074.15, +269.03, -193.94 at L=1000). The
+unstable finite-L mode is a pure project-psi branch (psi weight 0.99997,
+root -1481.48 at L=1000), agreeing with the direct eikonal value -1473.21 at
+the same u. Controllability is therefore demonstrated, but per the NO-FIT
+contract these gradients may not be used to choose a repair. The honest
+end states are: (A) PHYSICAL_FALSIFICATION_GATE for the certified member, or
+(B) declaring angular positivity a CONSTRUCTION_CONSTRAINT with a pre-registered,
+stability-independent transverse selection principle -- which demotes the
+angular gate from independent prediction in any future closure ledger.
+This choice belongs to the theory owner, not the agent.
+
 ## Derived and numerically tested
 
 The Eq46 common K/M ratio and the pure kinetic identity imply the mixed identity

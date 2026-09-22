@@ -2,20 +2,20 @@
   "route": "DIRECT_NULL_VECTOR_EPS3_DETERMINANT",
   "trusted_points": 297,
   "guard_points": 179,
-  "guard_min_root": -213746.26994944387,
+  "guard_min_root": -213746.26913801418,
   "margins": {
-    "min_cminus": -1473.2079063534215,
+    "min_cminus": -1473.2079433146039,
     "u_at_min_cminus": 0.7063353338334584,
-    "min_cV": 0.048412752850779846,
+    "min_cV": 0.04841275285050084,
     "u_at_min_cV": 0.7079894973743436,
-    "min_cplus": 2514.1881725342664,
+    "min_cplus": 2514.1881743731856,
     "u_at_min_cplus": 0.7002175543885971
   },
   "crossings": {
     "n_disc_negative": 0,
     "n_disc_degenerate": 0,
-    "min_gap_V_minus": 231.08679593689166,
-    "min_gap_V_plus": 2514.086461590573
+    "min_gap_V_minus": 231.0867889898516,
+    "min_gap_V_plus": 2514.0864634294926
   },
   "first_zero_crossing_cminus": null,
   "n_cminus_negative": 297,
@@ -25,19 +25,19 @@
     "n_negative_finiteL1000": 297
   },
   "oracles": {
-    "max_rank1_scaled": 2.338202021749017e-15,
-    "max_eq46_scaled": 1.3929715924098487e-10,
-    "max_eq46_vec_scaled": 1.0124898603612985e-15,
+    "max_rank1_scaled": 2.1449691843853085e-15,
+    "max_eq46_scaled": 1.0792313046577096e-10,
+    "max_eq46_vec_scaled": 1.2543849527385304e-15,
     "alpha7_kinetic_identity": {
       "scope": "central genuine-SVT member oracle; diagnostic only on the hybrid dense member",
       "witness_representative_scaled": 4.3728552898183773e-13,
-      "dense_max_scaled": 0.8022350435833089
+      "dense_max_scaled": 0.8022350502589939
     },
     "witness_anchor_scaled": 1.1218116118742811e-15,
     "witness_anchor_u": 0.6500150037509377,
     "witness_negative_points": 3035
   },
-  "finite_L_cross_max_identity": 3.444599490569523,
+  "finite_L_cross_max_identity": 3.4445994205147263,
   "finite_L_converging_toward_direct": true,
   "dense_branch_angular_direct": "DENSE_ANGULAR_ACTION_DIRECT_FAIL",
   "interpretation": "Primary-action angular scalar-gravity branch is negative across the certified dense branch (eikonal route), qualitatively consistent with the independent finite-L scan. Per contract this is a candidate PHYSICAL_FALSIFICATION_GATE for the current member, pending the section-38 exclusion checklist; NO stability fitting permitted.",

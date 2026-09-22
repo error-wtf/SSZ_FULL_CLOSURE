@@ -1,0 +1,88 @@
+{
+  "action": "REFREEZE_BASELINE_FROM_CURRENT_SOURCES",
+  "reason": "historical TOTAL41 was emitted with an intermediate version of the holonomic re-emission chain; max slot drift e3=1.5626839589798224e-05; this refreeze re-emits from committed canonical sources with the HISTORICAL predictor coefficients c (no re-optimization, no fitting)",
+  "git_head": "a3afb5d5e9c6caf6579d23e87f661f788884f550",
+  "predictor_coefficients_c": [
+    -0.08409032140882212,
+    -0.2254425096952444,
+    -0.3223223184527862,
+    0.09666464883889786
+  ],
+  "source_hashes": {
+    "src/ssz_p5/production/electric_hybrid_onshell_central.py": "b25fe1dc757295c350d5f45f9bafbfded08d27dba61d404649f9a653a3cafb16",
+    "src/ssz_p5/production/strong_field_continuation.py": "dad790c76de2b60eae49ccb74d1d2715ad8ca517ce04a355bc6becae3dcfe89a",
+    "src/ssz_p5/production/strong_field_transition.py": "d406cb41c85cea67c9e60b092dfb3723868a928f034ba3459e39199df7989d65",
+    "src/ssz_p5/coefficients/mh_general_primitives.py": "ae4be39fc859d712b97aad8157f8188442a7180a6b3419e9a1fc9dcd660158dd",
+    "src/ssz_p5/production/full_action_lower.py": "9a2b97ef5bee4378ff68ff0f54d076df2af8042c2cac785c0846b98834377438",
+    "src/ssz_p5/production/svt_background_eom.py": "14bbe15bba101563ed443f4d1b41f54f8a00303797b603f7f3328668ccefad1f",
+    "src/ssz_p5/jets/jet9d8.py": "60c68799ba4d602401dd54c855b570c882523a54bfedd5d7212c5e4393f0d3bb",
+    "src/ssz_p5/reducer/kinetic_schur.py": "b648eb6a2886c5e29112271b8d22b1293908ea4db8e144223c853ae19b4132cf",
+    "tools/audit_transition_horndeski_a1_projection.py": "08cbf91a2ceaf5c8e25d76f80735a0d36b9bec76c52386883459997e0c57b2b6",
+    "tools/advance_transition_dense_h_continuation.py": "380a00aceff73ad51ba8fbb093b4c0da396b89e3b306be148a6ff4bc966b2a7c",
+    "src/ssz_p5/paths.py": "fe2665967727c0e96c37906bc4a7eb54bb0bff8096d305300298f40f54a5bc08"
+  },
+  "max_scaled_slot_shift_vs_frozen": 1.5626839589798224e-05,
+  "worst_slots": [
+    [
+      "e3",
+      1.5626839589798224e-05
+    ],
+    [
+      "e1",
+      1.4064925335510736e-09
+    ],
+    [
+      "a2",
+      8.212109832141147e-10
+    ],
+    [
+      "d3",
+      7.423631369205057e-10
+    ],
+    [
+      "v13",
+      2.4457691537679566e-10
+    ],
+    [
+      "e4",
+      2.3028655274426792e-10
+    ],
+    [
+      "a5",
+      1.4580272212598567e-10
+    ],
+    [
+      "c3",
+      1.0687038215982622e-10
+    ]
+  ],
+  "u_grid_matches_frozen": true,
+  "preserved_frozen_suffix": ".2026-09-21_frozen",
+  "bundle_meta": [
+    {
+      "basis": 0,
+      "max_abs_bg_null": 8.64563832469084e-13,
+      "max_abs_da1": 0.2332858553579405,
+      "max_abs_dc4": 0.3063898764718347
+    },
+    {
+      "basis": 1,
+      "max_abs_bg_null": 2.864583841014054e-13,
+      "max_abs_da1": 0.04867418092793702,
+      "max_abs_dc4": 0.062415760835769926
+    },
+    {
+      "basis": 2,
+      "max_abs_bg_null": 9.491306800058935e-14,
+      "max_abs_da1": 0.016074362154373387,
+      "max_abs_dc4": 0.020912657605690728
+    },
+    {
+      "basis": 3,
+      "max_abs_bg_null": 3.144781572912707e-14,
+      "max_abs_da1": 0.006637545993219992,
+      "max_abs_dc4": 0.00900226366724965
+    }
+  ],
+  "post_refreeze_replay_scaled_error": 0.0
+}
