@@ -201,3 +201,23 @@ never the universal one.
 
 No further protocol architecture needed. The next relevant output is the
 actual symbolic LR identity.
+
+## STEP 1 AMENDMENT — f2Y SYMBOLIC + SOLVE RANK (owner, final)
+
+1. f2Y stays SYMBOLIC through the C_bg construction. Order:
+   C_bg(f2Y symbolic) -> MH-/eps_Y-checks -> f2Y=0 production-branch specialization
+   -> real member evaluation.
+   Rationale: the combination f2F - 2 h phi'^2 f2Y is the ideal vehicle; zeroing
+   f2Y at the entrance would remove the eps_Y falsification test by definition.
+   (Evaluator context: the current branch REJECTS nonzero f2Y — that is a branch
+   postulate, registered; the symbolic derivation must not inherit it.)
+
+2. LOCAL SOLVE RANK is part of the derivation:
+   det[ d(JA, E00, E11) / d(f2F, f2, f2X) ] != 0,
+   evaluated in particular at the inner light ring. Basis order:
+   JA=0 -> f2F = J[remaining jets]
+   E00=0, E11-E00=0 -> f2, f2X (diagonalized basis; kappa = -2X documented)
+   E_phi=0 -> d f3X / dr = S[f3X, ...]
+   These results enter the UNDIVIDED Eq.85-generating combination — not the
+   reverse. Then ring limit, then subtract geometry + MH-electric; only the
+   remainder is Sigma_SVT.
