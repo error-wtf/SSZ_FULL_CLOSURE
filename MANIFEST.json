@@ -2583,9 +2583,24 @@
       "sha256": "0a452646fc41a57efc69280276f9bf14e290723665b4702281e40bbdd4f6b209"
     },
     {
+      "path": "data/generated/phase2_q2/HISTORICAL_GENERATOR_REPLAY.csv",
+      "size_bytes": 17035982,
+      "sha256": "b4f7c221c37efb1b855765807bcdac5cf8252bc102df909900fc1c0946d6187d"
+    },
+    {
+      "path": "data/generated/phase2_q2/HISTORICAL_GENERATOR_REPLAY_AUDIT.json",
+      "size_bytes": 552,
+      "sha256": "ec7d736a799966722b59f1248eaef1cebdb9c97a6643031b6471f9dac308a861"
+    },
+    {
       "path": "data/generated/phase2_q2/Q2_CHAIN_DECOMPOSITION_AUDIT.json",
       "size_bytes": 3431,
       "sha256": "42e2e66579d48b55e80f396d29420d90a4329b8e89200c00cdb521ec6fda5c72"
+    },
+    {
+      "path": "data/generated/phase2_q2/Q2_INSTRUMENTATION_NOOP_AUDIT.json",
+      "size_bytes": 1582,
+      "sha256": "73e2f9d418a05a46b6f23fd76e6742ddd1856fc143b3d8a7c679869c4bc4727b"
     },
     {
       "path": "data/generated/phase2_q2/Q2_INTERFACE_TEST.json",
@@ -2601,6 +2616,66 @@
       "path": "data/generated/phase2_q2/Q2_SPLIT_RECOVERY_AUDIT.json",
       "size_bytes": 3386,
       "sha256": "8359d1766ee3fb37b8f0a9872ca1ef147c4c66aeb23d039f9c053e9a84b1841d"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/POST_SELECTION_central_exact_SVT.csv",
+      "size_bytes": 3742865,
+      "sha256": "8278a6ab2dd5a9161470f71910944752b52a92930e915b7142c3127ac15b69c1"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/POST_SELECTION_inner_same_action.csv",
+      "size_bytes": 1581617,
+      "sha256": "80096647196394add1a06be4dd2afe58d5dd0e5f19f340e53db4ee44333dd88a"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/POST_SELECTION_outer_same_action.csv",
+      "size_bytes": 2634734,
+      "sha256": "ca484e00596fc6850a1d9fff5dbe1eff5e3e421ad876ba08faf83aa843178270"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/POST_SELECTION_punctured_core.csv",
+      "size_bytes": 3323879,
+      "sha256": "203dbc60151ca94be6b8b3a852e41fe4d27fa9afad2e6343ee0c04fb3db1f427"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/POST_SELECTION_strong_H.csv",
+      "size_bytes": 4819046,
+      "sha256": "96493054e8a0569d95fc88110ea5624695e707e4a0d50fb838e000367f4f6047"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/POST_SELECTION_weak_exterior.csv",
+      "size_bytes": 7516966,
+      "sha256": "fb16a2d34e9f5d83723d6f610411ceb70e2b6d190db88cb6850ac015865b78b0"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/PRE_SELECTION_central_exact_SVT.csv",
+      "size_bytes": 3472527,
+      "sha256": "6158b29ddd7eb1f8389975f88663fbdef03c69bb1d721706c2e9845d387187fa"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/PRE_SELECTION_inner_same_action.csv",
+      "size_bytes": 1442660,
+      "sha256": "dfa687b12d3d771346b2d300bdde0a06fa9abddde03f4cf1fe36c74d59b7f90f"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/PRE_SELECTION_outer_same_action.csv",
+      "size_bytes": 2435728,
+      "sha256": "81d211fb979e8e18b5bd6a7fc263331253a31913238f50659216d18a2a8b0b13"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/PRE_SELECTION_punctured_core.csv",
+      "size_bytes": 3023649,
+      "sha256": "7854cb6cd051b1cb39c647fae8a5f50c9899008bc84251aad8532cde4a4a1e0e"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/PRE_SELECTION_strong_H.csv",
+      "size_bytes": 4214009,
+      "sha256": "7e25c5f867ad84e869a8affb52f9b0eb19a80003df4792e17486aec92ca053a4"
+    },
+    {
+      "path": "data/generated/phase2_q2/q2_export/PRE_SELECTION_weak_exterior.csv",
+      "size_bytes": 6557409,
+      "sha256": "0ebdcdd1265d22bf8a40e6dbe4c399a92eb3adbec41c4c1f514634e9076e6b61"
     },
     {
       "path": "data/generated/pure_h/CORE_DIRECT_41_CERTIFICATE.json",

@@ -1,0 +1,23 @@
+{
+ "audit": "Q2_INSTRUMENTATION_NOOP_AUDIT",
+ "date": "2026-09-22",
+ "instrumentation": "pure export hooks (PRE_SELECTION per regional read; POST_SELECTION after lower_select); no logic change",
+ "INSTRUMENTATION_NOOP": "PASS",
+ "rows": 19411,
+ "max_abs_slot_diff_original_vs_instrumented": 0.0,
+ "exports": [
+  "PRE_SELECTION_{weak_exterior,strong_H,outer_same_action,central_exact_SVT,inner_same_action,punctured_core}.csv",
+  "POST_SELECTION_{...}.csv"
+ ],
+ "pre_post_finding": {
+  "weak_exterior/strong_H/outer/inner/core": "input tables already carry v5=c3=e3=0 (the F2/F3 SELECTED-era files); lower_select zeroing is idempotent there",
+  "central_exact_SVT": "PRE = Sept-12 UNREDUCED even-coefficient table (direct c3/e3/v5 values present \u2014 the pre-selection source-native object); POST = zeroed chain values; audit placement note: PRE hook sits before the u-mask (0.61-0.71) \u2014 length mismatch in the quick audit is hook placement, not generator behavior",
+  "consequence": "the historical 1.000 interface mismatches (c3/e3/v5) are the documented zeroing selection, now observable at source level"
+ },
+ "q2_status": "components EXPORTED and observable; C_shared source recovery remains the single blocker for the slot-wise composition test C_HSVT = C_MH + (C_SVT - C_shared); Q2 verdict remains Q2_UNKNOWN_ARCHIVE_INSUFFICIENT until C_shared is source-identified",
+ "candidates_now_observable": {
+  "C_MH_candidate": "PRE/POST strong_H",
+  "C_SVT_candidate": "PRE central_exact_SVT (unreduced, direct LO values)",
+  "C_shared": "UNKNOWN_PENDING_SOURCE_RECOVERY"
+ }
+}
