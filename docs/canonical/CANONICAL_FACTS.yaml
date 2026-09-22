@@ -136,3 +136,11 @@ unknowns:
     statement: "Kase-Tsujikawa Eq.85 'v8' corresponds to canonical ZK V9, NOT the 13-slot v8 column (ssz_hybrid_unreduced_even_kernel.py: 'V7=MH v6, V8=MH v7, V9=MH v8, V10=MH v9'). Additionally q_r = A0_r^2 v8_MH and q_u = A0_u^2 v8_MH differ by q_r = (u^4/r_s^2) q_u — never compared raw."
     status: SOURCE_ESTABLISHED (kernel source line 52 + owner convention analysis)
     rule: "any Eq.85 evaluation must use the V9=MH-v8 coefficient; a regression test must fail on accidental canonical-v8 use"
+
+  - id: FACT:V8_SIGN_DEAD_INNER_RING_CURRENT_MEMBER
+    statement: "on the current electric central member (dense base stream), the ZK-canonical v8 coefficient at the inner stable ring is v8 = -16.824455 < 0; since A0_u^2 >= 0, the Eq.85 electric support term 2u^2 f h A0_u^2 v8 cannot be positive for ANY A0_u — the electric channel through this coupling is sign-dead at the inner ring on this member"
+    status: CURRENT_SCOPE_LIMITED
+    scope: "this member's emitted action family; whether v8's ring-sign is fixed across the whole coupling class requires the analytic v8 form (next session)"
+    source_files: [data/generated/phase2/PHASE2_C1_MEMBER_TOTAL41.csv]
+    consequence: "the user's new necessary-condition rejector (v8>0) fires immediately — before K/radial/angular; W''=+2.59314, a4=+0.166350, u=0.706125, f=0.295885, h=0.374096"
+    next_session: "derive the analytic v8 form from the emitter/coupling functions to determine whether the sign is family-fixed or completion-dependent"
