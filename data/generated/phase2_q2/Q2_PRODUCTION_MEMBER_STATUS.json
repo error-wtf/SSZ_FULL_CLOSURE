@@ -1,0 +1,22 @@
+{
+ "audit": "Q2_PRODUCTION_MEMBER_STATUS",
+ "date": "2026-09-22",
+ "member": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
+ "sha256_verified": "742d7c1dbfa06d9870b69f2b95ae1b764b1c3083aea16d968cae5d8e136cf684",
+ "file": "archive/initial_import/originals/SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
+ "PRODUCTION_ACTION_MEMBER_STATUS": "SUPERSEDED",
+ "supersession_evidence": [
+  "README.md:20-21 \u2014 'The 2026-09-18 global A0prime=0 epsilon-Y member passes many component tests, but a denominator-free Maxwell-Horndeski Eq.85 audit excludes it at the inner P5 light ring'",
+  "README.md:101 gate table \u2014 'Rejected as global on-shell member ... inner light-ring Eq.85 forces tensor F/H ~ -1.63868 for A0prime=0'",
+  "ZERO_VECTOR_LIGHT_RING_AUDIT.json logic \u2014 'At a light ring 2f-rf'=0, Eq.85 loses the a4' control. For A0prime=0 the inner P5 light ring requires tensor_F<0 while tensor_H>0 implies a4>0. The electric term -2rfh A0prime^2 v8 is therefore a necessary available control for a stable hybrid branch.'",
+  "scope note (all observability files): 'Local necessary on-shell Eq.85 diagnostic; not a no-go theorem for electric SVT members or P5 geometry'"
+ ],
+ "blind_forward_test": "NOT EXECUTED \u2014 target is source-established superseded; executing it would re-test an action the archive excludes by a necessary local condition",
+ "replacement_identified": "on-shell ELECTRIC Horndeski/SVT hybrid (A0' != 0) \u2014 the central/dense chain already forensically mapped: minimal base K_GHOST_FAIL; K-repaired representative ANGULAR_FAIL_ROBUST; healthy-K carriers exist (strong-H, exterior); Q2 same-action assembly OPEN",
+ "consequence": {
+  "HISTORICAL_SPLIT_Q2": "UNKNOWN (C_shared pending; archival track, non-blocking)",
+  "PRODUCTION_ACTION_Q2": "the epsilon-Y production candidate is SUPERSEDED; the production same-action question returns to the ELECTRIC hybrid chain, where the open items are exactly the mapped ones (interface representatives, component-era streams, C_shared for the historical track)",
+  "no_new_theory_needed_by_this_evidence": "the Eq.85 diagnostic documents the electric term as a necessary control \u2014 consistent with everything measured this session"
+ },
+ "rule_compliance": "directive section 1 followed: supersession checked BEFORE blind test; replacement identified; no fitting; no stability inputs"
+}

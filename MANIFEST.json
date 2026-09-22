@@ -2608,6 +2608,11 @@
       "sha256": "d3074f8007f8e3d237db0f30de275d8bb8e3e681e275d62eb906e1dd2becc169"
     },
     {
+      "path": "data/generated/phase2_q2/Q2_PRODUCTION_MEMBER_STATUS.json",
+      "size_bytes": 2359,
+      "sha256": "b0883deaec85332c102d2f03216c3a48da8d99e37bb864edcf13f0ee7bb762f4"
+    },
+    {
       "path": "data/generated/phase2_q2/Q2_SAME_ACTION_COMPATIBILITY_AUDIT.json",
       "size_bytes": 2734,
       "sha256": "1dd8cc2028a12c1ed03650c63df67dc51f62d8ac1173b992c40bcf927a788b4a"
