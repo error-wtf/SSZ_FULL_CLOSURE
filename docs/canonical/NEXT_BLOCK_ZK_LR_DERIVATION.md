@@ -188,3 +188,16 @@ mathematics: does the full ZK background theory carry this channel alone, or
 does it bring a further support operator?
 
 Protocol refinement CLOSED. No further meta-work.
+
+## FINAL EVALUATION ORDERING (owner, session close)
+
+Primary test: evaluate the FULL on-shell LR balance
+  C_LR^full (respectively Delta_LR^full if the three-channel reduction is proven).
+DIAGNOSTIC (secondary, Eq.85/MH channel only): A0_u^2 >? 0.2230195, S_LR^Eq85.
+Reason: if C_genuine SVT != 0, then A0_u^2 < 0.2230195 can still be carried by a
+positive genuine-SVT term — or an additional negative term can consume an
+apparently sufficient Eq.85 support. 0.2230195 is the Eq.85/MH-channel threshold,
+never the universal one.
+
+No further protocol architecture needed. The next relevant output is the
+actual symbolic LR identity.
