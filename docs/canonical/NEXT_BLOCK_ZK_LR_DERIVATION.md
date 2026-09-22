@@ -1,6 +1,29 @@
-# NEXT WORK BLOCK — ZK-LR DERIVATION (frozen 2026-09-22, commit 59050778+)
+# NEXT WORK BLOCK — ZK-LR DERIVATION (frozen 2026-09-22, commit 59050778+; STEP 0 appended per owner)
 
 Frozen protocol (owner directive; no deviations, no interpretation freedom):
+
+## STEP 0 — ASSERT_EQ85_V8_AT_INNER_LR (TOP PRIORITY, before everything)
+
+Prerequisites to nail down BEFORE any derivation:
+  1. Is -16.824455 the correctly mapped Eq.-85 v8 coefficient (ZK-V9 per the
+     V9=MH-v8 sub-scheme mapping) at the inner stable light ring?
+  2. Was it evaluated on the same final same-action member (the electric central
+     stream) — not on another representative?
+
+Output (mandatory fields):
+  r_LR, u_LR, v8^Eq85, W''(u_LR), a4, sgn v8.
+
+If v8^Eq85 ~ -16.824455 is confirmed:
+  hard reject for THIS member: v8 <= 0 => Delta_LR < 0 for EVERY real A0_u
+  (A0_u^2 >= 0, v8 < 0 => electric term <= 0, W'' a4 > 0) — the Eq.85 electric
+  channel has the WRONG SIGN, not merely insufficient magnitude.
+  The search then shifts from "more electric support" to "which SVT structure
+  can deliver the correct sign at all" (STEP 1 becomes decisive).
+
+If the mapping or member identity does NOT confirm:
+  the -16.82 value is misattributed; redo the evaluation on the correctly
+  mapped coefficient of the final member before any conclusion.
+
 
 ## STEP 1 — General ZK-LR identity, symbolically, undivided
 
