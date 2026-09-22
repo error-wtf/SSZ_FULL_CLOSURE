@@ -106,11 +106,17 @@ Reason: if STEP 1 finds Sigma_SVT != 0, Delta_LR^full > 0 can hold while
 Xi_MH ∝ v8 < 0 (Sigma_SVT overcompensates the load) — the old gate would
 falsely reject a physically valid case C.
 
-BRANCH RULE (frozen):
-  Sigma_SVT = 0:
-    reduced sharper conditions valid: v8 > 0, S_LR^Eq85 > 1, Delta_LR^full > 0
+BRANCH RULE (frozen, WITH PREMISE GUARD):
+  PREMISE (mandatory): f > 0, h > 0, W'' > 0, a4 > 0 at the inner ring.
+  Without these the sharpened rule is applied OUTSIDE its derivation domain.
+  Sigma_SVT = 0 AND premises hold:
+    necessary: v8 > 0, S_LR^Eq85 > 1, Delta_LR^full > 0
+    (then W'' a4 > 0 and S_LR is well-defined with its intended meaning)
   Sigma_SVT != 0:
     Delta_LR^full > 0 only; v8, S_LR^Eq85 diagnostic
+  Premises not met:
+    no sharpened rule; fall back to the universal gate + explicit
+    UNKNOWN/Premise-violation record.
 
 One table, one member, one hash. No "scalar solved file" vs "metric solved file".
 
