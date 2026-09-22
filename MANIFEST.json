@@ -2643,6 +2643,11 @@
       "sha256": "5e6bde76110c03ca20be3e73ebba08a90cb4d5f4e00b4ab0a5eedd74b43271ff"
     },
     {
+      "path": "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_PROVENANCE.json",
+      "size_bytes": 2205,
+      "sha256": "77c0e7ceb3c3f369eeb9b54b902ab733de2179e98850b0a06ea965ad66aa606d"
+    },
+    {
       "path": "data/generated/strong_field_transition_2026-09-21/REFREEZE_PROVENANCE.json",
       "size_bytes": 3178,
       "sha256": "3d52d97cb06e4362db9af7e110479b87d4cd541e7bc8a6cbf2fad4e2e0614d89"
@@ -2731,6 +2736,11 @@
       "path": "data/generated/strong_field_transition_2026-09-21/TRANSITION_JOINT_DENSE_TOTAL41_PREDICTOR.csv",
       "size_bytes": 546289,
       "sha256": "c1b1ed44d1008b7042e8455cd35938f5181bbfcaf23c497807d5cbde8a073c88"
+    },
+    {
+      "path": "data/generated/strong_field_transition_2026-09-21/TRANSITION_PROSPECTIVE_V2_TOTAL41.csv",
+      "size_bytes": 526898,
+      "sha256": "8e3f26b34e61ac148224d60e79f032b1ddb181112e26406fa1ac5ab3656ad58a"
     },
     {
       "path": "data/generated/strong_field_transition_2026-09-21/TRANSITION_TRUST_CONTINUATION_ACTION.csv",
@@ -4501,6 +4511,11 @@
       "path": "tools/build_inner_targets.py",
       "size_bytes": 505,
       "sha256": "4d6cefbd3f129d3641c83e1e593b6451fae870a8651a27da715780123994a928"
+    },
+    {
+      "path": "tools/build_prospective_member_v2.py",
+      "size_bytes": 4444,
+      "sha256": "a8902fd9b70aec7fcfa9c79fa09f18ff8a2f3434246eafc2692175ee79abf018"
     },
     {
       "path": "tools/build_ssz_p5_full_closure_monograph.py",

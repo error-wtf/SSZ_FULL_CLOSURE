@@ -1,0 +1,25 @@
+{
+  "member_id": "PROSPECTIVE_V2_TRANSVERSE_ZERO",
+  "rule_text": "PROSPECTIVE_V2_TRANSVERSE_ZERO: c = 0. The prospective member exercises none of the background-null transverse freedom. Justification: minimal operator content / minimal covariant action complexity / parameter-free uniqueness of the no-free-freedom completion. Fixed without consulting K, c_r^2, c_Omega^2, QNM, published-root or observational information. Frozen in commit 1be3551 before any stability evaluation of this member.",
+  "rule_text_sha256": "a2bf3f9498df63151b3db05241ed1573c1a4ea00b25062b9ac351f4fc5effb22",
+  "rule_freeze_commit": "1be3551",
+  "stability_information_used_in_selection": false,
+  "background_identical_to_failed_member": true,
+  "x_grid_identical_to_failed_member": true,
+  "rows": 476,
+  "git_head": "1be3551089fe4490a5156ed99b68d6e768dfb73b",
+  "built_utc": "2026-09-22T12:24:07.248803+00:00",
+  "source_hashes": {
+    "src/ssz_p5/production/electric_hybrid_onshell_central.py": "b25fe1dc757295c350d5f45f9bafbfded08d27dba61d404649f9a653a3cafb16",
+    "src/ssz_p5/production/strong_field_continuation.py": "dad790c76de2b60eae49ccb74d1d2715ad8ca517ce04a355bc6becae3dcfe89a",
+    "src/ssz_p5/production/strong_field_transition.py": "d406cb41c85cea67c9e60b092dfb3723868a928f034ba3459e39199df7989d65",
+    "src/ssz_p5/coefficients/mh_general_primitives.py": "ae4be39fc859d712b97aad8157f8188442a7180a6b3419e9a1fc9dcd660158dd",
+    "src/ssz_p5/production/full_action_lower.py": "9a2b97ef5bee4378ff68ff0f54d076df2af8042c2cac785c0846b98834377438",
+    "src/ssz_p5/production/svt_background_eom.py": "14bbe15bba101563ed443f4d1b41f54f8a00303797b603f7f3328668ccefad1f",
+    "src/ssz_p5/jets/jet9d8.py": "60c68799ba4d602401dd54c855b570c882523a54bfedd5d7212c5e4393f0d3bb",
+    "tools/audit_transition_horndeski_a1_projection.py": "08cbf91a2ceaf5c8e25d76f80735a0d36b9bec76c52386883459997e0c57b2b6",
+    "tools/advance_transition_dense_h_continuation.py": "380a00aceff73ad51ba8fbb093b4c0da396b89e3b306be148a6ff4bc966b2a7c",
+    "tools/build_prospective_member_v2.py": "a8902fd9b70aec7fcfa9c79fa09f18ff8a2f3434246eafc2692175ee79abf018"
+  },
+  "note": "No stability quantity was computed or consulted during this build."
+}
