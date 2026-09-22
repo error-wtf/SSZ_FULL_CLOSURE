@@ -102,3 +102,13 @@ unknowns:
   - UNKNOWN_PENDING_SOURCE_RECOVERY: "whether lobe-central f2-family difference is compositional (additive) or a genuine action difference"
   - UNKNOWN_PENDING_SOURCE_RECOVERY: "inner/core carrier same-action status (deep-core was FAIL_IMPLEMENTATION 2026-09-18)"
   - UNKNOWN_PENDING_SOURCE_RECOVERY: "Q2 overall verdict (paused for consolidation)"
+
+  - id: FACT:EPSILON_Y_MEMBER_SUPERSESSION_REPLAY_PENDING
+    statement: "the epsilon-Y member (A0prime=0) exclusion at the inner light ring is DOCUMENTED (ZERO_VECTOR_LIGHT_RING_AUDIT.json: inner ring requires tensor_F=-1.6386 while tensor_H=+0.99997; outer ring consistent +0.9721) but NOT yet replayed by an independent Eq.85 implementation"
+    status: REPLAY_PENDING
+    scope: "A0prime=0 branch only; explicitly not a no-go for electric (A0prime!=0) members"
+    member: [SSZ_P5_HSVT_ACTION_MEMBER_2026_09_16]
+    source_files: [data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json]
+    source_csv_sha256: 65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba
+    replay_spec: "implement Kase-Tsujikawa Eq.85 from the closure document; evaluate at both light rings on the carrier CSV; confirm required-tensor_F signs; only then is the supersession REPLAYED"
+    note: "owner correction 2026-09-22: sources can be outdated — documented supersession is a claim until replayed"

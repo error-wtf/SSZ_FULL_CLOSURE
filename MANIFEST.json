@@ -3224,8 +3224,8 @@
     },
     {
       "path": "docs/canonical/CANONICAL_FACTS.yaml",
-      "size_bytes": 7040,
-      "sha256": "5bb22b2b4c8df93a5acfb6633bc60c0f6fe6e415e7510a3d3bf3bde3bdb6a14d"
+      "size_bytes": 8059,
+      "sha256": "7a8b99a15217a1faa79a7edaf9c784702762dd625433531165ac013802ef15d4"
     },
     {
       "path": "docs/canonical/KNOWLEDGE_CONTINUITY_AUDIT.json",
