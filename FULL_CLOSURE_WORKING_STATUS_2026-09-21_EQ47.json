@@ -177,7 +177,14 @@
       "per_L_min_K_at_umax": {"6": -0.10788632373974315, "1000": -18.522265817831975},
       "meaning": "The background-forced action alone contains a kinetic ghost on the certified dense branch; the historical K>0 transverse repair was necessary, not cosmetic. The minimal-completion hypothesis is refuted."
     },
-    "structural_consequence": "Within this background-null bundle the viable member set is governed by TWO construction constraints: K>0 (forces c!=0) and angular c_Omega>0 (open for every K-viable member). Any member selected to satisfy both can classify neither gate as INDEPENDENT_PREDICTION. Absolute Full Closure with all gates as independent predictions is therefore unreachable within this bundle; breaking the circularity requires an independent covariant completion principle that fixes the transverse jets from theory rather than from stability."
+    "structural_consequence": "Within this background-null bundle the viable member set is governed by TWO construction constraints: K>0 (forces c!=0) and angular c_Omega>0 (open for every K-viable member). Any member selected to satisfy both can classify neither gate as INDEPENDENT_PREDICTION. Absolute Full Closure with all gates as independent predictions is therefore unreachable within this bundle; breaking the circularity requires an independent covariant completion principle that fixes the transverse jets from theory rather than from stability.",
+    "proven_statement": "The previous background-determined + transverse-free construction is insufficient for an anti-circular Absolute Full Closure.",
+    "not_proven_statement": "Horndeski+SVT as a theory family is impossible. The canon itself flags the fundamental action as an open inverse problem (SSZ_Variational_Bridge_Paper v2 sections 19-21: no fundamental four-dimensional SSZ action; higher-derivative promotion warnings; SSZ_Middle_Bridge_Unified_Dynamics: defect-to-gauge and NED diagnostics are action-search filters leaving the fundamental inverse problem open).",
+    "canon_alignment_2026-09-22": {
+      "variational_bridge_v2_sha256": "2c93df706b9f70bdea980620a02586c1613d1b1cd067a3edec97248ce2e69ecf",
+      "middle_bridge_md_sha256": "b616c0f9bd82bb2a1c52edeb5fd32cc763d20a70a1e0eff1dba4f4270db4b484",
+      "finding": "Our two falsification results are live instances of the canon's own warnings: effective/one-dimensional constructions promoted to Lorentzian actions introduce extra degrees of freedom and stability problems (Variational Bridge section 20), and the transition must carry the required response change without unacceptable instability (Middle Bridge). The V3 program therefore continues the canon's own stated research target: a deeper SSZ vacuum/phase/segmentation dynamics from which the effective principles reduce."
+    }
   },
   "method_pipeline": "PASS"
 }
