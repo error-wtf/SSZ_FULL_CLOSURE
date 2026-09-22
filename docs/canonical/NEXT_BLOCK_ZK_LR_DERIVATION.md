@@ -120,9 +120,13 @@ BRANCH RULE (frozen, WITH PREMISE GUARD):
 
 One table, one member, one hash. No "scalar solved file" vs "metric solved file".
 
-FORM STATUS: F = (sqrt(h)/f^(3/2)) * Delta_LR^full is a TARGET/CANDIDATE form
-until STEP 1 proves the full SVT background theory reduces to this additive
-three-channel balance. Proving that reduction is STEP 1's job.
+FORM STATUS (semantic convention, frozen): until derivation, Delta_LR^full is
+merely the NAME for the complete light-ring compatibility quantity. It is NOT
+yet the claim that it decomposes as -W'' a4 + A0_u^2 Xi_MH + Sigma_SVT.
+STEP 1 may PROVE the three-channel form — or REPLACE it by the exact form
+following from the general SVT EOM. The candidate form for
+F = (sqrt(h)/f^(3/2)) Delta_LR^full must not silently become a premise.
+Proving or replacing it is STEP 1's job.
 
 ## STEP 4 — Only then
 
