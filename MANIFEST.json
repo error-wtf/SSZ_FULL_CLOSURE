@@ -2633,6 +2633,11 @@
       "sha256": "6b1cb4ca8b51014a3b166783a7097e65e53714aa3d622afa47e0325d21eec2f6"
     },
     {
+      "path": "data/generated/phase2_q2/STEP1_GEOM_TRANSFORMATION_CHECK.json",
+      "size_bytes": 497,
+      "sha256": "3bdef10eea3470139b717603c9cf4d2452ec50323096040df8c8f153f22d84c3"
+    },
+    {
       "path": "data/generated/phase2_q2/q2_export/POST_SELECTION_central_exact_SVT.csv",
       "size_bytes": 3742865,
       "sha256": "8278a6ab2dd5a9161470f71910944752b52a92930e915b7142c3127ac15b69c1"

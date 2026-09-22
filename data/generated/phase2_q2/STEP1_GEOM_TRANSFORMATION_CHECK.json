@@ -1,0 +1,16 @@
+{
+ "inner": {
+  "G_r": 1.831130843807223,
+  "G_u_expected(u*W2)": 1.8311308598663252,
+  "ratio": 0.9999999912299538,
+  "ring_condition_rf_minus_2f": -3.461246583269517e-05,
+  "W1_at_ring(should be 0 if W extremum in u)": 2.4441385368945134e-05
+ },
+ "outer": {
+  "G_r": -1.3335684661540563,
+  "G_u_expected(u*W2)": -1.3335684579410871,
+  "ratio": 1.000000006158641,
+  "ring_condition_rf_minus_2f": -1.9233129535334292e-05,
+  "W1_at_ring(should be 0 if W extremum in u)": 1.2821962567244327e-05
+ }
+}
