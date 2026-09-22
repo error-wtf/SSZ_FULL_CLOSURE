@@ -25,6 +25,35 @@ If the mapping or member identity does NOT confirm:
   mapped coefficient of the final member before any conclusion.
 
 
+## STEP 0a — PROVENANCE FIELDS (mandatory in the STEP-0 report)
+
+member_hash | member_source | evaluation_radius_r | evaluation_u |
+source_coefficient_name = MH_v8 | canonical_coefficient_name = ZK_V9 |
+mapping_rule: ZK_V9 <- MH_v8 (TWO SOURCES: ssz_hybrid_unreduced_even_kernel.py:52
+AND Monograph chunk 38, SHA a028d69b...) | value | sign |
+interpolation vs exact-row provenance.
+
+THREE-CASE LOGIC (frozen):
+  A) wrong slot / wrong member          -> STEP 0 decides A vs (B|C)
+  B) correct Eq.85 coefficient, v8 < 0  -> STEP 1 decides B vs C
+  C) correct coefficient, but the FULL ZK-SVT LR identity contains additional
+     electric support terms
+No U(1)-SVT no-go may be inferred from v8 < 0 alone (case C exists).
+
+## STEP 1 — General ZK-LR identity, symbolically, undivided
+
+TARGET (schematic, NOT pre-reduced to Eq.85):
+
+  C_LR^ZK = C_geom + C_A0 + C_f2 + C_f3 + C_f~3 + C_f4 + C_f~4 = 0
+
+built from the FULL general SVT background theory. Evaluate at the stable ring
+only after assembly. If after all specializations only
+C_A0 ∝ A0prime^2 * v8^Eq85 survives electric support and v8 = -16.824455 is
+confirmed -> THIS member is structurally dead. If an additional term
+A0prime^2 * S_SVT (or another nonvanishing genuine-SVT combination) survives ->
+THAT is the sought support operator: "not more electricity, but the right
+SVT-support operator". Do not prejudge which branch.
+
 ## STEP 1 — General ZK-LR identity, symbolically, undivided
 
 From the GENERAL U(1)-SVT background EOM construct a combination C_LR that
