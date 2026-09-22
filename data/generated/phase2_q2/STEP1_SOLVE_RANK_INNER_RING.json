@@ -32,5 +32,12 @@
  "pivots": {
   "P_A_neq0": true,
   "det_J3_neq0": true
+ },
+ "structure_finding": {
+  "J3_is_triangular": true,
+  "pattern": "JA <- f2F only; E00 <- f2F,f2; E11 <- f2F,f2,f2X",
+  "schur_correction_is_exactly_zero": true,
+  "consequence": "the documented diagonalized-basis structure (E00, E11-E00) survives in the UNSPLIT electric EOM \u2014 not assumed, measured. det J3 = P_A * det J_met_eff = 3.193634 * 0.222020 = 0.709051",
+  "local_existence_test": "PASS - P_A != 0, det J3 != 0, det Jmet_eff != 0 at the inner stable light ring"
  }
 }
