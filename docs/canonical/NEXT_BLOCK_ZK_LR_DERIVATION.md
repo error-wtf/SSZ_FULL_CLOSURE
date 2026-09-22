@@ -94,14 +94,29 @@ Substitute into E_phi = 0 -> first-order ODE/DAE for f3X.
 Integration constant: fixed by the existing action value at a certified overlap
 boundary — NOT fitted.
 
-## STEP 3 — Same-member gate (brutal, one hash)
+## STEP 3 — Same-member gate (brutal, one hash) — CORRECTED per owner
 
-ONE action hash must simultaneously satisfy:
-  E00 ~ 0, E11 ~ 0, J_A ~ 0, E_phi ~ 0,
-and at the inner stable ring:
-  v8^Eq85 > 0,  S_LR > 1,  Delta_LR > 0.
+UNIVERSAL gate (case-independent):
+  ONE action hash must simultaneously satisfy:
+    E00 ~ 0, E11 ~ 0, J_A ~ 0, E_phi ~ 0, Delta_LR^full > 0,
+  plus regularity/pivot conditions.
+
+v8_sign and the Eq.85-only S_LR are DIAGNOSTIC FIELDS, not universal gates.
+Reason: if STEP 1 finds Sigma_SVT != 0, Delta_LR^full > 0 can hold while
+Xi_MH ∝ v8 < 0 (Sigma_SVT overcompensates the load) — the old gate would
+falsely reject a physically valid case C.
+
+BRANCH RULE (frozen):
+  Sigma_SVT = 0:
+    reduced sharper conditions valid: v8 > 0, S_LR^Eq85 > 1, Delta_LR^full > 0
+  Sigma_SVT != 0:
+    Delta_LR^full > 0 only; v8, S_LR^Eq85 diagnostic
 
 One table, one member, one hash. No "scalar solved file" vs "metric solved file".
+
+FORM STATUS: F = (sqrt(h)/f^(3/2)) * Delta_LR^full is a TARGET/CANDIDATE form
+until STEP 1 proves the full SVT background theory reduces to this additive
+three-channel balance. Proving that reduction is STEP 1's job.
 
 ## STEP 4 — Only then
 
