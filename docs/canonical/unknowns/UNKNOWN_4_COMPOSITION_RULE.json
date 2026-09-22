@@ -1,0 +1,14 @@
+{
+  "id": "UNKNOWN_4_COMPOSITION_RULE",
+  "resolved": true,
+  "exact_fact": "hybrid composition rule C_HSVT = C_MH + (C_SVT - C_shared) at the UNREDUCED quadratic-action level \u2014 additive, before slot emission",
+  "scope": "unreduced quadratic-action level (Monograph Eq. 5.2/5.3; STATUS 'auf der unreduced quadratic-action Ebene')",
+  "member": [
+    "CENTRAL_MEMBER",
+    "OUTER_H_SAME_ACTION_CHAIN",
+    "INNER_H_SAME_ACTION_CHAIN"
+  ],
+  "primary_source": "SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16 Eq. 5.2/5.3",
+  "second_source": "SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16.md (hybrid rule statement)",
+  "status": "SOURCE_ESTABLISHED_TWO_SOURCES; prior 'additive composition HYPOTHESIS' is hereby PROMOTED to source-established rule (context_guard pass: no contradiction)"
+}

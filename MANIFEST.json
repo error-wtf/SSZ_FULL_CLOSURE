@@ -3144,8 +3144,38 @@
     },
     {
       "path": "docs/canonical/SVT_SPLIT_SCOPE_REGISTRY.json",
-      "size_bytes": 1439,
-      "sha256": "e6d5fdd1754b827930a24311e826dd006e10ba388205882490bd0d7e31d45cdb"
+      "size_bytes": 2444,
+      "sha256": "8473fc3734cd9f37ae912bce6a496fd1fc49afce256bea7405f49833ec6d0148"
+    },
+    {
+      "path": "docs/canonical/unknowns/UNKNOWN_1_S_SVT_PROFILE_SCOPE.json",
+      "size_bytes": 995,
+      "sha256": "07abbd35aaa3e32023e194b2115fd44bb1b4de865486bd9eabd7594a8d74b91c"
+    },
+    {
+      "path": "docs/canonical/unknowns/UNKNOWN_2_F2Y.json",
+      "size_bytes": 340,
+      "sha256": "11a56fabdc3bb55eacd39eaebffbab8fb0a326ee917ea54b2a8fdbe6e5016b64"
+    },
+    {
+      "path": "docs/canonical/unknowns/UNKNOWN_3_LOBE_EMISSION.json",
+      "size_bytes": 407,
+      "sha256": "aa20cef8b9a46e47063c0cdbe7abf606cc900395dc178eb3c8464f187c66adfe"
+    },
+    {
+      "path": "docs/canonical/unknowns/UNKNOWN_4_COMPOSITION_RULE.json",
+      "size_bytes": 788,
+      "sha256": "99cb93c8ca8f6504126e8570ea3fd0796ddf023d785e7e851c2ee5c4197afb6d"
+    },
+    {
+      "path": "docs/canonical/unknowns/UNKNOWN_5_INNER_CORE.json",
+      "size_bytes": 535,
+      "sha256": "323828038ad13c4a90e5b4f86de9a557029a40f4190c631df39a5221cab9cee9"
+    },
+    {
+      "path": "docs/canonical/unknowns/UNKNOWN_6_Q2_VERDICT.json",
+      "size_bytes": 291,
+      "sha256": "9c5834bf63ee017af222c1880b598b32b9220fe9d68010477c0823656165b19d"
     },
     {
       "path": "docs/checkpoints/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16(1).md",

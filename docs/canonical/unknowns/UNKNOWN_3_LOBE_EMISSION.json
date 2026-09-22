@@ -1,0 +1,6 @@
+{
+  "id": "UNKNOWN_3_LOBE_EMISSION",
+  "resolved": false,
+  "status": "SUPERSEDED_AS_Q2_BLOCKER",
+  "exact_fact": "the chain files (OUTER_FINAL_STRONGH_HYBRID_41of41, F2/F3 same_action) carry action-level 41of41 slots WITH partition columns \u2014 the lobe CSV regression record is the reduced-era witness outside the chain; the revision uses chain files, so lobe re-emission is no longer the Q2 blocker"
+}

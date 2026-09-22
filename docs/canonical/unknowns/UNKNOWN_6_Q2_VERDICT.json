@@ -1,0 +1,6 @@
+{
+  "id": "UNKNOWN_6_Q2_VERDICT",
+  "resolved": false,
+  "exact_fact": "Q2 = OPEN but SOURCE_READY on the revised chain-based path; the original lobe-CSV-based decomposition is VOID (documented different representative, reduced-era record)",
+  "status": "OPEN_PENDING_CHAIN_DECOMPOSITION"
+}

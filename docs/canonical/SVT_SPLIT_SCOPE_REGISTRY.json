@@ -11,7 +11,16 @@
         "SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf"
       ],
       "tested_extensions": [
-        {"target": "LOBE_CENTRAL", "result": "FAILED (three-route S_SVT recovery disagreement 2026-09-22)", "verdict": "NOT_SOURCE_ESTABLISHED"}
+        {
+          "target": "LOBE_CENTRAL",
+          "result": "FAILED (three-route S_SVT recovery disagreement 2026-09-22)",
+          "verdict": "NOT_SOURCE_ESTABLISHED"
+        },
+        {
+          "target": "INNER_SELECTED_MEMBER",
+          "result": "SOURCE_ESTABLISHED (f2 = S_SVT*f2_full_outer_reference, err 1.67e-16/5.33e-15; docs/checkpoints/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16(1).md:321-333)",
+          "verdict": "SAME_ACTION_CHAIN"
+        }
       ],
       "rule": "do not apply outside OUTER_HANDOVER without an explicit source"
     },
@@ -24,6 +33,16 @@
   "open_questions": [
     "S_SVT(u) authoritative profile: UNKNOWN_PENDING_SOURCE_RECOVERY",
     "f2Y_split historical value: UNKNOWN_PENDING_SOURCE_RECOVERY (alpha5 combination available, emitter line 112)",
-    "lobe-central f2-family difference: composition (HYPOTHESIS) vs genuine action difference — decomposition test pending"
-  ]
+    "lobe-central f2-family difference: composition (HYPOTHESIS) vs genuine action difference \u2014 decomposition test pending"
+  ],
+  "stored_partition_columns": {
+    "files": [
+      "archive/full_working_snapshot/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv (u 0.71-0.715: S_SVT 1->0)",
+      "archive/full_working_snapshot/ssz_p5_OUTER_FINAL_STRONGH_HYBRID_41of41_2026-09-16.csv (u 0.5515-0.61: S_SVT 0->1)",
+      "+3 more chain CSVs with S_SVT/T_H columns"
+    ],
+    "identity_enforced": "S_SVT + T_H = 1 (inner_targets.py:76-78, tol 1e-12; edges 1/0)",
+    "pure_svt_zone": "u 0.61-0.71 (S_SVT=1) = CENTRAL_MEMBER domain",
+    "rag_mapping": "Monograph chunk 80 (a028d69b) + HSVT memory chunk 2 (b25f47dc): '[Stored] outer C-infinity partition weights T_H and S_SVT'"
+  }
 }

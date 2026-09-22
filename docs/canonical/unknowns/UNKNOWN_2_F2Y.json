@@ -1,0 +1,7 @@
+{
+  "id": "UNKNOWN_2_F2Y",
+  "resolved": false,
+  "exact_fact": "UNKNOWN_FROM_AVAILABLE_EVIDENCE",
+  "status": "UNKNOWN \u2014 emitter reads f2Y/f2FF/f2FY/f2YY from input frame (_arr default 0 if absent); no stored f2Y column located; alpha5 inversion (emitter line 112) requires the decomposition first",
+  "recovery_path_defined": true
+}

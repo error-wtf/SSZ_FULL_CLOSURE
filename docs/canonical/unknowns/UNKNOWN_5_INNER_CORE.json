@@ -1,0 +1,6 @@
+{
+  "id": "UNKNOWN_5_INNER_CORE",
+  "resolved": false,
+  "exact_fact": "PARTIAL: inner selected member S_SVT relation source-established (f2 = S_SVT*f2_full_outer_reference, err 1.67e-16; f2X err 5.33e-15; docs/checkpoints/SSZ_P5_COMPLETE_STATUS_TO_KRGM_QNM_2026-09-16(1).md:321-333); at u=0.61 the re-solved outer repaired-SVT endpoint and the Sep-13 central exact SVT table are DOCUMENTED as DIFFERENT ACTION-JET REPRESENTATIVES on the same background; core deep FAIL_IMPLEMENTATION (2026-09-18)",
+  "status": "PARTIALLY_RESOLVED"
+}

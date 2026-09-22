@@ -1,0 +1,14 @@
+{
+  "id": "UNKNOWN_1_S_SVT_PROFILE_SCOPE",
+  "resolved": true,
+  "exact_fact": "S_SVT(u) and T_H(u) are STORED partition-weight columns in the same-action chain CSVs: F2_inner_same_action_RESOLVED_v2 (u 0.71-0.715: S_SVT 1->0), OUTER_FINAL_STRONGH_HYBRID_41of41 (u 0.5515-0.61: S_SVT 0->1); identity S_SVT+T_H=1 enforced in code (inner_targets.py:76-78, tol 1e-12, edge values 1/0); pure-SVT zone u 0.61-0.71 (S_SVT=1) = central member domain",
+  "scope": "INNER + OUTER same-action handover chain; PURE zone S_SVT=1; LOBE_CENTRAL relation NOT_ESTABLISHED (lobe CSV is outside the chain)",
+  "member": [
+    "INNER_H_SAME_ACTION_CHAIN",
+    "OUTER_H_SAME_ACTION_CHAIN",
+    "CENTRAL_MEMBER"
+  ],
+  "primary_source": "src/ssz_p5/production/inner_targets.py:56-78 + 5 archived chain CSVs (S_SVT/T_H columns)",
+  "second_source": "RAG: Monograph chunk 80 + HSVT memory chunk 2 '[Stored] outer C-infinity partition weights T_H and S_SVT' (SHA a028d69b/b25f47dc)",
+  "status": "SOURCE_ESTABLISHED"
+}
