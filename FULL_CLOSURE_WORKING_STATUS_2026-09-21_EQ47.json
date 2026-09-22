@@ -169,7 +169,15 @@
     "rule_id": "PROSPECTIVE_V2_TRANSVERSE_ZERO",
     "rule": "c = 0: the prospective member exercises none of the background-null transverse freedom. Justification: minimal operator content / minimal covariant action complexity / parameter-free uniqueness of the no-free-freedom completion. The rule was fixed without consulting K, c_r^2, c_Omega^2, QNM, published-root or observational information; the historical predictor c was itself K-chosen and is therefore NOT reusable under this rule.",
     "background": "identical to the failed member by construction (background-null bundle)",
-    "angular_prediction_class": "INDEPENDENT_PREDICTION if the member passes; the selection rule imposes no angular condition"
+    "angular_prediction_class": "INDEPENDENT_PREDICTION if the member passes; the selection rule imposes no angular condition",
+    "outcome": {
+      "chain_termination": "FIRST_FAILING_GATE_K",
+      "verdict": "K_GHOST_FAIL",
+      "evidence": "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE.json",
+      "per_L_min_K_at_umax": {"6": -0.10788632373974315, "1000": -18.522265817831975},
+      "meaning": "The background-forced action alone contains a kinetic ghost on the certified dense branch; the historical K>0 transverse repair was necessary, not cosmetic. The minimal-completion hypothesis is refuted."
+    },
+    "structural_consequence": "Within this background-null bundle the viable member set is governed by TWO construction constraints: K>0 (forces c!=0) and angular c_Omega>0 (open for every K-viable member). Any member selected to satisfy both can classify neither gate as INDEPENDENT_PREDICTION. Absolute Full Closure with all gates as independent predictions is therefore unreachable within this bundle; breaking the circularity requires an independent covariant completion principle that fixes the transverse jets from theory rather than from stability."
   },
   "method_pipeline": "PASS"
 }

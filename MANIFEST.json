@@ -129,8 +129,8 @@
     },
     {
       "path": "CURRENT_WORKING_STATE_2026-09-21_EQ47.md",
-      "size_bytes": 7646,
-      "sha256": "be4c57f63fd99c567b5fd0006e2b6ce01502da1ecb8a7926b7a788fa5947e897"
+      "size_bytes": 9766,
+      "sha256": "96f10b8d2531d4f7d200d37fab20e6a71271b697a922e3587fb076dd92cb8040"
     },
     {
       "path": "CURRENT_WORKING_STATE_2026-09-21_PROJECTED_CONTROLLABILITY.md",
@@ -194,8 +194,8 @@
     },
     {
       "path": "FULL_CLOSURE_WORKING_STATUS_2026-09-21_EQ47.json",
-      "size_bytes": 9331,
-      "sha256": "78807128c84f242ea7cb3287e25efa880148f3c5ccb62f2a84ad3ab755eb1dbf"
+      "size_bytes": 10404,
+      "sha256": "331c4d406d4c8ee9a463cb02baaba4c1361cb8317c7dab57b16b9dc77cf070c0"
     },
     {
       "path": "FULL_CLOSURE_WORKING_STATUS_2026-09-21_PROJECTED_CONTROLLABILITY.json",
@@ -2641,6 +2641,11 @@
       "path": "data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY_CONVERGENCE.json",
       "size_bytes": 5184,
       "sha256": "5e6bde76110c03ca20be3e73ebba08a90cb4d5f4e00b4ab0a5eedd74b43271ff"
+    },
+    {
+      "path": "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE.json",
+      "size_bytes": 1272,
+      "sha256": "5c905f3257f87bc58648bc378287ace64d1811451e625e930bb26b9846d203b1"
     },
     {
       "path": "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_PROVENANCE.json",

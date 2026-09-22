@@ -1,0 +1,37 @@
+{
+  "member": "PROSPECTIVE_V2_TRANSVERSE_ZERO",
+  "chain_termination": "FIRST_FAILING_GATE_K",
+  "verdict": "K_GHOST_FAIL",
+  "background": "identical to failed member (background-null)",
+  "per_L_min_K": {
+    "6": {
+      "min_K": -0.10788632373974315,
+      "u_at_min": 0.7079894973743436
+    },
+    "12": {
+      "min_K": -0.15388392443506616,
+      "u_at_min": 0.7079894973743436
+    },
+    "20": {
+      "min_K": -1.531566814743786,
+      "u_at_min": 0.7079894973743436
+    },
+    "42": {
+      "min_K": -10.21565583058962,
+      "u_at_min": 0.7079894973743436
+    },
+    "110": {
+      "min_K": -15.602184920595795,
+      "u_at_min": 0.7079894973743436
+    },
+    "420": {
+      "min_K": -18.02744697640414,
+      "u_at_min": 0.7079894973743436
+    },
+    "1000": {
+      "min_K": -18.522265817831975,
+      "u_at_min": 0.7079894973743436
+    }
+  },
+  "interpretation": "The background-forced action alone (no transverse freedom exercised) contains a kinetic ghost on the certified dense branch. The historical K>0 repair was necessary. Viable members within this bundle therefore require c != 0 as a declared construction constraint; any subsequent angular stability of such members can only be classified CONSTRUCTION_CONSTRAINT, never INDEPENDENT_PREDICTION."
+}

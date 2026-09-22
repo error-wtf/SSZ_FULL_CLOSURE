@@ -61,6 +61,42 @@ stability-independent transverse selection principle -- which demotes the
 angular gate from independent prediction in any future closure ledger.
 This choice belongs to the theory owner, not the agent.
 
+## Prospective member v2 (TRANSVERSE_ZERO): refuted at the K gate (2026-09-22)
+
+Under the owner's stricter-than-B decision the failed member was frozen as a
+falsification witness (commit 1be3551). A new prospective version was built
+under the rule PROSPECTIVE_V2_TRANSVERSE_ZERO, frozen before any stability
+evaluation (commit 587d776): c = 0, the unique parameter-free completion that
+exercises none of the background-null transverse freedom (minimal operator
+content). The background is identical to the failed member by the null-space
+property (verified to 1e-12 on all background columns).
+
+Forward-chain result: the member fails at the FIRST gate. K < 0 on the dense
+branch at every L in {6,12,20,42,110,420,1000} (min_K = -18.52 at L=1000,
+u=0.70799; -0.108 at L=6). The chain is terminated there per the
+first-failing-layer discipline; a kinetic ghost has no downstream angular or
+QNM semantics. Evidence: PROSPECTIVE_V2_K_GATE.json.
+
+Structural conclusion (both constraints now mapped):
+
+1. The background-forced action ALONE has a kinetic ghost: the historical
+   K>0 repair was necessary. The minimal-completion hypothesis is refuted.
+2. The K-repaired historical member is angular-unstable on all 297 trusted
+   points (robust, two independent reductions, pure psi mode).
+3. Therefore, within this background-null bundle, viable members require
+   BOTH K>0 and angular c_Omega>0 as construction constraints. Any such
+   member's angular stability is CONSTRUCTION_CONSTRAINT, never
+   INDEPENDENT_PREDICTION. Absolute Full Closure in the strong sense (all
+   gates independent) is unreachable within this bundle.
+
+Breaking this circularity requires additional independent theory input: a
+covariant completion principle that fixes the transverse jets from theory
+(e.g. a fundamental Horndeski+SVT Lagrangian family in the coupling functions
+G2..G5, F, rather than a stability-selected expansion) -- not more
+optimization. This is precisely the point where continuing requires a new
+model decision rather than debugging; per contract, work on the strong-field
+member chain halts here pending that theory input.
+
 ## Derived and numerically tested
 
 The Eq46 common K/M ratio and the pure kinetic identity imply the mixed identity
