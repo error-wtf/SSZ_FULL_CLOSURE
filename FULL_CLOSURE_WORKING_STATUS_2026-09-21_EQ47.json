@@ -150,5 +150,26 @@
   "continuation_0p708_to_0p715": "HELD",
   "global_QNM": "HELD",
   "absolute_full_closure": false,
+  "failed_member_freeze_2026-09-22": {
+    "CURRENT_CERTIFIED_MEMBER_ANGULAR": "FAIL_ROBUST",
+    "PHYSICAL_FALSIFICATION_GATE_CURRENT_MEMBER": true,
+    "ABSOLUTE_FULL_CLOSURE_CURRENT_MEMBER": false,
+    "scope": "falsifies the current fixed transverse/action completion only, not the Horndeski+SVT theory family; the background leaves transverse action jets underdetermined",
+    "witness_evidence": [
+      "data/generated/dense_angular_direct_2026-09-22/",
+      "data/generated/angular_eq47_projection_2026-09-21/DENSE_ACTION_TANGENT_SENSITIVITY.csv",
+      "data/generated/strong_field_transition_2026-09-21/TRANSITION_DENSE_H_CONTINUATION_TOTAL41.csv.2026-09-21_frozen"
+    ],
+    "tangent_sensitivity_status": "CONTROLLABILITY_DIAGNOSTIC_RETAINED_MUST_NOT_SELECT_NEW_MEMBER",
+    "member_preservation": "the failed member (historical predictor c, refrozen baseline) remains the canonical TOTAL41/STATE artifacts and is preserved permanently as a falsification/regression witness",
+    "decision": "owner decision 2026-09-22: stricter-than-B path; no repair of the failed member"
+  },
+  "prospective_member_v2_2026-09-22": {
+    "rule_freeze_before_any_stability_evaluation": true,
+    "rule_id": "PROSPECTIVE_V2_TRANSVERSE_ZERO",
+    "rule": "c = 0: the prospective member exercises none of the background-null transverse freedom. Justification: minimal operator content / minimal covariant action complexity / parameter-free uniqueness of the no-free-freedom completion. The rule was fixed without consulting K, c_r^2, c_Omega^2, QNM, published-root or observational information; the historical predictor c was itself K-chosen and is therefore NOT reusable under this rule.",
+    "background": "identical to the failed member by construction (background-null bundle)",
+    "angular_prediction_class": "INDEPENDENT_PREDICTION if the member passes; the selection rule imposes no angular condition"
+  },
   "method_pipeline": "PASS"
 }
