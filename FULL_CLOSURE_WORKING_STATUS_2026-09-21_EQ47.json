@@ -223,6 +223,20 @@
       "absolute_full_closure": false
     },
     "interpretation": "Both pre-registered, stability-blind completion hypotheses select the already-falsified minimal stream: the kinetic ghost is the genuine prediction of both C1 and C3. Per frozen semantics: no repair, no new completion, no optimization; downstream gates NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL / DIAGNOSTIC_AFTER_UPSTREAM_FAIL.",
-    "no_repair_performed": true
+    "no_repair_performed": true,
+    "interpretation_correction_2026-09-22_forensics": {
+      "trigger": "owner-identified contradiction with historical healthy witnesses",
+      "audit": "docs/phase2_forensics/FORENSIC_PROVENANCE_AUDIT.md + data/generated/phase2_forensics/HISTORICAL_MEMBER_PROVENANCE_COMPARISON.json",
+      "retracted": "overstrong reading that minimal completion class necessarily fails and new non-minimal physics is logically forced",
+      "confirmed": "C1/C3 blind predictions (K_GHOST_FAIL on the minimal stream) stand as frozen predictions",
+      "established_facts": [
+        "C1/C3 streams are machine-identical to the central member data (corrector no-op ~1e-11)",
+        "f3X and background-determined structure retained (scalar identity residual 2.8e-4 central / 3.4e-4 corrected window vs 1e-12 historical lobe)",
+        "historical K 10.54 = reduced even-sector K_ZK_exact combination, superseded as full finite-L witness by the 2026-09-17 central kinetic gate FAIL",
+        "angular 84.912/643.142 superseded by the direct eps^3 action determinant",
+        "BACKGROUND=PASS justified (corrector residuals machine precision); Phase-2 E00=1.04 diagnostic was an evaluator-input artifact on the primitive-free stream",
+        "healthy finite-L K representatives exist in-architecture (strong-H carrier 1.6e-7 @ L=1000; exterior 9.9e-7) => Q1=YES; Q2 same-action assembly and Q3 full closure remain open"
+      ]
+    }
   }
 }

@@ -1,0 +1,89 @@
+{
+  "audit": "HISTORICAL_MEMBER_PROVENANCE_COMPARISON",
+  "created": "2026-09-22",
+  "representatives": {
+    "H0_TRANSVERSE_ZERO": {
+      "source": "PROSPECTIVE_V2 build (tools/build_prospective_member_v2.py)",
+      "commit": "587d776",
+      "domain": "u 0.7002-0.7080",
+      "action": "central on-shell data, zero tangent displacement",
+      "K_min_L1000": -18.522265817831975,
+      "verdict": "K_GHOST_FAIL (frozen witness)"
+    },
+    "H1_LOBE_CENTRAL_EXACT_SVT": {
+      "source": "data/production/ssz_p5_integrable_full_svt_lobe_ZK_exact_regression_2026-09-13.csv",
+      "date": "2026-09-13/16",
+      "domain": "u 0.61-0.715",
+      "quantity_scope": "REDUCED even-sector ZK combination (K_ZK_exact), NOT full finite-L Schur eigenvalue",
+      "K_ZK_exact_min": 10.541549191507217,
+      "K_even_corrected_min": 0.963915063812136,
+      "cr2_T_min": 1.0050694018534372,
+      "cr2_S_min": 0.9037451776188076,
+      "cr2_V_min": 9.458870488366266,
+      "cOmega_minus2_min": 84.912,
+      "cOmega_plus2_min": 643.142,
+      "f3X": "integrated from scalar ODE, residual ~1e-12",
+      "superseded_by": "2026-09-17 full-matrix finite-L central kinetic gate (FAIL L=6,12,20,42)"
+    },
+    "H2_STRONG_H_CARRIER": {
+      "source": "data/generated/absolute_attempt_2026-09-18/HSVT_DIRECT_REGION_AUDIT.json (carrier) + ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv",
+      "domain": "strong-field/light-ring window",
+      "K_min_L1000": 1.6051559271961315e-07,
+      "min_radial_L1000": 0.10243034155285619,
+      "all_L_positive": true,
+      "status": "PASS_STILL_VALID (carrier scope; Q2/Q3 open)"
+    },
+    "H3_C1": {
+      "source": "data/generated/phase2/PHASE2_C1_MEMBER_TOTAL41.csv",
+      "relation": "machine-identical to central member data (corrector no-op: f2 6.9e-12, f2X 1.2e-11, f2F 0.0)",
+      "K_min_L1000": -18.522265817831975,
+      "verdict": "K_GHOST_FAIL (genuine blind prediction)"
+    },
+    "H4_C3": {
+      "source": "data/generated/phase2/PHASE2_C3_MEMBER_TOTAL41.csv",
+      "relation": "identical to H3 (unique minimizer c=0; Gram positive definite 1.54e9..4.30e10)",
+      "K_min_L1000": -18.522265817831975,
+      "verdict": "K_GHOST_FAIL (genuine blind prediction; classification NEW_THEORY_HYPOTHESIS_WITH_FIXED_FIELDSPACE_METRIC unchanged)"
+    },
+    "H5_K_REPAIRED_DENSE": {
+      "source": "TRANSITION_DENSE_H_CONTINUATION_TOTAL41.csv (+.2026-09-21_frozen)",
+      "relation": "central data + background-null tangent K-repair (historical LP c)",
+      "K_min_L1000": 1.2603117195246649e-05,
+      "angular": "DENSE_ANGULAR_ACTION_DIRECT_FAIL (cminus^2<0 on 297/297)",
+      "verdict": "angular falsification witness"
+    }
+  },
+  "section9_replay": {
+    "central_member_own_f2_current_emitter_reducer": {
+      "L6": -0.1610654,
+      "L12": -0.2524333,
+      "L20": -3.737487,
+      "L42": -15.83887,
+      "L110": -23.50841,
+      "L420": -27.0964,
+      "L1000": -27.83966,
+      "worst_u": 0.709959
+    }
+  },
+  "background_residual_semantics": {
+    "corrector_own_residuals": {
+      "E00": 4.370392936436929e-12,
+      "E11": 6.2957972168931065e-12,
+      "JA": 9.901695612563078e-15
+    },
+    "phase2_E00_1.04_artifact": "evaluated on the 41-slot stream WITHOUT primitive columns (evaluator defaults to 0); not a background failure",
+    "scalar_identity_residuals": {
+      "central_frame": 0.0002790873770663893,
+      "after_corrector_window": 0.00034368803960660443,
+      "historical_lobe_level": "~1e-12 (recorded deviation, small)"
+    },
+    "f3X": {
+      "central_frame_range": [
+        -18.49398856556697,
+        44.728354923533175
+      ],
+      "retained_by_C1_C3": true
+    }
+  },
+  "conclusion": "CLASS D (mixture): C1/C3 = central member data (no representative error, f3X retained); historical positive K was a reduced even-sector combination superseded as full finite-L witness on 2026-09-17; angular 84.9/643 superseded by direct eps^3; healthy K representatives exist (strong-H carrier) so new non-minimal physics is NOT logically forced; open questions remain Q2 same-action assembly and Q3 full closure."
+}
