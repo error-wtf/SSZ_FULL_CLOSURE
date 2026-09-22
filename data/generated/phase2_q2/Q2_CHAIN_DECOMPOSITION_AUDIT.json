@@ -1,0 +1,37 @@
+{
+  "audit": "Q2_CHAIN_DECOMPOSITION_AUDIT",
+  "date": "2026-09-22",
+  "verdict": "Q2_UNKNOWN_ARCHIVE_INSUFFICIENT",
+  "frozen_source_facts_used": ["A S_SVT/T_H stored partitions", "B central S_SVT=1 zone u 0.61-0.71", "C no universal lobe-central split (not invented)", "D composition C_HSVT = C_MH + (C_SVT - C_shared) at unreduced level (two sources)", "E chain files with partitions + 41of41 slots"],
+  "tests_executed": {
+    "TEST_A_MH_ENDPOINT": {
+      "setup": "OUTER_FINAL rows with S_SVT<0.02 (n=989) vs Strong-H carrier a1/a4/c4_Horndeski (interp on matched u)",
+      "result": "a1 max 9.975e-17, a4 max 8.327e-17, c4 max 2.840e-07 (median 6.11e-17)",
+      "verdict": "PASS_MACHINE — the outer hybrid's MH restriction IS the Strong-H carrier exactly (same-action Horndeski side WITHIN the outer file)"
+    },
+    "TEST_B_INTERFACE_u061": {
+      "setup": "OUTER_FINAL rows S_SVT>0.999 (n=187) vs central member emitted 41 slots (absolute_reemit on window u 0.606-0.614, current emitter), interp at matched u",
+      "result": "41/41 slots UNRESOLVED; worst scaled: e4 4.248, e2 2.707, c2 2.063, d3 1.873, c4 1.413, d2 1.406, v13 1.364, a5 1.300; c3/e3/v5 max exactly 1.000 (one side zero)",
+      "verdict": "FAIL_INTERFACE — O(1) action-jet differences at the documented interface"
+    },
+    "AUXILIARY_IDENTITY": {"v7 = v2^2/(4v1) on OUTER_FINAL: max scaled 6.289e-16 — PASS (stored post-assembly values satisfy the shared auxiliary identity)"},
+    "F3X_IDENTITY_REPLAY": {"f3X_integrated(lobe) vs f3X(central): max scaled 0.0 — background-determined scalar structure shared"}
+  },
+  "interpretation": {
+    "documented_support": "the canon itself records (HSVT memory / owner message): at u=0.61 the re-solved outer repaired-SVT endpoint and the Sep-13 central exact SVT table are DIFFERENT ACTION-JET REPRESENTATIVES ON THE SAME BACKGROUND — the interface mismatch quantitatively confirms this documented difference",
+    "contributing_factors_distinguishable": ["emitter-era difference (c6 relation changed in 1ff011f, Sept-21; OUTER_FINAL is Sept-16)", "c3/e3/v5 zero-vs-direct Appendix-A selection difference (Sept-17 rejection note: 'appendix-A replay reproduziert v5, nicht c3/e3')", "genuinely different transverse representatives (documented)", "C_shared/C_SVT component streams not archived separately"],
+    "why_not_classified_B": "a genuine ACTION-jet incompatibility cannot be asserted while emitter-era and selection-convention differences are confounded with representative differences — the component streams needed for the clean composition replay are not archived"
+  },
+  "missing_artifacts_for_full_resolution": [
+    "component slot streams C_MH, C_SVT, C_shared emitted by the SAME emitter era as the totals",
+    "the generating scripts of OUTER_FINAL_STRONGH_HYBRID_41of41 and the central emission (to fix C_shared construction and auxiliary order)",
+    "stored f2Y (or its alpha5 recovery after component separation)"
+  ],
+  "positive_sub_results": [
+    "outer chain internally coherent: MH restriction exact, auxiliary identity exact",
+    "f3X shared across lobe/central (0.0)",
+    "composition rule and partition weights source-established",
+    "context_guard operational (blocks scope misuse and overstrong claims)"
+  ],
+  "per_directive_15": "C) Q2_UNKNOWN_ARCHIVE_INSUFFICIENT — UNKNOWN is preferable to guessing; no repair, no fitting, no new theory performed"
+}

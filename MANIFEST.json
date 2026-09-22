@@ -2568,6 +2568,16 @@
       "sha256": "0a452646fc41a57efc69280276f9bf14e290723665b4702281e40bbdd4f6b209"
     },
     {
+      "path": "data/generated/phase2_q2/Q2_CHAIN_DECOMPOSITION_AUDIT.json",
+      "size_bytes": 3431,
+      "sha256": "42e2e66579d48b55e80f396d29420d90a4329b8e89200c00cdb521ec6fda5c72"
+    },
+    {
+      "path": "data/generated/phase2_q2/Q2_INTERFACE_TEST.json",
+      "size_bytes": 855,
+      "sha256": "d3074f8007f8e3d237db0f30de275d8bb8e3e681e275d62eb906e1dd2becc169"
+    },
+    {
       "path": "data/generated/phase2_q2/Q2_SAME_ACTION_COMPATIBILITY_AUDIT.json",
       "size_bytes": 2734,
       "sha256": "1dd8cc2028a12c1ed03650c63df67dc51f62d8ac1173b992c40bcf927a788b4a"
