@@ -1,0 +1,24 @@
+{
+  "step": "STEP 1 sub-result: C_bg primitive inventory from the UNSPLIT EOM evaluator",
+  "source": "src/ssz_p5/production/svt_background_eom.py::evaluate_svt_background (lines 53-112)",
+  "primitive_dependencies": {
+    "JA/E00/E11 share": ["f2", "f2X", "f2F", "f3", "f3X-part", "f4", "f4X", "tf4"],
+    "E00_structure": "r^2(f f2 - h ap^2 f2F) - 2 r h^2 ph ap^2 f3 + h ap^2(4(h-1) f4 - h^2 ph^2(f4X + 2 tf4)) + ...",
+    "E11_structure": "r^2(f f2 + f h ph^2 f2X - h ap^2 f2F) - 2 r h^2 ph ap^2(3f3 - h ph^2 f3X) + ..."
+  },
+  "f2Y_branch_ruling": {
+    "branch": "current electric production branch DEFINES f2Y = 0 (require_f2y_zero=True; nonzero rejected, not mapped)",
+    "consequence": "the Eq.85 combination (f2F - 2h phi^2 f2Y) reduces to f2F on this branch; the earlier F2Y question is a BRANCH POSTULATE here, not underdetermination",
+    "scope": "this ruling holds for the current electric production branch only"
+  },
+  "three_jet_three_equation_correspondence": {
+    "metric_current": "JA=0, E00=0, E11=0 solve (f2F, f2, f2X) - exactly the corrector's variables",
+    "scalar": "the scalar equation solves f3X (first-order ODE, ScalarODEIdentity)"
+  },
+  "next_sub_steps": [
+    "1. form the undivided C_bg combination from these three equations + scalar identity, primitives symbolic (incl. f3, f4, tf4 jets)",
+    "2. MH-limit projection: A0prime=0 kills all ap^2 terms; coefficient-by-coefficient match against the Eq.85 numerator",
+    "3. ring limit; subtract geometry + MH-electric; the remainder is Sigma_SVT (legitimate per extraction rule)",
+    "4. MH-limit regression: Sigma_SVT -> 0"
+  ]
+}
