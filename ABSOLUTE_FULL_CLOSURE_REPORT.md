@@ -1,8 +1,8 @@
 # ABSOLUTE FULL CLOSURE REPORT
 
-- generated: 2026-09-23T22:39:29.416322+00:00
-- git commit: `452a411cf9723f450aa4232ec491baaa0c8f185e`
-- clean tree: False
+- generated: 2026-09-23T22:40:26.929264+00:00
+- git commit: `6a69d64f3019bcf728710cf82dced7dac0a88c64`
+- clean tree: True
 
 ## Verdict
 
@@ -82,4 +82,4 @@ negative control built in.
 - no manual PASS (verdict from GATE_STATUS + certification_status)
 - ONE member hash through all gates
 
-- audit_pass: False
+- audit_pass: True

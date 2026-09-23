@@ -1,8 +1,8 @@
 {
  "schema_version": "1.0",
- "timestamp": "2026-09-23T22:39:29.416322+00:00",
- "git_commit": "452a411cf9723f450aa4232ec491baaa0c8f185e",
- "clean_tree": false,
+ "timestamp": "2026-09-23T22:40:26.929264+00:00",
+ "git_commit": "6a69d64f3019bcf728710cf82dced7dac0a88c64",
+ "clean_tree": true,
  "clean_tree_scope": "repo state at the verified HEAD; the four terminal artifact files are outputs of this audit and excluded",
  "verdict": "ABSOLUTE_FULL_CLOSURE_PASS",
  "gates": {
@@ -334,5 +334,5 @@
  "no_marginal": true,
  "no_blocked_by_dependency": true,
  "no_not_run": true,
- "audit_pass": false
+ "audit_pass": true
 }
