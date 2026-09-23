@@ -1,7 +1,7 @@
 {
  "continuation_state": "G10/G11/G12 PASS (exact Test B); G13/G15 symbolic machinery in source; consolidation complete (gate graph, MODEL_LOCK, EVIDENCE_INDEX, provenance test); next: Delta22_SVT derivation then numeric G13->G14->G16",
- "tests": "169/169 PASS (166 + 3 dedicated background-gate tests G02/G03/G04)",
- "head_commit": "29056e4 (README finalized; zip /home/error/ssz-full-closure-29056e4.zip created)",
+ "tests": "169/169 PASS",
+ "head_commit": "f32cdf64daa533abb4a203fc0001820c1e1eb633",
  "completed": [
   "G00-G06 PASS (provenance/model/geometry/rank/ODE/integration/residuals)",
   "G07 MARGINAL (holonomic emitter identity documented; independent re-check open)",
@@ -12,7 +12,7 @@
   "G15 structure: sigma_svt_decomposition (E00-channel operators exact; Delta22_SVT open at BETA weight)",
   "consolidation: gates.py G00-G100 fail-closed graph + programmatic verdict; MODEL_LOCK.json; EVIDENCE_INDEX.json; import-provenance regression"
  ],
- "next_executable_command": "remaining coverage gaps G05, G16, G50, G70, G71, G72, G90 + the Ward completion: derive c4 from the covariant vector Ward term (registered R_el = c4*JA decomposition), close R_met via the metric Bianchi transport, replace the Delta22_SVT placeholder by the derived expression, freeze the electric production member artifact (MODEL_LOCK still references the superseded zero-vector file), then G05/G13-G16/G50/G60-certified/G70-G72/G90/G100",
+ "next_executable_command": "1) derive Delta22_SVT: vary L_SVT2-4 (HT2018 Eqs. 2-4) w.r.t. g_thetatheta on the static electric background (cross-check oracle: R_el = c4*JA with c4 = -A0' r (f h' - f' h)/(4 sqrt(fh)) + R_met must be reproduced); require P_MH[Delta22_SVT] == 0 and E22_full == P_MH[E22_full] + Delta22_SVT. 2) substitute into build_general_C_bg (remove placeholder). 3) G07 holonomic convergence recheck. 4) freeze electric production member artifact + MODEL_LOCK update. 5) G05 dedicated test. 6) G13-G16, G50, G70-G72, G90 per gate graph",
  "open_items": {
   "Delta22_SVT": "the ONLY remaining symbolic unknown of C_bg; derivation is the G15 completion",
   "G07": "holonomic independent re-check (MARGINAL)",
@@ -41,5 +41,6 @@
   "G71",
   "G72",
   "G90"
- ]
+ ],
+ "route_decision_Delta22": "SIMPLIFICATION REGISTERED: the verified C_bg MH-slice assembly C_bg = ALPHA*E00_full + BETA*E22_MH_slice + BETA*Delta22_SVT is complete and Ward-INDEPENDENT (Test B == 0 exact). The Ward route was only ever needed for Delta22_SVT itself. The R_el+R_met residual was an artifact of forcing the Ward ansatz (which conflates the on-shell bracket Phi = -phi'/2 Ephi_KT with an off-shell E22 definition). REMAINING SCOPE for Delta22_SVT: direct variation of the HT2018 action Eq.(1) genuine-SVT Lagrangians L_SVT2-4 w.r.t. g_thetatheta on the static electric background, minus the MH slice. The registered R_el = c4*JA / R_met decomposition remains as a cross-check oracle for that derivation."
 }
