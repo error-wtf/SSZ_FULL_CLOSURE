@@ -77,3 +77,16 @@ def test_a4_v8_slot_definitions():
     import sympy as sp
     assert sp.simplify(kt.a4_kt() - sp.sqrt(kt.f * kt.h) / 2 * kt.hcal()) == 0
     assert sp.simplify(kt.v8_kt() - kt.G2F / (2 * sp.sqrt(kt.f * kt.h))) == 0
+
+
+def test_ward_span_derivation_status():
+    """Delta22_SVT derivation record: the original 'no-go' was a non-holonomic
+    jet-space artifact (d(f2)/dr treated as independent).  With the holonomic
+    chain rule the Ward+scalar-EOM span closes all derivative channels with
+    metric-only coefficients c0..c3 and the E22 map E22_HT = r^2 f * E22_KT;
+    ONE unmatched free residual remains (evidence JSON) and must be matched
+    before Delta22_SVT is complete.  This test pins the honest status."""
+    p = kt.probe_ward_span_no_go()
+    assert p["status"] == "SUPERSEDED_NON_HOLONOMIC_ARTIFACT"
+    assert "holonomic" in p["df2_coefficients"]["holonomic"]
+    assert "E22_HT = r^2 f * E22_KT" in p["correct_route"]

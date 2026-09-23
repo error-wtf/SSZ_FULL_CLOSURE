@@ -289,3 +289,36 @@ def onshell_eq85_certificate(sector=None):
             'hp_onshell': sp.factor(hp_os),
             'undivided_eq85_onshell_residual': residual,
             'certificate_holds': residual == 0}
+
+
+# ------------------------------------------------ Ward-span no-go probe
+def probe_ward_span_no_go():
+    """SUPERSEDED REGISTER (do not use for gating).
+
+    The original version claimed the theta-theta equation cannot be
+    reconstructed as E22 = Ward + sum c_i*EOM_i with metric coefficients.
+    That claim was an ARTIFACT of a non-holonomic jet space (it treated
+    d(f2)/dr as an independent chain direction).  With the holonomic
+    chain rule (d f2/dr = f2phi*phi' + f2X*X' + f2F*F' + f2Y*Y', exactly
+    the repo convention in svt_background_eom.py:219) the df2 obstruction
+    vanishes: in the luminal MH slice all derivative channels (df2F,
+    df2X, phpp, hpp, app2, fpp) close with METRIC-ONLY coefficients
+
+        c2 = ap*sqrt(h)*(f r^2 - 1)/(2 r sqrt(f))      (JA' channel)
+        c3 = sqrt(f)*h*phi_r*r/(2 sqrt(h))              (scalar-EOM channel)
+        c0 = r*(f hp + fp h)/(4 f h)
+        c1 = -(-4 f h + f hp r + fp h r)/(4 f h)
+
+    and the E22 normalization map is measured by the fpp channel as
+    E22_HT = r^2 f * E22_KT.  ONE unmatched free residual remains
+    (see data/generated/phase2_q2/STEP1_DELTA22_WARD_SPAN_SOLUTION.json);
+    matching it completes Delta22_SVT.  This probe is kept as the honest
+    record of the falsified shortcut claim."""
+    return {
+        "status": "SUPERSEDED_NON_HOLONOMIC_ARTIFACT",
+        "df2_coefficients": {"Ward": "f*r**3/2 (non-holonomic space only)",
+                             "holonomic": "absorbed by df2 = f2phi*ph + f2X*Xp + f2F*Fp + f2Y*Yp"},
+        "correct_route": "Ward + c0*E00 + c1*E11 + c2*JA' + c3*(Jphi'-Pphi), "
+                         "holonomic chains, E22_HT = r^2 f * E22_KT",
+        "evidence": "data/generated/phase2_q2/STEP1_DELTA22_WARD_SPAN_SOLUTION.json",
+    }

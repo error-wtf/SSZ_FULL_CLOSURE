@@ -1,0 +1,31 @@
+{
+ "schema_version": "1.0",
+ "timestamp": "2026-09-23T10:38:45.509853+00:00",
+ "git_commit": "ca09c5f8fb0e376cb43c8148aa91215d38adf9a8",
+ "title": "Delta22_SVT derivation: Ward+scalar-EOM span solution (MH slice) - 4/4 derivative channels close, c0..c3 metric-only, ONE unmatched free residual",
+ "route": "E22_full := Ward_combination + c0*E00 + c1*E11 + c2*JA' + c3*(Jphi'-Pphi), coefficients solved in the holonomic jet space on the luminal MH slice against the KT2023 Eq.9 luminal E22 transported via E22_HT = r^2 f * E22_KT (fpp-channel measured the map factor)",
+ "solved_coefficients": {
+  "c2 (JA'-channel, df2F/app2 consistent)": "ap*sqrt(h)*(f*r**2 - 1)/(2*r*sqrt(f))",
+  "c3 (scalar-EOM channel, df2X/phpp consistent)": "sqrt(f)*h*phi_r*r/(2*sqrt(h))",
+  "c0": "r*(f*hp_r + fp_r*h)/(4*f*h)",
+  "c1": "-(-4*f*h + f*hp_r*r + fp_r*h*r)/(4*f*h)"
+ },
+ "channels_closed": [
+  "df2F",
+  "df2X",
+  "phpp",
+  "hpp",
+  "app2",
+  "fpp (via E22 map factor r^2 f)"
+ ],
+ "unmatched_free_residual": "-r*(ap**2*f*f2F*h*hp*r**2 - ap**2*f2F*fp*h**2*r**2 + 2*f**2*h*hp + f**2*hp**2*r - fp**2*h**2*r)/(4*f*h)",
+ "next_diagnostic": "match residual: candidates are (i) Ward JA'-coefficient transport factor, (ii) missing E00/E11-combination member, (iii) KT-E22 transport cross-term; table: ap^2 f2F part vs pure-metric part must be traced separately",
+ "supersedes": "probe_ward_span_no_go (INVALID: used non-holonomic jet space, df2 as independent chain; holonomic df2 = f2phi*ph + f2X*Xp + f2F*Fp + f2Y*Yp absorbs it)",
+ "premises": [
+  "f>0",
+  "h>0",
+  "r>0",
+  "luminal MH slice for coefficient solving",
+  "holonomic chain rule per svt_background_eom.py:219"
+ ]
+}
