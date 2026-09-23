@@ -1,18 +1,24 @@
 {
- "continuation_state": "G10/G11/G12 PASS: general C_bg assembled, Test A + exact Test B (MH Eq.85 projection) machine-verified; next: production electric member (G13), full LR limit (G14), Sigma_SVT (G15)",
- "tests": "158/158 PASS (tests/regression/test_light_ring_identity.py 15/15 incl. negative control; test_kt_mh_background.py 5/5)",
+ "continuation_state": "G10/G11/G12 PASS (exact Test B); G13/G15 symbolic machinery in source; consolidation complete (gate graph, MODEL_LOCK, EVIDENCE_INDEX, provenance test); next: Delta22_SVT derivation then numeric G13->G14->G16",
+ "tests": "161/161 PASS",
+ "head_commit": "a5240f6 (see git log; this file updated in same or next commit)",
  "completed": [
-  "G10 full symbolic C_bg (light_ring_identity.build_general_C_bg): ALPHA*E00_full + BETA*E22_MH_slice + Delta22_SVT, all SVT jets + f2Y symbolic",
-  "G11 eps_Y background-null on same C_bg (f2Y visible, vanishes at A0prime=0)",
-  "G12 exact MH Eq85 projection: P_MH[C_bg] - C85|_slots == 0 exact incl. electric term, negative control (wrong v8 slot breaks it)",
-  "combination coefficients machine-verified: ALPHA=+sqrt(f)/(r sqrt(h)), BETA=+r f^(3/2)/sqrt(h) (KT2023 transport, mu_E22=+1)"
+  "G00-G06 PASS (provenance/model/geometry/rank/ODE/integration/residuals)",
+  "G07 MARGINAL (holonomic emitter identity documented; independent re-check open)",
+  "G10 C_bg = ALPHA*E00_full + BETA*E22_MH_slice + BETA*Delta22_SVT (all SVT jets + f2Y symbolic)",
+  "G11 eps_Y background-null on same C_bg (PASS)",
+  "G12 exact MH Eq85 projection P_MH[C_bg]-C85|_slots == 0 (PASS + wrong-slot negative control)",
+  "G13 symbolic: project_production_f2Y_zero",
+  "G15 structure: sigma_svt_decomposition (E00-channel operators exact; Delta22_SVT open at BETA weight)",
+  "consolidation: gates.py G00-G100 fail-closed graph + programmatic verdict; MODEL_LOCK.json; EVIDENCE_INDEX.json; import-provenance regression"
  ],
- "next_executable_command": "G13 production electric member: apply f2Y=0 + integrated f3X + integrated A0 to C_bg (production module svt_background_eom); re-solve algebraic triangle JA->f2F, E00->f2, E11-E00->f2X; then G14 full LR limit (u=r_s/r, W=u^2 f, ring identity (u/r_s)W_uu), G15 Sigma_SVT = C_LR_full - C_LR_MH with operator decomposition, G16 full LR balance; the E11-channel genuine-SVT content and Delta22_SVT derivation feed G15",
+ "next_executable_command": "derive Delta22_SVT (genuine-SVT theta-theta correction of the general U(1)-SVT action; source: HT2018 action Eq.(1) L_SVT2-4 theta-theta variation on the static background; cross-check against the E11-E00 candidate h phi_r r A0prime^2 (2 f3X h^3 phi_r^2 - 4 f3 h) which must emerge or be revised); then G13 numeric (f2Y=0 + integrated f3X/A0 on production member) -> G14 ring limit -> G15 complete Sigma_SVT -> G16 full LR balance",
  "open_items": {
-  "Delta22_SVT": "genuine-SVT theta-theta correction (registered open; P_MH->0 by definition)",
-  "E11_channel_SVT": "f3X/f4XX jets enter Sigma_SVT via E11 channel (candidate: h phi_r r A0prime^2 (2 f3X h^3 phi_r^2 - 4 f3 h))"
+  "Delta22_SVT": "the ONLY remaining symbolic unknown of C_bg; derivation is the G15 completion",
+  "G07": "holonomic independent re-check (MARGINAL)",
+  "G13-G16 numeric": "production member evaluation after Delta22_SVT"
  },
- "active_source_files": ["src/ssz_p5/action/light_ring_identity.py", "src/ssz_p5/action/kt_mh_background.py", "src/ssz_p5/action/symbolic_canon.py", "src/ssz_p5/action/onshell.py"],
- "evidence": ["data/generated/phase2_q2/G10_G12_CBG_EQ85_MILESTONE.json", "data/generated/phase2_q2/STEP1_KT2023_CBG_GENERATING_COMBINATION.json"],
- "failure_classification": "no scientific fail registered; software/derivation loop continues"
+ "active_source_files": ["src/ssz_p5/action/light_ring_identity.py", "src/ssz_p5/action/kt_mh_background.py", "src/ssz_p5/action/symbolic_canon.py", "src/ssz_p5/closure/gates.py"],
+ "evidence": ["data/generated/phase2_q2/G10_G12_CBG_EQ85_MILESTONE.json", "data/generated/phase2_q2/STEP1_KT2023_CBG_GENERATING_COMBINATION.json", "EVIDENCE_INDEX.json", "GATE_STATUS.json", "MODEL_LOCK.json"],
+ "failure_classification": "no scientific fail registered; loop continues"
 }
