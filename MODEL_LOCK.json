@@ -1,0 +1,74 @@
+{
+ "schema_version": "1.0",
+ "model_name": "SSZ P5 electric U(1)-SVT (luminal Horndeski branch)",
+ "branch_name": "main",
+ "git_commit": "4f36f0f6b5811ef00033bf262554203cd2610fc8",
+ "action_member_reference": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
+ "action_member_sha256": "742d7c1dbfa06d9870b69f2b95ae1b764b1c3083aea16d968cae5d8e136cf684",
+ "geometry_definition": {
+  "line_element": "ds^2 = -f(r) dt^2 + dr^2/h(r) + r^2 dOmega^2",
+  "coordinate": "u = r_s/r",
+  "optical_potential": "W(u) = u^2 f(u)",
+  "light_ring_condition": "r f' - 2 f = 0  <=>  W_u = 0",
+  "inner_stable_ring": {
+   "u_LR": 0.706135,
+   "W_uu": 2.59314
+  },
+  "outer_ring": "unstable, Schwarzschild-calibrated reference"
+ },
+ "scalar_profile": "phi = phi(r), monotone chart, X = -h phi'^2 / 2",
+ "electric_branch": {
+  "A_mu": "(A0(r),0,0,0)",
+  "A0prime": "generally nonzero",
+  "F": "h A0'^2/(2f)",
+  "Y": "4FX"
+ },
+ "horndeski_branch": {
+  "G4": "G4(phi)",
+  "G3": 0,
+  "G5": 0,
+  "M_pl": 1,
+  "tensor_sector_H": 1
+ },
+ "action_functions": [
+  "f2(phi,X,F,Y)",
+  "f3(phi,X)",
+  "f3X",
+  "f4(phi,X)",
+  "f4X",
+  "f4XX",
+  "tilde_f4(phi)"
+ ],
+ "f2Y_production_condition": "f2Y = 0 is a PRODUCTION BRANCH POSTULATE (Test C only); symbolic through C_bg/Test A/Test B",
+ "eq85_slot_mapping": {
+  "MH_v8": "ZK_V9",
+  "MH_v8_formula": "G2F_eff/(2 sqrt(fh))",
+  "never_use": "canonical ZK V8 column",
+  "v9_inner_ring": 17.521313
+ },
+ "eq85_threshold_diagnostic": {
+  "A0u_sq_threshold": 0.2230195,
+  "scope": "Eq85-only, Sigma_SVT=0; never universal"
+ },
+ "normalization": {
+  "background": "HT2018 (arXiv:1802.07035) Eqs. 14/15/20, M_pl^2=1",
+  "components": "KT2023 (arXiv:2301.10362) via verified diagonal map",
+  "combination": "C_bg = ALPHA*E00_full + BETA*E22 + Delta22_SVT",
+  "ALPHA": "sqrt(f)/(r sqrt(h))",
+  "BETA": "r f^(3/2)/sqrt(h)"
+ },
+ "radial_domain": "production window incl. both rings; boundary policy per STEP2_EPHI_MAX_LOCALIZATION",
+ "required_gates": "src/ssz_p5/closure/gates.py::REQUIRED_GATES",
+ "provenance_sources": [
+  {
+   "id": "KT2023",
+   "arxiv": "2301.10362",
+   "journal": "PRD 107, 104045 (2023)"
+  },
+  {
+   "id": "HT2018",
+   "arxiv": "1802.07035",
+   "journal": "PLB 780, 638 (2018)"
+  }
+ ]
+}

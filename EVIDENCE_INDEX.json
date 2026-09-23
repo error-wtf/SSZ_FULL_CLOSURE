@@ -1,0 +1,46 @@
+{
+ "schema_version": "1.0",
+ "git_commit": "4f36f0f6b5811ef00033bf262554203cd2610fc8",
+ "claims": {
+  "G10_full_symbolic_C_bg": {
+   "gate": "G10",
+   "status": "PASS",
+   "code": "src/ssz_p5/action/light_ring_identity.py::build_general_C_bg",
+   "test": "tests/regression/test_light_ring_identity.py::test_G10_C_bg_general_symbolic",
+   "evidence": "data/generated/phase2_q2/G10_G12_CBG_EQ85_MILESTONE.json",
+   "member_hash": "see-action-file"
+  },
+  "G11_epsY_null": {
+   "gate": "G11",
+   "status": "PASS",
+   "code": "light_ring_identity.test_A_epsY_null",
+   "test": "test_G11_epsY_background_null_on_C_bg",
+   "evidence": "data/generated/phase2_q2/G10_G12_CBG_EQ85_MILESTONE.json"
+  },
+  "G12_exact_MH_eq85": {
+   "gate": "G12",
+   "status": "PASS",
+   "code": "light_ring_identity.test_B_check",
+   "test": "test_G12_MH_projection_exact_eq85 (+negative control)",
+   "evidence": "data/generated/phase2_q2/G10_G12_CBG_EQ85_MILESTONE.json"
+  },
+  "kt2023_generating_combination": {
+   "gate": "G10",
+   "status": "PASS",
+   "code": "src/ssz_p5/action/kt_mh_background.py",
+   "test": "tests/regression/test_kt_mh_background.py",
+   "evidence": "data/generated/phase2_q2/STEP1_KT2023_CBG_GENERATING_COMBINATION.json"
+  },
+  "eq85_light_ring_replay": {
+   "gate": "G14-precursor",
+   "status": "PASS",
+   "evidence": "data/generated/phase2_q2/EQ85_LIGHT_RING_REPLAY.json",
+   "scope": "zero-vector carrier replay (historical, non-production)"
+  },
+  "eq85_slot_mapping": {
+   "gate": "G01",
+   "status": "PASS",
+   "evidence": "data/generated/phase2_q2/STEP0_EQ85_V8_PROVENANCE.json"
+  }
+ }
+}
