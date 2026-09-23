@@ -35,3 +35,46 @@ def test_no_forbidden_path_in_sys_path():
             raise AssertionError(
                 f"historical snapshot {FORBIDDEN} on sys.path - "
                 "invalid evidence environment")
+
+
+def test_gate_dependency_enforcement():
+    """A gate whose REQUIRED parent is not PASS must certify as
+    BLOCKED_BY_DEPENDENCY even when its raw status is PASS."""
+    import json, tempfile
+    from ssz_p5.closure import gates
+    raw = {g: "PASS" for g in gates.REQUIRED_GATES}
+    raw["G07"] = "MARGINAL"           # parent of G10 open
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as fh:
+        json.dump(raw, fh)
+        path = fh.name
+    cert = gates.certification_status(Path(path))
+    assert cert["G10"] == "BLOCKED_BY_DEPENDENCY"
+    assert cert["G11"] == "BLOCKED_BY_DEPENDENCY"   # transitively
+    assert cert["G12"] == "BLOCKED_BY_DEPENDENCY"
+    assert cert["G07"] == "MARGINAL"                # raw non-PASS unchanged
+    assert gates.full_closure_verdict(path)["ABSOLUTE_FULL_CLOSURE_PASS"] is False
+    # and an all-PASS raw file certifies clean
+    raw["G07"] = "PASS"
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as fh:
+        json.dump(raw, fh)
+        path = fh.name
+    assert gates.certification_status(path)["G10"] == "PASS"
+
+
+def test_release_metadata_current():
+    """Provenance preflight: MODEL_LOCK.json / EVIDENCE_INDEX.json must carry
+    the current HEAD as git_commit.  If this fails, run
+    `PYTHONPATH=src python tools/refresh_release_metadata.py` and commit."""
+    import json
+    import subprocess
+    head = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True,
+                          text=True).stdout.strip()
+    root = Path(__file__).resolve().parents[2]
+    for name in ("MODEL_LOCK.json", "EVIDENCE_INDEX.json"):
+        p = root / name
+        if not p.exists():
+            continue
+        got = json.loads(p.read_text()).get("git_commit")
+        assert got == head, (
+            f"{name}: git_commit {str(got)[:7]} != HEAD {head[:7]} - "
+            "run: PYTHONPATH=src python tools/refresh_release_metadata.py")

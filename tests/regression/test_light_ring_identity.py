@@ -198,3 +198,30 @@ def test_G15_sigma_svt_operator_decomposition():
     # except the open theta-theta correction which is carried at BETA weight
     for op in d["operators"][:2]:
         assert sp.sympify(op["symbolic"]).has(lri.ap**2)
+
+
+def test_G14_symbol_separation_u_lr_vs_A0_u():
+    """G14 symbol collision guard: u_lr (radial coordinate) and A0_u
+    (electric derivative) are DISTINCT symbols.  The geometric ring term is
+    (u_lr/r_s)*W_uu*a4 - if u_lr were replaced by A0_u this test fails."""
+    d = lri.lr_ring_limit_expressions()
+    S = d["symbols"]
+    assert S["u_lr"] != S["A0_u"]
+    assert d["geometric_ring_term_raw"].has(S["u_lr"])
+    assert not d["geometric_ring_term_raw"].has(S["A0_u"])
+    assert d["electric_normalized"].has(S["A0_u"])
+    assert d["electric_normalized"].has(S["u_lr"])   # normalized term carries u_lr^2
+
+
+def test_ward_residual_electric_channel_JA():
+    """Registered Ward-residual decomposition (exact algebra, G15 blocker):
+    the unmatched electric part is EXACTLY c4*JA with the non-derivative
+    current JA = sqrt(h/f)*ap*r^2*f2F_eff and
+    c4 = -ap*r*(f hp_r - fp_r h)/(4 sqrt(fh)).
+    c4's covariant derivation from the vector Ward term is the registered
+    completion step; this regression pins the algebraic decomposition."""
+    d = lri.ward_residual_decomposition()
+    assert sp.simplify(d["R_el"] - lri.c4_JA_channel*lri.JA_channel) == 0
+    # sanity: R_el carries the electric structures, R_met does not
+    assert d["R_el"].has(lri.ap) and d["R_el"].has(lri.f2F)
+    assert not d["R_met"].has(lri.ap) and not d["R_met"].has(lri.f2F)

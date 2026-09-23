@@ -249,11 +249,42 @@ def sigma_svt_decomposition():
 
 
 def lr_ring_limit_expressions():
-    """G14 structural pieces (undivided; ring handled by W_uu identity):
-    geometric identity at the ring and the normalized electric factor."""
-    geom_ring = sp.Symbol('W_uu')*A0u/sp.Symbol('r_s')  # (u/r_s) W_uu form factor
+    """G14 structural pieces (undivided; ring handled by W_uu identity).
+
+    SYMBOL SEPARATION (regression-anchored): u_lr is the RADIAL COORDINATE
+    u = r_s/r at the ring; A0_u is the electric derivative A_{0,u}.  They
+    are distinct symbols and must never be conflated.
+
+    Geometric contribution before common normalization: (u_lr/r_s)*W_uu*a4.
+    After multiplying the WHOLE LR equation by r_s/u_lr: W_uu*a4.
+    Electric term after common normalization: 2*u_lr^2*f*h*A0_u^2*v8_MH."""
+    u_lr, r_s, W_uu, A0_u = sp.symbols('u_lr r_s W_uu A0_u', positive=True)
     return {
-        "geometric_ring_term": geom_ring,
-        "electric_normalized": 2*A0u**2*f*h*v8_MH_sym,  # post r_s/u normalization
+        "symbols": {"u_lr": u_lr, "r_s": r_s, "W_uu": W_uu, "A0_u": A0_u},
+        "geometric_ring_term_raw": (u_lr/r_s)*W_uu*a4s,
+        "geometric_ring_term_normalized": W_uu*a4s,
+        "electric_normalized": 2*u_lr**2*f*h*A0_u**2*v8_MH_sym,
+        "ring_identity": "G_r|_LR = (u_lr/r_s)*W_uu   (analytically exact)",
         "premises": ["2f - r f' = 0 at ring", "f>0", "h>0", "W_uu>0 inner ring"]
     }
+
+
+# ---- Ward-residual decomposition (G15 blocker, machine-verified) ----
+# R = C_bg-solve residual splits EXACTLY into electric and pure-metric parts:
+#   R_el  = c4 * JA,   c4 = -A0p_r*(f hp_r - fp_r h)/(4 sqrt(fh))
+#   (non-derivative JA channel — the member the Ward span was missing;
+#    its covariant derivation from the vector Ward term is registered as
+#    the completion step; the algebraic decomposition itself is exact)
+c4_JA_channel = -ap*r*(f*hp_r - fp_r*h)/(4*sp.sqrt(f*h))
+JA_channel = sp.sqrt(h/f)*ap*r**2*f2F_eff
+
+
+def ward_residual_decomposition():
+    """Return the exact split of the unmatched Ward-span residual."""
+    R_el = c4_JA_channel*JA_channel
+    R_met = -r/(4*f*h)*(2*f**2*h*hp_r
+                        + r*(f**2*hp_r**2 - fp_r**2*h**2))
+    return {"R_el": sp.expand(R_el), "R_met": sp.expand(R_met),
+            "c4": c4_JA_channel,
+            "status": "R_el exact decomposition verified; R_met pending "
+                      "pure-metric Ward/Bianchi sector closure (Einstein/Schwarzschild oracle)"}

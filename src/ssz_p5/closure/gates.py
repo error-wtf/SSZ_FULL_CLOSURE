@@ -85,16 +85,40 @@ GATE_DEFS = {
 
 
 def load_status(path: Path | None = None) -> dict:
-    p = path or Path(__file__).resolve().parents[3] / "GATE_STATUS.json"
+    p = Path(path) if path is not None else Path(__file__).resolve().parents[3] / "GATE_STATUS.json"
     if not p.exists():
         return {g: "NOT_RUN" for g in REQUIRED_GATES}
     raw = json.loads(p.read_text())
     return {g: raw.get(g, "NOT_RUN") for g in REQUIRED_GATES}
 
 
+def certification_status(path: Path | None = None) -> dict:
+    """Effective certification with dependency enforcement (contract Sections
+    6/34).  A gate whose raw status is PASS but whose REQUIRED parents are
+    not all PASS has raw_test_status PASS yet effective certification
+    BLOCKED_BY_DEPENDENCY - its evidence may exist, but it must not certify
+    downstream work.  FAIL/MARGINAL/NOT_RUN propagate unchanged."""
+    raw = load_status(path)
+
+    def effective(g, seen=()):
+        s = raw[g]
+        if s != "PASS":
+            return s
+        for parent in GATE_DEFS[g].get("requires", []):
+            if parent in seen:
+                continue  # cycle guard; the graph is acyclic by construction
+            ps = effective(parent, seen + (g,))
+            if ps != "PASS":
+                return "BLOCKED_BY_DEPENDENCY"
+        return "PASS"
+
+    return {g: effective(g) for g in REQUIRED_GATES}
+
+
 def full_closure_verdict(path: Path | None = None) -> dict:
-    """Programmatic-only closure verdict (Section 35).  Never manual."""
-    status = load_status(path)
+    """Programmatic-only closure verdict (Section 35).  Never manual.
+    Uses the CERTIFICATION statuses (dependency-enforced), not raw ones."""
+    status = certification_status(path)
     failed = [g for g in REQUIRED_GATES if status[g] != "PASS"]
     return {
         "ABSOLUTE_FULL_CLOSURE_PASS": not failed,
