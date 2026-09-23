@@ -159,8 +159,10 @@ def E22_MH_slice():
 def build_general_C_bg():
     """G10: the general undivided Eq.-85-generating combination.
     f2Y, f3, f3X, f4, f4X, f4XX, tf4 and Delta22_SVT all stay SYMBOLIC.
+    Delta22_SVT enters with the E22-channel weight BETA (it IS the missing
+    genuine-SVT theta-theta correction of that channel).
     Premises: f>0, h>0, r>0 (all positive symbols)."""
-    return ALPHA*E00_full() + BETA*E22_MH_slice() + Delta22_SVT
+    return ALPHA*E00_full() + BETA*E22_MH_slice() + BETA*Delta22_SVT
 
 
 def P_MH_full(expr):
@@ -202,3 +204,56 @@ def test_A_epsY_null():
     fy = sp.expand(C_bg.subs(ap, 0)).coeff(f2Y)
     visible = sp.expand(C_bg).coeff(f2Y) != 0
     return (fy == 0), visible
+
+
+# ====================================================================
+# G13 (production specialization) + G15 (Sigma_SVT decomposition)
+# ====================================================================
+
+def project_production_f2Y_zero(expr):
+    """G13: apply the PRODUCTION BRANCH POSTULATE f2Y = 0.  Only legal
+    AFTER G11/G12 (order frozen: symbolic first, specialization later)."""
+    return sp.expand(expr.subs(f2Y, 0))
+
+
+def sigma_svt_decomposition():
+    """G15: authoritative operator-level decomposition
+
+        Sigma_SVT = C_bg - P_MH[C_bg]
+                  = ALPHA * (E00_full - P_MH[E00_full])
+                    + BETA * Delta22_SVT,
+
+    returned as a structured operator list.  The E00 channel is EXACT
+    (machine-verified combination); Delta22_SVT is the registered open
+    genuine-SVT theta-theta correction (derivation feeds this slot; the
+    historical E11-E00 f3X candidate must emerge from or be revised by
+    that derivation - it is NOT assumed here)."""
+    C_bg = build_general_C_bg()
+    sv_part = sp.expand(C_bg - P_MH_full(C_bg))
+    e00_svt = sp.expand((E00_full() - P_MH_full(E00_full())))
+    return {
+        "total": sv_part,
+        "operators": [
+            {"name": "f3_E00_channel",
+             "symbolic": sp.factor(sp.expand(ALPHA * (2*r*h**2*ph*ap**2*f3))),
+             "source": "f3 via E00_full (HT2018 Eq.14)"},
+            {"name": "f4_f4X_tf4_E00_channel",
+             "symbolic": sp.factor(sp.expand(
+                 ALPHA * (-h*ap**2*(4*(h-1)*f4 - h**2*ph**2*(f4X + 2*tf4))))),
+             "source": "f4/f4X/tf4 via E00_full"},
+            {"name": "Delta22_SVT_theta_theta",
+             "symbolic": sp.factor(sp.expand(BETA * Delta22_SVT)),
+             "source": "open genuine-SVT theta-theta correction (registered)"},
+        ],
+    }
+
+
+def lr_ring_limit_expressions():
+    """G14 structural pieces (undivided; ring handled by W_uu identity):
+    geometric identity at the ring and the normalized electric factor."""
+    geom_ring = sp.Symbol('W_uu')*A0u/sp.Symbol('r_s')  # (u/r_s) W_uu form factor
+    return {
+        "geometric_ring_term": geom_ring,
+        "electric_normalized": 2*A0u**2*f*h*v8_MH_sym,  # post r_s/u normalization
+        "premises": ["2f - r f' = 0 at ring", "f>0", "h>0", "W_uu>0 inner ring"]
+    }

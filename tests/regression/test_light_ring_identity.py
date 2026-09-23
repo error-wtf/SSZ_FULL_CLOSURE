@@ -180,3 +180,21 @@ def test_G12_negative_control_wrong_slot():
     rhs = lri.C85_undivided().subs(wrong)
     residual = sp.factor(sp.cancel(sp.together(sp.expand(C_bg - rhs))))
     assert residual != 0
+
+
+def test_G15_sigma_svt_operator_decomposition():
+    """G15 structure: Sigma_SVT = C_bg - P_MH[C_bg] decomposes exactly into
+    the documented operator list (E00-channel f3 / f4-f4X-tf4 terms plus the
+    registered open Delta22_SVT theta-theta correction with BETA weight).
+    The historical E11-E00 f3X candidate is NOT assumed here - it must come
+    out of (or revise) the Delta22_SVT derivation."""
+    d = lri.sigma_svt_decomposition()
+    from ssz_p5.action.symbolic_canon import canonical_simplify
+    total = d["total"]
+    s = sum(sp.sympify(op["symbolic"]) for op in d["operators"])
+    assert canonical_simplify(total - s) == 0
+    assert total.has(lri.f3) and total.has(lri.f4) and total.has(lri.Delta22_SVT)
+    # every genuine-SVT operator channel carries ap^2 (electric activation),
+    # except the open theta-theta correction which is carried at BETA weight
+    for op in d["operators"][:2]:
+        assert sp.sympify(op["symbolic"]).has(lri.ap**2)
