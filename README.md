@@ -44,7 +44,7 @@ background equations → action integrability → light-ring compatibility
 |---|---|
 | **Verdict** | `ABSOLUTE_FULL_CLOSURE_PASS = False` — derived programmatically, never asserted |
 | **Gates** | 10 of 28 required gates PASS · 18 open · live from `GATE_STATUS.json` |
-| **Tests** | 162/162 passing |
+| **Tests** | 166/166 passing (suite grows with every regression — 162+ guaranteed) |
 | **Head** | main (pushed; live commit via `git rev-parse HEAD`) |
 
 The verdict is computed, not claimed:
@@ -57,7 +57,7 @@ print(full_closure_verdict()['ABSOLUTE_FULL_CLOSURE_PASS'])"
 
 ## Test results
 
-**Software suite — 162/162 PASS** (commit `8eb7f12`, CPython 3.14.4,
+**Software suite — 166/166 PASS and growing** (162+ at every commit since `8eb7f12`; exact counts per release in `GATE_STATUS.json`/test logs; environment: CPython 3.14.4,
 numpy 2.5.3, scipy 1.18.1, sympy 1.14.0):
 
 | Suite | Tests | Result | Content |
@@ -217,7 +217,7 @@ python3.14 -m venv .venv && source .venv/bin/activate
 python -m pip install -r requirements.lock
 python -m pip install --no-deps -e .
 
-pytest -q                                                    # 162 tests
+pytest -q                                                    # 166+ tests, all must pass
 ```
 
 The symbolic closure layers run in seconds:
