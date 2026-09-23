@@ -1,0 +1,63 @@
+{
+ "schema_version": "1.0",
+ "timestamp": "2026-09-23T10:00:02.467514+00:00",
+ "git_commit": "865592cfe6bff753e2d3b390666e91459c259f77",
+ "branch": "main",
+ "gates": {
+  "G10_full_symbolic_C_bg": {
+   "status": "PASS",
+   "code": "src/ssz_p5/action/light_ring_identity.py::build_general_C_bg",
+   "test": "tests/regression/test_light_ring_identity.py::test_G10_C_bg_general_symbolic",
+   "content": "C_bg = ALPHA*E00_full + BETA*E22_MH_slice + Delta22_SVT; f2Y/f3/f4/f4X/tf4/Delta22_SVT symbolic",
+   "combination": {
+    "ALPHA": {
+     "str": "sqrt(f)/(sqrt(h)*r)",
+     "hash": "17bceb2111759121"
+    },
+    "BETA": {
+     "str": "f**(3/2)*r/sqrt(h)",
+     "hash": "0c422176c9adcd53"
+    }
+   },
+   "sources": [
+    "HT2018 arXiv:1802.07035 Eq.(14)/(15)",
+    "KT2023 arXiv:2301.10362 Eq.(9) luminal slice transport"
+   ]
+  },
+  "G11_epsY_nulltest": {
+   "status": "PASS",
+   "code": "light_ring_identity.test_A_epsY_null",
+   "test": "test_G11_epsY_background_null_on_C_bg",
+   "result": {
+    "Delta_C_epsY_at_A0prime_0": "0 (exact)",
+    "f2Y_visible_general": true
+   }
+  },
+  "G12_exact_MH_eq85_projection": {
+   "status": "PASS",
+   "code": "light_ring_identity.test_B_check + P_MH_full + mh_slot_identification",
+   "test": "test_G12_MH_projection_exact_eq85 + negative control test_G12_negative_control_wrong_slot",
+   "identity": "P_MH_full[C_bg] - C85_undivided|_mh_slots == 0 (exact, canonical_simplify)",
+   "residual": "0",
+   "A0prime": "symbolic (never set)",
+   "f2Y": "symbolic via f2F_eff = f2F - 2 h phi^2 f2Y",
+   "slot_mapping": {
+    "MH_v8": "f2F_eff/(2 sqrt(fh))",
+    "rule": "MH v8 = ZK V9",
+    "a4": "sqrt(fh)/2",
+    "Fcal": "1 (Einstein tensor sector)"
+   }
+  }
+ },
+ "open_items": {
+  "Delta22_SVT": "genuine-SVT theta-theta correction (P_MH kills it by definition); derivation is the Sigma_SVT input",
+  "E11_channel": "f3X/f4XX jets live in E11_full; enter Sigma_SVT via E11 channel"
+ },
+ "premises": [
+  "f>0",
+  "h>0",
+  "r>0",
+  "luminal branch G4(phi), G3=0, G5=0",
+  "2f-rf' != 0 handled undivided at rings"
+ ]
+}

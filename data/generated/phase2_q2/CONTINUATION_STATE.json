@@ -1,20 +1,18 @@
 {
- "continuation_state": "STEP 1 / Test B prechecks 11/11 PASS; KT2023 C_bg-generating combination machine-verified; next: assemble general C_bg in light_ring_identity and run Test B",
- "git_commit": "see latest commit (this file updated in same commit)",
- "tests": "tests/regression/test_light_ring_identity.py 11/11 PASS; tests/regression/test_kt_mh_background.py 5/5 PASS",
+ "continuation_state": "G10/G11/G12 PASS: general C_bg assembled, Test A + exact Test B (MH Eq.85 projection) machine-verified; next: production electric member (G13), full LR limit (G14), Sigma_SVT (G15)",
+ "tests": "158/158 PASS (tests/regression/test_light_ring_identity.py 15/15 incl. negative control; test_kt_mh_background.py 5/5)",
  "completed": [
-  "both software fails repaired (f2Y substitution semantics; C85 algebraic test) - commit 51b6bb3",
-  "env-frozen replay checkpoint regenerated under pinned stack (a5/d3/e4 photon-root slots) - commit 51b6bb3",
-  "primary sources fetched and transcribed: KT2023 arXiv:2301.10362 Eqs. 7/8/9/10/14/24/25/168/85; HT2018 arXiv:1802.07035 Eqs. 12/14/15/18-20",
-  "S0-slice diagonal map KT_E00=-HT_E00/(r^2 f), KT_E11=+HT_E11/(r^2 f) verified",
-  "C_bg-generating combination verified EXACT (off-shell, luminal branch): C85_undivided == A*KT_E00 + B*KT_E22, A=-r f^(3/2)/sqrt(h), B=+r f^(3/2)/sqrt(h)",
-  "on-shell certificate luminal branch: residual == 0, pivot D = G4*G4phi*h*(r f'-2f)/(f r)",
-  "sector scope recorded: G4X != 0 breaks metric-only two-term identity (on-shell statement there); project is luminal-locked",
-  "evidence: data/generated/phase2_q2/STEP1_KT2023_CBG_GENERATING_COMBINATION.json"
+  "G10 full symbolic C_bg (light_ring_identity.build_general_C_bg): ALPHA*E00_full + BETA*E22_MH_slice + Delta22_SVT, all SVT jets + f2Y symbolic",
+  "G11 eps_Y background-null on same C_bg (f2Y visible, vanishes at A0prime=0)",
+  "G12 exact MH Eq85 projection: P_MH[C_bg] - C85|_slots == 0 exact incl. electric term, negative control (wrong v8 slot breaks it)",
+  "combination coefficients machine-verified: ALPHA=+sqrt(f)/(r sqrt(h)), BETA=+r f^(3/2)/sqrt(h) (KT2023 transport, mu_E22=+1)"
  ],
- "exact_unresolved": "general U(1)-SVT E22 (theta-theta component) with genuine-SVT jets f2Y/f3/f3X/f4/f4X/tf4 symbolic, in repo (HT2018) normalization",
- "next_executable_command": "construct E22_general in light_ring_identity: E22_HT := (r/2)[-f'/(2f) E00 - d/dr(E11) - (f'/(2f) + 2/r) E11 + (A0'/r^2) sqrt(h/f) d(JA)/dr] (Ward-identity route; validate first against luminal_e00_minus_e22 in onshell.py on the G4(phi) sector, then against the KT2023 E22 via the diagonal map); then C_bg := A*E00 + B*E22 with A=-r f^(3/2)/sqrt(h), B=+r f^(3/2)/sqrt(h); Test B: P_MH[C_bg] == C85_undivided; Test A: eps_Y nulltest on same C_bg",
- "active_source_files": ["src/ssz_p5/action/kt_mh_background.py", "src/ssz_p5/action/light_ring_identity.py", "src/ssz_p5/action/onshell.py"],
- "conventions": {"slot_mapping": "MH v8 = ZK V9 = G2F/(2 sqrt(fh)); never canonical ZK V8", "normalization_bridge": "KT2023 components vs repo HT2018 variations via diagonal map (S0-verified)", "luminal_branch": "G4 = G4(phi), G3 = 0, G5 = 0"},
- "failure_classification": "software/derivation work in progress; no scientific fail registered"
+ "next_executable_command": "G13 production electric member: apply f2Y=0 + integrated f3X + integrated A0 to C_bg (production module svt_background_eom); re-solve algebraic triangle JA->f2F, E00->f2, E11-E00->f2X; then G14 full LR limit (u=r_s/r, W=u^2 f, ring identity (u/r_s)W_uu), G15 Sigma_SVT = C_LR_full - C_LR_MH with operator decomposition, G16 full LR balance; the E11-channel genuine-SVT content and Delta22_SVT derivation feed G15",
+ "open_items": {
+  "Delta22_SVT": "genuine-SVT theta-theta correction (registered open; P_MH->0 by definition)",
+  "E11_channel_SVT": "f3X/f4XX jets enter Sigma_SVT via E11 channel (candidate: h phi_r r A0prime^2 (2 f3X h^3 phi_r^2 - 4 f3 h))"
+ },
+ "active_source_files": ["src/ssz_p5/action/light_ring_identity.py", "src/ssz_p5/action/kt_mh_background.py", "src/ssz_p5/action/symbolic_canon.py", "src/ssz_p5/action/onshell.py"],
+ "evidence": ["data/generated/phase2_q2/G10_G12_CBG_EQ85_MILESTONE.json", "data/generated/phase2_q2/STEP1_KT2023_CBG_GENERATING_COMBINATION.json"],
+ "failure_classification": "no scientific fail registered; software/derivation loop continues"
 }

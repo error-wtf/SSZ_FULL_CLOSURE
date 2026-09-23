@@ -131,3 +131,52 @@ def test_P_MH_preserves_A0prime_symbolic():
     assert proj == 0                             # f3 carrier projects out
     keeper = lri.ap**2 * lri.v8_MH_sym           # Eq.85 electric term: no f3/f3X
     assert sp.simplify(lri.P_MH(keeper) - keeper) == 0   # survives projection
+
+
+def test_G10_C_bg_general_symbolic():
+    """G10: the general C_bg carries f2Y, the E00-channel genuine-SVT jets
+    and the open Delta22_SVT correction SYMBOLICALLY (no silent zeros).
+    Note the combination genuinely involves E00_full and E22 only: the
+    f3X/f4XX jets live in E11_full and enter the Sigma_SVT program through
+    the E11 channel and Delta22_SVT, not through this object."""
+    C_bg = lri.build_general_C_bg()
+    for s in (lri.f2Y, lri.f3, lri.f4, lri.f4X, lri.tf4,
+              lri.Delta22_SVT, lri.ap, lri.f2, lri.f2F):
+        assert C_bg.has(s), s
+    # combination coefficients are the machine-verified metric-only maps:
+    assert sp.simplify(lri.ALPHA - sp.sqrt(lri.f)/(lri.r*sp.sqrt(lri.h))) == 0
+    assert sp.simplify(lri.BETA - lri.r*lri.f**sp.Rational(3, 2)/sp.sqrt(lri.h)) == 0
+
+
+def test_G12_MH_projection_exact_eq85():
+    """G12 (TEST B): the full Maxwell-Horndeski projection of the SAME
+    general C_bg reproduces the undivided Eq.85 EXACTLY (symbolic A0prime,
+    symbolic f2Y via f2F_eff, electric term -2 r f h ap^2 v8 preserved;
+    permanent slot rule MH v8 = ZK V9).  Algebraic comparison via the
+    canonicalization service - never AST/has() shape."""
+    ok, residual = lri.test_B_check()
+    assert ok, residual
+
+
+def test_G11_epsY_background_null_on_C_bg():
+    """G11 (TEST A): on the SAME general C_bg, at A0prime = 0 the
+    eps_Y/f2Y contribution vanishes structurally while f2Y stays visible
+    in the general object (never zeroed at the entrance)."""
+    ok, visible = lri.test_A_epsY_null()
+    assert ok
+    assert visible
+
+
+def test_G12_negative_control_wrong_slot():
+    """Negative control: replacing the canonical v8 slot by the 13-slot
+    V8 column (i.e. v8 -> any wrong coefficient) must BREAK Test B.
+    Guards the V9=MH-v8 mapping regressions from going stale."""
+    C_bg = lri.P_MH_full(lri.build_general_C_bg())
+    ident = lri.mh_slot_identification()
+    # perturb the electric slot by an admitted wrong-slot factor (V8-vs-V9
+    # historically differed by sign/value): scale v8 by (1 + 1/10)
+    wrong = dict(ident)
+    wrong[lri.v8_MH_sym] = ident[lri.v8_MH_sym] * sp.Rational(11, 10)
+    rhs = lri.C85_undivided().subs(wrong)
+    residual = sp.factor(sp.cancel(sp.together(sp.expand(C_bg - rhs))))
+    assert residual != 0

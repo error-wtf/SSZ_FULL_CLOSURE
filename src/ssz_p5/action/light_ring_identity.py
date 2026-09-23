@@ -104,3 +104,101 @@ def run_tests_A():
     # vanishes at A0u = 0.  Vanishing at ap = 0 is NOT required for the f2 slot.
     zeros = {k: sp.simplify(v.subs(A0u, 0)) == 0 for k, v in d.items()}
     return zeros, all(zeros.values())
+
+
+# ====================================================================
+# FULL C_bg (G10) — general U(1)-SVT undivided Eq.-85-generating object
+#
+# Sources (verbatim, regression-anchored in tests):
+#   HT2018 arXiv:1802.07035 Eqs. (14)/(15)/(20)  -> E00_full/E11_full/JA
+#   KT2023 arXiv:2301.10362 Eq. (9) luminal slice -> E22_MH_slice
+#   Combination coefficients (machine-verified exact off-shell, luminal
+#   branch, commit 865592c evidence + this module's Test B):
+#       C_bg = ALPHA*E00_full + BETA*E22 + Delta22_SVT
+#       ALPHA =  sqrt(f)/(r sqrt(h))
+#       BETA  =  r f^(3/2)/sqrt(h)
+#   Delta22_SVT is the registered OPEN genuine-SVT theta-theta correction
+#   (P_MH kills it by definition; its derivation is the Sigma_SVT input).
+# ====================================================================
+fp_r, fpp_r, hp_r = sp.symbols('fp_r fpp_r hp_r', positive=True)
+f4XX = sp.Symbol('f4XX')
+djet = {s: sp.Symbol('d' + s.name) for s in (f2, f2X, f2F, f3, f3X, f4, f4X, f4XX, tf4)}
+f2F_eff = f2F - 2*h*ph**2*f2Y          # f2F - 2 h phi'^2 f2Y (explicit, never zeroed)
+Delta22_SVT = sp.Symbol('Delta22_SVT')  # open genuine-SVT theta-theta correction
+
+ALPHA = sp.sqrt(f)/(r*sp.sqrt(h))
+BETA = r*f**sp.Rational(3, 2)/sp.sqrt(h)
+
+
+def E00_full():
+    """HT2018 Eq. (14): LHS - RHS, with f2F -> f2F_eff (f2Y explicit)."""
+    core = (r**2*(f*f2 - h*ap**2*f2F_eff)
+            - 2*r*h**2*ph*ap**2*f3
+            + h*ap**2*(4*(h-1)*f4 - h**2*ph**2*(f4X + 2*tf4)))
+    return r*f*hp_r - f*(1 - h) - core
+
+
+def E11_full():
+    """HT2018 Eq. (15): LHS - RHS (extended bracket incl. f4XX)."""
+    core = (r**2*(f*f2 + f*h*ph**2*f2X - h*ap**2*f2F_eff)
+            - 2*r*h**2*ph*ap**2*(3*f3 - h*ph**2*f3X)
+            + h*ap**2*(4*(3*h-1)*f4 - h*(9*h-4)*ph**2*f4X
+                       + h**3*ph**4*f4XX - 10*h**2*ph**2*tf4))
+    return r*h*fp_r - f*(1 - h) - core
+
+
+def E22_MH_slice():
+    """KT2023 Eq. (9) restricted to the luminal MH slice (G4 = 1/2 const,
+    G3 = G5 = 0, G2 -> f2), transported to repo symbols.  This is the exact
+    theta-theta component TEST B needs; the genuine-SVT theta-theta
+    correction is carried separately as Delta22_SVT (open, P_MH -> 0)."""
+    return (-(h/(2*f))*(fpp_r - fp_r**2/(2*f)) - fp_r*hp_r/(4*f)
+            - h*fp_r/(2*r*f) - hp_r/(2*r) + f2)
+
+
+def build_general_C_bg():
+    """G10: the general undivided Eq.-85-generating combination.
+    f2Y, f3, f3X, f4, f4X, f4XX, tf4 and Delta22_SVT all stay SYMBOLIC.
+    Premises: f>0, h>0, r>0 (all positive symbols)."""
+    return ALPHA*E00_full() + BETA*E22_MH_slice() + Delta22_SVT
+
+
+def P_MH_full(expr):
+    """Test B projector: kills ALL genuine-SVT operator content (the SVT
+    couplings f3/f3X/f4/f4X/f4XX/tf4 AND the open theta-theta correction
+    Delta22_SVT).  A0prime and f2Y stay SYMBOLIC (anti-merge rule)."""
+    subs = {f3: 0, f3X: 0, f4: 0, f4X: 0, f4XX: 0, tf4: 0, Delta22_SVT: 0}
+    return sp.expand(expr.subs(subs))
+
+
+def mh_slot_identification():
+    """Canonical MH-slice slot identifications (KT2023 App. A Eq. 168 +
+    Einstein tensor sector H=1):  a4 = sqrt(fh)/2, a4p = its r-derivative,
+    Fcal = 1, v8_MH = f2F_eff/(2 sqrt(fh))  (permanent: MH v8 = ZK V9;
+    f2Y stays symbolic through f2F_eff)."""
+    a4_expr = sp.sqrt(f*h)/2
+    a4p_expr = a4_expr*(fp_r/f + hp_r/h)/2
+    return {a4s: a4_expr, a4p: a4p_expr, F_MH_sym: sp.Integer(1),
+            v8_MH_sym: f2F_eff/(2*sp.sqrt(f*h))}
+
+
+def test_B_check():
+    """G12: exact symbolic regression  P_MH[C_bg] - C85_undivided|_slots == 0.
+    Returns (passed, canonical_residual) via the canonicalization service."""
+    from .symbolic_canon import canonical_simplify
+    C_bg = build_general_C_bg()
+    lhs = P_MH_full(C_bg)
+    rhs = C85_undivided().subs(mh_slot_identification())
+    residual = canonical_simplify(lhs - rhs)
+    return residual == 0, residual
+
+
+def test_A_epsY_null():
+    """G11: epsilon_Y background-null on the SAME general C_bg.
+    The eps_Y deformation enters only through f2F_eff-carrying ap^2
+    structures, so at A0prime = 0 (zero-vector branch) the f2Y-dependent
+    part of C_bg vanishes while f2Y remains SYMBOLIC (visibility kept)."""
+    C_bg = build_general_C_bg()
+    fy = sp.expand(C_bg.subs(ap, 0)).coeff(f2Y)
+    visible = sp.expand(C_bg).coeff(f2Y) != 0
+    return (fy == 0), visible
