@@ -57,7 +57,7 @@ print(full_closure_verdict()['ABSOLUTE_FULL_CLOSURE_PASS'])"
 
 ## Test results
 
-**Software suite — 166/166 PASS and growing** (162+ at every commit since `8eb7f12`; exact counts per release in `GATE_STATUS.json`/test logs; environment: CPython 3.14.4,
+**Software suite — 166/166 PASS, fully semantically audited** ([TEST_CATALOG.md](TEST_CATALOG.md), [TEST_SEMANTICS.json](TEST_SEMANTICS.json)): 40 STRONG (independent), 105 MEDIUM, 12 HISTORICAL (zero-vector member scope), 9 TAUTOLOGICAL change-pins · categories: 25 provenance, 25 SVT-operator, 18 MH-Eq85, 10 kinetic, 10 infrastructure, 10 negative controls · 10 required gates still lack dedicated tests (coverage backlog in [TEST_COVERAGE_GAPS.json](TEST_COVERAGE_GAPS.json)); environment: CPython 3.14.4,
 numpy 2.5.3, scipy 1.18.1, sympy 1.14.0):
 
 | Suite | Tests | Result | Content |
@@ -229,6 +229,7 @@ python -m pip install -r requirements.lock
 python -m pip install --no-deps -e .
 
 pytest -q                                                    # 166+ tests, all must pass
+PYTHONPATH=src python tools/generate_test_catalog.py        # regenerate TEST_CATALOG.md
 ```
 
 The symbolic closure layers run in seconds:
