@@ -2,9 +2,9 @@
  "schema_version": "1.0",
  "model_name": "SSZ P5 electric U(1)-SVT (luminal Horndeski branch)",
  "branch_name": "main",
- "git_commit": "3af380101829fbef44696a37bed2a19802da3c8e",
- "action_member_reference": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
- "action_member_sha256": "742d7c1dbfa06d9870b69f2b95ae1b764b1c3083aea16d968cae5d8e136cf684",
+ "git_commit": "05c92532b259fbd5ef234190dca3c5448243a8f8",
+ "action_member_reference": "data/generated/phase2_q2/ELECTRIC_PRODUCTION_MEMBER_CURRENT.json",
+ "action_member_sha256": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
  "geometry_definition": {
   "line_element": "ds^2 = -f(r) dt^2 + dr^2/h(r) + r^2 dOmega^2",
   "coordinate": "u = r_s/r",
@@ -70,5 +70,12 @@
    "arxiv": "1802.07035",
    "journal": "PLB 780, 638 (2018)"
   }
- ]
+ ],
+ "action_member_stream": "data/generated/phase2_q2/ELECTRIC_PRODUCTION_MEMBER_CURRENT.csv",
+ "action_member_frozen_at": "2026-09-23T21:39:00.031134+00:00",
+ "action_member_provenance": {
+  "build": "build_onshell_central (electric_hybrid_onshell_central)",
+  "supersedes_zero_vector_member": true,
+  "delta22_svt": "DERIVED (STEP3_DELTA22_DIRECT_VARIATION.json)"
+ }
 }

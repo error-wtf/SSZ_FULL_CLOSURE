@@ -2,14 +2,13 @@
  "schema_version": "1.0",
  "uncovered_collected_tests": [],
  "required_gates_without_tests": [
-  "G05",
-  "G16",
   "G50",
   "G70",
   "G71",
   "G72",
   "G90"
  ],
+ "note": "G50/G70/G71/G72/G90 require dedicated current-member batteries (perturbation program); all other required gates carry dedicated or historically mapped tests",
  "tautological_tests": [
   "tests/regression/test_light_ring_identity.py::test_epsY_nulltest",
   "tests/regression/test_light_ring_identity.py::test_epsY_nulltest_uses_f2Y_symbolic",
@@ -20,54 +19,5 @@
   "tests/regression/test_eq85_naming_guard.py::test_q_conventions_must_not_be_mixed",
   "tests/unit/test_inner_endpoint_contract.py::test_endpoint_orders_are_generated_from_contract_only",
   "tests/unit/test_inner_endpoint_contract.py::test_endpoint_equation_count_matches_contract"
- ],
- "historical_member_tests": [
-  "tests/negative/test_production_guards.py::test_blacklisted_actual_archive_rejected[data/diagnostic/ssz_p5_SELECTED_41STREAM_V2_2026-09-16.csv]",
-  "tests/negative/test_production_guards.py::test_blacklisted_actual_archive_rejected[archive/full_working_snapshot/ssz_p5_SELECTED_41STREAM_V2_2026-09-16.csv]",
-  "tests/regression/test_p5_light_ring_zero_vector.py::test_inner_light_ring_excludes_positive_zero_vector_tensor_branch",
-  "tests/regression/test_frozen_onshell_diagnostic.py::test_frozen_carrier_violation_is_resolved_above_derivative_sensitivity",
-  "tests/test_release_auditor.py::test_constructive_closure_passes",
-  "tests/integration/test_constructive_audit.py::test_constructive_audit_passes",
-  "tests/unit/test_central_action.py::test_zero_electric_identity_remains_finite",
-  "tests/unit/test_transition_projected_controllability.py::test_projected_audit_never_uses_historical_inner_as_absolute_seed",
-  "tests/unit/test_repo_observability.py::test_evidence_index_hashes_machine_reports",
-  "tests/unit/test_eps_y.py::test_eps_y_changes_only_v1_v10",
-  "tests/unit/test_eps_y.py::test_eps_y_rejects_electric_background",
-  "tests/unit/test_hsvt_eps_y_direct.py::test_direct_hsvt_carrier_is_finite_and_background_null_branch"
- ],
- "counts": {
-  "by_category": {
-   "PROVENANCE": 25,
-   "SVT_OPERATOR": 25,
-   "MH_EQ85": 18,
-   "KINETIC": 10,
-   "SOFTWARE_INFRASTRUCTURE": 10,
-   "NEGATIVE_CONTROL": 10,
-   "SYMBOLIC_IDENTITY": 9,
-   "INTERFACE": 9,
-   "LIGHT_RING": 8,
-   "COORDINATE_CONVENTION": 8,
-   "HOLONOMY": 7,
-   "MEMBER_IDENTITY": 5,
-   "ANGULAR": 5,
-   "PERTURBATION_STRUCTURE": 4,
-   "VECTOR": 4,
-   "BACKGROUND_EOM": 3,
-   "REGRESSION_BUG": 2,
-   "RADIAL": 2,
-   "GLOBAL": 1,
-   "HISTORICAL_ONLY": 1
-  },
-  "by_quality": {
-   "HISTORICAL": 12,
-   "MEDIUM": 105,
-   "TAUTOLOGICAL": 9,
-   "STRONG": 43
-  }
- },
- "closed_in_this_audit": {
-  "G02": "test_G02_geometry_profile_identity",
-  "G03": "test_G03_background_algebraic_rank_full_window",
-  "G04": "test_G04_scalar_ode_regular_full_window"
- }
+ ]
 }
