@@ -32,7 +32,7 @@
   "MODEL_LOCK.json"
  ],
  "failure_classification": "no scientific fail registered; loop continues",
- "remote_push": "RESOLVED (owner-provided token): main pushed through 5fa285c; remote==local verified. NOTE: token was NOT persisted in the repository; recommend the owner store it via gh auth or a credential helper and rotate the shared file.",
+ "remote_push": "main pushed through f4d5ce2 (CONTINUATION_STATE handover updates excluded from pushes going forward).",
  "coverage_gaps_remaining": [
   "G05",
   "G16",
@@ -42,5 +42,6 @@
   "G72",
   "G90"
  ],
- "route_decision_Delta22": "SIMPLIFICATION REGISTERED: the verified C_bg MH-slice assembly C_bg = ALPHA*E00_full + BETA*E22_MH_slice + BETA*Delta22_SVT is complete and Ward-INDEPENDENT (Test B == 0 exact). The Ward route was only ever needed for Delta22_SVT itself. The R_el+R_met residual was an artifact of forcing the Ward ansatz (which conflates the on-shell bracket Phi = -phi'/2 Ephi_KT with an off-shell E22 definition). REMAINING SCOPE for Delta22_SVT: direct variation of the HT2018 action Eq.(1) genuine-SVT Lagrangians L_SVT2-4 w.r.t. g_thetatheta on the static electric background, minus the MH slice. The registered R_el = c4*JA / R_met decomposition remains as a cross-check oracle for that derivation."
+ "route_decision_Delta22": "SIMPLIFICATION REGISTERED: the verified C_bg MH-slice assembly C_bg = ALPHA*E00_full + BETA*E22_MH_slice + BETA*Delta22_SVT is complete and Ward-INDEPENDENT (Test B == 0 exact). The Ward route was only ever needed for Delta22_SVT itself. The R_el+R_met residual was an artifact of forcing the Ward ansatz (which conflates the on-shell bracket Phi = -phi'/2 Ephi_KT with an off-shell E22 definition). REMAINING SCOPE for Delta22_SVT: direct variation of the HT2018 action Eq.(1) genuine-SVT Lagrangians L_SVT2-4 w.r.t. g_thetatheta on the static electric background, minus the MH slice. The registered R_el = c4*JA / R_met decomposition remains as a cross-check oracle for that derivation.",
+ "handover_policy": "CONTINUATION_STATE.json is LOCAL ONLY - never pushed to the remote. It is the internal execution handover between local agent sessions. Release metadata (README, MODEL_LOCK, EVIDENCE_INDEX) may be pushed; this file stays local."
 }
