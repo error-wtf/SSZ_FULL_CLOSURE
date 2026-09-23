@@ -99,11 +99,24 @@ def test_f2Y_explicit_EOM_core():
 
 def test_C85_undivided_executable():
     """TEST B precondition: C85_undivided is executable source with the electric
-    term surviving symbolic A0prime (anti-merge rule: never set A0prime=0 here)."""
+    term surviving symbolic A0prime (anti-merge rule: never set A0prime=0 here).
+    Algebraic comparison (never fragile Mul-tree has()): the executable C85 is
+    checked against the independently transcribed undivided Eq.85 and the
+    electric term is verified by exact coefficient extraction."""
     from ssz_p5.action import light_ring_identity as lri
     C = lri.C85_undivided()
-    # electric term -2 r f h ap^2 v8_MH must be present:
-    assert C.has(-2 * lri.r * lri.f * lri.h * lri.ap**2 * lri.v8_MH_sym)
+    # independently transcribed undivided Eq.85 (owner transcription):
+    G_r = (lri.r*lri.fpp_r - lri.r*lri.fp_r**2/lri.f
+           + 2*lri.fp_r - 2*lri.f/lri.r)
+    expected = ((2*lri.f - lri.r*lri.fp_r)*lri.a4p
+                - (G_r*lri.a4s
+                   + lri.f**sp.Rational(3, 2)/(lri.r*sp.sqrt(lri.h))*lri.F_MH_sym
+                   - 2*lri.r*lri.f*lri.h*lri.ap**2*lri.v8_MH_sym))
+    diff = sp.factor(sp.cancel(sp.together(sp.expand(C - expected))))
+    assert diff == 0
+    # electric term must survive as exact coefficient +2 r f h ap^2 of v8_MH:
+    coeff_v8 = sp.expand(C).coeff(lri.v8_MH_sym)
+    assert sp.simplify(coeff_v8 - 2*lri.r*lri.f*lri.h*lri.ap**2) == 0
     # A0prime symbolic: ap survives
     assert C.has(lri.ap)
     # geom term present:

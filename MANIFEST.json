@@ -2094,8 +2094,8 @@
     },
     {
       "path": "data/generated/absolute_attempt_2026-09-20/ELECTRIC_HYBRID_PRINCIPAL_LATE_RAMP_FEASIBILITY_C6_CORRECTED.csv",
-      "size_bytes": 4551453,
-      "sha256": "f76c26f4ae3ab8a50e233059c644d311c73cd8eb2940007a68732c832fc2cfc9"
+      "size_bytes": 4551467,
+      "sha256": "92c70552bae83e9e58f7f559863ee72d7a5626edfdd076dbaa3dc80e45426fb8"
     },
     {
       "path": "data/generated/absolute_attempt_2026-09-20/ELECTRIC_HYBRID_SCALAR_COUPLING_DIAGNOSTIC.json",

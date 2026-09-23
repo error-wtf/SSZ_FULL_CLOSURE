@@ -62,9 +62,11 @@ epsY = sp.Symbol('epsY', positive=True)
 def EOM_core_f2Y_explicit(f2Y_value=None):
     """Full unsplit EOM core with the f2F_eff = f2F - 2 h phi'^2 f2Y combination
     EXPLICIT (f2Y symbolic unless a value is passed).  This is the C_bg basis:
-    the f2Y-dependence is visible and projectable, never silently zeroed."""
-    f2F_eff = sp.Symbol('f2F') - 2*h*ph**2*f2Y if f2Y_value is None \
-        else sp.Symbol('f2F') - 2*h*ph**2*f2Y + f2Y_value
+    the f2Y-dependence is visible and projectable, never silently zeroed.
+    f2Y_value=0 (production branch) SUBSTITUTES the symbol f2Y -> 0; it does
+    not add a number to the expression (which would be a no-op)."""
+    f2Y_eff = f2Y if f2Y_value is None else sp.sympify(f2Y_value)
+    f2F_eff = sp.Symbol('f2F') - 2*h*ph**2*f2Y_eff
     E00f = (r**2*(f*f2 - h*ap**2*f2F_eff) - 2*r*h**2*ph*ap**2*f3
             + h*ap**2*(4*(h-1)*f4 - h**2*ph**2*(f4X + 2*tf4)))
     E11f = (r**2*(f*f2 + f*h*ph**2*f2X - h*ap**2*f2F_eff)
