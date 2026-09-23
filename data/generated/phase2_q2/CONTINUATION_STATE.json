@@ -32,5 +32,5 @@
   "MODEL_LOCK.json"
  ],
  "failure_classification": "no scientific fail registered; loop continues",
- "remote_push": "BLOCKED: no credentials in environment (no credential helper, no SSH key); owner must push main manually or configure secure credentials. Local main is ahead of origin/main by many commits."
+ "remote_push": "RESOLVED (owner-provided token): main pushed through 5fa285c; remote==local verified. NOTE: token was NOT persisted in the repository; recommend the owner store it via gh auth or a credential helper and rotate the shared file."
 }
