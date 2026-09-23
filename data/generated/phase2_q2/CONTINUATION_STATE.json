@@ -1,21 +1,20 @@
 {
- "continuation_state": "STEP 1 / Test A structural PASS (6/6); next: Test B full Eq.85 match",
- "git_commit": "2f86538811e747910495dcb0ec3c1f7fa12b9ab2",
- "tests": "9 passed / 2 failed (test_C85_undivided_executable, test_P_MH_preserves_A0prime_symbolic)",
+ "continuation_state": "STEP 1 / Test B prechecks 11/11 PASS; KT2023 C_bg-generating combination machine-verified; next: assemble general C_bg in light_ring_identity and run Test B",
+ "git_commit": "see latest commit (this file updated in same commit)",
+ "tests": "tests/regression/test_light_ring_identity.py 11/11 PASS; tests/regression/test_kt_mh_background.py 5/5 PASS",
  "completed": [
-  "STEP 0 provenance",
-  "geometric u*W identity",
-  "slot mapping V9=v8_MH",
-  "f2Y symbolic + structural eps_Y nulltest",
-  "solve-rank triangular PASS",
-  "E_phi ODE regular",
-  "C85_undivided executable source (module function)"
+  "both software fails repaired (f2Y substitution semantics; C85 algebraic test) - commit 51b6bb3",
+  "env-frozen replay checkpoint regenerated under pinned stack (a5/d3/e4 photon-root slots) - commit 51b6bb3",
+  "primary sources fetched and transcribed: KT2023 arXiv:2301.10362 Eqs. 7/8/9/10/14/24/25/168/85; HT2018 arXiv:1802.07035 Eqs. 12/14/15/18-20",
+  "S0-slice diagonal map KT_E00=-HT_E00/(r^2 f), KT_E11=+HT_E11/(r^2 f) verified",
+  "C_bg-generating combination verified EXACT (off-shell, luminal branch): C85_undivided == A*KT_E00 + B*KT_E22, A=-r f^(3/2)/sqrt(h), B=+r f^(3/2)/sqrt(h)",
+  "on-shell certificate luminal branch: residual == 0, pivot D = G4*G4phi*h*(r f'-2f)/(f r)",
+  "sector scope recorded: G4X != 0 breaks metric-only two-term identity (on-shell statement there); project is luminal-locked",
+  "evidence: data/generated/phase2_q2/STEP1_KT2023_CBG_GENERATING_COMBINATION.json"
  ],
- "next_executable_command": "debug the 2 failing Test B prechecks (sympy has()-tree matching on Mul terms); then the full P_MH[C_bg]==C85 coefficient match requires transcribing the Appendix-A primitive->slot mapping (a4, F_MH, v8=V9) into the symbolic C_bg",
- "evidence_paths": [
-  "tests/regression/test_light_ring_identity.py",
-  "src/ssz_p5/action/light_ring_identity.py",
-  "data/generated/phase2_q2/"
- ],
- "protocol_file": "docs/canonical/NEXT_BLOCK_ZK_LR_DERIVATION.md"
+ "exact_unresolved": "general U(1)-SVT E22 (theta-theta component) with genuine-SVT jets f2Y/f3/f3X/f4/f4X/tf4 symbolic, in repo (HT2018) normalization",
+ "next_executable_command": "construct E22_general in light_ring_identity: E22_HT := (r/2)[-f'/(2f) E00 - d/dr(E11) - (f'/(2f) + 2/r) E11 + (A0'/r^2) sqrt(h/f) d(JA)/dr] (Ward-identity route; validate first against luminal_e00_minus_e22 in onshell.py on the G4(phi) sector, then against the KT2023 E22 via the diagonal map); then C_bg := A*E00 + B*E22 with A=-r f^(3/2)/sqrt(h), B=+r f^(3/2)/sqrt(h); Test B: P_MH[C_bg] == C85_undivided; Test A: eps_Y nulltest on same C_bg",
+ "active_source_files": ["src/ssz_p5/action/kt_mh_background.py", "src/ssz_p5/action/light_ring_identity.py", "src/ssz_p5/action/onshell.py"],
+ "conventions": {"slot_mapping": "MH v8 = ZK V9 = G2F/(2 sqrt(fh)); never canonical ZK V8", "normalization_bridge": "KT2023 components vs repo HT2018 variations via diagonal map (S0-verified)", "luminal_branch": "G4 = G4(phi), G3 = 0, G5 = 0"},
+ "failure_classification": "software/derivation work in progress; no scientific fail registered"
 }

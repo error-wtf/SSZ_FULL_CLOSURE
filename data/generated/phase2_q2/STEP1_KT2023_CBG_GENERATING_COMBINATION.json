@@ -1,0 +1,83 @@
+{
+ "schema_version": "1.0",
+ "timestamp": "2026-09-23T09:37:35.193362+00:00",
+ "git_commit": "51b6bb334eb326d4a56fd83a0ffa2a2ae66d8063",
+ "branch": "main",
+ "title": "KT2023 primary-source transcription: Eq.-85-generating combination (C_bg recipe) + on-shell certificate",
+ "primary_sources": [
+  {
+   "id": "KT2023",
+   "arxiv": "2301.10362",
+   "journal": "PRD 107, 104045 (2023)",
+   "url": "https://arxiv.org/html/2301.10362",
+   "equations_used": [
+    "(7) E00",
+    "(8) E11",
+    "(9) E22",
+    "(10) C1-C10",
+    "(14) EA0",
+    "(24) Hcal",
+    "(25) Fcal",
+    "(168) a4=sqrt(fh)/2*Hcal, v8=G2F/(2 sqrt(fh))",
+    "(85) a4' relation"
+   ]
+  },
+  {
+   "id": "HT2018",
+   "arxiv": "1802.07035",
+   "journal": "PLB 780, 638 (2018)",
+   "url": "https://arxiv.org/html/1802.07035",
+   "equations_used": [
+    "(12) reduced action",
+    "(14)/(15) f-/h-variations",
+    "(18)-(20) currents"
+   ]
+  }
+ ],
+ "source_module": "src/ssz_p5/action/kt_mh_background.py",
+ "facts": {
+  "s0_diagonal_map": {
+   "statement": "KT_E00 = -HT_E00/(r^2 f); KT_E11 = +HT_E11/(r^2 f) on S0 (Einstein + f2(X,F))",
+   "residual_E00": "0",
+   "residual_E11": "0",
+   "verified": true
+  },
+  "eq85_generating_combination": {
+   "sector": "luminal G4(phi), G3=0, G5=0 (project-locked Horndeski content)",
+   "A": {
+    "srepr_hash": "e19ac6a8023632eb",
+    "str": "-f**(3/2)*r/sqrt(h)"
+   },
+   "B": {
+    "srepr_hash": "0c422176c9adcd53",
+    "str": "f**(3/2)*r/sqrt(h)"
+   },
+   "identity": "C85_undivided == A*KT_E00 + B*KT_E22  (exact, OFF-SHELL, metric-only coefficients)",
+   "verified": true,
+   "role": "C_bg recipe: general C_bg = A*E00_general + B*E22_general; MH slice = C85_undivided; genuine-SVT remainder = Sigma_SVT candidate content"
+  },
+  "onshell_certificate": {
+   "residual": "0",
+   "holds": true,
+   "premises": [
+    "f > 0",
+    "r > 0",
+    "G4 != 0",
+    "G4phi != 0",
+    "h != 0",
+    "2f - r f' != 0 (ring limit taken undivided)"
+   ],
+   "pivot_D": "G4*G4phi*h*(-2*f + fp*r)/(f*r)"
+  },
+  "sector_scope": {
+   "statement": "with general G4(phi,X), G4X != 0: metric-only two-term identity closes no longer; Eq. 85 is on-shell there",
+   "project_scope": "action family locked to luminal branch; out of scope, recorded"
+  }
+ },
+ "slot_mapping_permanent": {
+  "MH_v8": "G2F/(2 sqrt(fh))",
+  "ZK_V9": "MH_v8",
+  "never_use": "canonical ZK V8 column"
+ },
+ "next_executable": "assemble general C_bg = A*E00_gen + B*E22_gen in light_ring_identity with f2Y/f3/f3X symbolic; Test B: P_MH[C_bg] == C85_undivided; Test A: eps_Y-null on same C_bg"
+}
