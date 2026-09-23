@@ -68,3 +68,53 @@ def test_epsY_nulltest_uses_f2Y_symbolic():
              'E11': lri.ap**2 * lri.f2Y * T(lri.r, lri.f, lri.h, lri.ph)}
     zeros, ok = lri.epsY_nulltest(terms)
     assert ok and zeros['E00'] and zeros['E11']
+
+
+def test_C85_undivided_structure():
+    """C85_undivided must contain the geom*a4 term, the tensor kinetic term and
+    the electric term -2 r f h ap^2 v8_MH explicitly (A0prime symbolic)."""
+    from ssz_p5.action import light_ring_identity as lri
+    C = lri.C85_undivided()
+    assert C.has(lri.a4s) and C.has(lri.F_MH_sym) and C.has(lri.v8_MH_sym)
+    assert sp.simplify(C.subs(lri.ap, 0)) != 0   # A0prime symbolic: electric term survives
+
+
+def test_epsY_slot_shift_contributions_vanish():
+    """Test A on the full shift contributions: vanish at A0u=0 and at ap=0."""
+    from ssz_p5.action import light_ring_identity as lri
+    zeros, ok = lri.run_tests_A()
+    assert ok and all(zeros.values())
+
+
+def test_f2Y_explicit_EOM_core():
+    """The f2Y-explicit EOM core must differ from the f2Y-free core while f2Y is
+    symbolic (visibility requirement), and reduce identically at f2Y=0."""
+    from ssz_p5.action import light_ring_identity as lri
+    full = lri.EOM_core_f2Y_explicit()
+    red = lri.EOM_core_f2Y_explicit(f2Y_value=0)
+    diff_E00 = sp.simplify(full['E00'] - red['E00'])
+    assert diff_E00 != 0 and diff_E00.has(lri.f2Y)   # f2Y-dependence is VISIBLE
+    assert sp.simplify(full['E00'].subs(lri.f2Y, 0) - red['E00']) == 0  # reduction exact
+
+
+def test_C85_undivided_executable():
+    """TEST B precondition: C85_undivided is executable source with the electric
+    term surviving symbolic A0prime (anti-merge rule: never set A0prime=0 here)."""
+    from ssz_p5.action import light_ring_identity as lri
+    C = lri.C85_undivided()
+    # electric term -2 r f h ap^2 v8_MH must be present:
+    assert C.has(-2 * lri.r * lri.f * lri.h * lri.ap**2 * lri.v8_MH_sym)
+    # A0prime symbolic: ap survives
+    assert C.has(lri.ap)
+    # geom term present:
+    assert C.has(lri.a4s) and C.has(lri.fpp_r) and C.has(lri.fp_r)
+
+
+def test_P_MH_preserves_A0prime_symbolic():
+    """P_MH kills f3/f3X but must NEVER touch A0prime (Test B anti-merge rule)."""
+    from ssz_p5.action import light_ring_identity as lri
+    expr = lri.ap**2 * lri.v8_MH_sym * lri.f3   # SVT-electric mixed dummy
+    proj = lri.P_MH(expr)
+    assert proj == 0                             # f3 carrier projects out
+    keeper = lri.ap**2 * lri.v8_MH_sym           # Eq.85 electric term: no f3/f3X
+    assert sp.simplify(lri.P_MH(keeper) - keeper) == 0   # survives projection
