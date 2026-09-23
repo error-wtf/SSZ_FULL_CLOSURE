@@ -156,21 +156,58 @@ def E22_MH_slice():
             - h*fp_r/(2*r*f) - hp_r/(2*r) + f2)
 
 
-def build_general_C_bg():
+_DELTA22_CACHE: dict = {}
+
+
+def get_delta22_svt_expr(*, verify=True):
+    """Explicit Delta22_SVT from the direct C(r)-variation of the genuine SVT
+    action (ssz_p5.action.svt_direct_variation).  Derived once, cached.
+    Definition: Delta22_SVT = kappa_C * EL_C[L_SVT] |_{C=r^2}, kappa_C = sqrt(h/f)
+    with kappa_C pinned exactly on the verified MH slice (V3)."""
+    if 'expr' not in _DELTA22_CACHE:
+        from .svt_direct_variation import build_delta22_svt
+        _DELTA22_CACHE['expr'] = build_delta22_svt(verify=verify)
+    return _DELTA22_CACHE['expr']
+
+
+def build_general_C_bg(delta22: str = "explicit"):
     """G10: the general undivided Eq.-85-generating combination.
-    f2Y, f3, f3X, f4, f4X, f4XX, tf4 and Delta22_SVT all stay SYMBOLIC.
-    Delta22_SVT enters with the E22-channel weight BETA (it IS the missing
-    genuine-SVT theta-theta correction of that channel).
+
+    delta22='explicit' (default): the derived genuine-SVT theta-theta
+    correction from the direct variation of L_SVT2-4 w.r.t. g_thetatheta
+    (angular degree of freedom unfixed during variation; areal gauge C=r^2
+    only after the Euler-Lagrange step).  Enters with the E22-channel
+    weight BETA.
+    delta22='symbol': the historical open-symbol assembly (kept for
+    negative controls and provenance replay).
+    f2Y stays SYMBOLIC through f2F_eff (anti-merge rule).
     Premises: f>0, h>0, r>0 (all positive symbols)."""
-    return ALPHA*E00_full() + BETA*E22_MH_slice() + BETA*Delta22_SVT
+    if delta22 == "explicit":
+        d22 = get_delta22_svt_expr()
+    elif delta22 == "symbol":
+        d22 = Delta22_SVT
+    else:
+        raise ValueError(f"unknown delta22 mode: {delta22!r}")
+    return ALPHA*E00_full() + BETA*E22_MH_slice() + BETA*d22
 
 
 def P_MH_full(expr):
     """Test B projector: kills ALL genuine-SVT operator content (the SVT
-    couplings f3/f3X/f4/f4X/f4XX/tf4 AND the open theta-theta correction
-    Delta22_SVT).  A0prime and f2Y stay SYMBOLIC (anti-merge rule)."""
-    subs = {f3: 0, f3X: 0, f4: 0, f4X: 0, f4XX: 0, tf4: 0, Delta22_SVT: 0}
-    return sp.expand(expr.subs(subs))
+    couplings f3/f3X/f4/f4X/f4XX/tf4, their holonomic phi-channel partials
+    f3phi/f4phi/f4Xphi/tf4phi, and the theta-theta correction Delta22_SVT in
+    both its explicit and open-symbol form).  A0prime and f2Y stay SYMBOLIC
+    (anti-merge rule).  Superset of the historical kill list: expressions
+    without phi-channel symbols project unchanged (regression-pinned)."""
+    f3phi = sp.Symbol('f3phi')
+    f4phi = sp.Symbol('f4phi')
+    f4Xphi = sp.Symbol('f4Xphi')
+    tf4phi = sp.Symbol('tf4phi')
+    subs = {f3: 0, f3X: 0, f4: 0, f4X: 0, f4XX: 0, tf4: 0,
+            f3phi: 0, f4phi: 0, f4Xphi: 0, tf4phi: 0, Delta22_SVT: 0}
+    out = sp.expand(expr.subs(subs))
+    if _DELTA22_CACHE.get('expr') is not None:
+        out = sp.expand(out)
+    return out
 
 
 def mh_slot_identification():
@@ -224,10 +261,9 @@ def sigma_svt_decomposition():
                     + BETA * Delta22_SVT,
 
     returned as a structured operator list.  The E00 channel is EXACT
-    (machine-verified combination); Delta22_SVT is the registered open
-    genuine-SVT theta-theta correction (derivation feeds this slot; the
-    historical E11-E00 f3X candidate must emerge from or be revised by
-    that derivation - it is NOT assumed here)."""
+    (machine-verified combination); Delta22_SVT is the DERIVED genuine-SVT
+    theta-theta correction (direct C(r)-variation of L_SVT2-4, areal gauge
+    only after the variation; see svt_direct_variation)."""
     C_bg = build_general_C_bg()
     sv_part = sp.expand(C_bg - P_MH_full(C_bg))
     e00_svt = sp.expand((E00_full() - P_MH_full(E00_full())))
@@ -242,8 +278,9 @@ def sigma_svt_decomposition():
                  ALPHA * (-h*ap**2*(4*(h-1)*f4 - h**2*ph**2*(f4X + 2*tf4))))),
              "source": "f4/f4X/tf4 via E00_full"},
             {"name": "Delta22_SVT_theta_theta",
-             "symbolic": sp.factor(sp.expand(BETA * Delta22_SVT)),
-             "source": "open genuine-SVT theta-theta correction (registered)"},
+             "symbolic": sp.factor(sp.expand(BETA * get_delta22_svt_expr())),
+             "source": "derived genuine-SVT theta-theta correction "
+                       "(direct C(r)-variation of L_SVT2-4)"},
         ],
     }
 

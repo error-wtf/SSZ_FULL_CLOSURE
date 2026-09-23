@@ -134,15 +134,21 @@ def test_P_MH_preserves_A0prime_symbolic():
 
 
 def test_G10_C_bg_general_symbolic():
-    """G10: the general C_bg carries f2Y, the E00-channel genuine-SVT jets
-    and the open Delta22_SVT correction SYMBOLICALLY (no silent zeros).
-    Note the combination genuinely involves E00_full and E22 only: the
-    f3X/f4XX jets live in E11_full and enter the Sigma_SVT program through
-    the E11 channel and Delta22_SVT, not through this object."""
-    C_bg = lri.build_general_C_bg()
-    for s in (lri.f2Y, lri.f3, lri.f4, lri.f4X, lri.tf4,
-              lri.Delta22_SVT, lri.ap, lri.f2, lri.f2F):
+    """G10: the general C_bg carries f2Y and the E00-channel genuine-SVT jets
+    SYMBOLICALLY (no silent zeros); the Delta22_SVT correction is now the
+    DERIVED explicit expression (direct C(r)-variation, STEP3) in the default
+    mode, while 'symbol' mode preserves the historical open-symbol assembly
+    for provenance replay.  Note the combination genuinely involves E00_full
+    and E22 only: the f3X/f4XX jets live in E11_full and enter the Sigma_SVT
+    program through the E11 channel and Delta22_SVT, not through this
+    object."""
+    C_bg = lri.build_general_C_bg()   # explicit derived Delta22_SVT (default)
+    for s in (lri.f2Y, lri.f3, lri.f4, lri.f4X, lri.tf4, lri.ap, lri.f2, lri.f2F):
         assert C_bg.has(s), s
+    assert C_bg.has(lri.get_delta22_svt_expr()), 'derived Delta22_SVT missing'
+    # historical open-symbol assembly still available and symbol-carrying
+    C_bg_sym = lri.build_general_C_bg(delta22='symbol')
+    assert C_bg_sym.has(lri.Delta22_SVT)
     # combination coefficients are the machine-verified metric-only maps:
     assert sp.simplify(lri.ALPHA - sp.sqrt(lri.f)/(lri.r*sp.sqrt(lri.h))) == 0
     assert sp.simplify(lri.BETA - lri.r*lri.f**sp.Rational(3, 2)/sp.sqrt(lri.h)) == 0
@@ -193,7 +199,16 @@ def test_G15_sigma_svt_operator_decomposition():
     total = d["total"]
     s = sum(sp.sympify(op["symbolic"]) for op in d["operators"])
     assert canonical_simplify(total - s) == 0
-    assert total.has(lri.f3) and total.has(lri.f4) and total.has(lri.Delta22_SVT)
+    assert total.has(lri.f3) and total.has(lri.f4)
+    # the theta-theta correction entry is the DERIVED explicit expression
+    # (matched algebraically - the expanded Sigma_SVT carries no open symbol)
+    d22 = lri.get_delta22_svt_expr()
+    assert not total.has(lri.Delta22_SVT)
+    assert canonical_simplify(total - (d["operators"][-1]["symbolic"]
+                                       + sum(sp.sympify(op["symbolic"])
+                                             for op in d["operators"][:-1]))) == 0
+    assert canonical_simplify(d["operators"][-1]["symbolic"]
+                              - lri.BETA*d22) == 0
     # every genuine-SVT operator channel carries ap^2 (electric activation),
     # except the open theta-theta correction which is carried at BETA weight
     for op in d["operators"][:2]:

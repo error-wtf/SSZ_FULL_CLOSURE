@@ -1,0 +1,67 @@
+{
+ "schema_version": "1.0",
+ "timestamp": "2026-09-23T21:05:10.749920+00:00",
+ "git_commit": "aeda19f89755e71776e5c7da98d93e1f70b8f726",
+ "title": "STEP3: Delta22_SVT derived by direct theta-theta variation of the genuine SVT action with the angular metric degree of freedom unfixed",
+ "route": "Delta22_SVT = kappa_C * EL_C[L_SVT2 + L_SVT3 + L_SVT4] |_{C=r^2}, kappa_C = sqrt(h/f) pinned exactly on the verified MH slice (V3); areal gauge substituted only AFTER the Euler-Lagrange step",
+ "geometry_checks": {
+  "ricci_schwarzschild_zero": true,
+  "ricci_flat_zero": true,
+  "ricci_scalar_deSitter_4L": true,
+  "R_thetaphi_thetaphi_textbook_C_is_r2": true
+ },
+ "structural_checks": {
+  "tf3_part_vanishes_on_static_electric_background": true,
+  "X_F_Y_C_independent": true
+ },
+ "reduced_piece_equality_with_module": {
+  "L_EH": true,
+  "L_f2": true,
+  "L3": true,
+  "L4a": true,
+  "L4b": true
+ },
+ "normalization_channel_checks": {
+  "V1_residual": true,
+  "V2_residual": true,
+  "V3_residual": true,
+  "V2_kappa_metric_only": true,
+  "V3_kappa_metric_only": true,
+  "P_MH_delta22_zero": true,
+  "second_order_fields": true
+ },
+ "normalization_map": {
+  "V1": "E00_full == -2 f^(3/2) sqrt(h) * EL_f[L_full] |_{C=r^2}",
+  "V2": "E11_full == +2 sqrt(f) h^(3/2) * EL_h[L_full] |_{C=r^2}",
+  "V3": "E22_MH_slice == sqrt(h/f) * EL_C[L_MH] |_{C=r^2}",
+  "map_factors_metric_only": true
+ },
+ "delta22_operator_families_srepr": {
+  "f3": "Mul(Integer(-1), Rational(1, 2), Symbol('ap', positive=True), Pow(Symbol('f', positive=True), Integer(-2)), Symbol('h', positive=True), Add(Mul(Integer(2), Symbol('ap', positive=True), Symbol('f', positive=True), Symbol('h', positive=True), Symbol('phpp')), Mul(Integer(3), Symbol('ap', positive=True), Symbol('f', positive=True), Symbol('hp_r', positive=True), Symbol('ph', positive=True)), Mul(Integer(-1), Symbol('ap', positive=True), Symbol('fp_r', positive=True), Symbol('h', positive=True), Symbol('ph', positive=True)), Mul(Integer(4), Symbol('ap2'), Symbol('f', positive=True), Symbol('h', positive=True), Symbol('ph', positive=True))))",
+  "f3X": "Mul(Rational(1, 2), Pow(Symbol('ap', positive=True), Integer(2)), Pow(Symbol('f', positive=True), Integer(-1)), Pow(Symbol('h', positive=True), Integer(2)), Pow(Symbol('ph', positive=True), Integer(2)), Add(Mul(Integer(2), Symbol('h', positive=True), Symbol('phpp')), Mul(Symbol('hp_r', positive=True), Symbol('ph', positive=True))))",
+  "f4": "Mul(Integer(2), Symbol('ap', positive=True), Pow(Symbol('f', positive=True), Integer(-2)), Symbol('h', positive=True), Pow(Symbol('r', positive=True), Integer(-1)), Add(Mul(Integer(3), Symbol('ap', positive=True), Symbol('f', positive=True), Symbol('hp_r', positive=True)), Mul(Integer(-1), Symbol('ap', positive=True), Symbol('fp_r', positive=True), Symbol('h', positive=True)), Mul(Integer(4), Symbol('ap2'), Symbol('f', positive=True), Symbol('h', positive=True))))",
+  "f4X": "Mul(Integer(-1), Rational(1, 2), Symbol('ap', positive=True), Pow(Symbol('f', positive=True), Integer(-2)), Pow(Symbol('h', positive=True), Integer(2)), Symbol('ph', positive=True), Pow(Symbol('r', positive=True), Integer(-1)), Add(Mul(Integer(12), Symbol('ap', positive=True), Symbol('f', positive=True), Symbol('h', positive=True), Symbol('phpp')), Mul(Integer(9), Symbol('ap', positive=True), Symbol('f', positive=True), Symbol('hp_r', positive=True), Symbol('ph', positive=True)), Mul(Integer(-1), Symbol('ap', positive=True), Symbol('fp_r', positive=True), Symbol('h', positive=True), Symbol('ph', positive=True)), Mul(Integer(4), Symbol('ap2'), Symbol('f', positive=True), Symbol('h', positive=True), Symbol('ph', positive=True))))",
+  "f4XX": "Mul(Rational(1, 2), Pow(Symbol('ap', positive=True), Integer(2)), Pow(Symbol('f', positive=True), Integer(-1)), Pow(Symbol('h', positive=True), Integer(3)), Pow(Symbol('ph', positive=True), Integer(3)), Pow(Symbol('r', positive=True), Integer(-1)), Add(Mul(Integer(2), Symbol('h', positive=True), Symbol('phpp')), Mul(Symbol('hp_r', positive=True), Symbol('ph', positive=True))))",
+  "tf4": "Mul(Integer(-1), Symbol('ap', positive=True), Pow(Symbol('f', positive=True), Integer(-2)), Pow(Symbol('h', positive=True), Integer(2)), Symbol('ph', positive=True), Pow(Symbol('r', positive=True), Integer(-1)), Add(Mul(Integer(4), Symbol('ap', positive=True), Symbol('f', positive=True), Symbol('h', positive=True), Symbol('phpp')), Mul(Integer(5), Symbol('ap', positive=True), Symbol('f', positive=True), Symbol('hp_r', positive=True), Symbol('ph', positive=True)), Mul(Integer(-1), Symbol('ap', positive=True), Symbol('fp_r', positive=True), Symbol('h', positive=True), Symbol('ph', positive=True)), Mul(Integer(4), Symbol('ap2'), Symbol('f', positive=True), Symbol('h', positive=True), Symbol('ph', positive=True))))",
+  "f3phi": "Mul(Integer(-1), Pow(Symbol('ap', positive=True), Integer(2)), Pow(Symbol('f', positive=True), Integer(-1)), Pow(Symbol('h', positive=True), Integer(2)), Pow(Symbol('ph', positive=True), Integer(2)))",
+  "f4phi": "Mul(Integer(4), Pow(Symbol('ap', positive=True), Integer(2)), Pow(Symbol('f', positive=True), Integer(-1)), Pow(Symbol('h', positive=True), Integer(2)), Symbol('ph', positive=True), Pow(Symbol('r', positive=True), Integer(-1)))",
+  "f4Xphi": "Mul(Integer(-1), Pow(Symbol('ap', positive=True), Integer(2)), Pow(Symbol('f', positive=True), Integer(-1)), Pow(Symbol('h', positive=True), Integer(3)), Pow(Symbol('ph', positive=True), Integer(3)), Pow(Symbol('r', positive=True), Integer(-1)))",
+  "tf4phi": "Mul(Integer(-1), Integer(2), Pow(Symbol('ap', positive=True), Integer(2)), Pow(Symbol('f', positive=True), Integer(-1)), Pow(Symbol('h', positive=True), Integer(3)), Pow(Symbol('ph', positive=True), Integer(3)), Pow(Symbol('r', positive=True), Integer(-1)))"
+ },
+ "delta22_second_derivative_channels": {
+  "phi'": "ph",
+  "phi''": "phpp",
+  "A0'": "ap",
+  "A0''": "ap2",
+  "f'": "fp_r",
+  "f''": "fpp_r",
+  "h'": "hp_r",
+  "third_order_channels_absent": true
+ },
+ "ward_oracle_status": {
+  "route_decision": "Ward-span reconstruction superseded (commit f4d5ce2); direct variation is the derivation path",
+  "R_met_module_equals_recorded_metric_part": true,
+  "R_el_normalization_note": "recorded STEP1 residual electric part carries plain f2F and a 1/(f h) normalization while the pinned module decomposition R_el = c4*JA_channel carries f2F_eff (f2Y symbolic) and 1/f; the superseded oracle is internally inconsistent and is retained only as a historical record"
+ },
+ "all_checks_pass": true
+}
