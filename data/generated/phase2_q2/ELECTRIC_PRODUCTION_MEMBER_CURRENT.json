@@ -1,7 +1,7 @@
 {
  "schema_version": "1.0",
- "timestamp": "2026-09-23T21:39:00.031134+00:00",
- "git_commit": "05c92532b259fbd5ef234190dca3c5448243a8f8",
+ "timestamp": "2026-09-23T22:30:19.427248+00:00",
+ "git_commit": "a7dc4c808ab620ee77cb5c9ceb1b56d7ab0a3c7c",
  "name": "SSZ P5 electric production member (current, same-action, on-shell Central, Delta22_SVT-derived action)",
  "supersedes": {
   "member": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",

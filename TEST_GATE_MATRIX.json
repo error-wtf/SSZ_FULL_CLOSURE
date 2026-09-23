@@ -187,6 +187,12 @@
   "tests/regression/test_g13_g16_electric_chain.py::test_G16_full_onshell_LR_balance": [
    "G16"
   ],
+  "tests/regression/test_g71_g72_sectors.py::test_G71_odd_parity_axial_luminal": [
+   "G71"
+  ],
+  "tests/regression/test_g71_g72_sectors.py::test_G72_vector_sector_descriptor_block": [
+   "G72"
+  ],
   "tests/regression/test_golden_jets.py::test_shared_jet_matches_frozen_scalar_implementation": [
    "GENERAL"
   ],
@@ -751,6 +757,12 @@
    "tests/unit/test_angular_universal_provenance.py::test_action_minus_branch_matches_m22_and_cross_identity",
    "tests/unit/test_angular_universal_provenance.py::test_raw_characteristic_keeps_vector_root_near_luminal"
   ],
+  "G71": [
+   "tests/regression/test_g71_g72_sectors.py::test_G71_odd_parity_axial_luminal"
+  ],
+  "G72": [
+   "tests/regression/test_g71_g72_sectors.py::test_G72_vector_sector_descriptor_block"
+  ],
   "G80": [
    "tests/unit/test_strong_field_transition_contract.py::test_physical_interval_contains_light_ring_but_not_a_physical_seam",
    "tests/unit/test_strong_field_transition_contract.py::test_transition_coordinate_and_basis_are_flat_at_physical_endpoints",
@@ -794,11 +806,5 @@
    "tests/regression/test_svt_direct_variation.py::test_ward_oracle_record_consistency"
   ]
  },
- "required_gates_without_tests": [
-  "G50",
-  "G70",
-  "G71",
-  "G72",
-  "G90"
- ]
+ "required_gates_without_tests": []
 }

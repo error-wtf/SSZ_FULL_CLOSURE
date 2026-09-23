@@ -1,13 +1,7 @@
 {
  "schema_version": "1.0",
  "uncovered_collected_tests": [],
- "required_gates_without_tests": [
-  "G50",
-  "G70",
-  "G71",
-  "G72",
-  "G90"
- ],
+ "required_gates_without_tests": [],
  "note": "G50/G70/G71/G72/G90 require dedicated current-member batteries (perturbation program); all other required gates carry dedicated or historically mapped tests",
  "tautological_tests": [
   "tests/regression/test_light_ring_identity.py::test_epsY_nulltest",

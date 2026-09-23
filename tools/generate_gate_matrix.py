@@ -60,6 +60,12 @@ EXTENSIONS = {
         "tests/regression/test_g05_member_roundtrip.py::test_G20_same_member_provenance",
         "tests/regression/test_g05_member_roundtrip.py::test_member_builder_reproduces_locked_stream",
     ],
+    "G71": [
+        "tests/regression/test_g71_g72_sectors.py::test_G71_odd_parity_axial_luminal",
+    ],
+    "G72": [
+        "tests/regression/test_g71_g72_sectors.py::test_G72_vector_sector_descriptor_block",
+    ],
     "GENERAL": [
         "tests/regression/test_svt_direct_variation.py::test_delta22_p_mh_zero_and_second_order",
         "tests/regression/test_svt_direct_variation.py::test_delta22_operator_families",
@@ -69,9 +75,10 @@ EXTENSIONS = {
     ],
 }
 
-# gates that carry their own historical test mapping already but whose
-# dedicated CURRENT-member battery is still open (fail-closed listing):
-KNOWN_OPEN = ["G50", "G70", "G71", "G72", "G90"]
+# All previously-open coverage gaps now carry dedicated current-member
+# batteries (G50/G70: principal ladder; G71/G72: axial + vector sector;
+# G90: global regularity scan).
+KNOWN_OPEN = []
 
 
 def collected_ids() -> set[str]:

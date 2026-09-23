@@ -1,7 +1,7 @@
 {
  "schema_version": "1.0",
- "timestamp": "2026-09-23T21:05:10.749920+00:00",
- "git_commit": "aeda19f89755e71776e5c7da98d93e1f70b8f726",
+ "timestamp": "2026-09-23T22:30:34.632035+00:00",
+ "git_commit": "a7dc4c808ab620ee77cb5c9ceb1b56d7ab0a3c7c",
  "title": "STEP3: Delta22_SVT derived by direct theta-theta variation of the genuine SVT action with the angular metric degree of freedom unfixed",
  "route": "Delta22_SVT = kappa_C * EL_C[L_SVT2 + L_SVT3 + L_SVT4] |_{C=r^2}, kappa_C = sqrt(h/f) pinned exactly on the verified MH slice (V3); areal gauge substituted only AFTER the Euler-Lagrange step",
  "geometry_checks": {

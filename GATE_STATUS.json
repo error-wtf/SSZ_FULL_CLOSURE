@@ -14,5 +14,17 @@
  "G14": "PASS",
  "G15": "PASS",
  "G16": "PASS",
- "G20": "PASS"
+ "G20": "PASS",
+ "G30": "PASS",
+ "G31": "PASS",
+ "G32": "PASS",
+ "G40": "PASS",
+ "G50": "PASS",
+ "G60": "PASS",
+ "G70": "PASS",
+ "G71": "PASS",
+ "G72": "PASS",
+ "G80": "PASS",
+ "G90": "PASS",
+ "G100": "PASS"
 }
