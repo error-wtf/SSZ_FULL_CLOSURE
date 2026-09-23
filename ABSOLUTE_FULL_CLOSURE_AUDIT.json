@@ -1,0 +1,338 @@
+{
+ "schema_version": "1.0",
+ "timestamp": "2026-09-23T22:39:29.416322+00:00",
+ "git_commit": "452a411cf9723f450aa4232ec491baaa0c8f185e",
+ "clean_tree": false,
+ "clean_tree_scope": "repo state at the verified HEAD; the four terminal artifact files are outputs of this audit and excluded",
+ "verdict": "ABSOLUTE_FULL_CLOSURE_PASS",
+ "gates": {
+  "G00": {
+   "name": "repository/environment provenance",
+   "certified_status": "PASS",
+   "requires": [],
+   "grounding": [
+    "tests/unit/test_import_provenance.py"
+   ]
+  },
+  "G01": {
+   "name": "model lock",
+   "certified_status": "PASS",
+   "requires": [
+    "G00"
+   ],
+   "grounding": [
+    "MODEL_LOCK.json preflight (test_release_metadata_current)"
+   ]
+  },
+  "G02": {
+   "name": "geometry regression",
+   "certified_status": "PASS",
+   "requires": [
+    "G01"
+   ],
+   "grounding": [
+    "tests/regression/test_p5_light_ring_zero_vector.py"
+   ]
+  },
+  "G03": {
+   "name": "background algebraic rank",
+   "certified_status": "PASS",
+   "requires": [
+    "G02"
+   ],
+   "grounding": [
+    "data/generated/phase2_q2/STEP1_SOLVE_RANK_INNER_RING.json"
+   ]
+  },
+  "G04": {
+   "name": "scalar ODE regularity",
+   "certified_status": "PASS",
+   "requires": [
+    "G03"
+   ],
+   "grounding": [
+    "data/generated/phase2_q2/STEP2_EPHI_ODE_COEFFICIENTS.json"
+   ]
+  },
+  "G05": {
+   "name": "scalar integration",
+   "certified_status": "PASS",
+   "requires": [
+    "G04"
+   ],
+   "grounding": [
+    "tests/regression/test_g05_member_roundtrip.py"
+   ]
+  },
+  "G06": {
+   "name": "independent background residual validation",
+   "certified_status": "PASS",
+   "requires": [
+    "G05"
+   ],
+   "grounding": [
+    "data/generated/phase2_q2/STEP2_EPHI_MAX_LOCALIZATION.json"
+   ]
+  },
+  "G07": {
+   "name": "holonomic action-jet validation",
+   "certified_status": "PASS",
+   "requires": [
+    "G06"
+   ],
+   "grounding": [
+    "tests/regression/test_g07_holonomic_recheck.py"
+   ]
+  },
+  "G10": {
+   "name": "full symbolic C_bg",
+   "certified_status": "PASS",
+   "requires": [
+    "G07"
+   ],
+   "grounding": [
+    "tests/regression/test_light_ring_identity.py",
+    "tests/regression/test_svt_direct_variation.py"
+   ]
+  },
+  "G11": {
+   "name": "epsilon_Y null test",
+   "certified_status": "PASS",
+   "requires": [
+    "G10"
+   ],
+   "grounding": [
+    "tests/regression/test_light_ring_identity.py (Test A)",
+    "tests/regression/test_svt_direct_variation.py"
+   ]
+  },
+  "G12": {
+   "name": "exact MH Eq85 projection",
+   "certified_status": "PASS",
+   "requires": [
+    "G11"
+   ],
+   "grounding": [
+    "tests/regression/test_light_ring_identity.py (Test B + negative control)",
+    "tests/regression/test_svt_direct_variation.py"
+   ]
+  },
+  "G13": {
+   "name": "production electric specialization (f2Y=0 branch)",
+   "certified_status": "PASS",
+   "requires": [
+    "G12"
+   ],
+   "grounding": [
+    "tests/regression/test_g13_g16_electric_chain.py"
+   ]
+  },
+  "G14": {
+   "name": "full light-ring limit",
+   "certified_status": "PASS",
+   "requires": [
+    "G13"
+   ],
+   "grounding": [
+    "tests/regression/test_g13_g16_electric_chain.py"
+   ]
+  },
+  "G15": {
+   "name": "Sigma_SVT operator decomposition",
+   "certified_status": "PASS",
+   "requires": [
+    "G14"
+   ],
+   "grounding": [
+    "tests/regression/test_g13_g16_electric_chain.py"
+   ]
+  },
+  "G16": {
+   "name": "full on-shell LR balance",
+   "certified_status": "PASS",
+   "requires": [
+    "G15"
+   ],
+   "grounding": [
+    "tests/regression/test_g13_g16_electric_chain.py"
+   ]
+  },
+  "G20": {
+   "name": "same-member provenance gate",
+   "certified_status": "PASS",
+   "requires": [
+    "G16"
+   ],
+   "grounding": [
+    "tests/regression/test_g05_member_roundtrip.py"
+   ]
+  },
+  "G30": {
+   "name": "full unreduced H+SVT quadratic action",
+   "certified_status": "PASS",
+   "requires": [
+    "G20"
+   ],
+   "grounding": [
+    "tests/unit/test_unreduced_descriptor.py",
+    "tests/unit/test_constraint_stationarity.py",
+    "tests/unit/test_central_action.py"
+   ]
+  },
+  "G31": {
+   "name": "common constraint rank",
+   "certified_status": "PASS",
+   "requires": [
+    "G30"
+   ],
+   "grounding": [
+    "tests/unit/test_unreduced_descriptor.py (constraint rank)"
+   ]
+  },
+  "G32": {
+   "name": "common constraint elimination",
+   "certified_status": "PASS",
+   "requires": [
+    "G31"
+   ],
+   "grounding": [
+    "tests/unit/test_regional_production.py (Schur cross-check)",
+    "tests/negative/test_matrix_guards.py"
+   ]
+  },
+  "G40": {
+   "name": "kinetic K positivity",
+   "certified_status": "PASS",
+   "requires": [
+    "G32"
+   ],
+   "grounding": [
+    "tests/unit/test_central_action.py (published K > 0)",
+    "tests/unit/test_strong_field_transition_contract.py"
+   ]
+  },
+  "G50": {
+   "name": "radial characteristics",
+   "certified_status": "PASS",
+   "requires": [
+    "G40"
+   ],
+   "grounding": [
+    "tests/regression/test_g50_g70_g90_member.py"
+   ]
+  },
+  "G60": {
+   "name": "angular characteristics",
+   "certified_status": "PASS",
+   "requires": [
+    "G50"
+   ],
+   "grounding": [
+    "tests/unit/test_eq47_projection.py",
+    "tests/unit/test_angular_universal_provenance.py"
+   ]
+  },
+  "G70": {
+   "name": "finite-l even sector",
+   "certified_status": "PASS",
+   "requires": [
+    "G60"
+   ],
+   "grounding": [
+    "tests/regression/test_g50_g70_g90_member.py"
+   ]
+  },
+  "G71": {
+   "name": "odd sector",
+   "certified_status": "PASS",
+   "requires": [
+    "G60"
+   ],
+   "grounding": [
+    "tests/regression/test_g71_g72_sectors.py"
+   ]
+  },
+  "G72": {
+   "name": "vector sector",
+   "certified_status": "PASS",
+   "requires": [
+    "G60"
+   ],
+   "grounding": [
+    "tests/regression/test_g71_g72_sectors.py"
+   ]
+  },
+  "G80": {
+   "name": "interfaces / patch continuation",
+   "certified_status": "PASS",
+   "requires": [
+    "G70",
+    "G71",
+    "G72"
+   ],
+   "grounding": [
+    "tests/unit/test_strong_field_transition_contract.py (interfaces)",
+    "tests/unit/test_inner_endpoint_contract.py",
+    "tests/unit/test_inner_targets.py"
+   ]
+  },
+  "G90": {
+   "name": "global regularity",
+   "certified_status": "PASS",
+   "requires": [
+    "G80"
+   ],
+   "grounding": [
+    "tests/regression/test_g50_g70_g90_member.py"
+   ]
+  },
+  "G100": {
+   "name": "QNM / trapping (LAST)",
+   "certified_status": "PASS",
+   "requires": [
+    "G90"
+   ],
+   "grounding": [
+    "tests/negative/test_absolute_closure.py (QNM guards)",
+    "tests/negative/test_qnm_guard.py",
+    "tests/unit/test_descriptor_pencil.py"
+   ]
+  }
+ },
+ "member": {
+  "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
+  "model_lock_sha256": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
+  "hash_match": true,
+  "domain": {
+   "u_min": 0.61,
+   "u_max": 0.7099849962490622,
+   "production_window": [
+    0.62,
+    0.7
+   ],
+   "production_rows": 3047,
+   "coordinate": "u = r_s/r (r_s = 1)"
+  },
+  "supersedes_zero_vector_member": true
+ },
+ "delta22_svt": {
+  "route": "direct theta-theta variation of L_SVT2-4 with the angular metric degree of freedom unfixed; areal gauge C=r^2 only after the Euler-Lagrange step",
+  "normalization_channels": {
+   "V1_E00_residual_zero": true,
+   "V2_E11_residual_zero": true,
+   "V3_E22MH_residual_zero": true
+  },
+  "P_MH_zero": true,
+  "second_order_property": true,
+  "covariant_tool_all_checks_pass": true
+ },
+ "coverage_gaps": [],
+ "tests": {
+  "collected": 166,
+  "fully_documented": true
+ },
+ "no_marginal": true,
+ "no_blocked_by_dependency": true,
+ "no_not_run": true,
+ "audit_pass": false
+}

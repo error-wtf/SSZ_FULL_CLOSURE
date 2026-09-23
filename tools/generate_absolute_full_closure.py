@@ -49,7 +49,7 @@ def clean_tree() -> bool:
     are OUTPUTS of this audit and change on every regeneration)."""
     out = subprocess.run(["git", "status", "--porcelain"], capture_output=True,
                          text=True, cwd=ROOT).stdout.strip()
-    dirty = {ln[3:].strip() for ln in out.splitlines() if ln.strip()}
+    dirty = {ln[2:].strip() for ln in out.splitlines() if ln.strip()}
     return dirty <= TERMINAL_ARTIFACTS
 
 
