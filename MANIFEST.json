@@ -4093,6 +4093,11 @@
       "sha256": "98b70f1f6b630256c7a9ac713ea9c890a83e7710ae1bc58653b9ef78bf639ab7"
     },
     {
+      "path": "src/ssz_p5/action/light_ring_identity.py",
+      "size_bytes": 2211,
+      "sha256": "9f90d4821560504b1f2cdfe77e7e7ac150c0aa454f57b90728e6326a0951d64f"
+    },
+    {
       "path": "src/ssz_p5/action/model.py",
       "size_bytes": 515,
       "sha256": "30661f90467cf293d5c998541f415959102788b15806ddf0ff56114488432628"
@@ -4536,6 +4541,11 @@
       "path": "tests/regression/test_golden_jets.py",
       "size_bytes": 757,
       "sha256": "abf6cf8fecad4accffad0d1becc42c006ced5e1853d91f7ebbf1fbf067302cdf"
+    },
+    {
+      "path": "tests/regression/test_light_ring_identity.py",
+      "size_bytes": 1254,
+      "sha256": "b20012dc253b5e3721d9fefc3fad554a51ec60e0ff02698c8092bd570335e827"
     },
     {
       "path": "tests/regression/test_p5_light_ring_zero_vector.py",
