@@ -2,9 +2,6 @@
  "schema_version": "1.0",
  "uncovered_collected_tests": [],
  "required_gates_without_tests": [
-  "G02",
-  "G03",
-  "G04",
   "G05",
   "G16",
   "G50",
@@ -65,7 +62,12 @@
    "HISTORICAL": 12,
    "MEDIUM": 105,
    "TAUTOLOGICAL": 9,
-   "STRONG": 40
+   "STRONG": 43
   }
+ },
+ "closed_in_this_audit": {
+  "G02": "test_G02_geometry_profile_identity",
+  "G03": "test_G03_background_algebraic_rank_full_window",
+  "G04": "test_G04_scalar_ode_regular_full_window"
  }
 }

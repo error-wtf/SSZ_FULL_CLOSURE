@@ -1,6 +1,6 @@
 {
  "continuation_state": "G10/G11/G12 PASS (exact Test B); G13/G15 symbolic machinery in source; consolidation complete (gate graph, MODEL_LOCK, EVIDENCE_INDEX, provenance test); next: Delta22_SVT derivation then numeric G13->G14->G16",
- "tests": "161/161 PASS",
+ "tests": "169/169 PASS (166 + 3 dedicated background-gate tests G02/G03/G04)",
  "head_commit": "29056e4 (README finalized; zip /home/error/ssz-full-closure-29056e4.zip created)",
  "completed": [
   "G00-G06 PASS (provenance/model/geometry/rank/ODE/integration/residuals)",
@@ -12,7 +12,7 @@
   "G15 structure: sigma_svt_decomposition (E00-channel operators exact; Delta22_SVT open at BETA weight)",
   "consolidation: gates.py G00-G100 fail-closed graph + programmatic verdict; MODEL_LOCK.json; EVIDENCE_INDEX.json; import-provenance regression"
  ],
- "next_executable_command": "match the ONE unmatched Ward-span residual (STEP1_DELTA22_WARD_SPAN_SOLUTION.json): trace ap^2*f2F*h*r^2*(f*hp - fp*h) part and pure-metric part 2f^2*h*hp + f^2*hp^2*r - fp^2*h^2*r separately to Ward/c-coefficient/JA'-transport source; then Delta22_SVT complete -> G13 numeric -> G14 -> G15 -> G16",
+ "next_executable_command": "remaining coverage gaps G05, G16, G50, G70, G71, G72, G90 + the Ward completion: derive c4 from the covariant vector Ward term (registered R_el = c4*JA decomposition), close R_met via the metric Bianchi transport, replace the Delta22_SVT placeholder by the derived expression, freeze the electric production member artifact (MODEL_LOCK still references the superseded zero-vector file), then G05/G13-G16/G50/G60-certified/G70-G72/G90/G100",
  "open_items": {
   "Delta22_SVT": "the ONLY remaining symbolic unknown of C_bg; derivation is the G15 completion",
   "G07": "holonomic independent re-check (MARGINAL)",
@@ -32,5 +32,14 @@
   "MODEL_LOCK.json"
  ],
  "failure_classification": "no scientific fail registered; loop continues",
- "remote_push": "RESOLVED (owner-provided token): main pushed through 5fa285c; remote==local verified. NOTE: token was NOT persisted in the repository; recommend the owner store it via gh auth or a credential helper and rotate the shared file."
+ "remote_push": "RESOLVED (owner-provided token): main pushed through 5fa285c; remote==local verified. NOTE: token was NOT persisted in the repository; recommend the owner store it via gh auth or a credential helper and rotate the shared file.",
+ "coverage_gaps_remaining": [
+  "G05",
+  "G16",
+  "G50",
+  "G70",
+  "G71",
+  "G72",
+  "G90"
+ ]
 }

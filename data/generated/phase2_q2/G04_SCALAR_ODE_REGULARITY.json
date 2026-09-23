@@ -1,0 +1,10 @@
+{
+ "min_abs_A_interior": 0.7749121494468404,
+ "u_at_min": 0.6150150037509378,
+ "sign_consistent": true,
+ "window": [
+  0.615,
+  0.705
+ ],
+ "boundary_rows_excluded": 381
+}
