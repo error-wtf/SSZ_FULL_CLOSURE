@@ -9,6 +9,7 @@ import sympy as sp
 
 r, f, h, ph, ap = sp.symbols('r f h ph ap', positive=True)
 f2, f2X, f2F, f3, f3X, f4, f4X, tf4 = sp.symbols('f2 f2X f2F f3 f3X f4 f4X tf4')
+f2Y = sp.Symbol('f2Y')   # symbolic control variable (never silently zeroed)
 
 E00 = (r**2*(f*f2 - h*ap**2*f2F) - 2*r*h**2*ph*ap**2*f3
        + h*ap**2*(4*(h-1)*f4 - h**2*ph**2*(f4X + 2*tf4)))

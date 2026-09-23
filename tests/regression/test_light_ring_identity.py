@@ -15,9 +15,10 @@ def test_structural_invariants():
 
 
 def test_P_A_analytic_nonzero():
-    r, f, h = lri.r, lri.f, lri.h
-    assert sp.simplify(lri.P_A - sp.sqrt(h/f)*r**2) == 0
-    # positive symbols => P_A > 0 structurally
+    r, f, h, ap = lri.r, lri.f, lri.h, lri.ap
+    # JA = sqrt(h/f) * ap * (r^2 f2F + 4 r h ph f3 + 8(1-h) f4 + 2 h^2 ph^2 (f4X + 2 tf4))
+    # => P_A = d JA/d f2F = sqrt(h/f) * ap * r^2  (positive symbols => structurally > 0)
+    assert sp.simplify(lri.P_A - ap*sp.sqrt(h/f)*r**2) == 0
 
 
 def test_epsY_nulltest():
