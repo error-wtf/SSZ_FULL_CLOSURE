@@ -114,6 +114,17 @@ Key symbolic regression results (exact, `== 0` via `canonical_simplify`):
 gates becomes PASS only through its own executable implementation,
 independent test and machine-readable evidence.
 
+### Complete test inventory
+
+Every one of the 166 tests is documented individually — file, function,
+parametrization, and the exact assertion (docstring or first `assert`
+statement) — in the machine-generated
+[`TEST_CATALOG.md`](TEST_CATALOG.md). Regenerate after adding tests:
+
+```bash
+PYTHONPATH=src python tools/generate_test_catalog.py
+```
+
 ## Historical test results
 
 The repository keeps the **complete dated trail** of every test campaign —
