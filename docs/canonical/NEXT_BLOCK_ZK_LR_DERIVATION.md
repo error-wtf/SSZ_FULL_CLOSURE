@@ -244,3 +244,34 @@ Execution order (frozen):
 
 No new branch search. No fitting. No old slot loops. From here: close the
 remaining proof chain.
+
+## STEP 2 EXECUTION ORDER — THREE SEPARATE PROJECTIONS (owner correction, frozen)
+
+C_bg is built FULLY SYMBOLIC: C_bg[f2Y, A0prime, f3, f~3, f4, f~4, ...].
+The old order ("MH projection A0prime=0, then compare") is WRONG — it kills the
+electric Eq.85 term (-2 r f h A0prime^2 v8) that must be REPRODUCED.
+
+Test A — eps_Y-nulltest:
+  A0prime = 0, f2Y stays SYMBOLIC. Require algebraically: Delta C_epsY = 0.
+  This tests the background-null zero-vector eps_Y branch.
+
+Test B — full Maxwell-Horndeski limit:
+  genuine-SVT structures OFF, but A0prime stays SYMBOLIC (not set to 0).
+  Require: C_bg falls back EXACTLY to the undivided Eq.85 numerator:
+    (2f - r f') a4' - [ (r f'' - r f'^2/f + 2f' - 2f/r) a4
+                        + f^(3/2)/(r sqrt(h)) F
+                        - 2 r f h A0prime^2 v8 ] = 0.
+  Only this test proves the full Eq.85 structure INCLUDING the electric
+  coefficient was reproduced. Slot rule: Eq.85 'v8' = ZK-canonical V9 = MH v8
+  (never the 13-slot v8 column).
+
+Test C — real production member:
+  NOW apply f2Y = 0 (branch postulate) + the actual integrated A0prime(r) + the
+  re-solved action jets. Then ring limit (2f - r f' = 0), and only afterwards:
+  Sigma_SVT = C_LR^full - C_LR^MH.
+
+Rationale: A0prime=0 is the right projection for the eps_Y background-null test
+but NOT for the full electric Eq.85 regression check. The two statements must
+never be merged under one "MH projection" step (RAG-consistent: the old
+Delta f2 = 0.01 Y member is documented background-null on the zero-vector
+branch; the new electric computation examines a different branch).
