@@ -88,5 +88,5 @@ def test_ward_span_derivation_status():
     before Delta22_SVT is complete.  This test pins the honest status."""
     p = kt.probe_ward_span_no_go()
     assert p["status"] == "SUPERSEDED_NON_HOLONOMIC_ARTIFACT"
-    assert "holonomic" in p["df2_coefficients"]["holonomic"]
+    assert p["df2_coefficients"]["holonomic"].startswith("absorbed by df2 =")
     assert "E22_HT = r^2 f * E22_KT" in p["correct_route"]
