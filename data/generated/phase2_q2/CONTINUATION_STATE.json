@@ -1,7 +1,7 @@
 {
  "continuation_state": "G10/G11/G12 PASS (exact Test B); G13/G15 symbolic machinery in source; consolidation complete (gate graph, MODEL_LOCK, EVIDENCE_INDEX, provenance test); next: Delta22_SVT derivation then numeric G13->G14->G16",
  "tests": "161/161 PASS",
- "head_commit": "a5240f6 (see git log; this file updated in same or next commit)",
+ "head_commit": "29056e4 (README finalized; zip /home/error/ssz-full-closure-29056e4.zip created)",
  "completed": [
   "G00-G06 PASS (provenance/model/geometry/rank/ODE/integration/residuals)",
   "G07 MARGINAL (holonomic emitter identity documented; independent re-check open)",
@@ -12,13 +12,25 @@
   "G15 structure: sigma_svt_decomposition (E00-channel operators exact; Delta22_SVT open at BETA weight)",
   "consolidation: gates.py G00-G100 fail-closed graph + programmatic verdict; MODEL_LOCK.json; EVIDENCE_INDEX.json; import-provenance regression"
  ],
- "next_executable_command": "derive Delta22_SVT (genuine-SVT theta-theta correction of the general U(1)-SVT action; source: HT2018 action Eq.(1) L_SVT2-4 theta-theta variation on the static background; cross-check against the E11-E00 candidate h phi_r r A0prime^2 (2 f3X h^3 phi_r^2 - 4 f3 h) which must emerge or be revised); then G13 numeric (f2Y=0 + integrated f3X/A0 on production member) -> G14 ring limit -> G15 complete Sigma_SVT -> G16 full LR balance",
+ "next_executable_command": "match the ONE unmatched Ward-span residual (STEP1_DELTA22_WARD_SPAN_SOLUTION.json): trace ap^2*f2F*h*r^2*(f*hp - fp*h) part and pure-metric part 2f^2*h*hp + f^2*hp^2*r - fp^2*h^2*r separately to Ward/c-coefficient/JA'-transport source; then Delta22_SVT complete -> G13 numeric -> G14 -> G15 -> G16",
  "open_items": {
   "Delta22_SVT": "the ONLY remaining symbolic unknown of C_bg; derivation is the G15 completion",
   "G07": "holonomic independent re-check (MARGINAL)",
   "G13-G16 numeric": "production member evaluation after Delta22_SVT"
  },
- "active_source_files": ["src/ssz_p5/action/light_ring_identity.py", "src/ssz_p5/action/kt_mh_background.py", "src/ssz_p5/action/symbolic_canon.py", "src/ssz_p5/closure/gates.py"],
- "evidence": ["data/generated/phase2_q2/G10_G12_CBG_EQ85_MILESTONE.json", "data/generated/phase2_q2/STEP1_KT2023_CBG_GENERATING_COMBINATION.json", "EVIDENCE_INDEX.json", "GATE_STATUS.json", "MODEL_LOCK.json"],
- "failure_classification": "no scientific fail registered; loop continues"
+ "active_source_files": [
+  "src/ssz_p5/action/light_ring_identity.py",
+  "src/ssz_p5/action/kt_mh_background.py",
+  "src/ssz_p5/action/symbolic_canon.py",
+  "src/ssz_p5/closure/gates.py"
+ ],
+ "evidence": [
+  "data/generated/phase2_q2/G10_G12_CBG_EQ85_MILESTONE.json",
+  "data/generated/phase2_q2/STEP1_KT2023_CBG_GENERATING_COMBINATION.json",
+  "EVIDENCE_INDEX.json",
+  "GATE_STATUS.json",
+  "MODEL_LOCK.json"
+ ],
+ "failure_classification": "no scientific fail registered; loop continues",
+ "remote_push": "BLOCKED: no credentials in environment (no credential helper, no SSH key); owner must push main manually or configure secure credentials. Local main is ahead of origin/main by many commits."
 }
