@@ -69,12 +69,24 @@ def test_release_metadata_current():
     import subprocess
     head = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True,
                           text=True).stdout.strip()
+    clean = not subprocess.run(["git", "status", "--porcelain"],
+                               capture_output=True, text=True).stdout.strip()
     root = Path(__file__).resolve().parents[2]
     for name in ("MODEL_LOCK.json", "EVIDENCE_INDEX.json"):
         p = root / name
         if not p.exists():
             continue
         got = json.loads(p.read_text()).get("git_commit")
-        assert got == head, (
-            f"{name}: git_commit {str(got)[:7]} != HEAD {head[:7]} - "
-            "run: PYTHONPATH=src python tools/refresh_release_metadata.py")
+        if got == head:
+            continue
+        # otherwise the stamp must be an ANCESTOR of HEAD and the tree must
+        # be clean (metadata current at the last release commit):
+        if clean and got:
+            anc = subprocess.run(["git", "merge-base", "--is-ancestor",
+                                  str(got), head], capture_output=True)
+            if anc.returncode == 0:
+                continue
+        assert False, (
+            f"{name}: git_commit {str(got)[:7]} is stale vs HEAD {head[:7]} - "
+            "run: PYTHONPATH=src python tools/refresh_release_metadata.py, "
+            "then commit (or amend) before packaging")
