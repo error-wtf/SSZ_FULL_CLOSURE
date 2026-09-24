@@ -926,6 +926,93 @@ def forced_transport_control(m: SSZMetric, r0: float, F_t: float = 1e-2,
     }
 
 
+def libration_trajectory(m: SSZMetric, u_ring: float, eps: float = 1e-5,
+                         n_periods: int = 2, n_out: int = 6000) -> dict:
+    """Full trajectory of a near-ring librating photon: (lam, t, r, phi)
+    arrays for visualisation of the stable-ring oscillation."""
+    b2_inv = float(m.W_of_u(u_ring)) + eps
+    b = 1.0 / np.sqrt(b2_inv)
+    r0 = 1.0 / u_ring
+    f0 = float(m.f(r0))
+    h0 = float(m.h(r0))
+    kr0 = float(np.sqrt(max(h0 * (1.0 / f0 - u_ring**2 / b2_inv), 0.0)))
+    kt0 = 1.0 / f0
+
+    def rhs(lam, y):
+        _, r, _, kt, kr, kph = y
+        f = float(m.f(r))
+        fp = float(m.fp(r))
+        h = float(m.h(r))
+        hp = float(m.hp(r))
+        return [
+            kt, kr, kph,
+            -(fp / f) * kt * kr,
+            -(0.5 * h * fp) * kt * kt + (hp / (2.0 * h)) * kr * kr
+            + h * r * kph * kph,
+            -(2.0 / r) * kr * kph,
+        ]
+
+    def cross_ring(lam, y):
+        return y[1] - r0
+
+    cross_ring.direction = +1.0  # type: ignore[attr-defined]
+    kappa = float(np.sqrt(abs(float(m.W_uu(u_ring)))
+                          * float(m.h(1.0 / u_ring))
+                          / (2.0 * float(m.f(1.0 / u_ring)))))
+    phi_per_period = 2.0 * np.pi / kappa
+    dphi_dlam = b * u_ring**2
+    lam_span = (0.0, 1.05 * n_periods * phi_per_period / dphi_dlam)
+    sol = solve_ivp(rhs, lam_span, [0.0, r0, 0.0, kt0, kr0, b / r0**2],
+                    method="DOP853", rtol=1e-12, atol=1e-12,
+                    dense_output=True, max_step=lam_span[1] / n_out)
+    lam = np.linspace(0.0, lam_span[1], n_out)
+    y = sol.sol(lam)
+    return {"lam": lam, "t": y[0], "r": y[1], "phi": y[2]}
+
+
+def winding_trajectory(m: SSZMetric, b: float, r0: float,
+                       lam_span: tuple = (0.0, 14.0),
+                       n_out: int = 8000, inward: bool = True) -> dict:
+    """Full null trajectory (r, phi) for visualisation of the logarithmic
+    winding near the unstable ring."""
+    f0 = float(m.f(r0))
+    h0 = float(m.h(r0))
+    val = h0 * (1.0 / f0 - b * b / r0**2)
+    if val < 0:
+        raise ValueError("impact parameter forbidden at r0")
+    kr0 = -float(np.sqrt(val)) if inward else float(np.sqrt(val))
+    kt0 = 1.0 / f0
+
+    def rhs(lam, y):
+        _, r, _, kt, kr, kph = y
+        f = float(m.f(r))
+        fp = float(m.fp(r))
+        h = float(m.h(r))
+        hp = float(m.hp(r))
+        return [
+            kt, kr, kph,
+            -(fp / f) * kt * kr,
+            -(0.5 * h * fp) * kt * kt + (hp / (2.0 * h)) * kr * kr
+            + h * r * kph * kph,
+            -(2.0 / r) * kr * kph,
+        ]
+
+    r_lo, r_hi = radial_domain(m)
+
+    def leave(lam, y):
+        return min(y[1] - r_lo, r_hi - y[1])
+
+    leave.terminal = True  # type: ignore[attr-defined]
+    sol = solve_ivp(rhs, lam_span, [0.0, r0, 0.0, kt0, kr0, b / r0**2],
+                    method="DOP853", rtol=1e-12, atol=1e-12,
+                    dense_output=True, events=leave,
+                    max_step=(lam_span[1] - lam_span[0]) / n_out)
+    lam_end = float(sol.t[-1])
+    lam = np.linspace(0.0, lam_end, n_out)
+    y = sol.sol(lam)
+    return {"lam": lam, "t": y[0], "r": y[1], "phi": y[2]}
+
+
 def consolidation_table(m: SSZMetric, rings: list[dict]) -> list[dict]:
     """One geometry -> orbit + time + phase + rotation + trapping."""
     rows = []
