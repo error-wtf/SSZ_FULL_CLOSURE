@@ -2,7 +2,7 @@
  "schema_version": "1.0",
  "model_name": "SSZ P5 electric U(1)-SVT (luminal Horndeski branch)",
  "branch_name": "main",
- "git_commit": "0b652974a27c20a668b80a3dad2ec90afa57df17",
+ "git_commit": "e2980292aece2b13c65ad60a2280fb38b91d859c",
  "action_member_reference": "data/generated/phase2_q2/ELECTRIC_PRODUCTION_MEMBER_CURRENT.json",
  "action_member_sha256": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
  "geometry_definition": {

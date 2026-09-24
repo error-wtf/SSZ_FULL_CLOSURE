@@ -15,5 +15,23 @@
   "remote push (token transient; owner rotates)",
   "owner review of the terminal artifacts"
  ],
- "policy_notes": "no fitting; verdicts programmatic; CONTINUATION_STATE committed locally, excluded from pushes"
+ "policy_notes": "no fitting; verdicts programmatic; CONTINUATION_STATE committed locally, excluded from pushes",
+ "post_closure_research_block": {
+  "name": "SSZ SOURCE-FREE TRANSPORT",
+  "prerequisite": "ABSOLUTE FULL CLOSURE (erst dann existiert die kovariante Action g_SSZ)",
+  "core_principle": "keine neue Kraft; SSZ-Wirkung = ge\u00e4nderter Transportoperator D_SSZ/dtau := u^nu nabla_nu[g_SSZ]; Ganze Struktur: Xi -> D -> g_mn -> Gamma -> Transport",
+  "computations": [
+   "1. geodaetische Kongruenz: u^nu nabla_nu u^mu = 0 auf P5 (radial + zirkular)",
+   "2. optische/kinematische Skalare: theta, sigma_mn, omega_mn + Raychaudhuri; Vergleich innerer (W_uu>0, stabil) vs aeusserer (W_uu<0) Lichtring",
+   "3. Eikonal/Phase: k^nu nabla_nu k^mu = 0 + Amplitudentransport; Verkettung mit JIF-Kette Xi -> D -> g -> Phi (Paper_II_SSZ_JIF_Geometry)",
+   "4. Konsolidierung: Bahn+Zeit+Phase+Rotation+Trapping aus EINER Geometrie"
+  ],
+  "constraints_from_RAG": [
+   "docs/NORMATIVE_SPECIFICATION.md (SHA 4188022...): statisches Xi0-Profil bestimmt KEINEN eindeutigen Flow \u2014 keine Flow-Gleichung zurueckrechnen",
+   "SSZ_Middle_Bridge_Dynamics_Gap_Audit_2026-08-29 (SHA a65e525...): 'single unified dynamics' bleibt OPEN \u2014 kein Zirkelschluss",
+   "altes Papier = Intuitionsarchiv, nicht Beweis; vorwaerts argumentieren: Full Action -> g -> Transport -> Observablen, dann Antizipation pruefen",
+   "Navier-Stokes nur als Strukturvergleich (source-free != trivial), keine SSZ-Euler-Gleichung ohne Herleitung"
+  ],
+  "status": "REGISTERED \u2014 blockiert NICHT die Full-Closure-Kette; startet nach G100"
+ }
 }
