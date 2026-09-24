@@ -57,7 +57,8 @@ def clean_tree() -> bool:
     out = subprocess.run(["git", "status", "--porcelain"], capture_output=True,
                          text=True, cwd=ROOT).stdout.strip()
     dirty = {ln[2:].strip() for ln in out.splitlines() if ln.strip()}
-    return dirty <= TERMINAL_ARTIFACTS
+    return all(any(d == a or d.startswith(a.rstrip("/") + "/")
+                   for a in TERMINAL_ARTIFACTS) for d in dirty)
 
 
 def main() -> int:
