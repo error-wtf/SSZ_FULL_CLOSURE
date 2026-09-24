@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "git_commit": "e2980292aece2b13c65ad60a2280fb38b91d859c",
+ "git_commit": "810d0366cf8f8dcebb8dfa929f8d8732d6f1f16e",
  "claims": {
   "G10_full_symbolic_C_bg": {
    "gate": "G10",
@@ -41,6 +41,16 @@
    "gate": "G01",
    "status": "PASS",
    "evidence": "data/generated/phase2_q2/STEP0_EQ85_V8_PROVENANCE.json"
+  },
+  "postclosure_source_free_transport": {
+   "gate": "POSTCLOSURE (non-gating research block)",
+   "status": "PASS",
+   "code": "src/ssz_p5/postclosure/transport.py",
+   "test": "tests/scientific/test_postclosure_source_free_transport.py (17 tests)",
+   "evidence": "data/generated/postclosure/SSZ_SOURCE_FREE_TRANSPORT.json",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
+   "prerequisite": "ABSOLUTE_FULL_CLOSURE_PASS (all 28 gates PASS) - satisfied",
+   "summary": "Source-free transport on g_SSZ: u^nu nabla_nu u^mu = 0 and k^nu nabla_nu k^mu = 0 verified via conserved quantities; Raychaudhuri identity (timelike + null) with Schwarzschild analytic anchors; amplitude transport a^2 r^2 = const; eikonal phase S_r = int dr/sqrt(fh); two light rings (outer unstable u=2/3, inner stable u=0.706135) with log-winding vs libration trapping. NO new force; no fitting."
   }
  }
 }

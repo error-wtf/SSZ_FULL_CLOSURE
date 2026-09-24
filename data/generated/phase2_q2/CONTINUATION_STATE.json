@@ -1,6 +1,6 @@
 {
  "continuation_state": "ABSOLUTE_FULL_CLOSURE_PASS reached (programmatic). All 28 gates certified PASS; coverage gaps zero; member frozen; terminal artifacts generated.",
- "head_commit": "cbb15970d879765826f658b353a45b591c305110",
+ "head_commit": "810d0366cf8f8dcebb8dfa929f8d8732d6f1f16e",
  "tests": "195/195 PASS",
  "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
  "step3_delta22": "DERIVED (direct theta-theta variation, areal gauge after variation; V1/V2/V3 residual 0; P_MH==0; covariant tool all_checks_pass)",
@@ -19,7 +19,7 @@
  "post_closure_research_block": {
   "name": "SSZ SOURCE-FREE TRANSPORT",
   "prerequisite": "ABSOLUTE FULL CLOSURE (erst dann existiert die kovariante Action g_SSZ)",
-  "core_principle": "keine neue Kraft; SSZ-Wirkung = ge\u00e4nderter Transportoperator D_SSZ/dtau := u^nu nabla_nu[g_SSZ]; Ganze Struktur: Xi -> D -> g_mn -> Gamma -> Transport",
+  "core_principle": "keine neue Kraft; SSZ-Wirkung = geänderter Transportoperator D_SSZ/dtau := u^nu nabla_nu[g_SSZ]; Ganze Struktur: Xi -> D -> g_mn -> Gamma -> Transport",
   "computations": [
    "1. geodaetische Kongruenz: u^nu nabla_nu u^mu = 0 auf P5 (radial + zirkular)",
    "2. optische/kinematische Skalare: theta, sigma_mn, omega_mn + Raychaudhuri; Vergleich innerer (W_uu>0, stabil) vs aeusserer (W_uu<0) Lichtring",
@@ -27,11 +27,17 @@
    "4. Konsolidierung: Bahn+Zeit+Phase+Rotation+Trapping aus EINER Geometrie"
   ],
   "constraints_from_RAG": [
-   "docs/NORMATIVE_SPECIFICATION.md (SHA 4188022...): statisches Xi0-Profil bestimmt KEINEN eindeutigen Flow \u2014 keine Flow-Gleichung zurueckrechnen",
-   "SSZ_Middle_Bridge_Dynamics_Gap_Audit_2026-08-29 (SHA a65e525...): 'single unified dynamics' bleibt OPEN \u2014 kein Zirkelschluss",
+   "docs/NORMATIVE_SPECIFICATION.md (SHA 4188022...): statisches Xi0-Profil bestimmt KEINEN eindeutigen Flow — keine Flow-Gleichung zurueckrechnen",
+   "SSZ_Middle_Bridge_Dynamics_Gap_Audit_2026-08-29 (SHA a65e525...): 'single unified dynamics' bleibt OPEN — kein Zirkelschluss",
    "altes Papier = Intuitionsarchiv, nicht Beweis; vorwaerts argumentieren: Full Action -> g -> Transport -> Observablen, dann Antizipation pruefen",
    "Navier-Stokes nur als Strukturvergleich (source-free != trivial), keine SSZ-Euler-Gleichung ohne Herleitung"
   ],
-  "status": "REGISTERED \u2014 blockiert NICHT die Full-Closure-Kette; startet nach G100"
+  "status": "EXECUTED after ABSOLUTE_FULL_CLOSURE_PASS; 17 dedicated tests PASS; evidence: data/generated/postclosure/SSZ_SOURCE_FREE_TRANSPORT.json",
+  "results": {
+   "computation_1_timelike_transport": "E, L, norm conserved to <1e-8/<1e-10/<1e-6; acceleration cross-check <5e-3; negative control (F^t=1e-2): dE drift 7.1e-3 (x1e6 discrimination)",
+   "computation_2_raychaudhuri_timelike": "identity residual 2.4e-5 (200 pts, converging); irrotational; Schwarzschild anchor: theta/sigma2/R_uu exact to <1e-6",
+   "computation_3_null_transport": "E, L, k.k conserved <1e-9; null Raychaudhuri residual 1.7e-6 (Schwarzschild 2.5e-7); amplitude invariant a^2 r^2 exact to 1.5e-13; S_r(rings) = 0.25745/E; ring redshift 0.94214",
+   "computation_4_ring_structure": "outer unstable u=2/3 (W_uu=-2.0, b_c=3sqrt3/2, log-winding increments -> 2 ln 10); inner stable u=0.706135 (W_uu=+2.592, ODE libration period == quadrature == 4.9237 -> 2pi/kappa = 4.9083); Omega_kepler == Omega_photon to 3e-16 at both rings"
+  }
  }
 }
