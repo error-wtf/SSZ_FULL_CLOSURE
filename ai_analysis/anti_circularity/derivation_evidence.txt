@@ -1,0 +1,311 @@
+==============================================================================
+ANTI-CIRCULARITY DOSSIER — SSZ TRUE FULL CLOSURE
+==============================================================================
+
+Question: are the celebrated GR anchors (gamma = 1, b_c = 3*sqrt(3)/2,
+u_photon = 2/3) SET as constants in the implementation, or DERIVED?
+
+SHORT ANSWER: DERIVED.  The strings '3*sqrt(3)' and '2/3' appear
+NOWHERE in src/ (the implementation).  They appear ONLY in the test
+files, as EXPECTED values in pytest.approx assertions — the classic
+predict-then-check structure.  All measured values are computed at
+runtime from the frozen member splines (root-finding on W_u,
+spline evaluation, ODE integration).  See evidence below.
+
+------------------------------------------------------------------------------
+EVIDENCE 1 — grep 'sqrt(3)' and '2/3' over src/ (implementation):
+------------------------------------------------------------------------------
+src/ssz_p5_higher_jet_closure_2026-09-16.py:64:       -2*h**1.5*phipp*(h*ph**2*f4XX+x*ph*f3X-N4-2*tf4)/(x*np.sqrt(f))
+src/ssz_p5_higher_jet_closure_2026-09-16.py:65:       +2*np.sqrt(h)*App*B1/(x*np.sqrt(f))
+src/ssz_p5_higher_jet_closure_2026-09-16.py:66:       -np.sqrt(h)*fp*Ap*B1/(x*f**1.5)
+src/ssz_p5_higher_jet_closure_2026-09-16.py:67:       -hp*Ap*B2/(x*np.sqrt(f*h))
+src/ssz_p5_higher_jet_closure_2026-09-16.py:68:       -2*np.sqrt(h)*Ap*B3/(x*np.sqrt(f))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:108:    alpha1=np.sqrt(h)/(4*np.sqrt(f))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:109:    alpha2=h**1.5*Ap/(2*r*np.sqrt(f))*(r*ph*f3-4*f4+h*ph**2*(f4X+2*tf4))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:111:            +(2*h*phipp+ph*hp)*(r*f3+h*ph*(f4X+2*tf4)))/(2*r*np.sqrt(f*h))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:112:    alpha5=-(np.sqrt(f*h)/(2*r))*(r*(f2F-2*h*ph**2*f2Y)+2*h*ph*f3
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:114:    alpha6=-(np.sqrt(f*h)/(4*r**2))*(1-(h*Ap**2/f)*(4*f4-h*ph**2*(f4X+2*tf4)))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:115:    alpha7=(1-(4*h*Ap**2/f)*f4)/(4*r**2*np.sqrt(f*h))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:118:    c2=(0.5*r**2*np.sqrt(f*h)*ph*(f2X-h*ph**2*f2XX)
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:120:        -h**1.5*Ap**2/(2*np.sqrt(f))*(
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:128:        -np.sqrt(h)/(2*np.sqrt(f))*(2*h*ph**2*(r**2*f2Y-h*(f4X+2*tf4))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:131:        +h**1.5*Ap/np.sqrt(f)*(2*h*ph**3*(r**2*f2XY-h*f4XX)
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:142:    c4=-(np.sqrt(h)*Ap**2/(2*r*np.sqrt(f)))*(h**2*ph**3*f4XX+r*h*ph**2*f3X-3*h*ph*(f4X+2*tf4)-r*f3)
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:143:    d2=-(h**1.5*Ap**2/(r*np.sqrt(f)))*(h**2*ph**3*f4XX+r*h*ph**2*f3X-2*h*ph*(3*f4X+2*tf4)-r*f3)
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:149:    v13=(-2*h**1.5*phipp*(h*ph**2*f4XX+r*ph*f3X-f4X-2*tf4)/(r*np.sqrt(f))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:150:         +2*np.sqrt(h)*App*B1/(r*np.sqrt(f))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:151:         -np.sqrt(h)*fp*Ap*B1/(r*f**1.5)
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:152:         -hp*Ap*B2/(r*np.sqrt(f*h))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:153:         -2*np.sqrt(h)*Ap*B3/(r*np.sqrt(f)))
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:155:    a4=np.sqrt(f*h)/2; a4p=dr(r,a4,1,window,degree)
+src/ssz_p5_zk_appendixA_emitter_JET9D8_2026-09-16.py:178:        v6phi=(2*h**1.5*Ap/(r*np.sqrt(f))
+src/ssz_p5/true_closure/graph.py:86:                  "u = 2/3, b_c = 3 sqrt(3)/2, Ricci-flat, Kretschmann "
+src/ssz_p5/true_closure/graph.py:132:        statement="Timelike congruence dynamics: dtheta/dtau = -theta^2/3 "
+src/ssz_p5/true_closure/graph.py:209:                  "UNSTABLE ring at u = 2/3 (W_uu < 0, b_c = 3sqrt3/2) "
+src/ssz_p5/true_closure/chain.py:178:        return r * r * float(np.sqrt(f / h))  # equatorial density
+src/ssz_p5/true_closure/chain.py:266:    kr0 = float(np.sqrt(h0 * (1.0 / f0)))
+src/ssz_p5/true_closure/chain.py:298:        1.0 / np.sqrt(m.f(grid) * m.h(grid)), grid))
+src/ssz_p5/postclosure/transport.py:301:    ur0 = -np.sqrt(val) if inward else np.sqrt(val)
+src/ssz_p5/postclosure/transport.py:370:    Omega = float(np.sqrt(fp / (2.0 * r_orb)))
+src/ssz_p5/postclosure/transport.py:371:    ut = float(1.0 / np.sqrt(f - r_orb**2 * Omega**2))
+src/ssz_p5/postclosure/transport.py:378:        "dtau_dt": float(np.sqrt(f - r_orb**2 * Omega**2)),
+src/ssz_p5/postclosure/transport.py:455:        dtheta/dtau = -theta^2/3 - sigma^2 + omega^2 - R_mn u^mu u^nu
+src/ssz_p5/postclosure/transport.py:466:    ur = -np.sqrt(np.maximum(h * (E**2 / f - 1.0), 0.0))
+src/ssz_p5/postclosure/transport.py:468:    sq = np.sqrt(f / h)  # sqrt(-g) ~ r^2 sqrt(f/h)
+src/ssz_p5/postclosure/transport.py:477:        2.0 * np.sqrt(h * A))
+src/ssz_p5/postclosure/transport.py:491:            2.0 * np.sqrt(h_i * A_i))
+src/ssz_p5/postclosure/transport.py:545:            "b_crit": float(1.0 / np.sqrt(W)),
+src/ssz_p5/postclosure/transport.py:546:            "Omega_ph": float(np.sqrt(W)),
+src/ssz_p5/postclosure/transport.py:548:            "exponent": float(np.sqrt(abs(Wuu) * h_r / (2.0 * f_r))),
+src/ssz_p5/postclosure/transport.py:562:    b = 1.0 / np.sqrt(b2_inv)
+src/ssz_p5/postclosure/transport.py:569:    kr0 = float(np.sqrt(max(h0 * (1.0 / f0 - u_ring**2 / b2_inv), 0.0)))
+src/ssz_p5/postclosure/transport.py:592:    kappa = float(np.sqrt(abs(float(m.W_uu(u_ring))) * float(m.h(1.0 / u_ring))
+src/ssz_p5/postclosure/transport.py:629:    kr = np.sqrt(h / f)
+src/ssz_p5/postclosure/transport.py:632:    sq = np.sqrt(f / h)
+src/ssz_p5/postclosure/transport.py:723:                    return du / np.sqrt(max(val, 1e-14 * (1.0 + b2_inv)))
+src/ssz_p5/postclosure/transport.py:745:                    return 2.0 * s / np.sqrt(max(val, 1e-14 * (1.0 + b2_inv)))
+src/ssz_p5/postclosure/transport.py:754:                    val, _ = quad(arc, 0.0, np.sqrt(u_tp - u_ref), limit=500,
+src/ssz_p5/postclosure/transport.py:787:    kr0 = -np.sqrt(val) if inward else np.sqrt(val)
+src/ssz_p5/postclosure/transport.py:844:    kr = np.sqrt(h / f)  # k^r for E = 1
+src/ssz_p5/postclosure/transport.py:845:    sq = np.sqrt(f / h)
+src/ssz_p5/postclosure/transport.py:871:    integ = float(np.trapezoid(1.0 / np.sqrt(m.f(r_grid) * m.h(r_grid)), r_grid))
+src/ssz_p5/postclosure/transport.py:875:        "redshift_a_to_b": float(np.sqrt(
+src/ssz_p5/postclosure/transport.py:896:    ur0 = -np.sqrt(max(h0 * (1.0 / f0 - 1.0), 0.0))
+src/ssz_p5/postclosure/transport.py:934:    b = 1.0 / np.sqrt(b2_inv)
+src/ssz_p5/postclosure/transport.py:938:    kr0 = float(np.sqrt(max(h0 * (1.0 / f0 - u_ring**2 / b2_inv), 0.0)))
+src/ssz_p5/postclosure/transport.py:959:    kappa = float(np.sqrt(abs(float(m.W_uu(u_ring)))
+src/ssz_p5/postclosure/transport.py:983:    kr0 = -float(np.sqrt(val)) if inward else float(np.sqrt(val))
+src/ssz_p5/postclosure/transport.py:1021:        OmK = float(np.sqrt(m.fp(r) / (2.0 * r)))
+src/ssz_p5/postclosure/transport.py:1026:            "dtau_dt": float(np.sqrt(m.f(r))),
+src/ssz_p5/production/holonomic_hessian_y.py:50:        ph = -np.sqrt(np.maximum(0.0, radicand))
+src/ssz_p5/production/holonomic_hessian_y.py:165:    v5 = x**2 * np.sqrt(h / f) * A * (phiF - 2.0 * h * ph**2 * phiY)
+src/ssz_p5/production/holonomic_hessian_y.py:167:        0.5 * x**2 * np.sqrt(f * h) * ph**2 * phiX
+src/ssz_p5/production/holonomic_hessian_y.py:168:        - 0.5 * x**2 * A**2 * np.sqrt(h / f) * (phiF - 4.0 * h * ph**2 * phiY)
+src/ssz_p5/production/holonomic_hessian_y.py:170:    current = x**2 * np.sqrt(f * h) * ph * (phiX + 4.0 * F * phiY)
+src/ssz_p5/production/holonomic_hessian_y.py:173:        - 0.5 * x**2 * np.sqrt(f / h) * pp
+src/ssz_p5/production/holonomic_hessian_y.py:180:        + h**1.5 * A / np.sqrt(f) * (2.0 * h * ph**3 * x**2 * XY - x**2 * ph * XF)
+src/ssz_p5/production/holonomic_hessian_y.py:184:        - h**1.5 * A**2 / (2.0 * np.sqrt(f)) * (6.0 * h * ph**3 * x**2 * XY - ph * x**2 * XF)
+src/ssz_p5/production/holonomic_hessian_y.py:185:        - 0.5 * x**2 * np.sqrt(f * h) * h * ph**3 * XX
+src/ssz_p5/production/holonomic_hessian_y.py:202:    M[:, 0, :] = (x**2 * np.sqrt(h / f) * A)[:, None] * (Bf - 2.0 * (h * ph**2)[:, None] * By)
+src/ssz_p5/production/holonomic_hessian_y.py:204:        (0.5 * x**2 * np.sqrt(f * h) * ph**2)[:, None] * Bx
+src/ssz_p5/production/holonomic_hessian_y.py:205:        - (0.5 * x**2 * A**2 * np.sqrt(h / f))[:, None] * (Bf - 4.0 * (h * ph**2)[:, None] * By)
+src/ssz_p5/production/holonomic_hessian_y.py:213:    p2 = h**1.5 * A / np.sqrt(f)
+src/ssz_p5/production/holonomic_hessian_y.py:220:    p2 = -h**1.5 * A**2 / (2.0 * np.sqrt(f))
+src/ssz_p5/production/holonomic_hessian_y.py:225:    M[:, 4, 0] += -0.5 * x**2 * np.sqrt(f * h) * h * ph**3
+src/ssz_p5/production/inner_principal.py:64:    ph = -np.sqrt(np.maximum(0.0, -2.0 * b.X.to_numpy(float) / h))
+src/ssz_p5/production/strong_field_transition.py:97:    return np.sqrt(h / f) * (C + A * dC_dA)
+src/ssz_p5/production/lower_order_controls.py:41:        ph = -np.sqrt(np.maximum(0.0, -2.0 * background.X.to_numpy(float) / h))
+src/ssz_p5/production/lower_order_controls.py:50:            r**2 * np.sqrt(h / f) * A,
+src/ssz_p5/production/lower_order_controls.py:51:            0.5 * r**2 * np.sqrt(f * h) * ph**2,
+src/ssz_p5/production/lower_order_controls.py:52:            -0.5 * r**2 * np.sqrt(f / h),
+src/ssz_p5/production/holonomic_hessian.py:50:        ph = -np.sqrt(np.maximum(0.0, radicand))
+src/ssz_p5/production/holonomic_hessian.py:196:    v5 = r**2 * np.sqrt(h / f) * A * phiF
+src/ssz_p5/production/holonomic_hessian.py:197:    c3 = 0.5 * r**2 * np.sqrt(f * h) * ph**2 * phiX
+src/ssz_p5/production/holonomic_hessian.py:198:    e3 = -0.5 * r**2 * np.sqrt(f / h) * phiphi
+src/ssz_p5/production/holonomic_hessian.py:200:    v4 = -h**1.5 * A * r**2 * ph / np.sqrt(f) * XF
+src/ssz_p5/production/holonomic_hessian.py:202:        h**1.5 * A**2 * r**2 * ph / (2 * np.sqrt(f)) * XF
+src/ssz_p5/production/holonomic_hessian.py:203:        - 0.5 * r**2 * np.sqrt(f * h) * h * ph**3 * XX
+src/ssz_p5/production/holonomic_hessian.py:249:    v5 = r**2 * np.sqrt(h / f) * A * phiF
+src/ssz_p5/production/holonomic_hessian.py:251:        0.5 * r**2 * np.sqrt(f * h) * ph**2 * phiX
+src/ssz_p5/production/holonomic_hessian.py:252:        - 0.5 * r**2 * A**2 * np.sqrt(h / f) * phiF
+src/ssz_p5/production/holonomic_hessian.py:254:    current_phi = r**2 * np.sqrt(f * h) * ph * phiX
+src/ssz_p5/production/holonomic_hessian.py:257:        -0.5 * r**2 * np.sqrt(f / h) * phiphi
+src/ssz_p5/production/holonomic_hessian.py:260:    v4 = -h**1.5 * A * r**2 * ph / np.sqrt(f) * XF
+src/ssz_p5/production/holonomic_hessian.py:262:        h**1.5 * A**2 * r**2 * ph / (2 * np.sqrt(f)) * XF
+src/ssz_p5/production/holonomic_hessian.py:263:        - 0.5 * r**2 * np.sqrt(f * h) * h * ph**3 * XX
+src/ssz_p5/production/principal_controls.py:21:    J[:, 1, 1] = -(h**1.5) * A * r**2 * ph / np.sqrt(f)
+src/ssz_p5/production/principal_controls.py:22:    J[:, 2, 1] = h**1.5 * A**2 * r**2 * ph / (2 * np.sqrt(f))
+src/ssz_p5/production/principal_controls.py:23:    J[:, 2, 2] = -0.5 * r**2 * np.sqrt(f * h) * h * ph**3
+src/ssz_p5/production/svt_background_eom.py:125:    ja = np.sqrt(h / f) * ap * (
+src/ssz_p5/production/svt_background_eom.py:133:    jphi = -np.sqrt(h / f) * (
+src/ssz_p5/production/svt_background_eom.py:140:    pphi = 1.0 / np.sqrt(f * h) * (
+src/ssz_p5/production/svt_background_eom.py:231:    s = np.sqrt(h / f)
+src/ssz_p5/production/svt_background_eom.py:233:    pinv = 1.0 / np.sqrt(f * h)
+src/ssz_p5/production/central_action.py:59:        np.sqrt(h / f)
+src/ssz_p5/production/central_action.py:111:        np.sqrt(h / f)
+src/ssz_p5/production/central_action.py:120:    a4 = np.sqrt(f * h) / 2
+src/ssz_p5/production/central_action.py:121:    v6 = 2 * h**1.5 * A / (r * np.sqrt(f)) * (r * ph * f3 - 4 * f4 + h * ph**2 * (f4x + 2 * tf4))
+src/ssz_p5/production/central_action.py:123:        -np.sqrt(f * h)
+src/ssz_p5/production/central_action.py:131:    alpha7 = (1 - 4 * h * A**2 * f4 / f) / (4 * r**2 * np.sqrt(f * h))
+src/ssz_p5/production/regional_coefficients.py:72:    d["phiprime"] = -np.sqrt(-2 * d.X / d.h)
+src/ssz_p5/production/electric_hybrid_onshell_central.py:131:        c = 2.0 * hh**1.5 * aa / (rr * np.sqrt(ff))
+src/ssz_p5/production/electric_hybrid_onshell_central.py:139:        v10 = -np.sqrt(ff * hh) / (2.0 * rr) * (
+src/ssz_p5/production/electric_hybrid_onshell_central.py:144:        a7 = (1.0 - (4.0 * hh * aa**2 / ff) * F4) / (4.0 * rr**2 * np.sqrt(ff * hh))
+src/ssz_p5/production/electric_hybrid_onshell_central.py:434:                invsqrt = U @ np.diag(1.0 / np.sqrt(w)) @ U.T
+src/ssz_p5/production/action_handover.py:116:    ph = -np.sqrt(np.maximum(0.0, -2.0 * d.X.to_numpy(float) / d.h.to_numpy(float)))
+src/ssz_p5/production/action_handover.py:123:        / (out.x.to_numpy(float) * np.sqrt(out.f.to_numpy(float)))
+src/ssz_p5/production/action_handover.py:320:        c = 2.0 * h**1.5 * ap / (r * np.sqrt(f))
+src/ssz_p5/production/action_handover.py:323:        V10 = -np.sqrt(f * h) / (2.0 * r) * (
+src/ssz_p5/production/action_handover.py:326:        A7 = (1.0 - (4.0 * h * ap**2 / f) * F4) / (4.0 * r**2 * np.sqrt(f * h))
+src/ssz_p5/production/action_handover.py:327:        A4 = np.sqrt(f * h) / 2.0
+src/ssz_p5/production/horndeski_tubular.py:49:        ph = -np.sqrt(np.maximum(0.0, -2.0 * X / h))
+src/ssz_p5/production/horndeski_tubular.py:87:    c3 = diag(-0.5 * np.sqrt(f) * r**2 / np.sqrt(h)) @ E11phi
+src/ssz_p5/production/horndeski_tubular.py:88:    e3 = diag(0.25 * np.sqrt(f) * r**2 / np.sqrt(h)) @ Ephi_phi
+src/ssz_p5/production/horndeski_tubular.py:92:    c2_coeff = np.sqrt(f * h) * (
+src/ssz_p5/production/horndeski_tubular.py:119:    ph = d.phiprime.to_numpy(float) if "phiprime" in d else -np.sqrt(np.maximum(0.0, -2.0 * X / h))
+src/ssz_p5/production/horndeski_tubular.py:154:    ph=d.phiprime.to_numpy(float) if "phiprime" in d else -np.sqrt(np.maximum(0.0,-2*X/h))
+src/ssz_p5/production/horndeski_tubular.py:194:    sqfh=np.sqrt(f*h)
+src/ssz_p5/production/horndeski_tubular.py:196:    dc4=0.25*np.sqrt(f/h)*(
+src/ssz_p5/production/full_action_lower.py:99:    v5 = np.sqrt(h / f) * A * (
+src/ssz_p5/production/full_action_lower.py:124:    c3 = bphi / (2.0 * np.sqrt(f * h))
+src/ssz_p5/production/full_action_lower.py:134:    partial_j = -np.sqrt(h / f) * jphi_bracket
+src/ssz_p5/production/full_action_lower.py:135:    partial_p = 1.0 / np.sqrt(f * h) * (
+src/ssz_p5/production/hsvt_eps_y.py:43:    d["v1"] = d.v1.to_numpy(float) - r**2 * h**1.5 * ph**2 * epsilon / np.sqrt(f)
+src/ssz_p5/production/hsvt_eps_y.py:44:    d["v10"] = d.v10.to_numpy(float) + np.sqrt(f * h) * h * ph**2 * epsilon
+src/ssz_p5/coefficients/mh_general_primitives.py:84:        ph = -np.sqrt(np.maximum(0.0, -2.0 * _arr(d, "X") / h))
+src/ssz_p5/coefficients/mh_general_primitives.py:101:    sqfh = np.sqrt(f * h)
+src/ssz_p5/coefficients/mh_general_primitives.py:104:    ov1 = 0.5 * r**2 * np.sqrt(h / f)
+src/ssz_p5/coefficients/mh_general_primitives.py:125:    a6 = -np.sqrt(f) / (2.0 * np.sqrt(h) * ph) * (Hp + H / r - F / r)
+src/ssz_p5/coefficients/mh_general_primitives.py:177:            + np.sqrt(f) / (ph * np.sqrt(h) * r**2) * F
+src/ssz_p5/coefficients/mh_general_primitives.py:179:            / (np.sqrt(h) * photon * ph)
+src/ssz_p5/coefficients/mh_general_primitives.py:195:            - 0.5 * np.sqrt(f) * Gp / (ph**2 * np.sqrt(h) * r)
+src/ssz_p5/coefficients/mh_general_primitives.py:206:            + 0.5 * (fp * h * r - f) * F / (r**2 * np.sqrt(f) * ph**2 * h**1.5)
+src/ssz_p5/coefficients/mh_general_primitives.py:208:            * np.sqrt(f)
+src/ssz_p5/coefficients/mh_action_primitives.py:43:        ph = -np.sqrt(np.maximum(0.0, -2.0 * X / h))
+src/ssz_p5/coefficients/mh_action_primitives.py:53:    sqfh = np.sqrt(f * h)
+src/ssz_p5/coefficients/mh_action_primitives.py:67:    c4 = 0.25 * np.sqrt(f / h) * (
+src/ssz_p5/stability/angular_universal_laurent.py:357:    sq=np.sqrt(np.maximum(disc,0)); cm=.5*(B1-sq); cp=.5*(B1+sq)
+src/ssz_p5/stability/finite_l.py:12:    inv = (V * (1 / np.sqrt(w))[:, None, :]) @ V.swapaxes(1, 2)
+src/ssz_p5/action/onshell.py:32:        + f**1.5 * tensor_f / (r * np.sqrt(h))
+src/ssz_p5/action/onshell.py:84:    a4 = 0.5 * np.sqrt(f * h) * H
+src/ssz_p5/action/onshell.py:101:    phiprime = -np.sqrt(-2 * X / h)
+src/ssz_p5/action/onshell.py:107:    a4prime = 0.5 * np.sqrt(f * h) * (Hprime + 0.5 * H * (fprime / f + hprime / h))
+src/ssz_p5/action/onshell.py:116:            (lhs - rhs + r * f * np.sqrt(f / h) * difference)[i]
+src/ssz_p5/action/light_ring_electric.py:87:        required_f = -geom * aa * radius * np.sqrt(hh) / ff**1.5
+src/ssz_p5/action/light_ring_electric.py:89:            geom * aa + ff**1.5 * HH / (radius * np.sqrt(hh))
+src/ssz_p5/action/light_ring_electric.py:128:    return (geom * a4 + f**1.5 * tensor_f / (r * np.sqrt(h)) - lhs) / (2.0 * r * f * h)
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:45:    elif 'X' in d: ph=-np.sqrt(np.maximum(0,-2*d['X'].to_numpy(float)/h))
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:67:    sqfh=np.sqrt(f*h)
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:75:    ov1=0.5*r**2*np.sqrt(h/f)
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:84:    a6=-np.sqrt(f)/(2*np.sqrt(h)*ph)*(Hp + H/r - F/r)  # = -sqrt(f/h) H'/(2 phi') here
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:106:    c4=np.sqrt(f)/(4*np.sqrt(h))*(4*G4phi+2*h*G3X*ph**2)
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:118:            +np.sqrt(f)/(ph*np.sqrt(h)*r**2)*F
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:119:            -f**1.5/(np.sqrt(h)*photon*ph)*(fp/(f*r)+2*phipp/(ph*r)+hp/(h*r)-2/r**2)*G)
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:128:            -0.5*np.sqrt(f)*Gp/(ph**2*np.sqrt(h)*r)
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:134:            +0.5*(fp*h*r-f)*F/(r**2*np.sqrt(f)*ph**2*h**1.5)
+src/ssz_p5_mh_luminal_g4phi_emitter_JET9D8_2026-09-16.py:135:            +0.5*np.sqrt(f)*G/(r*ph**2*h**1.5)*(f*(2*phipp*h+hp*ph)/(h*ph*photon)
+
+
+------------------------------------------------------------------------------
+EVIDENCE 2 — gamma in src/ (implementation):
+------------------------------------------------------------------------------
+src/ssz_p5/true_closure/graph.py:88:                  "weak-field PPN signature (gamma = 1, Newtonian Kepler "
+src/ssz_p5/true_closure/chain.py:70:    """Gamma[lam, mu, nu] and its coordinate derivatives dG[axis] via
+src/ssz_p5/true_closure/chain.py:71:    central finite differences (Gamma depends on r and theta only)."""
+src/ssz_p5/true_closure/chain.py:72:    G0 = m.Gamma_tensor(r, theta)
+src/ssz_p5/true_closure/chain.py:73:    dG_dr = (m.Gamma_tensor(r + eps, theta) - m.Gamma_tensor(r - eps, theta)) \
+src/ssz_p5/true_closure/chain.py:75:    dG_dth = (m.Gamma_tensor(r, theta + eps)
+src/ssz_p5/true_closure/chain.py:76:              - m.Gamma_tensor(r, theta - eps)) / (2.0 * eps)
+src/ssz_p5/true_closure/chain.py:82:    """R^mu_{nu rho sigma} = d_rho Gamma^mu_{nu sigma}
+src/ssz_p5/true_closure/chain.py:83:    - d_sigma Gamma^mu_{nu rho}
+src/ssz_p5/true_closure/chain.py:84:    + Gamma^mu_{rho lam} Gamma^lam_{nu sigma}
+src/ssz_p5/true_closure/chain.py:85:    - Gamma^mu_{sig lam} Gamma^lam_{nu rho}   (numeric route)."""
+src/ssz_p5/true_closure/chain.py:170:                        + Gamma^r_{ab} G^{ab}.
+src/ssz_p5/true_closure/chain.py:192:        G = m.Gamma_tensor(float(r))
+src/ssz_p5/true_closure/chain.py:219:    used for the PPN-signature check of the pipeline (gamma = 1,
+src/ssz_p5/true_closure/chain.py:231:    """gamma = 1 signature (g_tt * g_rr = -1 pointwise, exact for f = h)
+src/ssz_p5/true_closure/chain.py:237:    gamma_sig = 0.0
+src/ssz_p5/true_closure/chain.py:240:        gamma_sig = max(gamma_sig, abs(prod - 1.0))
+src/ssz_p5/true_closure/chain.py:246:        "gamma1_signature_max_abs": gamma_sig,
+src/ssz_p5/postclosure/transport.py:121:    def Gamma_tensor(self, r, theta=np.pi / 2.0) -> np.ndarray:
+src/ssz_p5/postclosure/transport.py:122:        """Full symmetric Gamma[lam, mu, nu] in coordinates (t, r, th, ph)."""
+src/ssz_p5/postclosure/transport.py:184:            # d_rho Gamma^rho_{ab}: each summand is differentiated w.r.t.
+src/ssz_p5/postclosure/transport.py:189:            # - d_b Gamma^rho_{a rho} (trace, differentiated w.r.t. x^b)
+src/ssz_p5/postclosure/transport.py:342:    # independent acceleration cross-check (finite differences vs Gamma form)
+src/ssz_p5/postclosure/transport.py:346:        G = m.Gamma_tensor(r[i])
+src/ssz_p5/postclosure/transport.py:408:    G = m.Gamma_tensor(r)
+src/ssz_p5/postclosure/transport.py:471:    Gamma_sum = m.fp(r_grid) / (2 * f) - m.hp(r_grid) / (2 * h) + 2.0 / r_grid
+src/ssz_p5/postclosure/transport.py:478:    theta_B = ur_prime + Gamma_sum * ur
+src/ssz_p5/postclosure/__init__.py:10:Chain: Xi -> D -> g_mn -> Gamma -> source-free transport.
+
+The PPN check lives ONLY in the test file and operates on a SEPARATE
+analytic reference metric (weak_field_reference_metric, f = h =
+1 - eps*u), NOT on the member; gamma = 1 is COMPUTED as
+max |f/h - 1| and happens to be 0.0 because f = h exactly for the
+GR reference — an identity of the reference, not a setting.
+
+------------------------------------------------------------------------------
+EVIDENCE 3 — where the anchor constants DO appear (tests only):
+------------------------------------------------------------------------------
+tests/negative/test_true_closure_falsifiers.py:94:    assert abs(u_out - 2.0 / 3.0) > 5e-4  # outside the registered band
+tests/negative/test_true_closure_falsifiers.py:97:    assert abs(u_true - 2.0 / 3.0) < 5e-4
+tests/scientific/test_true_closure_forward_chain.py:165:    assert u_ring == pytest.approx(2.0 / 3.0, rel=1e-8)
+tests/scientific/test_true_closure_forward_chain.py:167:    assert (1.0 / W) ** 0.5 == pytest.approx(3.0 * np.sqrt(3.0) / 2.0,
+tests/scientific/test_postclosure_source_free_transport.py:234:    assert outer["u"] == pytest.approx(2.0 / 3.0, abs=5e-4)
+tests/scientific/test_postclosure_source_free_transport.py:236:    assert outer["b_crit"] == pytest.approx(3.0 * np.sqrt(3.0) / 2.0,
+
+
+Structure: pytest.approx(computed_value, rel/abs=band) against an
+independent analytic GR expectation.  predicted = derived at runtime;
+expected = closed-form GR.  That is the anti-circular pattern.
+
+------------------------------------------------------------------------------
+EVIDENCE 4 — the computation routes (code excerpts):
+------------------------------------------------------------------------------
+a) ring location: brentq root of W_u on the member spline
+   src/ssz_p5/postclosure/transport.py::find_light_rings:
+   def find_light_rings(m: SSZMetric) -> list[dict]:
+       """Roots of W_u on the member domain, classified by W_uu (stability)."""
+       us = np.linspace(m.u_min + 1e-6, m.u_max - 1e-6, 4000)
+       Wu = m.W_u(us)
+       rings = []
+       for i in np.flatnonzero(np.sign(Wu[:-1]) * np.sign(Wu[1:]) < 0):
+           u_r = brentq(lambda x: float(m.W_u(x)), us[i], us[i + 1],
+                        xtol=1e-14, rtol=8.9e-16)
+           W = float(m.W_of_u(u_r))
+           Wuu = float(m.W_uu(u_r))
+           r_r = 1.0 / u_r
+           f_r = float(m.f(r_r))
+           h_r = float(m.h(r_r))
+           rings.append({
+               "u": u_r,
+               "r": r_r,
+               "W": W,
+               "W_uu": Wuu,
+               "stable": bool(Wuu > 0),
+               "b_crit": float(1.0 / np.sqrt(W)),
+               "Omega_ph": float(np.sqrt(W)),
+               # linear exponent: kappa^2 = |W_uu| h / (2 f) at the ring
+
+b) critical impact parameter: b_crit = 1/sqrt(W(u_ring))
+   (same function, line: "b_crit": float(1.0 / np.sqrt(W)))
+
+c) PPN signature: ppn_signature_checks (src/ssz_p5/true_closure/
+   chain.py) COMPUTES max|f/h - 1| and max|f'/(2r) - M/r^3| on the
+   reference metric — nothing is asserted to be 1 a priori.
+
+------------------------------------------------------------------------------
+EVIDENCE 5 — measured member values (runtime, spline member):
+------------------------------------------------------------------------------
+   UNSTABLE (outer) u = 0.666666666691  b_crit = 2.598076211297  W_uu = -2.000000
+   STABLE (inner)   u = 0.706134580912  b_crit = 2.603496952279  W_uu = +2.591862
+
+   Schwarzschild closed form: b_c = 3*sqrt(3)/2 = 2.598076211353316
+   -> the member's OUTER ring reproduces it to 3.1e-10 in u — a
+      PREDICTION that surfaced from the member, not an input.
+   -> the member's INNER ring gives b_crit = 2.603496952279231,
+      which is NOT 3*sqrt(3)/2: the member genuinely differs from
+      Schwarzschild inside.  If the constants had been fudged, both
+      rings would 'coincidentally' match closed forms.  They do not.
+
+------------------------------------------------------------------------------
+EVIDENCE 6 — timeline: member frozen BEFORE the transport analysis
+------------------------------------------------------------------------------
+   member manifest timestamp : 2026-09-23T22:30:19+00:00
+   member sha256             : 8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf
+   transport tests added     : commit ccd020d lineage (2026-09-24)
+   full commit log           : ../commits_full.txt
+
+   Every transport number is computed AT TEST RUNTIME from the
+   hash-verified member CSV (load_member_metric re-hashes the file).
+   The member itself was produced by the action chain (G00-G100)
+   BEFORE the source-free transport block existed — the transport
+   results could not have influenced the member.  The falsifier
+   battery (8 corruptions, all detected) additionally proves the
+   diagnostics are sensitive to any change.
+
+------------------------------------------------------------------------------
+EVIDENCE 7 — the one place '2/3' DOES appear in src/ is a comment
+label in a figure tool (docs rendering), not in any computation;
+tools/render_true_closure_visualizations.py annotates plots only.
+

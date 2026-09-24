@@ -1,0 +1,99 @@
+{
+ "schema_version": "1.0",
+ "timestamp": "2026-09-23T22:30:19.427248+00:00",
+ "git_commit": "a7dc4c808ab620ee77cb5c9ceb1b56d7ab0a3c7c",
+ "name": "SSZ P5 electric production member (current, same-action, on-shell Central, Delta22_SVT-derived action)",
+ "supersedes": {
+  "member": "SSZ_P5_HSVT_ACTION_MEMBER_2026-09-16.json",
+  "reason": "historical ZERO-VECTOR member (A0'=0, eps_Y deformation); rejected at the inner light ring (Eq85 requires Tensor_F < 0 at H > 0 there); kept as control case only"
+ },
+ "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
+ "member_hash_scope": "sha256 over ELECTRIC_PRODUCTION_MEMBER_CURRENT.csv (canonical UTF-8 serialization, index column included)",
+ "rows": 3809,
+ "domain": {
+  "u_min": 0.61,
+  "u_max": 0.7099849962490622,
+  "production_window": [
+   0.62,
+   0.7
+  ],
+  "production_rows": 3047,
+  "coordinate": "u = r_s/r (r_s = 1)"
+ },
+ "interfaces": {
+  "inner_u": 0.61,
+  "inner_patch": "strong-field hybrid continuation",
+  "outer_u": 0.71,
+  "outer_patch": "outer handover continuation (S_SVT -> 0 across 0.71..0.715)",
+  "partition_rule": "S_SVT + T_H = 1 (inner_targets.py), edges pinned 1/0"
+ },
+ "profiles": [
+  "f",
+  "h",
+  "phi",
+  "A0",
+  "A0prime",
+  "X",
+  "Fbg_action",
+  "Ybg_action"
+ ],
+ "action_jets": [
+  "f2",
+  "f2X",
+  "f2F",
+  "f2Y",
+  "f2phi",
+  "f2phiphi",
+  "f3",
+  "f3X",
+  "f3phi",
+  "f3phiX",
+  "f4",
+  "f4X",
+  "f4XX",
+  "f4phi",
+  "f4phiX",
+  "tf4",
+  "tf4phi",
+  "G2XX_lift",
+  "G2Xphi_lift",
+  "G2phiphi_lift"
+ ],
+ "f2Y_branch_rule": "f2Y SYMBOLIC through C_bg/Test A/Test B; production branch postulate f2Y = 0 applied only at G13",
+ "boundary_provenance": {
+  "a2_solve_success": true,
+  "a2_nfev": 7232,
+  "principal_replay_max_scaled": {
+   "v1": 3.5980068211840325e-16,
+   "v4": 1.6342482922482304e-13,
+   "c2": 1.9893384985994012e-13
+  },
+  "baseline_streams": [
+   "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_CENTRAL_SEARCH_BASELINE.csv",
+   "data/generated/absolute_attempt_2026-09-20/ELECTRIC_HYBRID_PRINCIPAL_LATE_RAMP_FEASIBILITY_C6_CORRECTED.csv"
+  ],
+  "note": "on-shell Central single-action candidate with full G2 lift; u in [0.61, 0.71]"
+ },
+ "action_definition_status": {
+  "C_bg": "ALPHA*E00_full + BETA*E22_MH_slice + BETA*Delta22_SVT with Delta22_SVT DERIVED (STEP3, direct theta-theta variation, areal gauge after variation)",
+  "genuine_svt_theta_theta": "CLOSED"
+ },
+ "diagnostics": {
+  "a2_solve_success": true,
+  "a2_nfev": 7232,
+  "rows": 3809,
+  "production_rows": 3047,
+  "principal_replay_max_scaled": {
+   "v1": 3.5980068211840325e-16,
+   "v4": 1.6342482922482304e-13,
+   "c2": 1.9893384985994012e-13
+  },
+  "g2_lift": {
+   "q_min": -999.9681259936748,
+   "q_max": -300.0317785080917,
+   "min_abs_dc2_dG2XX": 0.09333709023312578,
+   "max_abs_chain_G2X": 1.1368683772161603e-13,
+   "max_abs_chain_G2phi": 6.821210263296962e-13
+  }
+ }
+}

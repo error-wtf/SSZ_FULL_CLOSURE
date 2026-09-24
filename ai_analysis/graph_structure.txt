@@ -1,0 +1,51 @@
+PHYSICS DEPENDENCY GRAPH — structure
+========================================
+top-level keys: ['schema_version', 'timestamp', 'member_hash', 'scientific_scope_note', 'nodes', 'numbers', 'verdict']
+
+FOUNDATIONS  (gate foundations_conventions)
+   deps: []
+   tests: 1 | pass: True
+CONNECTION_RIEMANN  (gate curvature_differential_geometry)
+   deps: ['FOUNDATIONS']
+   tests: 4 | pass: True
+BIANCHI_CONTRACTED  (gate curvature_differential_geometry)
+   deps: ['CONNECTION_RIEMANN']
+   tests: 2 | pass: True
+KNOWN_LIMITS  (gate known_limits)
+   deps: ['CONNECTION_RIEMANN']
+   tests: 2 | pass: True
+MATTER_TRANSPORT  (gate geodesic_transport)
+   deps: ['CONNECTION_RIEMANN']
+   tests: 3 | pass: True
+NULL_TRANSPORT  (gate geodesic_transport)
+   deps: ['CONNECTION_RIEMANN']
+   tests: 1 | pass: True
+RAYCHAUDHURI_TIMELIKE  (gate raychaudhuri)
+   deps: ['MATTER_TRANSPORT']
+   tests: 2 | pass: True
+RAYCHAUDHURI_NULL  (gate raychaudhuri)
+   deps: ['NULL_TRANSPORT']
+   tests: 2 | pass: True
+OPTICAL_TRANSPORT  (gate geometric_optics)
+   deps: ['NULL_TRANSPORT']
+   tests: 1 | pass: True
+PHASE_TRANSPORT  (gate phase_jif)
+   deps: ['NULL_TRANSPORT']
+   tests: 2 | pass: True
+ROTATION_ORBITS  (gate rotation_orbits)
+   deps: ['MATTER_TRANSPORT']
+   tests: 1 | pass: True
+PHOTON_RING_CRITICALITY  (gate photon_ring_stability)
+   deps: ['NULL_TRANSPORT']
+   tests: 2 | pass: True
+STABLE_RING_LIBRATION  (gate photon_ring_stability)
+   deps: ['PHOTON_RING_CRITICALITY']
+   tests: 1 | pass: True
+NEGATIVE_CONTROLS  (gate negative_controls)
+   deps: ['MATTER_TRANSPORT', 'NULL_TRANSPORT', 'RAYCHAUDHURI_TIMELIKE', 'OPTICAL_TRANSPORT', 'PHASE_TRANSPORT', 'PHOTON_RING_CRITICALITY']
+   tests: 8 | pass: True
+NUMERICAL_ROBUSTNESS  (gate numerical_robustness)
+   deps: ['RAYCHAUDHURI_TIMELIKE', 'NULL_TRANSPORT']
+   tests: 3 | pass: True
+
+verdict: {"G00": true, "G01": true, "G02": true, "G03": true, "G04": true, "G05": true, "G06": true, "G07": true, "G10": true, "G11": true, "G12": true, "G13": true, "G14": true, "G15": true, "G16": true, "G20": true, "G30": true, "G31": true, "G32": true, "G40": true, "G50": true, "G60": true, "G70": true, "G71": true, "G72": true, "G80": true, "G90": true, "G100": true, "G110": true, "G111": true, "G112": true, "G113": true, "G114": true, "G115": true, "G116": true, "G117": true, "G118": true, "G119": true, "G120": true, "G121": true, "G122": true, "G130": true, "G140": true}

@@ -1,0 +1,238 @@
+{
+ "schema_version": "1.0",
+ "timestamp": "2026-09-24T09:00:34.888446+00:00",
+ "block": "SSZ SOURCE-FREE TRANSPORT (post-closure research block)",
+ "gating": "NON-GATING: does not modify GATE_STATUS; prerequisite ABSOLUTE_FULL_CLOSURE_PASS (all 28 gates) is recorded",
+ "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
+ "metric_model": {
+  "ansatz": "ds^2 = -f dt^2 + dr^2/h + r^2 dOmega^2, u = r_s/r, r_s = 1",
+  "interpolant": "CubicSpline through FROZEN member values of f(u), h(u) (exact interpolation of the pinned data; no fitting)",
+  "domain_u": [
+   0.61,
+   0.7099849962490622
+  ],
+  "domain_r": [
+   1.4094804682959816,
+   1.6383442622950821
+  ]
+ },
+ "core_principle": "NO new force: D_SSZ/dtau := u^nu nabla_nu [g_SSZ]; the chain Xi -> D -> g_mn -> Gamma -> transport is evaluated on the closed full-action geometry",
+ "rag_constraints_respected": {
+  "no_flow_from_static_profile": "no flow equation is derived from Xi0; only standard source-free transport is evaluated on g_SSZ",
+  "single_unified_dynamics_open": "this block does NOT close 'single unified dynamics'",
+  "early_paper_is_intuition_archive": "forward argumentation only; early intuitions are mapped to structures AFTER they are derived",
+  "navier_stokes_structural_only": "source-free != trivial is used as a structural analogy only"
+ },
+ "computation_1_timelike_transport": {
+  "u^nu nabla_nu u^mu = 0 via conserved quantities (E = f u^t, L = r^2 u^phi, norm):": null,
+  "radial_E1": {
+   "max_dE": 3.450462138232524e-12,
+   "max_dL": 0.0,
+   "max_norm_res": 7.092260112528948e-11,
+   "max_accel_res": 1.1119612329579809e-05
+  },
+  "angular_E095_L08": {
+   "max_dE": 6.425304732715631e-12,
+   "max_dL": 2.9543034685275416e-13,
+   "max_norm_res": 6.87636614316034e-11,
+   "max_accel_res": 5.994558262223393e-06
+  },
+  "outward_E09_L06": {
+   "max_dE": 5.146993942162226e-12,
+   "max_dL": 4.970468481246826e-13,
+   "max_norm_res": 1.1342748962306359e-10,
+   "max_accel_res": 2.4738509460386915e-06
+  },
+  "circular_orbit_r1.6": {
+   "r": 1.6,
+   "Omega": 0.33774237298508286,
+   "ut": 3.49440279292759,
+   "L": 3.021332202109608,
+   "E": 1.3066038399636641,
+   "dtau_dt": 0.2861719324469192
+  },
+  "negative_control_forced_Ft_1e-2": {
+   "F_t": 0.01,
+   "max_dE": 0.0070982824153051904,
+   "predicted_drift_scale": 0.015,
+   "tau_span": [
+    0,
+    1.5
+   ]
+  }
+ },
+ "computation_2_raychaudhuri_timelike": {
+  "congruence": "stationary radial free-fall, E = 1 (geodesic, irrotational)",
+  "theta_routes_absdiff": 4.378332540966312e-08,
+  "omega2_max_abs": 6.56858655152258e-47,
+  "max_scaled_raychaudhuri_res": 2.435188811223137e-05,
+  "max_scaled_raychaudhuri_res_80pts": 0.0001551100842413677,
+  "theta_range": [
+   -1.0311125567082318,
+   -0.7786811300079649
+  ],
+  "sigma2_range": [
+   0.3579158830095507,
+   0.585233026823842
+  ],
+  "R_uu_range": [
+   -0.4638365785770691,
+   4.124609615072015
+  ],
+  "schwarzschild_anchor": {
+   "max_scaled_raychaudhuri_res": 9.694471124731797e-07,
+   "theta_vs_exact_max_abs": 1.9216230828789094e-09,
+   "sigma2_vs_exact_max_abs": 3.9956926656259384e-13,
+   "R_uu_max_abs": 1.740903582972794e-13
+  }
+ },
+ "computation_3_null_transport": {
+  "k^nu nabla_nu k^mu = 0 via E, L, k.k": null,
+  "radial_null_congruence": {
+   "theta_routes_absdiff": 4.0389913635863195e-13,
+   "max_scaled_raychaudhuri_res": 1.6843190962533303e-06,
+   "R_kk_range": [
+    -0.5911890554018436,
+    5.173655019048711
+   ],
+   "schwarzschild_anchor_res": 1.0701100533694586e-07
+  },
+  "null_geodesic_b2.0": {
+   "max_dE": 4.6849191193132356e-12,
+   "max_dL": 8.306688670245421e-13,
+   "max_norm_res": 3.4762193124038276e-11
+  },
+  "null_geodesic_b2.59": {
+   "max_dE": 5.153211191100127e-12,
+   "max_dL": 1.0205170042354439e-12,
+   "max_norm_res": 1.510525038384003e-11
+  },
+  "amplitude_transport": {
+   "a2_ratio": 0.791335767247665,
+   "invariant_error": 1.5271177109231642e-13
+  },
+  "eikonal_phase_redshift_rings": {
+   "shapiro_dt_per_E": 0.25744637354747063,
+   "reduced_phase_per_E": 0.25744637354747063,
+   "redshift_a_to_b": 0.9421413679332256
+  }
+ },
+ "computation_4_ring_structure": {
+  "rings": [
+   {
+    "u": 0.6666666666912735,
+    "r": 1.4999999999446347,
+    "W": 0.14814814815451918,
+    "W_uu": -1.9999999911467294,
+    "stable": false,
+    "b_crit": 2.5980762112974514,
+    "Omega_ph": 0.38490017946802674,
+    "exponent": 0.9999999978103759,
+    "dtau_dt": 0.57735026918073,
+    "Omega_kepler": 0.3849001794680266,
+    "kepler_vs_photon_rel_diff": 2.884444029513324e-16
+   },
+   {
+    "u": 0.7061345809124143,
+    "r": 1.4161606399560192,
+    "W": 0.14753187188156008,
+    "W_uu": 2.5918620990980203,
+    "stable": true,
+    "b_crit": 2.6034969522792313,
+    "Omega_ph": 0.3840987788076917,
+    "exponent": 1.2801081348760213,
+    "dtau_dt": 0.5439455724026261,
+    "Omega_kepler": 0.38409877880769167,
+    "kepler_vs_photon_rel_diff": 1.4452311304809125e-16
+   }
+  ],
+  "trapping": {
+   "outer_unstable": {
+    "epsilons": [
+     0.01,
+     0.001,
+     0.0001,
+     1e-05
+    ],
+    "delta_phi_series": [
+     4.421554250516629,
+     9.057712428738263,
+     13.670277627394617,
+     18.265556042010115
+    ],
+    "increments": [
+     4.636158178221634,
+     4.612565198656354,
+     4.595278414615498
+    ],
+    "expected_increment_per_decade": 4.605170185988092,
+    "expected_libration_period_2pi_over_kappa": null,
+    "kappa_linear": 0.9999999978103759
+   },
+   "inner_stable": {
+    "epsilons": [
+     1e-05,
+     1e-06,
+     1e-07,
+     1e-08
+    ],
+    "delta_phi_series": [
+     4.923690605723452,
+     4.909700224127095,
+     4.908005847198432,
+     4.906851967042806
+    ],
+    "increments": [
+     -0.013990381596357793,
+     -0.0016943769286630328,
+     -0.001153880155625231
+    ],
+    "expected_increment_per_decade": null,
+    "expected_libration_period_2pi_over_kappa": 4.908323864208639,
+    "kappa_linear": 1.2801081348760213,
+    "libration_period_ode": 4.923690605487015
+   }
+  },
+  "consolidation": [
+   {
+    "ring": "outer_unstable",
+    "u": 0.6666666666912735,
+    "r": 1.4999999999446347,
+    "dtau_dt": 0.57735026918073,
+    "Omega_kepler": 0.3849001794680266,
+    "Omega_photon": 0.38490017946802674,
+    "kepler_vs_photon_rel_diff": 2.884444029513324e-16,
+    "b_crit": 2.5980762112974514,
+    "W_uu": -1.9999999911467294,
+    "stability_exponent": 0.9999999978103759,
+    "frame_dragging": 0.0
+   },
+   {
+    "ring": "inner_stable",
+    "u": 0.7061345809124143,
+    "r": 1.4161606399560192,
+    "dtau_dt": 0.5439455724026261,
+    "Omega_kepler": 0.38409877880769167,
+    "Omega_photon": 0.3840987788076917,
+    "kepler_vs_photon_rel_diff": 1.4452311304809125e-16,
+    "b_crit": 2.6034969522792313,
+    "W_uu": 2.5918620990980203,
+    "stability_exponent": 1.2801081348760213,
+    "frame_dragging": 0.0
+   }
+  ]
+ },
+ "paper_intuition_mapping": {
+  "no_new_force / geometry-in-transport": "realized literally: a^mu = u^nu nabla_nu u^mu = 0 while all observables below are nontrivial",
+  "segmentation creates inertia/resistance": "mathematically: theta, sigma, Raychaudhuri focusing of the source-free congruence (computation 2) - no resistance term",
+  "boundary balance (old: forces cancel)": "matured: ring structure = potential extremum W_u = 0 with W_uu sign = stability; trapping = log-winding (outer) vs libration (inner) from the exact null orbit equation",
+  "light/phase (old: wavelength change)": "matured: eikonal transport - affine null geodesics, amplitude a^2 r^2 = const, redshift sqrt(f), S_r = integral dr/sqrt(fh)",
+  "rotation/frame-dragging": "static central slice: g_tphi = 0 exactly (frame dragging 0); rotation enters via Omega(r) and congruence vorticity"
+ },
+ "policy": {
+  "fitting": "NONE",
+  "fitting_note": "splines interpolate the frozen member data exactly",
+  "member_change": "NONE",
+  "manual_pass": "NONE"
+ }
+}

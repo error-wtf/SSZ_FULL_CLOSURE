@@ -1,0 +1,455 @@
+{
+ "schema_version": "1.0",
+ "timestamp": "2026-09-24T12:57:58.382431+00:00",
+ "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
+ "scientific_scope_note": "TRUE FULL CLOSURE certifies internal closure of the defined SSZ validation system; it does NOT claim nature has proven SSZ correct, and does not settle deeper dynamics uniqueness beyond the registered corpus.",
+ "nodes": [
+  {
+   "id": "FOUNDATIONS",
+   "physics_statement": "Coordinates, signature (-,+,+,+), units c=G=r_s=1, u=r_s/r; canonical metric ds^2 = -f dt^2 + dr^2/h + r^2 dOmega^2 with g symmetric, inverse exact and det(g) = -(f/h) r^4 sin^2(theta).",
+   "mathematical_relation": "g_{munu} g^{numu} = delta; det(g) analytic identity",
+   "implementation": "src/ssz_p5/true_closure/chain.py",
+   "tests": [
+    "tests/scientific/test_true_closure_forward_chain.py::test_foundations_metric_tensors"
+   ],
+   "test_results": {
+    "tests/scientific/test_true_closure_forward_chain.py::test_foundations_metric_tensors": true
+   },
+   "dependencies": [],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "foundations_conventions",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "CONNECTION_RIEMANN",
+   "physics_statement": "Levi-Civita connection and curvature: numeric Riemann from finite-differenced Christoffels reproduces the sympy-derived Ricci tensor; Riemann algebraic symmetries and first Bianchi identity hold.",
+   "mathematical_relation": "R^mu_{nu rho sig} = d_rho G^mu_{nu sig} - d_sig G^mu_{nu rho} + G^mu_{rho lam} G^lam_{nu sig} - G^mu_{sig lam} G^lam_{nu rho}; R_{munu} = R^rho_{mu rho nu}; R_{a[bcd]} = 0",
+   "implementation": "src/ssz_p5/true_closure/chain.py",
+   "tests": [
+    "tests/scientific/test_true_closure_forward_chain.py::test_ricci_two_routes",
+    "tests/scientific/test_true_closure_forward_chain.py::test_riemann_symmetries_and_bianchi1",
+    "tests/scientific/test_true_closure_forward_chain.py::test_kretschmann_schwarzschild_anchor",
+    "tests/scientific/test_true_closure_forward_chain.py::test_kretschmann_member_regular"
+   ],
+   "test_results": {
+    "tests/scientific/test_true_closure_forward_chain.py::test_ricci_two_routes": true,
+    "tests/scientific/test_true_closure_forward_chain.py::test_riemann_symmetries_and_bianchi1": true,
+    "tests/scientific/test_true_closure_forward_chain.py::test_kretschmann_schwarzschild_anchor": true,
+    "tests/scientific/test_true_closure_forward_chain.py::test_kretschmann_member_regular": true
+   },
+   "dependencies": [
+    "FOUNDATIONS"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "curvature_differential_geometry",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "BIANCHI_CONTRACTED",
+   "physics_statement": "Contracted Bianchi identity div G = 0 \u2014 a geometric identity for ANY metric; verified end-to-end through the full curvature stack on the member (grid-convergent) and on exact Schwarzschild.",
+   "mathematical_relation": "nabla_mu G^{mu nu} = 0 (nontrivial for nu = r)",
+   "implementation": "src/ssz_p5/true_closure/chain.py",
+   "tests": [
+    "tests/scientific/test_true_closure_forward_chain.py::test_contracted_bianchi_member",
+    "tests/scientific/test_true_closure_forward_chain.py::test_contracted_bianchi_schwarzschild"
+   ],
+   "test_results": {
+    "tests/scientific/test_true_closure_forward_chain.py::test_contracted_bianchi_member": true,
+    "tests/scientific/test_true_closure_forward_chain.py::test_contracted_bianchi_schwarzschild": true
+   },
+   "dependencies": [
+    "CONNECTION_RIEMANN"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "curvature_differential_geometry",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "KNOWN_LIMITS",
+   "physics_statement": "Known limits: exact Schwarzschild anchors (photon ring u = 2/3, b_c = 3 sqrt(3)/2, Ricci-flat, Kretschmann 48 M^2/r^6, theta and sigma closed forms) and the weak-field PPN signature (gamma = 1, Newtonian Kepler Omega^2 = M/r^3) of the pipeline on a GR reference metric.  Domain-limited claim: no asymptotic-flatness claim beyond the member window.",
+   "mathematical_relation": "reference-geometry identities, independently computed",
+   "implementation": "src/ssz_p5/true_closure/chain.py",
+   "tests": [
+    "tests/scientific/test_true_closure_forward_chain.py::test_ppn_signature_weak_field",
+    "tests/scientific/test_true_closure_forward_chain.py::test_schwarzschild_anchor_bundle"
+   ],
+   "test_results": {
+    "tests/scientific/test_true_closure_forward_chain.py::test_ppn_signature_weak_field": true,
+    "tests/scientific/test_true_closure_forward_chain.py::test_schwarzschild_anchor_bundle": true
+   },
+   "dependencies": [
+    "CONNECTION_RIEMANN"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "known_limits",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "MATTER_TRANSPORT",
+   "physics_statement": "Matter moves source-free on g_SSZ: u^nu nabla_nu u^mu = 0 with NO extra SSZ force; Killing energy E = f u^t, angular momentum L = r^2 u^phi and norm are conserved; FD acceleration matches the Christoffel transport term.",
+   "mathematical_relation": "u^nu nabla_nu u^mu = 0  <=>  dE/dtau = dL/dtau = 0, g u u = -1",
+   "implementation": "src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/scientific/test_postclosure_source_free_transport.py::test_timelike_source_free_conservation",
+    "tests/scientific/test_postclosure_source_free_transport.py::test_timelike_acceleration_crosscheck",
+    "tests/scientific/test_postclosure_source_free_transport.py::test_circular_orbit_kepler"
+   ],
+   "test_results": {
+    "tests/scientific/test_postclosure_source_free_transport.py::test_timelike_source_free_conservation": true,
+    "tests/scientific/test_postclosure_source_free_transport.py::test_timelike_acceleration_crosscheck": true,
+    "tests/scientific/test_postclosure_source_free_transport.py::test_circular_orbit_kepler": true
+   },
+   "dependencies": [
+    "CONNECTION_RIEMANN"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "geodesic_transport",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "NULL_TRANSPORT",
+   "physics_statement": "Light moves source-free in the eikonal limit: k^nu nabla_nu k^mu = 0 for sub-critical and near-critical impact parameters.",
+   "mathematical_relation": "k^nu nabla_nu k^mu = 0  <=>  dE/dlambda = dL/dlambda = 0, k k = 0",
+   "implementation": "src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/scientific/test_postclosure_source_free_transport.py::test_null_geodesic_conservation"
+   ],
+   "test_results": {
+    "tests/scientific/test_postclosure_source_free_transport.py::test_null_geodesic_conservation": true
+   },
+   "dependencies": [
+    "CONNECTION_RIEMANN"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "geodesic_transport",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "RAYCHAUDHURI_TIMELIKE",
+   "physics_statement": "Timelike congruence dynamics: dtheta/dtau = -theta^2/3 - sigma^2 + omega^2 - R_mn u^mu u^nu for the geodesic radial congruence; irrotational (omega = 0); identity grid-convergent; Schwarzschild closed-form anchor (theta = -(3/2) r^-3/2, sigma^2 = (3/2) r^-3).",
+   "mathematical_relation": "Raychaudhuri equation (geodesic, irrotational limit)",
+   "implementation": "src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/scientific/test_postclosure_source_free_transport.py::test_raychaudhuri_identity_member",
+    "tests/scientific/test_postclosure_source_free_transport.py::test_raychaudhuri_schwarzschild_anchor"
+   ],
+   "test_results": {
+    "tests/scientific/test_postclosure_source_free_transport.py::test_raychaudhuri_identity_member": true,
+    "tests/scientific/test_postclosure_source_free_transport.py::test_raychaudhuri_schwarzschild_anchor": true
+   },
+   "dependencies": [
+    "MATTER_TRANSPORT"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "raychaudhuri",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "RAYCHAUDHURI_NULL",
+   "physics_statement": "Null congruence dynamics: dtheta_hat/dlambda = -theta_hat^2/2 - R_mn k^mu k^nu for the affine radial null congruence (b = 0); Schwarzschild anchor theta_hat = 2/r with R_kk = 0.",
+   "mathematical_relation": "null Raychaudhuri equation (affine parametrisation)",
+   "implementation": "src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/scientific/test_postclosure_source_free_transport.py::test_null_raychaudhuri_identity",
+    "tests/scientific/test_postclosure_source_free_transport.py::test_null_raychaudhuri_schwarzschild_anchor"
+   ],
+   "test_results": {
+    "tests/scientific/test_postclosure_source_free_transport.py::test_null_raychaudhuri_identity": true,
+    "tests/scientific/test_postclosure_source_free_transport.py::test_null_raychaudhuri_schwarzschild_anchor": true
+   },
+   "dependencies": [
+    "NULL_TRANSPORT"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "raychaudhuri",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "OPTICAL_TRANSPORT",
+   "physics_statement": "Geometric-optics amplitude transport: d(a^2)/dlambda = -(nabla_mu k^mu) a^2 reproduces the exact geometric invariant a^2 r^2 = const for radial null beams.",
+   "mathematical_relation": "nabla_mu (a^2 k^mu) = 0  =>  a^2 r^2 = const (spherical symmetry)",
+   "implementation": "src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/scientific/test_postclosure_source_free_transport.py::test_amplitude_transport_invariant"
+   ],
+   "test_results": {
+    "tests/scientific/test_postclosure_source_free_transport.py::test_amplitude_transport_invariant": true
+   },
+   "dependencies": [
+    "NULL_TRANSPORT"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "geometric_optics",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "PHASE_TRANSPORT",
+   "physics_statement": "Eikonal phase and redshift from the same geometry: S_r = integral dr/sqrt(f h) per unit photon energy (JIF phase-chain building block Xi->D->g->Phi); the integral phase equals the ODE-accumulated coordinate time of an integrated null ray; static-observer redshift sqrt(f).",
+   "mathematical_relation": "k_mu = d_mu Phi; dPhi per unit E: S_r; omega(r) = E/sqrt(f)",
+   "implementation": "src/ssz_p5/postclosure/transport.py + src/ssz_p5/true_closure/chain.py",
+   "tests": [
+    "tests/scientific/test_postclosure_source_free_transport.py::test_eikonal_phase_redshift",
+    "tests/scientific/test_true_closure_forward_chain.py::test_phase_integral_vs_differential"
+   ],
+   "test_results": {
+    "tests/scientific/test_postclosure_source_free_transport.py::test_eikonal_phase_redshift": true,
+    "tests/scientific/test_true_closure_forward_chain.py::test_phase_integral_vs_differential": true
+   },
+   "dependencies": [
+    "NULL_TRANSPORT"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "phase_jif",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "ROTATION_ORBITS",
+   "physics_statement": "Rotation and circular dynamics from the geometry: exact Kepler Omega^2 = f'/(2r); at the rings the INDEPENDENT formulas Omega_kepler and Omega_photon = sqrt(W) coincide (ring identity r f' - 2f = 0); frame dragging vanishes identically in the static slice (g_tphi = 0); dtau/dt = sqrt(f).",
+   "mathematical_relation": "Omega^2 = f'/(2r); at ring: Omega^2 = W = f/r^2",
+   "implementation": "src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/scientific/test_postclosure_source_free_transport.py::test_consolidation_single_geometry"
+   ],
+   "test_results": {
+    "tests/scientific/test_postclosure_source_free_transport.py::test_consolidation_single_geometry": true
+   },
+   "dependencies": [
+    "MATTER_TRANSPORT"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "rotation_orbits",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "PHOTON_RING_CRITICALITY",
+   "physics_statement": "Photon-ring criticality from the exact null orbit equation (du/dphi)^2 = (h/f)(1/b^2 - W(u)): outer UNSTABLE ring at u = 2/3 (W_uu < 0, b_c = 3sqrt3/2) shows logarithmic winding \u2014 the deflection increment per decade converges to exactly 2 ln 10.",
+   "mathematical_relation": "critical impact parameter 1/b_c^2 = W(u_ph); Delta phi ~ ln(1/eps)",
+   "implementation": "src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/scientific/test_postclosure_source_free_transport.py::test_light_rings_member_structure",
+    "tests/scientific/test_postclosure_source_free_transport.py::test_outer_ring_log_winding"
+   ],
+   "test_results": {
+    "tests/scientific/test_postclosure_source_free_transport.py::test_light_rings_member_structure": true,
+    "tests/scientific/test_postclosure_source_free_transport.py::test_outer_ring_log_winding": true
+   },
+   "dependencies": [
+    "NULL_TRANSPORT"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "photon_ring_stability",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "STABLE_RING_LIBRATION",
+   "physics_statement": "Stable inner trapping: libration around the inner ring u = 0.706135 (W_uu > 0); the full nonlinear ODE period, the turning-point quadrature and the linear theory 2 pi/kappa (kappa^2 = W_uu h / (2 f)) agree, with positive O(eps) nonlinear correction.",
+   "mathematical_relation": "kappa^2 = W_uu h / (2 f); T_phi -> 2 pi / kappa",
+   "implementation": "src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/scientific/test_postclosure_source_free_transport.py::test_inner_ring_libration"
+   ],
+   "test_results": {
+    "tests/scientific/test_postclosure_source_free_transport.py::test_inner_ring_libration": true
+   },
+   "dependencies": [
+    "PHOTON_RING_CRITICALITY"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "photon_ring_stability",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "NEGATIVE_CONTROLS",
+   "physics_statement": "The validation harness is FALSIFIABLE: artificial four-force, perturbed metric coefficient, wrong Christoffel component, broken conserved-quantity formula, shifted photon-ring location, wrong amplitude law, wrong phase integrand and wrong redshift law are ALL detected by the canonical diagnostics.",
+   "mathematical_relation": "for each corrupted model: canonical detector fires (residuals exceed the source-free band by orders of magnitude)",
+   "implementation": "tests/negative/test_true_closure_falsifiers.py + src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_force",
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_metric_perturbation",
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_christoffel_sign",
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_conserved_quantity",
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_ring_location",
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_amplitude_law",
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_phase_integrand",
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_redshift_law"
+   ],
+   "test_results": {
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_force": true,
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_metric_perturbation": true,
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_christoffel_sign": true,
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_conserved_quantity": true,
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_ring_location": true,
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_amplitude_law": true,
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_phase_integrand": true,
+    "tests/negative/test_true_closure_falsifiers.py::test_falsifier_redshift_law": true
+   },
+   "dependencies": [
+    "MATTER_TRANSPORT",
+    "NULL_TRANSPORT",
+    "RAYCHAUDHURI_TIMELIKE",
+    "OPTICAL_TRANSPORT",
+    "PHASE_TRANSPORT",
+    "PHOTON_RING_CRITICALITY"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "negative_controls",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  },
+  {
+   "id": "NUMERICAL_ROBUSTNESS",
+   "physics_statement": "Central claims do not depend on a single lucky resolution: conservation residuals converge under integrator tolerance refinement; Raychaudhuri residuals converge under grid refinement; multiple initial conditions (both directions, several (E, L)) conserve.",
+   "mathematical_relation": "residual(rtol) and residual(grid) monotone to solver noise floor",
+   "implementation": "tests/scientific/test_true_closure_forward_chain.py + src/ssz_p5/postclosure/transport.py",
+   "tests": [
+    "tests/scientific/test_true_closure_forward_chain.py::test_robustness_tolerance_convergence",
+    "tests/scientific/test_true_closure_forward_chain.py::test_robustness_grid_convergence",
+    "tests/scientific/test_true_closure_forward_chain.py::test_robustness_multiple_initial_conditions"
+   ],
+   "test_results": {
+    "tests/scientific/test_true_closure_forward_chain.py::test_robustness_tolerance_convergence": true,
+    "tests/scientific/test_true_closure_forward_chain.py::test_robustness_grid_convergence": true,
+    "tests/scientific/test_true_closure_forward_chain.py::test_robustness_multiple_initial_conditions": true
+   },
+   "dependencies": [
+    "RAYCHAUDHURI_TIMELIKE",
+    "NULL_TRANSPORT"
+   ],
+   "tolerance": "documented per test",
+   "pass": true,
+   "provenance_key": "numerical_robustness",
+   "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+  }
+ ],
+ "numbers": {
+  "matter_transport": {
+   "max_dE": 3.450462138232524e-12,
+   "max_norm_res": 7.092260112528948e-11
+  },
+  "null_transport": {
+   "max_dE": 4.6849191193132356e-12,
+   "max_norm_res": 3.4762193124038276e-11
+  },
+  "raychaudhuri_timelike": {
+   "max_scaled_res": 2.435188811223137e-05,
+   "omega2_max": 6.56858655152258e-47
+  },
+  "raychaudhuri_null": {
+   "max_scaled_res": 1.6843190962533303e-06
+  },
+  "optical_transport": 1.5271177109231642e-13,
+  "phase_transport": {
+   "S_r_between_rings_per_E": 0.25744649363989053,
+   "integral_vs_ode_rel": 4.6135945374292494e-11
+  },
+  "rings": [
+   {
+    "u": 0.6666666666912735,
+    "W_uu": -1.9999999911467294,
+    "stable": false,
+    "b_crit": 2.5980762112974514,
+    "Omega_ph": 0.38490017946802674
+   },
+   {
+    "u": 0.7061345809124143,
+    "W_uu": 2.5918620990980203,
+    "stable": true,
+    "b_crit": 2.6034969522792313,
+    "Omega_ph": 0.3840987788076917
+   }
+  ],
+  "winding_increment_last": 4.595278414615498,
+  "expected_increment_2ln10": 4.605170185988092,
+  "libration": {
+   "ode_period": 4.923690605487015,
+   "linear_2pi_over_kappa": 4.908323864208639
+  },
+  "bianchi_contracted_member": 2.31280160731262e-05,
+  "kretschmann_schwarzschild_1p4": {
+   "numeric": 1.593723704208255,
+   "exact": 1.5937237035588918
+  }
+ },
+ "verdict": {
+  "TRUE_FULL_CLOSURE_PASS": true,
+  "gate_status": {
+   "G00": true,
+   "G01": true,
+   "G02": true,
+   "G03": true,
+   "G04": true,
+   "G05": true,
+   "G06": true,
+   "G07": true,
+   "G10": true,
+   "G11": true,
+   "G12": true,
+   "G13": true,
+   "G14": true,
+   "G15": true,
+   "G16": true,
+   "G20": true,
+   "G30": true,
+   "G31": true,
+   "G32": true,
+   "G40": true,
+   "G50": true,
+   "G60": true,
+   "G70": true,
+   "G71": true,
+   "G72": true,
+   "G80": true,
+   "G90": true,
+   "G100": true,
+   "G110": true,
+   "G111": true,
+   "G112": true,
+   "G113": true,
+   "G114": true,
+   "G115": true,
+   "G116": true,
+   "G117": true,
+   "G118": true,
+   "G119": true,
+   "G120": true,
+   "G121": true,
+   "G122": true,
+   "G130": true,
+   "G140": true
+  },
+  "node_status": {
+   "FOUNDATIONS": true,
+   "CONNECTION_RIEMANN": true,
+   "BIANCHI_CONTRACTED": true,
+   "KNOWN_LIMITS": true,
+   "MATTER_TRANSPORT": true,
+   "NULL_TRANSPORT": true,
+   "RAYCHAUDHURI_TIMELIKE": true,
+   "RAYCHAUDHURI_NULL": true,
+   "OPTICAL_TRANSPORT": true,
+   "PHASE_TRANSPORT": true,
+   "ROTATION_ORBITS": true,
+   "PHOTON_RING_CRITICALITY": true,
+   "STABLE_RING_LIBRATION": true,
+   "NEGATIVE_CONTROLS": true,
+   "NUMERICAL_ROBUSTNESS": true
+  },
+  "unresolved": [],
+  "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
+  "single_unified_dynamics": "CLOSED (one geometry, one source-free transport operator, no per-observable force; falsifiability demonstrated; closed on the registered validation corpus \u2014 see scope note)",
+  "extra_ssz_force_required": "NO"
+ }
+}
