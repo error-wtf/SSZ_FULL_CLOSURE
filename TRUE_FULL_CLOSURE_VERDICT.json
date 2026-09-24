@@ -1,9 +1,9 @@
 {
  "schema_version": "1.0",
- "timestamp": "2026-09-24T12:31:56.638560+00:00",
- "git_commit": "c75e52e997d60e9a005a8d31481b7252b864f0c2",
+ "timestamp": "2026-09-24T12:41:33.524510+00:00",
+ "git_commit": "ccd020d4eb1798dd55bf61f7bb83001501be084e",
  "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
- "clean_tree": false,
+ "clean_tree": true,
  "artifact_integrity": {
   "verified": {
    "ABSOLUTE_FULL_CLOSURE_AUDIT.json": true,
@@ -13,8 +13,8 @@
   "all_ok": true
  },
  "gates_total": 43,
- "gates_pass": 42,
- "verdict": "OPEN: ",
+ "gates_pass": 43,
+ "verdict": "TRUE_FULL_CLOSURE_PASS",
  "single_unified_dynamics": "CLOSED (one geometry, one source-free transport operator, no per-observable force; falsifiability demonstrated; closed on the registered validation corpus \u2014 see scope note)",
  "extra_ssz_force_required": "NO",
  "unresolved": [],
@@ -62,6 +62,6 @@
   "G121": "PASS",
   "G122": "PASS",
   "G130": "PASS",
-  "G140": "FAIL"
+  "G140": "PASS"
  }
 }

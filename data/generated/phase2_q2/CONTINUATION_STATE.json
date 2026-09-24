@@ -1,6 +1,6 @@
 {
  "continuation_state": "ABSOLUTE_FULL_CLOSURE_PASS reached (programmatic). All 28 gates certified PASS; coverage gaps zero; member frozen; terminal artifacts generated.",
- "head_commit": "810d0366cf8f8dcebb8dfa929f8d8732d6f1f16e",
+ "head_commit": "ccd020d4eb1798dd55bf61f7bb83001501be084e",
  "tests": "195/195 PASS",
  "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
  "step3_delta22": "DERIVED (direct theta-theta variation, areal gauge after variation; V1/V2/V3 residual 0; P_MH==0; covariant tool all_checks_pass)",
@@ -32,12 +32,29 @@
    "altes Papier = Intuitionsarchiv, nicht Beweis; vorwaerts argumentieren: Full Action -> g -> Transport -> Observablen, dann Antizipation pruefen",
    "Navier-Stokes nur als Strukturvergleich (source-free != trivial), keine SSZ-Euler-Gleichung ohne Herleitung"
   ],
-  "status": "EXECUTED after ABSOLUTE_FULL_CLOSURE_PASS; 17 dedicated tests PASS; evidence: data/generated/postclosure/SSZ_SOURCE_FREE_TRANSPORT.json",
+  "status": "PROMOTED INTO THE CLOSURE GRAPH (G110-G122, G130, G140); post-closure research phase complete",
   "results": {
    "computation_1_timelike_transport": "E, L, norm conserved to <1e-8/<1e-10/<1e-6; acceleration cross-check <5e-3; negative control (F^t=1e-2): dE drift 7.1e-3 (x1e6 discrimination)",
    "computation_2_raychaudhuri_timelike": "identity residual 2.4e-5 (200 pts, converging); irrotational; Schwarzschild anchor: theta/sigma2/R_uu exact to <1e-6",
    "computation_3_null_transport": "E, L, k.k conserved <1e-9; null Raychaudhuri residual 1.7e-6 (Schwarzschild 2.5e-7); amplitude invariant a^2 r^2 exact to 1.5e-13; S_r(rings) = 0.25745/E; ring redshift 0.94214",
    "computation_4_ring_structure": "outer unstable u=2/3 (W_uu=-2.0, b_c=3sqrt3/2, log-winding increments -> 2 ln 10); inner stable u=0.706135 (W_uu=+2.592, ODE libration period == quadrature == 4.9237 -> 2pi/kappa = 4.9083); Omega_kepler == Omega_photon to 3e-16 at both rings"
+  },
+  "gate_integration": {
+   "G110": "source-free timelike transport (matter)",
+   "G111": "source-free null transport (light)",
+   "G112": "timelike Raychaudhuri",
+   "G113": "null Raychaudhuri",
+   "G114": "geometric-optics amplitude transport",
+   "G115": "eikonal phase transport / JIF entry",
+   "G116": "rotation and circular orbital dynamics",
+   "G117": "photon-ring criticality (log winding)",
+   "G118": "stable inner ring libration",
+   "G119": "negative controls (8 falsifiers)",
+   "G120": "foundations + differential geometry",
+   "G121": "known limits (Schwarzschild anchors, PPN signature)",
+   "G122": "numerical robustness",
+   "G130": "SINGLE UNIFIED DYNAMICS (CLOSED on registered corpus)",
+   "G140": "TRUE FULL CLOSURE"
   }
  }
 }

@@ -1,13 +1,13 @@
 # TRUE FULL CLOSURE
 
-- generated: 2026-09-24T12:31:56.638560+00:00
-- git commit: `c75e52e997d60e9a005a8d31481b7252b864f0c2`
+- generated: 2026-09-24T12:41:33.524510+00:00
+- git commit: `ccd020d4eb1798dd55bf61f7bb83001501be084e`
 - member hash: `8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf` (ONE immutable member everywhere)
-- clean tree: False
+- clean tree: True
 
 ## Verdict
 
-**OPEN: ** (42/43 gates)
+**TRUE_FULL_CLOSURE_PASS** (43/43 gates)
 
 ## The chain (ONE GEOMETRY -> MANY MANIFESTATIONS)
 
@@ -63,7 +63,7 @@ trapping -> observables — with NO additional F^mu_SSZ anywhere.
 | G121 | known limits (Schwarzschild anchors, PPN signature) | PASS |
 | G122 | numerical robustness / convergence | PASS |
 | G130 | SINGLE UNIFIED DYNAMICS: one geometry, one source-free transport operator, no per-observable force; falsifiable; closed on the registered validation corpus | PASS |
-| G140 | TRUE FULL CLOSURE: complete forward chain + historical corpus + provenance + artifact integrity + clean tree | FAIL |
+| G140 | TRUE FULL CLOSURE: complete forward chain + historical corpus + provenance + artifact integrity + clean tree | PASS |
 
 ## SINGLE UNIFIED DYNAMICS
 

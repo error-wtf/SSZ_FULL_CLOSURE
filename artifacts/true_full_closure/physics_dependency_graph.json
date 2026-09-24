@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "timestamp": "2026-09-24T12:31:56.638560+00:00",
+ "timestamp": "2026-09-24T12:41:33.524510+00:00",
  "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
  "scientific_scope_note": "TRUE FULL CLOSURE certifies internal closure of the defined SSZ validation system; it does NOT claim nature has proven SSZ correct, and does not settle deeper dynamics uniqueness beyond the registered corpus.",
  "nodes": [
@@ -384,7 +384,7 @@
   }
  },
  "verdict": {
-  "TRUE_FULL_CLOSURE_PASS": false,
+  "TRUE_FULL_CLOSURE_PASS": true,
   "gate_status": {
    "G00": true,
    "G01": true,
@@ -428,7 +428,7 @@
    "G121": true,
    "G122": true,
    "G130": true,
-   "G140": false
+   "G140": true
   },
   "node_status": {
    "FOUNDATIONS": true,
