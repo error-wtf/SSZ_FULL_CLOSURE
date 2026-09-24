@@ -1,0 +1,275 @@
+{
+ "mcp_status": "live",
+ "mcp_server": {
+  "name": "SSZ Physics RAG Public",
+  "version": "2.13.1"
+ },
+ "mcp_queries": {
+  "foundations_conventions": {
+   "query": "metric ansatz ds^2 = -f dt^2 + dr^2/h segmented spacetime canonical",
+   "result": [
+    [
+     {
+      "corpus": "jif",
+      "trust_level": "trusted_user_research",
+      "path": "Wrede_Casu_Middle_Transfer_Bridge_FINAL_COMPLETE_v7_PPN_RECONCILED_2026-08-25.pdf",
+      "sha256": "13bdfa3d0bbb0f83ffb3902266d2d163b25d603c27034f70890e9f69c2d79847",
+      "media_type": "application/pdf",
+      "chunk": 17,
+      "char_start": 92663,
+      "char_end": 98637,
+      "excerpt": " \u2026 r    \u03c1\n\nSubstitution yields g00 = \u22121 + 2U \u2212 5U [2] + \u00b7 \u00b7 \u00b7 and gij = (1 + 2U + \u00b7 \u00b7 \u00b7 )\u03b4ij , hence \u03b3raw = 1 and\n\u03b2raw = 5/[2] if the raw [ansatz] alone is treated as the complete PPN [metric].\nThe [canonical] SSZ \u2026 ",
+      "score": -26.966688525738146,
+      "trust_boost": 1.0,
+      "rank_score": -27.966688525738146,
+      "citation": "corpus=jif; path=Wrede_Casu_Middle_Transfer_Bridge_FINAL_COMPLETE_v7_PPN_RECONCILED_2026-08-25.pdf; sha256=13bdfa3d0bbb0f83ffb3902266d2d163b25d603c27034f70890e9f69c2d79847; chunk=17; offsets=92663-98637"
+     },
+     {
+      "corpus": "jif-markdown",
+      "trust_level": "derived_user_research_text",
+      "path": "Wrede_Casu_Middle_Transfer_Bridge_FINAL_COMPLETE_v9_EVIDENCE_MAPPED_2026-08-25.md",
+      "sha256": "60b73305cf532a6c0fa18ac48a071710e205e7bbc01de411229b5335f7a1b50b",
+      "media_type": "text/markdown",
+      "chunk": 25,
+      "char_start": 136561,
+      "char_end": 142495,
+      "excerpt": " \u2026 Casu, Regime Boundaries \u2013 [Segmented] [Spacetime], SSZ Research Portal documen-\n     tation snapshot, August 2026.\n\n [3] C. N. Wrede, L. P. Casu, with the help of Bingsi AI, A Variational Selection Principle for the [Canonical]\n     C [2] Transition \u2026 ",
+      "score": -26.398572924080323,
+      "trust_boost": 0.25,
+      "rank_score": -26.648572924080323,
+      "citation": "corpus=jif-markdown; path=Wrede_Casu_Middle_Transfer_Bridge_FINAL_COMPLETE_v9_EVIDENCE_MAPPED_2026-08-25.md; sha256=60b73305cf532a6c0fa18ac48a071710e205e7bbc01de411229b5335f7a1b50b; chunk=25; offsets=136561-142495"
+     }
+    ]
+   ]
+  },
+  "curvature_differential_geometry": {
+   "query": "Christoffel Ricci Riemann tensor symbolic derivation",
+   "result": [
+    [
+     {
+      "corpus": "hilfsdateien",
+      "trust_level": "trusted_user_research",
+      "path": "SSZ_PROJECT_PART_02_METRICS_AND_LINE_ELEMENTS.md",
+      "sha256": "7521cb4e0ca929448c5b7482ee8b33a9a5c17fab6bfd2b1f96a557899960d63a",
+      "media_type": ".md",
+      "chunk": 1999,
+      "char_start": 9595075,
+      "char_end": 9600037,
+      "excerpt": " \u2026 1. **Use `ssz_[symbolic]_fast.py` whenever possible**\n   - Skips expensive [Riemann] [tensor] computation\n   - Direct [Ricci] calculation is much faster\n\n2. **Limit simplification:**\n   ```python\n   # In scripts, comment out excessive simplify() calls\n   # expr = sp.simplify(expr)  # <- can be \u2026 ",
+      "score": -42.38706376506746,
+      "trust_boost": 1.0,
+      "rank_score": -43.38706376506746,
+      "citation": "corpus=hilfsdateien; path=SSZ_PROJECT_PART_02_METRICS_AND_LINE_ELEMENTS.md; sha256=7521cb4e0ca929448c5b7482ee8b33a9a5c17fab6bfd2b1f96a557899960d63a; chunk=1999; offsets=9595075-9600037"
+     },
+     {
+      "corpus": "hilfsdateien",
+      "trust_level": "trusted_user_research",
+      "path": "SSZ_PROJECT_PART_02_METRICS_AND_LINE_ELEMENTS.md",
+      "sha256": "7521cb4e0ca929448c5b7482ee8b33a9a5c17fab6bfd2b1f96a557899960d63a",
+      "media_type": ".md",
+      "chunk": 2132,
+      "char_start": 10181288,
+      "char_end": 10186250,
+      "excerpt": " \u2026 1. **Use `ssz_[symbolic]_fast.py` whenever possible**\n   - Skips expensive [Riemann] [tensor] computation\n   - Direct [Ricci] calculation is much faster\n\n2. **Limit simplification:**\n   ```python\n   # In scripts, comment out excessive simplify() calls\n   # expr = sp.simplify(expr)  # <- can be \u2026 ",
+      "score": -42.37883831069922,
+      "trust_boost": 1.0,
+      "rank_score": -43.37883831069922,
+      "citation": "corpus=hilfsdateien; path=SSZ_PROJECT_PART_02_METRICS_AND_LINE_ELEMENTS.md; sha256=7521cb4e0ca929448c5b7482ee8b33a9a5c17fab6bfd2b1f96a557899960d63a; chunk=2132; offsets=10181288-10186250"
+     }
+    ]
+   ]
+  },
+  "geodesic_transport": {
+   "query": "geodesic equation conserved quantities Killing energy segmentation inertia",
+   "result": []
+  },
+  "raychaudhuri": {
+   "query": "Raychaudhuri congruence expansion shear vorticity",
+   "result": []
+  },
+  "geometric_optics": {
+   "query": "eikonal amplitude transport geometric optics null wave",
+   "result": [
+    [
+     {
+      "corpus": "jif-markdown",
+      "trust_level": "derived_user_research_final_bridge_paper_user_designated",
+      "path": "SSZ_Middle_Bridge_Unified_Dynamics.md",
+      "sha256": "b616c0f9bd82bb2a1c52edeb5fd32cc763d20a70a1e0eff1dba4f4270db4b484",
+      "media_type": "text/markdown",
+      "chunk": 10,
+      "char_start": 54557,
+      "char_end": 60555,
+      "excerpt": " \u2026 [transport] is governed by the usual [geometric]-[optics] [transport] equations; that\n[amplitude] layer is not required for the scalar phase theorem developed here. This is the standard\nmetric route from Maxwell [wave] [optics] to [null]-ray \u2026 ",
+      "score": -32.16191509805819,
+      "trust_boost": 6.0,
+      "rank_score": -38.16191509805819,
+      "citation": "corpus=jif-markdown; path=SSZ_Middle_Bridge_Unified_Dynamics.md; sha256=b616c0f9bd82bb2a1c52edeb5fd32cc763d20a70a1e0eff1dba4f4270db4b484; chunk=10; offsets=54557-60555"
+     },
+     {
+      "corpus": "jif-markdown",
+      "trust_level": "derived_user_research_final_master_high_quality_user_designated",
+      "path": "Wrede_Casu_SSZ_Middle_Bridge_and_Unified_Dynamics_FINAL_MASTER_v13_2026-08-25.md",
+      "sha256": "2e0753ac6060dfa85218bb7cc57085065d08a2e64cbf2912fdd03421e8dd9db2",
+      "media_type": "text/markdown",
+      "chunk": 12,
+      "char_start": 65524,
+      "char_end": 71446,
+      "excerpt": " \u2026 [transport] is governed by the usual [geometric]-[optics] [transport] equations; that\n[amplitude] layer is not required for the scalar phase theorem developed here. This is the standard\nmetric route from Maxwell [wave] [optics] to [null]-ray \u2026 ",
+      "score": -34.11023321877418,
+      "trust_boost": 4.0,
+      "rank_score": -38.11023321877418,
+      "citation": "corpus=jif-markdown; path=Wrede_Casu_SSZ_Middle_Bridge_and_Unified_Dynamics_FINAL_MASTER_v13_2026-08-25.md; sha256=2e0753ac6060dfa85218bb7cc57085065d08a2e64cbf2912fdd03421e8dd9db2; chunk=12; offsets=65524-71446"
+     }
+    ]
+   ]
+  },
+  "phase_jif": {
+   "query": "JIF chain phase Xi D g proper time transfer",
+   "result": [
+    [
+     {
+      "corpus": "jif",
+      "trust_level": "trusted_user_research",
+      "path": "SSZ_JIF_Three_Papers_v2.1_2026-07-27/Paper_II_SSZ_JIF_Geometry.md",
+      "sha256": "51349c6835ff5b61b4c663cf45fb331231c5fd5226ceb06fbfb447b60b3dc8bb",
+      "media_type": ".md",
+      "chunk": 1,
+      "char_start": 4497,
+      "char_end": 9376,
+      "excerpt": " \u2026 Geometry-to-[phase] dependency [chain]\n\nThe active architecture is\n\n\\[\n\\[Xi](x)\n\\rightarrow [D](x)\n\\rightarrow [g]_{\\mu\\nu}\n\\rightarrow \\{[d]\\tau,\\text{null [transfer]},S\\}\n\\rightarrow\\Phi\n\\rightarrow J.\n\\]\n\nEach arrow has a different status:\n\n- $\\[Xi] \u2026 ",
+      "score": -33.490998967432915,
+      "trust_boost": 1.0,
+      "rank_score": -34.490998967432915,
+      "citation": "corpus=jif; path=SSZ_JIF_Three_Papers_v2.1_2026-07-27/Paper_II_SSZ_JIF_Geometry.md; sha256=51349c6835ff5b61b4c663cf45fb331231c5fd5226ceb06fbfb447b60b3dc8bb; chunk=1; offsets=4497-9376"
+     },
+     {
+      "corpus": "jif",
+      "trust_level": "trusted_user_research",
+      "path": "SSZ_JIF_Four_Papers_v3.0_2026-07-27/Paper_II_SSZ_JIF_Geometry.md",
+      "sha256": "364424e8410c40a7aa33fb06bcfca77ab2db186fe66037950fe90a7782d44970",
+      "media_type": ".md",
+      "chunk": 1,
+      "char_start": 4570,
+      "char_end": 9507,
+      "excerpt": " \u2026 [phase] dependency [chain]\n\nThe active architecture is\n\n\\[\n\\[Xi](x)\n\\rightarrow [D](x)\n\\rightarrow [g]_{\\mu\\nu}\n\\rightarrow \\{[d]\\tau,\\text{null [transfer]},S\\}\n\\rightarrow\\Phi\n\\rightarrow J.\n\\]\n\nEach arrow has a different status:\n\n- $\\[Xi]\\rightarrow [D] \u2026 ",
+      "score": -32.093296992623806,
+      "trust_boost": 1.0,
+      "rank_score": -33.093296992623806,
+      "citation": "corpus=jif; path=SSZ_JIF_Four_Papers_v3.0_2026-07-27/Paper_II_SSZ_JIF_Geometry.md; sha256=364424e8410c40a7aa33fb06bcfca77ab2db186fe66037950fe90a7782d44970; chunk=1; offsets=4570-9507"
+     }
+    ]
+   ]
+  },
+  "rotation_orbits": {
+   "query": "circular orbit angular velocity Kepler Omega",
+   "result": [
+    [
+     {
+      "corpus": "hilfsdateien",
+      "trust_level": "trusted_user_research",
+      "path": "markdowns/ssz-ligo-tests/docs/DELTA_PSI_DERIVATION.md",
+      "sha256": "f0a7c5947662ab4ec035111ebe0a66447ce526e98d2bfefd596f098f2667d5d9",
+      "media_type": ".md",
+      "chunk": 0,
+      "char_start": 0,
+      "char_end": 3936,
+      "excerpt": " \u2026 Leading-order Newtonian [circular] [orbit] (`[Omega] = sqrt(GM/r^3)`)\n2. No spin, no eccentricity\n3. GR Peters formula for `rdot_GR` (0PN energy loss)\n4. `r(f)` is Newtonian [Kepler] proxy (no PN corrections)\n5 \u2026 ",
+      "score": -26.341487396479764,
+      "trust_boost": 1.0,
+      "rank_score": -27.341487396479764,
+      "citation": "corpus=hilfsdateien; path=markdowns/ssz-ligo-tests/docs/DELTA_PSI_DERIVATION.md; sha256=f0a7c5947662ab4ec035111ebe0a66447ce526e98d2bfefd596f098f2667d5d9; chunk=0; offsets=0-3936"
+     },
+     {
+      "corpus": "hilfsdateien",
+      "trust_level": "trusted_user_research",
+      "path": "SSZ_PROJECT_PART_13_LIGO_STRAIN_PREPROCESSING.md",
+      "sha256": "7d2915898fe9d4badebbd461f4eeae299e36f005210a9a80f4b284a1f4b8f9db",
+      "media_type": ".md",
+      "chunk": 166,
+      "char_start": 755208,
+      "char_end": 760185,
+      "excerpt": " \u2026 Leading-order Newtonian [circular] [orbit] (`[Omega] = sqrt(GM/r^3)`)\n2. No spin, no eccentricity\n3. GR Peters formula for `rdot_GR` (0PN energy loss)\n4. `r(f)` is Newtonian [Kepler] proxy (no PN corrections)\n5 \u2026 ",
+      "score": -26.17628060112307,
+      "trust_boost": 1.0,
+      "rank_score": -27.17628060112307,
+      "citation": "corpus=hilfsdateien; path=SSZ_PROJECT_PART_13_LIGO_STRAIN_PREPROCESSING.md; sha256=7d2915898fe9d4badebbd461f4eeae299e36f005210a9a80f4b284a1f4b8f9db; chunk=166; offsets=755208-760185"
+     }
+    ]
+   ]
+  },
+  "photon_ring_stability": {
+   "query": "photon sphere critical impact parameter light ring stability winding",
+   "result": []
+  },
+  "negative_controls": {
+   "query": "find_validation_records: anti-circularity / falsification records",
+   "result": [
+    "2 validation errors for call[find_validation_records]\nterm\n  Missing required argument [type=missing_argument, input_value={'record_type': 'anti_circularity'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing_argument\nrecord_type\n  Unexpected keyword argument [type=unexpected_keyword_argument, input_value='anti_circularity', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/unexpected_keyword_argument"
+   ]
+  },
+  "single_unified_dynamics_open_history": {
+   "query": "single unified dynamics OPEN gap audit",
+   "result": [
+    [
+     {
+      "corpus": "jif",
+      "trust_level": "trusted_user_research",
+      "path": "SSZ_Gap_Closure_and_All_Tests_Audit_2026-09-05.md",
+      "sha256": "92c0e512af5602838b5b3e30a73be39025428bf581130ec3a9e93ccdd818b9dc",
+      "media_type": "text/markdown",
+      "chunk": 1,
+      "char_start": 5489,
+      "char_end": 11366,
+      "excerpt": " \u2026 bridge PDF: `corpus=jif; path=SSZ_Middle_Bridge_[Unified]_[Dynamics].pdf; sha256=40ba5156a639d1fe3e594ce33321ba35b329c07e0bb0fe350cd3f3be8e2253e4`.\n- Phase-switch [audit]: `sha256=857243354fc8708bdbfe760a03837c05c66511c9c63d18e1fce0191cd2fc56b4; chunks=0-1`.\n- [Dynamics]-[gap] [audit]: `sha256=a65e525730c7501d41040d78a7fe5f1a4065bdbf273c1543ea564d35b89ac135; chunk=0`.\n- Invariant-trigger [audit]: `sha256=25fafce97db9d28120cd109e80caeaea6bbb9538a0e7e3583af724da14979d12; chunks=0-1`.",
+      "score": -23.27100391578158,
+      "trust_boost": 1.0,
+      "rank_score": -24.27100391578158,
+      "citation": "corpus=jif; path=SSZ_Gap_Closure_and_All_Tests_Audit_2026-09-05.md; sha256=92c0e512af5602838b5b3e30a73be39025428bf581130ec3a9e93ccdd818b9dc; chunk=1; offsets=5489-11366"
+     }
+    ]
+   ]
+  }
+ },
+ "literature": {
+  "curvature_differential_geometry": [
+   "Wald, General Relativity (1984), ch. 3 (curvature); Levi-Civita connection, Riemann/Ricci contraction identities, Bianchi identities \u2014 re-derived symbolically/numerically in-repo"
+  ],
+  "geodesic_transport": [
+   "Wald (1984), ch. 4 (geodesics, Killing conserved quantities); Poisson, A Relativist's Toolkit (2004)"
+  ],
+  "raychaudhuri": [
+   "Wald (1984), ch. 9 (congruences, Raychaudhuri equation); Poisson (2004), optical scalars / expansion-shear-vorticity decomposition"
+  ],
+  "geometric_optics": [
+   "Misner-Thorne-Wheeler, Gravitation (1973), ch. 22 (geometric optics); Wald (1984) eikonal limit"
+  ],
+  "phase_jif": [
+   "SSZ corpus: Paper_II_SSZ_JIF_Geometry (Xi->D->g->Phi chain, MCP-cited); gravitational redshift omega = E/sqrt(f) is the standard static-observer relation"
+  ],
+  "rotation_orbits": [
+   "Standard circular-orbit theory for static spherical metrics (Kepler Omega^2 = f'/(2r); ring identity r f' = 2f)"
+  ],
+  "photon_ring_stability": [
+   "Chandrasekhar, The Mathematical Theory of Black Holes (1983), Schwarzschild photon orbits; Cardoso-Franzin-Pani, PRL 116, 171101 (2016) [arXiv:1602.07309]: light-ring instability/Lyapunov exponent and logarithmic winding"
+  ],
+  "known_limits": [
+   "Will, Theory and Experiment in Gravitational Physics: PPN framework; Schwarzschild closed forms (photon sphere, Kretschmann 48 M^2/r^6)"
+  ],
+  "negative_controls": [
+   "Anti-circularity methodology: deliberately corrupted models must be detected (SSZ corpus validation records, MCP-cited)"
+  ],
+  "numerical_robustness": [
+   "Standard ODE/interpolation convergence analysis (truncation vs physical residual separation)"
+  ],
+  "foundations_conventions": [
+   "Repository-canonical conventions (MODEL_LOCK, CANONICAL_FACTS); signature (-,+,+,+), units c = G = r_s = 1"
+  ],
+  "single_unified_dynamics_open_history": [
+   "SSZ_Middle_Bridge_Dynamics_Gap_Audit_2026-08-29: 'single unified dynamics' documented OPEN; this evaluation CLOSES it on the registered corpus level (scope note applies)"
+  ]
+ },
+ "policy": "Physics MCP/RAG is a REFERENCE and cross-check system; every identity is independently re-derived and numerically verified in-repo (see the test files). Tool names are discovered via tools/list, never invented.",
+ "generated": "2026-09-24T12:31:56.638560+00:00",
+ "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
+}

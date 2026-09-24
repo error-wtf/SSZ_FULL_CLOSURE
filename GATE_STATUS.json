@@ -26,5 +26,20 @@
  "G72": "PASS",
  "G80": "PASS",
  "G90": "PASS",
- "G100": "PASS"
+ "G100": "PASS",
+ "G110": "PASS",
+ "G111": "PASS",
+ "G112": "PASS",
+ "G113": "PASS",
+ "G114": "PASS",
+ "G115": "PASS",
+ "G116": "PASS",
+ "G117": "PASS",
+ "G118": "PASS",
+ "G119": "PASS",
+ "G120": "PASS",
+ "G121": "PASS",
+ "G122": "PASS",
+ "G130": "PASS",
+ "G140": "FAIL"
 }

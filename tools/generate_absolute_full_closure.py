@@ -108,6 +108,28 @@ def main() -> int:
         "G100": ["tests/negative/test_absolute_closure.py (QNM guards)",
                  "tests/negative/test_qnm_guard.py",
                  "tests/unit/test_descriptor_pencil.py"],
+        "G110": ["tests/scientific/test_postclosure_source_free_transport.py",
+                 "tests/scientific/test_true_closure_forward_chain.py"],
+        "G111": ["tests/scientific/test_postclosure_source_free_transport.py",
+                 "tests/scientific/test_true_closure_forward_chain.py"],
+        "G112": ["tests/scientific/test_postclosure_source_free_transport.py"],
+        "G113": ["tests/scientific/test_postclosure_source_free_transport.py"],
+        "G114": ["tests/scientific/test_postclosure_source_free_transport.py"],
+        "G115": ["tests/scientific/test_postclosure_source_free_transport.py",
+                 "tests/scientific/test_true_closure_forward_chain.py"],
+        "G116": ["tests/scientific/test_postclosure_source_free_transport.py"],
+        "G117": ["tests/scientific/test_postclosure_source_free_transport.py"],
+        "G118": ["tests/scientific/test_postclosure_source_free_transport.py"],
+        "G119": ["tests/negative/test_true_closure_falsifiers.py",
+                 "tests/scientific/test_postclosure_source_free_transport.py"],
+        "G120": ["tests/scientific/test_true_closure_forward_chain.py"],
+        "G121": ["tests/scientific/test_true_closure_forward_chain.py"],
+        "G122": ["tests/scientific/test_true_closure_forward_chain.py"],
+        "G130": ["G110..G119 dependency closure (single unified dynamics, "
+                 "closed on the registered corpus)"],
+        "G140": ["tools/evaluate_true_closure.py (programmatic TRUE FULL "
+                 "CLOSURE: full graph + provenance + integrity + clean "
+                 "tree)"],
     }
 
     audit = {

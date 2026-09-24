@@ -19,6 +19,10 @@ REQUIRED_GATES = [
     "G40", "G50", "G60",
     "G70", "G71", "G72",
     "G80", "G90", "G100",
+    # ---- TRUE FULL CLOSURE extension (source-free forward chain) ----
+    "G110", "G111", "G112", "G113", "G114", "G115", "G116", "G117",
+    "G118", "G119", "G120", "G121", "G122",
+    "G130", "G140",
 ]
 
 GATE_DEFS = {
@@ -78,6 +82,48 @@ GATE_DEFS = {
             "requires": ["G70", "G71", "G72"]},
     "G90": {"name": "global regularity", "requires": ["G80"]},
     "G100": {"name": "QNM / trapping (LAST)", "requires": ["G90"]},
+    # ---- TRUE FULL CLOSURE extension -----------------------------------
+    # The source-free forward chain is part of the dependency-enforced
+    # graph: closure can no longer PASS while the transport block is
+    # 'post-closure research' and single unified dynamics is OPEN.
+    "G110": {"name": "source-free timelike transport (matter)",
+             "requires": ["G100"]},
+    "G111": {"name": "source-free null transport (light)",
+             "requires": ["G100"]},
+    "G112": {"name": "timelike Raychaudhuri congruence dynamics",
+             "requires": ["G110"]},
+    "G113": {"name": "null Raychaudhuri congruence dynamics",
+             "requires": ["G111"]},
+    "G114": {"name": "geometric-optics amplitude transport",
+             "requires": ["G111"]},
+    "G115": {"name": "eikonal phase transport / JIF chain entry",
+             "requires": ["G111"]},
+    "G116": {"name": "rotation and circular orbital dynamics",
+             "requires": ["G110"]},
+    "G117": {"name": "photon-ring criticality (outer ring, log winding)",
+             "requires": ["G111"]},
+    "G118": {"name": "stable inner ring libration cross-check",
+             "requires": ["G117"]},
+    "G119": {"name": "negative controls (falsifiability battery)",
+             "requires": ["G112", "G115"]},
+    "G120": {"name": "foundations + differential geometry",
+             "requires": ["G100"]},
+    "G121": {"name": "known limits (Schwarzschild anchors, PPN signature)",
+             "requires": ["G120"]},
+    "G122": {"name": "numerical robustness / convergence",
+             "requires": ["G112", "G113", "G115"]},
+    "G130": {"name": "SINGLE UNIFIED DYNAMICS: one geometry, one "
+                     "source-free transport operator, no per-observable "
+                     "force; falsifiable; closed on the registered "
+                     "validation corpus",
+             "requires": ["G110", "G111", "G112", "G113", "G114", "G115",
+                          "G116", "G117", "G118", "G119"]},
+    "G140": {"name": "TRUE FULL CLOSURE: complete forward chain + "
+                     "historical corpus + provenance + artifact integrity "
+                     "+ clean tree",
+             "requires": ["G00", "G100", "G110", "G111", "G112", "G113",
+                          "G114", "G115", "G116", "G117", "G118", "G119",
+                          "G120", "G121", "G122", "G130"]},
 }
 
 # Gate statuses are recorded in GATE_STATUS.json (machine-written only).
