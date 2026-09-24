@@ -1,7 +1,7 @@
 # ABSOLUTE FULL CLOSURE REPORT
 
-- generated: 2026-09-23T22:40:26.929264+00:00
-- git commit: `6a69d64f3019bcf728710cf82dced7dac0a88c64`
+- generated: 2026-09-24T09:08:59.209324+00:00
+- git commit: `fe67d21bf59ce34fe83b33dc87b16b9a5a640ebe`
 - clean tree: True
 
 ## Verdict
@@ -71,7 +71,7 @@ negative control built in.
 
 ## Test semantics
 
-- collected tests: 166
+- collected tests: 212
 - fully documented: True
 - coverage gaps: NONE
 
