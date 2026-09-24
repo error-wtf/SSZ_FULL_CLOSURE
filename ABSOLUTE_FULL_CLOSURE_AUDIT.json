@@ -1,7 +1,7 @@
 {
  "schema_version": "1.0",
- "timestamp": "2026-09-24T09:08:59.209324+00:00",
- "git_commit": "fe67d21bf59ce34fe83b33dc87b16b9a5a640ebe",
+ "timestamp": "2026-09-24T12:57:10.420056+00:00",
+ "git_commit": "fdb1023515a8f22c3dc72d81d205efdb3a8b00eb",
  "clean_tree": true,
  "clean_tree_scope": "repo state at the verified HEAD; the four terminal artifact files are outputs of this audit and excluded",
  "verdict": "ABSOLUTE_FULL_CLOSURE_PASS",
@@ -297,6 +297,187 @@
     "tests/negative/test_qnm_guard.py",
     "tests/unit/test_descriptor_pencil.py"
    ]
+  },
+  "G110": {
+   "name": "source-free timelike transport (matter)",
+   "certified_status": "PASS",
+   "requires": [
+    "G100"
+   ],
+   "grounding": [
+    "tests/scientific/test_postclosure_source_free_transport.py",
+    "tests/scientific/test_true_closure_forward_chain.py"
+   ]
+  },
+  "G111": {
+   "name": "source-free null transport (light)",
+   "certified_status": "PASS",
+   "requires": [
+    "G100"
+   ],
+   "grounding": [
+    "tests/scientific/test_postclosure_source_free_transport.py",
+    "tests/scientific/test_true_closure_forward_chain.py"
+   ]
+  },
+  "G112": {
+   "name": "timelike Raychaudhuri congruence dynamics",
+   "certified_status": "PASS",
+   "requires": [
+    "G110"
+   ],
+   "grounding": [
+    "tests/scientific/test_postclosure_source_free_transport.py"
+   ]
+  },
+  "G113": {
+   "name": "null Raychaudhuri congruence dynamics",
+   "certified_status": "PASS",
+   "requires": [
+    "G111"
+   ],
+   "grounding": [
+    "tests/scientific/test_postclosure_source_free_transport.py"
+   ]
+  },
+  "G114": {
+   "name": "geometric-optics amplitude transport",
+   "certified_status": "PASS",
+   "requires": [
+    "G111"
+   ],
+   "grounding": [
+    "tests/scientific/test_postclosure_source_free_transport.py"
+   ]
+  },
+  "G115": {
+   "name": "eikonal phase transport / JIF chain entry",
+   "certified_status": "PASS",
+   "requires": [
+    "G111"
+   ],
+   "grounding": [
+    "tests/scientific/test_postclosure_source_free_transport.py",
+    "tests/scientific/test_true_closure_forward_chain.py"
+   ]
+  },
+  "G116": {
+   "name": "rotation and circular orbital dynamics",
+   "certified_status": "PASS",
+   "requires": [
+    "G110"
+   ],
+   "grounding": [
+    "tests/scientific/test_postclosure_source_free_transport.py"
+   ]
+  },
+  "G117": {
+   "name": "photon-ring criticality (outer ring, log winding)",
+   "certified_status": "PASS",
+   "requires": [
+    "G111"
+   ],
+   "grounding": [
+    "tests/scientific/test_postclosure_source_free_transport.py"
+   ]
+  },
+  "G118": {
+   "name": "stable inner ring libration cross-check",
+   "certified_status": "PASS",
+   "requires": [
+    "G117"
+   ],
+   "grounding": [
+    "tests/scientific/test_postclosure_source_free_transport.py"
+   ]
+  },
+  "G119": {
+   "name": "negative controls (falsifiability battery)",
+   "certified_status": "PASS",
+   "requires": [
+    "G112",
+    "G115"
+   ],
+   "grounding": [
+    "tests/negative/test_true_closure_falsifiers.py",
+    "tests/scientific/test_postclosure_source_free_transport.py"
+   ]
+  },
+  "G120": {
+   "name": "foundations + differential geometry",
+   "certified_status": "PASS",
+   "requires": [
+    "G100"
+   ],
+   "grounding": [
+    "tests/scientific/test_true_closure_forward_chain.py"
+   ]
+  },
+  "G121": {
+   "name": "known limits (Schwarzschild anchors, PPN signature)",
+   "certified_status": "PASS",
+   "requires": [
+    "G120"
+   ],
+   "grounding": [
+    "tests/scientific/test_true_closure_forward_chain.py"
+   ]
+  },
+  "G122": {
+   "name": "numerical robustness / convergence",
+   "certified_status": "PASS",
+   "requires": [
+    "G112",
+    "G113",
+    "G115"
+   ],
+   "grounding": [
+    "tests/scientific/test_true_closure_forward_chain.py"
+   ]
+  },
+  "G130": {
+   "name": "SINGLE UNIFIED DYNAMICS: one geometry, one source-free transport operator, no per-observable force; falsifiable; closed on the registered validation corpus",
+   "certified_status": "PASS",
+   "requires": [
+    "G110",
+    "G111",
+    "G112",
+    "G113",
+    "G114",
+    "G115",
+    "G116",
+    "G117",
+    "G118",
+    "G119"
+   ],
+   "grounding": [
+    "G110..G119 dependency closure (single unified dynamics, closed on the registered corpus)"
+   ]
+  },
+  "G140": {
+   "name": "TRUE FULL CLOSURE: complete forward chain + historical corpus + provenance + artifact integrity + clean tree",
+   "certified_status": "PASS",
+   "requires": [
+    "G00",
+    "G100",
+    "G110",
+    "G111",
+    "G112",
+    "G113",
+    "G114",
+    "G115",
+    "G116",
+    "G117",
+    "G118",
+    "G119",
+    "G120",
+    "G121",
+    "G122",
+    "G130"
+   ],
+   "grounding": [
+    "tools/evaluate_true_closure.py (programmatic TRUE FULL CLOSURE: full graph + provenance + integrity + clean tree)"
+   ]
   }
  },
  "member": {
@@ -328,7 +509,7 @@
  },
  "coverage_gaps": [],
  "tests": {
-  "collected": 212,
+  "collected": 233,
   "fully_documented": true
  },
  "no_marginal": true,

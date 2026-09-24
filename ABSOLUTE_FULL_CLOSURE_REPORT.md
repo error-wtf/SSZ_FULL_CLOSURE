@@ -1,7 +1,7 @@
 # ABSOLUTE FULL CLOSURE REPORT
 
-- generated: 2026-09-24T09:08:59.209324+00:00
-- git commit: `fe67d21bf59ce34fe83b33dc87b16b9a5a640ebe`
+- generated: 2026-09-24T12:57:10.420056+00:00
+- git commit: `fdb1023515a8f22c3dc72d81d205efdb3a8b00eb`
 - clean tree: True
 
 ## Verdict
@@ -61,6 +61,21 @@ angular metric degree of freedom UNFIXED:
 | G80 | interfaces / patch continuation | PASS |
 | G90 | global regularity | PASS |
 | G100 | QNM / trapping (LAST) | PASS |
+| G110 | source-free timelike transport (matter) | PASS |
+| G111 | source-free null transport (light) | PASS |
+| G112 | timelike Raychaudhuri congruence dynamics | PASS |
+| G113 | null Raychaudhuri congruence dynamics | PASS |
+| G114 | geometric-optics amplitude transport | PASS |
+| G115 | eikonal phase transport / JIF chain entry | PASS |
+| G116 | rotation and circular orbital dynamics | PASS |
+| G117 | photon-ring criticality (outer ring, log winding) | PASS |
+| G118 | stable inner ring libration cross-check | PASS |
+| G119 | negative controls (falsifiability battery) | PASS |
+| G120 | foundations + differential geometry | PASS |
+| G121 | known limits (Schwarzschild anchors, PPN signature) | PASS |
+| G122 | numerical robustness / convergence | PASS |
+| G130 | SINGLE UNIFIED DYNAMICS: one geometry, one source-free transport operator, no per-observable force; falsifiable; closed on the registered validation corpus | PASS |
+| G140 | TRUE FULL CLOSURE: complete forward chain + historical corpus + provenance + artifact integrity + clean tree | PASS |
 
 ## On-shell balance highlight (G16)
 
@@ -71,7 +86,7 @@ negative control built in.
 
 ## Test semantics
 
-- collected tests: 212
+- collected tests: 233
 - fully documented: True
 - coverage gaps: NONE
 

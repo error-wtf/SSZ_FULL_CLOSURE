@@ -270,6 +270,6 @@
   ]
  },
  "policy": "Physics MCP/RAG is a REFERENCE and cross-check system; every identity is independently re-derived and numerically verified in-repo (see the test files). Tool names are discovered via tools/list, never invented.",
- "generated": "2026-09-24T12:41:33.524510+00:00",
+ "generated": "2026-09-24T12:52:01.298609+00:00",
  "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf"
 }
