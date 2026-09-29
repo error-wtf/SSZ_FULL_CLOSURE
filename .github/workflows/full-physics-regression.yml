@@ -23,8 +23,8 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.lock
       - run: python -m pip install --no-deps -e .
-      - name: Check frozen release manifest
-        run: python tools/release_manifest.py --check
+      - name: Run complete pytest suite
+        run: python -m pytest -q
       - name: Run strict full physics pipeline
         run: python ssz_p5_full_pipeline.py --strict
       - uses: actions/upload-artifact@v4
