@@ -1,0 +1,28 @@
+name: Current member spectral preflight
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/current_member_spectral_preflight.py"
+      - ".github/workflows/current-member-spectral-preflight.yml"
+      - "src/ssz_p5/**"
+      - "data/generated/phase2_q2/**"
+
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run current-member spectral preflight
+        run: python tools/current_member_spectral_preflight.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-spectral-preflight
+          path: data/generated/spectral/CURRENT_MEMBER_SPECTRAL_PREFLIGHT_2026-09-29.json
