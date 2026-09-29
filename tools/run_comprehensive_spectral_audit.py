@@ -13,14 +13,10 @@ from __future__ import annotations
 
 import hashlib
 import json
-import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
-
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "src"))
 
 from ssz_p5.benchmarks.li_cst_aah import classify_states
 from ssz_p5.benchmarks.li_cst_aah import solve as solve_li
@@ -37,6 +33,8 @@ from ssz_p5.qnm.principal_tracking import (
     track_by_overlap,
     whitened_principal_modes,
 )
+
+ROOT = Path(__file__).resolve().parents[1]
 
 MEMBER_CSV = ROOT / "data/generated/phase2_q2/ELECTRIC_PRODUCTION_MEMBER_CURRENT.csv"
 MEMBER_MANIFEST = ROOT / "data/generated/phase2_q2/ELECTRIC_PRODUCTION_MEMBER_CURRENT.json"
