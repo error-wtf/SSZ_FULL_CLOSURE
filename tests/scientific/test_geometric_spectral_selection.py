@@ -1,6 +1,7 @@
 import numpy as np
 
-from ssz_p5.benchmarks.li_cst_aah import critical_site, solve as solve_li
+from ssz_p5.benchmarks.li_cst_aah import critical_site
+from ssz_p5.benchmarks.li_cst_aah import solve as solve_li
 from ssz_p5.benchmarks.weisz_fk import solve as solve_fk
 from ssz_p5.qnm.principal_tracking import (
     continuity_metrics,
