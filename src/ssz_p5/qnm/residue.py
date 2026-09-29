@@ -22,16 +22,16 @@ def pole_residue(
     right/left product.  This helper intentionally does not infer an observable.
     """
     r = np.asarray(right, complex)
-    l = np.asarray(left, complex)
+    left_vec = np.asarray(left, complex)
     d = np.asarray(dL_domega, complex)
-    denom = np.vdot(l, d @ r)
+    denom = np.vdot(left_vec, d @ r)
     if abs(denom) == 0:
         raise ValueError("singular QNM pole normalization")
     if observable is None:
-        numer = np.vdot(l, r)
+        numer = np.vdot(left_vec, r)
     else:
         o = np.asarray(observable, complex)
-        numer = np.vdot(l, o @ r)
+        numer = np.vdot(left_vec, o @ r)
     return numer / denom
 
 
