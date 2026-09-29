@@ -45,15 +45,26 @@ def whitened_characteristics(K: np.ndarray, G: np.ndarray):
     return values, whitened, physical, min_k
 
 
-def track_by_overlap(vectors: np.ndarray):
-    """Track columns by maximum adjacent absolute overlap.
+def track_by_overlap(
+    vectors: np.ndarray,
+    values: np.ndarray | None = None,
+    *,
+    degeneracy_rtol: float = 1e-10,
+):
+    """Track columns by maximum adjacent overlap, with degenerate-subspace transport.
 
-    Returns tracked vectors, the permutation chosen at each radial step, and
-    per-branch adjacent absolute overlaps after sign alignment.
+    At an exact/near degeneracy an individual eigenvector is not unique.  In
+    that case the current degenerate subspace is orthogonally Procrustes-aligned
+    to the previously tracked subspace before continuing.  This prevents an
+    arbitrary LAPACK basis choice at a crossing from being misreported as a
+    physical mode swap.
     """
     v = np.asarray(vectors, float)
     if v.ndim != 3 or v.shape[1:] != (3, 3):
         raise ValueError("vectors must have shape (N,3,3)")
+    vals = None if values is None else np.asarray(values, float)
+    if vals is not None and vals.shape != (len(v), 3):
+        raise ValueError("values must have shape (N,3)")
 
     out = np.empty_like(v)
     out[0] = v[0]
@@ -66,6 +77,38 @@ def track_by_overlap(vectors: np.ndarray):
         raw = np.abs(out[i - 1].T @ v[i])
         best = max(perms, key=lambda p: sum(raw[j, p[j]] for j in range(3)))
         cur = v[i][:, best].copy()
+
+        if vals is not None:
+            current_values = vals[i, list(best)]
+            scale = max(1.0, float(np.max(np.abs(current_values))))
+            tol = degeneracy_rtol * scale
+            # Connected components of adjacent labels that are degenerate.
+            unused = set(range(3))
+            groups = []
+            while unused:
+                seed = unused.pop()
+                group = {seed}
+                changed = True
+                while changed:
+                    changed = False
+                    for k in list(unused):
+                        if any(
+                            abs(current_values[k] - current_values[j]) <= tol
+                            for j in group
+                        ):
+                            group.add(k)
+                            unused.remove(k)
+                            changed = True
+                groups.append(sorted(group))
+
+            for group in groups:
+                if len(group) <= 1:
+                    continue
+                cg = cur[:, group]
+                pg = out[i - 1][:, group]
+                u, _, vt = np.linalg.svd(cg.T @ pg)
+                cur[:, group] = cg @ (u @ vt)
+
         dots = np.sum(out[i - 1] * cur, axis=0)
         signs = np.where(dots < 0, -1.0, 1.0)
         cur *= signs[None, :]
@@ -74,7 +117,6 @@ def track_by_overlap(vectors: np.ndarray):
         overlaps[i] = np.abs(np.sum(out[i - 1] * out[i], axis=0))
 
     return out, chosen, overlaps
-
 
 def physical_component_fractions(physical_vectors: np.ndarray):
     x = np.asarray(physical_vectors, float)
@@ -86,7 +128,7 @@ def physical_component_fractions(physical_vectors: np.ndarray):
 
 def analyze_principal_tracking(K: np.ndarray, G: np.ndarray):
     values, whitened, physical, min_k = whitened_characteristics(K, G)
-    tracked_w, permutations_used, overlaps = track_by_overlap(whitened)
+    tracked_w, permutations_used, overlaps = track_by_overlap(whitened, values)
 
     # Apply the same tracked ordering/sign to physical vectors and eigenvalues.
     tracked_values = np.empty_like(values)
