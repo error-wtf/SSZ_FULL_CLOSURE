@@ -16,6 +16,7 @@ jobs:
       - run: ruff check src/ssz_p5 tests tools/release_manifest.py ssz_p5_full_pipeline.py
       - run: python tools/release_manifest.py --check
       - name: Run local KRGSM spectral-selection audit
+        if: always()
         run: python tools/run_spectral_selection_local_proxy.py
       - run: python ssz_p5_full_pipeline.py --strict
       - uses: actions/upload-artifact@v4
