@@ -67,21 +67,27 @@ def main() -> int:
     build_member()
     d = pd.read_csv(CSV)
     coeffs = coefficients_from_frame(d)
+    reducer = module("ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py")
+    frame = d.copy().sort_values("x").reset_index(drop=True)
+    if "phiprime" not in frame.columns:
+        frame["phiprime"] = frame["phi_r"]
     per_l = {}
     global_min = (float("inf"), None, None)
     for L in DEFAULT_L:
-        op = reduce_profile(coeffs, L)
-        K = (op.K + np.swapaxes(op.K, 1, 2)) / 2
+        result = reducer.canonical_audit(frame, int(L))
+        Kraw = np.asarray(result["K"], float)
+        K = (Kraw + np.swapaxes(Kraw, 1, 2)) / 2
         eig = np.linalg.eigvalsh(K)
         flat = int(np.argmin(eig))
         i, mode = np.unravel_index(flat, eig.shape)
         value = float(eig[i, mode])
         per_l[str(L)] = {
             "min_K": value,
-            "r": float(op.r[i]),
+            "r": float(coeffs.background.r[i]),
             "u": float(coeffs.background.u[i]),
             "mode_index": int(mode),
             "negative_rows": int(np.sum(np.min(eig, axis=1) <= 0)),
+            "max_K_asymmetry": float(np.max(np.abs(Kraw - np.swapaxes(Kraw, 1, 2)))),
         }
         if value < global_min[0]:
             global_min = (value, int(L), int(i))
