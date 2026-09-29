@@ -4,10 +4,12 @@ Fails loudly if SSZ modules are imported from any checkout other than the
 one this test runs in (canonical: /home/error/ssz-full-closure; the
 uppercase directory is a historical snapshot and must never leak in).
 """
+import os
 import sys
 from pathlib import Path
 
-CANONICAL = Path("/home/error/ssz-full-closure").resolve()
+RUNNING_ROOT = Path(__file__).resolve().parents[2]
+CANONICAL = Path(os.environ.get("SSZ_CANONICAL_ROOT", RUNNING_ROOT)).resolve()
 FORBIDDEN = Path("/home/error/SSZ_FULL_CLOSURE").resolve()
 
 
