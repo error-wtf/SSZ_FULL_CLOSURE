@@ -1,0 +1,46 @@
+name: Full spectral build and test
+
+on:
+  push:
+    branches:
+      - full-spectral-build-test-20260929
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  spectral-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Lint new spectral code
+        run: |
+          ruff check \
+            src/ssz_p5/qnm/spectral_weights.py \
+            tests/unit/test_spectral_weights.py \
+            tools/audit_current_spectral_selection.py \
+            tests/integration/test_current_spectral_readiness.py
+      - name: Unit spectral observable tests
+        run: python -m pytest -q tests/unit/test_spectral_weights.py
+      - name: Current-member build, principal tracking, global-promotion audit
+        run: python -m pytest -q tests/integration/test_current_spectral_readiness.py -s
+      - name: Current-member physics gates
+        run: |
+          python -m pytest -q \
+            tests/regression/test_g50_g70_g90_member.py \
+            tests/regression/test_g71_g72_sectors.py
+      - name: Full repository regression suite
+        run: python -m pytest -q
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: current-member-spectral-readiness
+          path: data/generated/spectral_selection_2026-09-29/
