@@ -37,7 +37,7 @@ from ssz_p5.production.electric_hybrid_onshell_central import build_onshell_cent
 ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "build/SPECTRAL_SELECTION_LOCAL_PROXY.json"
 OUT_MD = ROOT / "build/SPECTRAL_SELECTION_LOCAL_PROXY.md"
-L_VALUES = (6, 42, 1000)
+L_VALUES = (6, 12, 20, 42, 110, 420, 1000)
 RESOLUTIONS = (100, 160, 220)
 NMODES = 12
 POSITIVE_MODES = 6
