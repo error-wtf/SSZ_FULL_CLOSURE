@@ -38,7 +38,10 @@ def main():
         payload = {
             "status": "NOT_YET_EVALUABLE",
             "blocker": "MISSING_GLOBAL_CANONICAL_KRGM_EIGENOPERATOR",
-            "detail": (\n                "DIRECT_GLOBAL_KRGM_CERTIFICATE is absent; "\n                "no physical global eigenproblem is enabled."\n            ),
+            "detail": (
+                "DIRECT_GLOBAL_KRGM_CERTIFICATE is absent; "
+                "no physical global eigenproblem is enabled."
+            ),
         }
         _write(report_path, payload)
         print(json.dumps(payload))
