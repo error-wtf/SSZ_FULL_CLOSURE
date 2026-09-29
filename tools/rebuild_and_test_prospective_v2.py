@@ -29,7 +29,7 @@ from ssz_p5.numerics import module  # noqa: E402
 from ssz_p5.types import Coefficients41, P5Background  # noqa: E402
 
 CSV = ROOT / "data/generated/strong_field_transition_2026-09-21/TRANSITION_PROSPECTIVE_V2_TOTAL41.csv"
-REPORT = ROOT / "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE_REPLAY_2026-09-29.json"
+REPORT = ROOT / "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE_REPLAY_2026-09-29.json"\nFROZEN_GATE = ROOT / "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE.json"\nTRUST_U_MIN = 0.7002175544\nTRUST_U_MAX = 0.7079894973743436
 
 
 def build_member() -> None:
@@ -97,7 +97,7 @@ def main() -> int:
         "member": "PROSPECTIVE_V2_TRANSVERSE_ZERO",
         "source": str(CSV.relative_to(ROOT)),
         "required_L": list(DEFAULT_L),
-        "per_L_min_K": per_l,
+        "per_L_min_K": per_l,\n        "trusted_dense_domain": [TRUST_U_MIN, TRUST_U_MAX],\n        "frozen_gate_replay": frozen_replay,\n        "frozen_gate_replay_pass": replay_pass,
         "verdict": "K_PASS" if passed else "K_GHOST_FAIL",
         "chain_termination": "K_PASSED_CONTINUE" if passed else "FIRST_FAILING_GATE_K",
         "global_min_K": global_min[0],
@@ -109,7 +109,7 @@ def main() -> int:
     }
     REPORT.write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n")
     print(json.dumps(payload, indent=2, allow_nan=False))
-    return 0 if passed else 3
+    if not replay_pass:\n        return 4\n    return 0 if passed else 3
 
 
 if __name__ == "__main__":
