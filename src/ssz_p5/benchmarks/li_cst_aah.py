@@ -12,7 +12,6 @@ from dataclasses import dataclass
 import numpy as np
 from scipy.linalg import eigh_tridiagonal
 
-
 PHI_GOLDEN = (np.sqrt(5.0) - 1.0) / 2.0
 
 
