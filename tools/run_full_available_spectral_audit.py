@@ -10,7 +10,6 @@ import math
 from pathlib import Path
 
 import numpy as np
-import pandas as pd
 
 from ssz_p5.numerics import module
 from ssz_p5.production.electric_hybrid_onshell_central import build_onshell_central
