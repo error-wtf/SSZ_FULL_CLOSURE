@@ -101,10 +101,42 @@ def main() -> int:
                 cr_cross = float(us[last] + frac * (us[q] - us[last]))
                 break
             last = q
+        ring_samples = {}
+        for label, ur in {
+            "outer_ring": 2.0 / 3.0,
+            "inner_stable_ring": 0.7061346,
+        }.items():
+            nearest = int(np.argmin(np.abs(u - ur)))
+            # Linear interpolation of the symmetric K matrix on the dense u-grid.
+            su = np.argsort(u)
+            Kui = np.empty((Ks.shape[1], Ks.shape[2]))
+            Gui = np.empty((Gs.shape[1], Gs.shape[2]))
+            for aa in range(Ks.shape[1]):
+                for bb in range(Ks.shape[2]):
+                    Kui[aa, bb] = np.interp(ur, u[su], Ks[su, aa, bb])
+                    Gui[aa, bb] = np.interp(ur, u[su], Gs[su, aa, bb])
+            kwe = np.linalg.eigvalsh((Kui + Kui.T) / 2.0)
+            if np.min(kwe) > 0:
+                w, U = np.linalg.eigh((Kui + Kui.T) / 2.0)
+                invsqrt = U @ np.diag(1.0 / np.sqrt(w)) @ U.T
+                C = invsqrt @ ((Gui + Gui.T) / 2.0) @ invsqrt
+                cr_ring = float(np.linalg.eigvalsh((C + C.T) / 2.0)[0])
+            else:
+                cr_ring = None
+            ring_samples[label] = {
+                "u_target": float(ur),
+                "nearest_grid_u": float(u[nearest]),
+                "nearest_grid_delta_u": float(abs(u[nearest] - ur)),
+                "min_eig_K_interpolated": float(kwe[0]),
+                "mode_index_interpolated": int(np.argmin(kwe)),
+                "min_cr2_if_K_positive": cr_ring,
+            }
+
         per_L[str(int(L))] = {
             **scopes,
             "first_inward_K_zero_u_diagnostic": k_cross,
             "first_inward_cr2_zero_u_diagnostic": cr_cross,
+            "ring_samples": ring_samples,
         }
 
     payload = {
