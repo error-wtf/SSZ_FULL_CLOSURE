@@ -38,14 +38,14 @@ def main():
         payload = {
             "status": "NOT_YET_EVALUABLE",
             "blocker": "MISSING_GLOBAL_CANONICAL_KRGM_EIGENOPERATOR",
-            "detail": "DIRECT_GLOBAL_KRGM_CERTIFICATE is absent; no physical global eigenproblem is enabled.",
+            "detail": (\n                "DIRECT_GLOBAL_KRGM_CERTIFICATE is absent; "\n                "no physical global eigenproblem is enabled."\n            ),
         }
         _write(report_path, payload)
         print(json.dumps(payload))
         return 2
 
     try:
-        direct = require_direct_krgm_certificate(root / DIRECT, root)
+        require_direct_krgm_certificate(root / DIRECT, root)
     except RuntimeError as exc:
         payload = {
             "status": "NOT_YET_EVALUABLE",
