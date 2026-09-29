@@ -1,0 +1,58 @@
+name: Full geometric spectral audit
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  full-spectral-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+      MKL_NUM_THREADS: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Lint new spectral code
+        run: |
+          ruff check \
+            src/ssz_p5/benchmarks \
+            src/ssz_p5/qnm/principal_tracking.py \
+            src/ssz_p5/qnm/residue.py \
+            tests/scientific/test_geometric_spectral_selection.py \
+            tools/run_comprehensive_spectral_audit.py
+      - name: Unit and scientific tests
+        run: python -m pytest -q tests/scientific/test_geometric_spectral_selection.py tests/unit/test_spectral_selection.py
+      - name: Run comprehensive benchmark + current-member physics audit
+        run: python tools/run_comprehensive_spectral_audit.py | tee /tmp/full_spectral_audit.log
+      - name: Assert verdict semantics
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/spectral_selection_2026-09-29/COMPREHENSIVE_SPECTRAL_AUDIT.json")
+          d=json.loads(p.read_text())
+          assert d["verdicts"]["WEISZ_BENCHMARK"] == "PASS"
+          assert d["verdicts"]["LI_CST_AAH_BENCHMARK"] == "PASS"
+          assert d["verdicts"]["CURRENT_MEMBER_REBUILD"] == "PASS"
+          assert d["verdicts"]["SSZ_LOCAL_PRINCIPAL_KG"] == "PASS"
+          assert d["verdicts"]["SSZ_GLOBAL_SPECTRAL_WEIGHT"] == "NOT_YET_EVALUABLE"
+          assert d["ssz_global_observable_spectrum"]["blocker"] == "MISSING_CURRENT_ELECTRIC_CENTER_TO_INFINITY_SAME_ACTION_KRGSM"
+          print(json.dumps(d["verdicts"], indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: comprehensive-geometric-spectral-audit
+          path: |
+            data/generated/spectral_selection_2026-09-29/
