@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from ssz_p5.config import DEFAULT_L, SLOT_NAMES  # noqa: E402
-from ssz_p5.reducer.canonical import reduce_profile  # noqa: E402
+from ssz_p5.numerics import module  # noqa: E402
 from ssz_p5.types import Coefficients41, P5Background  # noqa: E402
 
 CSV = ROOT / "data/generated/strong_field_transition_2026-09-21/TRANSITION_PROSPECTIVE_V2_TOTAL41.csv"
