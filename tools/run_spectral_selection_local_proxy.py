@@ -245,7 +245,7 @@ def mode_diagnostics(r, omega2, modes, K_nodes):
             z[i, j] = float(q @ q)
 
     for j in range(len(use)):
-        norm = float(np.trapz(z[:, j], r))
+        norm = float(np.trapezoid(z[:, j], r))
         if norm > 0:
             z[:, j] /= norm
             canonical[:, :, j] /= math.sqrt(norm)
@@ -253,7 +253,7 @@ def mode_diagnostics(r, omega2, modes, K_nodes):
     mode_rows = []
     for j, n in enumerate(use):
         zz = z[:, j]
-        ipr = float(np.trapz(zz * zz, r))
+        ipr = float(np.trapezoid(zz * zz, r))
         imax = int(np.argmax(zz))
         ref = canonical[imax, :, j]
         ref /= max(np.linalg.norm(ref), 1e-300)
@@ -298,12 +298,12 @@ def mode_diagnostics(r, omega2, modes, K_nodes):
             for i in range(len(r)):
                 y = modes[i, :, use[j]]
                 vals.append(float(K_nodes[i][source] @ y))
-            amp = float(np.trapz(vals, r))
+            amp = float(np.trapezoid(vals, r))
             residues.append(amp * amp)
         residues = np.asarray(residues)
         W = z * residues[None, :]
-        inner = np.trapz(W[inner_slice], r[inner_slice], axis=0)
-        outer = np.trapz(W[outer_slice], r[outer_slice], axis=0)
+        inner = np.trapezoid(W[inner_slice], r[inner_slice], axis=0)
+        outer = np.trapezoid(W[outer_slice], r[outer_slice], axis=0)
         inner_top = int(use[int(np.argmax(inner))])
         outer_top = int(use[int(np.argmax(outer))])
         rank_reordering[str(source)] = {
