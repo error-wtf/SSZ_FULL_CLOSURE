@@ -10,7 +10,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 import numpy as np
-
 from scipy.linalg import eigh_tridiagonal
 
 
