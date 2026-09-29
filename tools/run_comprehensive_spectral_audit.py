@@ -22,8 +22,10 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from ssz_p5.benchmarks.li_cst_aah import classify_states, solve as solve_li
-from ssz_p5.benchmarks.weisz_fk import local_optical_weights, solve as solve_fk
+from ssz_p5.benchmarks.li_cst_aah import classify_states
+from ssz_p5.benchmarks.li_cst_aah import solve as solve_li
+from ssz_p5.benchmarks.weisz_fk import local_optical_weights
+from ssz_p5.benchmarks.weisz_fk import solve as solve_fk
 from ssz_p5.numerics import module
 from ssz_p5.production.electric_hybrid_onshell_central import (
     _REQUIRED_L,
@@ -64,7 +66,11 @@ def audit_member():
 
     frozen = pd.read_csv(MEMBER_CSV, index_col=0)
     build = build_onshell_central(ROOT)
-    fresh = build.action[frozen.drop(columns=["A0"]).columns].sort_values("u").reset_index(drop=True)
+    fresh = (
+        build.action[frozen.drop(columns=["A0"]).columns]
+        .sort_values("u")
+        .reset_index(drop=True)
+    )
     ref = frozen.drop(columns=["A0"]).reset_index(drop=True)
     max_abs = {}
     for col in ref.columns:
@@ -164,7 +170,10 @@ def audit_weisz():
     return {
         "cases": cases,
         "checks": {
-            "weights_complete": all(abs(v["optical_weight_sum"] - 1.0) < 1e-10 for v in cases.values()),
+            "weights_complete": all(
+                abs(v["optical_weight_sum"] - 1.0) < 1e-10
+                for v in cases.values()
+            ),
             "high_order_strong_hierarchy": bool(weak[0] / max(weak[5], 1e-300) > 1e4),
             "high_order_real_space_extended": bool(
                 cases["beta_0.02_N48_M49"]["real_ipr_median"] < 0.08
@@ -215,13 +224,18 @@ def audit_global_readiness(member):
     ready = center_to_infinity and bool(existing)
     return {
         "status": "READY" if ready else "NOT_YET_EVALUABLE",
-        "blocker": None if ready else "MISSING_CURRENT_ELECTRIC_CENTER_TO_INFINITY_SAME_ACTION_KRGSM",
+        "blocker": (
+            None
+            if ready
+            else "MISSING_CURRENT_ELECTRIC_CENTER_TO_INFINITY_SAME_ACTION_KRGSM"
+        ),
         "current_member_domain": domain,
         "legacy_direct_certificates_present": existing,
         "legacy_qnm_gate_member_binding": "SSZ_P5_REGIONAL_PRODUCTION_MEMBER_2026-09-17.json",
         "current_model_lock_binding": "ELECTRIC_PRODUCTION_MEMBER_CURRENT",
         "warning": (
-            "Do not use a legacy regional-member certificate to authorize the current electric member."
+            "Do not use a legacy regional-member certificate to authorize "
+            "the current electric member."
         ),
     }
 
@@ -246,7 +260,11 @@ def main() -> int:
             "WEISZ_BENCHMARK": "PASS" if all(weisz["checks"].values()) else "FAIL",
             "LI_CST_AAH_BENCHMARK": li["status"],
             "CURRENT_MEMBER_REBUILD": (
-                "PASS" if member_audit["hash_binding_pass"] and member_audit["fresh_builder_pass_1e_10"]
+                "PASS"
+                if (
+                    member_audit["hash_binding_pass"]
+                    and member_audit["fresh_builder_pass_1e_10"]
+                )
                 else "FAIL"
             ),
             "SSZ_LOCAL_PRINCIPAL_KG": "PASS" if principal["all_finite_L_pass"] else "FAIL",
