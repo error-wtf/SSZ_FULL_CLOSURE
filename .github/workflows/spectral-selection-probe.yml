@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - spectral-selection-probe-20260929
+  pull_request:
   workflow_dispatch:
 
 permissions:
