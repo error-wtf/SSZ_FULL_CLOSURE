@@ -1,0 +1,46 @@
+name: Current member full-domain audit
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Fresh current-member full-available-domain audit
+        run: python tools/audit_current_member_full_domain.py
+      - name: Verify report semantics
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/generated/spectral/CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_AUDIT.json")
+          d = json.loads(p.read_text())
+          assert d["registered_production_window_pass"] is True
+          assert d["verdict"] in {
+              "CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_K_FAIL",
+              "CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_RADIAL_FAIL",
+              "CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_PASS",
+          }
+          print(json.dumps({
+              "verdict": d["verdict"],
+              "blocker": d["blocker"],
+              "full_available_domain_K_pass": d["full_available_domain_K_pass"],
+              "full_available_domain_radial_pass": d["full_available_domain_radial_pass"],
+          }, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-full-domain-audit
+          path: data/generated/spectral/CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_AUDIT.json
