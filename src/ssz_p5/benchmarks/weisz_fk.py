@@ -48,7 +48,6 @@ def equilibrium(beta: float, n_periods: int, atoms: int) -> np.ndarray:
         raise ValueError("invalid FK parameters")
     a = 1.0
     lam = atoms * a / n_periods
-    q = 2.0 * np.pi / lam
     seeds = []
     # Common shifts sample the substrate phase; a tiny deterministic ripple
     # helps L-BFGS leave a symmetry saddle if one is encountered.
