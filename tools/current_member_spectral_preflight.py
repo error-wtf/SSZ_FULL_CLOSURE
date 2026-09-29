@@ -77,7 +77,35 @@ def main() -> int:
                     np.sum(finite_cr <= 0)
                 ) if finite_cr.size else None,
             }
-        per_L[str(int(L))] = scopes
+
+        # Locate the first loss of a healthy radial principal sector when
+        # moving inward (increasing u) from the certified production window.
+        order = np.argsort(u)
+        us = u[order]
+        k0 = ke[order, 0]
+        c0 = cr2[order]
+        k_cross = None
+        for q in range(1, len(us)):
+            if k0[q - 1] > 0 and k0[q] <= 0:
+                # Linear zero interpolation is diagnostic only.
+                frac = k0[q - 1] / (k0[q - 1] - k0[q])
+                k_cross = float(us[q - 1] + frac * (us[q] - us[q - 1]))
+                break
+        cr_cross = None
+        last = None
+        for q in range(len(us)):
+            if not np.isfinite(c0[q]):
+                continue
+            if last is not None and c0[last] > 0 and c0[q] <= 0:
+                frac = c0[last] / (c0[last] - c0[q])
+                cr_cross = float(us[last] + frac * (us[q] - us[last]))
+                break
+            last = q
+        per_L[str(int(L))] = {
+            **scopes,
+            "first_inward_K_zero_u_diagnostic": k_cross,
+            "first_inward_cr2_zero_u_diagnostic": cr_cross,
+        }
 
     payload = {
         "member": "ELECTRIC_PRODUCTION_MEMBER_CURRENT",
