@@ -4,20 +4,21 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-REPORT = (
-    ROOT
-    / "data/generated/spectral_selection_2026-09-29"
-    / "CURRENT_MEMBER_SPECTRAL_READINESS_AUDIT.json"
-)
 
 
-def test_current_member_spectral_readiness_audit():
+def test_current_member_spectral_readiness_audit(tmp_path):
+    report = tmp_path / "CURRENT_MEMBER_SPECTRAL_READINESS_AUDIT.json"
     subprocess.run(
-        [sys.executable, str(ROOT / "tools/audit_current_spectral_selection.py")],
+        [
+            sys.executable,
+            str(ROOT / "tools/audit_current_spectral_selection.py"),
+            "--output",
+            str(report),
+        ],
         cwd=ROOT,
         check=True,
     )
-    data = json.loads(REPORT.read_text())
+    data = json.loads(report.read_text())
     assert data["member_hash_match"] is True
     assert data["principal_status"] == "PRINCIPAL_CHARACTER_SMOOTH"
     assert all(row["pass"] for row in data["principal_audit"])
