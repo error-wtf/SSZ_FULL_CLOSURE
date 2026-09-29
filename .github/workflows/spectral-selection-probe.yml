@@ -1,0 +1,50 @@
+name: SSZ spectral selection probe
+on:
+  push:
+    branches:
+      - bingsi/spectral-selection-probe
+  pull_request:
+    paths:
+      - 'tools/run_spectral_selection_local_proxy.py'
+      - '.github/workflows/spectral-selection-probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - run: python tools/run_spectral_selection_local_proxy.py
+      - name: Print compact result
+        run: |
+          python - <<'PY'
+          import json
+          p='data/generated/spectral_selection_probe/SPECTRAL_SELECTION_LOCAL_PROXY.json'
+          d=json.load(open(p))
+          hi=max(r['N'] for r in d['runs'])
+          print('COMPACT_RESULT_BEGIN')
+          print('local_proxy_verdict=', d['local_proxy_verdict'])
+          print('global_physical_verdict=', d['global_physical_verdict'])
+          for r in d['runs']:
+              if r['N']==hi:
+                  print('RUN', json.dumps(r, sort_keys=True))
+          for c in d['convergence']:
+              print('CONV', json.dumps(c, sort_keys=True))
+          print('COMPACT_RESULT_END')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: spectral-selection-local-proxy
+          path: |
+            data/generated/spectral_selection_probe/SPECTRAL_SELECTION_LOCAL_PROXY.json
+            data/generated/spectral_selection_probe/SPECTRAL_SELECTION_LOCAL_MODES.csv
