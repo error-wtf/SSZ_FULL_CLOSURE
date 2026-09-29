@@ -1,0 +1,38 @@
+name: Full physics regression
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  physics-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+      MKL_NUM_THREADS: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run complete pytest suite
+        run: python -m pytest -q
+      - name: Run strict full physics pipeline
+        run: python ssz_p5_full_pipeline.py --strict
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-physics-regression
+          path: |
+            FULL_PIPELINE_REPORT.json
+            FULL_PIPELINE_REPORT.md
+            build/audit.json
+            build/gates.csv

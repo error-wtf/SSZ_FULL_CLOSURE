@@ -1,0 +1,47 @@
+name: Spectral selection probe
+
+on:
+  push:
+    branches:
+      - spectral-selection-probe-20260929
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Lint spectral-selection changes
+        run: |
+          ruff check \
+            src/ssz_p5/qnm/spectral_selection.py \
+            tests/unit/test_spectral_selection.py \
+            tools/run_spectral_selection_probe.py
+      - run: python -m pytest -q tests/unit/test_spectral_selection.py
+      - name: Verify fail-closed current physical status
+        shell: bash
+        run: |
+          set +e
+          python tools/run_spectral_selection_probe.py
+          rc=$?
+          set -e
+          test "$rc" -eq 2
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/generated/spectral/SPECTRAL_SELECTION_REPORT.json")
+          d = json.loads(p.read_text())
+          assert d["status"] == "NOT_YET_EVALUABLE"
+          assert d["blocker"] == "MISSING_GLOBAL_CANONICAL_KRGM_EIGENOPERATOR"
+          print(json.dumps(d, indent=2))
+          PY

@@ -1,0 +1,49 @@
+name: Rebuild and test prospective v2
+
+on:
+  push:
+    branches:
+      - spectral-selection-probe-20260929
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rebuild-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Rebuild member and execute production finite-L K gate
+        shell: bash
+        run: |
+          set +e
+          python tools/rebuild_and_test_prospective_v2.py | tee /tmp/prospective_v2_replay.log
+          rc=${PIPESTATUS[0]}
+          set -e
+          test "$rc" -eq 3
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE_REPLAY_2026-09-29.json")
+          d=json.loads(p.read_text())
+          assert d["verdict"]=="K_GHOST_FAIL"
+          assert d["chain_termination"]=="FIRST_FAILING_GATE_K"
+          assert all(d["per_L_min_K"][str(L)]["min_K"] < 0 for L in [6,12,20,42,110,420,1000])
+          print(json.dumps(d, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: prospective-v2-real-k-gate
+          path: |
+            data/generated/strong_field_transition_2026-09-21/TRANSITION_PROSPECTIVE_V2_TOTAL41.csv
+            data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_PROVENANCE.json
+            data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE_REPLAY_2026-09-29.json
