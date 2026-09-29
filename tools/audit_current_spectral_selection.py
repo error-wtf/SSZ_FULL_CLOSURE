@@ -15,6 +15,7 @@ The script is intentionally fail-closed for the global coupled spectral layer.
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import itertools
 import json
@@ -189,7 +190,14 @@ def _endpoint_comparison(current, neighbor, edge, side):
 
 
 def main():
-    OUT.mkdir(parents=True, exist_ok=True)
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=OUT / "CURRENT_MEMBER_SPECTRAL_READINESS_AUDIT.json",
+    )
+    args = parser.parse_args()
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     lock = json.loads(MODEL_LOCK.read_text())
     manifest = json.loads(MEMBER_JSON.read_text())
     expected_hash = lock["action_member_sha256"]
@@ -261,8 +269,7 @@ def main():
             "It is not a substitute for observable QNM/Green-function residues."
         ),
     }
-    path = OUT / "CURRENT_MEMBER_SPECTRAL_READINESS_AUDIT.json"
-    path.write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n")
+    args.output.write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n")
     print(json.dumps(payload, indent=2, allow_nan=False))
     return 0 if principal_status == "PRINCIPAL_CHARACTER_SMOOTH" else 3
 
