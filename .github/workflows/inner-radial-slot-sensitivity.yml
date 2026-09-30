@@ -1,0 +1,28 @@
+name: Inner radial 41-slot sensitivity
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - spectroscopy-finalization-20260930
+    paths:
+      - tools/audit_inner_radial_slot_sensitivity.py
+      - .github/workflows/inner-radial-slot-sensitivity.yml
+
+jobs:
+  sensitivity:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Rank 41-slot sensitivity of inner radial crossing
+        run: python tools/audit_inner_radial_slot_sensitivity.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inner-radial-slot-sensitivity
+          path: data/generated/spectral/CURRENT_MEMBER_INNER_RADIAL_SLOT_SENSITIVITY.json
