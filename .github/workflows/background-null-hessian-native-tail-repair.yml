@@ -1,0 +1,48 @@
+name: Background-null Hessian native-tail repair
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+
+jobs:
+  repair:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run action-consistent background-null Hessian tail repair
+        run: python tools/run_background_null_hessian_native_tail_repair.py
+      - name: Verify report
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/generated/spectral/BACKGROUND_NULL_HESSIAN_NATIVE_TAIL_REPAIR.json").read_text())
+          assert d["status"] in {
+            "BACKGROUND_NULL_HESSIAN_NATIVE_TAIL_REPAIR_PASS",
+            "BACKGROUND_NULL_HESSIAN_NATIVE_TAIL_REPAIR_IMPROVED_NOT_CLOSED",
+            "BACKGROUND_NULL_HESSIAN_NATIVE_TAIL_REPAIR_STALLED",
+          }
+          assert d["all_production_K_pass"]
+          print(json.dumps({
+            "status":d["status"],
+            "outer":d["all_outer_K_pass"],
+            "inner_radial":d["all_inner_radial_pass"],
+            "initial":d["initial_sample_worst"],
+            "final":d["final_sample_worst"],
+            "next":d["next_target"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: background-null-hessian-native-tail-repair
+          path: |
+            data/generated/spectral/BACKGROUND_NULL_HESSIAN_NATIVE_TAIL_REPAIR.json
+            data/generated/spectral/BACKGROUND_NULL_HESSIAN_NATIVE_TAIL_REPAIR_DIRECT41.csv
