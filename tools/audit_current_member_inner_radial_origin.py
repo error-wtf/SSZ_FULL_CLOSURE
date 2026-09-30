@@ -101,9 +101,25 @@ def audit_stream(d, red, L):
             comps[i] = np.abs(y/norm)**2
 
     inner = u <= 0.62
-    j = np.flatnonzero(inner)[np.nanargmin(crmin[inner])]
+    finite_inner = inner & np.isfinite(crmin)
+    if not np.any(finite_inner):
+        return {
+            "available": False,
+            "reason": "no finite radial characteristic rows with K>0 in inner tail",
+            "min_K_inner": float(np.min(kmin[inner])) if np.any(inner) else None,
+            "min_cr2_inner": None,
+            "u_at_min_cr2": None,
+            "first_cr2_zero_near_0p62": None,
+            "negative_cr2_rows_inner": None,
+            "failing_eigenvector_component_power": None,
+        }
+
+    finite_idx = np.flatnonzero(finite_inner)
+    j = finite_idx[int(np.argmin(crmin[finite_inner]))]
     z = first_zero_near_boundary(u[u<=0.625], crmin[u<=0.625])
     return {
+        "available": True,
+        "reason": None,
         "min_K_inner": float(np.min(kmin[inner])),
         "min_cr2_inner": float(crmin[j]),
         "u_at_min_cr2": float(u[j]),
@@ -166,7 +182,13 @@ def main():
     }
 
     def fails(name):
-        return any(results[name][str(L)]["min_cr2_inner"] < 0 for L in DEFAULT_L)
+        vals = [
+            results[name][str(L)]["min_cr2_inner"]
+            for L in DEFAULT_L
+            if results[name][str(L)].get("available", True)
+            and results[name][str(L)]["min_cr2_inner"] is not None
+        ]
+        return bool(vals) and any(v < 0 for v in vals)
 
     flags = {name: fails(name) for name in stages}
 
@@ -190,10 +212,13 @@ def main():
     locked = results["S3_locked_current"]
     zeros = [locked[str(L)]["first_cr2_zero_near_0p62"] for L in DEFAULT_L]
     zeros_f = [z for z in zeros if z is not None]
-    comp = np.array([
+    comp_rows = [
         list(locked[str(L)]["failing_eigenvector_component_power"].values())
         for L in DEFAULT_L
-    ], float)
+        if locked[str(L)].get("available", True)
+        and locked[str(L)]["failing_eigenvector_component_power"] is not None
+    ]
+    comp = np.array(comp_rows, float) if comp_rows else np.empty((0,3))
 
     report = {
         "scope": "inner-tail radial characteristic origin audit; no repair/no fitting",
@@ -204,14 +229,14 @@ def main():
             "zero_u_mean": float(np.mean(zeros_f)) if zeros_f else None,
             "zero_u_range": float(np.ptp(zeros_f)) if len(zeros_f)>1 else 0.0 if zeros_f else None,
             "mean_failing_component_power": {
-                "psi": float(np.mean(comp[:,0])),
-                "dphi": float(np.mean(comp[:,1])),
-                "V": float(np.mean(comp[:,2])),
+                "psi": float(np.mean(comp[:,0])) if len(comp) else None,
+                "dphi": float(np.mean(comp[:,1])) if len(comp) else None,
+                "V": float(np.mean(comp[:,2])) if len(comp) else None,
             },
             "component_power_std": {
-                "psi": float(np.std(comp[:,0])),
-                "dphi": float(np.std(comp[:,1])),
-                "V": float(np.std(comp[:,2])),
+                "psi": float(np.std(comp[:,0])) if len(comp) else None,
+                "dphi": float(np.std(comp[:,1])) if len(comp) else None,
+                "V": float(np.std(comp[:,2])) if len(comp) else None,
             },
         },
         "diagnosis": diagnosis,
