@@ -29,10 +29,11 @@ jobs:
           p=Path("data/generated/spectral/NATIVE_WINDOW_SPECTROSCOPY_REPORT.json")
           d=json.loads(p.read_text())
           assert d["finite_window_status"] in {
-            "FINITE_WINDOW_SPECTROSCOPY_TACHYONIC",
-            "FINITE_WINDOW_SPECTRAL_WEIGHT_REORDERING",
+            "FINITE_WINDOW_SPECTROSCOPY_BULK_NOT_CONVERGED",
+            "FINITE_WINDOW_BULK_RESIDUE_REORDERING_WITH_IR_BOUNDARY_SENSITIVITY",
+            "FINITE_WINDOW_SPECTROSCOPY_IR_BOUNDARY_SENSITIVE",
+            "FINITE_WINDOW_BULK_RESIDUE_REORDERING",
             "FINITE_WINDOW_SPECTRAL_SELECTION_NULL",
-            "FINITE_WINDOW_SPECTROSCOPY_NOT_CONVERGED",
           }
           assert d["global_qnm_gate"]["status"] in {"BLOCKED","READY"}
           print(json.dumps({
