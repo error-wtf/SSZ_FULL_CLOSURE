@@ -1,0 +1,45 @@
+name: SSZ fixed-observable spectroscopy v2
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  spectroscopy-v2:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run fixed-observable generalized residue spectroscopy
+        run: python tools/run_ssz_fixed_observable_spectroscopy_v2.py
+      - name: Verify
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V2.json").read_text())
+          q=d["local_fixed_observable_principal_spectroscopy"]
+          assert q["status"] in {
+            "LOCAL_FIXED_OBSERVABLE_RESIDUE_REORDERING_DETECTED",
+            "LOCAL_FIXED_OBSERVABLE_RESIDUE_REORDERING_NULL",
+            "LOCAL_FIXED_OBSERVABLE_SPECTROSCOPY_CONTROL_FAIL",
+          }
+          assert q["all_controls_pass"]
+          print(json.dumps({
+            "global":d["global_physical_spectroscopy"],
+            "local_status":q["status"],
+            "any_reorder":q["any_residue_ranking_reordering"],
+            "any_noncommon":q["any_non_common_frequency_scaling"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ssz-fixed-observable-spectroscopy-v2
+          path: data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V2.json
