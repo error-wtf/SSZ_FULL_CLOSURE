@@ -1,0 +1,44 @@
+name: Current member sign-branch diagnostic
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Test sign and branch events around kinetic zero
+        run: python tools/diagnose_current_member_sign_branch.py
+      - name: Verify artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/generated/spectral/CURRENT_MEMBER_SIGN_BRANCH_DIAGNOSTIC.json")
+          d = json.loads(p.read_text())
+          assert d["verdict"] in {
+              "COLOCATED_SIGN_OR_BRANCH_EVENT_FOUND",
+              "NO_EXPLICIT_SIGN_FLIP_COLOCATED_WITH_K_ZERO",
+          }
+          print(json.dumps({
+              "verdict": d["verdict"],
+              "common_K_zero_median_u": d["common_K_zero_median_u"],
+              "explicit_profile_sign_flips_window": d["explicit_profile_sign_flips_window"],
+              "A2_sign_flip_summary": d["A2_sign_flip_summary"],
+              "colocated": d["colocated_with_K_zero_within_5e-4"],
+          }, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-sign-branch-diagnostic
+          path: data/generated/spectral/CURRENT_MEMBER_SIGN_BRANCH_DIAGNOSTIC.json
