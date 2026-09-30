@@ -1,0 +1,38 @@
+name: Current member Eq131 f4X branch audit
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  f4x-branch:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Solve Eq131 pointwise for f4X and test full operator
+        run: python tools/audit_current_member_eq131_f4x_branch.py
+      - name: Verify
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/generated/spectral/CURRENT_MEMBER_EQ131_F4X_BRANCH_AUDIT.json").read_text())
+          assert d["diagnosis"] in {
+            "F4X_BRANCH_SATISFIES_EQ131_AND_ALL_L_TAIL_K",
+            "F4X_BRANCH_REMOVES_NEW_HIGH_L_GHOST_BUT_OLD_LOW_L_GHOST_REMAINS",
+            "F4X_BRANCH_DOES_NOT_REMOVE_NEW_HIGH_L_GHOST",
+          }
+          print(json.dumps({"diagnosis":d["diagnosis"],"next_target":d["next_target"],"f4X_delta":d["f4X_delta"]},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-eq131-f4x-branch-audit
+          path: data/generated/spectral/CURRENT_MEMBER_EQ131_F4X_BRANCH_AUDIT.json
