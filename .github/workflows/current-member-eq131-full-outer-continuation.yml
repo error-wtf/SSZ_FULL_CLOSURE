@@ -1,0 +1,51 @@
+name: Current member full outer Eq131 continuation
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  full-outer-continuation:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Continue Eq131 branch across the complete native outer tail
+        run: python tools/run_current_member_eq131_full_outer_continuation.py
+      - name: Verify
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/spectral/CURRENT_MEMBER_EQ131_FULL_OUTER_CONTINUATION.json")
+          d=json.loads(p.read_text())
+          assert d["status"] in {
+            "FULL_NATIVE_OUTER_EQ131_K_PASS",
+            "FULL_NATIVE_OUTER_EQ131_K_IMPROVED_NOT_CLOSED",
+            "FULL_NATIVE_OUTER_EQ131_K_STALLED",
+          }
+          assert d["production_action_max_abs_shift"] < 1e-14
+          for q in ("action_csv","direct41_csv"):
+              assert Path(d["artifacts"][q]).exists()
+          print(json.dumps({
+            "status":d["status"],
+            "initial":d["initial_full_outer_worst"],
+            "final":d["final_full_outer_worst"],
+            "background":d["background_max_abs_outer"],
+            "next_target":d["next_target"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-full-outer-eq131-continuation
+          path: |
+            data/generated/spectral/CURRENT_MEMBER_EQ131_FULL_OUTER_CONTINUATION.json
+            data/generated/spectral/CURRENT_MEMBER_EQ131_FULL_OUTER_CONTINUATION_ACTION.csv
+            data/generated/spectral/CURRENT_MEMBER_EQ131_FULL_OUTER_CONTINUATION_DIRECT41.csv
