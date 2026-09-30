@@ -1,0 +1,38 @@
+name: Current member inner radial controllability
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  inner-radial:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Audit Eq131-compatible inner radial controllability
+        run: python tools/audit_current_member_inner_radial_controllability.py
+      - name: Verify
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/generated/spectral/CURRENT_MEMBER_INNER_RADIAL_PROJECTED_CONTROLLABILITY.json").read_text())
+          assert d["diagnosis"] in {
+            "INNER_RADIAL_EQ131_COMPATIBLE_COMMON_TANGENT_EXISTS",
+            "INNER_RADIAL_PER_L_TANGENTS_EXIST_NO_COMMON_DIRECTION",
+            "INNER_RADIAL_EQ131_CONSTRAINED_CONTROLLABILITY_LOST",
+          }
+          print(json.dumps({"diagnosis":d["diagnosis"],"next":d["next_target"],"all_common":d["all_points_common_all_L_positive_direction"]},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-inner-radial-controllability
+          path: data/generated/spectral/CURRENT_MEMBER_INNER_RADIAL_PROJECTED_CONTROLLABILITY.json
