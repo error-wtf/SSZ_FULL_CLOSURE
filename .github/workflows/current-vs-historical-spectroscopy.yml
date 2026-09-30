@@ -1,0 +1,28 @@
+name: Current vs historical central spectroscopy control
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - spectroscopy-finalization-20260930
+    paths:
+      - tools/audit_current_vs_historical_spectroscopy.py
+      - .github/workflows/current-vs-historical-spectroscopy.yml
+
+jobs:
+  compare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Compare current and historical central spectroscopy
+        run: python tools/audit_current_vs_historical_spectroscopy.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-vs-historical-central-spectroscopy
+          path: data/generated/spectral/CURRENT_VS_HISTORICAL_CENTRAL_SPECTROSCOPY.json
