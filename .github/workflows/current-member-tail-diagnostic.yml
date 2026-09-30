@@ -1,0 +1,44 @@
+name: Diagnose current member tail failure
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Decompose and localize current-member tail failure
+        run: python tools/diagnose_current_member_tail_failure.py
+      - name: Verify diagnostic artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/generated/spectral/CURRENT_MEMBER_TAIL_FAILURE_DIAGNOSTIC.json")
+          d = json.loads(p.read_text())
+          assert d["diagnosis"] in {
+              "TAIL_GHOST_INDUCED_BY_REGISTERED_G2XX_LIFT_RESPONSE",
+              "TAIL_GHOST_ALREADY_PRESENT_BEFORE_G2XX_LIFT",
+              "NO_TAIL_K_GHOST_REPRODUCED",
+          }
+          print(json.dumps({
+              "diagnosis": d["diagnosis"],
+              "all_pre_lift_tail_K_pass": d["all_pre_lift_tail_K_pass"],
+              "all_locked_tail_K_pass": d["all_locked_tail_K_pass"],
+              "changed_slots": d["changed_41_slots_pre_to_locked"],
+          }, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-tail-failure-diagnostic
+          path: data/generated/spectral/CURRENT_MEMBER_TAIL_FAILURE_DIAGNOSTIC.json
