@@ -1,0 +1,43 @@
+name: Current member Eq131 forcing audit
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  eq131-forcing:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Test Eq131/A2 forcing of new high-L ghost
+        run: python tools/audit_current_member_eq131_forcing.py
+      - name: Verify artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/generated/spectral/CURRENT_MEMBER_EQ131_FORCING_AUDIT.json").read_text())
+          assert d["diagnosis"] in {
+            "NEW_HIGH_L_GHOST_IS_TIED_TO_EQ131_A2_ENFORCEMENT_NOT_JA_E00_E11",
+            "SOURCE_F3_ALGEBRAIC_BRANCH_REPAIRS_HIGH_L_WITHOUT_LARGE_EQ131_PENALTY",
+            "ALGEBRAIC_SOURCE_F3_BRANCH_DOES_NOT_REMOVE_NEW_HIGH_L_GHOST",
+          }
+          print(json.dumps({
+            "diagnosis":d["diagnosis"],
+            "next_target":d["next_target"],
+            "repairs_new_highL":d["repairs_new_highL_110_420_1000"],
+            "eq131":d["eq131_residual_max_abs"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-eq131-forcing-audit
+          path: data/generated/spectral/CURRENT_MEMBER_EQ131_FORCING_AUDIT.json
