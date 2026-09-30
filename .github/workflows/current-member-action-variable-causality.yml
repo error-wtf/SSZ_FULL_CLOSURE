@@ -1,0 +1,47 @@
+name: Current member action-variable causality audit
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  action-causality:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Trace e1 ghost to action variables
+        run: python tools/audit_current_member_action_variable_causality.py
+      - name: Verify artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/generated/spectral/CURRENT_MEMBER_ACTION_VARIABLE_CAUSALITY_AUDIT.json")
+          d = json.loads(p.read_text())
+          assert d["diagnosis"] in {
+              "F3_CHANNEL_IS_SUFFICIENT_TO_REMOVE_CURRENT_ALL_L_TAIL_GHOST_IN_COUNTERFACTUAL_ACTION_REPLAY",
+              "DISTRIBUTED_A2_ACTION_CHANNELS_REQUIRED_FOR_TAIL_GHOST_REMOVAL",
+              "A2_ACTION_VARIABLE_CAUSE_NOT_ISOLATED_BY_TESTED_RESTORES",
+          }
+          for name, v in d["variants"].items():
+              assert v["e1_identity"]["max_scaled"] < 1e-10, (name, v["e1_identity"])
+          print(json.dumps({
+              "diagnosis": d["diagnosis"],
+              "next_target": d["next_target"],
+              "f3_repairs_all": d["f3_restore_repairs_all_tested_L"],
+              "L1000_current": d["L1000_current_tail_min_K"],
+              "L1000_restore_f3": d["L1000_restore_f3_tail_min_K"],
+          }, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-action-variable-causality-audit
+          path: data/generated/spectral/CURRENT_MEMBER_ACTION_VARIABLE_CAUSALITY_AUDIT.json
