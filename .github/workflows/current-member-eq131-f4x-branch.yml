@@ -29,6 +29,7 @@ jobs:
             "F4X_BRANCH_SATISFIES_EQ131_AND_ALL_L_TAIL_K",
             "F4X_BRANCH_REMOVES_NEW_HIGH_L_GHOST_BUT_OLD_LOW_L_GHOST_REMAINS",
             "F4X_BRANCH_DOES_NOT_REMOVE_NEW_HIGH_L_GHOST",
+            "EQ131_IS_POINTWISE_INDEPENDENT_OF_F4X_ON_THIS_JA_REDUCED_BRANCH",
           }
           print(json.dumps({"diagnosis":d["diagnosis"],"next_target":d["next_target"],"f4X_delta":d["f4X_delta"]},indent=2))
           PY
