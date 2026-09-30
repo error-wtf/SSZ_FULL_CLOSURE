@@ -1,0 +1,28 @@
+name: Inner radial projected controllability
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - spectroscopy-finalization-20260930
+    paths:
+      - tools/audit_inner_radial_projected_controllability.py
+      - .github/workflows/inner-radial-projected-controllability.yml
+
+jobs:
+  inner-control:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Test inner radial Eq131-compatible action controllability
+        run: python tools/audit_inner_radial_projected_controllability.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inner-radial-projected-controllability
+          path: data/generated/spectral/INNER_RADIAL_PROJECTED_CONTROLLABILITY.json
