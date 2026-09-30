@@ -122,8 +122,25 @@ def main() -> int:
         q=vals(i,xx)
         f4Xnew[i]=xx; f3[i]=q[0]; f2F[i]=q[1]
 
+    if tiny == len(ids):
+        result = {
+            "scope": "Eq131 f4X sensitivity audit; diagnostic only",
+            "rows": int(len(ids)),
+            "zero_sensitivity_rows": int(tiny),
+            "diagnosis": "EQ131_IS_POINTWISE_INDEPENDENT_OF_F4X_ON_THIS_JA_REDUCED_BRANCH",
+            "next_target": "TEST_F4_BRANCH_WITH_MODERN_FULL_ACTION_REEMISSION",
+            "interpretation": (
+                "With v6 fixed and f3/f2F eliminated through the exact Appendix-A/JA relations, "
+                "the Eq131 residual has numerically zero linear sensitivity to f4X on every row. "
+                "Therefore f4X cannot be used as the missing branch freedom for Eq131 here."
+            ),
+        }
+        OUT.parent.mkdir(parents=True, exist_ok=True)
+        OUT.write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
+        print(json.dumps(result, indent=2, allow_nan=False))
+        return 0
     if tiny or not np.isfinite(f4Xnew[ids]).all():
-        raise RuntimeError(f"f4X solve failed on {tiny} rows")
+        raise RuntimeError(f"partial f4X sensitivity failure on {tiny} rows")
 
     f2old=prof.f2.to_numpy(float); f2Xold=prof.f2X.to_numpy(float)
     A=r**2*f; kap=h*ph**2
