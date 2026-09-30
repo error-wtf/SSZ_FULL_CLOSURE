@@ -1,0 +1,28 @@
+name: Current member inner radial origin audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+    paths:
+      - tools/audit_current_member_inner_radial_origin.py
+      - .github/workflows/current-member-inner-radial-origin.yml
+
+jobs:
+  inner-radial:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Localize inner radial characteristic failure
+        run: python tools/audit_current_member_inner_radial_origin.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-inner-radial-origin
+          path: data/generated/spectral/CURRENT_MEMBER_INNER_RADIAL_ORIGIN_AUDIT.json
