@@ -90,6 +90,33 @@ def _pairset(pairs):
     return {tuple(map(int, p)) for p in pairs}
 
 
+def _binned_pair_inversions(P, *, margin=0.08):
+    P=np.asarray(P,float)
+    if P.ndim!=2 or P.shape[1] < 4:
+        return []
+    Q=P[:,1:-1]  # exclude Dirichlet-adjacent edge bins
+    pairs=[]
+    for a in range(len(Q)):
+        for b in range(a+1,len(Q)):
+            d=Q[a]-Q[b]
+            if float(np.max(d)) > margin and float(np.min(d)) < -margin:
+                pairs.append((a,b))
+    return pairs
+
+
+def _concentration(top2, neff):
+    top2=np.asarray(top2,float); neff=np.asarray(neff,float)
+    if len(top2)>2:
+        top2=top2[1:-1]; neff=neff[1:-1]
+    return {
+        "interior_top2_max":float(np.max(top2)),
+        "interior_top2_min":float(np.min(top2)),
+        "interior_neff_min":float(np.min(neff)),
+        "interior_neff_max":float(np.max(neff)),
+        "strong_two_mode_concentration":bool(np.max(top2)>=0.75 and np.min(neff)<=2.5),
+    }
+
+
 def main():
     OUTDIR.mkdir(parents=True, exist_ok=True)
     REPORT.parent.mkdir(parents=True, exist_ok=True)
@@ -154,6 +181,44 @@ def main():
         any_boundary_sensitive |= ir_sensitive
 
         centers, Z, P, top2, neff = binned_residue_summary(native.r, native.weights[:COMPARE], bins=10)
+
+        # Resolution-stable binned residues after K-overlap mode matching.
+        matched={m["native_index"]:m["coarse_index"] for m in matches}
+        aligned_ok=all(i in matched for i in range(COMPARE))
+        if aligned_ok:
+            cw=coarse.weights[[matched[i] for i in range(COMPARE)]]
+            cc, cZ, cP, ctop2, cneff=binned_residue_summary(coarse.r,cw,bins=10)
+            native_binned_pairs=_pairset(_binned_pair_inversions(P))
+            coarse_binned_pairs=_pairset(_binned_pair_inversions(cP))
+            common_binned_pairs=sorted(native_binned_pairs & coarse_binned_pairs)
+            coarse_conc=_concentration(ctop2,cneff)
+        else:
+            native_binned_pairs=_pairset(_binned_pair_inversions(P))
+            coarse_binned_pairs=set()
+            common_binned_pairs=[]
+            coarse_conc=None
+
+        native_conc=_concentration(top2,neff)
+
+        # Boundary-trim robustness of *concentration* (mode-label independent).
+        trim_conc={}
+        for wname,(lo,hi) in WINDOWS.items():
+            mask=_window_mask(u,lo,hi)
+            wsp,_=_solve_arrays(r,u,K,G,S,M,mask=mask,stride=2,modes=max(COMPARE+4,12))
+            _,_,_,wt2,wne=binned_residue_summary(wsp.r,wsp.weights[:COMPARE],bins=10)
+            trim_conc[wname]=_concentration(wt2,wne)
+        trim_strong=sum(
+            1 for name,x in trim_conc.items()
+            if name!="registered" and x["strong_two_mode_concentration"]
+        )
+        concentration_resolution_stable=bool(
+            native_conc["strong_two_mode_concentration"]
+            and coarse_conc is not None
+            and coarse_conc["strong_two_mode_concentration"]
+        )
+        concentration_boundary_supported=bool(trim_strong>=2)
+        weisz_candidate=bool(concentration_resolution_stable and concentration_boundary_supported)
+
         lam_grid, rho = spectral_density_lambda(native.omega2, native.weights)
 
         np.savez_compressed(
@@ -190,6 +255,15 @@ def main():
             "ipr_first_modes": [float(x) for x in native.ipr[:COMPARE]],
             "binned_top2_fraction_minmax": [float(np.min(top2)), float(np.max(top2))],
             "binned_effective_mode_count_minmax": [float(np.min(neff)), float(np.max(neff))],
+            "native_binned_concentration": native_conc,
+            "coarse_binned_concentration": coarse_conc,
+            "binned_inversion_pairs_native_interior": [list(x) for x in sorted(native_binned_pairs)],
+            "binned_inversion_pairs_coarse_interior": [list(x) for x in sorted(coarse_binned_pairs)],
+            "binned_inversion_pairs_common_native_coarse": [list(x) for x in common_binned_pairs],
+            "boundary_trim_concentration": trim_conc,
+            "concentration_resolution_stable": concentration_resolution_stable,
+            "concentration_boundary_supported": concentration_boundary_supported,
+            "weisz_like_concentration_candidate": weisz_candidate,
             "pencil_symmetry_error_A": float(native.symmetry_error_A),
             "pencil_symmetry_error_B": float(native.symmetry_error_B),
         }
@@ -218,6 +292,9 @@ def main():
         "all_bulk_resolution_converged": bool(all_bulk_converged),
         "any_robust_residue_reordering": bool(any_robust_inversion),
         "any_boundary_sensitivity": bool(any_boundary_sensitive),
+        "weisz_like_concentration_candidate_L": [
+            int(L) for L,x in perL.items() if x["weisz_like_concentration_candidate"]
+        ],
         "per_L": perL,
         "interpretation_guard": (
             "A Weisz-style physical spectral-selection claim requires a certified center-to-infinity direct-global "
