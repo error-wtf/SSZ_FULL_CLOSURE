@@ -1,0 +1,48 @@
+name: Current member construction-stage audit
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  stage-audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Stage-localize the current-member tail ghost
+        run: python tools/audit_current_member_construction_stages.py
+      - name: Verify artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/generated/spectral/CURRENT_MEMBER_CONSTRUCTION_STAGE_AUDIT.json")
+          d = json.loads(p.read_text())
+          assert d["diagnosis"] in {
+              "GHOST_PRESENT_BEFORE_PRINCIPAL_HESSIAN_RESTORE",
+              "GHOST_FIRST_APPEARS_WITH_PRINCIPAL_HESSIAN_RESTORE",
+              "GHOST_FIRST_APPEARS_WITH_G2XX_LIFT",
+              "NO_CURRENT_STAGE_REPRODUCES_TAIL_GHOST",
+          }
+          print(json.dumps({
+              "diagnosis": d["diagnosis"],
+              "next_target": d["next_target"],
+              "tail_fail_flags": d["tail_fail_flags"],
+              "reference_compatibility": {
+                  k: v["reducer_compatible_41_stream"]
+                  for k, v in d["reference_streams"].items()
+              },
+          }, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-construction-stage-audit
+          path: data/generated/spectral/CURRENT_MEMBER_CONSTRUCTION_STAGE_AUDIT.json
