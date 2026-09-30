@@ -167,7 +167,7 @@ def main() -> int:
             "binned_residue_inversion_pairs_robust_across_resolution": robust_mode_pairs,
             "top2_spectral_share_range": [float(np.min(top2)), float(np.max(top2))],
             "effective_mode_number_range": [float(np.min(neff)), float(np.max(neff))],
-            "ipr_first_positive_modes": [float(x) for x in native.ipr[good][:COMPARE]],
+            "ipr_reliable_bulk_modes": [float(native.ipr[i]) for i in native_ids],
             "boundary_crop_checks": crops,
             "near_zero_sign_is_boundary_sensitive": bc_sensitive,
             "A_symmetry_scaled": native.symmetry_error_A,
