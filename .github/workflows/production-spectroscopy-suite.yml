@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - current-member-full-domain-audit-20260930
+      - spectroscopy-finalization-20260930
     paths:
       - tools/run_production_spectroscopy_suite.py
       - .github/workflows/production-spectroscopy-suite.yml
