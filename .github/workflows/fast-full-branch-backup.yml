@@ -1,0 +1,36 @@
+name: Fast full branch ZIP backup
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  zip-backup:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Create branch snapshot ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          BRANCH="current-member-full-domain-audit-20260930"
+          SHA="$(git rev-parse HEAD)"
+          mkdir -p snapshot
+          git archive --format=zip --output="snapshot/SSZ_FULL_CLOSURE_${BRANCH}_FULL_BRANCH_SNAPSHOT.zip" HEAD
+          {
+            echo "repository=error-wtf/SSZ_FULL_CLOSURE"
+            echo "branch=$BRANCH"
+            echo "head_sha=$SHA"
+            echo "created_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } > snapshot/BACKUP_MANIFEST.txt
+          sha256sum snapshot/SSZ_FULL_CLOSURE_${BRANCH}_FULL_BRANCH_SNAPSHOT.zip > snapshot/SSZ_FULL_CLOSURE_${BRANCH}_FULL_BRANCH_SNAPSHOT.zip.sha256
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SSZ_FULL_CLOSURE-full-branch-snapshot
+          path: snapshot/*
