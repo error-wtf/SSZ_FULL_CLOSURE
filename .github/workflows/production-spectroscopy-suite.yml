@@ -1,0 +1,45 @@
+name: Production-window spectroscopy suite
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+    paths:
+      - tools/run_production_spectroscopy_suite.py
+      - .github/workflows/production-spectroscopy-suite.yml
+
+jobs:
+  spectroscopy:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run local and boxed spectroscopy diagnostics
+        run: python tools/run_production_spectroscopy_suite.py
+      - name: Verify spectroscopy artifact and QNM guard
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/spectral/PRODUCTION_WINDOW_SPECTROSCOPY_SUITE.json")
+          d=json.loads(p.read_text())
+          assert d["qnm_admissible"] is False, d["qnm_guard"]
+          assert d["local"] and d["boxed"]
+          for L,rec in d["boxed"].items():
+              assert rec["physical"]["operator_symmetry_residual"] < 1e-8
+              assert rec["physical"]["mass_symmetry_residual"] < 1e-8
+          print(json.dumps({
+              "qnm_admissible":d["qnm_admissible"],
+              "summary":d["summary"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: production-window-spectroscopy-suite
+          path: data/generated/spectral/PRODUCTION_WINDOW_SPECTROSCOPY_SUITE.json
