@@ -131,16 +131,29 @@ def main() -> int:
     for slot in SLOT_NAMES:
         a = rawg[slot].to_numpy(float)
         b = cur[slot].to_numpy(float)
+        valid = mask & np.isfinite(a) & np.isfinite(b)
+        if not np.any(valid):
+            slot_deltas[slot] = {
+                "comparable": False,
+                "reason": "no_finite_overlap",
+            }
+            continue
         diff = b - a
-        maxabs = float(np.max(np.abs(diff[mask])))
-        rms = float(np.sqrt(np.mean(diff[mask] ** 2)))
-        scale = float(np.max(np.maximum(1.0, np.abs(a[mask]))))
+        maxabs = float(np.max(np.abs(diff[valid])))
+        rms = float(np.sqrt(np.mean(diff[valid] ** 2)))
+        scale = float(np.max(np.maximum(1.0, np.abs(a[valid]))))
+        finite_full_domain = bool(np.all(np.isfinite(a[mask])) and np.all(np.isfinite(b[mask])))
         slot_deltas[slot] = {
+            "comparable": True,
+            "finite_full_domain": finite_full_domain,
+            "n_finite": int(np.sum(valid)),
             "max_abs": maxabs,
             "rms": rms,
             "max_abs_scaled": maxabs / scale,
         }
-        if maxabs > 1e-12:
+        # Leave-back substitutions require a fully finite source slot over the
+        # comparison domain; partial archival NaNs are reported but never injected.
+        if maxabs > 1e-12 and finite_full_domain:
             changed_slots.append(slot)
 
     # Leave-one-back: current stream with exactly one 41-slot restored to pre-A2.
