@@ -16,6 +16,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 import numpy as np
+from scipy.optimize import linear_sum_assignment
 from scipy.sparse import coo_matrix
 from scipy.sparse.linalg import eigsh
 
@@ -167,6 +168,45 @@ def downsample_native(r, u, K, G, S, M, stride):
         np.asarray(M)[idx],
     )
 
+
+
+def match_modes_by_kinetic_overlap(coarse, native, K_native):
+    """Match coarse/native modes by K-weighted eigenvector overlap."""
+    idx = np.searchsorted(native.r, coarse.r)
+    if np.any(idx >= len(native.r)) or not np.allclose(
+        native.r[idx], coarse.r, rtol=0.0, atol=1e-13
+    ):
+        raise ValueError("coarse radial grid is not an exact native-grid subset")
+    Kc = np.asarray(K_native, float)[idx]
+    w = _trapezoid_weights(coarse.r)
+
+    pn = native.psi[:, idx, :].copy()
+    dn = np.einsum("mni,nij,mnj->mn", pn, Kc, pn)
+    nn = np.sum(dn * w[None, :], axis=1)
+    if np.any(nn <= 0):
+        raise ValueError("non-positive restricted native K norm")
+    pn /= np.sqrt(nn)[:, None, None]
+
+    overlap = np.abs(
+        np.einsum("ani,nij,bnj,n->ab", coarse.psi, Kc, pn, w)
+    )
+    rows, cols = linear_sum_assignment(-overlap)
+    records = []
+    for i, j in zip(rows, cols):
+        err = abs(float(coarse.omega2[i]) - float(native.omega2[j])) / max(
+            1.0, abs(float(native.omega2[j]))
+        )
+        records.append(
+            {
+                "coarse_index": int(i),
+                "native_index": int(j),
+                "overlap": float(overlap[i, j]),
+                "relative_omega2_error": float(err),
+                "coarse_omega2": float(coarse.omega2[i]),
+                "native_omega2": float(native.omega2[j]),
+            }
+        )
+    return sorted(records, key=lambda x: x["native_index"])
 
 def robust_pairwise_inversions(weights, *, rel_margin=0.05):
     """Mode pairs with a robust reversal in normalized local residue."""
