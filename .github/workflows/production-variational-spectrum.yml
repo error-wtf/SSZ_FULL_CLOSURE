@@ -1,0 +1,37 @@
+name: Production variational spectroscopy witness
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - spectroscopy-finalization-20260930
+    paths:
+      - tools/audit_production_variational_spectrum.py
+      - .github/workflows/production-variational-spectrum.yml
+
+jobs:
+  variational:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Build variational negative-mode witnesses
+        run: python tools/audit_production_variational_spectrum.py
+      - name: Verify
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/generated/spectral/PRODUCTION_VARIATIONAL_NEGATIVE_MODE_WITNESS.json").read_text())
+          assert d["result"]
+          print(json.dumps(d["summary"],indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: production-variational-spectrum-witness
+          path: data/generated/spectral/PRODUCTION_VARIATIONAL_NEGATIVE_MODE_WITNESS.json
