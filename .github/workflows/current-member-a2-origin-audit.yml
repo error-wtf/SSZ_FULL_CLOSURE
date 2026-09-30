@@ -1,0 +1,43 @@
+name: Current member A2 origin audit
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  a2-origin:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Localize ghost across Electric A2/background solve
+        run: python tools/audit_current_member_a2_origin.py
+      - name: Verify artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d = json.loads(Path("data/generated/spectral/CURRENT_MEMBER_A2_ORIGIN_AUDIT.json").read_text())
+          assert d["diagnosis"] in {
+              "GHOST_FIRST_APPEARS_IN_ELECTRIC_A2_BACKGROUND_RESOLVE_BLOCK",
+              "GHOST_ALREADY_PRESENT_IN_SOURCE_CENTRAL_ACTION",
+              "A2_BLOCK_NOT_REPRODUCING_TAIL_GHOST",
+              "UNCLASSIFIED",
+          }
+          print(json.dumps({
+              "diagnosis": d["diagnosis"],
+              "next_target": d["next_target"],
+              "tail_fail_flags": d["tail_fail_flags"],
+          }, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-a2-origin-audit
+          path: data/generated/spectral/CURRENT_MEMBER_A2_ORIGIN_AUDIT.json
