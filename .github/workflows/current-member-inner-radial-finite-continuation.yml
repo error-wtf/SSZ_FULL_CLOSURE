@@ -1,0 +1,48 @@
+name: Current member inner radial finite continuation
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  inner-finite:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run finite inner radial predictor-corrector
+        run: python tools/run_current_member_inner_radial_finite_continuation.py
+      - name: Verify
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/generated/spectral/CURRENT_MEMBER_INNER_RADIAL_FINITE_CONTINUATION.json").read_text())
+          assert d["status"] in {
+            "INNER_RADIAL_FINITE_CONTINUATION_PASS",
+            "INNER_RADIAL_FINITE_CONTINUATION_IMPROVED_NOT_CLOSED",
+            "INNER_RADIAL_FINITE_CONTINUATION_STALLED",
+          }
+          assert d["production_action_max_abs_shift"] < 1e-14
+          print(json.dumps({
+            "status":d["status"],
+            "initial_cr2":d["initial_worst_cr2"],
+            "final_cr2":d["final_worst_cr2"],
+            "final_K":d["final_worst_K"],
+            "next":d["next_target"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-inner-radial-finite-continuation
+          path: |
+            data/generated/spectral/CURRENT_MEMBER_INNER_RADIAL_FINITE_CONTINUATION.json
+            data/generated/spectral/CURRENT_MEMBER_INNER_RADIAL_FINITE_CONTINUATION_ACTION.csv
+            data/generated/spectral/CURRENT_MEMBER_INNER_RADIAL_FINITE_CONTINUATION_DIRECT41.csv
