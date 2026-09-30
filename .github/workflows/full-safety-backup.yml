@@ -1,0 +1,42 @@
+name: Full repository safety backup
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Build full safety backup
+        shell: bash
+        run: |
+          set -euo pipefail
+          BRANCH="current-member-full-domain-audit-20260930"
+          SHA="$(git rev-parse HEAD)"
+          mkdir -p backup_payload/worktree
+          git archive --format=tar HEAD | tar -xf - -C backup_payload/worktree
+          git bundle create backup_payload/SSZ_FULL_CLOSURE_ALL_REFS.bundle --all
+          {
+            echo "repository=error-wtf/SSZ_FULL_CLOSURE"
+            echo "branch=$BRANCH"
+            echo "head_sha=$SHA"
+            echo "created_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } > backup_payload/BACKUP_MANIFEST.txt
+          git log -1 --decorate --stat > backup_payload/HEAD_COMMIT.txt
+          (cd backup_payload && zip -r ../SSZ_FULL_CLOSURE_${BRANCH}_FULL_SAFETY_BACKUP.zip .)
+          sha256sum SSZ_FULL_CLOSURE_${BRANCH}_FULL_SAFETY_BACKUP.zip > SSZ_FULL_CLOSURE_${BRANCH}_FULL_SAFETY_BACKUP.zip.sha256
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SSZ_FULL_CLOSURE-full-safety-backup
+          path: |
+            SSZ_FULL_CLOSURE_current-member-full-domain-audit-20260930_FULL_SAFETY_BACKUP.zip
+            SSZ_FULL_CLOSURE_current-member-full-domain-audit-20260930_FULL_SAFETY_BACKUP.zip.sha256
