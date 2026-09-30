@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - current-member-full-domain-audit-20260930
+      - spectroscopy-finalization-20260930
     paths:
       - tools/audit_current_member_inner_radial_origin.py
       - .github/workflows/current-member-inner-radial-origin.yml
