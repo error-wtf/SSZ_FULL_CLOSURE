@@ -67,15 +67,30 @@ def summarize_member(d,red,spec,L):
         inv=U@np.diag(1/np.sqrt(w))@U.T
         C=inv@((G[i]+G[i].T)/2)@inv
         cr.append(float(np.linalg.eigvalsh((C+C.T)/2)[0]))
-    box=spec.boxed_suite(d,red,int(L))
-    local=spec.local_suite(d,red,int(L)) if L in (6,42,110,420,1000) else None
+    try:
+        box=spec.boxed_suite(d,red,int(L))
+        box_error=None
+    except Exception as exc:
+        box=None
+        box_error=f"{type(exc).__name__}: {exc}"
+    try:
+        local=spec.local_suite(d,red,int(L)) if L in (6,42,110,420,1000) else None
+        local_error=None
+    except Exception as exc:
+        local=None
+        local_error=f"{type(exc).__name__}: {exc}"
     return {
         "min_K":float(np.min(ke)),
+        "negative_K_rows":int(np.sum(ke<=0)),
         "min_cr2_where_K_positive":float(np.min(cr)) if cr else None,
-        "boxed_negative_omega2":int(box["physical"]["negative_omega2_count"]),
-        "boxed_omega2_min":float(box["physical"]["zero_or_negative_omega2_min"]),
-        "boxed_mean_probe_Neff":float(box["comparison"]["mean_probe_effective_mode_count_physical"]),
-        "boxed_mean_IPR":float(box["comparison"]["mean_mode_ipr_physical"]),
+        "boxed_available":box is not None,
+        "boxed_error":box_error,
+        "boxed_negative_omega2":int(box["physical"]["negative_omega2_count"]) if box else None,
+        "boxed_omega2_min":float(box["physical"]["zero_or_negative_omega2_min"]) if box else None,
+        "boxed_mean_probe_Neff":float(box["comparison"]["mean_probe_effective_mode_count_physical"]) if box else None,
+        "boxed_mean_IPR":float(box["comparison"]["mean_mode_ipr_physical"]) if box else None,
+        "local_available":local is not None or L not in (6,42,110,420,1000),
+        "local_error":local_error,
         "local":local,
     }
 
@@ -97,11 +112,15 @@ def main():
         comparison[L]={
             "delta_min_K_current_minus_hist":float(c["min_K"]-h["min_K"]),
             "delta_min_cr2_current_minus_hist":float(c["min_cr2_where_K_positive"]-h["min_cr2_where_K_positive"]),
+            "negative_K_rows_current":c["negative_K_rows"],
+            "negative_K_rows_hist":h["negative_K_rows"],
+            "boxed_available_current":c["boxed_available"],
+            "boxed_available_hist":h["boxed_available"],
             "boxed_negative_omega2_current":c["boxed_negative_omega2"],
             "boxed_negative_omega2_hist":h["boxed_negative_omega2"],
             "boxed_omega2_min_current":c["boxed_omega2_min"],
             "boxed_omega2_min_hist":h["boxed_omega2_min"],
-            "Neff_current_over_hist":float(c["boxed_mean_probe_Neff"]/h["boxed_mean_probe_Neff"]) if h["boxed_mean_probe_Neff"] else None,
+            "Neff_current_over_hist":float(c["boxed_mean_probe_Neff"]/h["boxed_mean_probe_Neff"]) if c["boxed_mean_probe_Neff"] is not None and h["boxed_mean_probe_Neff"] else None,
         }
 
     report={
