@@ -1,0 +1,43 @@
+name: Current member deep A2 differential audit
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  deep-a2:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Deep A2/background differential audit
+        run: python tools/audit_current_member_a2_deep_differential.py
+      - name: Verify artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/generated/spectral/CURRENT_MEMBER_A2_DEEP_DIFFERENTIAL_AUDIT.json")
+          d = json.loads(p.read_text())
+          assert d["diagnosis"] in {
+              "A2_RECONSTRUCTION_INTRODUCES_HIGH_L_TAIL_GHOST",
+              "HIGH_L_GHOST_NOT_CLEANLY_LOCALIZED_TO_A2_RECONSTRUCTION",
+          }
+          assert d["changed_slots"]
+          print(json.dumps({
+              "diagnosis": d["diagnosis"],
+              "changed_slot_count": len(d["changed_slots"]),
+              "top5": d["single_slot_ranking"][:5],
+          }, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: current-member-a2-deep-differential-audit
+          path: data/generated/spectral/CURRENT_MEMBER_A2_DEEP_DIFFERENTIAL_AUDIT.json
