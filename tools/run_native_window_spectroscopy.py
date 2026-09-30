@@ -19,6 +19,7 @@ from ssz_p5.qnm.gate import require_direct_krgm_certificate
 from ssz_p5.qnm.native_window import (
     binned_residue_summary,
     downsample_native,
+    match_modes_by_kinetic_overlap,
     robust_pairwise_inversions,
     solve_near_zero_box_spectrum,
     spectral_density_lambda,
@@ -46,7 +47,7 @@ def _relerr(a, b):
     return float(np.max(np.abs(a[:m] - b[:m]) / np.maximum(1.0, np.abs(b[:m]))))
 
 
-def _solve_frame(d, red, L, stride=1):
+def _solve_frame(d, red, L, stride=1, modes=NMODES):
     a = red.canonical_audit(d, int(L))
     args = (
         d.x.to_numpy(float),
@@ -55,7 +56,7 @@ def _solve_frame(d, red, L, stride=1):
     )
     if stride != 1:
         args = downsample_native(*args, stride)
-    return solve_near_zero_box_spectrum(*args, modes=NMODES)
+    return solve_near_zero_box_spectrum(*args, modes=modes), args[2]
 
 
 def main() -> int:
@@ -67,32 +68,55 @@ def main() -> int:
     perL = {}
     any_binned_reordering = False
     boundary_sensitive = False
-    all_resolution_ok = True
+    all_bulk_converged = True
 
     for L in DEFAULT_L:
         lo, hi = WINDOWS["registered"]
         d = all41[(all41.u > lo) & (all41.u < hi)].sort_values("x").reset_index(drop=True)
-        coarse = _solve_frame(d, red, L, stride=2)
-        native = _solve_frame(d, red, L, stride=1)
+        coarse, _ = _solve_frame(d, red, L, stride=2)
+        native, K_native = _solve_frame(d, red, L, stride=1)
 
-        pos_c = coarse.omega2[coarse.omega2 > 0][:COMPARE]
-        pos_n = native.omega2[native.omega2 > 0][:COMPARE]
-        conv = _relerr(pos_c, pos_n)
-        resolution_ok = bool(conv < 0.15)
-        all_resolution_ok &= resolution_ok
+        matches = match_modes_by_kinetic_overlap(coarse, native, K_native)
+        reliable = [
+            m for m in matches
+            if m["overlap"] >= 0.95
+            and m["relative_omega2_error"] <= 0.05
+            and m["native_omega2"] > 0
+        ]
+        reliable = reliable[:COMPARE]
+        bulk_converged = len(reliable) >= 6
+        all_bulk_converged &= bulk_converged
 
-        good = native.omega2 > 0
-        W = native.weights[good][:COMPARE]
-        point_pairs = robust_pairwise_inversions(W)
-        centers, Zbin, Pbin, top2, neff = binned_residue_summary(native.r, W, bins=10)
-        bin_pairs = robust_pairwise_inversions(Zbin, rel_margin=0.03)
-        any_binned_reordering |= bool(bin_pairs)
+        native_ids = [m["native_index"] for m in reliable]
+        coarse_ids = [m["coarse_index"] for m in reliable]
+        if len(reliable) >= 2:
+            Wn = native.weights[native_ids]
+            Wc = coarse.weights[coarse_ids]
+            point_pairs_native = robust_pairwise_inversions(Wn)
+            centers, Zbin_n, Pbin, top2, neff = binned_residue_summary(
+                native.r, Wn, bins=10
+            )
+            _, Zbin_c, _, _, _ = binned_residue_summary(coarse.r, Wc, bins=10)
+            pairs_n = set(robust_pairwise_inversions(Zbin_n, rel_margin=0.03))
+            pairs_c = set(robust_pairwise_inversions(Zbin_c, rel_margin=0.03))
+            robust_pos_pairs = sorted(pairs_n & pairs_c)
+            robust_mode_pairs = [
+                [native_ids[a], native_ids[b]] for a, b in robust_pos_pairs
+            ]
+        else:
+            Wn = native.weights[native.omega2 > 0][:COMPARE]
+            point_pairs_native = []
+            centers, Zbin_n, Pbin, top2, neff = binned_residue_summary(
+                native.r, Wn, bins=10
+            )
+            robust_mode_pairs = []
+        any_binned_reordering |= bool(robust_mode_pairs)
 
         crops = {}
         sign_pattern = []
         for name, (wlo, whi) in WINDOWS.items():
             dd = all41[(all41.u > wlo) & (all41.u < whi)].sort_values("x").reset_index(drop=True)
-            sp = _solve_frame(dd, red, L, stride=1)
+            sp, _ = _solve_frame(dd, red, L, stride=1, modes=5)
             near = sp.omega2[: min(5, len(sp.omega2))]
             crops[name] = {
                 "rows": int(len(dd)),
@@ -103,7 +127,12 @@ def main() -> int:
         bc_sensitive = len(set(sign_pattern)) > 1
         boundary_sensitive |= bc_sensitive
 
-        lam_grid, rho = spectral_density_lambda(native.omega2[good][:COMPARE], W)
+        spec_ids = native_ids if len(native_ids) >= 2 else list(
+            np.flatnonzero(native.omega2 > 0)[:COMPARE]
+        )
+        lam_grid, rho = spectral_density_lambda(
+            native.omega2[spec_ids], native.weights[spec_ids]
+        )
         probe_idx = np.array([
             int(np.argmin(np.abs(native.u - q))) for q in (0.625, 0.65, 0.675, 0.695)
         ])
@@ -116,7 +145,7 @@ def main() -> int:
             weights=native.weights,
             ipr=native.ipr,
             binned_r=centers,
-            binned_residues=Zbin,
+            binned_residues=Zbin_n,
             binned_probabilities=Pbin,
             top2_share=top2,
             effective_mode_number=neff,
@@ -128,10 +157,14 @@ def main() -> int:
         perL[str(L)] = {
             "native_omega2_near_zero": [float(x) for x in native.omega2[:COMPARE]],
             "native_negative_near_zero_count": int(np.sum(native.omega2 <= 0)),
-            "stride2_to_native_positive_omega2_max_relative_error": conv,
-            "resolution_converged_15pct": resolution_ok,
-            "pointwise_residue_inversion_pairs": [list(x) for x in point_pairs],
-            "binned_residue_inversion_pairs": [list(x) for x in bin_pairs],
+            "mode_overlap_matches": matches,
+            "reliable_bulk_native_mode_indices": native_ids,
+            "reliable_bulk_mode_count": len(reliable),
+            "bulk_modes_converged": bulk_converged,
+            "pointwise_residue_inversion_pairs_reliable_bulk": [
+                [native_ids[a], native_ids[b]] for a, b in point_pairs_native
+            ] if native_ids else [],
+            "binned_residue_inversion_pairs_robust_across_resolution": robust_mode_pairs,
             "top2_spectral_share_range": [float(np.min(top2)), float(np.max(top2))],
             "effective_mode_number_range": [float(np.min(neff)), float(np.max(neff))],
             "ipr_first_positive_modes": [float(x) for x in native.ipr[good][:COMPARE]],
@@ -155,12 +188,14 @@ def main() -> int:
         except RuntimeError as exc:
             global_gate = {"status": "BLOCKED", "reason": str(exc)}
 
-    if not all_resolution_ok:
-        status = "FINITE_WINDOW_SPECTROSCOPY_PARTIALLY_CONVERGED"
+    if not all_bulk_converged:
+        status = "FINITE_WINDOW_SPECTROSCOPY_BULK_NOT_CONVERGED"
+    elif boundary_sensitive and any_binned_reordering:
+        status = "FINITE_WINDOW_BULK_RESIDUE_REORDERING_WITH_IR_BOUNDARY_SENSITIVITY"
     elif boundary_sensitive:
-        status = "FINITE_WINDOW_SPECTROSCOPY_BOUNDARY_SENSITIVE"
+        status = "FINITE_WINDOW_SPECTROSCOPY_IR_BOUNDARY_SENSITIVE"
     elif any_binned_reordering:
-        status = "FINITE_WINDOW_BINNED_WEIGHT_REORDERING"
+        status = "FINITE_WINDOW_BULK_RESIDUE_REORDERING"
     else:
         status = "FINITE_WINDOW_SPECTRAL_SELECTION_NULL"
 
