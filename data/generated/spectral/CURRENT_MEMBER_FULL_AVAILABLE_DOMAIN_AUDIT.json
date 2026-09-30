@@ -1,0 +1,66 @@
+{
+  "member": "SSZ P5 electric production member (current, same-action, on-shell Central, Delta22_SVT-derived action)",
+  "member_hash": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
+  "member_csv_sha256": "8bd460ef022a9cdbcc3644abd8aecbfbb910f8e364ac1410378d2641291559cf",
+  "scope": "Fresh canonical reducer audit on the entire available current-member domain only; this is not a center-to-infinity certificate.",
+  "available_domain": [0.61, 0.7099849962490622],
+  "registered_production_window": [0.62, 0.7],
+  "required_L": [6, 12, 20, 42, 110, 420, 1000],
+  "per_L": {
+    "6": {
+      "production_window": {"rows":3047,"u_min":0.6200037509377344,"u_max":0.6999812453113278,"min_K":0.013463194095451499,"u_at_min_K":0.6999812453113278,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":0.013364327429583427,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":true,"radial_positive_where_defined":true},
+      "full_available_domain": {"rows":3809,"u_min":0.61,"u_max":0.7099849962490622,"min_K":-0.16188299187030963,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":-0.42165486169954103,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":false,"radial_positive_where_defined":false},
+      "outer_tail_u_ge_0p70": {"rows":381,"u_min":0.7000075018754688,"u_max":0.7099849962490622,"min_K":-0.16188299187030963,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":0.026210051287529693,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":false,"radial_positive_where_defined":true},
+      "inner_tail_u_le_0p62": {"rows":381,"u_min":0.61,"u_max":0.6199774943735934,"min_K":0.0896376517457453,"u_at_min_K":0.6199774943735934,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":-0.42165486169954103,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":true,"radial_positive_where_defined":false},
+      "max_K_asymmetry":8.078018254309427e-10,"max_G_asymmetry":3.1086244689504383e-15
+    },
+    "12": {
+      "production_window": {"rows":3047,"u_min":0.6200037509377344,"u_max":0.6999812453113278,"min_K":0.012538378552980605,"u_at_min_K":0.6999812453113278,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":0.00885313859115707,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":true,"radial_positive_where_defined":true},
+      "full_available_domain": {"rows":3809,"u_min":0.61,"u_max":0.7099849962490622,"min_K":-0.2540228820494099,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":-0.4216548617682317,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":false,"radial_positive_where_defined":false},
+      "outer_tail_u_ge_0p70": {"rows":381,"u_min":0.7000075018754688,"u_max":0.7099849962490622,"min_K":-0.2540228820494099,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":0.018697177877914077,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":false,"radial_positive_where_defined":true},
+      "inner_tail_u_le_0p62": {"rows":381,"u_min":0.61,"u_max":0.6199774943735934,"min_K":0.04655914057241037,"u_at_min_K":0.61,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":-0.4216548617682317,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":true,"radial_positive_where_defined":false},
+      "max_K_asymmetry":3.613209287323116e-09,"max_G_asymmetry":1.7763568394002505e-15
+    },
+    "20": {
+      "production_window": {"rows":3047,"u_min":0.6200037509377344,"u_max":0.6999812453113278,"min_K":0.01062783057558971,"u_at_min_K":0.6999812453113278,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":0.005948615572332358,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":true,"radial_positive_where_defined":true},
+      "full_available_domain": {"rows":3809,"u_min":0.61,"u_max":0.7099849962490622,"min_K":-3.7723918192220385,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":-0.42165486178739053,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":false,"radial_positive_where_defined":false},
+      "outer_tail_u_ge_0p70": {"rows":381,"u_min":0.7000075018754688,"u_max":0.7099849962490622,"min_K":-3.7723918192220385,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":0.013259803301771712,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":false,"radial_positive_where_defined":true},
+      "inner_tail_u_le_0p62": {"rows":381,"u_min":0.61,"u_max":0.6199774943735934,"min_K":0.02091360510025782,"u_at_min_K":0.61,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":-0.42165486178739053,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":true,"radial_positive_where_defined":false},
+      "max_K_asymmetry":2.3281643279915443e-10,"max_G_asymmetry":8.881784197001252e-16
+    },
+    "42": {
+      "production_window": {"rows":3047,"u_min":0.6200037509377344,"u_max":0.6999812453113278,"min_K":0.004385220374835134,"u_at_min_K":0.668893473368342,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":0.0031032342262133916,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":true,"radial_positive_where_defined":true},
+      "full_available_domain": {"rows":3809,"u_min":0.61,"u_max":0.7099849962490622,"min_K":-15.925106686236182,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":-0.42165486179641803,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":false,"radial_positive_where_defined":false},
+      "outer_tail_u_ge_0p70": {"rows":381,"u_min":0.7000075018754688,"u_max":0.7099849962490622,"min_K":-15.925106686236182,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":0.007337467170354024,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":false,"radial_positive_where_defined":true},
+      "inner_tail_u_le_0p62": {"rows":381,"u_min":0.61,"u_max":0.6199774943735934,"min_K":0.005434100730632214,"u_at_min_K":0.61,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":-0.42165486179641803,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":true,"radial_positive_where_defined":false},
+      "max_K_asymmetry":2.1813661987835076e-10,"max_G_asymmetry":4.440892098500626e-16
+    },
+    "110": {
+      "production_window": {"rows":3047,"u_min":0.6200037509377344,"u_max":0.6999812453113278,"min_K":0.0006723488454441835,"u_at_min_K":0.6699699924981245,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":0.0012488588352243526,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":true,"radial_positive_where_defined":true},
+      "full_available_domain": {"rows":3809,"u_min":0.61,"u_max":0.7099849962490622,"min_K":-23.62981797938023,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":-0.4216548617990569,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":false,"radial_positive_where_defined":false},
+      "outer_tail_u_ge_0p70": {"rows":381,"u_min":0.7000075018754688,"u_max":0.7099849962490622,"min_K":-23.62981797938023,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":0.0030807718745503782,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":false,"radial_positive_where_defined":true},
+      "inner_tail_u_le_0p62": {"rows":381,"u_min":0.61,"u_max":0.6199774943735934,"min_K":0.0008363917116138662,"u_at_min_K":0.61,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":-0.4216548617990569,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":true,"radial_positive_where_defined":false},
+      "max_K_asymmetry":9.00968188943807e-12,"max_G_asymmetry":2.220446049250313e-16
+    },
+    "420": {
+      "production_window": {"rows":3047,"u_min":0.6200037509377344,"u_max":0.6999812453113278,"min_K":4.68327150394045e-05,"u_at_min_K":0.6706001500375094,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":0.000335151238125942,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":true,"radial_positive_where_defined":true},
+      "full_available_domain": {"rows":3809,"u_min":0.61,"u_max":0.7099849962490622,"min_K":-27.235732191363475,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":-0.42165486179972933,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":false,"radial_positive_where_defined":false},
+      "outer_tail_u_ge_0p70": {"rows":381,"u_min":0.7000075018754688,"u_max":0.7099849962490622,"min_K":-27.235732191363475,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":0.0008453778971143806,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":false,"radial_positive_where_defined":true},
+      "inner_tail_u_le_0p62": {"rows":381,"u_min":0.61,"u_max":0.6199774943735934,"min_K":5.84326912778855e-05,"u_at_min_K":0.61,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":-0.42165486179972933,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":true,"radial_positive_where_defined":false},
+      "max_K_asymmetry":3.1317171078626416e-12,"max_G_asymmetry":5.551115123125783e-17
+    },
+    "1000": {
+      "production_window": {"rows":3047,"u_min":0.6200037509377344,"u_max":0.6999812453113278,"min_K":8.28212416012545e-06,"u_at_min_K":0.6707051762940734,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":0.00014147597641957563,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":true,"radial_positive_where_defined":true},
+      "full_available_domain": {"rows":3809,"u_min":0.61,"u_max":0.7099849962490622,"min_K":-27.982826335481942,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":-0.42165486179977724,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":false,"radial_positive_where_defined":false},
+      "outer_tail_u_ge_0p70": {"rows":381,"u_min":0.7000075018754688,"u_max":0.7099849962490622,"min_K":-27.982826335481942,"u_at_min_K":0.7099849962490622,"negative_K_rows":331,"first_negative_K_u":0.7099849962490622,"min_cr2_where_K_positive":0.0003585885833725655,"negative_cr2_rows_where_defined":0,"K_positive_everywhere":false,"radial_positive_where_defined":true},
+      "inner_tail_u_le_0p62": {"rows":381,"u_min":0.61,"u_max":0.6199774943735934,"min_K":1.0340974611477002e-05,"u_at_min_K":0.61,"negative_K_rows":0,"first_negative_K_u":null,"min_cr2_where_K_positive":-0.42165486179977724,"negative_cr2_rows_where_defined":344,"K_positive_everywhere":true,"radial_positive_where_defined":false},
+      "max_K_asymmetry":2.3092638912203256e-13,"max_G_asymmetry":2.7755575615628914e-17
+    }
+  },
+  "registered_production_window_pass": true,
+  "full_available_domain_K_pass": false,
+  "full_available_domain_radial_pass": false,
+  "verdict": "CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_K_FAIL",
+  "blocker": "KINETIC_GHOST_OUTSIDE_REGISTERED_PRODUCTION_WINDOW",
+  "downstream_spectral_semantics": "BLOCKED_BEFORE_GLOBAL_SPECTRAL_EXPORT"
+}
