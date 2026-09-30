@@ -330,25 +330,31 @@ def boxed_spectrum_from_arrays(K, G, S, M, x, u, f):
 
 
 def boxed_suite(d, red, L):
-    # pick quasi-uniform x nodes from an interior healthy production window
-    w = d[(d.u > BOX_U_LO) & (d.u < BOX_U_HI)].sort_values("x").reset_index(drop=True)
-    pick = np.linspace(0, len(w)-1, BOX_NODES).round().astype(int)
-    w = w.iloc[np.unique(pick)].reset_index(drop=True)
-    a = red.canonical_audit(w, int(L))
-    K, G, S, M = (np.asarray(a[x], float) for x in ("K","G","S","M"))
-    x = w.x.to_numpy(float)
-    u = w.u.to_numpy(float)
-    f = w.f.to_numpy(float)
+    # IMPORTANT: reduce K,G,S,M on the full-resolution production grid first.
+    # S and M contain profile derivatives; re-reducing an already downsampled
+    # coefficient table changes the lower-order operator and is not admissible.
+    a = red.canonical_audit(d, int(L))
+    Kf, Gf, Sf, Mf = (np.asarray(a[x], float) for x in ("K","G","S","M"))
+
+    uall = d.u.to_numpy(float)
+    ids = np.flatnonzero((uall > BOX_U_LO) & (uall < BOX_U_HI))
+    pick = np.linspace(0, len(ids)-1, BOX_NODES).round().astype(int)
+    ids = ids[np.unique(pick)]
+
+    K, G, S, M = Kf[ids], Gf[ids], Sf[ids], Mf[ids]
+    x = d.x.to_numpy(float)[ids]
+    u = uall[ids]
+    f = d.f.to_numpy(float)[ids]
 
     physical = boxed_spectrum_from_arrays(K,G,S,M,x,u,f)
 
     # Frozen-coefficient control: same box and coordinates, matrices frozen at midpoint.
-    mid = len(w)//2
-    K0 = np.repeat(K[mid][None,:,:], len(w), axis=0)
-    G0 = np.repeat(G[mid][None,:,:], len(w), axis=0)
-    S0 = np.repeat(S[mid][None,:,:], len(w), axis=0)
-    M0 = np.repeat(M[mid][None,:,:], len(w), axis=0)
-    control = boxed_spectrum_from_arrays(K0,G0,S0,M0,x,u,np.repeat(f[mid],len(w)))
+    mid = len(ids)//2
+    K0 = np.repeat(K[mid][None,:,:], len(ids), axis=0)
+    G0 = np.repeat(G[mid][None,:,:], len(ids), axis=0)
+    S0 = np.repeat(S[mid][None,:,:], len(ids), axis=0)
+    M0 = np.repeat(M[mid][None,:,:], len(ids), axis=0)
+    control = boxed_spectrum_from_arrays(K0,G0,S0,M0,x,u,np.repeat(f[mid],len(ids)))
 
     # Summary comparison.
     phys_neff = []
@@ -362,7 +368,8 @@ def boxed_suite(d, red, L):
 
     return {
         "window_u": [float(u.min()), float(u.max())],
-        "nodes": int(len(w)),
+        "nodes": int(len(ids)),
+        "reduction_semantics": "full-resolution reduction before matrix sampling",
         "physical": physical,
         "frozen_matrix_control": control,
         "comparison": {
@@ -370,6 +377,8 @@ def boxed_suite(d, red, L):
             "mean_probe_effective_mode_count_control": float(np.mean(ctrl_neff)),
             "mean_mode_ipr_physical": float(np.mean(physical["mode_kinetic_ipr"])) if physical["mode_kinetic_ipr"] else None,
             "mean_mode_ipr_control": float(np.mean(control["mode_kinetic_ipr"])) if control["mode_kinetic_ipr"] else None,
+            "negative_omega2_count_physical": int(physical["negative_omega2_count"]),
+            "negative_omega2_count_control": int(control["negative_omega2_count"]),
         },
     }
 
@@ -416,12 +425,14 @@ def main():
             "physical_over_control_Neff": float(p/c) if c else None,
             "physical_mean_IPR": rec["comparison"]["mean_mode_ipr_physical"],
             "control_mean_IPR": rec["comparison"]["mean_mode_ipr_control"],
+            "negative_omega2_count_physical": rec["comparison"]["negative_omega2_count_physical"],
+            "negative_omega2_count_control": rec["comparison"]["negative_omega2_count_control"],
         }
 
     report = {
         "scope": {
             "local": "frozen-coefficient healthy production-window spectroscopy",
-            "boxed": "finite Dirichlet production-window normal-mode spectroscopy",
+            "boxed": "full-resolution K,G,S,M reduction followed by finite Dirichlet production-window normal-mode spectroscopy",
             "global_qnm": "not attempted unless direct-global KRGM certificate validates",
         },
         "semantics": {
