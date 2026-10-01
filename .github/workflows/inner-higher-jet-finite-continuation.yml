@@ -1,0 +1,52 @@
+name: Inner higher-jet finite continuation
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  finite-higher-jets:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run finite higher-jet inner continuation
+        run: python tools/run_inner_higher_jet_finite_continuation.py
+      - name: Verify
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/spectral/INNER_HIGHER_JET_FINITE_CONTINUATION.json")
+          assert p.exists()
+          d=json.loads(p.read_text())
+          assert d["status"] in {
+            "INNER_HIGHER_JET_FINITE_CONTINUATION_PASS",
+            "INNER_HIGHER_JET_FINITE_CONTINUATION_IMPROVED_NOT_CLOSED",
+            "INNER_HIGHER_JET_FINITE_CONTINUATION_STALLED",
+          }
+          assert d["production_higher_jet_max_abs_shift"] < 1e-14
+          print(json.dumps({
+            "status":d["status"],
+            "initial":d["initial_worst_cr2"],
+            "final":d["final_worst_cr2"],
+            "background":d["background_max_abs_inner"],
+            "next":d["next_target"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner-higher-jet-finite-continuation
+          path: |
+            data/generated/spectral/INNER_HIGHER_JET_FINITE_CONTINUATION.json
+            data/generated/spectral/INNER_HIGHER_JET_FINITE_CONTINUATION_ACTION.csv
+            data/generated/spectral/INNER_HIGHER_JET_FINITE_CONTINUATION_DIRECT41.csv
