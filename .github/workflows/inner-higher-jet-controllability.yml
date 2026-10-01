@@ -1,0 +1,38 @@
+name: Inner higher-jet projected controllability
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  higher-jets:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Audit higher-action-jet inner radial controllability
+        run: python tools/audit_inner_higher_jet_controllability.py
+      - name: Verify
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/generated/spectral/INNER_HIGHER_JET_PROJECTED_CONTROLLABILITY.json").read_text())
+          assert d["status"] in {
+            "INNER_HIGHER_JETS_COMMON_TANGENT_EXISTS",
+            "INNER_HIGHER_JETS_PARTIAL_CONTROLLABILITY",
+            "INNER_HIGHER_JETS_NO_COMMON_TANGENT",
+          }
+          print(json.dumps({"status":d["status"],"next":d["next_target"]},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inner-higher-jet-controllability
+          path: data/generated/spectral/INNER_HIGHER_JET_PROJECTED_CONTROLLABILITY.json
