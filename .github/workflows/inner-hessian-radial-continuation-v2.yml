@@ -1,0 +1,50 @@
+name: Inner Hessian radial continuation v2
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  inner-hessian-v2:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run localized background-null Hessian continuation
+        run: python tools/run_inner_hessian_radial_continuation_v2.py
+      - name: Verify
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/spectral/INNER_HESSIAN_RADIAL_CONTINUATION_V2.json")
+          assert p.exists()
+          d=json.loads(p.read_text())
+          assert d["status"] in {
+            "INNER_HESSIAN_RADIAL_CONTINUATION_PASS",
+            "INNER_HESSIAN_RADIAL_CONTINUATION_IMPROVED_NOT_CLOSED",
+            "INNER_HESSIAN_RADIAL_CONTINUATION_STALLED",
+          }
+          assert d["all_production_K_pass"]
+          print(json.dumps({
+            "status":d["status"],
+            "all_inner_K":d["all_inner_K_pass"],
+            "all_inner_radial":d["all_inner_radial_pass"],
+            "next":d["next_target"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner-hessian-radial-continuation-v2
+          path: |
+            data/generated/spectral/INNER_HESSIAN_RADIAL_CONTINUATION_V2.json
+            data/generated/spectral/INNER_HESSIAN_RADIAL_CONTINUATION_V2_DIRECT41.csv
