@@ -1,0 +1,46 @@
+name: Inner coupled higher-jet Hessian corrector
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  coupled-inner:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run coupled higher-jet plus f2-Hessian corrector
+        run: python tools/run_inner_coupled_higherjet_hessian_corrector.py
+      - name: Verify
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/spectral/INNER_COUPLED_HIGHERJET_HESSIAN_CORRECTOR.json")
+          assert p.exists()
+          d=json.loads(p.read_text())
+          assert d["status"] in {
+            "INNER_COUPLED_CORRECTOR_PASS",
+            "INNER_COUPLED_CORRECTOR_IMPROVED_NOT_CLOSED",
+            "INNER_COUPLED_CORRECTOR_STALLED",
+          }
+          assert d["production_higher_jet_max_abs_shift"] < 1e-14
+          print(json.dumps({"status":d["status"],"final":d["final_worst_cr2"],"next":d["next_target"]},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner-coupled-higherjet-hessian-corrector
+          path: |
+            data/generated/spectral/INNER_COUPLED_HIGHERJET_HESSIAN_CORRECTOR.json
+            data/generated/spectral/INNER_COUPLED_HIGHERJET_HESSIAN_CORRECTOR_ACTION.csv
+            data/generated/spectral/INNER_COUPLED_HIGHERJET_HESSIAN_CORRECTOR_DIRECT41.csv
