@@ -1,0 +1,48 @@
+name: SSZ spectroscopy v3 degeneracy-aware
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  spectroscopy-v3:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Run degeneracy-aware fixed-observable spectroscopy
+        run: python tools/run_ssz_fixed_observable_spectroscopy_v3.py
+      - name: Verify report
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V3.json")
+          assert p.exists()
+          d=json.loads(p.read_text())
+          q=d["local_principal_spectroscopy_v3"]
+          assert q["status"] in {
+            "LOCAL_FIXED_OBSERVABLE_ROBUST_RESIDUE_REORDERING_DETECTED",
+            "LOCAL_FIXED_OBSERVABLE_ROBUST_RESIDUE_REORDERING_NULL",
+            "LOCAL_SPECTROSCOPY_V3_CONTROL_FAIL",
+          }
+          print(json.dumps({
+            "global":d["global_physical_spectroscopy"],
+            "status":q["status"],
+            "controls":q["all_controls_pass"],
+            "reordering":q["any_robust_residue_reordering"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ssz-spectroscopy-v3
+          path: data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V3.json
