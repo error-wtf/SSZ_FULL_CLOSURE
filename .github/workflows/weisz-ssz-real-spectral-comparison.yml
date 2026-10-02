@@ -1,0 +1,37 @@
+name: Weisz-to-SSZ real spectral comparison
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  compare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Reproduce Weisz 1978 spectra
+        run: python tools/reproduce_weisz_1978_spectra.py
+      - name: Run controlled SSZ spectroscopy v3
+        run: python tools/run_ssz_fixed_observable_spectroscopy_v3.py
+      - name: Compute dense SSZ local resolvent spectra
+        run: python tools/run_ssz_local_resolvent_spectra.py
+      - name: Compare observable spectral selectivity
+        run: python tools/compare_ssz_weisz1978_selectivity.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: weisz-ssz-real-spectral-comparison
+          path: |
+            data/generated/spectral/weisz1978/*
+            data/generated/spectral/ssz_local_resolvent/*
+            data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V3.json
+            data/generated/spectral/SSZ_WEISZ1978_QUANTITATIVE_COMPARISON.json
+            data/generated/spectral/SSZ_WEISZ1978_SELECTIVITY_TABLE.csv
