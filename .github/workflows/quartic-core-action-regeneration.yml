@@ -1,0 +1,32 @@
+name: Quartic core action regeneration
+
+on:
+  push:
+    branches:
+      - qnm-global-final-20261002
+  workflow_dispatch:
+
+jobs:
+  quartic-core:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Verify action primitive bridge
+        run: python tools/audit_inner_core_action_primitive_bridge.py
+      - name: Regenerate quartic core direct 41
+        run: python tools/build_core_quartic_action_direct41.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quartic-core-action-regeneration
+          path: |
+            data/generated/inner_core_action_primitive_bridge/*
+            data/generated/qnm_global_diagnostic/CORE_QUARTIC_G5ZERO_DIRECT41_ACTION_REGEN.csv
+            data/generated/qnm_global_diagnostic/CORE_QUARTIC_G5ZERO_ACTION_REGEN_AUDIT.json
