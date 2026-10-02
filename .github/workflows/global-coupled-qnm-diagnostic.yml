@@ -1,0 +1,53 @@
+name: Global coupled QNM diagnostic attempt
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  global-qnm-diagnostic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Assemble regional reference operator and execute global QNM diagnostic
+        run: python tools/run_global_coupled_qnm_diagnostic.py
+      - name: Verify diagnostic report
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/qnm_global_diagnostic/GLOBAL_QNM_DIAGNOSTIC_REPORT.json")
+          assert p.exists()
+          d=json.loads(p.read_text())
+          assert d["status"] in {
+            "GLOBAL_QNM_DIAGNOSTIC_EXECUTED_UNCERTIFIED_MEMBER",
+            "GLOBAL_QNM_DIAGNOSTIC_EXECUTED_NO_CONVERGED_ROOTS",
+          }
+          assert d["physical_qnm_claim_allowed"] is False
+          print(json.dumps({
+            "status":d["status"],
+            "health":d["finite_l_health"],
+            "spectra":{k:{
+              "stable":v["stable_root_count"],
+              "growing":v["stable_growing_count"],
+              "damped":v["stable_damped_count"],
+            } for k,v in d["spectra"].items()}
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: global-coupled-qnm-diagnostic
+          path: |
+            data/generated/qnm_global_diagnostic/GLOBAL_QNM_DIAGNOSTIC_REPORT.json
+            data/generated/qnm_global_diagnostic/GLOBAL_REGIONAL_REFERENCE_41.csv
