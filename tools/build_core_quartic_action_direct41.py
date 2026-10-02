@@ -70,11 +70,13 @@ def main():
     # coefficient.  This leaves background action values/first jets unchanged.
     dc=q.dc2_dG2XX_action.to_numpy(float)
     c2_target=ref.c2.to_numpy(float)
+    domain=(act.u.to_numpy(float)>=0.715)&(act.u.to_numpy(float)<50.0)
     bad=np.abs(dc)<1e-16
-    if np.any(bad & (np.abs(c2_target)>1e-12)):
-        raise RuntimeError("c2 target not reachable where dc2/dG2XX vanishes")
+    if np.any(domain & bad & (np.abs(c2_target)>1e-12)):
+        rows=np.flatnonzero(domain & bad & (np.abs(c2_target)>1e-12))
+        raise RuntimeError(f"c2 target not reachable inside quartic domain; rows={rows[:20].tolist()}")
     G2XX=np.zeros_like(dc)
-    ok=~bad
+    ok=domain & (~bad)
     G2XX[ok]=c2_target[ok]/dc[ok]
 
     inp=pd.DataFrame({
