@@ -1,0 +1,79 @@
+{
+  "status": "GLOBAL_QNM_TESTED_TO_CURRENT_OPERATOR_BOUNDARY",
+  "date": "2026-10-02",
+  "branch": "qnm-global-final-20261002",
+  "coupled_hsvt": {
+    "status": "BLOCKED_BEFORE_PHYSICAL_EIGENSOLVE",
+    "reason": "mandatory direct global stream pivots vanish in the currently prestaged outer raw sector; it is not a complete same-action H+SVT member",
+    "exact_local_replay": {
+      "outer_raw_rows": 2201,
+      "v1_zero_or_nearzero_rows_lt_1e_14": 820,
+      "v9_zero_or_nearzero_rows_lt_1e_14": 740,
+      "v10_zero_or_nearzero_rows_lt_1e_14": 743,
+      "DeltaV_zero_or_nearzero_rows_lt_1e_14": 742
+    },
+    "historical_stitched_fallback": {
+      "role": "diagnostic only, not production",
+      "L6_min_K": -1748774.3258600212,
+      "L6_min_cr2_where_K_positive": -0.5507139505349262,
+      "L6_negative_K_rows": 8136,
+      "L6_negative_cr2_rows_where_defined": 1824,
+      "eigensolve": "NONCONVERGENT_ILL_CONDITIONED",
+      "interpretation": "cannot yield a trustworthy coupled QNM spectrum"
+    },
+    "physical_qnm_claim_allowed": false
+  },
+  "global_test_field": {
+    "status": "EXECUTED_CENTER_TO_EXTERIOR_CAP_SCAN",
+    "geometry": "data/authoritative/ssz_p5_F2A_GLOBAL_CANONICAL_KRG_PRINCIPAL_CINF_FINAL_2026-09-15(2).csv",
+    "method": "tortoise-coordinate finite-difference operator with complex absorbing layer; regular center; outgoing exterior approximation",
+    "scanned_channels": [
+      "Maxwell l=2",
+      "Maxwell l=3",
+      "Maxwell l=6",
+      "scalar l=2",
+      "scalar l=3",
+      "scalar l=6"
+    ],
+    "matched_growing_roots": 0,
+    "examples": {
+      "Maxwell l=2": [
+        {
+          "omega_re": 0.12566555314512548,
+          "omega_im": -0.007671060292994443,
+          "cross_config_delta": 0.0034862297837269934
+        },
+        {
+          "omega_re": 0.1956624226208483,
+          "omega_im": -0.01250320422281945,
+          "cross_config_delta": 0.005264567822318715
+        }
+      ],
+      "scalar l=2": [
+        {
+          "omega_re": 0.12590453446620659,
+          "omega_im": -0.007702249523355357,
+          "cross_config_delta": 0.0034995708967493905
+        },
+        {
+          "omega_re": 0.196044643513797,
+          "omega_im": -0.012560109922954954,
+          "cross_config_delta": 0.005285845811763077
+        }
+      ]
+    },
+    "caveat": "CAP-stable candidates still move with absorber settings and are not promoted to physical QNM frequencies; no convincing stationary outer-light-ring resonance was isolated in the tested configuration set"
+  },
+  "established_outgoing_boundary_regression": {
+    "source": "data/qnm/SSZ_P5_F3_COUPLED_QNM_EXECUTION_CHECKPOINT_2026-09-15.md",
+    "Jost_transport_errors": {
+      "order4": 0.00000528,
+      "order6": 2.08e-8,
+      "order8": 1.8e-10,
+      "order10": 2.43e-12
+    },
+    "real_axis_inward_shooting": "REJECTED_MATCHING_RADIUS_DEPENDENT"
+  },
+  "conclusion": "A real global spectral/QNM-like problem has now been executed on the P5 geometry, with no growing matched test-field roots in the scanned low-l channels. The physical coupled HSVT global QNM spectrum cannot be computed honestly from the current production artifacts because the direct same-action global operator fails before the QNM eigensolve at the outer direct-stream pivot gate. This is the current exact blocker, not a missing QNM algorithm.",
+  "next_required_step": "regenerate complete outer H+SVT direct 41 from the locked action/shared-baseline architecture, then rerun full KRGSM health and the coupled compactified-Jost/ECS QNM solver"
+}
