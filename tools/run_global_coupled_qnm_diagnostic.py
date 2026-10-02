@@ -185,6 +185,54 @@ def main():
     g,pieces=assemble()
     OUTDIR.mkdir(parents=True,exist_ok=True)
     g.to_csv(STREAM,index=False)
+
+    # Exact direct-stream pivot gate before any reduction/QNM solve.  Some
+    # prestaged regional files are sector/reference products rather than one
+    # complete assembled same-action member; zero auxiliary pivots make that
+    # distinction operationally visible and must block the coupled solver.
+    pivot_detail = {}
+    pivot_block = False
+    for region, q in g.groupby("production_region", sort=False):
+        rec = {}
+        for name in ("v1","v9","v10"):
+            if name in q:
+                a=np.asarray(q[name],float)
+                rec[name]={
+                    "min_abs":float(np.min(np.abs(a))),
+                    "zero_or_nearzero_rows":int(np.sum(np.abs(a)<1e-14)),
+                }
+                pivot_block |= rec[name]["zero_or_nearzero_rows"]>0
+        if all(c in q for c in ("b1","v10","v11")):
+            DeltaV=4*np.asarray(q.b1,float)*np.asarray(q.v10,float)-np.asarray(q.v11,float)**2
+            rec["DeltaV"]={
+                "min_abs":float(np.min(np.abs(DeltaV))),
+                "zero_or_nearzero_rows":int(np.sum(np.abs(DeltaV)<1e-14)),
+            }
+            pivot_block |= rec["DeltaV"]["zero_or_nearzero_rows"]>0
+        pivot_detail[str(region)]=rec
+
+    if pivot_block:
+        report={
+          "status":"GLOBAL_COUPLED_QNM_BLOCKED_AT_DIRECT_STREAM_PIVOTS",
+          "scientific_scope":"global coupled HSVT execution attempted; stopped at mandatory direct-stream constraint-pivot gate",
+          "stream_sha256":sha256(STREAM),
+          "rows":len(g),
+          "x_range":[float(g.x.min()),float(g.x.max())],
+          "u_range":[float(g.u.min()),float(g.u.max())],
+          "interfaces":interface_report(g),
+          "pivot_gate":pivot_detail,
+          "physical_qnm_claim_allowed":False,
+          "blockers":[
+            "selected regional reference assembly contains zero/near-zero auxiliary pivots before reduction",
+            "the offending prestaged/raw sector is not a complete direct same-action H+SVT stream",
+            "QNM eigenvalues from such a singularly incomplete assembled operator would be nonphysical"
+          ],
+          "next_target":"REGENERATE_COMPLETE_OUTER_H_PLUS_SVT_DIRECT_41_FROM_ACTION_AND_SHARED_BASELINE_THEN_RERUN_GLOBAL_KRGSM_QNM"
+        }
+        REPORT.write_text(json.dumps(report,indent=2,allow_nan=False)+"\n")
+        print(json.dumps(report,indent=2,allow_nan=False))
+        return 0
+
     reducer=module("ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py")
     x=g.x.to_numpy(float)
 
