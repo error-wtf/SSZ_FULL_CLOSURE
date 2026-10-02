@@ -163,7 +163,7 @@ def main():
                     },
                     "configs": cfgs,
                     "cap_stable_root_count": len(stable),
-                    "cap_stable_growing_count": grow,
+                    "cap_stable_growing_count": int(grow),
                     "cap_stable_roots": [
                         {
                             "re": float(z.real),
