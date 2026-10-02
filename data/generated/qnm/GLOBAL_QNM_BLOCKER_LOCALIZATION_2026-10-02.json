@@ -1,0 +1,66 @@
+{
+  "status": "GLOBAL_QNM_BLOCKER_LOCALIZATION_2026-10-02",
+  "branch": "qnm-global-final-20261002",
+  "established": {
+    "outer_complete41_pivots": "PASS",
+    "global_coupled_qnm_diagnostic_executed": true,
+    "physical_qnm_claim_allowed": false,
+    "interface_derivative_amplification_as_dominant_cause": false
+  },
+  "regional_localization": {
+    "diagnosis": "LARGE_INSTABILITY_PERSISTS_WITHIN_REGIONS",
+    "dominant_region": "punctured_H_core",
+    "global_L6_min_K": -3184630.7348460513,
+    "isolated_core_L6_min_K": -3184630.7348460513,
+    "note": "worst rows are deep inside the core, not near a regional interface"
+  },
+  "deep_core_descriptor": {
+    "status": "CORE_DESCRIPTOR_LOCAL_GROWTH_PRESENT",
+    "worst": {
+      "L": 1000,
+      "x": 0.930562851892514,
+      "u": 1.0746184397606993,
+      "kr": 0,
+      "max_Re_lambda_kinetic_active": 24.726363995542812,
+      "kinetic_active_roots": 4,
+      "max_kinetic_participation": 0.304161546790524
+    },
+    "interpretation": "local unreduced descriptor growth signal; not a center-to-infinity QNM"
+  },
+  "quartic_action_regeneration": {
+    "status": "QUARTIC_CORE_DIRECT_REGEN_STILL_FAILS",
+    "scope": "G5=0 core x>=0.02",
+    "radial_gradient_pass": true,
+    "K_scalar_recomputed_min": -0.05586576414199296,
+    "K_scalar_negative_rows": 54,
+    "pocket_x_range": [
+      0.294301968543231,
+      0.3236508169483764
+    ],
+    "worst_x": 0.3015007426803421,
+    "worst_u": 3.316741415327864
+  },
+  "archived_core_oracle_consistency": {
+    "stored_K_scalar_min_on_x_ge_0p02": 0.00005718042471328384,
+    "recomputed_from_archived_F_H_a1_min": -0.05573256195145149,
+    "stencil_scan": {
+      "5x4": -0.055732556196735894,
+      "7x6": -0.05573256519772429,
+      "9x8": -0.05573256117622705,
+      "11x8": -0.05573254150501794,
+      "13x10": -0.05573254073145084,
+      "15x12": -0.05573254202653022
+    },
+    "diagnosis": "NEGATIVE_POCKET_STENCIL_ROBUST",
+    "git_provenance": "authoritative CSV entered repository in initial reproducible-repo commit 9ef92479297ae1049d4d4851de14ea90bee7cd3b; no earlier in-repo generator history"
+  },
+  "action_source_quality_at_negative_pocket": {
+    "background_scaled_condition_median": 3.8204077726958947,
+    "background_residual_rel_median": 0.0000052119929633900886,
+    "background_residual_rel_max": 0.00002913966299772364,
+    "XiH_residual_median": 0,
+    "diagnosis": "NEGATIVE_POCKET_NOT_EXPLAINED_BY_BACKGROUND_RESIDUAL_QUALITY"
+  },
+  "conclusion": "The previous archived positive core K_scalar gate is not reproducible from the archived primitive profiles using the current/legacy Kase-Tsujikawa P1 construction and is contradicted by a stencil-robust negative pocket. This does not yet prove a physical P5 core ghost because the archived oracle provenance is incomplete and the full-G5 subcore/action member distinction remains unresolved. It does invalidate using the archived positive K_scalar column alone as the gate for a physical coupled QNM spectrum.",
+  "next_target": "recover or reconstruct the archived positive K_scalar/P1 oracle provenance; independently derive P1/K_scalar from the covariant quartic action jets, then decide whether the x~0.30 pocket is physical or an obsolete-oracle inconsistency before full-G5 subcore and global QNM certification"
+}
