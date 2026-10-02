@@ -1,0 +1,25 @@
+name: Weisz high-order residue suppression
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  high-order:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Test high-order near-degenerate residue suppression
+        run: python tools/test_weisz1978_high_order_residue_suppression.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: weisz1978-high-order-residue-suppression
+          path: data/generated/spectral/weisz1978/WEISZ1978_HIGH_ORDER_NEAR_DEGENERATE_RESIDUES.json
