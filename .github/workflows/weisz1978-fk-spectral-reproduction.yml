@@ -1,0 +1,40 @@
+name: Reproduce Weisz 1978 FK spectra
+
+on:
+  push:
+    branches:
+      - current-member-full-domain-audit-20260930
+  workflow_dispatch:
+
+jobs:
+  weisz1978:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - name: Reproduce paper spectra from FK equations
+        run: python tools/reproduce_weisz_1978_spectra.py
+      - name: Verify benchmark output
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/generated/spectral/weisz1978/WEISZ1978_FK_REPRODUCTION.json")
+          d=json.loads(p.read_text())
+          assert d["checks"]["equilibrium_converged_all"]
+          assert d["checks"]["residue_sum_rule_all"]
+          print(json.dumps({
+            "overall":d["overall_reproduction_pass"],
+            "checks":d["checks"],
+            "cases":d["cases"],
+          },indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: weisz1978-fk-spectral-reproduction
+          path: data/generated/spectral/weisz1978/*
