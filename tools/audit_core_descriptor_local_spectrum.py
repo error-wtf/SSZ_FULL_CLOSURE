@@ -43,10 +43,19 @@ def roots(A0,A1,A2):
     n=A0.shape[0];I=np.eye(n,dtype=complex);Z=np.zeros_like(I)
     Lm=np.block([[-A1,-A0],[I,Z]])
     Rm=np.block([[A2,Z],[Z,I]])
-    z=eig(Lm,Rm,right=False,check_finite=False)
-    z=z[np.isfinite(z.real)&np.isfinite(z.imag)]
-    z=z[np.abs(z)<1e8]
-    return z
+    z,V=eig(Lm,Rm,right=True,check_finite=False)
+    good=np.isfinite(z.real)&np.isfinite(z.imag)&(np.abs(z)<1e8)
+    z=z[good];V=V[:,good]
+    rows=[]
+    for j,lam in enumerate(z):
+        y=V[n:,j]
+        n2=np.linalg.norm(A2@y)
+        n1=abs(lam)*np.linalg.norm(A1@y)
+        n0=np.linalg.norm(A0@y)
+        den=max(n0+n1+(abs(lam)**2)*n2,1e-300)
+        kin=((abs(lam)**2)*n2)/den
+        rows.append((lam,float(kin)))
+    return rows
 
 def main():
     d=pd.read_csv(CORE).sort_values("x").reset_index(drop=True)
@@ -62,23 +71,33 @@ def main():
         for i in ids:
             for kr in KRS:
                 A0,A1,A2=local_poly(P,int(i),kr)
-                z=roots(A0,A1,A2)
-                if len(z)==0:
+                zr=roots(A0,A1,A2)
+                if len(zr)==0:
                     entries.append({"row":int(i),"u":float(d.u.iloc[i]),"x":float(d.x.iloc[i]),"kr":kr,"finite_roots":0})
                     continue
+                z=np.asarray([q[0] for q in zr],complex)
+                kp=np.asarray([q[1] for q in zr],float)
+                active=kp>1e-6
+                za=z[active]
                 mx=float(np.max(z.real));mn=float(np.min(z.real))
+                amx=float(np.max(za.real)) if len(za) else None
                 sym=float(np.max(np.abs(np.sort(z.real)+np.sort(z.real)[::-1]))) if len(z)>1 else abs(mx+mn)
                 ent={
                   "row":int(i),"u":float(d.u.iloc[i]),"x":float(d.x.iloc[i]),"kr":kr,
                   "finite_roots":int(len(z)),"max_Re_lambda":mx,"min_Re_lambda":mn,
+                  "kinetic_active_roots":int(np.sum(active)),
+                  "max_Re_lambda_kinetic_active":amx,
+                  "min_kinetic_participation":float(np.min(kp)),"max_kinetic_participation":float(np.max(kp)),
                   "max_abs_Im_lambda":float(np.max(np.abs(z.imag))),
                   "growth_pair_symmetry_proxy":sym,
                 }
                 entries.append(ent)
-                if mx>global_max:
-                    global_max=mx;global_worst={"L":L,**ent}
+                test=amx if amx is not None else -np.inf
+                if test>global_max:
+                    global_max=test;global_worst={"L":L,**ent}
         results[str(L)]={
-          "max_Re_lambda":max((e.get("max_Re_lambda",-np.inf) for e in entries),default=None),
+          "max_Re_lambda_all_finite":max((e.get("max_Re_lambda",-np.inf) for e in entries),default=None),
+          "max_Re_lambda_kinetic_active":max((e.get("max_Re_lambda_kinetic_active") if e.get("max_Re_lambda_kinetic_active") is not None else -np.inf for e in entries),default=None),
           "sample_count":len(entries),
           "entries":entries,
         }
@@ -88,9 +107,10 @@ def main():
     status="CORE_DESCRIPTOR_LOCAL_NO_GROWTH" if global_max<tol else "CORE_DESCRIPTOR_LOCAL_GROWTH_PRESENT"
     report={
       "status":status,
-      "scope":"unreduced generalized-psi deep-core local dispersion; no D_h1 Schur inverse",
+      "scope":"unreduced generalized-psi deep-core local dispersion; no D_h1 Schur inverse; constraint/algebraic roots filtered by A2 kinetic participation",
       "lambda_convention":"exp(lambda t + i k_r r)",
       "growth_tolerance":tol,
+      "kinetic_participation_threshold":1e-6,
       "global_max_Re_lambda":float(global_max),
       "worst":global_worst,
       "per_L":results,
