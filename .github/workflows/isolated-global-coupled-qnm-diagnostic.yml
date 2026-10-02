@@ -29,16 +29,21 @@ jobs:
           p=Path("data/generated/qnm_global_diagnostic/GLOBAL_QNM_DIAGNOSTIC_REPORT.json")
           assert p.exists()
           d=json.loads(p.read_text())
-          print(json.dumps({
+          out={
             "status":d["status"],
-            "full_health_pass":d["full_health_pass"],
-            "spectra":{k:{
-              "stable":v["stable_root_count"],
-              "growing":v["stable_growing_count"],
-              "damped":v["stable_damped_count"]
-            } for k,v in d["spectra"].items()},
             "physical_qnm_claim_allowed":d["physical_qnm_claim_allowed"],
-          },indent=2))
+          }
+          if "full_health_pass" in d:
+              out["full_health_pass"]=d["full_health_pass"]
+          if "spectra" in d:
+              out["spectra"]={k:{
+                "stable":v["stable_root_count"],
+                "growing":v["stable_growing_count"],
+                "damped":v["stable_damped_count"]
+              } for k,v in d["spectra"].items()}
+          if "pivot_gate" in d:
+              out["pivot_gate"]=d["pivot_gate"]
+          print(json.dumps(out,indent=2))
           PY
       - uses: actions/upload-artifact@v4
         if: always()
