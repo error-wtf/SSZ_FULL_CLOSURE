@@ -28,7 +28,11 @@ import pandas as pd
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"src"))
 from ssz_p5.numerics import module  # noqa:E402
-from tools.run_global_coupled_qnm_diagnostic import assemble  # noqa:E402
+import importlib.util
+_spec=importlib.util.spec_from_file_location("global_qnm_diag", ROOT/"tools/run_global_coupled_qnm_diagnostic.py")
+_mod=importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_mod)
+assemble=_mod.assemble
 
 OUT=ROOT/"data/generated/qnm_global_diagnostic/GLOBAL_K_INTERFACE_LOCALIZATION.json"
 CSV=ROOT/"data/generated/qnm_global_diagnostic/GLOBAL_K_INTERFACE_LOCALIZATION.csv"
