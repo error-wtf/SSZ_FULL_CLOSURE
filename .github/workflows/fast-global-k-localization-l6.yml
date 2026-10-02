@@ -1,0 +1,20 @@
+name: Fast global K localization L6
+on:
+  push:
+    branches: [qnm-global-final-20261002]
+  workflow_dispatch:
+jobs:
+  fast:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.14', cache: pip}
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - run: python tools/build_outer_complete41_current.py
+      - run: python tools/audit_global_k_interface_fast_l6.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fast-global-k-localization-l6
+          path: data/generated/qnm_global_diagnostic/GLOBAL_K_INTERFACE_FAST_L6.json
