@@ -61,16 +61,22 @@ def residues(omega,V,q):
     return raw,norm
 
 
-def spectral_curve(K,G,q,omega,eta_frac):
+def spectral_curve(lam,V,q,omega,eta_frac):
+    """Exact modal representation of q^T[G-z^2K]^-1q.
+
+    For K-normalized generalized eigenvectors, the resolvent scalar is
+    sum_n |q^T v_n|^2/(lambda_n-z^2).  This is algebraically identical to a
+    direct matrix solve but avoids millions of tiny linear solves on dense
+    frequency grids.
+    """
     lo=max(0.0,float(np.min(omega))*0.65)
     hi=float(np.max(omega))*1.35
     x=np.linspace(lo,hi,5000)
     eta=max(eta_frac*float(np.median(omega)),1e-12)
-    A=np.empty_like(x)
-    for i,w in enumerate(x):
-        z=complex(float(w),eta)
-        val=q@np.linalg.solve(G.astype(complex)-z*z*K.astype(complex),q)
-        A[i]=abs(np.imag(val))/np.pi
+    amps=np.abs(q@V)**2
+    z=x.astype(complex)+1j*eta
+    val=np.sum(amps[:,None]/(lam[:,None]-z[None,:]**2),axis=0)
+    A=np.abs(np.imag(val))/np.pi
     return x,A,eta
 
 
@@ -104,7 +110,7 @@ def main():
                 ec=float(1/np.sum(norm*norm))
                 ent=float(-np.sum(np.where(norm>0,norm*np.log(norm),0)))
                 for ef in ETA_FRACS:
-                    x,A,eta=spectral_curve(K,G,q,om,ef)
+                    x,A,eta=spectral_curve(lam,V,q,om,ef)
                     peaks,_=find_peaks(A)
                     pidx=peaks[np.argsort(A[peaks])[-min(len(peaks),len(om)):]] if len(peaks) else np.array([],int)
                     for xx,yy in zip(x,A):
