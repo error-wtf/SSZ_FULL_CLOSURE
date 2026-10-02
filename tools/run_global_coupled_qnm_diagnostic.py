@@ -80,7 +80,11 @@ def normalize_reference(path,region):
 def assemble():
     reg=SOURCE_REGISTRY
     weak=normalize_reference(ROOT/reg["weak_exterior_H"]["coeff_reference"],"weak_exterior_H")
-    outer=normalize_reference(ROOT/reg["outer_same_action_H_SVT"]["coeff_reference"],"outer_same_action_H_SVT")
+    outer_current=ROOT/"data/generated/qnm_global_diagnostic/OUTER_COMPLETE_H_SVT_41.csv"
+    if outer_current.exists():
+        outer=normalize_reference(outer_current,"outer_same_action_H_SVT")
+    else:
+        outer=normalize_reference(ROOT/reg["outer_same_action_H_SVT"]["coeff_reference"],"outer_same_action_H_SVT")
     central=central_selected(ROOT)
     central["production_region"]="central_exact_SVT"
     inner=normalize_reference(ROOT/reg["inner_same_action_SVT_H"]["coeff_reference"],"inner_same_action_SVT_H")
