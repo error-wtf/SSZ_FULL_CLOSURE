@@ -86,11 +86,11 @@ def build_base():
     return inp,emitted
 
 
-def Kmin_at(stream,red,L,idx):
+def Kmins_for_L(stream,red,L,indices):
     a=red.canonical_audit(stream,float(L))
     K=np.asarray(a["K"],float)
-    vals=np.linalg.eigvalsh((K+K.transpose(0,2,1))/2)
-    return float(vals[idx,0])
+    vals=np.linalg.eigvalsh((K+K.transpose(0,2,1))/2)[:,0]
+    return {int(i):float(vals[int(i)]) for i in indices}
 
 
 def apply_g3(base,resp,q):
@@ -124,7 +124,10 @@ def main():
         controls.append(("G4XX",c))
 
     # Baseline values.
-    baseK={(L,i):Kmin_at(base,red,L,i) for L in LS for i in target_idx}
+    baseK={}
+    for L in LS:
+        kk=Kmins_for_L(base,red,L,target_idx)
+        for i,v in kk.items(): baseK[(L,i)]=v
 
     # Jacobian of weakest K wrt legitimate control amplitudes.
     J={(L,i):np.zeros(len(controls)) for L in LS for i in target_idx}
@@ -164,8 +167,9 @@ def main():
           "min_abs_dc2_dG2XX_on_support":conditioning
         })
         for L in LS:
+            kk=Kmins_for_L(pert,red,L,target_idx)
             for i in target_idx:
-                J[(L,i)][j]=(Kmin_at(pert,red,L,i)-baseK[(L,i)])/eps
+                J[(L,i)][j]=(kk[int(i)]-baseK[(L,i)])/eps
 
     usable=np.array([b.get("usable",False) for b in bg_checks],bool)
     # Note bg_checks order follows controls one-for-one.
