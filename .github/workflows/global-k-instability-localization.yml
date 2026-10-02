@@ -1,0 +1,28 @@
+name: Global K instability localization
+
+on:
+  push:
+    branches:
+      - qnm-global-final-20261002
+  workflow_dispatch:
+
+jobs:
+  localize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - run: python tools/build_outer_complete41_current.py
+      - run: python tools/run_global_coupled_qnm_diagnostic.py
+      - run: python tools/audit_global_k_instability_localization.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: global-k-instability-localization
+          path: data/generated/qnm_global_diagnostic/*
