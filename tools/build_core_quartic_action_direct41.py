@@ -72,9 +72,7 @@ def main():
     c2_target=ref.c2.to_numpy(float)
     domain=(act.u.to_numpy(float)>=0.715)&(act.u.to_numpy(float)<50.0)
     bad=np.abs(dc)<1e-16
-    if np.any(domain & bad & (np.abs(c2_target)>1e-12)):
-        rows=np.flatnonzero(domain & bad & (np.abs(c2_target)>1e-12))
-        raise RuntimeError(f"c2 target not reachable inside quartic domain; rows={rows[:20].tolist()}")
+    unresolved = domain & bad & (np.abs(c2_target)>1e-12)
     G2XX=np.zeros_like(dc)
     ok=domain & (~bad)
     G2XX[ok]=c2_target[ok]/dc[ok]
@@ -126,14 +124,17 @@ def main():
       "source_hashes":{"action_g4xx":sha(ACT),"f2_c2_target":sha(REF)},
       "edge_primitive_scaled_errors":edge_err,
       "G2XX_control":{"min":float(np.min(G2XX[mask])),"max":float(np.max(G2XX[mask])),
-                      "max_abs":float(np.max(np.abs(G2XX[mask])))},
+                      "max_abs":float(np.max(np.abs(G2XX[mask]))),
+                      "reachable_fraction":float(np.mean(~unresolved[mask])),
+                      "unresolved_rows":int(np.sum(unresolved[mask])),
+                      "note":"c2 is supplied as the documented selected primitive for this diagnostic. Rows where dc2/dG2XX vanishes are not claimed action-normal-jet reconstructed."},
       "exact_invariant_min":{
         "F":float(np.min(d.F_tensor)),"G":float(np.min(d.G_tensor)),
         "H":float(np.min(d.H_tensor)),"K_scalar":float(np.min(d.K_scalar))
       },
       "finite_L_health":per,
       "all_finite_L_health_pass":bool(all(v["min_K"]>0 and v["min_cr2"]>0 for v in per.values())),
-      "guard":"This certifies only the quartic G5=0 core emission. u>=50 requires the separate full-G5 action bridge."
+      "guard":"This is a quartic G5=0 primitive-emission diagnostic. F,G,H,a1,c4 are direct action-derived; c2 is the selected primitive and is action-normal-jet certified only where dc2/dG2XX is nonzero. u>=50 requires the separate full-G5 bridge."
     }
     REPORT.write_text(json.dumps(report,indent=2,allow_nan=False)+"\n")
     print(json.dumps(report,indent=2,allow_nan=False))
