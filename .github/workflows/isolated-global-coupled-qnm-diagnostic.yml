@@ -18,6 +18,8 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.lock
       - run: python -m pip install --no-deps -e .
+      - name: Rebuild complete outer H+SVT direct 41
+        run: python tools/build_outer_complete41_current.py
       - name: Execute global QNM diagnostic
         run: python tools/run_global_coupled_qnm_diagnostic.py
       - name: Verify
@@ -52,3 +54,5 @@ jobs:
           path: |
             data/generated/qnm_global_diagnostic/GLOBAL_QNM_DIAGNOSTIC_REPORT.json
             data/generated/qnm_global_diagnostic/GLOBAL_REGIONAL_REFERENCE_41.csv
+            data/generated/qnm_global_diagnostic/OUTER_COMPLETE_H_SVT_41.csv
+            data/generated/qnm_global_diagnostic/OUTER_COMPLETE_H_SVT_41_AUDIT.json
