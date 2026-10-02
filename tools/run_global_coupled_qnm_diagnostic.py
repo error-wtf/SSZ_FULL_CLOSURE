@@ -70,7 +70,7 @@ def normalize_reference(path,region):
     # Pure-H weak exterior is the documented 39/41 table; missing lower controls
     # are zero in that pure-H representative.
     for c in ("v5","c3","e3"):
-        if c not in d.columns:
+        if c not in d.columns or not np.isfinite(pd.to_numeric(d[c], errors="coerce")).all():
             d[c]=0.0
     d=select_lower(d)
     d["production_region"]=region
