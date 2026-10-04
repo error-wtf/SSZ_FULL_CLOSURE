@@ -1,0 +1,75 @@
+{
+ "artifact_rejections": [],
+ "bands": {
+  "hard_5-10keV": {
+   "n_events": 339,
+   "seg128s": {
+    "n_candidates_global_gt3": 0,
+    "n_segments": 11,
+    "peaks": []
+   },
+   "seg512s": {
+    "n_candidates_global_gt3": 0,
+    "n_segments": 1,
+    "peaks": []
+   },
+   "seg64s": {
+    "n_candidates_global_gt3": 0,
+    "n_segments": 26,
+    "peaks": []
+   }
+  },
+  "mid_2-5keV": {
+   "n_events": 625,
+   "seg128s": {
+    "n_candidates_global_gt3": 0,
+    "n_segments": 11,
+    "peaks": []
+   },
+   "seg512s": {
+    "n_candidates_global_gt3": 0,
+    "n_segments": 1,
+    "peaks": []
+   },
+   "seg64s": {
+    "n_candidates_global_gt3": 0,
+    "n_segments": 26,
+    "peaks": []
+   }
+  },
+  "soft_0.5-2keV": {
+   "n_events": 7511,
+   "seg128s": {
+    "n_candidates_global_gt3": 0,
+    "n_segments": 11,
+    "peaks": []
+   },
+   "seg512s": {
+    "n_candidates_global_gt3": 0,
+    "n_segments": 1,
+    "peaks": []
+   },
+   "seg64s": {
+    "n_candidates_global_gt3": 0,
+    "n_segments": 26,
+    "peaks": []
+   }
+  }
+ },
+ "blindness": "no model input, no predicted catalog read (enforced by bridge asserts)",
+ "candidates_global_gt4": [],
+ "catalog": "STAGE_A_SMOKE_TEST",
+ "created_utc": "2026-10-04T23:36:31.081277+00:00",
+ "gti_artifact_control": {
+  "artifact_candidates_rejected": [],
+  "comb_lines_hz": [],
+  "median_short_gap_s": null,
+  "n_gaps_total": 8,
+  "n_short_gaps_lt2s": 0,
+  "not_recovered": []
+ },
+ "obsid": "5200120403",
+ "statistics": "Leahy PSD, Gamma(nseg) per-bin exact, Bonferroni over searched bins",
+ "threshold_global_sigma": 4.0,
+ "verdict": "NO_ASTRONOMICAL_CANDIDATE_IN_THIS_OBSID_AT_GLOBAL_4SIGMA"
+}
