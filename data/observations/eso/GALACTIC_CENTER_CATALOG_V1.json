@@ -1,0 +1,110 @@
+{
+ "catalog": "OBSERVED_CATALOG_INPUTS_ESO_ALMA_GALACTIC_CENTER",
+ "version": 1,
+ "created_utc": "2026-10-04T23:27:35.713771+00:00",
+ "anti_circularity": "metadata-only pinning via ESO TAP ObsCore; no products downloaded; no SSZ input; frequency band (em_min/em_max m) recorded as-published",
+ "source": {
+  "access_mode": "live_read_only_metadata",
+  "max_rows": 6
+ },
+ "region": {
+  "ra_deg": 266.4168,
+  "dec_deg": -29.0078,
+  "radius_deg": 0.02,
+  "note": "Sgr A* / magnetar J1745-2900 field"
+ },
+ "n_obs": 6,
+ "rows": [
+  {
+   "obs_collection": "ALMA",
+   "facility_name": "JAO",
+   "instrument_name": "ALMA",
+   "target_name": "J1745-2900",
+   "s_ra": 266.41681658333334,
+   "s_dec": -29.007824694444444,
+   "dataproduct_type": "cube",
+   "calib_level": 2,
+   "t_exptime": 302.4,
+   "em_min": 0.003477151424471768,
+   "em_max": 0.0035179389658775125,
+   "obs_release_date": "2026-09-01T12:03:55Z",
+   "access_url": "https://almascience.eso.org/aq?member_ous_id=uid://A002/X6444ba/X10&result_view=observation&science_observations=off"
+  },
+  {
+   "obs_collection": "ALMA",
+   "facility_name": "JAO",
+   "instrument_name": "ALMA",
+   "target_name": "J1745-2900",
+   "s_ra": 266.41681658333334,
+   "s_dec": -29.007824694444444,
+   "dataproduct_type": "cube",
+   "calib_level": 2,
+   "t_exptime": 302.4,
+   "em_min": 0.0034299552085330434,
+   "em_max": 0.0034696367081064852,
+   "obs_release_date": "2026-09-01T12:03:55Z",
+   "access_url": "https://almascience.eso.org/aq?member_ous_id=uid://A002/X6444ba/X10&result_view=observation&science_observations=off"
+  },
+  {
+   "obs_collection": "ALMA",
+   "facility_name": "JAO",
+   "instrument_name": "ALMA",
+   "target_name": "J1745-2900",
+   "s_ra": 266.41681658333334,
+   "s_dec": -29.007824694444444,
+   "dataproduct_type": "cube",
+   "calib_level": 2,
+   "t_exptime": 302.4,
+   "em_min": 0.003085934752438462,
+   "em_max": 0.003118018198414194,
+   "obs_release_date": "2026-09-01T12:03:55Z",
+   "access_url": "https://almascience.eso.org/aq?member_ous_id=uid://A002/X6444ba/X10&result_view=observation&science_observations=off"
+  },
+  {
+   "obs_collection": "ALMA",
+   "facility_name": "JAO",
+   "instrument_name": "ALMA",
+   "target_name": "J1745-2900",
+   "s_ra": 266.41681658333334,
+   "s_dec": -29.007824694444444,
+   "dataproduct_type": "cube",
+   "calib_level": 2,
+   "t_exptime": 302.4,
+   "em_min": 0.003044172244577447,
+   "em_max": 0.0030753887923252684,
+   "obs_release_date": "2026-09-01T12:03:55Z",
+   "access_url": "https://almascience.eso.org/aq?member_ous_id=uid://A002/X6444ba/X10&result_view=observation&science_observations=off"
+  },
+  {
+   "obs_collection": "ALMA",
+   "facility_name": "JAO",
+   "instrument_name": "ALMA",
+   "target_name": "GC50MC",
+   "s_ra": 266.4648244755735,
+   "s_dec": -28.989324976275988,
+   "dataproduct_type": "cube",
+   "calib_level": 2,
+   "t_exptime": 2058.871,
+   "em_min": 0.0030848488760354476,
+   "em_max": 0.0031169834054077857,
+   "obs_release_date": "2026-09-01T12:03:55Z",
+   "access_url": "https://almascience.eso.org/aq?member_ous_id=uid://A002/X6444ba/X10&result_view=observation&science_observations=off"
+  },
+  {
+   "obs_collection": "ALMA",
+   "facility_name": "JAO",
+   "instrument_name": "ALMA",
+   "target_name": "GC50MC",
+   "s_ra": 266.4648244755735,
+   "s_dec": -28.989324976275988,
+   "dataproduct_type": "cube",
+   "calib_level": 2,
+   "t_exptime": 2058.871,
+   "em_min": 0.0034771503070445686,
+   "em_max": 0.0035179801082163824,
+   "obs_release_date": "2026-09-01T12:03:55Z",
+   "access_url": "https://almascience.eso.org/aq?member_ous_id=uid://A002/X6444ba/X10&result_view=observation&science_observations=off"
+  }
+ ],
+ "catalog_sha256": "8a9c5f83d522fcab5c689177e04b6635a9d1771509028360fc3e2cd7b527e47f"
+}
