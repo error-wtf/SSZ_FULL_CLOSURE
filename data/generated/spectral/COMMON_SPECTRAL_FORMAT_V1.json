@@ -1,0 +1,953 @@
+{
+ "format_version": 1,
+ "description": "Common dimensionless spectral-comparison schema (Weisz/Li/SSZ)",
+ "invariants": [
+  "top_residue_fractions",
+  "effective_mode_count",
+  "spectral_entropy",
+  "residue_dynamic_range",
+  "gap_residue_spearman",
+  "fractal_dimension",
+  "participation_growth_ratio"
+ ],
+ "anti_circularity": "reformat-only; no fitting; absent != zero",
+ "entries": [
+  {
+   "model": "weisz1978_fk",
+   "case": "13 lambda = 10 a beta=0.3",
+   "n_modes": 10,
+   "top_residue_fractions": [
+    0.9712499743350256,
+    0.996174849879634,
+    0.9996686960264433
+   ],
+   "effective_mode_count": 1.059366834428145,
+   "spectral_entropy": 0.14277602937446848,
+   "residue_dynamic_range": 9737416980207938.0,
+   "lowest_omega2": 0.00013721734911495897,
+   "hessian_min": 0.0001372173491146673,
+   "spatial": null,
+   "gap_residue_spearman": 0.6166666666666666
+  },
+  {
+   "model": "weisz1978_fk",
+   "case": "13 lambda = 10 a beta=0.7",
+   "n_modes": 10,
+   "top_residue_fractions": [
+    0.8817550597617505,
+    0.9527089963623913,
+    0.9938122177593635
+   ],
+   "effective_mode_count": 1.2750967870295857,
+   "spectral_entropy": 0.4613531551952985,
+   "residue_dynamic_range": 3.6212331279769606e+17,
+   "lowest_omega2": 0.17546916757778383,
+   "hessian_min": 0.1754691675777833,
+   "spatial": null,
+   "gap_residue_spearman": 0.33333333333333337
+  },
+  {
+   "model": "weisz1978_fk",
+   "case": "48 lambda = 49 a beta=0.005",
+   "n_modes": 49,
+   "top_residue_fractions": [
+    0.8653115127425828,
+    0.9996615560978211,
+    0.9999975066227225
+   ],
+   "effective_mode_count": 1.3040971087066255,
+   "spectral_entropy": 0.397582062734928,
+   "residue_dynamic_range": 11342615727830.031,
+   "lowest_omega2": 5.111721754397017e-10,
+   "hessian_min": 5.111709702439529e-10,
+   "spatial": null,
+   "gap_residue_spearman": 0.1849761181068172
+  },
+  {
+   "model": "weisz1978_fk",
+   "case": "48 lambda = 49 a beta=0.01",
+   "n_modes": 49,
+   "top_residue_fractions": [
+    0.6904831546708273,
+    0.9972238435615328,
+    0.9999362853010209
+   ],
+   "effective_mode_count": 1.7517301015872255,
+   "spectral_entropy": 0.634876462953621,
+   "residue_dynamic_range": 5859888332.139872,
+   "lowest_omega2": -5.530304779585353e-10,
+   "hessian_min": -5.530293731862089e-10,
+   "spatial": null,
+   "gap_residue_spearman": -0.34932932469935246
+  },
+  {
+   "model": "weisz1978_fk",
+   "case": "48 lambda = 49 a beta=0.02",
+   "n_modes": 49,
+   "top_residue_fractions": [
+    0.5015030344392136,
+    0.9873963614816526,
+    0.999279285539404
+   ],
+   "effective_mode_count": 2.0502757696402565,
+   "spectral_entropy": 0.7549059257714813,
+   "residue_dynamic_range": 13627831.617699107,
+   "lowest_omega2": -2.4851388968554385e-08,
+   "hessian_min": -2.485138919746018e-08,
+   "spatial": null,
+   "gap_residue_spearman": -0.7113783533765032
+  },
+  {
+   "model": "li2023_cst_aah",
+   "case": "ABSENT_RUN_IN_PROGRESS"
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "fixed_observable_v3_status",
+   "status": "LOCAL_FIXED_OBSERVABLE_ROBUST_RESIDUE_REORDERING_DETECTED",
+   "scope": "registered healthy production window only",
+   "all_controls_pass": true,
+   "interpretation_guard": "Global QNM/retarded-Green residue claims remain blocked until healthy direct-global KRGSM and certificate exist."
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=6 field_0",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.38083872265937424,
+    0.8583548327439741
+   ],
+   "cluster_top2_range": [
+    0.7289444532331864,
+    0.9498871880071679
+   ],
+   "cluster_neff_range": [
+    1.3375019079089419,
+    2.9094122399897073
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.7289444532331864
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=6 field_1",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.38007522590388837,
+    0.8173951763472308
+   ],
+   "cluster_top2_range": [
+    0.7083889959920656,
+    0.9353960225126381
+   ],
+   "cluster_neff_range": [
+    1.4572315341012128,
+    2.9514224828898787
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.7083889959920656
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=6 field_2",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.8232196668360036,
+    0.897432504433776
+   ],
+   "cluster_top2_range": [
+    0.9999999999999999,
+    1.0000000000000002
+   ],
+   "cluster_neff_range": [
+    1.2256325990241983,
+    1.410552813218182
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9999999999999999
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=6 equal_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.38673015512731296,
+    0.8071470538897072
+   ],
+   "cluster_top2_range": [
+    0.7335856897780788,
+    0.9426046365041783
+   ],
+   "cluster_neff_range": [
+    1.48559856802097,
+    2.8918653122969658
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.7335856897780788
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=6 ramp_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.39019500934478335,
+    0.7302890619982289
+   ],
+   "cluster_top2_range": [
+    0.7466395087182042,
+    0.9424761611488153
+   ],
+   "cluster_neff_range": [
+    1.719233754039453,
+    2.8489040053414905
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.7466395087182042
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=12 field_0",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.3753386835141482,
+    0.700629271489434
+   ],
+   "cluster_top2_range": [
+    0.7043739560376959,
+    0.9120266147033471
+   ],
+   "cluster_neff_range": [
+    1.8549397489042272,
+    2.9601905636729193
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.7043739560376959
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=12 field_1",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.367495362941855,
+    0.869125361980214
+   ],
+   "cluster_top2_range": [
+    0.7043680314327325,
+    0.9526094105661479
+   ],
+   "cluster_neff_range": [
+    1.30788306385258,
+    2.9588889964862375
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.7043680314327325
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=12 field_2",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.7329257904767618,
+    0.7726805618845357
+   ],
+   "cluster_top2_range": [
+    0.9999999999999998,
+    1.0000000000000002
+   ],
+   "cluster_neff_range": [
+    1.5415223433460938,
+    1.6433614789933564
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9999999999999998
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=12 equal_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.4011736555835198,
+    0.6510945868224269
+   ],
+   "cluster_top2_range": [
+    0.7162435823592692,
+    0.9348669639348954
+   ],
+   "cluster_neff_range": [
+    1.972230668884703,
+    2.9349003997697873
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.7162435823592692
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=12 ramp_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.4387353747978201,
+    0.7345107173237321
+   ],
+   "cluster_top2_range": [
+    0.7506966931136518,
+    0.954586948103569
+   ],
+   "cluster_neff_range": [
+    1.700279415149208,
+    2.7916018237624347
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.7506966931136518
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=20 field_0",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.3889747424730775,
+    0.6223633438956336
+   ],
+   "cluster_top2_range": [
+    0.730598043641145,
+    0.9575666264531806
+   ],
+   "cluster_neff_range": [
+    2.0013310002580718,
+    2.8762677140506967
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.730598043641145
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=20 field_1",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.36734392879091105,
+    0.8952578091469602
+   ],
+   "cluster_top2_range": [
+    0.7051223966998681,
+    0.961526778591962
+   ],
+   "cluster_neff_range": [
+    1.2386074283483248,
+    2.960485431186709
+   ],
+   "robust_inversions": 1,
+   "top2_lower_bound": 0.7051223966998681
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=20 field_2",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.6822435370309009,
+    0.7089916687964134
+   ],
+   "cluster_top2_range": [
+    0.9999999999999998,
+    1.0000000000000002
+   ],
+   "cluster_neff_range": [
+    1.702547760691118,
+    1.7654575095444778
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9999999999999998
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=20 equal_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.41889166967944286,
+    0.671674746252833
+   ],
+   "cluster_top2_range": [
+    0.7593233084108618,
+    0.9675881084464075
+   ],
+   "cluster_neff_range": [
+    1.8607696058012657,
+    2.7611374057591007
+   ],
+   "robust_inversions": 2,
+   "top2_lower_bound": 0.7593233084108618
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=20 ramp_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.47696697499773205,
+    0.7510422595494357
+   ],
+   "cluster_top2_range": [
+    0.8140312160702373,
+    0.9766170243649169
+   ],
+   "cluster_neff_range": [
+    1.62844349307582,
+    2.515690392856832
+   ],
+   "robust_inversions": 1,
+   "top2_lower_bound": 0.8140312160702373
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=42 field_0",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.4607712553378311,
+    0.6394551583787126
+   ],
+   "cluster_top2_range": [
+    0.7340781113992472,
+    0.9859447590022561
+   ],
+   "cluster_neff_range": [
+    1.896279225891054,
+    2.7954728244928595
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.7340781113992472
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=42 field_1",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.36644079002775454,
+    0.9243982197306135
+   ],
+   "cluster_top2_range": [
+    0.7319817770392232,
+    0.9718524710692122
+   ],
+   "cluster_neff_range": [
+    1.1661042534243817,
+    2.942899027408086
+   ],
+   "robust_inversions": 1,
+   "top2_lower_bound": 0.7319817770392232
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=42 field_2",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.6277204898026999,
+    0.6770592573708695
+   ],
+   "cluster_top2_range": [
+    0.9999999999999998,
+    1.0000000000000002
+   ],
+   "cluster_neff_range": [
+    1.777146026087804,
+    1.8774933803329328
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9999999999999998
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=42 equal_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5275027198356876,
+    0.6843788997470338
+   ],
+   "cluster_top2_range": [
+    0.7723223371636556,
+    0.9889437426260516
+   ],
+   "cluster_neff_range": [
+    1.7857211545406473,
+    2.5638863915513723
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.7723223371636556
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=42 ramp_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.570596738082718,
+    0.7616497332183063
+   ],
+   "cluster_top2_range": [
+    0.8187827965357042,
+    0.9917608144634319
+   ],
+   "cluster_neff_range": [
+    1.5812611967039292,
+    2.128178201160145
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.8187827965357042
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=110 field_0",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5495231049689289,
+    0.6451889001955142
+   ],
+   "cluster_top2_range": [
+    0.9215971447390443,
+    0.996706440895309
+   ],
+   "cluster_neff_range": [
+    1.8541824117487158,
+    2.187520537694913
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9215971447390443
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=110 field_1",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.4550865492202957,
+    0.9513445430731289
+   ],
+   "cluster_top2_range": [
+    0.7766982151490511,
+    0.9817288295030236
+   ],
+   "cluster_neff_range": [
+    1.103370987943828,
+    2.7680181214869295
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.7766982151490511
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=110 field_2",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5859851162302017,
+    0.6581309885270102
+   ],
+   "cluster_top2_range": [
+    0.9999999999999999,
+    1.0
+   ],
+   "cluster_neff_range": [
+    1.8181460533810216,
+    1.942551448032246
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9999999999999999
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=110 equal_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5609231014955125,
+    0.6884078019169473
+   ],
+   "cluster_top2_range": [
+    0.9341244212388746,
+    0.9973600339259452
+   ],
+   "cluster_neff_range": [
+    1.757419701630092,
+    2.0135177458291795
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9341244212388746
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=110 ramp_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5822114797416184,
+    0.765523260440576
+   ],
+   "cluster_top2_range": [
+    0.9478834878516755,
+    0.9979910408413402
+   ],
+   "cluster_neff_range": [
+    1.5631158243838772,
+    1.9742883865315484
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9478834878516755
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=420 field_0",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5537575764487942,
+    0.6461646241269537
+   ],
+   "cluster_top2_range": [
+    0.9887632409003303,
+    0.999561497497363
+   ],
+   "cluster_neff_range": [
+    1.8438477799392057,
+    1.9826305674719578
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9887632409003303
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=420 field_1",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.6183747928891253,
+    0.9743265849612751
+   ],
+   "cluster_top2_range": [
+    0.843680405604666,
+    0.9903188425391767
+   ],
+   "cluster_neff_range": [
+    1.0530064810947608,
+    2.183269345631022
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.843680405604666
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=420 field_2",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5626666643717275,
+    0.6492407739572653
+   ],
+   "cluster_top2_range": [
+    0.9999999999999998,
+    1.0
+   ],
+   "cluster_neff_range": [
+    1.836393441379926,
+    1.9690689914066815
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9999999999999998
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=420 equal_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5638328370794445,
+    0.6888884577834639
+   ],
+   "cluster_top2_range": [
+    0.9905881877235467,
+    0.999645247244973
+   ],
+   "cluster_neff_range": [
+    1.751044646341327,
+    1.9724243422264593
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9905881877235467
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=420 ramp_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5836401363146468,
+    0.7672341546833935
+   ],
+   "cluster_top2_range": [
+    0.9925748354394884,
+    0.9997272396607674
+   ],
+   "cluster_neff_range": [
+    1.558226571324092,
+    1.9490522793083327
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9925748354394884
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=1000 field_0",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5540194158934797,
+    0.6461477311229679
+   ],
+   "cluster_top2_range": [
+    0.9969186739050097,
+    0.9998808564603252
+   ],
+   "cluster_neff_range": [
+    1.8429319060511382,
+    1.978399810970907
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9969186739050097
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=1000 field_1",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.7139892219501021,
+    0.9831854969429714
+   ],
+   "cluster_top2_range": [
+    0.882983219320658,
+    0.9936538718220305
+   ],
+   "cluster_neff_range": [
+    1.0343362592121434,
+    1.8106928306010566
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.882983219320658
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=1000 field_2",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5576544949468817,
+    0.6473896491110219
+   ],
+   "cluster_top2_range": [
+    0.9999999999999998,
+    1.0000000000000002
+   ],
+   "cluster_neff_range": [
+    1.8401044298136893,
+    1.9737566100931783
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9999999999999998
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=1000 equal_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5639117593329627,
+    0.6888024187026652
+   ],
+   "cluster_top2_range": [
+    0.9974180242538461,
+    0.9999034258572053
+   ],
+   "cluster_neff_range": [
+    1.750642123149422,
+    1.9690603654266705
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9974180242538461
+  },
+  {
+   "model": "ssz_krgsm_local",
+   "case": "healthy_window L=1000 ramp_weight",
+   "u_window": [
+    0.6200037509377344,
+    0.6999812453113278
+   ],
+   "samples": 151,
+   "nondegenerate_fraction": 1.0,
+   "cluster_top1_range": [
+    0.5834877401455552,
+    0.7710261847190369
+   ],
+   "cluster_top2_range": [
+    0.9979618360779241,
+    0.9999255810593581
+   ],
+   "cluster_neff_range": [
+    1.5480227905023645,
+    1.9466955486105715
+   ],
+   "robust_inversions": 0,
+   "top2_lower_bound": 0.9979618360779241
+  }
+ ]
+}
