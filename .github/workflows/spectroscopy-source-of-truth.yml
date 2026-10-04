@@ -1,0 +1,17 @@
+name: Spectroscopy source-of-truth audit
+on:
+  push:
+    branches: [spectroscopy-real-data-20261004]
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.14'}
+      - run: python tools/audit_spectroscopy_source_of_truth.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: spectroscopy-source-of-truth
+          path: data/generated/spectral/SPECTROSCOPY_SOURCE_OF_TRUTH_2026-10-04.json
