@@ -1,0 +1,25 @@
+{
+ "status": "KSCALAR_INDEPENDENT_ROUTE_AUDIT",
+ "route_A_jet9d8": {
+  "min_in_band": -0.05586576414199351,
+  "argmin_x": 0.3015007426803421,
+  "n_negative_rows_band": 54
+ },
+ "route_B_cubic_spline": {
+  "min_in_band": -0.055865766289791674,
+  "argmin_x": 0.3015007426803421,
+  "n_negative_rows_band": 54
+ },
+ "route_C_spline_2x_grid": {
+  "min_in_band": -0.055865631682343486,
+  "argmin_x": 0.3015007426803421,
+  "n_negative_rows_band": 54
+ },
+ "archived_positive_oracle_min_in_band": null,
+ "deviation_B_vs_A_at_argmin_rel": 3.8445695579956925e-08,
+ "verdict": {
+  "pocket_negative_all_routes": true,
+  "route_deviation_small_vs_pocket_depth": true
+ },
+ "verdict_label": "POCKET_ROUTE_ROBUST_ACTION_LEVEL_DECISIVE"
+}
