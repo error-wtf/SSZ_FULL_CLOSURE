@@ -1,0 +1,31 @@
+{
+ "status": "KSCALAR_DOMAIN_DECISION_TEST_COMPLETE",
+ "declared_before_running": true,
+ "cases": {
+  "original_out_of_domain_jets": {
+   "K_min_band": -0.05586576414199351,
+   "argmin_x": 0.3015007426803421,
+   "negative_rows_band": 54
+  },
+  "g4_jets_zeroed": {
+   "K_min_band": -0.006822210099030945,
+   "argmin_x": 0.2904257055463251,
+   "negative_rows_band": 36
+  },
+  "g3x_zeroed": {
+   "K_min_band": -0.062289841916331024,
+   "argmin_x": 0.3009469908236413,
+   "negative_rows_band": 49
+  },
+  "luminal_domain_g4jets_and_g3x_zero": {
+   "K_min_band": 0.0005037449013018946,
+   "argmin_x": 0.2904257055463251,
+   "negative_rows_band": 0
+  }
+ },
+ "verdict": {
+  "pocket_gone_in_luminal_domain": true,
+  "decision_rule": "pocket gone under luminal domain => ARTIFACT (H1); pocket survives => PHYSICAL candidate (H3)"
+ },
+ "verdict_label": "POCKET_IS_OUT_OF_DOMAIN_JET_ARTIFACT_H1"
+}
