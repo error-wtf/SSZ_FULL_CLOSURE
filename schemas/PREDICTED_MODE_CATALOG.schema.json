@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PredictedModeCatalogV1",
+  "type": "object",
+  "required": ["catalog", "version", "frozen", "sha256", "member_hash", "healthy_window", "modes", "blindness_assert"],
+  "properties": {
+    "catalog": {"const": "PREDICTED_MODE_CATALOG"},
+    "version": {"type": "integer", "minimum": 1},
+    "frozen": {"const": true},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "member_hash": {"type": "string"},
+    "operator": {"const": "local_principal_krgsm_healthy_window"},
+    "healthy_window": {
+      "type": "object",
+      "required": ["u_min", "u_max", "L_values", "controls_all_pass"],
+      "properties": {
+        "u_min": {"type": "number"},
+        "u_max": {"type": "number"},
+        "L_values": {"type": "array", "items": {"type": "integer"}},
+        "controls_all_pass": {"const": true}
+      }
+    },
+    "observables": {"type": "array", "items": {"type": "string"}},
+    "modes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["observable", "u", "omega2", "cluster_residue_weight", "state_class"],
+        "properties": {
+          "observable": {"type": "string"},
+          "u": {"type": "number"},
+          "L": {"type": "integer"},
+          "omega2": {"type": "number"},
+          "cluster_residue_weight": {"type": "number"},
+          "ipr": {"type": "number"},
+          "scaling_dimension": {"type": ["number", "null"]},
+          "state_class": {"enum": ["localized", "extended", "multifractal", "undetermined"]}
+        }
+      }
+    },
+    "global_qnm_included": {"const": false},
+    "blindness_assert": {
+      "type": "object",
+      "required": ["did_not_read_observed_catalog", "enforced_by"],
+      "properties": {
+        "did_not_read_observed_catalog": {"const": true},
+        "enforced_by": {"type": "string"}
+      }
+    }
+  }
+}

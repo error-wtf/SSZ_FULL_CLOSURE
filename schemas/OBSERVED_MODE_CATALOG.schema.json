@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ObservedModeCatalogV1",
+  "type": "object",
+  "required": ["catalog", "version", "frozen", "sha256", "target", "modes", "instrumental_controls"],
+  "properties": {
+    "catalog": {"const": "OBSERVED_MODE_CATALOG"},
+    "version": {"type": "integer", "minimum": 1},
+    "frozen": {"const": true},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "target": {"type": "string"},
+    "obsids": {"type": "array", "items": {"type": "string"}},
+    "total_exposure_s": {"type": "number"},
+    "analysis_config": {
+      "type": "object",
+      "required": ["psd_normalization", "freq_range_hz", "energy_bands_kev", "significance_threshold_sigma", "frozen_before_first_psd"],
+      "properties": {
+        "psd_normalization": {"const": "leahy"},
+        "freq_range_hz": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+        "energy_bands_kev": {"type": "array", "minItems": 3, "maxItems": 3},
+        "significance_threshold_sigma": {"type": "number"},
+        "trial_correction": {"type": "string"},
+        "frozen_before_first_psd": {"const": true}
+      }
+    },
+    "modes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["f_hz", "sigma_f_hz", "amplitude_rms", "covariance", "significance_sigma", "energy_dependence", "obs_occurrence"],
+        "properties": {
+          "f_hz": {"type": "number"},
+          "sigma_f_hz": {"type": "number"},
+          "gamma_fwhm_hz": {"type": "number"},
+          "amplitude_rms": {"type": "number"},
+          "covariance": {"type": "array", "items": {"type": "array", "items": {"type": "number"}}},
+          "significance_sigma": {"type": "number"},
+          "energy_dependence": {"type": "string", "enum": ["none", "soft", "hard", "complex"]},
+          "obs_occurrence": {"type": "integer", "minimum": 1},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "instrumental_controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["f_hz", "predicted_by", "verdict", "rejection_reason"],
+        "properties": {
+          "f_hz": {"type": "number"},
+          "predicted_by": {"type": "string"},
+          "verdict": {"enum": ["RECOVERED_AND_REJECTED", "NOT_RECOVERED", "MISCLASSIFIED_AS_ASTRONOMICAL"]},
+          "rejection_reason": {"type": "string"}
+        }
+      }
+    },
+    "pipeline_valid": {"const": true}
+  }
+}
