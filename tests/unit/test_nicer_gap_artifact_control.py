@@ -38,9 +38,11 @@ def _gapped_lightcurve(rng, total_s=64.0, gap_len=0.018, n_gaps=40):
     for i in range(n):
         gapped = phase[i]
         if not gapped and not in_gti:
-            gti_starts.append(t[i]); in_gti = True
+            gti_starts.append(t[i])
+            in_gti = True
         elif gapped and in_gti:
-            gti_stops.append(t[i]); in_gti = False
+            gti_stops.append(t[i])
+            in_gti = False
     if in_gti:
         gti_stops.append(t[-1])
     return counts, np.array(gti_starts), np.array(gti_stops)
@@ -56,7 +58,7 @@ def test_spurious_55hz_is_rejected():
     counts, gs, ge = _gapped_lightcurve(rng)
     # continuous segments: cut one long continuous GTI into 8 s segments
     segs = []
-    for s0, s1 in zip(gs, ge):
+    for s0, s1 in zip(gs, ge, strict=False):
         if s1 - s0 > 8.0:
             k = int((s1 - s0) / 8.0)
             for j in range(k):

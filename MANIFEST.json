@@ -5299,8 +5299,8 @@
     },
     {
       "path": "src/ssz_p5/spectroscopy/mode_match.py",
-      "size_bytes": 3841,
-      "sha256": "fba347d290dba911e5bcc035cc2575eb66e39aa4cb05aded64b4624bb247c6f3"
+      "size_bytes": 3855,
+      "sha256": "2697e5fcbd51788793f9fcba3300dff0b82038079e011d829a489bfe13fa1b58"
     },
     {
       "path": "src/ssz_p5/spectroscopy/physical_units.py",
@@ -5679,8 +5679,8 @@
     },
     {
       "path": "tests/unit/test_nicer_gap_artifact_control.py",
-      "size_bytes": 3218,
-      "sha256": "10f5eef7b452856e6b7adb69f9a7a91d2c75bea425b361ddb1973456710d6813"
+      "size_bytes": 3254,
+      "sha256": "f93a11516f9121ba68a310db62c916b76c1ec65306687a3d07d9d122b19c0f79"
     },
     {
       "path": "tests/unit/test_onshell_identity.py",

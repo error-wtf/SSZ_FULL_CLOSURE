@@ -79,7 +79,7 @@ def null_comparison(observed: list[dict], predicted: list[dict],
     for _ in range(n_draws):
         perm = rng.permutation(len(predicted))[:n_obs]
         hits = sum(
-            1 for o, pi in zip(observed[:n_obs], perm)
+            1 for o, pi in zip(observed[:n_obs], perm, strict=False)
             if _is_hit(o, predicted[int(pi)], policy))
         if hits >= real_hits:
             count_ge += 1
