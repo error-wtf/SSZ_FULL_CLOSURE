@@ -68,3 +68,69 @@ Decision:
 - Nicht Teil: QNM-Solver-Freischaltung. Das folgt erst NACH N4-H1 + F.4.
 - Anti-Circularity: N4-Ergebnis wird VOR dem ersten Lauf hier deklariert
   (geschehen), nie nachtraeglich angepasst.
+
+## RESOLUTION V3 (05.10.26): Solve konvergiert — System hat nur die triviale Loesung
+
+Status: N2-V3 ausgefuehrt (`tools/run_luminal_background_solve_v3.py`).
+Alle offiziellen N2-Blocker (Commit e8a9584) behoben. Artefakte:
+`data/generated/spectral/N2_LUMINAL_SOLVE_RESULT_V3.json`,
+`N2_LUMINAL_BACKGROUND_PROFILE_V3.csv` (3299 Punkte, VOLLE Domain
+u in [0.71, 100]), `N2_LUMINAL_J0_FAMILY_V3.csv`,
+`N3_N4_LUMINAL_DECISION_V3.json`.
+
+### (a) Was V2 tatsaechlich auferlegte (Forensik, maschinell verifiziert)
+- V2 differentiierte mit `numpy.gradient(..., u)` — das ist d/du, NICHT
+  d/dr. Korrekt: d/dr = -u^2 d/du bei r = 1/u.
+- V2 nutzte X = +phi_u^2/(2f); statische radiale Konvention des Repo
+  (`geometry/p5.py`): X = -h phi_r^2/2 (Branch-Identitaet h phi_r^2+2X=0).
+- V2's E11 fehlte der C9-Rest -h*phi'^2 exakt (sympy: E11_vollstaendig -
+  E11_V2 = -h*ph**2). V2's cost 2.4e-15 war ein Artefakt des thereby
+  veraenderten Systems.
+- E22 wurde nie aufuerlegt oder zertifiziert.
+
+### (b) E22-Klaerung (symbolisch + numerisch, nicht per Annahme)
+Im konstanten Sektor (G4=1/2, G4phi=0, G2=X, A0'=0):
+- E00 = 0 loest algebraisch nach h', E11 = 0 nach f' (jeweils erster Ordnung).
+- Die Skalar-Konsistenz schliesst das System exakt:
+  (r^2 sqrt(fh) phi')' = 0  <=>  J := r^2 sqrt(fh) phi' = J0 (konstant).
+- E22 == 0 IDENTISCH auf der Loesungsmannigfaltigkeit {E00, E11, J=J0}
+  (sympy-Zertifikat; f''-Kanal durch Differenzieren der E11-Loesung).
+  E22 ist KEIN fake: als Gleichung ist es unabhaengig (f''-Kanal, Koeffizient
+  -h/(2f) != 0), als Bedingung ist es eine Bianchi-Schatten — es wird
+  aufuerlegt UND numerisch mit-zertifiziert (trivial branch: max|E22|
+  1.4e-7, median 7.1e-11).
+
+### (c) Exakte Reduktion (alles sympy-verifiziert)
+h' = (1-h)/r + rX,  f' = f(1-h)/(hr) - fXr/h,  phi' = J0/(r^2 sqrt(fh)).
+On-shell K_scalar = r^2 phi'^2/2 = J0^2/(2 r^2 f h) >= 0 (analytisch).
+Die Familie ist ein 1-Parameter-Shooting in J0.
+
+### (d) No-Go-Theorem (rigoros, alle Zahlen aus dem Archiv)
+Auf jedem Flat-End-verankerten Zweig (f(r_min)=1/4, h(r_min)=1):
+h <= 1 und f' >= J0^2/(2 r^3 h)  =>
+f(r_core) >= 1/4 + (J0^2/4)(1/r_min^2 - 1/r_core^2).
+Das Archiv erzwingt am Core-Rand (u=0.71) J0^2 = -2 r_core^4 f X = 0.7315,
+also f(r_core) >= 1829 gegenueber Archiv 0.2927 — um Faktor 6.25e3
+inkompatibel. Die FAMILIE (76 J0-Werte, dicht) bestaetigt: h(r_core) in
+[0.9913, 1.0] fuer alle regulaeren Zweige vs. Archiv 0.3891.
+Ergebnis: die EINZIGE regulaere Loesung des korrigierten Systems mit den
+Projekt-Randbedingungen ist der triviale Zweig (f,h,phi) = (1/4, 1, 1).
+Konvergenz-Ziele auf der vollen 3299-Punkt-Domain erreicht:
+max|E00| = max|E11| = 9.9e-10 (Ziel <= 1e-6), median 1.3e-14 (Ziel <= 1e-10);
+max|dJ/dr| = 5.0e-9; max|E22| = 1.4e-7. Collocation-Kreuzcheck (200 Punkte,
+sparse trf): Warm-Start vom Epsilon-Zweig max|res| 2.1e-6 — konsistent.
+
+### (e) N3/N4-Entscheid strikt nach deklarierten Regeln (fail-closed)
+Auf dem trivialen Zweig gilt K_scalar == 0 IDENTISCH -> unter dem
+deklarierten 1e-12 Noise-Floor -> `noise_floor_degenerate`: N4 = BLOCKED /
+NOT_EVALUABLE. Kein H1/H3/NEU-Verdikt: H1 benoetigt ein nichttriviales
+on-shell Hintergrundprofil; die 41-Slot-Emission ist im Chart phi' = 0
+singuulaer (a6, d3, e4, a2-Teile dividieren durch phi_r; ausgefuehrter
+Emissionsversuch dokumentiert), c2 = sqrt(fh) phi'(G2X/2 - h G2XX phi'^2/2)
+r^2 = 0. Keine neuen Verdikt-Namen. Entscheidungsregeln unveraendert.
+
+### (f) Nächster deklarierter Schritt
+Luminaler Solve mit VARIERENDEM G4(phi)-Gesetz (a1 != 0) — der einzige Weg
+zu einem nichttrivialen on-shell Hintergrund im luminalen Sektor. Erst dann
+sind H1/H3 auf sauberem Boden entscheidbar. Der Pocket-Befund (K < 0 bei
+x~0.30) bleibt damit OFFEN, nicht widerlegt.

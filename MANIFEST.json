@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "24d76c1c2654d1498eac454c9ac080b4e37ca699115a184e9b9a882defbb651d"
+      "sha256": "2b9213deb558429254f6f9321d4b60202b66c6cf8ff1b40f72161f69db560cf5"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "3b34461b4c2a474ed37ae777b1453fad8842b7307a839d8c07872d4de5276c10"
+      "sha256": "5108122d482739056910bb514d831b74ef6a81d8d9d5492590eea7a9c9edd463"
     },
     {
       "path": "Makefile",
@@ -3428,6 +3428,16 @@
       "sha256": "c4332c94fcf82c4eaed2fd0741412e29a101c164498b7284fc2e348479b88c6b"
     },
     {
+      "path": "data/generated/spectral/N2_LUMINAL_BACKGROUND_PROFILE_V3.csv",
+      "size_bytes": 731986,
+      "sha256": "3d532b14dff2e661e9c427d59064157ec81310af09c30109df0d2f7b89d524db"
+    },
+    {
+      "path": "data/generated/spectral/N2_LUMINAL_J0_FAMILY_V3.csv",
+      "size_bytes": 11613,
+      "sha256": "0b8a9d0e243743212e6f883b7729080400454c96328a0478c8c29043ba3497ab"
+    },
+    {
       "path": "data/generated/spectral/N2_LUMINAL_SOLVE_RESULT.json",
       "size_bytes": 468,
       "sha256": "93404d03051832147fc0f8188298ab5aa4533f42e600b6886096b54a41d7399c"
@@ -3436,6 +3446,11 @@
       "path": "data/generated/spectral/N2_LUMINAL_SOLVE_RESULT_V2.json",
       "size_bytes": 721,
       "sha256": "54eba67a02b2677aa8a6379fd43db8a6453d2c601584a4ac2b0bca399c7056cb"
+    },
+    {
+      "path": "data/generated/spectral/N2_LUMINAL_SOLVE_RESULT_V3.json",
+      "size_bytes": 15051,
+      "sha256": "a82c887eebf3e439dabb4a94fcae871909315054df6b6c8a1d8bcbf338f1cca1"
     },
     {
       "path": "data/generated/spectral/N2_PROBE_100_SAMPLES.csv",
@@ -3456,6 +3471,11 @@
       "path": "data/generated/spectral/N3_N4_LUMINAL_DECISION.profile_audit.csv",
       "size_bytes": 85280,
       "sha256": "070afb6d8af6c3a874819f3cf82b1caf3615d01342cd95068984a849b20c791d"
+    },
+    {
+      "path": "data/generated/spectral/N3_N4_LUMINAL_DECISION_V3.json",
+      "size_bytes": 11245,
+      "sha256": "2bdb287b3a6319a274f83279f0970aaac1630015394316079f512c8459b524d8"
     },
     {
       "path": "data/generated/spectral/NATIVE_MODE_D2_ATLAS.json",
@@ -4029,8 +4049,8 @@
     },
     {
       "path": "docs/N1_N4_LUMINAL_RESOLVE_SPEC.md",
-      "size_bytes": 3827,
-      "sha256": "42dee01cbb97783a57ef35f54587dd205a75f406e8b60643da25af938f98adfe"
+      "size_bytes": 7576,
+      "sha256": "97562bfc6b1b764e62a11fe00b658eec03af4bfb74891deed3262584c9196eb6"
     },
     {
       "path": "docs/P1_KSCALAR_ACTION_LEVEL_VERIFICATION_2026-10-05.md",
@@ -5854,8 +5874,8 @@
     },
     {
       "path": "tests/unit/test_n3_n4_luminal_audit.py",
-      "size_bytes": 1864,
-      "sha256": "07d152d2a24a957f38d43f27aafd42e02ca3f0eb9ce07fa62bbf21a45874985f"
+      "size_bytes": 7305,
+      "sha256": "f0baa52cd99981f6cd39eb4355ab5b6f689faf52121008a86c413e3d84d1e751"
     },
     {
       "path": "tests/unit/test_native_window_spectroscopy.py",
@@ -6239,8 +6259,8 @@
     },
     {
       "path": "tools/build_frozen_spectral_export.py",
-      "size_bytes": 4657,
-      "sha256": "4f451add132e0319c6e6f7cfb80e7d48a3c2959144ae5a39111771176ad50101"
+      "size_bytes": 4643,
+      "sha256": "b5ad15deab7fa65475fcb6b906e27d118578251f80a46052a5c3ea08d2c1d818"
     },
     {
       "path": "tools/build_inner_targets.py",
@@ -6521,6 +6541,11 @@
       "path": "tools/run_luminal_background_solve.py",
       "size_bytes": 3521,
       "sha256": "e6aecfe8d423fd2f3a39102c33361a6a66a4110de200ce61b5ce968210bee9f3"
+    },
+    {
+      "path": "tools/run_luminal_background_solve_v3.py",
+      "size_bytes": 29846,
+      "sha256": "4d3e52971f8239313cafd68a61621ae65644da8336a7c99dc3b3eca6bb1a5bf4"
     },
     {
       "path": "tools/run_mode_certificates.py",
