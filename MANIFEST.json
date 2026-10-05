@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "2e7223067d9331aba4801bd805c04879a2c5c676e9cb6f3ac8f82b3dc5e258df"
+      "sha256": "7e62ee0aae8549af97113ab2360335bdbc8a715fc16b51053e5b0cf170860562"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "3f0685efc4916dc6ca3385505e52bd1948007f1a556d04be49c9427ac33b4dd1"
+      "sha256": "b317e5116259883915867829585d45864a432bb90595a85fdb84cd544573d8a8"
     },
     {
       "path": "Makefile",
@@ -3411,6 +3411,11 @@
       "path": "data/generated/spectral/MODE_FAMILY_INVARIANCE.json",
       "size_bytes": 821,
       "sha256": "15641fb7913c1631e5fbe9ed0a93ceeaa4b676d2cd08c8bf02f8e20d37183049"
+    },
+    {
+      "path": "data/generated/spectral/N2_LUMINAL_SOLVE_RESULT.json",
+      "size_bytes": 468,
+      "sha256": "93404d03051832147fc0f8188298ab5aa4533f42e600b6886096b54a41d7399c"
     },
     {
       "path": "data/generated/spectral/NATIVE_MODE_D2_ATLAS.json",
@@ -6451,6 +6456,11 @@
       "path": "tools/run_inner_higher_jet_finite_continuation.py",
       "size_bytes": 10000,
       "sha256": "371337b1f1dd77ccf7c4a967ab88e529b0864c5cc05c4777b1c506163716ac85"
+    },
+    {
+      "path": "tools/run_luminal_background_solve.py",
+      "size_bytes": 3215,
+      "sha256": "74dac0b00a80cad20e0f89e6e74bfff0630ed6739d4ce45bf17283c2bb6ae7ca"
     },
     {
       "path": "tools/run_mode_certificates.py",
