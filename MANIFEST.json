@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "2c8535dc768997ba7722fe2071e3cbf7866cba8c8b7624911d574e8be655e46b"
+      "sha256": "24d76c1c2654d1498eac454c9ac080b4e37ca699115a184e9b9a882defbb651d"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "85253c813783e5283eee5e5cbca19a52bd7e5357145989bfb522b706e24eeb6c"
+      "sha256": "3b34461b4c2a474ed37ae777b1453fad8842b7307a839d8c07872d4de5276c10"
     },
     {
       "path": "Makefile",
@@ -3398,6 +3398,16 @@
       "sha256": "266fa0313ec3a882af551dae77fd53e5fb4a70fa3fe675e5c048ad9604673bad"
     },
     {
+      "path": "data/generated/spectral/FROZEN_SPECTRAL_OPERATOR_EXPORT_V1.json",
+      "size_bytes": 2680,
+      "sha256": "bd0e6942bb492a88382f74e1731e727f3caf2fd49d6b9166b55251c50d07429d"
+    },
+    {
+      "path": "data/generated/spectral/FROZEN_SPECTRAL_OPERATOR_EXPORT_V1.npz",
+      "size_bytes": 8376346,
+      "sha256": "85caecd59155d7d155dcb70e5cfa0b148366504778f45f51bc0f960294baab1a"
+    },
+    {
       "path": "data/generated/spectral/MODE_CERTIFICATES_V1.json",
       "size_bytes": 8166,
       "sha256": "e6948f1b7a6106063549612456199484e18992f89ea152ad36880912b02a69f8"
@@ -5389,8 +5399,8 @@
     },
     {
       "path": "src/ssz_p5/reducer/canonical.py",
-      "size_bytes": 2793,
-      "sha256": "7ebc16ab86dd09814249939594fc9f3d8faa0779e70aba23e185c6790ddedcee"
+      "size_bytes": 3462,
+      "sha256": "d9479ded6e32614f1f2021a80821db90e6752696ba0faab3d45d91db5b14729c"
     },
     {
       "path": "src/ssz_p5/reducer/kinetic_schur.py",
@@ -5868,6 +5878,11 @@
       "sha256": "21dc76ff44f261466180303bf44c1967d55f3b2695b471fc7ab8b4ec2fcd38d3"
     },
     {
+      "path": "tests/unit/test_operator_symmetry_table.py",
+      "size_bytes": 1870,
+      "sha256": "b9c0a80b939b6a047ae2749e544db98d1fafa5db889929c15e276c138a797e4b"
+    },
+    {
       "path": "tests/unit/test_positive_controls_and_freeze.py",
       "size_bytes": 2963,
       "sha256": "191438ac72bfd21dbe086252e3c22da2ddec1bd97b7d18d3918284b987ca2446"
@@ -6221,6 +6236,11 @@
       "path": "tools/build_core_quartic_action_direct41.py",
       "size_bytes": 6419,
       "sha256": "146b7c91915c981b60a4b72bab71cb22a8d2c7242884dde8a0141acb6f08610b"
+    },
+    {
+      "path": "tools/build_frozen_spectral_export.py",
+      "size_bytes": 4657,
+      "sha256": "4f451add132e0319c6e6f7cfb80e7d48a3c2959144ae5a39111771176ad50101"
     },
     {
       "path": "tools/build_inner_targets.py",

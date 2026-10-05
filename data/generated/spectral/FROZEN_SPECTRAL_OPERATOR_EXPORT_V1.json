@@ -1,0 +1,90 @@
+{
+ "export": "FROZEN_SPECTRAL_OPERATOR_EXPORT_V1",
+ "producer": "tools/build_frozen_spectral_export.py (SSZ repo)",
+ "member_stream": "electric_hybrid_onshell_central.direct41",
+ "healthy_window_u": [
+  0.62,
+  0.7
+ ],
+ "window_rows": 3047,
+ "L_values": [
+  6,
+  12,
+  20,
+  42,
+  110,
+  420,
+  1000
+ ],
+ "npz_sha256": "85caecd59155d7d155dcb70e5cfa0b148366504778f45f51bc0f960294baab1a",
+ "locked_conventions": {
+  "reducer": "ssz_p5_profile_operator_reducer_JET9D8_2026-09-16",
+  "reducer_sha256": "821a98905f243da3b8a41ebaaede5cf1b0fc9b53a386cdfcb83bcdd08f9ffe8a",
+  "derivatives": "JET9D8 window=9 degree=8",
+  "v12": "-v6/(2h)",
+  "coordinate": "x = r/r_s, u = 1/x; radial operator matrices on x-grid"
+ },
+ "known_limitations": {
+  "outer_boundary_nonpositive_K": "u in [0.7013, 0.7100] (x 1.4085-1.4259) shows min eig_K ~ -0.16 (scale 1.9e4); block contiguous at the domain edge, matches the documented suspect boundary zone (phi_max > 1). EXCLUDED by the window, NOT hidden. Global kinetic health is NOT claimed.",
+  "sector": "single coupled 3-field sector from the reducer; parity decomposition not yet exported",
+  "bc": "no boundary conditions exported \u2014 this is an operator coefficient export, not a QNM claim"
+ },
+ "health_L": {
+  "6": {
+   "L": 6,
+   "min_eig_K": 0.013463190578381613,
+   "radius_min_K": 1.4286097044717736,
+   "min_radial": 0.01336432742968552,
+   "radius_min_radial": 1.4893355529982235,
+   "pass": true
+  },
+  "12": {
+   "L": 12,
+   "min_eig_K": 0.012538375354137432,
+   "radius_min_K": 1.4286097044717736,
+   "min_radial": 0.008853138591208249,
+   "radius_min_radial": 1.4901513627115612,
+   "pass": true
+  },
+  "20": {
+   "L": 20,
+   "min_eig_K": 0.010627828447136918,
+   "radius_min_K": 1.4286097044717736,
+   "min_radial": 0.005948615572383046,
+   "radius_min_radial": 1.4907346313423322,
+   "pass": true
+  },
+  "42": {
+   "L": 42,
+   "min_eig_K": 0.00438522037425846,
+   "radius_min_K": 1.495006364712018,
+   "min_radial": 0.003103234226219387,
+   "radius_min_radial": 1.4912015751026388,
+   "pass": true
+  },
+  "110": {
+   "L": 110,
+   "min_eig_K": 0.0006723488454394859,
+   "radius_min_K": 1.4926041631675009,
+   "min_radial": 0.0012488588352265065,
+   "radius_min_radial": 1.4914351566957942,
+   "pass": true
+  },
+  "420": {
+   "L": 420,
+   "min_eig_K": 4.683271503955718e-05,
+   "radius_min_K": 1.4912015751026388,
+   "min_radial": 0.00033515123812326986,
+   "radius_min_radial": 1.4916688114767858,
+   "pass": true
+  },
+  "1000": {
+   "L": 1000,
+   "min_eig_K": 8.282124160139489e-06,
+   "radius_min_K": 1.4909680666629386,
+   "min_radial": 0.00014147597642046375,
+   "radius_min_radial": 1.491727236611664,
+   "pass": true
+  }
+ }
+}

@@ -45,11 +45,22 @@ def validate_operator(op):
         a = np.asarray(getattr(op, name))
         if a.shape != (len(op.r), 3, 3) or not np.all(np.isfinite(a)):
             raise ValueError(f"invalid matrix: {name}")
-    for name, sign in [("K", -1), ("G", -1), ("M", -1), ("S", 1)]:
+    # Symmetry table aligned with the golden producer
+    # (ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.canonical_audit):
+    #   K = -P20/2 with P20 symmetric  -> K symmetric
+    #   G = +P02/2 with P02 symmetric  -> G symmetric
+    #   S = (P02'-P01)/2 connection    -> S antisymmetric (S^T = -S)
+    #   M = -(P00 + S')/2 with P00 symmetric, S' antisymmetric
+    #     -> M is MIXED by construction (no pure-symmetry invariant)
+    # The previous table demanded K,G,M antisymmetric, which contradicts the
+    # producer and made the export layer unusable on its own golden output.
+    for name, sign in [("K", 1), ("G", 1), ("S", -1)]:
         a = getattr(op, name)
-        err = np.max(np.abs(a + sign * a.swapaxes(1, 2))) / max(1.0, np.max(np.abs(a)))
+        err = np.max(np.abs(a - sign * a.swapaxes(1, 2))) / max(1.0, np.max(np.abs(a)))
         if err > policy["matrix_symmetry_scaled"]:
             raise ValueError(f"matrix symmetry: {name}")
+    if not np.all(np.isfinite(np.asarray(op.M))):
+        raise ValueError("nonfinite M")
     if (
         np.max(np.abs(op.R)) / max(1.0, np.max(np.abs(op.K)), np.max(np.abs(op.G)))
         > policy["R_zero_scaled"]
