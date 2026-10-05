@@ -1,0 +1,49 @@
+{
+ "audit": "N3_N4_LUMINAL_DECISION_V4",
+ "source_result": "data/generated/spectral/N2_LUMINAL_SOLVE_RESULT_V4.json",
+ "n4_decisions": [
+  {
+   "a1": -0.5,
+   "eps": -0.30000000000000004,
+   "verdict": "H3_PHYSICAL_GHOST",
+   "K_scalar_min_global": -0.0017910161752490127,
+   "K_scalar_min_pocket_band": -0.0009288710348105399,
+   "k_error_scale": 9.77191922713061e-07,
+   "sign_structure": "K<0 everywhere (incl. pocket band)"
+  }
+ ],
+ "decision_rules_echo": [
+  {
+   "id": "H1_CONFIRMED",
+   "condition": "K_scalar >= 0 everywhere AND finite-L health pass (L = 6..1000)",
+   "consequence": "Pocket = artifact of out-of-domain Jets. H2 becomes a documentation gap. F.4 global health rerun unlocked."
+  },
+  {
+   "id": "H3_PHYSICAL_GHOST",
+   "condition": "K_scalar < 0 in the pocket band (x ~ 0.29-0.32) on the CLEAN new solution",
+   "consequence": "Even-parity ghost in the luminal sector at x ~ 0.30 \u2014 first-grade physical result. Member archived as falsified."
+  },
+  {
+   "id": "NEW_PATHOLOGY_MAP",
+   "condition": "K_scalar < 0 at a DIFFERENT location",
+   "consequence": "New localization map = starting point for the next localization step."
+  }
+ ],
+ "anti_circularity": "rules unchanged from data/diagnostic/N1_N4_DECISION_RULES.json",
+ "law": {
+  "form": "G4 = 1/2 + a1 (phi - 1)",
+  "a1_grid": [
+   0.5,
+   -0.5,
+   2.0,
+   -2.0
+  ],
+  "G4phi": "a1",
+  "G4phiphi": 0,
+  "sectors_zero": "G4X-fam, G3-fam, G5-fam",
+  "G2": "G2X X, G2X=1",
+  "G2F": 1,
+  "A0prime": 0,
+  "declaration_status": "branch decision per spec section (f); decision rules UNCHANGED (anti-circularity echo attached)"
+ }
+}

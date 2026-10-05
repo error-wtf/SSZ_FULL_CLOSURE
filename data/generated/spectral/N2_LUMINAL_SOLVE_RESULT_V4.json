@@ -1,0 +1,152 @@
+{
+ "audit": "N2_LUMINAL_SOLVE_V4",
+ "law": {
+  "form": "G4 = 1/2 + a1 (phi - 1)",
+  "a1_grid": [
+   0.5,
+   -0.5,
+   2.0,
+   -2.0
+  ],
+  "G4phi": "a1",
+  "G4phiphi": 0,
+  "sectors_zero": "G4X-fam, G3-fam, G5-fam",
+  "G2": "G2X X, G2X=1",
+  "G2F": 1,
+  "A0prime": 0,
+  "declaration_status": "branch decision per spec section (f); decision rules UNCHANGED (anti-circularity echo attached)"
+ },
+ "derivative_convention": "d/dr at r = r_over_rs = 1/u (r_s = 1); repo jet-symbol convention: kt_mh_background `ph` is phi'; the scalar FIELD value enters only via the law symbol PHI",
+ "structural_facts": {
+  "E00_hp_linear": true,
+  "E00_free_of_fp": true,
+  "E11_fp_linear_only": true,
+  "E11_fp_linear": true,
+  "fpp_linear_in_phpp": true,
+  "coupled_E00_E22_had_ppp": true,
+  "E22_phpp_linear_after_reduction": true,
+  "hp_of_free_of_chain_symbols": true,
+  "fp_of_free_of_chain_symbols": true,
+  "ppp_of_free_of_chain_symbols": true,
+  "hp_of_couples_only_ppp": true,
+  "coef_hp_symbolic_nonzero": true,
+  "coef_phpp_symbolic_nonzero": true
+ },
+ "reduced_expressions": {
+  "hp_of(form)": "hp = hp_alpha * phpp + hp_beta (composed in rhs)",
+  "fp_of": "(-8*a1*f*h*ph*r - 4*a1*f*h*phi_field + 4*a1*f*h + 4*a1*f*phi_field - 4*a1*f + f*h*ph**2*r**2 - 2*f*h + 2*f)/(2*a1*h*ph*r**2 + 4*a1*h*phi_field*r - 4*a1*h*r + 2*h*r)",
+  "ppp_of": "(-24*a1**3*h*ph**2*phi_field*r + 48*a1**3*h*ph**2*r - 24*a1**3*h*ph*phi_field**2 + 24*a1**3*h*ph*phi_field - 8*a1**3*ph*phi_field**2 - 8*a1**3*ph*phi_field + 16*a1**3*ph + 2*a1**2*h*ph**3*phi_field*r**2 - 4*a1**2*h*ph**3*r**2 + 4*a1**2*h*ph**2*phi_field*r - 16*a1**2*h*ph**2*r - 8*a1**2*h*ph*phi_field**2 - 8*a1**2*h*ph*phi_field + 4*a1**2*h*ph - 8*a1**2*ph*phi_field**2 + 8*a1**2*ph*phi_field - 12*a1**2*ph + a1*h*ph**3*r**2 + 2*a1*h*ph**2*r - 8*a1*h*ph*phi_field + 2*a1*h*ph - 8*a1*ph*phi_field + 6*a1*ph - 2*h*ph - 2*ph)/(24*a1**3*h*phi_field*r - 24*a1**3*h*r + 8*a1**2*h*phi_field**2*r - 16*a1**2*h*phi_field*r + 20*a1**2*h*r + 8*a1*h*phi_field*r - 8*a1*h*r + 2*h*r)"
+ },
+ "v3_equivalence_max_err": 5.551115123125783e-17,
+ "eps_zero_recovery": {
+  "trivial_recovered": true,
+  "max|f-1/4|": 0.0,
+  "max|h-1|": 0.0
+ },
+ "domain": {
+  "r_range": [
+   0.01,
+   1.4084507042253522
+  ],
+  "u_range": [
+   0.71,
+   100.0
+  ],
+  "points": 3299
+ },
+ "family_scan": {
+  "csv": "data/generated/spectral/N2_LUMINAL_V4_EPS_FAMILY.csv",
+  "branches_reached_core": 164,
+  "total": 164
+ },
+ "certified_branches": [
+  {
+   "a1": -0.5,
+   "eps": -0.30000000000000004,
+   "converged": true,
+   "residual_stats": {
+    "E00": {
+     "max": 4.1853679661585375e-05,
+     "max_interior": 9.77191922713061e-07
+    },
+    "E11": {
+     "max": 1.9091793035386218e-08,
+     "max_interior": 2.6883668624577695e-09
+    },
+    "E22": {
+     "max": 2.560435305554165e-05,
+     "max_interior": 1.7210384157806402e-06
+    }
+   },
+   "core_mismatch": 0.6278059968465842
+  }
+ ],
+ "n3_emission": [
+  {
+   "a1": -0.5,
+   "eps": -0.30000000000000004,
+   "K_direct_min": -0.0017910161752490127,
+   "K_direct_max": -0.0006800543810262236,
+   "K_pocket_band_min": -0.0009288710348105399,
+   "K_pocket_band_max": -0.0009057100560636517,
+   "K_stencil_diff_w9_w13": 3.2306067543341754e-12,
+   "residual_scale_E00_interior": 9.77191922713061e-07,
+   "sign_structure": "K<0 everywhere (incl. pocket band)",
+   "stream41_emitted": true,
+   "nonfinite_slot_rows": {
+    "phi": 3299
+   },
+   "stream_csv": "data/generated/spectral/N3_STREAM41_V4_a1_m0.5_eps_m3.00em01.csv"
+  }
+ ],
+ "n4_decisions": [
+  {
+   "a1": -0.5,
+   "eps": -0.30000000000000004,
+   "verdict": "H3_PHYSICAL_GHOST",
+   "K_scalar_min_global": -0.0017910161752490127,
+   "K_scalar_min_pocket_band": -0.0009288710348105399,
+   "k_error_scale": 9.77191922713061e-07,
+   "sign_structure": "K<0 everywhere (incl. pocket band)"
+  }
+ ],
+ "decision_rules_unchanged": true,
+ "decision_rules_echo": [
+  {
+   "id": "H1_CONFIRMED",
+   "condition": "K_scalar >= 0 everywhere AND finite-L health pass (L = 6..1000)",
+   "consequence": "Pocket = artifact of out-of-domain Jets. H2 becomes a documentation gap. F.4 global health rerun unlocked."
+  },
+  {
+   "id": "H3_PHYSICAL_GHOST",
+   "condition": "K_scalar < 0 in the pocket band (x ~ 0.29-0.32) on the CLEAN new solution",
+   "consequence": "Even-parity ghost in the luminal sector at x ~ 0.30 \u2014 first-grade physical result. Member archived as falsified."
+  },
+  {
+   "id": "NEW_PATHOLOGY_MAP",
+   "condition": "K_scalar < 0 at a DIFFERENT location",
+   "consequence": "New localization map = starting point for the next localization step."
+  }
+ ],
+ "wall_seconds": 28.9,
+ "profile_csv": "data/generated/spectral/N2_LUMINAL_BACKGROUND_PROFILE_V4.csv",
+ "best_branch": {
+  "a1": -0.5,
+  "eps": -0.30000000000000004,
+  "core_mismatch": 0.6278059968465842,
+  "residual_stats": {
+   "E00": {
+    "max": 4.1853679661585375e-05,
+    "max_interior": 9.77191922713061e-07
+   },
+   "E11": {
+    "max": 1.9091793035386218e-08,
+    "max_interior": 2.6883668624577695e-09
+   },
+   "E22": {
+    "max": 2.560435305554165e-05,
+    "max_interior": 1.7210384157806402e-06
+   }
+  }
+ }
+}

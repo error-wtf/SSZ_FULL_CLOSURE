@@ -134,3 +134,61 @@ Luminaler Solve mit VARIERENDEM G4(phi)-Gesetz (a1 != 0) — der einzige Weg
 zu einem nichttrivialen on-shell Hintergrund im luminalen Sektor. Erst dann
 sind H1/H3 auf sauberem Boden entscheidbar. Der Pocket-Befund (K < 0 bei
 x~0.30) bleibt damit OFFEN, nicht widerlegt.
+
+### (g) RESOLUTION V4 (06.10.26): G4(phi)-Solve ausgefuehrt — H3 GEFEUERT
+
+Status: `tools/run_luminal_background_solve_v4.py` (Artikel:
+`N2_LUMINAL_SOLVE_RESULT_V4.json`, `N2_LUMINAL_V4_EPS_FAMILY.csv`,
+`N3_N4_LUMINAL_DECISION_V4.json`, Stream41-CSVs fuer zertifizierte Zweige).
+
+Gesetz (DEKLARIERT im Tool, erste Implementation): G4 = 1/2 + a1(phi-1),
+G4phi = a1, G4phiphi = 0; G4X/G3/G5-Familien = 0; G2 = G2X*X (G2X=1),
+G2F = 1, A0' = 0.
+
+Architektur = V3-Struktur, verallgemeinert (sympy-verifiziert):
+- E00 -> h', E11 -> f' algebraisch.  Mit a1 != 0 enthaelt E00 zusaetzlich
+  phi'' (Gesetz-Kopplung): hp = alpha*phpp + beta, numerisch komponiert.
+- E22 kanzeliert nach Substitution von h', f' und f'' (= totale Ableitung
+  der f'-Loesung, EXPLIZITE metrische Kettenregel — dr_total traegt nur
+  den Jet-Chain) zu einer phpp-LINEAREN Gleichung: die V3-Bianchi-Schatten-
+  Struktur generalisiert auf das variierende Gesetz.
+- PITFALL: sp.expand auf diesen verschachtelten rationalen Ausdruecken
+  haengt (>13 min); cancel/together + subs bleiben sub-sekunden.
+- Fail-closed: coef_phpp proportional phiphi' -> nur degenerierter Punkt
+  ist phiphi'=0 exakt (trivialer Zweig, dort ist phi''=0 Loesung).
+
+Anker (alle runtime, fail-closed):
+- a1=0 reproduziert V3 exact_rhs: 5.551e-17 ueber Zufallsstates.
+- eps=0 reproduziert den trivialen Zweig exakt.
+- Alle Struktur-Fakten als Assertions im Lauf.
+
+Familie: Shooting vom Flat-End (u=100) mit Haar-Amplitude eps;
+164/164 Zweige erreichen den Core-Rand REGULAER (V3: keiner).
+
+Zertifizierung: Interior-Fenster (Rand-Margin 8 Punkte, jet9d8-Stencils
+einseitig am Rand — deklariert); voll-Domain-Stats separat berichtet.
+Convergierte Zweige: E00/E11 int <= 1e-6, E22 int <= 1e-4.
+
+N4-ENTSCHEID (Regeln UNVERAENDERT aus N1_N4_DECISION_RULES.json):
+Auf zertifizierten nichttrivialen Zweigen ist K_scalar GLOBAL negativ
+(inkl. Pocket-Band): sign(K) = -sign(a1*eps), |K| skaliert mit |eps|
+(z.B. a1=-0.5, eps=-0.3: K in [-1.79e-3, -6.8e-4], Stencil-Diff 3.2e-12).
+Verdikt: **H3_PHYSICAL_GHOST** — ein Even-Parity-Geist des variierenden
+Gesetzes, aber NICHT pocket-lokalisiert: er ist ein Ueberall-Geist des
+Zweigs, skaliert mit der Haar-Amplitude. Der historische Pocket-Befund
+des Archiv-Members (K<0 NUR bei x~0.30) wird damit NICHT als artefakt
+bestaetigt noch widerlegt — das Archiv-Member bleibt ein anderes Objekt
+(sein K-Band ist lokalisiert; unsere Zweige sind global negativ).
+
+Stream41-Emission auf dem nichttrivialen Hintergrund: ERFOLGREICH
+(V3-Blocker `phi'=0 -> singular chart` ist auf Haar-Zweigen weg).
+
+Ehrlichkeitsgrenzen:
+- K wird numerisch ueber die V3-zertifizierte Identitaet
+  K = F r/2 (f'/f - h'/h), F = 2 G4(phi), gemessen (keine geschlossene
+  Form gefunden — Versuch dokumentiert, max|diff| ~ Skala).
+- Fail-closed-Klausel: |K| unter max(Stencil-Diff, Residuen-Skala)
+  -> NOT_EVALUABLE (getriggert fuer kleine eps).
+- finite-L Health (B6/B8) und BC-Schalt offen; QNM-Claims bleiben
+  geblockt bis zur Bridge-Entscheid — aber NUR noch auf der
+  ghost-freien Seite (a1*eps < 0) sinnvoll fortsetzbar.

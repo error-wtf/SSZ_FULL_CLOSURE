@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "2b9213deb558429254f6f9321d4b60202b66c6cf8ff1b40f72161f69db560cf5"
+      "sha256": "f1a26fe9dbe39f323827a0d68674399a9d7ffd6404455e282cd75707e15dbd0c"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "5108122d482739056910bb514d831b74ef6a81d8d9d5492590eea7a9c9edd463"
+      "sha256": "9e83dbc410b3d80316d3b92eff43b9297793c11c78d501f928dd505a1cfc6728"
     },
     {
       "path": "Makefile",
@@ -3433,6 +3433,11 @@
       "sha256": "3d532b14dff2e661e9c427d59064157ec81310af09c30109df0d2f7b89d524db"
     },
     {
+      "path": "data/generated/spectral/N2_LUMINAL_BACKGROUND_PROFILE_V4.csv",
+      "size_bytes": 914885,
+      "sha256": "3757cccbb4c2442e52e27fb7adbaefe10157e529fd5407633d1356ab48aeecca"
+    },
+    {
       "path": "data/generated/spectral/N2_LUMINAL_J0_FAMILY_V3.csv",
       "size_bytes": 11613,
       "sha256": "0b8a9d0e243743212e6f883b7729080400454c96328a0478c8c29043ba3497ab"
@@ -3451,6 +3456,16 @@
       "path": "data/generated/spectral/N2_LUMINAL_SOLVE_RESULT_V3.json",
       "size_bytes": 15051,
       "sha256": "a82c887eebf3e439dabb4a94fcae871909315054df6b6c8a1d8bcbf338f1cca1"
+    },
+    {
+      "path": "data/generated/spectral/N2_LUMINAL_SOLVE_RESULT_V4.json",
+      "size_bytes": 5069,
+      "sha256": "3b43dedd306ccd748c9d698c4244036643eafe95b06cdb34257790b708d86a2e"
+    },
+    {
+      "path": "data/generated/spectral/N2_LUMINAL_V4_EPS_FAMILY.csv",
+      "size_bytes": 25533,
+      "sha256": "eacd08181971d6e8d9ec3bfddf53b842d1fccd8da42ac197e9cbed2add6848e0"
     },
     {
       "path": "data/generated/spectral/N2_PROBE_100_SAMPLES.csv",
@@ -3476,6 +3491,21 @@
       "path": "data/generated/spectral/N3_N4_LUMINAL_DECISION_V3.json",
       "size_bytes": 11245,
       "sha256": "2bdb287b3a6319a274f83279f0970aaac1630015394316079f512c8459b524d8"
+    },
+    {
+      "path": "data/generated/spectral/N3_N4_LUMINAL_DECISION_V4.json",
+      "size_bytes": 1609,
+      "sha256": "da8426ee51ccfa788778314aff738e311d767c30d739ce7ea6ef87f3b9ab6bff"
+    },
+    {
+      "path": "data/generated/spectral/N3_STREAM41_V4_a1_m0.5_eps_m1.67em02.csv",
+      "size_bytes": 2896547,
+      "sha256": "db9b2a73449882b6367b0dd345c17eadc23a2ceac99b4883212306b94a0fcfd7"
+    },
+    {
+      "path": "data/generated/spectral/N3_STREAM41_V4_a1_m0.5_eps_m3.00em01.csv",
+      "size_bytes": 2897505,
+      "sha256": "db72db507e2988880029b2e0bbf3935a426386211aac8507bccea81ff2abb2d2"
     },
     {
       "path": "data/generated/spectral/NATIVE_MODE_D2_ATLAS.json",
@@ -4049,8 +4079,8 @@
     },
     {
       "path": "docs/N1_N4_LUMINAL_RESOLVE_SPEC.md",
-      "size_bytes": 7576,
-      "sha256": "97562bfc6b1b764e62a11fe00b658eec03af4bfb74891deed3262584c9196eb6"
+      "size_bytes": 10662,
+      "sha256": "4da6e341aec79ee3edbaf3cf5bc3cd351c32672ebc8479340cb96e93595bde74"
     },
     {
       "path": "docs/P1_KSCALAR_ACTION_LEVEL_VERIFICATION_2026-10-05.md",
@@ -5858,6 +5888,11 @@
       "sha256": "f85557c21361c22e9dbda162247b187e88787812fa70852c0477e8215416f562"
     },
     {
+      "path": "tests/unit/test_luminal_v4_reduction.py",
+      "size_bytes": 2422,
+      "sha256": "3b972c1a2533b426cb9a1fdf39d2e0ba2deed2f5fdbab94ced708672fc718404"
+    },
+    {
       "path": "tests/unit/test_mode_certificate.py",
       "size_bytes": 4175,
       "sha256": "db5a96e5f03b3fd3600bfba972be2bc043dd6f837de6d020c7cafe1a635c0ccc"
@@ -6546,6 +6581,11 @@
       "path": "tools/run_luminal_background_solve_v3.py",
       "size_bytes": 29846,
       "sha256": "4d3e52971f8239313cafd68a61621ae65644da8336a7c99dc3b3eca6bb1a5bf4"
+    },
+    {
+      "path": "tools/run_luminal_background_solve_v4.py",
+      "size_bytes": 26039,
+      "sha256": "ee4a1cc528378380fbd8fa562cf2b3c1502ed2b767bb4426e3ffe13e18bb4199"
     },
     {
       "path": "tools/run_mode_certificates.py",
