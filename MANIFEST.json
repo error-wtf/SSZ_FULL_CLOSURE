@@ -2309,8 +2309,8 @@
     },
     {
       "path": "data/diagnostic/EXPECTED_STRICT_PIPELINE_FAILURES.json",
-      "size_bytes": 952,
-      "sha256": "dd79b1b4fa6a757649412ef5c353c488d8ce85af98b52c24b6ccb62fb7cf29e0"
+      "size_bytes": 892,
+      "sha256": "1103a518f1ec71880647de75da7568a69019cc6f400e99e423ecfc921bac0afc"
     },
     {
       "path": "data/diagnostic/FROZEN_ONSHELL_IDENTITY.json",
