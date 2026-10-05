@@ -103,3 +103,29 @@ Blindness rules (binding):
 - No photon-line vs eigenfrequency identity claims (needs transfer function;
   separate later layer `TRANSFER_BRIDGE_V1`).
 - No GW ringdown matching (waits for certified Jost/ECS global operator).
+
+---
+
+## UPDATE 2026-10-05 (Commit-Serie): Vertrag implementiert
+
+Die 8 Gates des Vertrags sind jetzt als Pakete/Tools umgesetzt:
+
+| Gate | Umsetzung |
+|------|-----------|
+| 1 Provenienz | `src/ssz_p5/observations/provenance.py` (sha256 je Input + git head + `write_frozen` mit sidecar) |
+| 2 Healthy-domain | unverändert: globaler QNM bleibt hinter `require_direct_krgm_certificate` fail-closed |
+| 3 Weisz-Response | unverändert: Weisz-Repro + `compare_ssz_weisz1978_selectivity.py` Pflichtregression |
+| 4 Li-Lokalisierung | `src/ssz_p5/qnm/localization_diagnostics.py` (IPR + D2-Blockscaling) |
+| 5 Blind observed | `tools/bridge_stage_a_observed_modes.py` + `observations/timing.py` |
+| 6 Blind predicted | `src/ssz_p5/spectroscopy/theory_catalog.py` (Blindheits-Assert + FrozenMassPrior) + `physical_units.py` (f = c³/(4πGM)·Re(ω̄), Mass-Prior extern+gehasht) |
+| 7 Frozen compare | `tools/compare_frozen_mode_catalogs.py` (sha256-sidecar-Pflicht; Assignment-Permutations-Null; MATCH_ABOVE_NULL/NO_MATCH_ABOVE_NULL) |
+| 8 MODE_CERTIFICATE | `src/ssz_p5/qnm/mode_certificate.py` + `tools/run_mode_certificates.py` + `schemas/MODE_CERTIFICATE.schema.json` |
+
+Negativtest (Vertrag): `tests/unit/test_nicer_gap_artifact_control.py` —
+reproduziert das dokumentierte 55-Hz-GTI-Lücken-Artefakt (ObsID 1200120107,
+MAXI J1820+070) synthetisch: Kandidat sitzt auf der Gap-Kamm-Frequenz UND
+verschieden in kontinuierlichen Segmenten → `SPURIOUS_GTIL_GAP_ARTIFACT_REJECTED`;
+Kontrollsinal (echte 20-Hz-Oszillation) überlebt dieselbe Pipeline.
+
+Statistik-Verifikation des Null-Tests: 3 echte Matches → p=0.003
+MATCH_ABOVE_NULL; unkorrelierter Zufall → p=1.0 NO_MATCH_ABOVE_NULL.

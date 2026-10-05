@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "514f668584a87f491c37bc70a462ff8e81ecf8a7f345810a286c561628e6c24c"
+      "sha256": "cbafce26742526ccddaf3deea9f193814714069f3049e1c24f4d07c3e5f5e1b0"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "485b6f96602a66d9e3520262ccf3d7f81ed990ef9a706e42bea0900fb92c7c70"
+      "sha256": "73167a375146739007f1d9d9f7bb8fd55241467de0d2f4c0b068f370a780af00"
     },
     {
       "path": "Makefile",
@@ -3909,8 +3909,8 @@
     },
     {
       "path": "docs/REAL_SPECTROSCOPY_BRIDGE_V1.md",
-      "size_bytes": 5323,
-      "sha256": "7822f00860f378f26a7a8b688fc4598d3c5afad43523e280d8b14d97667f4165"
+      "size_bytes": 7013,
+      "sha256": "924d62c510b693585bb1d03e3df5a5321f3a2902bf268d1663208a468c1aef38"
     },
     {
       "path": "docs/REAL_SPECTROSCOPY_EXECUTION_PLAN_2026-10-04.md",
@@ -4823,6 +4823,11 @@
       "sha256": "dc84b7945fcba3c52ee63f2bf9e15a66c1b1a080f826452f3d8ec2edcee58fd7"
     },
     {
+      "path": "schemas/MODE_CERTIFICATE.schema.json",
+      "size_bytes": 623,
+      "sha256": "db0b651796a91961f041af2c4452c33bd9d3f297b7f6f550accd6472940fe511"
+    },
+    {
       "path": "schemas/OBSERVED_MODE_CATALOG.schema.json",
       "size_bytes": 2480,
       "sha256": "fcf87e33d90f98cb08870b7b3ebefb281df803604eeb669046ef5302cb3142b7"
@@ -5016,6 +5021,21 @@
       "path": "src/ssz_p5/observability/repo_view.py",
       "size_bytes": 14955,
       "sha256": "0913239c55b24d3e15cbaba76a28638aa2532aa197368b758b6bc226a4ffcfd0"
+    },
+    {
+      "path": "src/ssz_p5/observations/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/ssz_p5/observations/provenance.py",
+      "size_bytes": 1263,
+      "sha256": "65074c895e4b07c52dffeef5ca970a4db720497ad526633a5e19c3512e810ca0"
+    },
+    {
+      "path": "src/ssz_p5/observations/timing.py",
+      "size_bytes": 3644,
+      "sha256": "faf91e5708fbcad10c4c88f1160b20ea5943323134d08eab639926ff47958b02"
     },
     {
       "path": "src/ssz_p5/paths.py",
@@ -5271,6 +5291,26 @@
       "path": "src/ssz_p5/reference_transport/transport_pde.py",
       "size_bytes": 2743,
       "sha256": "2fa0844e5d6f5ebfdd253eaddaa215e99735a72eebc92c514e11cff8cb0ab6f1"
+    },
+    {
+      "path": "src/ssz_p5/spectroscopy/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/ssz_p5/spectroscopy/mode_match.py",
+      "size_bytes": 3841,
+      "sha256": "fba347d290dba911e5bcc035cc2575eb66e39aa4cb05aded64b4624bb247c6f3"
+    },
+    {
+      "path": "src/ssz_p5/spectroscopy/physical_units.py",
+      "size_bytes": 1541,
+      "sha256": "7ef34e0ff07ecd6673a0cb4e14872638c091ddce4cfae609f626c6e052ff277c"
+    },
+    {
+      "path": "src/ssz_p5/spectroscopy/theory_catalog.py",
+      "size_bytes": 1716,
+      "sha256": "043e6be42fe0b1ab01e42effa49253c475e07b3b1a28b14872de4125f4bae5d3"
     },
     {
       "path": "src/ssz_p5/stability/__init__.py",
@@ -5638,6 +5678,11 @@
       "sha256": "ff8eabd127555758019aa717bf9fd52a73b1da8c35960f9a15b4564c31b9e5f8"
     },
     {
+      "path": "tests/unit/test_nicer_gap_artifact_control.py",
+      "size_bytes": 3218,
+      "sha256": "10f5eef7b452856e6b7adb69f9a7a91d2c75bea425b361ddb1973456710d6813"
+    },
+    {
       "path": "tests/unit/test_onshell_identity.py",
       "size_bytes": 2229,
       "sha256": "21dc76ff44f261466180303bf44c1967d55f3b2695b471fc7ab8b4ec2fcd38d3"
@@ -5666,6 +5711,11 @@
       "path": "tests/unit/test_spectral_selection.py",
       "size_bytes": 1545,
       "sha256": "4f18c53593fc75609496cbecec0d52dc79fdbdc4411349dff096cf7d4cb037d7"
+    },
+    {
+      "path": "tests/unit/test_spectroscopy_bridge.py",
+      "size_bytes": 3498,
+      "sha256": "58349df8b24e878ffbd2fb10917d6d0933c88fae6600efa75abaad547fc935da"
     },
     {
       "path": "tests/unit/test_strong_field_transition_contract.py",
@@ -6016,6 +6066,11 @@
       "path": "tools/codex_start.sh",
       "size_bytes": 296,
       "sha256": "0c1b348df0a1183d1599e2dab37c4b50cefa4ec649988c6eac3497bc9dacf814"
+    },
+    {
+      "path": "tools/compare_frozen_mode_catalogs.py",
+      "size_bytes": 2960,
+      "sha256": "5971b789fb533a07e13da7a3be94eebffbbc3aea9e4e7ffb764ab8159c21493f"
     },
     {
       "path": "tools/compare_ssz_weisz1978_selectivity.py",

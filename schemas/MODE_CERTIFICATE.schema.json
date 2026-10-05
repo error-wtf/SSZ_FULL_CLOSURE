@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-2020-12/schema#",
+  "title": "MODE_CERTIFICATE_V1",
+  "type": "object",
+  "required": ["certificate_version", "L", "mode_index", "axes", "verdict"],
+  "properties": {
+    "certificate_version": {"const": "MODE_CERTIFICATE_V1"},
+    "L": {"type": "integer"},
+    "mode_index": {"type": "integer"},
+    "axes": {
+      "type": "object",
+      "description": "A1..A8 axis results; *_skipped axes have pass=null"
+    },
+    "verdict": {
+      "enum": ["CERTIFIED_V1", "REJECTED_V1", "NOT_EVALUABLE_V1"]
+    },
+    "failed_axes": {"type": "array", "items": {"type": "string"}}
+  }
+}
