@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "cbafce26742526ccddaf3deea9f193814714069f3049e1c24f4d07c3e5f5e1b0"
+      "sha256": "0726a737e319a05f18293a6db00f542ddb017b46056af279eb88e2db3c4d78f7"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "73167a375146739007f1d9d9f7bb8fd55241467de0d2f4c0b068f370a780af00"
+      "sha256": "aaf38014e91cea2920f9c636741543980a3ab44bc8831e9de30ee52d0d547848"
     },
     {
       "path": "Makefile",
@@ -3894,8 +3894,8 @@
     },
     {
       "path": "docs/KNOWN_PLATFORM_SENSITIVITY.md",
-      "size_bytes": 1741,
-      "sha256": "72624065e00b7190805bc4e29dadc407c2b28e451e3d9ca57a45366a1f42f546"
+      "size_bytes": 1275,
+      "sha256": "93a43c639bed397e325d60f84e3bbadd1f3453a99f3658b9e026628208d64d23"
     },
     {
       "path": "docs/N1_N4_LUMINAL_RESOLVE_SPEC.md",
@@ -5489,8 +5489,8 @@
     },
     {
       "path": "tests/regression/test_g05_member_roundtrip.py",
-      "size_bytes": 6323,
-      "sha256": "e5081f840174137056c3333721303dc4fe3eef1c2bd1b1bd4fce45e727d57134"
+      "size_bytes": 6763,
+      "sha256": "4521c1b9c07ce754fbf3976bda261dc9bd387355ea9d5cf202da758497d98454"
     },
     {
       "path": "tests/regression/test_g07_holonomic_recheck.py",
@@ -5589,8 +5589,8 @@
     },
     {
       "path": "tests/unit/test_electric_hybrid_controls.py",
-      "size_bytes": 798,
-      "sha256": "01eabcdcd88a0aeb534e31f45f6c8a28663c037b035a79653d81764c9eda592d"
+      "size_bytes": 992,
+      "sha256": "319146a68ed4d443c54ec542b11afc4891f640eeb8b7d5545a41b6c548465231"
     },
     {
       "path": "tests/unit/test_eps_y.py",
