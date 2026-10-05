@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "55445f94b32747659973902d56b03b3fe530d1d02a3ebd73e83f33a713a68374"
+      "sha256": "c91f10bc2036b550690c551fb77873b28840a514de1cf72c43aa76e325b36014"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "29a5af7b02a5a9f629a24e974c4c357e08b7de15aa8011691ecf39f589284538"
+      "sha256": "eef8bea964eaba485676d86862f530be16f931c905bc1fa1a795c16203a49387"
     },
     {
       "path": "Makefile",
@@ -3398,6 +3398,11 @@
       "sha256": "e6948f1b7a6106063549612456199484e18992f89ea152ad36880912b02a69f8"
     },
     {
+      "path": "data/generated/spectral/MODE_FAMILY_INVARIANCE.json",
+      "size_bytes": 821,
+      "sha256": "15641fb7913c1631e5fbe9ed0a93ceeaa4b676d2cd08c8bf02f8e20d37183049"
+    },
+    {
       "path": "data/generated/spectral/SPECTROSCOPY_SOURCE_OF_TRUTH_2026-10-04.json",
       "size_bytes": 1964,
       "sha256": "b3d3bd76edaa7a223abe7238ec43bfb2ce65f245ea5be75ed74ca12a89abebfc"
@@ -5991,6 +5996,11 @@
       "path": "tools/audit_inner_y_hessian.py",
       "size_bytes": 5025,
       "sha256": "0f1ea3306411b4284bd76a2d589af1696f1b5636757b53958509d804eca15abf"
+    },
+    {
+      "path": "tools/audit_mode_family_invariance.py",
+      "size_bytes": 5990,
+      "sha256": "99a4ee1afd3d64df18145bffe7772d3a6109946c970d9270f34f9602ac5e7806"
     },
     {
       "path": "tools/audit_production_regions.py",
