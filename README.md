@@ -1,5 +1,7 @@
 # SSZ P5 — TRUE FULL CLOSURE
 
+[![SSZ P5 reproducibility](https://github.com/error-wtf/SSZ_FULL_CLOSURE/actions/workflows/ci.yml/badge.svg?branch=spectroscopy-real-data-20261004)](https://github.com/error-wtf/SSZ_FULL_CLOSURE/actions/workflows/ci.yml)
+
 **One segmented-spacetime geometry. One source-free transport law.
 Time, orbits, light, phase, rotation and trapping — without inventing a
 new force.**
