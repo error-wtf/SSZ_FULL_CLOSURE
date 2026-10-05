@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "45cc0a596bb265ed67a15cb58e3392a9282fdb8a68d54d69743e9a395477f7d3"
+      "sha256": "dc77cd2440b6091e1faacc71f3bceaaa5258dbc7c1a83e54e11664b4f60cbf44"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "33fe6cbb43e042b7fb419ebd7b06be0897eb04ae9beb1920b8a87824451d1010"
+      "sha256": "b98bba08dfd2f06fdaea60b6e6b33029f93093022904e40d34fe4da6a940d807"
     },
     {
       "path": "Makefile",
