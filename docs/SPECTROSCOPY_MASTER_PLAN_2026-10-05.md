@@ -3,6 +3,20 @@
 Normative Linie (vereinbart): Pipeline beweisen → einfrieren → Theorie-
 Entscheid → zwei Solvers → Prediction-Katalog → GW-blind-vergleich.
 
+## Phase B — Transport Bridge (NEU, 2026-10-05)
+
+Eigenes Repo: error-wtf/SSZ-Transport-Bridge (typisierte Verträge,
+zwei read-only Backends, NULL gemeinsame Formeln).  Die gleichen
+strukturellen Prüfungen (forward/parity/convergence/inverse) laufen auf
+beiden Backends mit demselben Prüf-Code:
+  - Sagnac: validated reference (SAGNAC_REFERENCE_CLOSURE_PASS)
+  - SSZ: synthetic inversion gegen KNOWN frozen geometry (done first —
+    vor echten Astronomiedaten!)
+Synthetic-Inversion-Pfad: {ΔΦ, Δt, z} → {f(r), h(r)} — später
+gesunde-Operator-Modi.  Semantische Disziplin übernommen: Muster
+dürfen mathematisch inspirieren, erst der Operator entscheidet, was
+physikalisch eine Mode ist.
+
 ## Phase P — Pipeline-Beweis (Stage A härtet)
 
 P1  Negativkontrolle (DONE): NICER 1200120107 / 55 Hz GTI-Kamm-Artefakt
