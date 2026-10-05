@@ -1,0 +1,40 @@
+{
+  "package": "N1-N4 luminal-domain background re-solve",
+  "declared_utc": "2026-10-05",
+  "anti_circularity": "Rules declared BEFORE the first solve run; never adjusted post hoc.",
+  "luminal_sector": {
+    "G4": "G4(phi)",
+    "G4X": 0, "G4XX": 0, "G4phiX": 0,
+    "G3_family": 0,
+    "G5_family": 0,
+    "G2": "G2(X,F) with G2F = 1"
+  },
+  "solve": {
+    "unknowns": ["f(r)", "h(r)", "phi(r)"],
+    "grid": "existing x-grid (3299 points), u = 1/r convention",
+    "asymptotics_outer": "f -> 1/4, h -> 1, phi -> 1, phi' -> 0",
+    "inner_boundary": "regularity / match at existing core-regime transition (document against F1b convention)",
+    "emission": "quartic_g5zero_primitives UNCHANGED, same c2 target profile or domain-derived c2 with documented reachable_fraction"
+  },
+  "decision_rules": [
+    {
+      "id": "H1_CONFIRMED",
+      "condition": "K_scalar >= 0 everywhere AND finite-L health pass (L = 6..1000)",
+      "consequence": "Pocket = artifact of out-of-domain Jets. H2 becomes a documentation gap. F.4 global health rerun unlocked."
+    },
+    {
+      "id": "H3_PHYSICAL_GHOST",
+      "condition": "K_scalar < 0 in the pocket band (x ~ 0.29-0.32) on the CLEAN new solution",
+      "consequence": "Even-parity ghost in the luminal sector at x ~ 0.30 — first-grade physical result. Member archived as falsified."
+    },
+    {
+      "id": "NEW_PATHOLOGY_MAP",
+      "condition": "K_scalar < 0 at a DIFFERENT location",
+      "consequence": "New localization map = starting point for the next localization step."
+    }
+  ],
+  "not_part_of_package": [
+    "deep full-G5 subcore (u >= 50) — separate bridge",
+    "QNM solver unlock — only after N4-H1 + F.4"
+  ]
+}

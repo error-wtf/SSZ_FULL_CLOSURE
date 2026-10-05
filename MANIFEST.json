@@ -2318,6 +2318,11 @@
       "sha256": "e2a4cd50e83414314de34fc3288be0b11debd9773bd9648832022da235a7bd45"
     },
     {
+      "path": "data/diagnostic/N1_N4_DECISION_RULES.json",
+      "size_bytes": 1686,
+      "sha256": "22a20ccded41249f03352f9e0303be5ecedc60a148014bca1cb6e334f03ab252"
+    },
+    {
       "path": "data/diagnostic/PRODUCTION_REGION_ASSIGNMENT.json",
       "size_bytes": 851,
       "sha256": "8dd169f7e431acada204ecbd36fa78b4786904c45c893be484c1bf6b2e54d19d"
@@ -4976,6 +4981,11 @@
       "path": "src/ssz_p5/action/light_ring_identity.py",
       "size_bytes": 14984,
       "sha256": "963bb212b8bd40549bd27c9497cae890ecd55e67b9d7cc32cb64605eba8a0e13"
+    },
+    {
+      "path": "src/ssz_p5/action/luminal_background_system.py",
+      "size_bytes": 1881,
+      "sha256": "41e83ad5b819104f28b03be79acf159ef1619adcc5f20a6838a354fd2e65d27e"
     },
     {
       "path": "src/ssz_p5/action/model.py",
