@@ -34,11 +34,8 @@ def test_equations_contain_no_luminal_forbidden_jets():
 def test_required_dynamic_symbols_present():
     syms = system_free_symbols()
     for required in ("f", "fp", "h", "hp", "ph", "phpp", "app"):
-        for name, lst in syms.items():
-            if required in lst:
-                break
-        else:
-            raise AssertionError(f"{required} missing from all equations")
+        assert any(required in lst for lst in syms.values()), (
+            f"{required} missing from all equations")
 
 
 def test_G4_and_G4phi_survive():

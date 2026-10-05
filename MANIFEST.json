@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "23f57ca33bf7a8443b4e2ba1146a07d3755bec5d91de2b8aceb93b0c20eba93e"
+      "sha256": "2e7223067d9331aba4801bd805c04879a2c5c676e9cb6f3ac8f82b3dc5e258df"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "fc9ef1fad7918c91c3c32998e3699c1923d21b6ac4a19b9203b0bdf1dc45d40d"
+      "sha256": "3f0685efc4916dc6ca3385505e52bd1948007f1a556d04be49c9427ac33b4dd1"
     },
     {
       "path": "Makefile",
@@ -5784,8 +5784,8 @@
     },
     {
       "path": "tests/unit/test_luminal_background_system.py",
-      "size_bytes": 1703,
-      "sha256": "40d7fcac35ab7af9505fbe4d9cffabece94d7d479d9d2f4fdb61767d97e96f4a"
+      "size_bytes": 1639,
+      "sha256": "f85557c21361c22e9dbda162247b187e88787812fa70852c0477e8215416f562"
     },
     {
       "path": "tests/unit/test_mode_certificate.py",
