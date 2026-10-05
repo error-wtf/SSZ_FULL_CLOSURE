@@ -40,6 +40,10 @@ THRESHOLDS = {
     "min_tracking_overlap": 0.90,       # metric overlap along the track
     "min_relative_eigenvalue_gap": 1e-3,  # matches v3 REL_CLUSTER_GAP
     "max_relative_frequency_span": 5e-3,  # dimensionless drift budget
+    "max_relative_step_change": 0.05,   # smoothness: max jump between
+                                        # consecutive tracked samples (the
+                                        # radial omega profile legitimately
+                                        # varies; jumps do not)
     "min_observable_share": 1e-4,       # visible residue share
     "min_kinetic_norm": 0.0,            # strict positivity
 }
@@ -112,17 +116,31 @@ def certify_mode(
 
     finite_omega = np.asarray(omega_values, float)
     finite_omega = finite_omega[np.isfinite(finite_omega)]
-    if len(finite_omega) >= 2:
+    if len(finite_omega) >= 3:
         mean_abs = max(abs(float(np.mean(finite_omega))), 1e-300)
         span = float((np.max(finite_omega) - np.min(finite_omega)) / mean_abs)
+        # radial smoothness: consecutive relative steps must be small —
+        # a legitimate radial omega profile varies smoothly; mode
+        # crossing/branch jumps do not.
+        steps = np.abs(np.diff(finite_omega)) / np.maximum(
+            np.abs(finite_omega[:-1]), 1e-300)
+        max_step = float(np.max(steps))
+        ok = (max_step <= THRESHOLDS["max_relative_step_change"])
+    elif len(finite_omega) == 2:
+        mean_abs = max(abs(float(np.mean(finite_omega))), 1e-300)
+        span = float((np.max(finite_omega) - np.min(finite_omega)) / mean_abs)
+        max_step = span
         ok = span <= THRESHOLDS["max_relative_frequency_span"]
     else:
         span = float("nan")
+        max_step = float("nan")
         ok = False
     ok, detail = _check(
         "A4_frequency_invariance",
         ok,
-        {"relative_span": span, "threshold": THRESHOLDS["max_relative_frequency_span"]},
+        {"relative_span": span,
+         "max_step": max_step,
+         "step_threshold": THRESHOLDS["max_relative_step_change"]},
     )
     axes.update(detail)
     if not ok:

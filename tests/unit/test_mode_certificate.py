@@ -58,10 +58,18 @@ def test_degenerate_gap_rejects_A3():
     assert "A3" in c.failed_axes
 
 
-def test_frequency_drift_rejects_A4():
-    om = np.linspace(1.0, 1.2, 20)  # 20% drift >> 5e-3 budget
+def test_frequency_branch_jump_rejects_A4():
+    # A4 now measures smoothness (a radial omega profile legitimately
+    # varies; branch crossings jump).  A 31% single-step jump must fail.
+    om = np.array([1.0] * 10 + [1.31] * 10)
     c = _all_good(omega_values=om)
     assert "A4" in c.failed_axes
+
+
+def test_frequency_smooth_radial_profile_passes_A4():
+    om = np.linspace(1.0, 1.2, 20)  # smooth 20% drift, tiny steps
+    c = _all_good(omega_values=om)
+    assert "A4" not in c.failed_axes
 
 
 def test_invisible_mode_rejects_A5():

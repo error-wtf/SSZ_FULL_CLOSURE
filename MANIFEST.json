@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "c91f10bc2036b550690c551fb77873b28840a514de1cf72c43aa76e325b36014"
+      "sha256": "7f4a631172ec8ddb2f2288cf0431b063db361844a58fae8015353115632e73ad"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "eef8bea964eaba485676d86862f530be16f931c905bc1fa1a795c16203a49387"
+      "sha256": "84f9fa0be89b726285d833e95d23748b1cd1af858c90ce04d66bab735b9c5ec5"
     },
     {
       "path": "Makefile",
@@ -3398,6 +3398,11 @@
       "sha256": "e6948f1b7a6106063549612456199484e18992f89ea152ad36880912b02a69f8"
     },
     {
+      "path": "data/generated/spectral/MODE_CERTIFICATES_V1_DETAILED.json",
+      "size_bytes": 101146,
+      "sha256": "21e4de5cb40f2f8aebc76f868be872a53a933d57f85f43e7070e83f3db30b93a"
+    },
+    {
       "path": "data/generated/spectral/MODE_FAMILY_INVARIANCE.json",
       "size_bytes": 821,
       "sha256": "15641fb7913c1631e5fbe9ed0a93ceeaa4b676d2cd08c8bf02f8e20d37183049"
@@ -5269,8 +5274,8 @@
     },
     {
       "path": "src/ssz_p5/qnm/mode_certificate.py",
-      "size_bytes": 5913,
-      "sha256": "c801837d3407a0c36e8d0b4f1a79804216a0fb8a763669b46db152f5ad5783cd"
+      "size_bytes": 6868,
+      "sha256": "e896655dbefbe5ec67552a05001bc0d942d5906d8d9b0051f7bbeb3cc97a7773"
     },
     {
       "path": "src/ssz_p5/qnm/native_window.py",
@@ -5724,13 +5729,18 @@
     },
     {
       "path": "tests/unit/test_mode_certificate.py",
-      "size_bytes": 3850,
-      "sha256": "f5209a0f8a9c1f4fabde6f3270865c3d1af5f86608126a0df47b7c05bc6c562a"
+      "size_bytes": 4175,
+      "sha256": "db5a96e5f03b3fd3600bfba972be2bc043dd6f837de6d020c7cafe1a635c0ccc"
     },
     {
       "path": "tests/unit/test_mode_certificate_schema.py",
       "size_bytes": 1680,
       "sha256": "4cce388c8034317c68b35c80f5f9f7892e1348b56eaafcba5f743a8e522ed124"
+    },
+    {
+      "path": "tests/unit/test_mode_certificates_detailed.py",
+      "size_bytes": 2596,
+      "sha256": "00ea0cf83e1defb3b3e01a68f81ce7b16bfa4a4407a20416ed5e360064cf5949"
     },
     {
       "path": "tests/unit/test_native_window_spectroscopy.py",
@@ -6381,6 +6391,11 @@
       "path": "tools/run_mode_certificates.py",
       "size_bytes": 4627,
       "sha256": "4733246f12a687d326cdb7ec0de8fb0a7da27525463dc985df88ce0094739c5f"
+    },
+    {
+      "path": "tools/run_mode_certificates_detailed.py",
+      "size_bytes": 8605,
+      "sha256": "76858302a5b87ed300fbd39a5cca3f22a0bdf3e08d676fbea208a3a00a08152a"
     },
     {
       "path": "tools/run_native_window_spectroscopy.py",
