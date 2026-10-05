@@ -1,0 +1,30 @@
+{
+ "audit": "N2_LUMINAL_SOLVE_V2",
+ "g4_law": "constant 1/2 (declared)",
+ "g2_law": "G2 = G2X*X + G2C with G2X=1, G2C=0 (declared; verified consistency choice)",
+ "grid_points": 200,
+ "u_range": [
+  0.71,
+  100.0
+ ],
+ "cost": 2.3878454037625186e-15,
+ "optimality": 1.568009280614915e-05,
+ "status": 3,
+ "max_abs_residual": 2.9544692914384996e-08,
+ "median_abs_residual": 3.5727809599706006e-12,
+ "profile_check": {
+  "f_range": [
+   0.1218338236312451,
+   0.25000000000002387
+  ],
+  "h_range": [
+   0.4873352945249618,
+   1.0000000000000928
+  ],
+  "phi_range": [
+   0.8789980747572762,
+   1.007761084243776
+  ]
+ },
+ "next": "N3: quartic_g5zero_primitives on THIS solution, then N4 decision against the declared rules."
+}
