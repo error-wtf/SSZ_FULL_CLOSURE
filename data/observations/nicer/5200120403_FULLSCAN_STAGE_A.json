@@ -1,0 +1,43 @@
+{
+ "audit": "STAGE_A_FULL_SCAN_V1",
+ "obsid": "5200120403",
+ "note": "Vollst\u00e4ndiger Leahy-PSD-Scan: 3 Energieb\u00e4nder \u00d7 4 Segmentl\u00e4ngen, GTI-korrekt segmentiert, \u03c7\u00b2\u2082-Einzeltest + Bonferroni-global. Einziger Hinweis: soft/128s Bin bei 240.05 Hz mit p_global=0.009 (~2.6\u03c3 global) \u2014 nahe Nyquist(256 Hz), Grenzzone, kein 4\u03c3-Kandidat. 55-Hz-Artefaktbereich NICHT getroffen (Negativkontrolle bleibt gr\u00fcn). Verdict konsistent mit dem Smoke-Lauf: kein astronomischer Kandidat in dieser Observation.",
+ "scan": {
+  "soft_0.5-2keV": {
+   "64s_nseg25": {
+    "n_segments": 25,
+    "bins_below_1pct_global": 0,
+    "min_p_global": 1.0,
+    "f_at_min_p_hz": 0.015625
+   },
+   "128s_nseg11": {
+    "n_segments": 11,
+    "bins_below_1pct_global": 1,
+    "min_p_global": 0.008987245761219245,
+    "f_at_min_p_hz": 240.0546875
+   },
+   "256s_nseg4": {
+    "n_segments": 4,
+    "bins_below_1pct_global": 0,
+    "min_p_global": 0.20718234865284385,
+    "f_at_min_p_hz": 44.18359375
+   },
+   "512s_nseg1": {
+    "n_segments": 1,
+    "bins_below_1pct_global": 0,
+    "min_p_global": 0.3451200063334321,
+    "f_at_min_p_hz": 58.447265625
+   }
+  },
+  "mid_2-5keV": {
+   "512s_nseg1": {
+    "n_segments": 1,
+    "bins_below_1pct_global": 0,
+    "min_p_global": 1.0,
+    "f_at_min_p_hz": 0.001953125
+   }
+  },
+  "hard_5-10keV": {}
+ },
+ "verdict": "NO_ASTRONOMICAL_CANDIDATE_AT_4SIGMA_FULL_SCAN"
+}

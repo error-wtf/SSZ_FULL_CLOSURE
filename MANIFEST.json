@@ -3713,6 +3713,11 @@
       "sha256": "1560ed9458ae892f9e81df77985606f39b4227a19594c9eb2f4794ca25545404"
     },
     {
+      "path": "data/observations/nicer/5200120403_FULLSCAN_STAGE_A.json",
+      "size_bytes": 1425,
+      "sha256": "3c268d06328b2e03e257fb55815e452990514c13ce840d2dbb5c4c4f6fe0fe7b"
+    },
+    {
       "path": "data/observations/nicer/MAXI_J1820_PLUS_070_CATALOG_V1.json",
       "size_bytes": 9889,
       "sha256": "4bfa4451d0571b42d7584b08834a26b5010646cf4e8cb9367e98ca75ca215d08"
