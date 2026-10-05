@@ -5,7 +5,6 @@ G14: full light-ring limit (undivided; u_lr / A0_u symbol separation).
 G15: Sigma_SVT operator decomposition with the DERIVED Delta22_SVT.
 G16: full on-shell light-ring balance (C_bg with genuine-SVT theta-theta).
 """
-import json
 from pathlib import Path
 
 import numpy as np
@@ -103,7 +102,6 @@ def test_G15_sigma_svt_decomposition_derived():
     documented operator list with the DERIVED Delta22_SVT; numerically the
     Sigma decomposition on the member equals BETA * Delta22_SVT."""
     d = lri.sigma_svt_decomposition()
-    from ssz_p5.action.symbolic_canon import canonical_simplify
     total = d["total"]
     s = sum(sp.sympify(op["symbolic"]) for op in d["operators"])
     assert canonical_simplify(total - s) == 0

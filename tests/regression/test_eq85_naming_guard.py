@@ -1,6 +1,5 @@
 """Regression guard: Eq.85 must be evaluated with the ZK-canonical V9 (=MH v8)
 coefficient, never the 13-slot v8 column. Fails if the mapping is violated."""
-import numpy as np
 
 def test_v_slot_mapping_is_documented():
     src = open('src/ssz_hybrid_unreduced_even_kernel.py').read()

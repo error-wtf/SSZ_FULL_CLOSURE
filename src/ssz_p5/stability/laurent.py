@@ -39,14 +39,14 @@ class LaurentSeries:
         object.__setattr__(self, "coeffs", clean)
 
     @classmethod
-    def const(cls, a, *, pmin=-6, pmax=14) -> "LaurentSeries":
+    def const(cls, a, *, pmin=-6, pmax=14) -> LaurentSeries:
         return cls({0: np.asarray(a, dtype=float)}, pmin=pmin, pmax=pmax)
 
     @classmethod
-    def monomial(cls, p: int, a, *, pmin=-6, pmax=14) -> "LaurentSeries":
+    def monomial(cls, p: int, a, *, pmin=-6, pmax=14) -> LaurentSeries:
         return cls({int(p): np.asarray(a, dtype=float)}, pmin=pmin, pmax=pmax)
 
-    def copy(self) -> "LaurentSeries":
+    def copy(self) -> LaurentSeries:
         return LaurentSeries({p: np.array(a, copy=True) for p, a in self.coeffs.items()}, self.pmin, self.pmax)
 
     def powers(self) -> list[int]:
@@ -76,13 +76,13 @@ class LaurentSeries:
             out = out + a * (eps ** p)
         return out
 
-    def map_coefficients(self, fn: Callable[[np.ndarray], np.ndarray]) -> "LaurentSeries":
+    def map_coefficients(self, fn: Callable[[np.ndarray], np.ndarray]) -> LaurentSeries:
         return LaurentSeries({p: fn(a) for p, a in self.coeffs.items()}, self.pmin, self.pmax)
 
-    def shift(self, dp: int) -> "LaurentSeries":
+    def shift(self, dp: int) -> LaurentSeries:
         return LaurentSeries({p + dp: a for p, a in self.coeffs.items()}, self.pmin, self.pmax)
 
-    def scale(self, c) -> "LaurentSeries":
+    def scale(self, c) -> LaurentSeries:
         c = np.asarray(c, dtype=float)
         return LaurentSeries({p: _mul_arrays(a, c) for p, a in self.coeffs.items()}, self.pmin, self.pmax)
 
@@ -126,7 +126,7 @@ class LaurentSeries:
 
     __rmul__ = __mul__
 
-    def reciprocal(self, *, tol: float = 1e-14) -> "LaurentSeries":
+    def reciprocal(self, *, tol: float = 1e-14) -> LaurentSeries:
         """Formal pointwise reciprocal of a scalar-valued Laurent series.
 
         The leading coefficient must be nonzero at every radial grid point.

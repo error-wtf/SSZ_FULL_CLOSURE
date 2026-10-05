@@ -14,13 +14,11 @@ All numbers come from the FROZEN electric production member (member-hash
 verified at load).  No fitting anywhere; tolerances below are documented
 SOLVER/INTERPOLATION accuracy bounds, not physics gates.
 """
-import hashlib
 import json
 from pathlib import Path
 
 import numpy as np
 import pytest
-from scipy.integrate import solve_ivp
 from scipy.interpolate import CubicSpline
 
 from ssz_p5.postclosure.transport import (
@@ -31,12 +29,10 @@ from ssz_p5.postclosure.transport import (
     eikonal_phase_and_redshift,
     find_light_rings,
     forced_transport_control,
-    libration_period_ode,
     load_member_metric,
     null_geodesic_transport,
     radial_congruence_scalars,
     radial_null_congruence,
-    repo_root,
     ring_trapping,
     timelike_geodesic,
 )

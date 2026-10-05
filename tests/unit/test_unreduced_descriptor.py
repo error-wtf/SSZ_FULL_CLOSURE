@@ -60,7 +60,10 @@ def test_constant_profile_matches_existing_unreduced_symbol():
 
 
 def test_generalized_psi_descriptor_keeps_h0_constraint_uneliminated():
-    from ssz_p5.reducer.unreduced_descriptor import generalized_psi_descriptor, h0_constraint_structure
+    from ssz_p5.reducer.unreduced_descriptor import (
+        generalized_psi_descriptor,
+        h0_constraint_structure,
+    )
     d = _toy(33)
     # Enforce the exact identities responsible for the generalized-psi cancellations.
     r = d.x.to_numpy(float)
@@ -73,7 +76,10 @@ def test_generalized_psi_descriptor_keeps_h0_constraint_uneliminated():
 
 
 def test_h0_closed_formula_matches_descriptor_with_same_jet_service():
-    from ssz_p5.reducer.unreduced_descriptor import generalized_psi_descriptor, compare_h0_constraint
+    from ssz_p5.reducer.unreduced_descriptor import (
+        compare_h0_constraint,
+        generalized_psi_descriptor,
+    )
     d = _toy(33)
     r = d.x.to_numpy(float)
     d["a4"] = 0.2 + 0.01*r + 0.002*r*r
@@ -86,6 +92,7 @@ def test_h0_closed_formula_matches_descriptor_with_same_jet_service():
 
 def test_descriptor_pullback_matches_established_reducer_on_real_carrier():
     from pathlib import Path
+
     from ssz_p5.production.hsvt_eps_y import build_region
     from ssz_p5.reducer.unreduced_descriptor import compare_descriptor_pullback
 

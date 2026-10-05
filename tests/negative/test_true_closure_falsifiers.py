@@ -15,9 +15,10 @@ Detectors used (canonical diagnostics):
   D6 null coordinate time vs Shapiro quadrature int dr/sqrt(fh)
   D7 static-observer redshift sqrt(f_a/f_b)
 """
+from pathlib import Path
+
 import numpy as np
 import pytest
-from pathlib import Path
 from scipy.integrate import solve_ivp
 from scipy.interpolate import CubicSpline
 
@@ -69,7 +70,6 @@ def test_falsifier_force(metric):
     forced = forced_transport_control(metric, r0=1.6, F_t=1e-2,
                                      tau_span=(0, 1.5))
     clean = load_member_metric(ROOT)
-    from ssz_p5.postclosure.transport import timelike_geodesic
     geo = timelike_geodesic(clean, r0=1.6, E=1.0, L=0.0, tau_span=(0, 1.5))
     assert forced["max_dE"] > 1e-4
     assert forced["max_dE"] > 1e6 * max(geo.max_dE, 1e-12)
@@ -170,8 +170,7 @@ def timelike_geo(metric):
 
 
 def timelike_geodesic_local(metric, r0, E, L, span):
-    from ssz_p5.postclosure.transport import (
-        TransportCheck, radial_domain)
+    from ssz_p5.postclosure.transport import TransportCheck, radial_domain
     f0, h0 = float(metric.f(r0)), float(metric.h(r0))
     val = h0 * (E * E / f0 - (L * L / r0**2 + 1.0))
     ur0 = -np.sqrt(val)

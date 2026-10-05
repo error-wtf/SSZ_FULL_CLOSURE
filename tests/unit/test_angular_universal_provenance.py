@@ -1,8 +1,14 @@
 import numpy as np
+
 from ssz_p5.stability.angular_universal_laurent import (
-    load_genuine_svt_witness, canonical_laurent, extract_eq83_style_coefficients,
-    action_m5_mass_shortcuts, leading_characteristic, roots_from_coeffs,
+    action_m5_mass_shortcuts,
+    canonical_laurent,
+    extract_eq83_style_coefficients,
+    leading_characteristic,
+    load_genuine_svt_witness,
+    roots_from_coeffs,
 )
+
 
 def _scaled(a,b): return np.abs(a-b)/np.maximum(1.0,np.abs(b))
 

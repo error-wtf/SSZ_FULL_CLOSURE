@@ -11,19 +11,19 @@ Maxwell-Horndeski formulas are *oracles*, not hard-coded repair targets.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+import importlib.util
 from itertools import permutations
 from math import comb
-from pathlib import Path
-from typing import Dict, Mapping
-import importlib.util
+from typing import Dict
 
 import numpy as np
 import pandas as pd
 
-from ssz_p5.paths import paths as B
 from ssz_p5.jets.jet9d8 import profile_derivative
-from .laurent import LaurentSeries, outer_product, derivative as lderivative
+from ssz_p5.paths import paths as B
+
+from .laurent import LaurentSeries, outer_product
+from .laurent import derivative as lderivative
 
 SLOTS=[*[f'a{i}' for i in range(1,10)],*[f'b{i}' for i in range(1,6)],
        *[f'c{i}' for i in range(1,7)],*[f'd{i}' for i in range(1,5)],
@@ -316,7 +316,7 @@ def extract_eq83_style_coefficients(df,la):
       M12_0,M23_0 = eps^0 coefficients;
       M22_0 = eps^-1 coefficient; K22_0 = eps^0 coefficient.
     """
-    K=la['K']; M=la['M'];
+    K=la['K']; M=la['M']
     # finite profile reducer stores project M with the opposite sign to the
     # Zhang-Kase action convention (see canonical_audit comment: '-Y^T M Y').
     # Eq83-style paper coefficients therefore use M_paper = -M_project.

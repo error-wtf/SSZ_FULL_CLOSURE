@@ -19,11 +19,10 @@ Conventions (single source of truth):
 """
 from __future__ import annotations
 
-import numpy as np
-import sympy as sp
 from dataclasses import dataclass
 from functools import lru_cache
 
+import numpy as np
 from scipy.integrate import solve_ivp
 from scipy.interpolate import CubicSpline
 

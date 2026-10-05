@@ -11,7 +11,7 @@ literature, each identity independently re-derived in-repo).
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 IMPL_TRANSPORT = "src/ssz_p5/postclosure/transport.py"
 IMPL_CHAIN = "src/ssz_p5/true_closure/chain.py"

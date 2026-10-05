@@ -15,7 +15,7 @@ an independent layer and are not supplied by this module.
 """
 from __future__ import annotations
 
-from math import comb, factorial
+from math import factorial
 from typing import Dict, Iterable, Tuple
 
 import numpy as np

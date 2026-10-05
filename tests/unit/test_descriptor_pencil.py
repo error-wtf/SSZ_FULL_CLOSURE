@@ -1,12 +1,11 @@
 import numpy as np
-import pandas as pd
 from scipy import sparse
 
 from ssz_p5.qnm.descriptor_pencil import (
     local_poly_differentiation_matrix,
-    semidiscrete_polynomial,
-    quadratic_descriptor_linearization,
     pencil_structure,
+    quadratic_descriptor_linearization,
+    semidiscrete_polynomial,
 )
 
 

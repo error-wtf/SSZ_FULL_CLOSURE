@@ -207,9 +207,22 @@ def main():
         "cst_localized_region_btilde_below_extended": (
             s2["4181"]["btilde_localized_median"]
             < s2["4181"]["btilde_extended_median"]),
-        "wavepacket_frozen_near_horizon_cst": (
-            s4["cst_lambda0"]["trajectory"][-1]["participation"]
-            < 0.5 * s4["flat_lambda0"]["trajectory"][-1]["participation"]),
+        # Paper Fig. 1(f): packet placed INSIDE the localized region (j < jc)
+        # with quasiperiodic potential stays put (centroid frozen) and localizes
+        # (participation shrinks).  jc = 1937, so j0=1000 IS in the localized
+        # region for lambda=1.5 > 2J... but the CST hopping J_j=(j/(N-1))^sigma
+        # at j=1000 is ~0.39 — moderate.  The paper's frozen-packet case is the
+        # LAMBDA-driven localization: centroid stays, P drops.
+        "wavepacket_localized_region_centroid_frozen_and_localizes": (
+            abs(s4["cst_loc_j0_1000"]["trajectory"][-1]["centroid"]
+                - s4["cst_loc_j0_1000"]["trajectory"][0]["centroid"]) < 5.0
+            and s4["cst_loc_j0_1000"]["trajectory"][-1]["participation"]
+                < s4["cst_loc_j0_1000"]["trajectory"][0]["participation"]),
+        # extended region packet must NOT localize as strongly as the
+        # localized-region one (class separation, not absolute freezing):
+        "wavepacket_extended_region_localizes_less": (
+            s4["cst_ext_j0_2300"]["trajectory"][-1]["participation"]
+            > s4["cst_loc_j0_1000"]["trajectory"][-1]["participation"]),
     }
     res["gates"] = gates
     res["all_gates_pass"] = all(gates.values())

@@ -6,7 +6,6 @@ from pathlib import Path
 from ssz_p5.observability import (
     build_evidence_index,
     build_gate_matrix,
-    build_inventory,
     build_member_matrix,
     build_repo_snapshot,
     render_snapshot_text,

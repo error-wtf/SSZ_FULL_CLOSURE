@@ -13,8 +13,8 @@ FORBIDDEN = Path("/home/error/SSZ_FULL_CLOSURE").resolve()
 
 def test_import_provenance():
     import ssz_p5
-    import ssz_p5.action.light_ring_identity as lri
     import ssz_p5.action.kt_mh_background as kt
+    import ssz_p5.action.light_ring_identity as lri
     import ssz_p5.production.svt_background_eom as svt
 
     root = Path(ssz_p5.__file__).resolve().parent.parent
@@ -40,7 +40,9 @@ def test_no_forbidden_path_in_sys_path():
 def test_gate_dependency_enforcement():
     """A gate whose REQUIRED parent is not PASS must certify as
     BLOCKED_BY_DEPENDENCY even when its raw status is PASS."""
-    import json, tempfile
+    import json
+    import tempfile
+
     from ssz_p5.closure import gates
     raw = {g: "PASS" for g in gates.REQUIRED_GATES}
     raw["G07"] = "MARGINAL"           # parent of G10 open

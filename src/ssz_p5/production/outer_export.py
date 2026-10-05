@@ -1,14 +1,17 @@
 """Direct 41-slot export for the locked outer same-action H/SVT handover."""
 from __future__ import annotations
+
 import json
 from datetime import UTC, datetime
 from pathlib import Path
+
 import numpy as np
 import pandas as pd
+
 from ..config import SLOT_NAMES
 from ..provenance.manifest import sha256
 from .member import MEMBER_FILE, validate_stream_regions
-from .regional_coefficients import regenerate_outer_svt_sector, select_lower
+from .regional_coefficients import regenerate_outer_svt_sector
 from .sources import SOURCE_REGISTRY
 
 TARGET = SOURCE_REGISTRY["outer_same_action_H_SVT"]["coeff_reference"]

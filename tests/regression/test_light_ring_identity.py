@@ -1,8 +1,10 @@
 """Regression: structural invariants of the unsplit EOM core (STEP 1)."""
 import sys
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 import sympy as sp
+
 from ssz_p5.action import light_ring_identity as lri
 
 

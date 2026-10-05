@@ -10,9 +10,10 @@ All tolerances are documented solver/interpolation accuracy bounds:
   - CubicSpline on frozen data -> derivative errors ~1e-6..1e-10
   - central FD with eps=1e-5   -> curvature-route agreement ~1e-8
 """
+from pathlib import Path
+
 import numpy as np
 import pytest
-from pathlib import Path
 
 from ssz_p5.postclosure.transport import (
     load_member_metric,
@@ -21,9 +22,9 @@ from ssz_p5.postclosure.transport import (
     timelike_geodesic,
 )
 from ssz_p5.true_closure.chain import (
-    christoffels_fd,
     check_contracted_bianchi,
     check_riemann_symmetries,
+    christoffels_fd,
     curvature_invariants_numeric,
     metric_tensors,
     null_coordinate_time_ode,
@@ -209,6 +210,7 @@ def _max_dE_at_tol(metric, rtol):
                 -(0.5 * h * fp) * ut * ut + (hp / (2.0 * h)) * ur * ur, 0.0]
 
     from scipy.integrate import solve_ivp
+
     from ssz_p5.postclosure.transport import radial_domain
     r_lo, _ = radial_domain(metric)
 

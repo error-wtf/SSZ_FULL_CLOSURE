@@ -1,6 +1,7 @@
 import numpy as np
+
 from ssz_p5.config import repo_root
-from ssz_p5.production.hsvt_eps_y import build_region, EPSILON_Y
+from ssz_p5.production.hsvt_eps_y import EPSILON_Y, build_region
 
 
 def test_direct_hsvt_carrier_is_finite_and_background_null_branch():

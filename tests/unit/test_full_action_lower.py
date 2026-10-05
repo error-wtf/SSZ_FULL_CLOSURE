@@ -1,6 +1,6 @@
 from ssz_p5.config import repo_root
-from ssz_p5.production.full_action_lower import audit_central_lower, emit_lower_slots
 from ssz_p5.production.central_action import central_action_inputs
+from ssz_p5.production.full_action_lower import audit_central_lower, emit_lower_slots
 
 
 def test_full_action_lower_direct_v5_and_central_diagnostic():

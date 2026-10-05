@@ -5,6 +5,7 @@ consume already mapped asymptotic coefficients and therefore cannot silently
 repair the common-action Laurent reduction.
 """
 from __future__ import annotations
+
 import numpy as np
 
 

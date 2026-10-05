@@ -10,8 +10,8 @@ import numpy as np
 import pandas as pd
 
 from ..provenance.manifest import sha256
-from .sources import SOURCE_REGISTRY
 from .lower_order_controls import invert_lower_order_targets
+from .sources import SOURCE_REGISTRY
 
 # v5/c3 multiply terms with at most one radial field derivative after constraints;
 # e3 multiplies dphi^2 directly. Cphi cancels v5 through a5 and v2=A0prime*v1.

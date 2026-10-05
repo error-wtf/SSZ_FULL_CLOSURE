@@ -33,7 +33,7 @@ import numpy as np
 import pandas as pd
 import sympy as sp
 from scipy.integrate import solve_ivp
-from scipy.interpolate import CubicSpline, PchipInterpolator
+from scipy.interpolate import CubicSpline
 from scipy.optimize import brentq
 
 MEMBER_CSV = Path("data/generated/phase2_q2/ELECTRIC_PRODUCTION_MEMBER_CURRENT.csv")
@@ -744,8 +744,9 @@ def ring_trapping(m: SSZMetric, rings: list[dict],
                         b2_inv - float(m.W_of_u(u)))
                     return 2.0 * s / np.sqrt(max(val, 1e-14 * (1.0 + b2_inv)))
 
-                from scipy.integrate import quad
                 import warnings
+
+                from scipy.integrate import quad
                 with warnings.catch_warnings():
                     # quad reports roundoff near the (integrable) turning
                     # point; the substituted integrand is smooth and the

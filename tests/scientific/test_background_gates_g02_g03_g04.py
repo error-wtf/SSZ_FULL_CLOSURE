@@ -5,9 +5,8 @@ central background (u in [0.61, 0.71), the production window containing the
 inner stable light ring).  These tests close the corresponding entries in
 TEST_COVERAGE_GAPS.json and are required for those gates to certify.
 """
-from pathlib import Path
-
 import json
+from pathlib import Path
 
 import numpy as np
 import pytest

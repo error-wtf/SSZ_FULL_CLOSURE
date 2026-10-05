@@ -1,10 +1,13 @@
+import json
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 import sympy as sp
-import json
-from pathlib import Path
-from ssz_p5.stability.laurent import LaurentSeries as LS
+
 from ssz_p5.stability.angular_universal_laurent import leading_characteristic, roots_from_coeffs
+from ssz_p5.stability.laurent import LaurentSeries as LS
+
 
 def test_projected_relation_and_literal_residual_are_distinct():
     R,t,s,c,b,a=sp.symbols('R t s c b a',nonzero=True)

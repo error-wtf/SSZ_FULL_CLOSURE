@@ -38,8 +38,24 @@ from __future__ import annotations
 import sympy as sp
 
 from .light_ring_identity import (
-    r, f, h, ph, ap, fp_r, fpp_r, hp_r,
-    f2, f2X, f2F, f2Y, f3, f3X, f4, f4X, f4XX, tf4,
+    ap,
+    f,
+    f2,
+    f2F,
+    f2X,
+    f2Y,
+    f3,
+    f3X,
+    f4,
+    f4X,
+    f4XX,
+    fp_r,
+    fpp_r,
+    h,
+    hp_r,
+    ph,
+    r,
+    tf4,
 )
 
 # ------------------------------------------------------------------ symbols
