@@ -1,0 +1,381 @@
+{
+ "certificate_version": "MODE_CERTIFICATE_V1",
+ "source": "data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V3.json",
+ "scope_note": "Block-level certification. A1 (kinetic positivity) and A6 (localization determinacy) are NOT_EVALUABLE at this level and require a per-mode detailed run; verdicts reflect that.",
+ "certificates": [
+  {
+   "version": "MODE_CERTIFICATE_V1",
+   "L": 6,
+   "mode_index": 0,
+   "axes": {
+    "A1_positive_kinetic_norm": {
+     "pass": true,
+     "min": 1.0
+    },
+    "A2_tracking_continuity": {
+     "pass": true,
+     "min_overlap": 0.9995568898441708
+    },
+    "A3_eigenvalue_gap_integrity": {
+     "pass": true,
+     "min_relative_gap": 0.00412710928902932
+    },
+    "A4_frequency_invariance": {
+     "pass": true,
+     "relative_span": 0.0,
+     "threshold": 0.005
+    },
+    "A5_observable_residue": {
+     "pass": true,
+     "max_share": 0.897432504433776
+    },
+    "A6_localization_determinacy": {
+     "pass": false,
+     "d2": NaN
+    },
+    "A7_grid_stability": {
+     "pass": true
+    },
+    "A8_basis_invariance": {
+     "pass": true
+    },
+    "A1_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A4_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A6_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    }
+   },
+   "verdict": "NOT_EVALUABLE_V1",
+   "failed_axes": []
+  },
+  {
+   "version": "MODE_CERTIFICATE_V1",
+   "L": 12,
+   "mode_index": 0,
+   "axes": {
+    "A1_positive_kinetic_norm": {
+     "pass": true,
+     "min": 1.0
+    },
+    "A2_tracking_continuity": {
+     "pass": true,
+     "min_overlap": 0.999016022129006
+    },
+    "A3_eigenvalue_gap_integrity": {
+     "pass": true,
+     "min_relative_gap": 0.0045155433700830045
+    },
+    "A4_frequency_invariance": {
+     "pass": true,
+     "relative_span": 0.0,
+     "threshold": 0.005
+    },
+    "A5_observable_residue": {
+     "pass": true,
+     "max_share": 0.869125361980214
+    },
+    "A6_localization_determinacy": {
+     "pass": false,
+     "d2": NaN
+    },
+    "A7_grid_stability": {
+     "pass": true
+    },
+    "A8_basis_invariance": {
+     "pass": true
+    },
+    "A1_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A4_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A6_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    }
+   },
+   "verdict": "NOT_EVALUABLE_V1",
+   "failed_axes": []
+  },
+  {
+   "version": "MODE_CERTIFICATE_V1",
+   "L": 20,
+   "mode_index": 0,
+   "axes": {
+    "A1_positive_kinetic_norm": {
+     "pass": true,
+     "min": 1.0
+    },
+    "A2_tracking_continuity": {
+     "pass": true,
+     "min_overlap": 0.9982291384476605
+    },
+    "A3_eigenvalue_gap_integrity": {
+     "pass": true,
+     "min_relative_gap": 0.0038442749168584728
+    },
+    "A4_frequency_invariance": {
+     "pass": true,
+     "relative_span": 0.0,
+     "threshold": 0.005
+    },
+    "A5_observable_residue": {
+     "pass": true,
+     "max_share": 0.8952578091469602
+    },
+    "A6_localization_determinacy": {
+     "pass": false,
+     "d2": NaN
+    },
+    "A7_grid_stability": {
+     "pass": true
+    },
+    "A8_basis_invariance": {
+     "pass": true
+    },
+    "A1_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A4_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A6_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    }
+   },
+   "verdict": "NOT_EVALUABLE_V1",
+   "failed_axes": []
+  },
+  {
+   "version": "MODE_CERTIFICATE_V1",
+   "L": 42,
+   "mode_index": 0,
+   "axes": {
+    "A1_positive_kinetic_norm": {
+     "pass": true,
+     "min": 1.0
+    },
+    "A2_tracking_continuity": {
+     "pass": true,
+     "min_overlap": 0.995936799199192
+    },
+    "A3_eigenvalue_gap_integrity": {
+     "pass": true,
+     "min_relative_gap": 0.0024370802838015056
+    },
+    "A4_frequency_invariance": {
+     "pass": true,
+     "relative_span": 0.0,
+     "threshold": 0.005
+    },
+    "A5_observable_residue": {
+     "pass": true,
+     "max_share": 0.9243982197306135
+    },
+    "A6_localization_determinacy": {
+     "pass": false,
+     "d2": NaN
+    },
+    "A7_grid_stability": {
+     "pass": true
+    },
+    "A8_basis_invariance": {
+     "pass": true
+    },
+    "A1_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A4_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A6_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    }
+   },
+   "verdict": "NOT_EVALUABLE_V1",
+   "failed_axes": []
+  },
+  {
+   "version": "MODE_CERTIFICATE_V1",
+   "L": 110,
+   "mode_index": 0,
+   "axes": {
+    "A1_positive_kinetic_norm": {
+     "pass": true,
+     "min": 1.0
+    },
+    "A2_tracking_continuity": {
+     "pass": true,
+     "min_overlap": 0.9886698655482978
+    },
+    "A3_eigenvalue_gap_integrity": {
+     "pass": true,
+     "min_relative_gap": 0.0010980928370089198
+    },
+    "A4_frequency_invariance": {
+     "pass": true,
+     "relative_span": 0.0,
+     "threshold": 0.005
+    },
+    "A5_observable_residue": {
+     "pass": true,
+     "max_share": 0.9513445430731289
+    },
+    "A6_localization_determinacy": {
+     "pass": false,
+     "d2": NaN
+    },
+    "A7_grid_stability": {
+     "pass": true
+    },
+    "A8_basis_invariance": {
+     "pass": true
+    },
+    "A1_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A4_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A6_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    }
+   },
+   "verdict": "NOT_EVALUABLE_V1",
+   "failed_axes": []
+  },
+  {
+   "version": "MODE_CERTIFICATE_V1",
+   "L": 420,
+   "mode_index": 0,
+   "axes": {
+    "A1_positive_kinetic_norm": {
+     "pass": true,
+     "min": 1.0
+    },
+    "A2_tracking_continuity": {
+     "pass": true,
+     "min_overlap": 0.9565088015112944
+    },
+    "A3_eigenvalue_gap_integrity": {
+     "pass": false,
+     "min_relative_gap": 0.00031054721043041576
+    },
+    "A4_frequency_invariance": {
+     "pass": true,
+     "relative_span": 0.0,
+     "threshold": 0.005
+    },
+    "A5_observable_residue": {
+     "pass": true,
+     "max_share": 0.9743265849612751
+    },
+    "A6_localization_determinacy": {
+     "pass": false,
+     "d2": NaN
+    },
+    "A7_grid_stability": {
+     "pass": true
+    },
+    "A8_basis_invariance": {
+     "pass": true
+    },
+    "A1_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A4_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A6_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    }
+   },
+   "verdict": "REJECTED_V1",
+   "failed_axes": [
+    "A3"
+   ]
+  },
+  {
+   "version": "MODE_CERTIFICATE_V1",
+   "L": 1000,
+   "mode_index": 0,
+   "axes": {
+    "A1_positive_kinetic_norm": {
+     "pass": true,
+     "min": 1.0
+    },
+    "A2_tracking_continuity": {
+     "pass": true,
+     "min_overlap": 0.9015645441243226
+    },
+    "A3_eigenvalue_gap_integrity": {
+     "pass": false,
+     "min_relative_gap": 0.00013252158306969816
+    },
+    "A4_frequency_invariance": {
+     "pass": true,
+     "relative_span": 0.0,
+     "threshold": 0.005
+    },
+    "A5_observable_residue": {
+     "pass": true,
+     "max_share": 0.9831854969429714
+    },
+    "A6_localization_determinacy": {
+     "pass": false,
+     "d2": NaN
+    },
+    "A7_grid_stability": {
+     "pass": true
+    },
+    "A8_basis_invariance": {
+     "pass": true
+    },
+    "A1_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A4_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    },
+    "A6_skipped": {
+     "pass": null,
+     "note": "not decidable on this input"
+    }
+   },
+   "verdict": "REJECTED_V1",
+   "failed_axes": [
+    "A3"
+   ]
+  }
+ ],
+ "summary": {
+  "total": 7,
+  "certified": 0,
+  "rejected": 2,
+  "not_evaluable": 5
+ }
+}
