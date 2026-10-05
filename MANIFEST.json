@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "0726a737e319a05f18293a6db00f542ddb017b46056af279eb88e2db3c4d78f7"
+      "sha256": "0b864d3c31228bb3d2817212c4233fd74af92d31715f618c5a068b1f5cf7b73f"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "aaf38014e91cea2920f9c636741543980a3ab44bc8831e9de30ee52d0d547848"
+      "sha256": "93823b9b539e525cdb3dc02b30bb3a2a1cb7435eb09cd0ef855aecd075c8400c"
     },
     {
       "path": "Makefile",
@@ -5624,8 +5624,8 @@
     },
     {
       "path": "tests/unit/test_import_provenance.py",
-      "size_bytes": 4005,
-      "sha256": "6068071f656ba18930dfb2e493f8073f3e66d6e14c3d00eff7856cc72633daaf"
+      "size_bytes": 4486,
+      "sha256": "53ec342a0bd25dbf530effe1864f728fe83aed3d896f1268aa4d3959a13f696e"
     },
     {
       "path": "tests/unit/test_inner_endpoint_contract.py",

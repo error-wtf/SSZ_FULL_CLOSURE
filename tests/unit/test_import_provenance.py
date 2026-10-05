@@ -1,13 +1,23 @@
 """G00: import-provenance and path-isolation regression.
 
 Fails loudly if SSZ modules are imported from any checkout other than the
-one this test runs in (canonical: /home/error/ssz-full-closure; the
-uppercase directory is a historical snapshot and must never leak in).
+one this test runs in.  The canonical checkout root is the RUNNING
+checkout (portable: this test must also pass on CI where the checkout
+lives under /home/runner/work).  The uppercase directory
+/home/error/SSZ_FULL_CLOSURE is a historical snapshot and must never leak
+in on machines where it exists.
 """
 import sys
 from pathlib import Path
 
-CANONICAL = Path("/home/error/ssz-full-closure").resolve()
+_ROOT = Path(__file__).resolve().parents[2]
+# Prefer the env-anchored canonical checkout when present (local workflow);
+# fall back to the running checkout (CI / any other machine).
+_env_candidate = Path("/home/error/ssz-full-closure")
+if _env_candidate.exists() and (_env_candidate / "src/ssz_p5").exists():
+    CANONICAL = _env_candidate.resolve()
+else:
+    CANONICAL = _ROOT
 FORBIDDEN = Path("/home/error/SSZ_FULL_CLOSURE").resolve()
 
 
