@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "f456f93dae8e1e0285131588500cdeeaba7bd06c8db6a74ccdfd993405fab17e"
+      "sha256": "ba4b9754d7a5af54bcab0264cc37546ad692dac83cecb7f4eabe811389ed647f"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "92ecd31c05e8ffc8b0fc507246240c43af50442adda3f5697df188452ae2c034"
+      "sha256": "550c196c91dcc043d76b4f23bbd31feb9f18d5c03f33757dae7ac536a6c63c57"
     },
     {
       "path": "Makefile",
@@ -5626,6 +5626,11 @@
       "path": "tests/unit/test_eq47_projection.py",
       "size_bytes": 2236,
       "sha256": "652e675566298886f2cb0681203ae9488ac0e9fe2ee52d1b13aebd98de3a35ae"
+    },
+    {
+      "path": "tests/unit/test_frozen_compare_e2e.py",
+      "size_bytes": 4432,
+      "sha256": "a28db362452c2308ec471f0222eb3c12d3a88b5644bdf5d5b68995648dc6b273"
     },
     {
       "path": "tests/unit/test_full_action_lower.py",
