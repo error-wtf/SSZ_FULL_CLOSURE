@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "943272a9c71b803b5430362d46a3c2aa21c7b5ac7a771dc4124c9e91dd2486db"
+      "sha256": "2a20202d75513d38706502c39cf33391ad6453d7a67a84bf233e4c0c659a0d8f"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "f54ccce46c092d01fc748da0fbf84224ea1607b786f797520281a5e5ae972ac7"
+      "sha256": "a994d3a583e23f0b4aad2bc1fbe344401915e5479a3b3453e5ca749981e0b7bc"
     },
     {
       "path": "Makefile",
@@ -3426,6 +3426,16 @@
       "path": "data/generated/spectral/N2_LUMINAL_SOLVE_RESULT_V2.json",
       "size_bytes": 721,
       "sha256": "54eba67a02b2677aa8a6379fd43db8a6453d2c601584a4ac2b0bca399c7056cb"
+    },
+    {
+      "path": "data/generated/spectral/N3_N4_LUMINAL_DECISION.json",
+      "size_bytes": 1246,
+      "sha256": "e6c4cfd84c56c4c4bbb4438209a1b6f91c3380081ab04544f1ec9997e9e3b8b0"
+    },
+    {
+      "path": "data/generated/spectral/N3_N4_LUMINAL_DECISION.stream41.csv",
+      "size_bytes": 41246,
+      "sha256": "e5914e3228aa4718475844c72e36d10d28f609469487cbd41f163c394c7e547d"
     },
     {
       "path": "data/generated/spectral/NATIVE_MODE_D2_ATLAS.json",
@@ -6486,6 +6496,11 @@
       "path": "tools/run_mode_certificates_detailed.py",
       "size_bytes": 8605,
       "sha256": "76858302a5b87ed300fbd39a5cca3f22a0bdf3e08d676fbea208a3a00a08152a"
+    },
+    {
+      "path": "tools/run_n3_n4_luminal_decision.py",
+      "size_bytes": 5427,
+      "sha256": "abb1f327e2346020157c00059403383d6896cf24bca9bfbc680b9fd7bc842ba4"
     },
     {
       "path": "tools/run_native_window_spectroscopy.py",

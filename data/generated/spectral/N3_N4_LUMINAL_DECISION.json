@@ -1,0 +1,20 @@
+{
+ "audit": "N3_N4_LUMINAL_DECISION_V1",
+ "g4_law": "constant 1/2 (declared)",
+ "profile_source": "N2_LUMINAL_BACKGROUND_PROFILE_V2.csv",
+ "n_points": 54,
+ "K_scalar_min": -4.0600856010541975e-13,
+ "K_scalar_at_x": 0.10547258540823937,
+ "negative_rows": 28,
+ "pocket_band_rows_negative": 2,
+ "negative_elsewhere": 26,
+ "noise_floor": 1e-09,
+ "rows_below_noise_floor": 0,
+ "K_scalar_abs_max": 4.0600856010541975e-13,
+ "verdict": "K_SCALAR_ZERO_ON_LUMINAL_SOLUTION__H1_SUPPORTED_NO_GHOST_NO_POCKET",
+ "interpretation": {
+  "supported": "On the luminal sector with G4 = 1/2 CONSTANT and G4phi = 0, the verified chain gives K_scalar == 0 (analytically exact: P1 = F/2).  No pocket, no ghost on this law.  H1 supported for this law choice.",
+  "limit": "This does NOT yet test the archived G4(phi) law WITH variation (G4phi != 0): there the a1 coupling is alive and the pocket question reopens.  The archived profile's G4 is numerically ~0.5 but its jets implied a varying G4(phi) \u2014 that law remains to be solved self-consistently (N2 with a chosen varying G4(phi)).",
+  "next": "Either (a) declare the archived implied G4(phi) law and re-run N2->N4, or (b) accept the constant-G4 luminal sector as the production branch and proceed to F.4."
+ }
+}
