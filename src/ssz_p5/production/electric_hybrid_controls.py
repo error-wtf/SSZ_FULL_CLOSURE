@@ -79,7 +79,8 @@ def primitive_response(
     ref = _reference_frame(baseline)
     e0 = emit_from_primitives(ref, regularize_photon_root=True)
     d = ref.copy()
-    d[control] = d[control].to_numpy(float) + basis[CONTROL_COLUMNS[control]].to_numpy(float) * shape
+    d[control] = (d[control].to_numpy(float)
+                  + basis[CONTROL_COLUMNS[control]].to_numpy(float) * shape)
     e1 = emit_from_primitives(d, regularize_photon_root=True)
     return {slot: e1[slot].to_numpy(float) - e0[slot].to_numpy(float) for slot in SLOTS}
 

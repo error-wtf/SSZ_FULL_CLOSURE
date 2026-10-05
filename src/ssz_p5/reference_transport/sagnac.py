@@ -50,26 +50,16 @@ def sagnac_times(beta: float, f_carrier: float = 1.0) -> SagnacResult:
                         delta_phi=omega * dt, delta_J=f_carrier * dt)
 
 
-def area_form(beta: float, f_carrier: float = 1.0) -> float:
-    """Cross-check against the area form dt = 4 Omega A / (c^2 * (1-beta^2)).
+def area_form(beta: float, f_carrier: float = 1.0, radius: float = 1.0) -> float:
+    """Area-form Sagnac: dt = 4 Omega A / (c^2 - v^2) with Omega = beta/radius.
 
-    In units L=1: A/(c^2) = pi/( (2 pi)^2 ) * 2 pi = 1/(2 Omega) ... verify
-    directly: dt = 2 beta/(1-beta^2) and 4 Omega A/c^2 /(1-beta^2) with
-    Omega = beta * c / R = 2 pi beta (c=R=1) gives
-    4*2pi*pi/(4pi^2)... -> equal to 2 beta/(1-beta^2). Implemented as the
-    numeric identity check used by the tests.
+    In units c = 1: dt = 4 (beta/radius) (pi radius^2) / (1 - beta^2)
+    = 4 pi beta radius / (1 - beta^2).  With L = 2 pi radius this equals
+    the segment form 2 beta/(1-beta^2) exactly when radius = 1.
     """
-    r = sagnac_times(beta, f_carrier)
-    omega = 2.0 * math.pi * f_carrier
-    # L = 2 pi, A = pi (c = R = 1): dt = 4 Omega A / (c^2 - v^2) with v = beta
-    dt_area = 4.0 * omega * math.pi / (1.0 - beta * beta) / (2.0 * math.pi * f_carrier)
-    dt_area = 4.0 * omega * math.pi / ((1.0 - beta * beta) * 2.0 * math.pi * f_carrier)
-    # simplify: = 2 beta / (1 - beta^2) requires v = Omega R with Omega = 2pi f_rot;
-    # with f_rot chosen so that v = beta: Omega = 2 pi beta.  Then
-    # dt = 4 (2 pi beta) pi / (1 - beta^2) -> 8 pi^2 beta/(1-beta^2) -- divide by
-    # omega = 2 pi f_carrier for the time-only version?  Keep the identity in
-    # the v-based closed form instead; area form asserted numerically in tests.
-    return r.delta_t
+    omega = beta / radius
+    area = math.pi * radius * radius
+    return 4.0 * omega * area / (1.0 - beta * beta)
 
 
 def edge_contract_null(beta: float = 1e-15) -> float:

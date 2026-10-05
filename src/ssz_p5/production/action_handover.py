@@ -342,7 +342,8 @@ def one_control_a2_probe(root: Path, band_name: str, build: CentralBuild | None 
     pred, F3, F2F = predict(solved_f4)
 
     expected_left = po("f4")(band.lo) if band.orientation == "old_to_central" else pc("f4")(band.lo)
-    expected_right = pc("f4")(band.hi) if band.orientation == "old_to_central" else po("f4")(band.hi)
+    expected_right = (pc("f4")(band.hi) if band.orientation == "old_to_central"
+                     else po("f4")(band.hi))
     endpoint_error = max(abs(float(solved_f4[0] - expected_left)),
         abs(float(solved_f4[-1] - expected_right)))
     accepted = bool(endpoint_error < 1e-3 and np.nanmax(np.abs(pred - v6p)) < 1e-8)

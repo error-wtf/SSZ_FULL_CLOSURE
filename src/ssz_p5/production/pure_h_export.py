@@ -22,7 +22,8 @@ from ..provenance.manifest import sha256
 from .member import MEMBER_FILE, validate_stream_regions
 
 WEAK_SOURCE = "data/regression/ssz_p5_F2_exterior_horndeski_unreduced_39of41_2026-09-14.csv"
-CORE_SOURCE = "data/authoritative/ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv"
+CORE_SOURCE = ("data/authoritative/ssz_p5_F2_core_punctured_horndeski_"
+               "unreduced_39of41_2026-09-14.csv")
 REGRESSION_STREAM = "archive/full_working_snapshot/ssz_p5_SELECTED_41STREAM_V2_2026-09-16.csv"
 A5_IMPL = "src/ssz_p5_holonomic_a5_closure_2026-09-16.py"
 

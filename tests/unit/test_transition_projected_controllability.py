@@ -14,10 +14,15 @@ def _load(name: str):
 def test_projected_joint_action_tangent_is_locally_controllable():
     r = _load("TRANSITION_PROJECTED_CONTROLLABILITY.json")
     assert r["status"] == "PASS_LOCAL_TANGENT_CONTROLLABILITY"
-    assert r["global_summary"]["metric_vector_tangent_has_one_direction_improving_all_required_L_at_all_sampled_points"]
-    assert r["global_summary"]["extended_scalar_identity_tangent_has_one_direction_improving_all_required_L_at_all_sampled_points"]
+    KEY_MVT = ("metric_vector_tangent_has_one_direction_improving_"
+               "all_required_L_at_all_sampled_points")
+    gs = r["global_summary"]
+    assert gs[KEY_MVT]
+    assert gs[("extended_scalar_identity_tangent_has_one_direction_"
+                    "improving_all_required_L_at_all_sampled_points")]
     for point in r["sample_points"]:
-        assert point["simultaneous_all_L"]["with_scalar_identity_tangent"]["all_required_L_gain_positive"]
+        assert point["simultaneous_all_L"]["with_scalar_identity_tangent"][
+            "all_required_L_gain_positive"]
 
 
 def test_projected_audit_never_uses_historical_inner_as_absolute_seed():

@@ -341,6 +341,7 @@ def audit_existing_split_controls(
             if max_norm > tolerance
             else "existing split controls satisfy the common Hessian chain rules"
         ),
-        "closure_effect": "INNER_DIRECT_41 remains NOT_CERTIFIED until targets are redesigned on the 3-DOF holonomic Hessian manifold",
+        "closure_effect": "INNER_DIRECT_41 remains NOT_CERTIFIED until targets are "
+                          "redesigned on the 3-DOF holonomic Hessian manifold",
     }
     return out, report

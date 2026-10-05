@@ -171,7 +171,9 @@ def build_gate_matrix(root: Path) -> list[dict[str, Any]]:
         projected = working.get("local_projected_controllability", {})
         if projected:
             add("PROJECTED_ONSHELL_CONTROLLABILITY", projected.get("status", "UNKNOWN"),
-                "data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY.json", "local tangent existence gate; not a finite transition member")
+                "data/generated/strong_field_transition_2026-09-20/"
+                "TRANSITION_PROJECTED_CONTROLLABILITY.json",
+                "local tangent existence gate; not a finite transition member")
 
     evidence = {row["path"]: row for row in build_evidence_index(root)}
     preferred = [
@@ -208,11 +210,14 @@ def build_member_matrix(root: Path) -> list[dict[str, str]]:
             {
                 "member": "electric_hybrid_bulk_0p62_0p70",
                 "status": str(central.get("electric_hybrid_bulk_0p62_0p70", "UNKNOWN")),
-                "reason": "7/7 finite-L K/radial bulk pass; scalar/angular/high-L final gates remain",
+                "reason": "7/7 finite-L K/radial bulk pass; "
+                          "scalar/angular/high-L final gates remain",
             },
             {
                 "member": "historical_inner",
-                "status": "REJECTED_AS_FINAL_MEMBER" if not transition.get("historical_inner_member_final_production_eligible", True) else "UNKNOWN",
+                "status": ("REJECTED_AS_FINAL_MEMBER" if not transition.get(
+                    "historical_inner_member_final_production_eligible", True)
+                    else "UNKNOWN"),
                 "reason": "replaced by one action-first strong-field transition on 0.70<=u<=0.715",
             },
         ])

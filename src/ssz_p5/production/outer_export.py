@@ -57,7 +57,8 @@ def export_outer(root:Path, output:Path):
       'background_inverse_repeated':False,
       'rows':len(direct),'slots':list(SLOT_NAMES),
       'max_scaled_regression_error':float(comp.max_scaled_error.max()),
-      'target_role':'direct regression target required by CODEX_FINAL_EXECUTION_CONTRACT section 11',
+      'target_role':'direct regression target required by '
+                    'CODEX_FINAL_EXECUTION_CONTRACT section 11',
       'timestamp':datetime.now(UTC).isoformat(),
       'sources':[
        {'path':BACKGROUND,'sha256':sha256(root/BACKGROUND)},

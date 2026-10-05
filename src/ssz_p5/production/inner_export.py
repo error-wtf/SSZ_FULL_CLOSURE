@@ -119,7 +119,8 @@ def export_inner(root, output):
     allowed_changes = {"a5", "v5", "c3", "e3", "v7", "v12"}
     comparisons["change_policy"] = comparisons.slot.map(
         lambda name: (
-            "action-realized lower-order/holonomic completion" if name in allowed_changes else "preserve"
+            "action-realized lower-order/holonomic completion"
+             if name in allowed_changes else "preserve"
         )
     )
     comparisons.to_csv(output / "INNER_SLOT_COMPARISON.csv", index=False)

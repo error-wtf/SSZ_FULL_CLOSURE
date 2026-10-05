@@ -34,7 +34,8 @@ def test_reference_action_and_projection_checkpoint():
     root=Path(__file__).resolve().parents[2]
     report=json.loads((root/'data/generated/angular_eq47_projection_2026-09-21/EQ47_PROJECTION_AUDIT.json').read_text())
     assert all(report['numerical_gates'].values())
-    assert report['first_published_shortcut_divergence']=='EQ47_MIXED_MISSING_K_TO_M_PROJECTION_FACTOR'
+    assert (report['first_published_shortcut_divergence']
+            == 'EQ47_MIXED_MISSING_K_TO_M_PROJECTION_FACTOR')
     r=report['representative']
     assert r['leading_eps_power']==3
     np.testing.assert_allclose([r[f'action_root{i}'] for i in range(3)],[-164.97552195,1,

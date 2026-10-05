@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_inner_light_ring_excludes_positive_zero_vector_tensor_branch():
-    d = pd.read_csv(ROOT / "data/production/ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv")
+    d = pd.read_csv(ROOT / "data/production/ssz_p5_horndeski_carrier_through_"
+                   "light_rings_to_core_2026-09-12.csv")
     r = d["r_over_rs"].to_numpy(float)
     f = d["f"].to_numpy(float)
     h = d["h"].to_numpy(float)

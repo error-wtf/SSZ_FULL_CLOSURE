@@ -2,8 +2,6 @@
 import sys
 from pathlib import Path
 
-import pytest
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
 from ssz_p5.reference_transport.gates import evaluate  # noqa: E402
@@ -16,11 +14,11 @@ def test_sag_ref_v1_all_gates_pass():
 
 def test_reference_transport_import_discipline():
     """reference_transport must not import postclosure/true_closure/geometry."""
+    import ssz_p5.reference_transport.gates as ga
+    import ssz_p5.reference_transport.inversion as inv
     import ssz_p5.reference_transport.sagnac as s
     import ssz_p5.reference_transport.segment_chain as sc
     import ssz_p5.reference_transport.transport_pde as tp
-    import ssz_p5.reference_transport.inversion as inv
-    import ssz_p5.reference_transport.gates as ga
     for mod in (s, sc, tp, inv, ga):
         src = Path(mod.__file__).read_text()
         # echte Import-Sicherheit: keine import-Anweisung, die auf die
@@ -40,8 +38,8 @@ def test_reference_transport_import_discipline():
 
 def test_negative_control_corrupted_chain_detectable():
     """A corrupted chain result must be detectable against the closed form."""
-    from ssz_p5.reference_transport.segment_chain import segment_chain
     from ssz_p5.reference_transport.sagnac import sagnac_times
+    from ssz_p5.reference_transport.segment_chain import segment_chain
     r = sagnac_times(0.3)
     t = segment_chain(0.3, 4096, s=+1)
     corrupted = t * (1 + 1e-9)

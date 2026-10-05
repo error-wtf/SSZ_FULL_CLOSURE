@@ -267,7 +267,7 @@ def sigma_svt_decomposition():
     only after the variation; see svt_direct_variation)."""
     C_bg = build_general_C_bg()
     sv_part = sp.expand(C_bg - P_MH_full(C_bg))
-    e00_svt = sp.expand(E00_full() - P_MH_full(E00_full()))
+    _ = sp.expand(E00_full() - P_MH_full(E00_full()))
     return {
         "total": sv_part,
         "operators": [

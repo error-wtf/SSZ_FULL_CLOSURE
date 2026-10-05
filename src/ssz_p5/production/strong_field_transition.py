@@ -189,7 +189,8 @@ def kinetic_transition_scan(stream: pd.DataFrame, L_values=REQUIRED_L) -> tuple[
             "light_ring_min_eig_K": float(raw[j, 0]),
             "light_ring_weakest_vector": [float(x) for x in np.linalg.eigh(K[inds][j])[1][:, 0]],
             "min_abs_Dh1": float(np.min(np.abs(red["Dh1"][inds]))),
-            "min_abs_auxiliary_determinant": float(np.min(np.abs(red["auxiliary_determinant"][inds]))),
+            "min_abs_auxiliary_determinant": float(np.min(
+                np.abs(red["auxiliary_determinant"][inds]))),
         }
         for q, idx in enumerate(inds):
             records.append(
@@ -246,5 +247,6 @@ def g2xx_kinetic_null_test(stream: pd.DataFrame, action: pd.DataFrame,
         "amplitude": float(amplitude),
         "shape": "C-infinity compact bump on 0.70<u<0.715",
         "response": result,
-        "interpretation": "G2XX is a null/near-null direction for the right-transition even kinetic obstruction if all reported deltas are negligible.",
+        "interpretation": "G2XX is a null/near-null direction for the right-transition "
+                           "even kinetic obstruction if all reported deltas are negligible.",
     }

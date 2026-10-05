@@ -16,7 +16,8 @@ from ..jets.jet9d8 import profile_derivative
 EPSILON_Y = 1.0e-2
 REGION_SOURCES = {
     "exterior": "data/regression/ssz_p5_F2_exterior_horndeski_unreduced_39of41_2026-09-14.csv",
-    "carrier": "data/authoritative/ssz_p5_F2_horndeski_carrier_unreduced_39of41_CORRECTED_2026-09-14.csv",
+    "carrier": "data/authoritative/ssz_p5_F2_horndeski_carrier_unreduced_39of41_"
+               "CORRECTED_2026-09-14.csv",
     "core": "data/authoritative/ssz_p5_F2_core_punctured_horndeski_unreduced_39of41_2026-09-14.csv",
 }
 

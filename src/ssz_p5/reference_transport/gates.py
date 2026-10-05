@@ -9,19 +9,18 @@ from __future__ import annotations
 
 import hashlib
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import numpy as np
 
+from ssz_p5.reference_transport.inversion import invert_delta_t
 from ssz_p5.reference_transport.sagnac import (
-    edge_contract_catch_up,
     edge_contract_null,
     edge_contract_reversal,
     sagnac_times,
 )
 from ssz_p5.reference_transport.segment_chain import chain_convergence, segment_chain
-from ssz_p5.reference_transport.inversion import invert_delta_t
 
 BETA_TEST = 0.3
 F_CARRIER = 1.0
@@ -104,7 +103,7 @@ def evaluate() -> dict:
 
     verdict = {
         "verdict_key": "SAG_REF_V1",
-        "created_utc": datetime.now(timezone.utc).isoformat(),
+        "created_utc": datetime.now(UTC).isoformat(),
         "beta_test": BETA_TEST,
         "gates": gates,
         "all_pass": all(g["pass"] for g in gates),

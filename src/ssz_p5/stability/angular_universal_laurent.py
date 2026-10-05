@@ -346,7 +346,8 @@ def characteristic_laurent_polynomial(df,la=None,return_scale=False):
 def leading_characteristic(df,la=None,tol=1e-10):
     P,scale=characteristic_laurent_polynomial(df,la,return_scale=True)
     n=len(df)
-    # choose first eps power with non-negligible polynomial at each row.  The witness uses a uniform power;
+    # choose first eps power with non-negligible polynomial at each row.
+    # The witness uses a uniform power;
     # export per-row powers so limit-sector changes are visible rather than hidden.
     powers=np.full(n,999,dtype=int)
     coeff=np.zeros((n,4))
@@ -412,7 +413,8 @@ def extract_eq83_style_coefficients(df,la):
 def published_svt_angular_from_eq83(df,c):
     """Zhang-Kase published angular shortcut evaluated from Eq83-style coefficients.
 
-    This intentionally consumes action-derived coefficients.  A disagreement with the raw determinant
+    This intentionally consumes action-derived coefficients.  A disagreement
+    with the raw determinant
     therefore localizes a convention/mapping issue *before* root sorting.
     """
     r=df.x.to_numpy(float)

@@ -444,7 +444,8 @@ def principal_audit(root: Path):
                 "min_cr2": float(np.min(radial)),
                 "negative_radial_rows": int(np.sum(radial <= 0)),
                 "max_R_abs": float(np.max(np.abs(np.asarray(a["R"])[inds]))),
-                "max_S_sym": float(np.max(np.abs(np.asarray(a["S"])[inds] + np.asarray(a["S"])[inds].swapaxes(1, 2)))),
+                "max_S_sym": float(np.max(np.abs(
+                    np.asarray(a["S"])[inds] + np.asarray(a["S"])[inds].swapaxes(1, 2)))),
                 "pass": bool(np.all(ke[inds, 0] > 0) and np.all(radial > 0)),
             }
         )

@@ -13,7 +13,8 @@ def test_electric_hybrid_recipe_replays_corrected_frozen_checkpoint():
     got = build_recipe_stream(ROOT)
     ref = pd.read_csv(
         ROOT
-        / "data/generated/absolute_attempt_2026-09-20/ELECTRIC_HYBRID_PRINCIPAL_LATE_RAMP_FEASIBILITY_C6_CORRECTED.csv"
+        / ("data/generated/absolute_attempt_2026-09-20/ELECTRIC_HYBRID_PRINCIPAL_"
+           "LATE_RAMP_FEASIBILITY_C6_CORRECTED.csv")
     )
     assert len(got) == len(ref) == 4000
     assert np.allclose(got.x, ref.x, rtol=0, atol=1e-13)

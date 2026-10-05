@@ -119,7 +119,8 @@ def build_inner_targets(root, output):
         ),
         action_control_report=control_report,
         existing_emitter_interface=(
-            "selected_v5/selected_c3/selected_e3 remain an output interface; production values are now supplied by the explicit lower-order action-control inverse"
+            "selected_v5/selected_c3/selected_e3 remain an output interface; "
+            "production values are now supplied by the explicit lower-order action-construction",
         ),
         sources=[dict(path=p, sha256=sha256(root / p)) for p in paths],
         generator=dict(
