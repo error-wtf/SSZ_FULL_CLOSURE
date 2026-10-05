@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "ba4b9754d7a5af54bcab0264cc37546ad692dac83cecb7f4eabe811389ed647f"
+      "sha256": "45cc0a596bb265ed67a15cb58e3392a9282fdb8a68d54d69743e9a395477f7d3"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "550c196c91dcc043d76b4f23bbd31feb9f18d5c03f33757dae7ac536a6c63c57"
+      "sha256": "33fe6cbb43e042b7fb419ebd7b06be0897eb04ae9beb1920b8a87824451d1010"
     },
     {
       "path": "Makefile",
@@ -3873,6 +3873,11 @@
       "sha256": "9131ff2928bc09a554ff1ca736506103427066c1ca364e36dcd2ff736646bd02"
     },
     {
+      "path": "docs/DUAL_SOLVER_CONTRACT_V2.md",
+      "size_bytes": 1104,
+      "sha256": "d8a8a95551274bf87d831f878a4bf0f9727f70ad8c571bcd7c78283b479c3d36"
+    },
+    {
       "path": "docs/FROZEN_CARRIER_ONSHELL_CONTRADICTION.md",
       "size_bytes": 7514,
       "sha256": "c0e4046fe7f528481eb3dbd5cfc35ba875898bfc7640b754c65e19de6060e914"
@@ -3956,6 +3961,11 @@
       "path": "docs/SPECTRAL_SELECTION_PROBE.md",
       "size_bytes": 937,
       "sha256": "a274e18a2ea65ee8409ffeb83c00a4d5fe3b1435e22b685e7826b3fb2ff121e3"
+    },
+    {
+      "path": "docs/SPECTROSCOPY_MASTER_PLAN_2026-10-05.md",
+      "size_bytes": 2851,
+      "sha256": "f3e36e4c20c5923b9ea9937861cf121bbbccb87b42fbdc4f401072c6d195945f"
     },
     {
       "path": "docs/STRONG_FIELD_TRANSITION_CONTRACT_2026-09-20.md",
@@ -5048,6 +5058,16 @@
       "sha256": "b216761d3de81626e3d3e0bdc02abdb1aa68b4676d4cae2e4f7e5d3cadf1d730"
     },
     {
+      "path": "src/ssz_p5/observations/injection_recovery.py",
+      "size_bytes": 3993,
+      "sha256": "302b463b751d205ca1647a6155d72b692300c8ff03b470ffa32431085fa8ba68"
+    },
+    {
+      "path": "src/ssz_p5/observations/pipeline_freeze.py",
+      "size_bytes": 2090,
+      "sha256": "3736809ae5d0c637bd48a642c074b89adb392d8e88c4b139ec1065ececa76990"
+    },
+    {
       "path": "src/ssz_p5/observations/provenance.py",
       "size_bytes": 1263,
       "sha256": "65074c895e4b07c52dffeef5ca970a4db720497ad526633a5e19c3512e810ca0"
@@ -5726,6 +5746,11 @@
       "path": "tests/unit/test_onshell_identity.py",
       "size_bytes": 2229,
       "sha256": "21dc76ff44f261466180303bf44c1967d55f3b2695b471fc7ab8b4ec2fcd38d3"
+    },
+    {
+      "path": "tests/unit/test_positive_controls_and_freeze.py",
+      "size_bytes": 2977,
+      "sha256": "26e6211c523fa8b53df5f4bd2c94328709b26068f675b81d485251e2b137ec65"
     },
     {
       "path": "tests/unit/test_principal_controls.py",
