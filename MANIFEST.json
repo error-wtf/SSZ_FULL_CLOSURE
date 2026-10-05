@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "7f4a631172ec8ddb2f2288cf0431b063db361844a58fae8015353115632e73ad"
+      "sha256": "90149e22875278085ee3ee0811640c1811ca0d00cc149a77acbcc87b8076e152"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "84f9fa0be89b726285d833e95d23748b1cd1af858c90ce04d66bab735b9c5ec5"
+      "sha256": "9b905782fbe122c79a6ee8706bb0675d65de55cfe32d7ffb2dd323a642c18b49"
     },
     {
       "path": "Makefile",
@@ -3408,6 +3408,16 @@
       "sha256": "15641fb7913c1631e5fbe9ed0a93ceeaa4b676d2cd08c8bf02f8e20d37183049"
     },
     {
+      "path": "data/generated/spectral/NATIVE_MODE_D2_ATLAS.json",
+      "size_bytes": 50631,
+      "sha256": "0fb45270c28ed6eebdda4c3c528c8aee0514525d2d6f3a8f5217a88aa791b56a"
+    },
+    {
+      "path": "data/generated/spectral/NATIVE_WINDOW_SPECTROSCOPY_REPORT.json",
+      "size_bytes": 78717,
+      "sha256": "34af3c73f31aeed0639984981cd6785bb037c8255b165ffd7358fc2d30750fb4"
+    },
+    {
       "path": "data/generated/spectral/SPECTROSCOPY_SOURCE_OF_TRUTH_2026-10-04.json",
       "size_bytes": 1964,
       "sha256": "b3d3bd76edaa7a223abe7238ec43bfb2ce65f245ea5be75ed74ca12a89abebfc"
@@ -3426,6 +3436,41 @@
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_SUMMARY.csv",
       "size_bytes": 170,
       "sha256": "7d970ce6eb06a762a505d95c357aeb7fa9db22b197095dc54fde7ec395639dec"
+    },
+    {
+      "path": "data/generated/spectral/native_window/L1000_native_window_spectroscopy.npz",
+      "size_bytes": 15293081,
+      "sha256": "51a237957f2b308045c185689256e0526ac0c7ac0e549c87e6f3ca9098b8680e"
+    },
+    {
+      "path": "data/generated/spectral/native_window/L110_native_window_spectroscopy.npz",
+      "size_bytes": 15256633,
+      "sha256": "82484b1b2f0af9136be803ce8cef47d6a1cf163946f5f91761f6311d518602cf"
+    },
+    {
+      "path": "data/generated/spectral/native_window/L12_native_window_spectroscopy.npz",
+      "size_bytes": 15191073,
+      "sha256": "97c55c047ea44e935d97fc638778f0cc12fedec7bd81c0753f355ba1b0e151fc"
+    },
+    {
+      "path": "data/generated/spectral/native_window/L20_native_window_spectroscopy.npz",
+      "size_bytes": 15204119,
+      "sha256": "2c980a90b01eb09bf0f85b3e682894d33e9c1d1da6ba4d0ea2464acc0d20309c"
+    },
+    {
+      "path": "data/generated/spectral/native_window/L420_native_window_spectroscopy.npz",
+      "size_bytes": 15309824,
+      "sha256": "9109ae2e70ec2883896eeba77e1ed729038a4c88b8f6684db111dcffe6bce1cb"
+    },
+    {
+      "path": "data/generated/spectral/native_window/L42_native_window_spectroscopy.npz",
+      "size_bytes": 15224130,
+      "sha256": "25dbd1b3fb052fb2f1cf31c9f2892821c5ea0e972aaba7ceaf0de9382eeb1c52"
+    },
+    {
+      "path": "data/generated/spectral/native_window/L6_native_window_spectroscopy.npz",
+      "size_bytes": 15176658,
+      "sha256": "a63a4f792e39af22a845db7f65e800a900b717b1cbd85d6f041b440188b52b6c"
     },
     {
       "path": "data/generated/spectral/weisz1978/WEISZ1978_FK_MODES.csv",
@@ -6121,6 +6166,11 @@
       "path": "tools/build_inner_targets.py",
       "size_bytes": 505,
       "sha256": "4d6cefbd3f129d3641c83e1e593b6451fae870a8651a27da715780123994a928"
+    },
+    {
+      "path": "tools/build_native_mode_d2_atlas.py",
+      "size_bytes": 2631,
+      "sha256": "9560761d47298aaf29cf192f80d8a720e6319b886358c5d626a40a3442d86c9c"
     },
     {
       "path": "tools/build_observed_mode_catalog.py",

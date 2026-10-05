@@ -1,0 +1,5132 @@
+{
+  "finite_window_status": "FINITE_WINDOW_SPECTROSCOPY_BULK_NOT_CONVERGED",
+  "finite_window_semantics": "Real finite-box K,G,S,M generalized eigenproblem on the healthy registered window. Useful for falsification, convergence and residue-structure diagnostics; not a physical global QNM spectrum.",
+  "global_qnm_gate": {
+    "status": "BLOCKED",
+    "blocker": "MISSING_DIRECT_GLOBAL_KRGM_CERTIFICATE",
+    "detail": "Finite-window spectroscopy is allowed; physical global QNM/residue claims are not."
+  },
+  "windows": {
+    "registered": [
+      0.62,
+      0.7
+    ],
+    "inner_trim": [
+      0.625,
+      0.7
+    ],
+    "outer_trim": [
+      0.62,
+      0.695
+    ],
+    "both_trim": [
+      0.625,
+      0.695
+    ]
+  },
+  "modes_requested": 14,
+  "modes_compared": 8,
+  "all_bulk_resolution_converged": false,
+  "any_robust_residue_reordering": true,
+  "any_boundary_sensitivity": true,
+  "weisz_like_concentration_candidate_L": [
+    1000
+  ],
+  "per_L": {
+    "6": {
+      "min_K_registered": 0.013463194095520398,
+      "omega2": [
+        12.906091074393496,
+        13.67894473811864,
+        40.503074503424955,
+        70.85643384015849,
+        115.76774388873167,
+        167.32379170205257,
+        230.52421036231348,
+        264.61632625716874,
+        305.3129693534568,
+        387.2482141743724,
+        478.55855838384286,
+        580.6718962265597,
+        691.2670518842241,
+        758.5594726025289
+      ],
+      "positive_mode_count": 14,
+      "finite_box_tachyon_present": false,
+      "omega2_resolution_max_relative_error": 0.07109121794004074,
+      "min_native_coarse_K_overlap": 0.9621577061301937,
+      "bulk_resolution_converged": false,
+      "robust_inversion_pairs_native": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_common_to_both_resolutions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_sensitivity": {
+        "registered": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.015465502036650564
+        },
+        "inner_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.30065998357165064
+        },
+        "outer_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.15840903368498277
+        },
+        "both_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.45305085158461905
+        }
+      },
+      "ir_boundary_sensitive": true,
+      "ipr_first_modes": [
+        1.9713138140443578,
+        2.210611100038588,
+        1.5389728351224665,
+        1.5106145386354408,
+        1.5044818220924923,
+        1.5043221411140864,
+        1.4729794209341822,
+        1.800383345173928
+      ],
+      "binned_top2_fraction_minmax": [
+        0.38775453896027945,
+        0.5521959070963132
+      ],
+      "binned_effective_mode_count_minmax": [
+        4.865817015861057,
+        6.788298986654253
+      ],
+      "native_binned_concentration": {
+        "interior_top2_max": 0.5521959070963132,
+        "interior_top2_min": 0.38775453896027945,
+        "interior_neff_min": 4.865817015861057,
+        "interior_neff_max": 6.788298986654253,
+        "strong_two_mode_concentration": false
+      },
+      "coarse_binned_concentration": {
+        "interior_top2_max": 0.5193554028147266,
+        "interior_top2_min": 0.35730092808285535,
+        "interior_neff_min": 4.910530612065363,
+        "interior_neff_max": 6.988013660117459,
+        "strong_two_mode_concentration": false
+      },
+      "binned_inversion_pairs_native_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "binned_inversion_pairs_coarse_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "binned_inversion_pairs_common_native_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_trim_concentration": {
+        "registered": {
+          "interior_top2_max": 0.5193554028127898,
+          "interior_top2_min": 0.35730092807342045,
+          "interior_neff_min": 4.910530612085916,
+          "interior_neff_max": 6.988013660095309,
+          "strong_two_mode_concentration": false
+        },
+        "inner_trim": {
+          "interior_top2_max": 0.4773800451459113,
+          "interior_top2_min": 0.34712578333067634,
+          "interior_neff_min": 5.443399758712712,
+          "interior_neff_max": 7.366653081309365,
+          "strong_two_mode_concentration": false
+        },
+        "outer_trim": {
+          "interior_top2_max": 0.5373699794181948,
+          "interior_top2_min": 0.34813191787925946,
+          "interior_neff_min": 5.154166037784245,
+          "interior_neff_max": 7.035546015936428,
+          "strong_two_mode_concentration": false
+        },
+        "both_trim": {
+          "interior_top2_max": 0.4786167335415411,
+          "interior_top2_min": 0.3451335516218083,
+          "interior_neff_min": 5.861933065618102,
+          "interior_neff_max": 7.2275553843558376,
+          "strong_two_mode_concentration": false
+        }
+      },
+      "concentration_resolution_stable": false,
+      "concentration_boundary_supported": false,
+      "weisz_like_concentration_candidate": false,
+      "pencil_symmetry_error_A": 0.0,
+      "pencil_symmetry_error_B": 0.0
+    },
+    "12": {
+      "min_K_registered": 0.012538378552924114,
+      "omega2": [
+        7.821285894361086,
+        10.653365444840203,
+        29.19618407376561,
+        46.72971819156275,
+        77.89016141447688,
+        111.6027560445033,
+        154.94931455171175,
+        202.34750891860608,
+        258.4156333509119,
+        299.3687332423194,
+        321.4242276710877,
+        388.4852886508721,
+        462.736489750624,
+        544.2581653082004
+      ],
+      "positive_mode_count": 14,
+      "finite_box_tachyon_present": false,
+      "omega2_resolution_max_relative_error": 0.04591116347559323,
+      "min_native_coarse_K_overlap": 0.9725417698841572,
+      "bulk_resolution_converged": true,
+      "robust_inversion_pairs_native": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_common_to_both_resolutions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_sensitivity": {
+        "registered": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.045911163479565524
+        },
+        "inner_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.2733724710614482
+        },
+        "outer_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.1582825027659111
+        },
+        "both_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.4149129952654172
+        }
+      },
+      "ir_boundary_sensitive": true,
+      "ipr_first_modes": [
+        1.5127677823677972,
+        2.3335096517676788,
+        1.6782861153666597,
+        1.5179741867108292,
+        1.5179785316282315,
+        1.5137377079163639,
+        1.5116099197388961,
+        1.5099965433499603
+      ],
+      "binned_top2_fraction_minmax": [
+        0.32570423540333215,
+        0.498631425162591
+      ],
+      "binned_effective_mode_count_minmax": [
+        5.374169804790139,
+        7.276265766344907
+      ],
+      "native_binned_concentration": {
+        "interior_top2_max": 0.498631425162591,
+        "interior_top2_min": 0.32570423540333215,
+        "interior_neff_min": 5.374169804790139,
+        "interior_neff_max": 7.276265766344907,
+        "strong_two_mode_concentration": false
+      },
+      "coarse_binned_concentration": {
+        "interior_top2_max": 0.5007316647287043,
+        "interior_top2_min": 0.38199712335856023,
+        "interior_neff_min": 5.195443811997044,
+        "interior_neff_max": 6.797880763048688,
+        "strong_two_mode_concentration": false
+      },
+      "binned_inversion_pairs_native_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "binned_inversion_pairs_coarse_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "binned_inversion_pairs_common_native_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "boundary_trim_concentration": {
+        "registered": {
+          "interior_top2_max": 0.500731664730128,
+          "interior_top2_min": 0.38199712336505964,
+          "interior_neff_min": 5.195443811958933,
+          "interior_neff_max": 6.797880763039623,
+          "strong_two_mode_concentration": false
+        },
+        "inner_trim": {
+          "interior_top2_max": 0.49290332924691,
+          "interior_top2_min": 0.3710681123462676,
+          "interior_neff_min": 5.314771560739297,
+          "interior_neff_max": 6.893723372462068,
+          "strong_two_mode_concentration": false
+        },
+        "outer_trim": {
+          "interior_top2_max": 0.5120049708781205,
+          "interior_top2_min": 0.4010786337251965,
+          "interior_neff_min": 5.0382971852301965,
+          "interior_neff_max": 6.524180881422812,
+          "strong_two_mode_concentration": false
+        },
+        "both_trim": {
+          "interior_top2_max": 0.5031794744904738,
+          "interior_top2_min": 0.3910787715602886,
+          "interior_neff_min": 5.183502849441122,
+          "interior_neff_max": 6.640651951628804,
+          "strong_two_mode_concentration": false
+        }
+      },
+      "concentration_resolution_stable": false,
+      "concentration_boundary_supported": false,
+      "weisz_like_concentration_candidate": false,
+      "pencil_symmetry_error_A": 0.0,
+      "pencil_symmetry_error_B": 0.0
+    },
+    "20": {
+      "min_K_registered": 0.010627830575493635,
+      "omega2": [
+        3.9565613732230593,
+        7.186797351782322,
+        21.90860358527429,
+        30.615633060401596,
+        52.92800392905338,
+        74.61078208771507,
+        104.47638510036741,
+        136.12424509711477,
+        174.37732453290866,
+        215.17225611466782,
+        262.0722657134379,
+        311.32424910831634,
+        342.2360192959707,
+        367.6199030703925
+      ],
+      "positive_mode_count": 14,
+      "finite_box_tachyon_present": false,
+      "omega2_resolution_max_relative_error": 0.10343387872742665,
+      "min_native_coarse_K_overlap": 0.9824833914876161,
+      "bulk_resolution_converged": false,
+      "robust_inversion_pairs_native": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_common_to_both_resolutions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_sensitivity": {
+        "registered": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.10343387873037714
+        },
+        "inner_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.3564361602873671
+        },
+        "outer_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.28115234856205173
+        },
+        "both_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.5739688226163605
+        }
+      },
+      "ir_boundary_sensitive": true,
+      "ipr_first_modes": [
+        1.552677620222375,
+        2.562418738388175,
+        1.8402438365691092,
+        1.5259950054573024,
+        1.5508447548909896,
+        1.51735029196422,
+        1.5169190921261866,
+        1.5149937725199631
+      ],
+      "binned_top2_fraction_minmax": [
+        0.3147640104404153,
+        0.5208813723446565
+      ],
+      "binned_effective_mode_count_minmax": [
+        5.079133394190917,
+        7.536899058330489
+      ],
+      "native_binned_concentration": {
+        "interior_top2_max": 0.5208813723446565,
+        "interior_top2_min": 0.3147640104404153,
+        "interior_neff_min": 5.079133394190917,
+        "interior_neff_max": 7.536899058330489,
+        "strong_two_mode_concentration": false
+      },
+      "coarse_binned_concentration": {
+        "interior_top2_max": 0.5310590403225216,
+        "interior_top2_min": 0.36682281242177905,
+        "interior_neff_min": 4.751935017392898,
+        "interior_neff_max": 7.047410304255601,
+        "strong_two_mode_concentration": false
+      },
+      "binned_inversion_pairs_native_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "binned_inversion_pairs_coarse_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "binned_inversion_pairs_common_native_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "boundary_trim_concentration": {
+        "registered": {
+          "interior_top2_max": 0.5310590403150608,
+          "interior_top2_min": 0.3668228124320616,
+          "interior_neff_min": 4.751935017510567,
+          "interior_neff_max": 7.047410304294922,
+          "strong_two_mode_concentration": false
+        },
+        "inner_trim": {
+          "interior_top2_max": 0.5235611536548674,
+          "interior_top2_min": 0.3681359248096234,
+          "interior_neff_min": 4.828363032170616,
+          "interior_neff_max": 7.124859072952055,
+          "strong_two_mode_concentration": false
+        },
+        "outer_trim": {
+          "interior_top2_max": 0.5422081545175166,
+          "interior_top2_min": 0.36208091404277165,
+          "interior_neff_min": 4.6281820603740815,
+          "interior_neff_max": 7.176100762549662,
+          "strong_two_mode_concentration": false
+        },
+        "both_trim": {
+          "interior_top2_max": 0.5338237449553117,
+          "interior_top2_min": 0.3490217496121571,
+          "interior_neff_min": 4.738066466965706,
+          "interior_neff_max": 7.240801635049535,
+          "strong_two_mode_concentration": false
+        }
+      },
+      "concentration_resolution_stable": false,
+      "concentration_boundary_supported": false,
+      "weisz_like_concentration_candidate": false,
+      "pencil_symmetry_error_A": 0.0,
+      "pencil_symmetry_error_B": 0.0
+    },
+    "42": {
+      "min_K_registered": 0.00438522037425846,
+      "omega2": [
+        0.2001936822755896,
+        2.553306174628661,
+        14.269189791632748,
+        15.036585869560184,
+        29.417836486827213,
+        38.29612745183862,
+        55.11577225513599,
+        70.65187604143352,
+        91.34741642684065,
+        112.2196885731947,
+        137.20724841949882,
+        163.03696421515585,
+        192.48580713108834,
+        223.1140807016163
+      ],
+      "positive_mode_count": 14,
+      "finite_box_tachyon_present": false,
+      "omega2_resolution_max_relative_error": 0.5730944761239265,
+      "min_native_coarse_K_overlap": 0.9850097129497218,
+      "bulk_resolution_converged": false,
+      "robust_inversion_pairs_native": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_common_to_both_resolutions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_sensitivity": {
+        "registered": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 4.602938056363841
+        },
+        "inner_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.8291833478964548
+        },
+        "outer_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 5.226310793066189
+        },
+        "both_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 1.2883423222276889
+        }
+      },
+      "ir_boundary_sensitive": true,
+      "ipr_first_modes": [
+        1.6121298837219082,
+        2.4171602271439023,
+        2.108975830267305,
+        1.5742914891946074,
+        1.727570386290914,
+        1.5264671379496557,
+        1.5502906151404519,
+        1.5187398105739647
+      ],
+      "binned_top2_fraction_minmax": [
+        0.38765245741840265,
+        0.5269667344197864
+      ],
+      "binned_effective_mode_count_minmax": [
+        4.745009530582656,
+        6.982434304229517
+      ],
+      "native_binned_concentration": {
+        "interior_top2_max": 0.5269667344197864,
+        "interior_top2_min": 0.38765245741840265,
+        "interior_neff_min": 4.745009530582656,
+        "interior_neff_max": 6.982434304229517,
+        "strong_two_mode_concentration": false
+      },
+      "coarse_binned_concentration": {
+        "interior_top2_max": 0.5356768170151318,
+        "interior_top2_min": 0.4053723095409228,
+        "interior_neff_min": 4.648944775487174,
+        "interior_neff_max": 6.74991640404364,
+        "strong_two_mode_concentration": false
+      },
+      "binned_inversion_pairs_native_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "binned_inversion_pairs_coarse_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "binned_inversion_pairs_common_native_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "boundary_trim_concentration": {
+        "registered": {
+          "interior_top2_max": 0.5356768170177932,
+          "interior_top2_min": 0.40537230950535397,
+          "interior_neff_min": 4.648944775498632,
+          "interior_neff_max": 6.749916403854263,
+          "strong_two_mode_concentration": false
+        },
+        "inner_trim": {
+          "interior_top2_max": 0.5279091344400447,
+          "interior_top2_min": 0.40029317936006004,
+          "interior_neff_min": 4.698397287774476,
+          "interior_neff_max": 6.703886914378435,
+          "strong_two_mode_concentration": false
+        },
+        "outer_trim": {
+          "interior_top2_max": 0.5598710146570239,
+          "interior_top2_min": 0.38747515553116263,
+          "interior_neff_min": 4.6124251446470055,
+          "interior_neff_max": 6.434472892803236,
+          "strong_two_mode_concentration": false
+        },
+        "both_trim": {
+          "interior_top2_max": 0.5456831220137434,
+          "interior_top2_min": 0.40615726127103213,
+          "interior_neff_min": 4.638912415483761,
+          "interior_neff_max": 6.941845053519254,
+          "strong_two_mode_concentration": false
+        }
+      },
+      "concentration_resolution_stable": false,
+      "concentration_boundary_supported": false,
+      "weisz_like_concentration_candidate": false,
+      "pencil_symmetry_error_A": 0.0,
+      "pencil_symmetry_error_B": 0.0
+    },
+    "110": {
+      "min_K_registered": 0.0006723488454394859,
+      "omega2": [
+        -1.1492095860936307,
+        1.167582062498109,
+        7.122240511848503,
+        8.267647990099725,
+        16.25114462454174,
+        17.120674082305552,
+        26.178194671029775,
+        30.078251967298943,
+        39.74494198936011,
+        46.879817520675786,
+        57.73345691192472,
+        67.41912953051786,
+        79.8097263808541,
+        91.70587878500369
+      ],
+      "positive_mode_count": 13,
+      "finite_box_tachyon_present": true,
+      "omega2_resolution_max_relative_error": 0.7324294685406824,
+      "min_native_coarse_K_overlap": 0.9636884796183354,
+      "bulk_resolution_converged": false,
+      "robust_inversion_pairs_native": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_common_to_both_resolutions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_sensitivity": {
+        "registered": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.7324294683986942
+        },
+        "inner_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 1.2933778471270032
+        },
+        "outer_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 1.0785114900414285
+        },
+        "both_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 1.7734241499531627
+        }
+      },
+      "ir_boundary_sensitive": true,
+      "ipr_first_modes": [
+        1.658724046128997,
+        1.9202327315324843,
+        1.604235694852503,
+        2.1197710963351453,
+        1.883194228001163,
+        1.8401541114093534,
+        1.8055701343422939,
+        1.5486879174607984
+      ],
+      "binned_top2_fraction_minmax": [
+        0.4065181753129166,
+        0.5637636255354933
+      ],
+      "binned_effective_mode_count_minmax": [
+        5.017510956459923,
+        6.875223978590336
+      ],
+      "native_binned_concentration": {
+        "interior_top2_max": 0.5637636255354933,
+        "interior_top2_min": 0.4065181753129166,
+        "interior_neff_min": 5.017510956459923,
+        "interior_neff_max": 6.875223978590336,
+        "strong_two_mode_concentration": false
+      },
+      "coarse_binned_concentration": {
+        "interior_top2_max": 0.5680701690874093,
+        "interior_top2_min": 0.4135553929698811,
+        "interior_neff_min": 4.9893125892633705,
+        "interior_neff_max": 6.502291910564578,
+        "strong_two_mode_concentration": false
+      },
+      "binned_inversion_pairs_native_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "binned_inversion_pairs_coarse_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "binned_inversion_pairs_common_native_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "boundary_trim_concentration": {
+        "registered": {
+          "interior_top2_max": 0.5680701691516885,
+          "interior_top2_min": 0.41355539299376765,
+          "interior_neff_min": 4.989312588660923,
+          "interior_neff_max": 6.5022919112301585,
+          "strong_two_mode_concentration": false
+        },
+        "inner_trim": {
+          "interior_top2_max": 0.5489460889450838,
+          "interior_top2_min": 0.39239228321399167,
+          "interior_neff_min": 5.173533876173404,
+          "interior_neff_max": 6.903768356701368,
+          "strong_two_mode_concentration": false
+        },
+        "outer_trim": {
+          "interior_top2_max": 0.529353113674667,
+          "interior_top2_min": 0.39584942237362497,
+          "interior_neff_min": 4.789119706248848,
+          "interior_neff_max": 6.936687238383941,
+          "strong_two_mode_concentration": false
+        },
+        "both_trim": {
+          "interior_top2_max": 0.540338407381172,
+          "interior_top2_min": 0.4064490214272496,
+          "interior_neff_min": 4.946035533773537,
+          "interior_neff_max": 6.282685530227195,
+          "strong_two_mode_concentration": false
+        }
+      },
+      "concentration_resolution_stable": false,
+      "concentration_boundary_supported": false,
+      "weisz_like_concentration_candidate": false,
+      "pencil_symmetry_error_A": 0.0,
+      "pencil_symmetry_error_B": 0.0
+    },
+    "420": {
+      "min_K_registered": 4.683271503955633e-05,
+      "omega2": [
+        7.979298185441581,
+        11.986846516536701,
+        15.475419322142253,
+        17.006481648247718,
+        19.8953883577114,
+        21.018406480081065,
+        24.018844638291895,
+        25.03951691113764,
+        28.758490049566415,
+        29.377236893749227,
+        33.76897576412264,
+        34.48218339563155,
+        39.01300230325401,
+        41.03899916802925
+      ],
+      "positive_mode_count": 14,
+      "finite_box_tachyon_present": false,
+      "omega2_resolution_max_relative_error": 0.0956564232926,
+      "min_native_coarse_K_overlap": 0.9770890495551491,
+      "bulk_resolution_converged": false,
+      "robust_inversion_pairs_native": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_common_to_both_resolutions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_sensitivity": {
+        "registered": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.09565642329869663
+        },
+        "inner_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.10482027150494987
+        },
+        "outer_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.1960279383926258
+        },
+        "both_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.3183721239210518
+        }
+      },
+      "ir_boundary_sensitive": true,
+      "ipr_first_modes": [
+        2.3019649740233414,
+        2.8257192944352827,
+        1.9494609832957173,
+        1.808816265534746,
+        1.5893124433236239,
+        1.8752087256136791,
+        1.5843734933096507,
+        1.9226317694135417
+      ],
+      "binned_top2_fraction_minmax": [
+        0.3650097861813065,
+        0.56855211776062
+      ],
+      "binned_effective_mode_count_minmax": [
+        4.608981613815931,
+        6.84202840337216
+      ],
+      "native_binned_concentration": {
+        "interior_top2_max": 0.56855211776062,
+        "interior_top2_min": 0.3650097861813065,
+        "interior_neff_min": 4.608981613815931,
+        "interior_neff_max": 6.84202840337216,
+        "strong_two_mode_concentration": false
+      },
+      "coarse_binned_concentration": {
+        "interior_top2_max": 0.6218616858046295,
+        "interior_top2_min": 0.3804498880976627,
+        "interior_neff_min": 3.8664733151000075,
+        "interior_neff_max": 6.9329245410384654,
+        "strong_two_mode_concentration": false
+      },
+      "binned_inversion_pairs_native_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "binned_inversion_pairs_coarse_interior": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "binned_inversion_pairs_common_native_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_trim_concentration": {
+        "registered": {
+          "interior_top2_max": 0.6218616857480823,
+          "interior_top2_min": 0.38044988813800645,
+          "interior_neff_min": 3.8664733155309077,
+          "interior_neff_max": 6.932924540515817,
+          "strong_two_mode_concentration": false
+        },
+        "inner_trim": {
+          "interior_top2_max": 0.5963520024902238,
+          "interior_top2_min": 0.3809830118468543,
+          "interior_neff_min": 3.9307585738070143,
+          "interior_neff_max": 6.7771076110988515,
+          "strong_two_mode_concentration": false
+        },
+        "outer_trim": {
+          "interior_top2_max": 0.499388807834487,
+          "interior_top2_min": 0.31990876743605234,
+          "interior_neff_min": 5.166590606797799,
+          "interior_neff_max": 7.23289219357173,
+          "strong_two_mode_concentration": false
+        },
+        "both_trim": {
+          "interior_top2_max": 0.5769105777321235,
+          "interior_top2_min": 0.31719149055561424,
+          "interior_neff_min": 4.415573755590432,
+          "interior_neff_max": 7.2547819921823,
+          "strong_two_mode_concentration": false
+        }
+      },
+      "concentration_resolution_stable": false,
+      "concentration_boundary_supported": false,
+      "weisz_like_concentration_candidate": false,
+      "pencil_symmetry_error_A": 0.0,
+      "pencil_symmetry_error_B": 0.0
+    },
+    "1000": {
+      "min_K_registered": 8.282124160140126e-06,
+      "omega2": [
+        23.074086078546948,
+        27.390793856086972,
+        33.14519718641904,
+        38.30302654450447,
+        42.716078226629314,
+        46.16957074584842,
+        49.15936292960775,
+        50.80038287053878,
+        52.59023003235615,
+        53.93220919647643,
+        55.70971278596551,
+        56.946555644084434,
+        58.74992970945912,
+        59.836834026909365
+      ],
+      "positive_mode_count": 14,
+      "finite_box_tachyon_present": false,
+      "omega2_resolution_max_relative_error": 0.019717356352721416,
+      "min_native_coarse_K_overlap": 0.9963488189437613,
+      "bulk_resolution_converged": true,
+      "robust_inversion_pairs_native": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_coarse": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "robust_inversion_pairs_common_to_both_resolutions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_sensitivity": {
+        "registered": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.019717356353508887
+        },
+        "inner_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.01991670583991664
+        },
+        "outer_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.2814445632591363
+        },
+        "both_trim": {
+          "positive_modes_compared": 8,
+          "max_relative_shift": 0.3025757387598469
+        }
+      },
+      "ir_boundary_sensitive": true,
+      "ipr_first_modes": [
+        6.82383162839328,
+        7.720484568211199,
+        4.020073768845614,
+        4.011772474570885,
+        3.290846117623194,
+        2.7291821261201594,
+        1.9777970999039862,
+        1.7435481029524702
+      ],
+      "binned_top2_fraction_minmax": [
+        0.38197861762474294,
+        0.898395718383999
+      ],
+      "binned_effective_mode_count_minmax": [
+        1.401828795575757,
+        6.625552504749972
+      ],
+      "native_binned_concentration": {
+        "interior_top2_max": 0.898395718383999,
+        "interior_top2_min": 0.38197861762474294,
+        "interior_neff_min": 1.401828795575757,
+        "interior_neff_max": 6.625552504749972,
+        "strong_two_mode_concentration": true
+      },
+      "coarse_binned_concentration": {
+        "interior_top2_max": 0.9054130499529991,
+        "interior_top2_min": 0.3853066935657397,
+        "interior_neff_min": 1.4805709251366341,
+        "interior_neff_max": 6.68618751797228,
+        "strong_two_mode_concentration": true
+      },
+      "binned_inversion_pairs_native_interior": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "binned_inversion_pairs_coarse_interior": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "binned_inversion_pairs_common_native_coarse": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "boundary_trim_concentration": {
+        "registered": {
+          "interior_top2_max": 0.9054130499624173,
+          "interior_top2_min": 0.3853066935724714,
+          "interior_neff_min": 1.4805709252498869,
+          "interior_neff_max": 6.6861875180728125,
+          "strong_two_mode_concentration": true
+        },
+        "inner_trim": {
+          "interior_top2_max": 0.8933233070619866,
+          "interior_top2_min": 0.4266241960021716,
+          "interior_neff_min": 1.390504455778741,
+          "interior_neff_max": 6.310089362705123,
+          "strong_two_mode_concentration": true
+        },
+        "outer_trim": {
+          "interior_top2_max": 0.874319745952031,
+          "interior_top2_min": 0.40522919917582356,
+          "interior_neff_min": 2.012683156315565,
+          "interior_neff_max": 6.483549127135357,
+          "strong_two_mode_concentration": true
+        },
+        "both_trim": {
+          "interior_top2_max": 0.8662944794610897,
+          "interior_top2_min": 0.42126901595844346,
+          "interior_neff_min": 2.0162835729692263,
+          "interior_neff_max": 6.281717744595767,
+          "strong_two_mode_concentration": true
+        }
+      },
+      "concentration_resolution_stable": true,
+      "concentration_boundary_supported": true,
+      "weisz_like_concentration_candidate": true,
+      "pencil_symmetry_error_A": 0.0,
+      "pencil_symmetry_error_B": 0.0
+    }
+  },
+  "interpretation_guard": "A Weisz-style physical spectral-selection claim requires a certified center-to-infinity direct-global KRGM eigenproblem and boundary-condition-stable residues. Finite-box reorderings are candidate structure only."
+}
