@@ -1,0 +1,87 @@
+{
+  "status": "CORE_QUARTIC_G5ZERO_ACTION_REGEN_COMPLETE",
+  "domain": "0.715 <= u < 50 (deep full-G5 subcore excluded)",
+  "rows": 2981,
+  "u_range": [
+    0.7150604461150322,
+    49.96146384683116
+  ],
+  "source_hashes": {
+    "action_g4xx": "5cb6d2701f28ee0c7bf18361784ebb2f4ff105360b95cd81fde48dde4015b74b",
+    "f2_c2_target": "253cfe04a924837da97e41b4d2dbbdb515079e86f11965ba5e93c443ac61a73b"
+  },
+  "edge_primitive_scaled_errors": {
+    "F_tensor": 1.503241975342236e-13,
+    "G_tensor": 1.504352198367087e-13,
+    "H_tensor": 1.504352198367087e-13,
+    "a1": 2.559064071760986e-13,
+    "c4": 2.0793448851641472e-07
+  },
+  "G2XX_control": {
+    "min": -5.176345106560656e+16,
+    "max": 0.0,
+    "max_abs": 5.176345106560656e+16,
+    "reachable_fraction": 0.8846024823884603,
+    "unresolved_rows": 344,
+    "note": "c2 is supplied as the documented selected primitive for this diagnostic. Rows where dc2/dG2XX vanishes are not claimed action-normal-jet reconstructed."
+  },
+  "exact_invariant_min": {
+    "F": 1.0,
+    "G": 0.999381366070252,
+    "H": 0.999381366070252,
+    "K_scalar": -0.05586576414199351
+  },
+  "finite_L_health": {
+    "6": {
+      "min_K": -1205057.361865948,
+      "u_at_min_K": 3.322844323058915,
+      "negative_K_rows": 121,
+      "min_cr2": 0.013621425564564497,
+      "negative_cr2_rows": 0
+    },
+    "12": {
+      "min_K": -1213056.3801832395,
+      "u_at_min_K": 3.322844323058915,
+      "negative_K_rows": 54,
+      "min_cr2": 0.01385401842395101,
+      "negative_cr2_rows": 0
+    },
+    "20": {
+      "min_K": -1215430.7890576976,
+      "u_at_min_K": 3.322844323058915,
+      "negative_K_rows": 54,
+      "min_cr2": 0.013890591090331583,
+      "negative_cr2_rows": 0
+    },
+    "42": {
+      "min_K": -1217063.6271063413,
+      "u_at_min_K": 3.322844323058915,
+      "negative_K_rows": 54,
+      "min_cr2": 0.013904433973355945,
+      "negative_cr2_rows": 0
+    },
+    "110": {
+      "min_K": -1217904.7874886089,
+      "u_at_min_K": 3.322844323058915,
+      "negative_K_rows": 54,
+      "min_cr2": 0.01390749390188935,
+      "negative_cr2_rows": 0
+    },
+    "420": {
+      "min_K": -1218271.7245840607,
+      "u_at_min_K": 3.322844323058915,
+      "negative_K_rows": 54,
+      "min_cr2": 0.013907892572990022,
+      "negative_cr2_rows": 0
+    },
+    "1000": {
+      "min_K": -1218346.0159058366,
+      "u_at_min_K": 3.322844323058915,
+      "negative_K_rows": 54,
+      "min_cr2": 0.013907901553506864,
+      "negative_cr2_rows": 0
+    }
+  },
+  "all_finite_L_health_pass": false,
+  "guard": "This is a quartic G5=0 primitive-emission diagnostic. F,G,H,a1,c4 are direct action-derived; c2 is the selected primitive and is action-normal-jet certified only where dc2/dG2XX is nonzero. u>=50 requires the separate full-G5 bridge."
+}

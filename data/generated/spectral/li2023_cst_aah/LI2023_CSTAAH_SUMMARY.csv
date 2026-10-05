@@ -1,0 +1,4 @@
+stage,N,sigma,lambda,jc,metric,value
+fig2,4181,1.0,1.5,3135,frac_localized,0.748610
+fig2,4181,1.0,1.5,3135,btilde_loc,0.051341
+fig2,4181,1.0,1.5,3135,btilde_ext,0.460148

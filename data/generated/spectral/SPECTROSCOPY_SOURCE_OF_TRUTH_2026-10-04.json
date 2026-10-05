@@ -1,0 +1,32 @@
+{
+  "status": "SPECTROSCOPY_SOURCE_OF_TRUTH_PASS",
+  "required": {
+    "tools/run_ssz_fixed_observable_spectroscopy_v3.py": {
+      "exists": true,
+      "sha256": "6e2d368c4b25ad7221073313799fa8a50f32f9f2a2bfa9396de10c1bf93640ad"
+    },
+    "tools/run_ssz_local_resolvent_spectra.py": {
+      "exists": true,
+      "sha256": "69cf8d335fc7c2ede0678ae4022ea570476500ca643202d6b49e0b3e9205d31d"
+    },
+    "tools/reproduce_weisz_1978_spectra.py": {
+      "exists": true,
+      "sha256": "ebd298a7be1ac338203a70666b94116deaf1fb8ecb6aaee9e08fda0c4b574559"
+    },
+    "tools/compare_ssz_weisz1978_selectivity.py": {
+      "exists": true,
+      "sha256": "086b54711aa470aae93ee8f8c4d5bd6943f20b44c6bc2f6fd2b647b405056b3d"
+    },
+    "tools/run_global_coupled_qnm_diagnostic.py": {
+      "exists": true,
+      "sha256": "2aa34b3085558942ed68b21ec57a9cd02f51139e0933ce6e43abfb893b99e983"
+    },
+    "data/generated/qnm/GLOBAL_QNM_BLOCKER_LOCALIZATION_2026-10-02.json": {
+      "exists": true,
+      "sha256": "ba1b651b7236e48eded0e20af023c9000540970d359dcf3c576b37b91da08aac"
+    }
+  },
+  "physical_qnm_claim_allowed": false,
+  "current_qnm_blocker": "The previous archived positive core K_scalar gate is not reproducible from the archived primitive profiles using the current/legacy Kase-Tsujikawa P1 construction and is contradicted by a stencil-robust negative pocket. This does not yet prove a physical P5 core ghost because the archived oracle provenance is incomplete and the full-G5 subcore/action member distinction remains unresolved. It does invalidate using the archived positive K_scalar column alone as the gate for a physical coupled QNM spectrum.",
+  "next_target": "recover or reconstruct the archived positive K_scalar/P1 oracle provenance; independently derive P1/K_scalar from the covariant quartic action jets, then decide whether the x~0.30 pocket is physical or an obsolete-oracle inconsistency before full-G5 subcore and global QNM certification"
+}

@@ -1,0 +1,158 @@
+{
+ "source": "PhysRevB.108.094209 (Li, Yu, Zhu, Li 2023)",
+ "phi": 0.6180339887498949,
+ "stages": {
+  "fig1_jc_check": {
+   "N": 2584,
+   "sigma": 1.0,
+   "lambda": 1.5,
+   "jc_computed": 1937,
+   "jc_paper": 1937,
+   "match": true
+  },
+  "fig2_theta_averaged": {
+   "4181": {
+    "n_theta": 100,
+    "jc": 3135,
+    "frac_states_localized_region": 0.7486103802917963,
+    "btilde_localized_median": 0.05134123645575094,
+    "btilde_extended_median": 0.4601476471480421,
+    "btilde_extended_q25_q75": [
+     0.3788871755827554,
+     0.5329609722478277
+    ],
+    "ipr_localized_median": 0.6517469367700559
+   }
+  },
+  "flat_aah_control": {
+   "extended_expected": {
+    "lambda": 1.0,
+    "ipr_median": 0.0007685908935563453,
+    "btilde_median": 0.9126722744184121
+   },
+   "localized_expected": {
+    "lambda": 3.0,
+    "ipr_median": 0.49285794327225513,
+    "btilde_median": 0.0900503807321524
+   }
+  },
+  "wavepacket_dynamics": {
+   "flat_lambda0": {
+    "sigma": 0.0,
+    "lambda": 0.0,
+    "j0": 1000,
+    "trajectory": [
+     {
+      "t": 0.0,
+      "participation": 125.33141373155011,
+      "centroid": 999.9999999999999
+     },
+     {
+      "t": 50.0,
+      "participation": 125.33142375505294,
+      "centroid": 1099.990000499983
+     },
+     {
+      "t": 200.0,
+      "participation": 125.33157410692257,
+      "centroid": 1399.9600019999327
+     },
+     {
+      "t": 1000.0,
+      "participation": 125.33542268524158,
+      "centroid": 2170.1999900003334
+     }
+    ]
+   },
+   "cst_lambda0": {
+    "sigma": 1.0,
+    "lambda": 0.0,
+    "j0": 1000,
+    "trajectory": [
+     {
+      "t": 0.0,
+      "participation": 125.33141373155011,
+      "centroid": 999.9999999999999
+     },
+     {
+      "t": 50.0,
+      "participation": 130.27800080296547,
+      "centroid": 1039.4502440031588
+     },
+     {
+      "t": 200.0,
+      "participation": 146.32064277114563,
+      "centroid": 1167.393686928369
+     },
+     {
+      "t": 1000.0,
+      "participation": 271.83551992380325,
+      "centroid": 2168.389167810347
+     }
+    ]
+   },
+   "cst_ext_j0_2300": {
+    "sigma": 1.0,
+    "lambda": 1.5,
+    "j0": 2300,
+    "trajectory": [
+     {
+      "t": 0.0,
+      "participation": 125.33141373155006,
+      "centroid": 2299.999999999999
+     },
+     {
+      "t": 50.0,
+      "participation": 113.83379755193627,
+      "centroid": 2307.9428146087494
+     },
+     {
+      "t": 200.0,
+      "participation": 150.48927178511164,
+      "centroid": 2342.925583806589
+     },
+     {
+      "t": 1000.0,
+      "participation": 74.29287063640965,
+      "centroid": 2296.2764461512515
+     }
+    ]
+   },
+   "cst_loc_j0_1000": {
+    "sigma": 1.0,
+    "lambda": 1.5,
+    "j0": 1000,
+    "trajectory": [
+     {
+      "t": 0.0,
+      "participation": 125.33141373155011,
+      "centroid": 999.9999999999999
+     },
+     {
+      "t": 50.0,
+      "participation": 87.32763435014421,
+      "centroid": 1000.0339781703669
+     },
+     {
+      "t": 200.0,
+      "participation": 81.22295316836208,
+      "centroid": 999.9964461502444
+     },
+     {
+      "t": 1000.0,
+      "participation": 85.68824492939213,
+      "centroid": 999.9775687432602
+     }
+    ]
+   }
+  }
+ },
+ "gates": {
+  "jc_matches_paper_fig1": true,
+  "flat_extended_has_high_btilde": true,
+  "flat_localized_has_low_btilde": true,
+  "cst_localized_region_btilde_below_extended": true,
+  "wavepacket_frozen_near_horizon_cst": false
+ },
+ "all_gates_pass": false
+}
