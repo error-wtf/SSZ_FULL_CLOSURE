@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "6a630377a245cfa8c45cee55cb0a4c2fd1c0283a011c159a1921c441f69b6e2e"
+      "sha256": "514f668584a87f491c37bc70a462ff8e81ecf8a7f345810a286c561628e6c24c"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "bcc9bc3e0ddafafb2bb7473292439deee45af97458b226c8bba852501d3f35ce"
+      "sha256": "485b6f96602a66d9e3520262ccf3d7f81ed990ef9a706e42bea0900fb92c7c70"
     },
     {
       "path": "Makefile",
@@ -3404,8 +3404,8 @@
     },
     {
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_REPRODUCTION.json",
-      "size_bytes": 3410,
-      "sha256": "117b76bc80861c32cac9cb4be8d77d471bcf36273a0da2b52544b5576d86d587"
+      "size_bytes": 3486,
+      "sha256": "5a895b22e44d45a5af90f1ca9aeef25a3011f2119f69baaa26881df15355fea4"
     },
     {
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_SUMMARY.csv",
@@ -3886,6 +3886,11 @@
       "path": "docs/INTEGRATION.md",
       "size_bytes": 2326,
       "sha256": "d97759e2e0be205bf1a83a4137c423164309ecfa240429f527c76075eeb82db0"
+    },
+    {
+      "path": "docs/KNOWN_PLATFORM_SENSITIVITY.md",
+      "size_bytes": 1741,
+      "sha256": "72624065e00b7190805bc4e29dadc407c2b28e451e3d9ca57a45366a1f42f546"
     },
     {
       "path": "docs/N1_N4_LUMINAL_RESOLVE_SPEC.md",
