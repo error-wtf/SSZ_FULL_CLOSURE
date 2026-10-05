@@ -4,7 +4,6 @@
  "scope_note": "Block-level certification. A1 (kinetic positivity) and A6 (localization determinacy) are NOT_EVALUABLE at this level and require a per-mode detailed run; verdicts reflect that.",
  "certificates": [
   {
-   "version": "MODE_CERTIFICATE_V1",
    "L": 6,
    "mode_index": 0,
    "axes": {
@@ -53,10 +52,10 @@
     }
    },
    "verdict": "NOT_EVALUABLE_V1",
-   "failed_axes": []
+   "failed_axes": [],
+   "certificate_version": "MODE_CERTIFICATE_V1"
   },
   {
-   "version": "MODE_CERTIFICATE_V1",
    "L": 12,
    "mode_index": 0,
    "axes": {
@@ -105,10 +104,10 @@
     }
    },
    "verdict": "NOT_EVALUABLE_V1",
-   "failed_axes": []
+   "failed_axes": [],
+   "certificate_version": "MODE_CERTIFICATE_V1"
   },
   {
-   "version": "MODE_CERTIFICATE_V1",
    "L": 20,
    "mode_index": 0,
    "axes": {
@@ -157,10 +156,10 @@
     }
    },
    "verdict": "NOT_EVALUABLE_V1",
-   "failed_axes": []
+   "failed_axes": [],
+   "certificate_version": "MODE_CERTIFICATE_V1"
   },
   {
-   "version": "MODE_CERTIFICATE_V1",
    "L": 42,
    "mode_index": 0,
    "axes": {
@@ -209,10 +208,10 @@
     }
    },
    "verdict": "NOT_EVALUABLE_V1",
-   "failed_axes": []
+   "failed_axes": [],
+   "certificate_version": "MODE_CERTIFICATE_V1"
   },
   {
-   "version": "MODE_CERTIFICATE_V1",
    "L": 110,
    "mode_index": 0,
    "axes": {
@@ -261,10 +260,10 @@
     }
    },
    "verdict": "NOT_EVALUABLE_V1",
-   "failed_axes": []
+   "failed_axes": [],
+   "certificate_version": "MODE_CERTIFICATE_V1"
   },
   {
-   "version": "MODE_CERTIFICATE_V1",
    "L": 420,
    "mode_index": 0,
    "axes": {
@@ -315,10 +314,10 @@
    "verdict": "REJECTED_V1",
    "failed_axes": [
     "A3"
-   ]
+   ],
+   "certificate_version": "MODE_CERTIFICATE_V1"
   },
   {
-   "version": "MODE_CERTIFICATE_V1",
    "L": 1000,
    "mode_index": 0,
    "axes": {
@@ -369,7 +368,8 @@
    "verdict": "REJECTED_V1",
    "failed_axes": [
     "A3"
-   ]
+   ],
+   "certificate_version": "MODE_CERTIFICATE_V1"
   }
  ],
  "summary": {

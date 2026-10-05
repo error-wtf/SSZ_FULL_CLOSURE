@@ -15,25 +15,25 @@
     "n_theta": 100,
     "jc": 3135,
     "frac_states_localized_region": 0.7486103802917963,
-    "btilde_localized_median": 0.05134123645575094,
-    "btilde_extended_median": 0.4601476471480421,
+    "btilde_localized_median": 0.051341236455751005,
+    "btilde_extended_median": 0.46014764714804235,
     "btilde_extended_q25_q75": [
-     0.3788871755827554,
-     0.5329609722478277
+     0.37888717558275564,
+     0.5329609722478283
     ],
-    "ipr_localized_median": 0.6517469367700559
+    "ipr_localized_median": 0.6517469367700556
    }
   },
   "flat_aah_control": {
    "extended_expected": {
     "lambda": 1.0,
-    "ipr_median": 0.0007685908935563453,
-    "btilde_median": 0.9126722744184121
+    "ipr_median": 0.0007685908935563415,
+    "btilde_median": 0.9126722744184128
    },
    "localized_expected": {
     "lambda": 3.0,
-    "ipr_median": 0.49285794327225513,
-    "btilde_median": 0.0900503807321524
+    "ipr_median": 0.4928579432722551,
+    "btilde_median": 0.09005038073215241
    }
   },
   "wavepacket_dynamics": {
@@ -44,23 +44,23 @@
     "trajectory": [
      {
       "t": 0.0,
-      "participation": 125.33141373155011,
-      "centroid": 999.9999999999999
+      "participation": 125.33141373155003,
+      "centroid": 1000.0
      },
      {
       "t": 50.0,
-      "participation": 125.33142375505294,
-      "centroid": 1099.990000499983
+      "participation": 125.33142375505288,
+      "centroid": 1099.9900004999834
      },
      {
       "t": 200.0,
-      "participation": 125.33157410692257,
-      "centroid": 1399.9600019999327
+      "participation": 125.33157410692246,
+      "centroid": 1399.9600019999332
      },
      {
       "t": 1000.0,
-      "participation": 125.33542268524158,
-      "centroid": 2170.1999900003334
+      "participation": 125.33542268524154,
+      "centroid": 2170.199990000334
      }
     ]
    },
@@ -71,22 +71,22 @@
     "trajectory": [
      {
       "t": 0.0,
-      "participation": 125.33141373155011,
-      "centroid": 999.9999999999999
+      "participation": 125.33141373155003,
+      "centroid": 1000.0
      },
      {
       "t": 50.0,
-      "participation": 130.27800080296547,
-      "centroid": 1039.4502440031588
+      "participation": 130.27800080296538,
+      "centroid": 1039.4502440031592
      },
      {
       "t": 200.0,
       "participation": 146.32064277114563,
-      "centroid": 1167.393686928369
+      "centroid": 1167.3936869283689
      },
      {
       "t": 1000.0,
-      "participation": 271.83551992380325,
+      "participation": 271.8355199238032,
       "centroid": 2168.389167810347
      }
     ]
@@ -98,23 +98,23 @@
     "trajectory": [
      {
       "t": 0.0,
-      "participation": 125.33141373155006,
-      "centroid": 2299.999999999999
+      "participation": 125.33141373154994,
+      "centroid": 2300.0
      },
      {
       "t": 50.0,
-      "participation": 113.83379755193627,
-      "centroid": 2307.9428146087494
+      "participation": 113.83379755193005,
+      "centroid": 2307.9428146088076
      },
      {
       "t": 200.0,
-      "participation": 150.48927178511164,
-      "centroid": 2342.925583806589
+      "participation": 150.48927178512218,
+      "centroid": 2342.9255838065806
      },
      {
       "t": 1000.0,
-      "participation": 74.29287063640965,
-      "centroid": 2296.2764461512515
+      "participation": 74.29287063638033,
+      "centroid": 2296.2764461514716
      }
     ]
    },
@@ -125,23 +125,23 @@
     "trajectory": [
      {
       "t": 0.0,
-      "participation": 125.33141373155011,
-      "centroid": 999.9999999999999
+      "participation": 125.33141373155003,
+      "centroid": 1000.0
      },
      {
       "t": 50.0,
-      "participation": 87.32763435014421,
-      "centroid": 1000.0339781703669
+      "participation": 87.32763435014394,
+      "centroid": 1000.033978170364
      },
      {
       "t": 200.0,
-      "participation": 81.22295316836208,
-      "centroid": 999.9964461502444
+      "participation": 81.22295316836296,
+      "centroid": 999.9964461502472
      },
      {
       "t": 1000.0,
-      "participation": 85.68824492940274,
-      "centroid": 999.9775687430181
+      "participation": 85.68824492939036,
+      "centroid": 999.9775687432438
      }
     ]
    }
@@ -155,6 +155,5 @@
   "wavepacket_localized_region_centroid_frozen_and_localizes": true,
   "wavepacket_extended_region_localizes_less": true
  },
- "all_gates_pass": true,
- "gate_revision_note": "2026-10-05: gate 6 re-evaluated from the SAME frozen trajectory data \u2014 class separation is centroid MOBILITY (ext moves, loc frozen at exactly 1000.000), not final participation (AAH modulation lowers P in the extended region without freezing).  No re-run needed; trajectories unchanged."
+ "all_gates_pass": true
 }

@@ -57,12 +57,16 @@ def test_blindness_assert_fires_on_observed_files(tmp_path):
 
 def test_predicted_catalog_uses_frozen_prior(tmp_path):
     prior = FrozenMassPrior("unit", 10.0, 1.0, "t")
-    rows = [{"omega_bar_re": 0.1, "Z_q": 0.5, "ipr": 0.01,
-             "localization_class": "EXTENDED"}]
-    cat = build_predicted_catalog(rows, prior)
-    assert cat["n_modes"] == 1
+    rows = [{"omega_bar_re": 0.1, "observable": "q1", "u": 0.65, "L": 6,
+             "omega2": 1.2, "ipr": 0.01, "localization_class": "EXTENDED"}]
+    cat = build_predicted_catalog(
+        rows, prior, member_hash="0" * 64,
+        healthy_window={"u_min": 0.6, "u_max": 0.7, "L_values": [6],
+                        "controls_all_pass": True})
+    assert len(cat["modes"]) == 1
     assert cat["modes"][0]["f_hz"] == pytest.approx(
         0.1 * cat["unit_conversion_hz_per_omega_bar"])
+    assert cat["frozen"] is False  # freeze is an explicit separate step
 
 
 # ---------- matching ----------

@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "600efbeb8f9f887526df70512a81f72d22462d8fa0d64e8bc9916500e70ad014"
+      "sha256": "df890035627018e5817b55986a46825bcac8c92b3eeeaa37a75264ff17fd6518"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "edeb955eeed9a357f9795f54afcee8fb713f233828e1dff9b4765eaac7ad4260"
+      "sha256": "1e1404e2d1b72ad88f70e461bd3b446e6fea04f6470a2e439893d502286d5635"
     },
     {
       "path": "Makefile",
@@ -3394,8 +3394,8 @@
     },
     {
       "path": "data/generated/spectral/MODE_CERTIFICATES_V1.json",
-      "size_bytes": 8082,
-      "sha256": "b2b3e5288ca68126fb1288242739bbada24516d8d9a0efb7724c2d42291098fc"
+      "size_bytes": 8166,
+      "sha256": "e6948f1b7a6106063549612456199484e18992f89ea152ad36880912b02a69f8"
     },
     {
       "path": "data/generated/spectral/SPECTROSCOPY_SOURCE_OF_TRUTH_2026-10-04.json",
@@ -3409,8 +3409,8 @@
     },
     {
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_REPRODUCTION.json",
-      "size_bytes": 3804,
-      "sha256": "7c36e0eccc1fa2f7bb61ec8c52d66a1e4f5e3abd8076a56d7016f24ae7397e1a"
+      "size_bytes": 3443,
+      "sha256": "0e3bd65029c6188ee9a6f1be48ab634a97a022613fee99cdface3d92ea41cecf"
     },
     {
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_SUMMARY.csv",
@@ -5229,8 +5229,8 @@
     },
     {
       "path": "src/ssz_p5/qnm/mode_certificate.py",
-      "size_bytes": 5769,
-      "sha256": "bcf93d1f2dcbc3f3e5dd59d10dd294eecbf3bada9d50fe8c4ceb712215aed5bb"
+      "size_bytes": 5913,
+      "sha256": "c801837d3407a0c36e8d0b4f1a79804216a0fb8a763669b46db152f5ad5783cd"
     },
     {
       "path": "src/ssz_p5/qnm/native_window.py",
@@ -5314,8 +5314,8 @@
     },
     {
       "path": "src/ssz_p5/spectroscopy/theory_catalog.py",
-      "size_bytes": 1716,
-      "sha256": "043e6be42fe0b1ab01e42effa49253c475e07b3b1a28b14872de4125f4bae5d3"
+      "size_bytes": 4126,
+      "sha256": "e69f515584af54ab707128ddc6a4a824a1248805f70475fc10ccae8cf492749f"
     },
     {
       "path": "src/ssz_p5/stability/__init__.py",
@@ -5573,6 +5573,11 @@
       "sha256": "2b20ac034e76abc20c67137074ae6c4e44b02b6f609185f63b0f4738ffe29b6c"
     },
     {
+      "path": "tests/unit/test_bridge_catalog_schemas.py",
+      "size_bytes": 2585,
+      "sha256": "c3eb244c5d8eb834b2788af722c611346c50f3094ca9d2f72915f385826cb9b8"
+    },
+    {
       "path": "tests/unit/test_central_action.py",
       "size_bytes": 2701,
       "sha256": "72bc8a4dc6c8b9602616884a07692192d30d22a073195daf36644aa354ec5af4"
@@ -5678,6 +5683,11 @@
       "sha256": "f5209a0f8a9c1f4fabde6f3270865c3d1af5f86608126a0df47b7c05bc6c562a"
     },
     {
+      "path": "tests/unit/test_mode_certificate_schema.py",
+      "size_bytes": 1691,
+      "sha256": "1dfba7f12f207a800ffdeae59ef0912d0d47511176684b67f0ce050cb12561c7"
+    },
+    {
       "path": "tests/unit/test_native_window_spectroscopy.py",
       "size_bytes": 1013,
       "sha256": "ff8eabd127555758019aa717bf9fd52a73b1da8c35960f9a15b4564c31b9e5f8"
@@ -5719,8 +5729,8 @@
     },
     {
       "path": "tests/unit/test_spectroscopy_bridge.py",
-      "size_bytes": 3498,
-      "sha256": "58349df8b24e878ffbd2fb10917d6d0933c88fae6600efa75abaad547fc935da"
+      "size_bytes": 3768,
+      "sha256": "030990de0dda994fa401f097018b4923233df3015310ab7d7af80c560201c467"
     },
     {
       "path": "tests/unit/test_strong_field_transition_contract.py",
@@ -6304,8 +6314,8 @@
     },
     {
       "path": "tools/run_mode_certificates.py",
-      "size_bytes": 4383,
-      "sha256": "4e67e8e01fd9ef6bb1a9727fcc2fcfde1103a9239514acb6d3c17c4e0bdcdc29"
+      "size_bytes": 4627,
+      "sha256": "4733246f12a687d326cdb7ec0de8fb0a7da27525463dc985df88ce0094739c5f"
     },
     {
       "path": "tools/run_native_window_spectroscopy.py",

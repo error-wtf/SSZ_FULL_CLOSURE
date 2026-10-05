@@ -77,6 +77,13 @@ def main() -> int:
     for _, block in sorted(v3["per_L"].items(), key=lambda kv: int(kv[0])):
         certs.append(block_to_certificate(block).to_json())
 
+    # Schema-validate each certificate against MODE_CERTIFICATE.schema.json
+    import jsonschema
+
+    schema = json.loads((ROOT / "schemas/MODE_CERTIFICATE.schema.json").read_text())
+    for c in certs:
+        jsonschema.validate(c, schema)
+
     report = {
         "certificate_version": "MODE_CERTIFICATE_V1",
         "source": str(args.input.relative_to(ROOT)),

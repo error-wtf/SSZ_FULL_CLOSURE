@@ -55,7 +55,10 @@ class ModeCertificate:
     failed_axes: list[str] = field(default_factory=list)
 
     def to_json(self) -> dict:
-        return asdict(self)
+        d = asdict(self)
+        # schema-conformant field name (schemas/MODE_CERTIFICATE.schema.json)
+        d["certificate_version"] = d.pop("version")
+        return d
 
 
 def _check(name: str, ok: bool, detail: dict) -> tuple[bool, dict]:
