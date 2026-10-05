@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 873,
-      "sha256": "e7dd0d56448e0e54d6fe036751c6a9fab0d35d43cdb5a24fb97735fea340218b"
+      "size_bytes": 1249,
+      "sha256": "88680121312cdd925d2e54594c87097e773708f1480c4e9749c376d2db9fc716"
     },
     {
       "path": ".github/workflows/core-action-source-schema-probe.yml",
@@ -2306,6 +2306,11 @@
       "path": "data/certificates/SSZ_P5_FULL_CLOSURE_GATE_LEDGER_2026-09-16.csv",
       "size_bytes": 23845,
       "sha256": "f9a9f0b5984c39f4eb874e13e2e61b4b96cf194d950cdf4952e89bb47995d964"
+    },
+    {
+      "path": "data/diagnostic/EXPECTED_STRICT_PIPELINE_FAILURES.json",
+      "size_bytes": 952,
+      "sha256": "dd79b1b4fa6a757649412ef5c353c488d8ce85af98b52c24b6ccb62fb7cf29e0"
     },
     {
       "path": "data/diagnostic/FROZEN_ONSHELL_IDENTITY.json",
@@ -5971,6 +5976,11 @@
       "path": "tools/build_transition_horndeski_dense_response.py",
       "size_bytes": 2755,
       "sha256": "2febd0187690830e88eb24b42ad3c1d977528abbe3b8e191dc8a3eab0d2bd99e"
+    },
+    {
+      "path": "tools/check_strict_pipeline_vs_expected.py",
+      "size_bytes": 1662,
+      "sha256": "640e792026bfe35105c59b79933919e0ae2578f03f01842b3d8b54aa96c4a5e7"
     },
     {
       "path": "tools/codex_start.sh",
