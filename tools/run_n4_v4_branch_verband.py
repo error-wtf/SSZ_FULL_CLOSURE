@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "tools"))
 
-import importlib.util as _ilu
+import importlib.util as _ilu  # noqa: E402
 
 _spec = _ilu.spec_from_file_location(
     "v4s", ROOT / "tools" / "run_luminal_background_solve_v4.py")
