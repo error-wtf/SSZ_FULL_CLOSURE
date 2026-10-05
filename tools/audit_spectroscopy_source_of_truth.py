@@ -28,7 +28,6 @@ out={
  "next_target":status.get("next_target"),
 }
 p=ROOT/"data/generated/spectral/SPECTROSCOPY_SOURCE_OF_TRUTH_2026-10-04.json"
-p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(out,indent=2)+"
-")
+p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(out,indent=2)+"\n")
 print(json.dumps(out,indent=2))
 raise SystemExit(0 if ok else 2)

@@ -192,7 +192,7 @@ def match_modes_by_kinetic_overlap(coarse, native, K_native):
     )
     rows, cols = linear_sum_assignment(-overlap)
     records = []
-    for i, j in zip(rows, cols):
+    for i, j in zip(rows, cols, strict=True):
         err = abs(float(coarse.omega2[i]) - float(native.omega2[j])) / max(
             1.0, abs(float(native.omega2[j]))
         )
