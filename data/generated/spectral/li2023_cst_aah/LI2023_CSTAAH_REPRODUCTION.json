@@ -140,8 +140,8 @@
      },
      {
       "t": 1000.0,
-      "participation": 85.68824492939213,
-      "centroid": 999.9775687432602
+      "participation": 85.68824492940274,
+      "centroid": 999.9775687430181
      }
     ]
    }
@@ -152,7 +152,8 @@
   "flat_extended_has_high_btilde": true,
   "flat_localized_has_low_btilde": true,
   "cst_localized_region_btilde_below_extended": true,
-  "wavepacket_frozen_near_horizon_cst": false
+  "wavepacket_localized_region_centroid_frozen_and_localizes": true,
+  "wavepacket_extended_region_localizes_less": false
  },
  "all_gates_pass": false
 }
