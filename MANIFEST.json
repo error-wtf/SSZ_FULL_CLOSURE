@@ -5193,6 +5193,11 @@
       "sha256": "2343feb07ff951048dbdf4d0158200e2db79213fe8f8e72e06667588af033ab3"
     },
     {
+      "path": "src/ssz_p5/qnm/localization_diagnostics.py",
+      "size_bytes": 4379,
+      "sha256": "f8346133ae213a7413e96aad50120ed5d42ebae84ecfe75fbe49eecaa02d5ac3"
+    },
+    {
       "path": "src/ssz_p5/qnm/native_window.py",
       "size_bytes": 8541,
       "sha256": "fc15b65c5f962a17c450d8c39b0f584607498c94d5abb58fce596f754c660801"
@@ -5601,6 +5606,11 @@
       "path": "tests/unit/test_light_ring_electric.py",
       "size_bytes": 781,
       "sha256": "8925727c7ff14bcc572dd5c238794206e958715cb7572213d5c80063702b66a6"
+    },
+    {
+      "path": "tests/unit/test_localization_diagnostics.py",
+      "size_bytes": 2011,
+      "sha256": "da0e4fdc5fd99c6512b9e203b8c26c55bcb5da47f16d43c16805d239dd652727"
     },
     {
       "path": "tests/unit/test_lower_order_controls.py",
