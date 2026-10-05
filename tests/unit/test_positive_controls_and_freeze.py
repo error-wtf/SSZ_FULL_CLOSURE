@@ -3,14 +3,13 @@ import sys
 from pathlib import Path
 
 import numpy as np
-import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 
 from ssz_p5.observations.injection_recovery import (  # noqa: E402
-    injection_recovery_trial,
     inject_signal,
+    injection_recovery_trial,
     positive_control_battery,
     recover_frequency_and_width,
 )
