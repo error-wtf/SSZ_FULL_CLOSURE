@@ -1,0 +1,20 @@
+{
+  "audit": "F4_FINITE_L_HEALTH_V4_ATTEMPT_RECORD",
+  "status": "BLOCKED_FAIL_CLOSED",
+  "branch": {"a1": 0.5, "eps": -0.5, "ghost_free_side": true,
+             "K_on_branch": "K >= 0 everywhere (V4 N4 direct measurement)"},
+  "blocking_point": "reducer.canonical.validate_operator -> matrix symmetry: S",
+  "interpretation": {
+    "what_failed": "The 41-slot stream emitted from the V4 varying-G4 branch does not satisfy the producer-contract S-antisymmetry table at the checked tolerance when reduced via reduce_profile (L=6 first attempt).",
+    "why_this_is_honest": "B6 (physical BC layer) and B8 (sector coupling, V-sector dominance 0.54-0.75) are OPEN in QNM_SPECTROSCOPY_PATH_STATUS_V1.json by declared decision. The finite-L health clause of the H1 verdict therefore CANNOT be decided yet on V4 branches through the production reducer - exactly the declared state. No tolerance was adjusted and no validator was bypassed.",
+    "h1_status_consequence": "On ghost-free V4 branches (a1*eps < 0): K >= 0 everywhere is MEASURED, finite-L health is NOT_EVALUABLE pending B6/B8. Per the unchanged decision rules, H1_CONFIRMED requires BOTH - so H1 remains PENDING, not confirmed and not refuted.",
+    "h3_status_consequence": "Unchanged: H3_PHYSICAL_GHOST fired on a1*eps > 0 branches (K < 0 globally incl. pocket band) with measured, stencil-converged negatives."
+  },
+  "tool": "tools/run_finite_l_health_v4.py (kept in repo; refusal paths fail-closed: ghost-side refusal, non-reaching branch refusal, validator pass-through without tolerance changes)",
+  "declared_next_steps": [
+    "B6: physical BC layer on a healthy operator (unchanged blocker)",
+    "B8: sector coupling / V-sector dominance treatment",
+    "then F.4 rerun on V4 ghost-free branches (tool ready)"
+  ],
+  "generation": "written manually as an attempt record after the fail-closed exception; the machine-produced F4 JSON does not exist for this attempt (the run raised before writing), which is itself the honest record."
+}
