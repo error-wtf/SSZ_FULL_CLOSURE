@@ -1,0 +1,94 @@
+{
+ "all_pass": true,
+ "beta_test": 0.3,
+ "created_utc": "2026-10-05T01:29:33.339304+00:00",
+ "gates": [
+  {
+   "detail": {
+    "exact": 1.4285714285714286,
+    "t_plus": 1.4285714285714286
+   },
+   "gate": "G101_Sag",
+   "pass": true
+  },
+  {
+   "detail": {
+    "exact": 0.7692307692307692,
+    "t_minus": 0.7692307692307692
+   },
+   "gate": "G102_Sag",
+   "pass": true
+  },
+  {
+   "detail": {
+    "delta_t": 0.6593406593406594,
+    "exact": 0.6593406593406593
+   },
+   "gate": "G103_Sag",
+   "pass": true
+  },
+  {
+   "detail": {
+    "asymmetry": 0.0
+   },
+   "gate": "G104_Sag",
+   "pass": true
+  },
+  {
+   "detail": {
+    "delta_t_at_v_1e-15": 2.220446049250313e-15
+   },
+   "gate": "G105_Sag",
+   "pass": true
+  },
+  {
+   "detail": {
+    "N": 4096,
+    "convergence_err": 3.108624468950438e-16,
+    "partition_err": 7.771561172376096e-16
+   },
+   "gate": "G106_Sag",
+   "pass": true
+  },
+  {
+   "detail": {
+    "grid": [
+     512,
+     1024,
+     2048
+    ],
+    "observed_orders": [
+     0.7452131569152749,
+     0.821203259791927
+    ],
+    "rel_errs": [
+     0.06482436465881254,
+     0.03867290137426369,
+     0.021887690642587266
+    ]
+   },
+   "gate": "G107_Sag",
+   "pass": true
+  },
+  {
+   "detail": {
+    "dJ": 0.6593406593406594,
+    "dphi": 4.142759543195332,
+    "roundtrip": 0.6593406593406594
+   },
+   "gate": "G108_Sag",
+   "pass": true
+  },
+  {
+   "detail": {
+    "max_roundtrip_err": 2.8119867545584043e-15,
+    "sign_contract": true
+   },
+   "gate": "G109_Sag",
+   "pass": true
+  }
+ ],
+ "scope": "transport method validation; independent of TRUE_FULL_CLOSURE",
+ "sha256": "065dd76e0da59f6ef8debb64098856b352adf648c7af24f563c2bd6a849461b6",
+ "verdict_key": "SAG_REF_V1"
+}
