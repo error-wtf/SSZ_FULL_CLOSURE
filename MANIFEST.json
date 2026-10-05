@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "8a26129cec42663c6f8bf5def3f49f07ac59a4566a72d56fa0122d31e54c58ad"
+      "sha256": "f456f93dae8e1e0285131588500cdeeaba7bd06c8db6a74ccdfd993405fab17e"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "02478ac4f4981722382218cbc07462bbb406a7e815b2b4de2f9dc78a83281169"
+      "sha256": "92ecd31c05e8ffc8b0fc507246240c43af50442adda3f5697df188452ae2c034"
     },
     {
       "path": "Makefile",
@@ -3653,6 +3653,16 @@
       "sha256": "38c16490b75ea2c72d4feb05ff392c820bde0969712c4e385a920c5f6bd9c866"
     },
     {
+      "path": "data/observed/OBSERVED_MODE_CATALOG.json",
+      "size_bytes": 574,
+      "sha256": "1f2850fc85a953251fa973359179406409c47f69c7870fff44b44aa6ce6de58b"
+    },
+    {
+      "path": "data/observed/OBSERVED_MODE_CATALOG.json.sha256",
+      "size_bytes": 65,
+      "sha256": "d1af7a38f82cad05f006e571923e175cef892464d5aa3850c19ac19a8da6214f"
+    },
+    {
       "path": "data/observed/SMOKE_5200120403_STAGE_A.json",
       "size_bytes": 1626,
       "sha256": "e5e0c420ba16b24b262af4443da78d73dd7db41a1b827af6946e6dad975dabc4"
@@ -5033,6 +5043,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "src/ssz_p5/observations/blind_catalog.py",
+      "size_bytes": 2793,
+      "sha256": "b216761d3de81626e3d3e0bdc02abdb1aa68b4676d4cae2e4f7e5d3cadf1d730"
+    },
+    {
       "path": "src/ssz_p5/observations/provenance.py",
       "size_bytes": 1263,
       "sha256": "65074c895e4b07c52dffeef5ca970a4db720497ad526633a5e19c3512e810ca0"
@@ -5698,6 +5713,11 @@
       "sha256": "f93a11516f9121ba68a310db62c916b76c1ec65306687a3d07d9d122b19c0f79"
     },
     {
+      "path": "tests/unit/test_observed_catalog_schema.py",
+      "size_bytes": 2474,
+      "sha256": "fa5ca03459c63a648ee7114f35d5004044cdd146fcb03ab20211dc00c30d57a5"
+    },
+    {
       "path": "tests/unit/test_onshell_identity.py",
       "size_bytes": 2229,
       "sha256": "21dc76ff44f261466180303bf44c1967d55f3b2695b471fc7ab8b4ec2fcd38d3"
@@ -6051,6 +6071,11 @@
       "path": "tools/build_inner_targets.py",
       "size_bytes": 505,
       "sha256": "4d6cefbd3f129d3641c83e1e593b6451fae870a8651a27da715780123994a928"
+    },
+    {
+      "path": "tools/build_observed_mode_catalog.py",
+      "size_bytes": 4273,
+      "sha256": "cf60a6f788ca40a34c344743695a3dcb021c51227c7e08c0ec11ce5c5ab6c20a"
     },
     {
       "path": "tools/build_outer_complete41_current.py",

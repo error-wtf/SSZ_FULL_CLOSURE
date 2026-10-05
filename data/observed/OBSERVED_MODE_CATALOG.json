@@ -1,0 +1,29 @@
+{
+ "catalog": "OBSERVED_MODE_CATALOG",
+ "version": 1,
+ "frozen": true,
+ "target": "MAXI J1820+070",
+ "obsids": [
+  "5200120403"
+ ],
+ "total_exposure_s": 1896.0,
+ "analysis_config": {
+  "psd_normalization": "leahy",
+  "freq_range_hz": [
+   0.1,
+   2048.0
+  ],
+  "energy_bands_kev": [
+   0.5,
+   2.0,
+   10.0
+  ],
+  "significance_threshold_sigma": 4.0,
+  "trial_correction": "bonferroni",
+  "frozen_before_first_psd": true
+ },
+ "modes": [],
+ "instrumental_controls": [],
+ "pipeline_valid": true,
+ "sha256": "3291eab5dd8995ea6656a9bb01ae11a68bf9cfa5289c4c0bc2967820b03798fa"
+}
