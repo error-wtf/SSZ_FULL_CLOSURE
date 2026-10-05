@@ -1,0 +1,150 @@
+{
+ "audit": "N4_V4_BRANCH_VERBAND",
+ "purpose": "single-branch H3 verdict extended to an 8-branch band across all a1/eps quadrants, each member individually residual-certified",
+ "branches": [
+  {
+   "a1": 0.5,
+   "eps": 0.3,
+   "reached": true,
+   "converged": true,
+   "resid_interior": {
+    "E00": 1.8920094456698067e-06,
+    "E11": 3.1193110316962702e-09,
+    "E22": 1.8300174886576315e-06
+   },
+   "K_min": -0.00418382426991206,
+   "K_max": -5.687668226842031e-07,
+   "K_band_min": -1.0074667571220602e-05,
+   "K_stencil_diff": 7.142313650232435e-12,
+   "sign_structure": "K<0_all",
+   "verdict": "H3_PHYSICAL_GHOST"
+  },
+  {
+   "a1": 0.5,
+   "eps": -0.3,
+   "reached": true,
+   "converged": true,
+   "resid_interior": {
+    "E00": 1.098469930349566e-06,
+    "E11": 2.588897984878713e-09,
+    "E22": 1.2713784371953807e-06
+   },
+   "K_min": 5.702819753250976e-07,
+   "K_max": 0.004216224342996537,
+   "K_band_min": 7.990190113838236e-06,
+   "K_stencil_diff": 7.358613718366769e-12,
+   "sign_structure": "K>0_all",
+   "verdict": "H1_CANDIDATE_PENDING_FINITE_L_HEALTH"
+  },
+  {
+   "a1": -0.5,
+   "eps": 0.3,
+   "reached": true,
+   "converged": false,
+   "resid_interior": {
+    "E00": 2.636227635743893e-06,
+    "E11": 4.223231542255235e-09,
+    "E22": 2.85960522461437e-06
+   },
+   "K_min": 0.00065844708549244,
+   "K_max": 0.0018090162258895476,
+   "K_band_min": 0.0008890555234365476,
+   "K_stencil_diff": 6.126378592798132e-12,
+   "sign_structure": "K>0_all",
+   "verdict": "H1_CANDIDATE_PENDING_FINITE_L_HEALTH"
+  },
+  {
+   "a1": -0.5,
+   "eps": -0.3,
+   "reached": true,
+   "converged": true,
+   "resid_interior": {
+    "E00": 1.0655947055848713e-06,
+    "E11": 2.7455868689685303e-09,
+    "E22": 1.2939562381575342e-06
+   },
+   "K_min": -0.0017910161761793384,
+   "K_max": -0.0006800543810387351,
+   "K_band_min": -0.0009288710348753621,
+   "K_stencil_diff": 3.2110027527523788e-12,
+   "sign_structure": "K<0_all",
+   "verdict": "H3_PHYSICAL_GHOST"
+  },
+  {
+   "a1": 2.0,
+   "eps": 0.3,
+   "reached": true,
+   "converged": false,
+   "resid_interior": {
+    "E00": 7.800968436111333e-06,
+    "E11": 1.5273116105163353e-08,
+    "E22": 8.063450678719164e-06
+   },
+   "K_min": -0.013761656521924362,
+   "K_max": -2.027300126151324e-05,
+   "K_band_min": -0.00016736479218360892,
+   "K_stencil_diff": 1.73725062113661e-11,
+   "sign_structure": "K<0_all",
+   "verdict": "H3_PHYSICAL_GHOST"
+  },
+  {
+   "a1": 2.0,
+   "eps": -0.3,
+   "reached": true,
+   "converged": false,
+   "resid_interior": {
+    "E00": 3.6029596452991086e-06,
+    "E11": 6.321471346382168e-09,
+    "E22": 3.765987514725566e-06
+   },
+   "K_min": 2.0304208172429958e-05,
+   "K_max": 0.014080268070842184,
+   "K_band_min": 0.00014031572020264574,
+   "K_stencil_diff": 1.653243687782524e-11,
+   "sign_structure": "K>0_all",
+   "verdict": "H1_CANDIDATE_PENDING_FINITE_L_HEALTH"
+  },
+  {
+   "a1": -2.0,
+   "eps": 0.3,
+   "reached": true,
+   "converged": false,
+   "resid_interior": {
+    "E00": 9.75556514859477e-06,
+    "E11": 1.2704845175903756e-08,
+    "E22": 1.03822570167722e-05
+   },
+   "K_min": 0.0003377175533011146,
+   "K_max": 0.010215644658520508,
+   "K_band_min": 0.0009235506366191956,
+   "K_stencil_diff": 8.322151995310278e-12,
+   "sign_structure": "K>0_all",
+   "verdict": "H1_CANDIDATE_PENDING_FINITE_L_HEALTH"
+  },
+  {
+   "a1": -2.0,
+   "eps": -0.3,
+   "reached": true,
+   "converged": false,
+   "resid_interior": {
+    "E00": 4.683479808420543e-06,
+    "E11": 6.841560207249131e-09,
+    "E22": 4.5571073030714615e-06
+   },
+   "K_min": -0.009945994822576153,
+   "K_max": -0.00035989568417333224,
+   "K_band_min": -0.001055680854219432,
+   "K_stencil_diff": 7.847184707587829e-12,
+   "sign_structure": "K<0_all",
+   "verdict": "H3_PHYSICAL_GHOST"
+  }
+ ],
+ "n_converged": 3,
+ "verdict_counts": {
+  "H3_PHYSICAL_GHOST": 2,
+  "H1_CANDIDATE_PENDING_FINITE_L_HEALTH": 1
+ },
+ "sign_law_consistent": true,
+ "decision_rules_unchanged": true,
+ "wall_seconds": 14.6
+}
