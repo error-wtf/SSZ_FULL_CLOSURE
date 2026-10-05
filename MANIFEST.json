@@ -3409,8 +3409,8 @@
     },
     {
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_REPRODUCTION.json",
-      "size_bytes": 3486,
-      "sha256": "5a895b22e44d45a5af90f1ca9aeef25a3011f2119f69baaa26881df15355fea4"
+      "size_bytes": 3804,
+      "sha256": "7c36e0eccc1fa2f7bb61ec8c52d66a1e4f5e3abd8076a56d7016f24ae7397e1a"
     },
     {
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_SUMMARY.csv",
@@ -6239,8 +6239,8 @@
     },
     {
       "path": "tools/reproduce_li2023_cst_aah_spectra.py",
-      "size_bytes": 10868,
-      "sha256": "0b1043505ecea50a372759659760a0a591ede34f4e740dc1700c3c1828c03efe"
+      "size_bytes": 11268,
+      "sha256": "972d5499d36fdc26280ab65e4e71286111c022fb06e06c98eeb980ad765b4237"
     },
     {
       "path": "tools/reproduce_weisz_1978_spectra.py",

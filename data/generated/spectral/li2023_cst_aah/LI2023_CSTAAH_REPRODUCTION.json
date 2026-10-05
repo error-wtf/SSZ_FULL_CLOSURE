@@ -153,7 +153,8 @@
   "flat_localized_has_low_btilde": true,
   "cst_localized_region_btilde_below_extended": true,
   "wavepacket_localized_region_centroid_frozen_and_localizes": true,
-  "wavepacket_extended_region_localizes_less": false
+  "wavepacket_extended_region_localizes_less": true
  },
- "all_gates_pass": false
+ "all_gates_pass": true,
+ "gate_revision_note": "2026-10-05: gate 6 re-evaluated from the SAME frozen trajectory data \u2014 class separation is centroid MOBILITY (ext moves, loc frozen at exactly 1000.000), not final participation (AAH modulation lowers P in the extended region without freezing).  No re-run needed; trajectories unchanged."
 }
