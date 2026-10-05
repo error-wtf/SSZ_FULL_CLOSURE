@@ -17,7 +17,6 @@ SCHEMA = json.loads(
 
 
 def _cert(**overrides):
-    n = 10
     base = dict(
         L=6,
         mode_index=0,

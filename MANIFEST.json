@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "df890035627018e5817b55986a46825bcac8c92b3eeeaa37a75264ff17fd6518"
+      "sha256": "8a26129cec42663c6f8bf5def3f49f07ac59a4566a72d56fa0122d31e54c58ad"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "1e1404e2d1b72ad88f70e461bd3b446e6fea04f6470a2e439893d502286d5635"
+      "sha256": "02478ac4f4981722382218cbc07462bbb406a7e815b2b4de2f9dc78a83281169"
     },
     {
       "path": "Makefile",
@@ -5684,8 +5684,8 @@
     },
     {
       "path": "tests/unit/test_mode_certificate_schema.py",
-      "size_bytes": 1691,
-      "sha256": "1dfba7f12f207a800ffdeae59ef0912d0d47511176684b67f0ce050cb12561c7"
+      "size_bytes": 1680,
+      "sha256": "4cce388c8034317c68b35c80f5f9f7892e1348b56eaafcba5f743a8e522ed124"
     },
     {
       "path": "tests/unit/test_native_window_spectroscopy.py",
