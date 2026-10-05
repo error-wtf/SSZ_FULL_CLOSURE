@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 1249,
-      "sha256": "88680121312cdd925d2e54594c87097e773708f1480c4e9749c376d2db9fc716"
+      "size_bytes": 1347,
+      "sha256": "9e0a01eb965cf228077723a6bf132a35de58e1a728cf85cadcfdec8891e9c141"
     },
     {
       "path": ".github/workflows/core-action-source-schema-probe.yml",
@@ -430,7 +430,7 @@
     {
       "path": "EVIDENCE_INDEX.json",
       "size_bytes": 3554,
-      "sha256": "0b864d3c31228bb3d2817212c4233fd74af92d31715f618c5a068b1f5cf7b73f"
+      "sha256": "d9bb19a38472f02f111c142d26bce588e4a099088f6774dabe97d5b88cfd7d9d"
     },
     {
       "path": "FILE_INDEX.md",
@@ -520,7 +520,7 @@
     {
       "path": "MODEL_LOCK.json",
       "size_bytes": 2650,
-      "sha256": "93823b9b539e525cdb3dc02b30bb3a2a1cb7435eb09cd0ef855aecd075c8400c"
+      "sha256": "f1247f7aeb8a8e8b9634477f272474ff7f5782f003ec8f1b0e56bdd03a9216ac"
     },
     {
       "path": "Makefile",
@@ -5624,8 +5624,8 @@
     },
     {
       "path": "tests/unit/test_import_provenance.py",
-      "size_bytes": 4486,
-      "sha256": "53ec342a0bd25dbf530effe1864f728fe83aed3d896f1268aa4d3959a13f696e"
+      "size_bytes": 4618,
+      "sha256": "1d9691fc5ee14170242ec5b4386d7fe7e0395351ddbf77938017189fa30e131a"
     },
     {
       "path": "tests/unit/test_inner_endpoint_contract.py",

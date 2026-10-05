@@ -96,7 +96,10 @@ def test_release_metadata_current():
         if clean and got:
             anc = subprocess.run(["git", "merge-base", "--is-ancestor",
                                   str(got), head], capture_output=True)
+            shallow = Path(root / ".git/shallow").exists()
             if anc.returncode == 0:
+                continue
+            if shallow and got[:7] == head[:7]:
                 continue
         raise AssertionError(
             f"{name}: git_commit {str(got)[:7]} is stale vs HEAD {head[:7]} - "
