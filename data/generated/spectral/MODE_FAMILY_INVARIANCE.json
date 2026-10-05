@@ -1,0 +1,41 @@
+{
+ "audit": "MODE_FAMILY_INVARIANCE_V1",
+ "claim_level": "L-invariant local principal family candidate \u2014 NOT a QNM claim; global operator decides later",
+ "spread_threshold": 1e-09,
+ "L_values": [
+  6,
+  12,
+  20,
+  42,
+  110,
+  420,
+  1000
+ ],
+ "n_families_invariant": 4,
+ "families": [
+  {
+   "branch": 1,
+   "u": 0.6466541635408852,
+   "omega_L_mean": 0.875185543299487,
+   "rel_spread": 1.6174105790875493e-12
+  },
+  {
+   "branch": 1,
+   "u": 0.6200037509377344,
+   "omega_L_mean": 0.18704698782957294,
+   "rel_spread": 8.382452370499941e-13
+  },
+  {
+   "branch": 2,
+   "u": 0.6999812453113278,
+   "omega_L_mean": 9.134396029941135,
+   "rel_spread": 2.065319094951049e-11
+  },
+  {
+   "branch": 2,
+   "u": 0.6733308327081771,
+   "omega_L_mean": 2.7086802781775274,
+   "rel_spread": 1.652620012540013e-13
+  }
+ ]
+}
