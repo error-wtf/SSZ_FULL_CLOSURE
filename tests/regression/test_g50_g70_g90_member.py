@@ -2,8 +2,8 @@
 
 G50: radial characteristics c_r^2 (generalized (K, G) eigenvalues) across the
      full multipole ladder, production window, with a negative control.
-G70: finite-l even sector: kinetic positivity and radial characteristics at
-     every REQUIRED multipole; no finite-l instability anywhere on the member.
+G70: finite-ell even sector: kinetic positivity and radial characteristics at
+     every REQUIRED multipole; no finite-ell instability anywhere on the member.
 G90: global regularity scan: every member quantity and every perturbation
      diagnostic finite and regular across the whole domain incl. interfaces.
 """
@@ -40,23 +40,23 @@ def test_G50_radial_characteristics_positive():
 
 
 def test_G70_finite_l_even_sector():
-    """G70: dedicated finite-l battery - the even-parity kinetic sector is
+    """G70: dedicated finite-ell battery - the even-parity kinetic sector is
     positive and radially hyperbolic at EVERY required multipole; the ladder
-    is finite (no l->infinity extrapolation is used anywhere) and the
+    is finite (no ell->infinity extrapolation is used anywhere) and the
     diagnostics are recorded per multipole."""
     build, rows = principal_audit(ROOT)
     ladder = _REQUIRED_L
-    assert len(ladder) >= 5 and all(float(l).is_integer() for l in ladder)
+    assert len(ladder) >= 5 and all(float(ell).is_integer() for ell in ladder)
     per_l = {row["L"]: row for row in rows}
     for L in ladder:
         row = per_l[L]
-        # no finite-l ghost or gradient instability at this multipole
+        # no finite-ell ghost or gradient instability at this multipole
         assert row["min_eig_K"] > 0, (L, row)
         assert row["min_cr2"] > 0, (L, row)
-    # nontriviality: the diagnostics genuinely vary with l (not a stub)
+    # nontriviality: the diagnostics genuinely vary with ell (not a stub)
     ke = [per_l[L]["min_eig_K"] for L in ladder]
     assert max(ke) > 10 * min(ke)
-    # monotone decay of the finite-l kinetic scale (l-dependent kinetic weight)
+    # monotone decay of the finite-ell kinetic scale (ell-dependent kinetic weight)
     assert all(ke[i] >= ke[i + 1] for i in range(len(ke) - 1))
 
 

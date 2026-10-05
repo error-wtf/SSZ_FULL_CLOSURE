@@ -28,9 +28,9 @@ def build_operator(bg):
     D=derivative_matrix(r)
     F=h*A*A/(2*f); Y=4*X*F
     Xp=D@X; Fp=D@F; Yp=D@Y
-    n=len(bg); I=sparse.eye(n,format='csr'); Z=sparse.csr_matrix((n,n))
+    n=len(bg); identity_mat=sparse.eye(n,format='csr'); Z=sparse.csr_matrix((n,n))
     def Q(j):
-        return sparse.hstack([I if k==j else Z for k in range(len(CTRL))],format='csr')
+        return sparse.hstack([identity_mat if k==j else Z for k in range(len(CTRL))],format='csr')
     q=[Q(j) for j in range(len(CTRL))]
     f3,f3X,f3XX,f4,f4X,f4XX,f4XXX,tf4,f2XX,f2XF,f2FF,f2XY,f2FY,f2YY=q
     # Background-preserving dependent f2 jets recovered in the prior direct-Appendix audit.

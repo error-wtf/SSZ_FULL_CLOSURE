@@ -49,7 +49,7 @@ def _corrupted_metric(metric, scale=1.0 + 1e-3, mode="linear"):
     from corrupted data; isolated — canonical member untouched)."""
     u = metric.u
     if mode == "uniform":
-        f = metric.f_u(u) * scale
+        _ = metric.f_u(u) * scale
     else:  # u-proportional perturbation distorts the profile shape
         f = metric.f_u(u) * (1.0 + (scale - 1.0) * u / metric.u_max)
     return SSZMetric(
@@ -121,7 +121,8 @@ def test_falsifier_christoffel_sign(metric):
 
     from ssz_p5.postclosure.transport import radial_domain
     r_lo, r_hi = radial_domain(metric)
-    leave = lambda tau_, y_: min(y_[1] - r_lo, r_hi - y_[1])
+    def leave(tau_, y_):
+        return min(y_[1] - r_lo, r_hi - y_[1])
     leave.terminal = True
     sol = solve_ivp(rhs, tau_span, [0.0, r0, 0.0, ut0, ur0, 0.0],
                     method="DOP853", rtol=1e-12, atol=1e-12,
@@ -135,7 +136,7 @@ def test_falsifier_christoffel_sign(metric):
     res_wrong = 0.0
     for i in range(1, len(tau) - 1):
         rr = r[i]
-        f, h = float(metric.f(rr)), float(metric.h(rr))
+        _f, h = float(metric.f(rr)), float(metric.h(rr))
         fp, hp = float(metric.fp(rr)), float(metric.hp(rr))
         a_r_true = (dudt[1, i] + 0.5 * h * fp * ut[i] ** 2
                     - hp / (2.0 * h) * ur[i] ** 2)
@@ -188,7 +189,8 @@ def timelike_geodesic_local(metric, r0, E, L, span):
                 -(2.0 / r) * ur * uph]
 
     r_lo, r_hi = radial_domain(metric)
-    leave = lambda tau, y: min(y[1] - r_lo, r_hi - y[1])
+    def leave(tau, y):
+        return min(y[1] - r_lo, r_hi - y[1])
     leave.terminal = True
     sol = solve_ivp(rhs, span, [0.0, r0, 0.0, ut0, ur0, L / r0**2],
                     method="DOP853", rtol=1e-12, atol=1e-12,

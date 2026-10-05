@@ -88,7 +88,7 @@ def _electric_a2_resolve(root: Path, prof: pd.DataFrame, raw: pd.DataFrame, sele
     h = raw.h.to_numpy(float)
     ph = raw.phiprime.to_numpy(float)
     ap = raw.A0prime.to_numpy(float)
-    X = raw.X.to_numpy(float)
+    _ = raw.X.to_numpy(float)
     fp = zk.dr(r, f, 1, 9, 8)
     fpp = zk.dr(r, f, 2, 9, 8)
     hp = zk.dr(r, h, 1, 9, 8)
@@ -275,7 +275,8 @@ def _build_action(root: Path):
     ) / d.phiprime.to_numpy(float)
 
     zeros = np.zeros(len(d))
-    pre = zk.emit(d, selected_v5=zeros, selected_c3=zeros, selected_e3=zeros, v6_phi_selector="action")
+    pre = zk.emit(d, selected_v5=zeros, selected_c3=zeros, selected_e3=zeros,
+        v6_phi_selector="action")
     target = raw.iloc[ridx].reset_index(drop=True)
     target3 = np.column_stack((target.v1, target.v4, target.c2)).astype(float)
 
@@ -284,7 +285,8 @@ def _build_action(root: Path):
     for col in cols:
         dd = d.copy()
         dd[col] = dd[col].to_numpy(float) + 1.0
-        g = zk.emit(dd, selected_v5=zeros, selected_c3=zeros, selected_e3=zeros, v6_phi_selector="action")
+        g = zk.emit(dd, selected_v5=zeros, selected_c3=zeros, selected_e3=zeros,
+            v6_phi_selector="action")
         response.append(
             np.stack(
                 (

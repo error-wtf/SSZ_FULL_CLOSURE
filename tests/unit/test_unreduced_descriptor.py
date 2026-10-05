@@ -47,7 +47,8 @@ def test_constant_profile_matches_existing_unreduced_symbol():
     import importlib.util
     from pathlib import Path
     root = Path(__file__).resolve().parents[2]
-    spec = importlib.util.spec_from_file_location("unred_kernel", root / "src" / "ssz_hybrid_unreduced_even_kernel.py")
+    spec = importlib.util.spec_from_file_location("unred_kernel",
+        root / "src" / "ssz_hybrid_unreduced_even_kernel.py")
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     d = _toy(17)

@@ -35,7 +35,7 @@ def _collected_ids() -> list[str]:
          "--collect-only", "-q"],
         cwd=ROOT, capture_output=True, text=True, env=env,
     ).stdout
-    return [l.strip() for l in out.splitlines() if "::" in l]
+    return [ell.strip() for ell in out.splitlines() if "::" in ell]
 
 
 def _first_assert(node: ast.FunctionDef) -> str:

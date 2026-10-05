@@ -25,7 +25,6 @@ certificate open until an algebraic/identity evaluator is reproduced.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict
 
 import numpy as np
 import pandas as pd
@@ -264,9 +263,10 @@ def scalar_ode_identity(
     residual = A * qp + B * q + C
     return ScalarODEIdentity(A=A, B=B, C=C, q=q, q_prime=qp, residual=residual)
 
-def residual_metrics(values: SVTBackgroundResiduals, mask: np.ndarray) -> Dict[str, Dict[str, float]]:
+def residual_metrics(values: SVTBackgroundResiduals, mask: np.ndarray) -> dict[str, dict[str,
+    float]]:
     mask = np.asarray(mask, bool)
-    out: Dict[str, Dict[str, float]] = {}
+    out: dict[str, dict[str, float]] = {}
     for name in ("E00", "E11", "JA", "JA_prime", "Jphi", "Pphi", "Ephi_direct"):
         a = np.asarray(getattr(values, name), float)[mask]
         out[name] = {

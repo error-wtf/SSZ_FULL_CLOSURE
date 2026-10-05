@@ -95,7 +95,8 @@ def _svt_action_input(background):
     return d
 
 
-def action_realize_principal(background, baseline_coeffs, lower_emitted, central, core, *, tolerance=2e-9):
+def action_realize_principal(background, baseline_coeffs, lower_emitted, central, core, *,
+    tolerance=2e-9):
     """Return corrected Inner coefficients and explicit Hessian action controls."""
     targets, endpoint_jets = build_principal_targets(background, central, core)
     target = targets[[n + "_target" for n in TARGETS]].to_numpy(float)

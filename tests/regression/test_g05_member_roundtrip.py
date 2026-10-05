@@ -100,7 +100,7 @@ def test_G05_scalar_integration_round_trip():
     f, h, ph, ap = (d.f.to_numpy(float), d.h.to_numpy(float),
                     d.phiprime.to_numpy(float), d.A0prime.to_numpy(float))
     r = d.x.to_numpy(float)
-    f3, f4, f4X, f4XX, tf4 = (d.f3.to_numpy(float), d.f4.to_numpy(float),
+    f3, f4, f4X, _f4XX, tf4 = (d.f3.to_numpy(float), d.f4.to_numpy(float),
                               d.f4X.to_numpy(float), d.f4XX.to_numpy(float),
                               d.tf4.to_numpy(float))
     f2Y = d.f2Y.to_numpy(float)
@@ -109,7 +109,7 @@ def test_G05_scalar_integration_round_trip():
     # algebraic re-solve requires consistent derivative channels)
     from ssz_p5.jets.jet9d8 import profile_derivative
     hp = profile_derivative(r, h, 1, 9, 8)
-    fp = profile_derivative(r, f, 1, 9, 8)
+    _ = profile_derivative(r, f, 1, 9, 8)
     core = (-2*r*h**2*ph*ap**2*f3
             + h*ap**2*(4*(h-1)*f4 - h**2*ph**2*(f4X + 2*tf4)))
     # explicit re-solve: E00 = rf h' - f(1-h) - r^2(f f2 - h ap^2 f2F_eff) - core = 0

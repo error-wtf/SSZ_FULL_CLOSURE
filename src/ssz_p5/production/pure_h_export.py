@@ -28,7 +28,8 @@ A5_IMPL = "src/ssz_p5_holonomic_a5_closure_2026-09-16.py"
 
 
 def _scaled_max(a, b):
-    a = np.asarray(a, float); b = np.asarray(b, float)
+    a = np.asarray(a, float)
+    b = np.asarray(b, float)
     return float(np.max(np.abs(a-b)/np.maximum(1.0, np.abs(b))))
 
 
@@ -98,7 +99,8 @@ def _certificate(root: Path, output: Path, *, gate: str, region: str, source_pat
         "timestamp": datetime.now(UTC).isoformat(),
         "source": {"path": source_path, "sha256": sha256(root/source_path)},
         "implementation": [
-            {"path": "src/ssz_p5/production/pure_h_export.py", "sha256": sha256(root/"src/ssz_p5/production/pure_h_export.py")},
+            {"path": "src/ssz_p5/production/pure_h_export.py",
+                "sha256": sha256(root/"src/ssz_p5/production/pure_h_export.py")},
             {"path": A5_IMPL, "sha256": sha256(root/A5_IMPL)},
             {"path": MEMBER_FILE, "sha256": sha256(root/MEMBER_FILE)},
         ],
@@ -127,12 +129,15 @@ def export_pure_h(root: Path, output: Path):
 
     weak_path=output/"weak_exterior_H_DIRECT_41.csv"
     core_path=output/"punctured_H_core_DIRECT_41.csv"
-    weak.to_csv(weak_path,index=False); core.to_csv(core_path,index=False)
+    weak.to_csv(weak_path,index=False)
+    core.to_csv(core_path,index=False)
 
     wc=_compare_to_regression(root,weak,"weak_exterior_H")
     cc=_compare_to_regression(root,core,"punctured_H_core")
-    wcp=output/"WEAK_DIRECT_41_COMPARISON.csv"; ccp=output/"CORE_DIRECT_41_COMPARISON.csv"
-    wc.to_csv(wcp,index=False); cc.to_csv(ccp,index=False)
+    wcp=output/"WEAK_DIRECT_41_COMPARISON.csv"
+    ccp=output/"CORE_DIRECT_41_COMPARISON.csv"
+    wc.to_csv(wcp,index=False)
+    cc.to_csv(ccp,index=False)
 
     wcert=_certificate(root,output,gate="WEAK_DIRECT_41",region="weak_exterior_H",
                        source_path=WEAK_SOURCE,stream_path=weak_path,comparison_path=wcp,

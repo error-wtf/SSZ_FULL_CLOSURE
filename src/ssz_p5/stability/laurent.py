@@ -1,6 +1,7 @@
 """Small truncated Laurent-series algebra for the SSZ high-L reducers.
 
-The asymptotic variable is eps = 1/L.  Coefficients may be numpy arrays; eps is
+The asymptotic variable is eps = 1/L.  Coefficients may be numpy arrays
+eps is
 independent of radius, so radial differentiation acts coefficient-wise.
 
 This module deliberately does *not* infer physics from large numerical L.  It is
@@ -9,14 +10,15 @@ as the finite-L common-action reducer.
 """
 from __future__ import annotations
 
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass
-from typing import Callable, Dict, Iterable
 
 import numpy as np
 
 
 def _mul_arrays(a, b):
-    a=np.asarray(a,float); b=np.asarray(b,float)
+    a=np.asarray(a,float)
+    b=np.asarray(b,float)
     if a.ndim==1 and b.ndim>1 and a.shape[0]==b.shape[0]:
         a=a.reshape((a.shape[0],)+(1,)*(b.ndim-1))
     if b.ndim==1 and a.ndim>1 and b.shape[0]==a.shape[0]:
@@ -26,12 +28,12 @@ def _mul_arrays(a, b):
 
 @dataclass(frozen=True)
 class LaurentSeries:
-    coeffs: Dict[int, np.ndarray]
+    coeffs: dict[int, np.ndarray]
     pmin: int = -6
     pmax: int = 14
 
     def __post_init__(self):
-        clean: Dict[int, np.ndarray] = {}
+        clean: dict[int, np.ndarray] = {}
         for p, a in self.coeffs.items():
             p = int(p)
             if self.pmin <= p <= self.pmax:
@@ -47,7 +49,8 @@ class LaurentSeries:
         return cls({int(p): np.asarray(a, dtype=float)}, pmin=pmin, pmax=pmax)
 
     def copy(self) -> LaurentSeries:
-        return LaurentSeries({p: np.array(a, copy=True) for p, a in self.coeffs.items()}, self.pmin, self.pmax)
+        return LaurentSeries({p: np.array(a, copy=True) for p, a in self.coeffs.items()}, self.pmin,
+            self.pmax)
 
     def powers(self) -> list[int]:
         return sorted(self.coeffs)
@@ -84,7 +87,8 @@ class LaurentSeries:
 
     def scale(self, c) -> LaurentSeries:
         c = np.asarray(c, dtype=float)
-        return LaurentSeries({p: _mul_arrays(a, c) for p, a in self.coeffs.items()}, self.pmin, self.pmax)
+        return LaurentSeries({p: _mul_arrays(a, c) for p, a in self.coeffs.items()}, self.pmin,
+            self.pmax)
 
     def __neg__(self):
         return self.scale(-1.0)
@@ -92,20 +96,25 @@ class LaurentSeries:
     def __add__(self, other):
         if not isinstance(other, LaurentSeries):
             other = LaurentSeries.const(other, pmin=self.pmin, pmax=self.pmax)
-        pmin = min(self.pmin, other.pmin); pmax = max(self.pmax, other.pmax)
-        out: Dict[int, np.ndarray] = {}
+        pmin = min(self.pmin, other.pmin)
+        pmax = max(self.pmax, other.pmax)
+        out: dict[int, np.ndarray] = {}
         for p in set(self.coeffs) | set(other.coeffs):
             a = self.coeffs.get(p)
             b = other.coeffs.get(p)
-            if a is None: out[p] = np.array(b, copy=True)
-            elif b is None: out[p] = np.array(a, copy=True)
-            else: out[p] = a + b
+            if a is None:
+                out[p] = np.array(b, copy=True)
+            elif b is None:
+                out[p] = np.array(a, copy=True)
+            else:
+                out[p] = a + b
         return LaurentSeries(out, pmin, pmax)
 
     __radd__ = __add__
 
     def __sub__(self, other):
-        return self + (-other if isinstance(other, LaurentSeries) else -np.asarray(other, dtype=float))
+        return self + (-other if isinstance(other, LaurentSeries) else -np.asarray(other,
+            dtype=float))
 
     def __rsub__(self, other):
         return (-self) + other
@@ -115,7 +124,7 @@ class LaurentSeries:
             return self.scale(other)
         pmin = max(self.pmin, other.pmin)
         pmax = min(self.pmax, other.pmax)
-        out: Dict[int, np.ndarray] = {}
+        out: dict[int, np.ndarray] = {}
         for p, a in self.coeffs.items():
             for q, b in other.coeffs.items():
                 k = p + q
@@ -139,7 +148,7 @@ class LaurentSeries:
         max_n = self.pmax + e0
         if max_n < 0:
             max_n = 0
-        b: Dict[int, np.ndarray] = {0: 1.0 / a0}
+        b: dict[int, np.ndarray] = {0: 1.0 / a0}
         for n in range(1, max_n + 1):
             s = np.zeros_like(a0, dtype=float)
             for k in range(1, n + 1):
@@ -165,12 +174,14 @@ def series_sum(items: Iterable[LaurentSeries], *, pmin=-6, pmax=14) -> LaurentSe
     return out
 
 
-def outer_product(a: LaurentSeries, b: LaurentSeries, c: LaurentSeries | None = None) -> LaurentSeries:
+def outer_product(a: LaurentSeries, b: LaurentSeries,
+    c: LaurentSeries | None = None) -> LaurentSeries:
     """Series of c * outer(a,b) for arrays a,b shaped (...,m)."""
     if c is None:
         c = LaurentSeries.const(1.0, pmin=a.pmin, pmax=a.pmax)
-    out: Dict[int, np.ndarray] = {}
-    pmin = max(a.pmin, b.pmin, c.pmin); pmax = min(a.pmax, b.pmax, c.pmax)
+    out: dict[int, np.ndarray] = {}
+    pmin = max(a.pmin, b.pmin, c.pmin)
+    pmax = min(a.pmax, b.pmax, c.pmax)
     for pa, av in a.coeffs.items():
         for pb, bv in b.coeffs.items():
             for pc, cv in c.coeffs.items():

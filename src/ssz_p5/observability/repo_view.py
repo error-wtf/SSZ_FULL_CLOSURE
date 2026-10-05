@@ -45,7 +45,8 @@ def _first_status(data: dict[str, Any]) -> str:
             return str(value)
     summary = data.get("summary")
     if isinstance(summary, dict):
-        for key in ("absolute_full_closure", "FULL_CONSTRUCTIVE_CLOSURE", "DIRECT_GLOBAL_KRGM_EXPORT"):
+        for key in ("absolute_full_closure", "FULL_CONSTRUCTIVE_CLOSURE",
+            "DIRECT_GLOBAL_KRGM_EXPORT"):
             if key in summary:
                 return str(summary[key])
     return "UNCLASSIFIED"
@@ -117,8 +118,10 @@ def build_gate_matrix(root: Path) -> list[dict[str, Any]]:
     def add(name: str, status: Any, evidence: str = "", note: str = "") -> None:
         rows.append({"gate": name, "status": str(status), "evidence": evidence, "note": note})
 
-    add("ABSOLUTE_FULL_CLOSURE", ledger.get("absolute_full_closure", "UNKNOWN"), "ABSOLUTE_CLOSURE_LEDGER.json")
-    add("SOFTWARE_TESTS", ledger.get("software_tests", "UNKNOWN"), "CURRENT_RELEASE_STATUS_2026-09-19.md")
+    add("ABSOLUTE_FULL_CLOSURE", ledger.get("absolute_full_closure", "UNKNOWN"),
+        "ABSOLUTE_CLOSURE_LEDGER.json")
+    add("SOFTWARE_TESTS", ledger.get("software_tests", "UNKNOWN"),
+        "CURRENT_RELEASE_STATUS_2026-09-19.md")
     infra = ledger.get("verified_reusable_infrastructure", {})
     if isinstance(infra, dict):
         for key, value in infra.items():
@@ -128,7 +131,8 @@ def build_gate_matrix(root: Path) -> list[dict[str, Any]]:
         add("ACTIVE_SEARCH", active.get("status", "UNKNOWN"), str(active.get("member", "")))
         pf = active.get("horndeski_principal_feasibility", {})
         if isinstance(pf, dict):
-            add("HORNDESKI_PRINCIPAL_FEASIBILITY", pf.get("status", "UNKNOWN"), str(pf.get("audit", "")))
+            add("HORNDESKI_PRINCIPAL_FEASIBILITY", pf.get("status", "UNKNOWN"), str(pf.get("audit",
+                "")))
     add("QNM", ledger.get("qnm", "UNKNOWN"), "ABSOLUTE_CLOSURE_LEDGER.json")
     if working:
         central = working.get("central", {})
@@ -137,9 +141,11 @@ def build_gate_matrix(root: Path) -> list[dict[str, Any]]:
         tests = working.get("tests", {}).get("grouped_complete_matrix", {})
         add(
             "SOFTWARE_TESTS_CURRENT",
-            f"{tests.get('passed')}/{tests.get('total')}_PASS_GROUPED_COMPLETE_MATRIX" if tests.get("status") == "PASS" else tests.get("status", "UNKNOWN"),
+            (f"{tests.get('passed')}/{tests.get('total')}_PASS_GROUPED_COMPLETE_MATRIX"
+             if tests.get("status") == "PASS" else tests.get("status", "UNKNOWN")),
             working_name,
-            "current repaired checkpoint; historical release test counts remain preserved separately",
+            "current repaired checkpoint; historical release test counts"
+            " remain preserved separately",
         )
         add(
             "CENTRAL_DIRECT41_NORMALIZATION",
@@ -158,12 +164,14 @@ def build_gate_matrix(root: Path) -> list[dict[str, Any]]:
             "data/generated/strong_field_transition_2026-09-20/STRONG_FIELD_TRANSITION_AUDIT.json",
             "one action solve on 0.70<=u<=0.715; u=0.71 is not a physical seam",
         )
-        add("GLOBAL_ABSOLUTE_DIRECT41", downstream.get("global_absolute_direct41", "UNKNOWN"), working_name)
+        add("GLOBAL_ABSOLUTE_DIRECT41", downstream.get("global_absolute_direct41", "UNKNOWN"),
+            working_name)
         add("GLOBAL_KRGSM", downstream.get("global_KRGSM", "UNKNOWN"), working_name)
         add("SAME_OPERATOR_QNM", downstream.get("same_operator_QNM", "UNKNOWN"), working_name)
         projected = working.get("local_projected_controllability", {})
         if projected:
-            add("PROJECTED_ONSHELL_CONTROLLABILITY", projected.get("status", "UNKNOWN"), "data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY.json", "local tangent existence gate; not a finite transition member")
+            add("PROJECTED_ONSHELL_CONTROLLABILITY", projected.get("status", "UNKNOWN"),
+                "data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY.json", "local tangent existence gate; not a finite transition member")
 
     evidence = {row["path"]: row for row in build_evidence_index(root)}
     preferred = [
@@ -214,7 +222,8 @@ def build_member_matrix(root: Path) -> list[dict[str, str]]:
             reasons = data.get("reasons", data.get("reason", ""))
             if isinstance(reasons, list):
                 reasons = "; ".join(str(x) for x in reasons)
-            rows.append({"member": key, "status": str(data.get("status", "UNKNOWN")), "reason": str(reasons)})
+            rows.append({"member": key, "status": str(data.get("status", "UNKNOWN")),
+                "reason": str(reasons)})
     active = ledger.get("active_search", {})
     if isinstance(active, dict):
         rows.append(

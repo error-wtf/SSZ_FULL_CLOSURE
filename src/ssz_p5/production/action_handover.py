@@ -138,7 +138,7 @@ def endpoint_action_diagnostics(root: Path, build: CentralBuild | None = None) -
     rows = {}
     for band in handover_bands(root):
         old = _old_augmented(band.old_background)
-        edge = band.lo if band.name == "outer" else band.hi
+        _ = band.lo if band.name == "outer" else band.hi
         old_edge = band.lo if band.name == "outer" else band.hi
         central_edge = band.lo if band.name == "outer" else min(band.hi, float(ca.u.max()))
         oldv = float(_pchip_u(old, "v6_from_action")(old_edge))
@@ -181,7 +181,8 @@ def _bridge_geometry(root: Path, band: HandoverBand, build: CentralBuild) -> pd.
     return g.sort_values("x").reset_index(drop=True)
 
 
-def compact_horndeski_control_rank(root: Path, band_name: str, build: CentralBuild | None = None) -> dict:
+def compact_horndeski_control_rank(root: Path, band_name: str,
+    build: CentralBuild | None = None) -> dict:
     """Rank of six compact-support primitive response directions.
 
     This checks the coefficient-level response bundle, not the background EOM.
@@ -296,7 +297,8 @@ def one_control_a2_probe(root: Path, band_name: str, build: CentralBuild | None 
     fp = _pchip_u(pd.DataFrame({"u": ca.u, "z": zk.dr(rr, ca.f.to_numpy(float), 1, 9, 8)}), "z")(u)
     fpp = _pchip_u(pd.DataFrame({"u": ca.u, "z": zk.dr(rr, ca.f.to_numpy(float), 2, 9, 8)}), "z")(u)
     hp = _pchip_u(pd.DataFrame({"u": ca.u, "z": zk.dr(rr, ca.h.to_numpy(float), 1, 9, 8)}), "z")(u)
-    app = _pchip_u(pd.DataFrame({"u": ca.u, "z": zk.dr(rr, ca.A0prime.to_numpy(float), 1, 9, 8)}), "z")(u)
+    app = _pchip_u(pd.DataFrame({"u": ca.u, "z": zk.dr(rr, ca.A0prime.to_numpy(float), 1, 9, 8)}),
+        "z")(u)
 
     w, wu = flat_step_derivative_u(u, band.lo, band.hi)
     cv6, ov6 = pc("v6_A2_resolved"), po("v6_from_action")
@@ -341,7 +343,8 @@ def one_control_a2_probe(root: Path, band_name: str, build: CentralBuild | None 
 
     expected_left = po("f4")(band.lo) if band.orientation == "old_to_central" else pc("f4")(band.lo)
     expected_right = pc("f4")(band.hi) if band.orientation == "old_to_central" else po("f4")(band.hi)
-    endpoint_error = max(abs(float(solved_f4[0] - expected_left)), abs(float(solved_f4[-1] - expected_right)))
+    endpoint_error = max(abs(float(solved_f4[0] - expected_left)),
+        abs(float(solved_f4[-1] - expected_right)))
     accepted = bool(endpoint_error < 1e-3 and np.nanmax(np.abs(pred - v6p)) < 1e-8)
     return {
         "band": band.name,

@@ -60,11 +60,11 @@ add("-" * 78)
 g2 = subprocess.run(
     ["grep", "-rn", "-i", "gamma", "src/", "--include=*.py"],
     cwd=ROOT, capture_output=True, text=True)
-g2l = [l for l in g2.stdout.splitlines()
-       if "G2XX" not in l and "g2xx" not in l and "G2" not in l.upper()
-       or "gamma" in l.lower() and "g2" not in l.lower()]
+g2l = [ell for ell in g2.stdout.splitlines()
+       if "G2XX" not in ell and "g2xx" not in ell and "G2" not in ell.upper()
+       or "gamma" in ell.lower() and "g2" not in ell.lower()]
 # keep only lines that really contain 'gamma' outside action-jet names
-g2l = [l for l in g2.stdout.splitlines() if "gamma" in l.lower()]
+g2l = [ell for ell in g2.stdout.splitlines() if "gamma" in ell.lower()]
 add("\n".join(g2l) if g2l else
     "(no matches: 'gamma' appears NOWHERE in the implementation)")
 add("")
@@ -96,11 +96,11 @@ add("EVIDENCE 4 — the computation routes (code excerpts):")
 add("-" * 78)
 add("a) ring location: brentq root of W_u on the member spline")
 add("   src/ssz_p5/postclosure/transport.py::find_light_rings:")
-for l in subprocess.run(
+for ell in subprocess.run(
         ["sed", "-n", "/def find_light_rings/,/return rings/p",
          "src/ssz_p5/postclosure/transport.py"],
         cwd=ROOT, capture_output=True, text=True).stdout.splitlines()[:22]:
-    add("   " + l)
+    add("   " + ell)
 add("")
 add("b) critical impact parameter: b_crit = 1/sqrt(W(u_ring))")
 add("   (same function, line: \"b_crit\": float(1.0 / np.sqrt(W)))")

@@ -26,7 +26,7 @@ from __future__ import annotations
 import hashlib
 import json
 from dataclasses import dataclass, field
-from functools import lru_cache
+from functools import cache, lru_cache
 from pathlib import Path
 
 import numpy as np
@@ -222,7 +222,7 @@ def _ricci_func():
     return func
 
 
-@lru_cache(maxsize=None)
+@cache
 def load_member_metric(root: Path | None = None) -> SSZMetric:
     """Load the frozen electric production member (hash-verified)."""
     base = (root or repo_root()).resolve()
@@ -696,9 +696,9 @@ def ring_trapping(m: SSZMetric, rings: list[dict],
                 # grow the bracket geometrically until W crosses b2_inv
                 b2_inv = W_r + eps
 
-                def _turn(sign):
+                def _turn(sign, eps=eps, W_r=W_r, u_r=u_r, b2_inv=b2_inv):
                     step = max(1e-9, 1e-3 * eps / abs(W_r))
-                    lo = hi = u_r
+                    _ = hi = u_r
                     while float(m.W_of_u(hi + sign * step)) - b2_inv < 0.0:
                         hi = hi + sign * step
                         step *= 1.6

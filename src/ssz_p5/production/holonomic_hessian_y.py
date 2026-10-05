@@ -131,7 +131,7 @@ def complete_hessian(
     out = background[[c for c in ("u", "x") if c in background]].copy()
     for j, name in enumerate(TRANSVERSE):
         out[name] = q[:, j]
-    for values, name in zip((phiphi, phiX, phiF, phiY), MIXED):
+    for values, name in zip((phiphi, phiX, phiF, phiY), MIXED, strict=False):
         out[name] = values
     return H, out
 
@@ -185,7 +185,7 @@ def response_from_hessian(
         - 0.5 * x**2 * np.sqrt(f * h) * h * ph**3 * XX
     )
     out = background[[c for c in ("u", "x") if c in background]].copy()
-    for name, values in zip(RESPONSES, (v5, c3, e3, v1, v4, c2)):
+    for name, values in zip(RESPONSES, (v5, c3, e3, v1, v4, c2), strict=False):
         out[name] = values
     return out
 

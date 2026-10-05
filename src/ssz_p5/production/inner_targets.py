@@ -127,8 +127,10 @@ def build_inner_targets(root, output):
             sha256=sha256(root / "src/ssz_p5/production/inner_targets.py"),
         ),
         target_artifact=dict(path=str(target_path.relative_to(root)), sha256=sha256(target_path)),
-        action_control_artifact=dict(path=str(control_path.relative_to(root)), sha256=sha256(control_path)),
-        reemitted_lower_artifact=dict(path=str(emitted_path.relative_to(root)), sha256=sha256(emitted_path)),
+        action_control_artifact=dict(path=str(control_path.relative_to(root)),
+            sha256=sha256(control_path)),
+        reemitted_lower_artifact=dict(path=str(emitted_path.relative_to(root)),
+            sha256=sha256(emitted_path)),
     )
     (output / "INNER_LOWER_ORDER_CONTROL.json").write_text(
         json.dumps(report, indent=2, allow_nan=False) + "\n"

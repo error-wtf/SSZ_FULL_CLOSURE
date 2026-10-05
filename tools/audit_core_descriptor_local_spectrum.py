@@ -32,7 +32,7 @@ KRS=(0.0,0.25,0.5,1.0,2.0,4.0)
 NSAMP=36
 
 def local_poly(P,i,kr):
-    # Q(lambda)=A2 l^2 + A1 l + A0 at one radius with dr -> i kr.
+    # Q(lambda)=A2 ell^2 + A1 ell + A0 at one radius with dr -> i kr.
     sample=next(iter(P.values()));nf=sample.shape[1]
     A=[np.zeros((nf,nf),complex) for _ in range(3)]
     for (pt,pr),B in P.items():
@@ -40,9 +40,9 @@ def local_poly(P,i,kr):
     return A
 
 def roots(A0,A1,A2):
-    n=A0.shape[0];I=np.eye(n,dtype=complex);Z=np.zeros_like(I)
-    Lm=np.block([[-A1,-A0],[I,Z]])
-    Rm=np.block([[A2,Z],[Z,I]])
+    n=A0.shape[0];identity_mat=np.eye(n,dtype=complex);Z=np.zeros_like(identity_mat)
+    Lm=np.block([[-A1,-A0],[identity_mat,Z]])
+    Rm=np.block([[A2,Z],[Z,identity_mat]])
     z,V=eig(Lm,Rm,right=True,check_finite=False)
     good=np.isfinite(z.real)&np.isfinite(z.imag)&(np.abs(z)<1e8)
     z=z[good];V=V[:,good]

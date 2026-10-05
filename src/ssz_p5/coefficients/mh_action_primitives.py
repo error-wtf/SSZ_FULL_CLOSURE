@@ -25,7 +25,8 @@ def _col(d: pd.DataFrame, *names: str) -> np.ndarray:
     raise ValueError(f"missing required column; expected one of {names!r}")
 
 
-def quartic_g5zero_primitives(action: pd.DataFrame, *, window: int = 9, degree: int = 8) -> pd.DataFrame:
+def quartic_g5zero_primitives(action: pd.DataFrame, *, window: int = 9,
+    degree: int = 8) -> pd.DataFrame:
     """Derive F,G,H,a1,c4 and dc2/dG2XX from G5=0 action jets.
 
     Accepted geometry aliases are ``x``/``r_over_rs``, ``f``/``A_f`` and

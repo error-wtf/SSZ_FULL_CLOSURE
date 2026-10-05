@@ -88,7 +88,7 @@ def test_release_metadata_current():
                                   str(got), head], capture_output=True)
             if anc.returncode == 0:
                 continue
-        assert False, (
+        raise AssertionError(
             f"{name}: git_commit {str(got)[:7]} is stale vs HEAD {head[:7]} - "
             "run: PYTHONPATH=src python tools/refresh_release_metadata.py, "
             "then commit (or amend) before packaging")

@@ -152,8 +152,8 @@ def artifact_integrity() -> dict:
     checks = {}
     if sums_path.exists():
         import hashlib
-        lines = [l.split("  ", 1) for l in
-                 sums_path.read_text().splitlines() if l.strip()]
+        lines = [ell.split("  ", 1) for ell in
+                 sums_path.read_text().splitlines() if ell.strip()]
         table = {p: h for h, p in lines}
         for f in ("ABSOLUTE_FULL_CLOSURE_AUDIT.json",
                   "ABSOLUTE_FULL_CLOSURE_REPORT.md",

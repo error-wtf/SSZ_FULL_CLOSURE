@@ -155,9 +155,9 @@ def qnm_pencil(P,x,indices,L):
         A1[rout,rout]=1.0
 
     N=A0.shape[0]
-    I=np.eye(N,dtype=complex);Z=np.zeros_like(I)
-    Lm=np.block([[-A1,-A0],[I,Z]])
-    Rm=np.block([[A2,Z],[Z,I]])
+    identity_mat=np.eye(N,dtype=complex);Z=np.zeros_like(identity_mat)
+    Lm=np.block([[-A1,-A0],[identity_mat,Z]])
+    Rm=np.block([[A2,Z],[Z,identity_mat]])
     vals=eig(Lm,Rm,right=False,check_finite=False)
     vals=vals[np.isfinite(vals.real)&np.isfinite(vals.imag)]
     # remove enormous descriptor/infinite artifacts

@@ -55,8 +55,8 @@ def descriptor_kr0(stream,L,ns=32):
   A=[np.zeros((nf,nf),complex) for _ in range(3)]
   for (pt,pr),B in P.items():
    if pr==0:A[pt]+=B[i]
-  n=nf;I=np.eye(n,dtype=complex);Z=np.zeros_like(I)
-  z,V=eig(np.block([[-A[1],-A[0]],[I,Z]]),np.block([[A[2],Z],[Z,I]]),right=True,check_finite=False)
+  n=nf;identity_mat=np.eye(n,dtype=complex);Z=np.zeros_like(identity_mat)
+  z,V=eig(np.block([[-A[1],-A[0]],[identity_mat,Z]]),np.block([[A[2],Z],[Z,identity_mat]]),right=True,check_finite=False)
   good=np.isfinite(z.real)&np.isfinite(z.imag)&(np.abs(z)<1e8)
   z=z[good];V=V[:,good]
   for j,lam in enumerate(z):

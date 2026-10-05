@@ -15,8 +15,8 @@ than a pre-eliminated KRGSM matrix.
 """
 from __future__ import annotations
 
+from collections.abc import Iterable
 from math import comb
-from typing import Dict, Iterable, Tuple
 
 import numpy as np
 import pandas as pd
@@ -35,7 +35,7 @@ SLOTS = (
 )
 
 # coefficient profile, field i, derivative i, field j, derivative j
-ProfileTerm = Tuple[np.ndarray, int, Tuple[int, int], int, Tuple[int, int]]
+ProfileTerm = tuple[np.ndarray, int, tuple[int, int], int, tuple[int, int]]
 
 
 def _deriv(r: np.ndarray, a: np.ndarray, order: int, window: int, degree: int) -> np.ndarray:
@@ -121,7 +121,7 @@ def _profile_terms(df: pd.DataFrame, L: float) -> list[ProfileTerm]:
     return out
 
 
-def _addop(dst: Dict[Tuple[int, int], np.ndarray], key, val) -> None:
+def _addop(dst: dict[tuple[int, int], np.ndarray], key, val) -> None:
     if key in dst:
         dst[key] += val
     else:
@@ -133,7 +133,7 @@ def descriptor_operator(
     L: float,
     window: int = 9,
     degree: int = 8,
-) -> Dict[Tuple[int, int], np.ndarray]:
+) -> dict[tuple[int, int], np.ndarray]:
     """Assemble the 8x8 Euler differential operator before constraints.
 
     Returned keys are ``(time_derivative_order, radial_derivative_order)`` and
@@ -144,7 +144,7 @@ def descriptor_operator(
         raise KeyError("descriptor requires radial column 'x'")
     r = d["x"].to_numpy(float)
     n = len(d)
-    P: Dict[Tuple[int, int], np.ndarray] = {}
+    P: dict[tuple[int, int], np.ndarray] = {}
 
     def one_side(c, i, a, j, b):
         at, ar = a
@@ -164,7 +164,7 @@ def descriptor_operator(
 
 
 def evaluate_symbol(
-    P: Dict[Tuple[int, int], np.ndarray],
+    P: dict[tuple[int, int], np.ndarray],
     omega: complex,
     kr: complex,
     index: int | slice | None = None,
@@ -212,7 +212,7 @@ def schur_symbol(
     return Akk - Aka @ X, {"aux_condition": cond, "aux_rank": rank, "method": method}
 
 
-def structural_audit(P: Dict[Tuple[int, int], np.ndarray]) -> dict:
+def structural_audit(P: dict[tuple[int, int], np.ndarray]) -> dict:
     """Basic exact-architecture diagnostics for a descriptor profile."""
     max_order = max((pt + pr for pt, pr in P), default=0)
     max_time = max((pt for pt, _ in P), default=0)
@@ -245,7 +245,8 @@ def _apply_row_derivative(op, dt, dr, r, window, degree):
     return out
 
 
-def generalized_psi_maps(df: pd.DataFrame, L: float) -> dict[str, dict[tuple[int, int], np.ndarray]]:
+def generalized_psi_maps(df: pd.DataFrame, L: float) -> dict[str, dict[tuple[int, int],
+    np.ndarray]]:
     """Original fields as differential rows on the constraint-preserving basis.
 
     The only nontrivial map is
@@ -282,7 +283,7 @@ def generalized_psi_maps(df: pd.DataFrame, L: float) -> dict[str, dict[tuple[int
 
 
 def _adjoint_rows(A, c, B, r, window, degree):
-    n = len(r)
+    _ = len(r)
     out = {}
     for (pt, pr), av in A.items():
         for (qt, qr), bv in B.items():
@@ -299,7 +300,7 @@ def generalized_psi_descriptor(
     L: float,
     window: int = 9,
     degree: int = 8,
-) -> Dict[Tuple[int, int], np.ndarray]:
+) -> dict[tuple[int, int], np.ndarray]:
     """Constraint-preserving 8x8 descriptor in the generalized-psi basis.
 
     Unlike the production 3-field reducer, this performs the safe differential
@@ -326,7 +327,7 @@ def generalized_psi_descriptor(
     return P
 
 
-def h0_constraint_structure(P: Dict[Tuple[int, int], np.ndarray]) -> dict:
+def h0_constraint_structure(P: dict[tuple[int, int], np.ndarray]) -> dict:
     """Audit the generalized-psi H0 row before solving the constraint."""
     ih0 = PFI["H0"]
     idphi = PFI["dphi"]
@@ -392,7 +393,7 @@ def expected_h0_constraint_coefficients(
 def compare_h0_constraint(
     df: pd.DataFrame,
     L: float,
-    P: Dict[Tuple[int, int], np.ndarray] | None = None,
+    P: dict[tuple[int, int], np.ndarray] | None = None,
     window: int = 9,
     degree: int = 8,
 ) -> dict:
@@ -426,7 +427,8 @@ def compare_h0_constraint(
     out["pass"] = bool(
         out["structure"]["pass"]
         and out["H0_square_max_abs"] < 1e-8
-        and max(v["max_scaled"] for k, v in out.items() if isinstance(v, dict) and "max_scaled" in v) < 1e-8
+        and max(v["max_scaled"] for k, v in out.items() if isinstance(v,
+            dict) and "max_scaled" in v) < 1e-8
     )
     return out
 
@@ -481,12 +483,12 @@ def physical_reduction_maps(
 
 
 def pullback_descriptor(
-    P: Dict[Tuple[int, int], np.ndarray],
+    P: dict[tuple[int, int], np.ndarray],
     maps: dict[str, dict[tuple[int, int], np.ndarray]],
     r: np.ndarray,
     window: int = 9,
     degree: int = 8,
-) -> Dict[Tuple[int, int], np.ndarray]:
+) -> dict[tuple[int, int], np.ndarray]:
     """Compute ``T^dagger P T`` as a 3-field differential operator.
 
     ``P`` is the generalized-psi descriptor Euler operator and ``maps`` is the
@@ -494,7 +496,7 @@ def pullback_descriptor(
     rules are evaluated with the same JET9D8 service as the production reducer.
     """
     rr = np.asarray(r, float)
-    n = len(rr)
+    _ = len(rr)
 
     # First U = P T.  Each U[field] is a scalar row differential operator on y.
     U: dict[str, dict[tuple[int, int], np.ndarray]] = {name: {} for name in PSI_FIELDS}
@@ -511,7 +513,7 @@ def pullback_descriptor(
                         _add_rowop(U[aname], (pt + qt, pr - k + qr), val)
 
     # Then Q = T^dagger U.
-    Q: Dict[Tuple[int, int], np.ndarray] = {}
+    Q: dict[tuple[int, int], np.ndarray] = {}
     for name in PSI_FIELDS:
         for (pt, pr), trow in maps[name].items():
             sign = (-1.0) ** (pt + pr)

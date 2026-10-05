@@ -21,7 +21,8 @@ REGION_SOURCES = {
 }
 
 
-def apply_eps_y(frame: pd.DataFrame, *, epsilon: float = EPSILON_Y, window: int = 9, degree: int = 8) -> pd.DataFrame:
+def apply_eps_y(frame: pd.DataFrame, *, epsilon: float = EPSILON_Y, window: int = 9,
+    degree: int = 8) -> pd.DataFrame:
     d = frame.copy().sort_values("x").reset_index(drop=True)
     r = d.x.to_numpy(float)
     if np.any(np.diff(r) <= 0):
@@ -31,7 +32,8 @@ def apply_eps_y(frame: pd.DataFrame, *, epsilon: float = EPSILON_Y, window: int 
             raise KeyError("phi_r/phiprime")
         d["phi_r"] = d.phiprime
     ph, f, h = d.phi_r.to_numpy(float), d.f.to_numpy(float), d.h.to_numpy(float)
-    dr = lambda y, order=1: profile_derivative(r, np.asarray(y, float), order, window, degree)
+    def dr(y, order=1):
+        return profile_derivative(r, np.asarray(y, float), order, window, degree)
     d["A0prime"] = 0.0
     d["phiprime"] = ph
     d["c3"] = 0.0
@@ -45,7 +47,9 @@ def apply_eps_y(frame: pd.DataFrame, *, epsilon: float = EPSILON_Y, window: int 
     d["v10"] = d.v10.to_numpy(float) + np.sqrt(f * h) * h * ph**2 * epsilon
     d["kappa"] = h * ph**2
     d["Z_A"] = 1.0 - 2.0 * epsilon * d.kappa
-    slots = [*(f"a{i}" for i in range(1,10)),*(f"b{i}" for i in range(1,6)),*(f"c{i}" for i in range(1,7)),*(f"d{i}" for i in range(1,5)),*(f"e{i}" for i in range(1,5)),*(f"v{i}" for i in range(1,14))]
+    slots = [*(f"a{i}" for i in range(1,10)),*(f"b{i}" for i in range(1,6)),
+        *(f"c{i}" for i in range(1,7)),*(f"d{i}" for i in range(1,5)),*(f"e{i}" for i in range(1,
+            5)),*(f"v{i}" for i in range(1,14))]
     if not np.isfinite(d[slots].to_numpy(float)).all():
         raise ValueError("nonfinite HSVT coefficient stream")
     return d

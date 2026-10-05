@@ -70,7 +70,8 @@ def EOM_core_f2Y_explicit(f2Y_value=None):
     E00f = (r**2*(f*f2 - h*ap**2*f2F_eff) - 2*r*h**2*ph*ap**2*f3
             + h*ap**2*(4*(h-1)*f4 - h**2*ph**2*(f4X + 2*tf4)))
     E11f = (r**2*(f*f2 + f*h*ph**2*f2X - h*ap**2*f2F_eff)
-            - 2*r*h**2*ph*ap**2*(3*f3 - h*ph**2*f3X) + h*ap**2*(4*(h-1)*f4 - h**2*ph**2*(f4X+2*tf4)))
+            - 2*r*h**2*ph*ap**2*(3*f3 - h*ph**2*f3X)
+            + h*ap**2*(4*(h-1)*f4 - h**2*ph**2*(f4X+2*tf4)))
     JAf = sp.sqrt(h/f)*ap*(r**2*f2F_eff + 4*r*h*ph*f3 + 8*(1-h)*f4 + 2*h**2*ph**2*(f4X + 2*tf4))
     return {'E00': E00f, 'E11': E11f, 'JA': JAf}
 

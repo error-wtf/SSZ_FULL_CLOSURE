@@ -15,13 +15,13 @@ an independent layer and are not supplied by this module.
 """
 from __future__ import annotations
 
+from collections.abc import Iterable
 from math import factorial
-from typing import Dict, Iterable, Tuple
 
 import numpy as np
 from scipy import sparse
 
-Operator = Dict[Tuple[int, int], np.ndarray]
+Operator = dict[tuple[int, int], np.ndarray]
 
 
 def local_poly_differentiation_matrix(
@@ -138,10 +138,10 @@ def quadratic_descriptor_linearization(
     if A0.shape != A1.shape or A0.shape != A2.shape or A0.shape[0] != A0.shape[1]:
         raise ValueError("quadratic blocks must be same-size square matrices")
     n = A0.shape[0]
-    I = sparse.identity(n, format="csr")
+    identity_mat = sparse.identity(n, format="csr")
     Z = sparse.csr_matrix((n, n), dtype=float)
-    left = sparse.bmat([[-A1, -A0], [I, Z]], format="csr")
-    right = sparse.bmat([[A2, Z], [Z, I]], format="csr")
+    left = sparse.bmat([[-A1, -A0], [identity_mat, Z]], format="csr")
+    right = sparse.bmat([[A2, Z], [Z, identity_mat]], format="csr")
     return left, right
 
 

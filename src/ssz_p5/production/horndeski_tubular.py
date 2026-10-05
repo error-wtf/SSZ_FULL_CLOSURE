@@ -150,10 +150,18 @@ def g4xx_background_null_section(background: pd.DataFrame, q) -> pd.DataFrame:
     q = np.asarray(q, float)
     if q.shape != (len(d),):
         raise ValueError("q profile length mismatch")
-    r=d.x.to_numpy(float); f=d.f.to_numpy(float); h=d.h.to_numpy(float); X=d.X.to_numpy(float)
+    r=d.x.to_numpy(float)
+    f=d.f.to_numpy(float)
+    h=d.h.to_numpy(float)
+    X=d.X.to_numpy(float)
     ph=d.phiprime.to_numpy(float) if "phiprime" in d else -np.sqrt(np.maximum(0.0,-2*X/h))
     D=derivative_matrix(r)
-    fp=np.asarray(D@f).ravel(); hp=np.asarray(D@h).ravel(); fpp=np.asarray((D@D)@f).ravel(); phipp=np.asarray(D@ph).ravel(); Xp=np.asarray(D@X).ravel(); Xphi=Xp/ph
+    fp=np.asarray(D@f).ravel()
+    hp=np.asarray(D@h).ravel()
+    fpp=np.asarray((D@D)@f).ravel()
+    phipp=np.asarray(D@ph).ravel()
+    Xp=np.asarray(D@X).ravel()
+    Xphi=Xp/ph
 
     def eoms(C1,C2,C4,C6,C7,C9):
         E00=(C1+C2/r)*phipp + (ph*C1/(2*h)+C4/r)*hp + C6+C7/r
@@ -183,8 +191,11 @@ def g4xx_background_null_section(background: pd.DataFrame, q) -> pd.DataFrame:
         raise RuntimeError("G2X background pivot vanished")
     gx_unit=-rem11/Ex[1]
 
-    p=p_unit*q; g0=g_unit*q; gx=gx_unit*q
-    G4phiX=-q*Xphi; G4phiphi=q*Xphi**2
+    p=p_unit*q
+    g0=g_unit*q
+    gx=gx_unit*q
+    G4phiX=-q*Xphi
+    G4phiphi=q*Xphi**2
     G3phi=-p*Xphi
     # Holonomic G2_phi for a valid on-curve first jet section.
     g0p=np.asarray(D@g0).ravel()
@@ -200,9 +211,13 @@ def g4xx_background_null_section(background: pd.DataFrame, q) -> pd.DataFrame:
     )
 
     # Direct null audit with the solved amplitudes.
-    E0=np.zeros_like(r); E1=np.zeros_like(r); E2=np.zeros_like(r)
+    E0=np.zeros_like(r)
+    E1=np.zeros_like(r)
+    E2=np.zeros_like(r)
     for coeff,resp in ((q,Eq),(p,Ep),(g0,Eg),(gx,Ex)):
-        E0 += coeff*resp[0]; E1 += coeff*resp[1]; E2 += coeff*resp[2]
+        E0 += coeff*resp[0]
+        E1 += coeff*resp[1]
+        E2 += coeff*resp[2]
 
     return pd.DataFrame({
         "x":r,

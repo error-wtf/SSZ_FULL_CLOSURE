@@ -24,7 +24,8 @@ def _arr(d: pd.DataFrame, name: str, default=None) -> np.ndarray:
     return np.asarray(default, float)
 
 
-def complete_total_action_jets(df: pd.DataFrame, *, window: int = 9, degree: int = 8) -> pd.DataFrame:
+def complete_total_action_jets(df: pd.DataFrame, *, window: int = 9,
+    degree: int = 8) -> pd.DataFrame:
     """Complete mixed phi jets by the total-action on-curve chain rules.
 
     Unlike a background-null *additive* Hessian, a total action obeys H t = g',
@@ -87,7 +88,8 @@ def complete_total_action_jets(df: pd.DataFrame, *, window: int = 9, degree: int
     return d
 
 
-def emit_lower_slots(df: pd.DataFrame, *, window: int = 9, degree: int = 8) -> tuple[pd.DataFrame, pd.DataFrame]:
+def emit_lower_slots(df: pd.DataFrame, *, window: int = 9, degree: int = 8) -> tuple[pd.DataFrame,
+    pd.DataFrame]:
     """Return direct Appendix-A (v5,c3,e3) and the completed total-action jets."""
     d = complete_total_action_jets(df, window=window, degree=degree)
     r, f, h, ph, A = (_arr(d, c) for c in ("x", "f", "h", "phiprime", "A0prime"))
@@ -159,7 +161,8 @@ def audit_central_lower(root) -> dict:
     d = central_action_inputs(root).sort_values("x").reset_index(drop=True)
     direct, _ = emit_lower_slots(d)
     ref = central_selected(root).sort_values("x").reset_index(drop=True)
-    selected = {"v5": ref.v5.to_numpy(), "c3": d.selected_c3.to_numpy(), "e3": d.selected_e3.to_numpy()}
+    selected = {"v5": ref.v5.to_numpy(), "c3": d.selected_c3.to_numpy(),
+        "e3": d.selected_e3.to_numpy()}
     mask = (d.u.to_numpy() > 0.62) & (d.u.to_numpy() < 0.70)
     errors = {}
     for name in ("v5", "c3", "e3"):

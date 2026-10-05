@@ -72,11 +72,11 @@ def metric_overlap(Va, Vb, Ka, Kb):
 
 
 def best_perm(prevV, curV, prevK, curK):
-    O = np.abs(metric_overlap(prevV, curV, prevK, curK))
-    n = O.shape[0]
+    obs_o = np.abs(metric_overlap(prevV, curV, prevK, curK))
+    n = obs_o.shape[0]
     best = None
     for p in itertools.permutations(range(n)):
-        score = float(sum(O[i, p[i]] for i in range(n)))
+        score = float(sum(obs_o[i, p[i]] for i in range(n)))
         if best is None or score > best[0]:
             best = (score, p)
     return list(best[1]), float(best[0] / n)
@@ -91,9 +91,9 @@ def track(omegas, vecs, Ks):
         p, sc = best_perm(tv[-1], vecs[i], Ks[i - 1], Ks[i])
         v = vecs[i][:, p].copy()
         o = omegas[i][p].copy()
-        O = metric_overlap(tv[-1], v, Ks[i - 1], Ks[i])
+        obs_o = metric_overlap(tv[-1], v, Ks[i - 1], Ks[i])
         for j in range(v.shape[1]):
-            if O[j, j] < 0:
+            if obs_o[j, j] < 0:
                 v[:, j] *= -1.0
         to.append(o)
         tv.append(v)

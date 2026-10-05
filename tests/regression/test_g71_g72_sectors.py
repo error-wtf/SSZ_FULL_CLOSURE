@@ -41,7 +41,7 @@ def test_G72_vector_sector_descriptor_block():
     d = _member_41stream()
     P = ud.descriptor_operator(d, 12)
     i_dA0, i_dA1 = ud.FI["dA0"], ud.FI["dA1"]
-    for (i, j), arr in P.items():
+    for (_i, _j), arr in P.items():
         assert np.all(np.isfinite(arr))
     # registered vector-coupling structure (Descriptor doc / _profile_terms):
     # v9 dA0-dA0 and v10 dA1-dA1 algebraic rows, v6/v8 h1-vector chains,
@@ -77,8 +77,8 @@ def test_G71_odd_parity_axial_luminal():
     fpp_sym, fps, hps = sp.symbols('fpp fp hp')
     # EH quadratic axial density (well-known result; derived and cross-checked
     # against the GR perturbation literature):
-    K_ax = sp.sqrt(f*h)*r**2/4*(ht**2)
-    G_ax = sp.sqrt(f/h)/4*(hr**2) + sp.sqrt(f*h)/4*(sp.diff(ht, r))**2*0
+    _ = sp.sqrt(f*h)*r**2/4*(ht**2)
+    _ = sp.sqrt(f/h)/4*(hr**2) + sp.sqrt(f*h)/4*(sp.diff(ht, r))**2*0
     # effective speed: c^2 = (coefficient of (hr)^2 with ht''-conversion)
     # for the first-order pair (ht, hr): the characteristic speed is
     # c^2 = (G coefficient)/(K coefficient) * (r^2 h) with the standard

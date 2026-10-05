@@ -37,7 +37,8 @@ def test_reference_action_and_projection_checkpoint():
     assert report['first_published_shortcut_divergence']=='EQ47_MIXED_MISSING_K_TO_M_PROJECTION_FACTOR'
     r=report['representative']
     assert r['leading_eps_power']==3
-    np.testing.assert_allclose([r[f'action_root{i}'] for i in range(3)],[-164.97552195,1,4218.66284408],rtol=1e-6)
+    np.testing.assert_allclose([r[f'action_root{i}'] for i in range(3)],[-164.97552195,1,
+        4218.66284408],rtol=1e-6)
     np.testing.assert_allclose([r['action_B1'],r['action_B2']],[r['null_quadratic_B1'],r['null_quadratic_B2']],rtol=1e-8)
     assert report['finite_L_to_laurent']=='PASS'
     assert report['continuation_0p708_to_0p715']=='HELD'

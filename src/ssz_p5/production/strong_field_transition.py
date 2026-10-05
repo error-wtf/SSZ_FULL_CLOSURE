@@ -211,7 +211,8 @@ def kinetic_transition_scan(stream: pd.DataFrame, L_values=REQUIRED_L) -> tuple[
     return pd.DataFrame(records), summary
 
 
-def g2xx_kinetic_null_test(stream: pd.DataFrame, action: pd.DataFrame, amplitude: float = 1.0e4) -> dict:
+def g2xx_kinetic_null_test(stream: pd.DataFrame, action: pd.DataFrame,
+    amplitude: float = 1.0e4) -> dict:
     """Falsification test: can the existing background-null G2XX lift repair K?
 
     The known G2XX action response changes c2,c6,e2.  We apply a compact
