@@ -569,8 +569,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 17029,
-      "sha256": "878595e7c7a31dbefdfae5746158b515864db733b4cfca6e2c42ca53e4db1c44"
+      "size_bytes": 18009,
+      "sha256": "a7fa1660c312967c4b0b365166db8596d69c421eafc421a055c5d7575148975f"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -3406,6 +3406,11 @@
       "path": "data/generated/spectral/F4_FINITE_L_HEALTH_V4_ATTEMPT_BLOCKED_RECORD.json",
       "size_bytes": 2003,
       "sha256": "c83352e57b48c49a0d63006a05ed333701d4d9ba7cc186ba063797c8a31895b6"
+    },
+    {
+      "path": "data/generated/spectral/F4_FINITE_L_HEALTH_V4_KPHYS_V2.json",
+      "size_bytes": 2658,
+      "sha256": "b68a5dd8e50c0387d49b19e99f74efac6958d1a2074a64b94d9b016831c49766"
     },
     {
       "path": "data/generated/spectral/F4_FINITE_L_HEALTH_V4_S_PROJECTED_V1.json",
@@ -6631,6 +6636,11 @@
       "path": "tools/run_current_member_inner_radial_finite_continuation.py",
       "size_bytes": 10733,
       "sha256": "6e13533ec9b53a46f61baa7406ed51f619400e806fadee027461b67c0227e970"
+    },
+    {
+      "path": "tools/run_f4_finite_l_kphys_v2.py",
+      "size_bytes": 7437,
+      "sha256": "98fc314faa803acd5c150d5d7b7c7d0de8abe0c78224d525987f407f44aeb201"
     },
     {
       "path": "tools/run_f4_finite_l_s_projected.py",

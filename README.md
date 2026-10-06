@@ -33,13 +33,18 @@ pushed.**
 >    (`B6_ASYMPTOTIC_STRUCTURE_V1.json`, `JOST_QNM_CANDIDATES_V1.json`,
 >    `NORMAL_MODE_VERIFICATION_V1.json`): BOTH certified geometries (frozen
 >    member AND ghost-free V4 branch) are HORIZONLESS over the certified
->    radial window — f never approaches 0.  The first Jost scan (scalar
->    toy model, Neumann outer BC — a forced cavity) found no off-axis
->    zeros; this does NOT prove the absence of resonances: horizonless
->    objects CAN carry damped resonances (regularity inside + outgoing
->    infinity).  The scan's limitations are recorded: scalar-only model,
->    outer edge at r≈1.408 r_s is NOT infinity, e^{2iωr} was a local
->    edge approximation.
+>    radial window — f never approaches 0.  **CORRECTED after review:
+>    horizonless does NOT imply no QNMs.**  Horizonless compact objects
+>    (relativistic stars) carry damped resonances with regularity-inside
+>    + outgoing-infinity BCs; the horizon is only one possible absorbing
+>    inner condition.  The first Jost scan used a scalar toy model with a
+>    Neumann outer BC (a forced cavity — ψ'(r_max)=0), so its "no
+>    off-axis zeros / flat-cavity 8.2e-05" result validates the solver
+>    on the imposed cavity, NOT the physical spectrum.  The window also
+>    ends at r≈1.408 r_s — not infinity; e^{2iωr} there was a local edge
+>    approximation, not a proven asymptotic condition.  **The actual
+>    blocker is the indefinite kinetic channel** (λ_min(K) ≈ −7.15e4
+>    reduced; λ_min(B) ≈ −9.86 bridge-side, independent).
 > 5. **V4_PHYSICAL_DOF_AUDIT_V1 + REFINED — the declared fork is decided:**
 >    the negative 3×3 kinetic channel is a **CONSTRAINT ARTIFACT**, 100%
 >    concentrated in the chi(dphi) Lagrange-multiplier channel
@@ -49,10 +54,18 @@ pushed.**
 >    growing monotonically outward.  **The ghost-free V4 branch survives
 >    the constraint audit — it is alive.**
 >
-> **Global physical QNM claims remain closed on the research branch
-> pending B6v2 (full exterior asymptotics + coupled Jost/ECS) — the
-> blocker is now the exterior continuation and the coupled solver,
-> not a kinetic pathology.**
+> **ROADMAP CORRECTED (review 06.10):**
+> branch consistency (identical a1/eps/profile/operator hashes through ALL
+> stages — F.4 ran on ε=−0.5 while the audit ran on ε=−0.3; this drift
+> must be closed) → physical DOF audit on ONE exact branch → K_phys health
+> (min λ(K_phys) > 0 or branch dead — a bulk ghost is not rescued by BCs)
+> → global exterior continuation/matching → physical BCs → coupled
+> 3×3 Jost + ECS (the diagonal scalar proxy does NOT certify absence of
+> QNMs).  Do NOT construct a horizon-bearing member merely to obtain
+> QNM spectroscopy; horizonless resonance problems (regular interior +
+> outgoing infinity) are valid, and the horizon must be an outcome of
+> the theory, not an entrance ticket.  Global physical QNM claims remain
+> closed on the research branch.
 
 *Research repository · Carmen Casu and Lino Casu · Anti-Capitalist
 Software License v1.4*
