@@ -1,0 +1,95 @@
+{
+ "audit": "V4_CURVATURE_BENCHMARKS_V3",
+ "extends": "V4_CURVATURE_INVARIANTS_V2 (b25d315)",
+ "naming": {
+  "RicciScalar": "R",
+  "RicciSquared": "R_{mu nu}R^{mu nu}",
+  "Kretschmann": "R_{mu nu rho sigma}R^{mu nu rho sigma}"
+ },
+ "bench_minkowski": {
+  "RicciScalar": "0",
+  "RicciSquared": "0",
+  "Kretschmann": "0",
+  "pass": true
+ },
+ "bench_schwarzschild": {
+  "RicciScalar": "0",
+  "RicciSquared": "0",
+  "Kretschmann": "48*M**2/r**6",
+  "pass": true
+ },
+ "bench_de_sitter": {
+  "RicciScalar": "12*H**2",
+  "RicciSquared": "36*H**4",
+  "Kretschmann": "24*H**4",
+  "pass": true
+ },
+ "de_sitter_decisive": {
+  "note": "Minkowski and Schwarzschild both have R = Ricci^2 = 0, so a broken Ricci contraction can pass both by accident. de Sitter forces the Ricci structure to produce the known nontrivial (12H\u00b2, 36H\u2074, 24H\u2074).",
+  "pass": true
+ },
+ "bench_random_functions": {
+  "RicciScalar": {
+   "max_abs_A": 0.001073626049435539,
+   "grid_scale": 0.001073626049435539,
+   "A_vs_B_max_rel_grid_scaled": 0.00087574290637807,
+   "abs_agreement": true
+  },
+  "RicciSquared": {
+   "max_abs_A": 0.0019563856565249886,
+   "grid_scale": 0.0019563856565249886,
+   "A_vs_B_max_rel_grid_scaled": 1.7856486556669835e-05,
+   "abs_agreement": true
+  },
+  "Kretschmann": {
+   "max_abs_A": 0.004537348674719758,
+   "grid_scale": 0.004537348674719758,
+   "A_vs_B_max_rel_grid_scaled": 2.1678951799408015e-05,
+   "abs_agreement": true
+  },
+  "route_C_at_r7": {
+   "RicciScalar": {
+    "A": 4.985543009508291e-06,
+    "C_finite_diff": 7.972261682630535e-07,
+    "abs_diff": 4.188316841245238e-06
+   },
+   "RicciSquared": {
+    "A": 1.0825999672589032e-06,
+    "C_finite_diff": 1.1311723538811492e-06,
+    "abs_diff": 4.8572386622245905e-08
+   },
+   "Kretschmann": {
+    "A": 2.434813490115658e-06,
+    "C_finite_diff": 2.545988500239442e-06,
+    "abs_diff": 1.1117501012378378e-07
+   }
+  },
+  "all_routes_agree": true
+ },
+ "asymptotic_power_fit": {
+  "window_r": [
+   20.0,
+   395.0
+  ],
+  "fits": {
+   "Kretschmann": {
+    "power_p": -6.0001,
+    "const_C": -18.3381,
+    "expected_p_masslike": -6.0,
+    "masslike_tail_1_over_r6": true
+   },
+   "RicciSquared": {
+    "power_p": -7.2675,
+    "const_C": -27.2472
+   },
+   "RicciScalar": {
+    "power_p": -3.5251,
+    "const_C": -14.4665
+   }
+  },
+  "note": "log K = p log r + C on the outer branch; a mass-like 1/r tail predicts p ~ -6 for Kretschmann."
+ },
+ "all_benchmarks_pass": true,
+ "final_classification": "ASYMPTOTICALLY_MINKOWSKI_NONUNIT_LAPSE",
+ "wall_seconds": 1.3
+}
