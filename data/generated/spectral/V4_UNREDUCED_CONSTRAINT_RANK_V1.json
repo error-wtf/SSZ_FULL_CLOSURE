@@ -1,0 +1,114 @@
+{
+ "audit": "V4_UNREDUCED_CONSTRAINT_RANK_V1",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.3
+ },
+ "fields": [
+  "H0",
+  "H1",
+  "H2",
+  "h1",
+  "dphi",
+  "dA0",
+  "dA1",
+  "V"
+ ],
+ "structural_audit": {
+  "fields": [
+   "H0",
+   "H1",
+   "H2",
+   "h1",
+   "dphi",
+   "dA0",
+   "dA1",
+   "V"
+  ],
+  "operator_keys": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    0
+   ]
+  ],
+  "max_total_derivative_order": 2,
+  "max_time_derivative_order": 2,
+  "max_radial_derivative_order": 2
+ },
+ "kinetic_fields": {
+  "H0": {
+   "has_kinetic": false,
+   "max_abs_diag_coeff": 0.0,
+   "n_nodes_kinetic": 0
+  },
+  "H1": {
+   "has_kinetic": false,
+   "max_abs_diag_coeff": 0.0,
+   "n_nodes_kinetic": 0
+  },
+  "H2": {
+   "has_kinetic": false,
+   "max_abs_diag_coeff": 0.0,
+   "n_nodes_kinetic": 0
+  },
+  "h1": {
+   "has_kinetic": true,
+   "max_abs_diag_coeff": 5.977327234595649,
+   "n_nodes_kinetic": 3500
+  },
+  "dphi": {
+   "has_kinetic": true,
+   "max_abs_diag_coeff": 3801575.995204598,
+   "n_nodes_kinetic": 3500
+  },
+  "dA0": {
+   "has_kinetic": false,
+   "max_abs_diag_coeff": 0.0,
+   "n_nodes_kinetic": 0
+  },
+  "dA1": {
+   "has_kinetic": false,
+   "max_abs_diag_coeff": 0.0,
+   "n_nodes_kinetic": 0
+  },
+  "V": {
+   "has_kinetic": false,
+   "max_abs_diag_coeff": 0.0,
+   "n_nodes_kinetic": 0
+  }
+ },
+ "dphi_offdiag_kinetic_max": 1.818281867770833,
+ "fields_without_kinetic": [
+  "H0",
+  "H1",
+  "H2",
+  "dA0",
+  "dA1",
+  "V"
+ ],
+ "n_fields_without_kinetic": 6,
+ "dphi_is_dynamical_in_unreduced_action": true,
+ "verdict": "NO_PRIMARY_CONSTRAINT_REMOVES_DPHI \u2014 dphi carries kinetic terms in the unreduced Euler descriptor, so the negative dphi direction in the reduced 3x3 K is a PHYSICAL kinetic pathology of this V4 branch. Rule 8/9: branch (a1=+0.5, eps=-0.3) is REJECTED for resonance work unless no V4 candidate survives; scan the N4 V4 branch family.",
+ "dof_verdict": "3 physical DOF (psi, dphi, V) confirmed from the unreduced action; the earlier 2x2 'K_phys' projection verdict is INVALID (projection without constraint).",
+ "wall_seconds": 3.8
+}

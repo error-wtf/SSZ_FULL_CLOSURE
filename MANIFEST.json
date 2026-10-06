@@ -3583,6 +3583,11 @@
       "sha256": "5e5f3d6a23f0632d8954913946eacfc1f36738bca3408c83da234198b3f33e6a"
     },
     {
+      "path": "data/generated/spectral/V4_FULL_3DOF_BRANCH_HEALTH_V1.json",
+      "size_bytes": 1413,
+      "sha256": "5a146f769e7f3c5e477d43556ee7361d37c0f03622baef2f9d1cd508d577ac04"
+    },
+    {
       "path": "data/generated/spectral/V4_GHOSTFREE_BRANCH_EXPORT_V1.json",
       "size_bytes": 845,
       "sha256": "29bf30afade40c8e51eeda98142d6f73356168724e477120f40fe7a9ed4bb287"
@@ -3651,6 +3656,11 @@
       "path": "data/generated/spectral/V4_S_TERM_PROVENANCE.json",
       "size_bytes": 1909,
       "sha256": "fdf022e0fdc25d8cc70d31b5116d1f624f38187e41c7e88cdc36cad54b79be9f"
+    },
+    {
+      "path": "data/generated/spectral/V4_UNREDUCED_CONSTRAINT_RANK_V1.json",
+      "size_bytes": 2137,
+      "sha256": "b1da5eb82aeb34e9e951ddd1e5d2f0cab5d63f81dd428c6d327fad34219dc22b"
     },
     {
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_REPRODUCTION.json",
@@ -6838,6 +6848,11 @@
       "sha256": "117e90a9aa3e4b202f69a05087ff6d185fd8a1874784bbb59af0ee7a53e8ff17"
     },
     {
+      "path": "tools/run_v4_full3dof_branch_health.py",
+      "size_bytes": 6333,
+      "sha256": "6ae1356afd65d68df12816fff3a67a30a49aaa1f6e89db77dc9e489cf9214f1c"
+    },
+    {
       "path": "tools/run_v4_global_exterior.py",
       "size_bytes": 11884,
       "sha256": "1f415d7118c1430c8039d5303435a813c3f63798380754d894248421bc2fa518"
@@ -6886,6 +6901,11 @@
       "path": "tools/run_v4_schur_vs_strike_diagnostic.py",
       "size_bytes": 7723,
       "sha256": "e58b021c3413d9519496bd68e22d7bb82c666898108553959bdba050fcf5a998"
+    },
+    {
+      "path": "tools/run_v4_unreduced_constraint_rank.py",
+      "size_bytes": 7045,
+      "sha256": "7a407f89262e2ba0fc23a47c3a4284d85e1c8cc79a25bf242c4a67a42169f30c"
     },
     {
       "path": "tools/show_code_map.py",

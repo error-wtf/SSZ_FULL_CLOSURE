@@ -1,0 +1,71 @@
+{
+ "audit": "V4_FULL_3DOF_BRANCH_HEALTH_V1",
+ "declared_rule": "healthy = min eig K(3x3) > 0 over the window, rank 3 everywhere, regular integration; NO observation fitting",
+ "results": {
+  "a1=+0.5_eps=+0.3": {
+   "integration": "OK",
+   "min_eig": -185818.68217452135,
+   "n_negative": 1338,
+   "n_nodes": 3500,
+   "rank3_everywhere": true,
+   "worst_sector_weights": {
+    "psi": 0.0,
+    "dphi": 1.0,
+    "V": 0.0
+   },
+   "healthy_3field": false
+  },
+  "a1=+0.5_eps=-0.3": {
+   "integration": "OK",
+   "min_eig": -1900354.9761453634,
+   "n_negative": 1297,
+   "n_nodes": 3500,
+   "rank3_everywhere": true,
+   "worst_sector_weights": {
+    "psi": 0.0,
+    "dphi": 1.0,
+    "V": 0.0
+   },
+   "healthy_3field": false
+  },
+  "a1=-0.5_eps=+0.3": {
+   "integration": "OK",
+   "min_eig": 4.129224705454992e-06,
+   "n_negative": 0,
+   "n_nodes": 3500,
+   "rank3_everywhere": true,
+   "worst_sector_weights": {
+    "psi": 0.0,
+    "dphi": 0.0,
+    "V": 1.0
+   },
+   "healthy_3field": true
+  },
+  "a1=-0.5_eps=-0.3": {
+   "integration": "OK",
+   "min_eig": 4.20426808925604e-06,
+   "n_negative": 0,
+   "n_nodes": 3500,
+   "rank3_everywhere": true,
+   "worst_sector_weights": {
+    "psi": 0.0,
+    "dphi": 0.0,
+    "V": 1.0
+   },
+   "healthy_3field": true
+  }
+ },
+ "healthy_branches": [
+  [
+   -0.5,
+   0.3
+  ],
+  [
+   -0.5,
+   -0.3
+  ]
+ ],
+ "n_healthy": 2,
+ "verdict": "HEALTHY_BRANCH_FOUND",
+ "wall_seconds": 15.7
+}
