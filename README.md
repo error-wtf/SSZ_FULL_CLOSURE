@@ -10,6 +10,19 @@ new force.**
 immutable member (`8bd460ef…`) · 8/8 falsifiers fire · clean tree,
 pushed.**
 
+> **RESEARCH STATUS (2026-10-06):** `TRUE_FULL_CLOSURE_PASS` applies to
+> the historically registered frozen corpus. Subsequent spectroscopy
+> research on `spectroscopy-real-data-20261004` has uncovered
+> branch-dependent kinetic pathology (V4 varying-G4 family:
+> sign(K_scalar) = −sign(a1·ε); ghost branches = H3_PHYSICAL_GHOST,
+> opposite branches = K>0 candidates) and is conducting a new V4
+> action-level health certification (finite-L health currently
+> BLOCKED_FAIL_CLOSED on the S-antisymmetry producer contract).
+> **Global physical QNM claims remain closed on the research branch**
+> (`artifacts/N4_V4_BRANCH_VERBAND.json`,
+> `data/generated/spectral/F4_FINITE_L_HEALTH_V4_ATTEMPT_BLOCKED_RECORD.json`,
+> `docs/N1_N4_LUMINAL_RESOLVE_SPEC.md`).
+
 *Research repository · Carmen Casu and Lino Casu · Anti-Capitalist
 Software License v1.4*
 
