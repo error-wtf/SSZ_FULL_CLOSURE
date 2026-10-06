@@ -3398,6 +3398,11 @@
       "sha256": "266fa0313ec3a882af551dae77fd53e5fb4a70fa3fe675e5c048ad9604673bad"
     },
     {
+      "path": "data/generated/spectral/F4_FINITE_L_HEALTH_V4_ATTEMPT_BLOCKED_RECORD.json",
+      "size_bytes": 2003,
+      "sha256": "c83352e57b48c49a0d63006a05ed333701d4d9ba7cc186ba063797c8a31895b6"
+    },
+    {
       "path": "data/generated/spectral/FROZEN_SPECTRAL_OPERATOR_EXPORT_V1.json",
       "size_bytes": 2680,
       "sha256": "bd0e6942bb492a88382f74e1731e727f3caf2fd49d6b9166b55251c50d07429d"
@@ -3506,6 +3511,16 @@
       "path": "data/generated/spectral/N3_STREAM41_V4_a1_m0.5_eps_m3.00em01.csv",
       "size_bytes": 2897505,
       "sha256": "db72db507e2988880029b2e0bbf3935a426386211aac8507bccea81ff2abb2d2"
+    },
+    {
+      "path": "data/generated/spectral/N4_V4_BRANCH_VERBAND.csv",
+      "size_bytes": 2005,
+      "sha256": "719a1284286978434ae1063a06745f345aafdec2a80a075e9678b07a5cc0a9d1"
+    },
+    {
+      "path": "data/generated/spectral/N4_V4_BRANCH_VERBAND.json",
+      "size_bytes": 3943,
+      "sha256": "f1c82468bc5651958dfc063067e0f0e6756f67b726a72fbd6301c5b7f9a0be04"
     },
     {
       "path": "data/generated/spectral/NATIVE_MODE_D2_ATLAS.json",
@@ -6553,6 +6568,11 @@
       "sha256": "6e13533ec9b53a46f61baa7406ed51f619400e806fadee027461b67c0227e970"
     },
     {
+      "path": "tools/run_finite_l_health_v4.py",
+      "size_bytes": 6897,
+      "sha256": "e94547e62c8670c09e72005cf0b5ee8b6d40b3d423549880a6457816f8eb9d2f"
+    },
+    {
       "path": "tools/run_global_coupled_qnm_diagnostic.py",
       "size_bytes": 13645,
       "sha256": "43671b0a15cd845f76da97e93ad1e8e7ac2a0181a03176489d6148f46f81a067"
@@ -6601,6 +6621,11 @@
       "path": "tools/run_n3_n4_luminal_decision.py",
       "size_bytes": 13082,
       "sha256": "787a3e72bfc3b9af8f4efc2e2056c6367e1a0622278a8730c1cb57e6353e0ce4"
+    },
+    {
+      "path": "tools/run_n4_v4_branch_verband.py",
+      "size_bytes": 5759,
+      "sha256": "9d4ea3a18d8c3a017b9f1c74fcc7b059ae3966bf8544de53378bb38061dac78f"
     },
     {
       "path": "tools/run_native_window_spectroscopy.py",
