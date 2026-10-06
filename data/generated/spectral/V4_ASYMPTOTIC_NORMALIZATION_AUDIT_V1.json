@@ -1,0 +1,66 @@
+{
+ "audit": "V4_ASYMPTOTIC_NORMALIZATION_AUDIT_V1",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.3
+ },
+ "branch_limits": {
+  "f_inf": 0.25117239,
+  "h_inf": 0.99999992,
+  "phi_inf": 0.99833372,
+  "f_inf_sqrt": 0.50117102
+ },
+ "curvature_invariants": {
+  "R": {
+   "at_r2": 0.0,
+   "at_r10": 0.0,
+   "at_r100": 0.0,
+   "at_r395": 0.0,
+   "decays_to_zero": true
+  },
+  "Riemann2": {
+   "at_r2": 0.0,
+   "at_r10": 0.0,
+   "at_r100": 0.0,
+   "at_r395": 0.0,
+   "decays_to_zero": true
+  },
+  "Kretschmann": {
+   "at_r2": 0.0,
+   "at_r10": 0.0,
+   "at_r100": 4.551588e-20,
+   "at_r395": 2.010942e-23,
+   "decays_to_zero": true
+  }
+ },
+ "time_normalization": {
+  "definition": "T = sqrt(f_inf) * t",
+  "sqrt_f_inf": 0.5011710213909382,
+  "g_TT_limit": -1.0,
+  "g_TT_note": "g_tt -> -f_inf, dT = sqrt(f_inf) dt => g_TT = -f_inf/f_inf = -1",
+  "g_rr_limit": 1.0000000761,
+  "verdict": "ASYMPTOTICALLY_MINKOWSKI_WITH_NORMALIZED_TIME"
+ },
+ "normalized_tortoise": {
+  "definition": "R_* = sqrt(f_inf) * r_*",
+  "dR_star_dr_at_r2": 1.00001399,
+  "dR_star_dr_at_r395": 1.00000004,
+  "limit_is_1": true,
+  "outgoing_wave": "Psi ~ exp(-i Omega_inf (T - R_*)), Omega_inf = omega/sqrt(f_inf)"
+ },
+ "pole_invariance": {
+  "statement": "A constant time rescaling cannot change physical poles, only their frequency label: Omega_inf = omega / sqrt(f_inf). The resonance solver MUST report frequencies in the normalized time T to be comparable with a flat-infinity observer; reporting raw omega would masquerade the lapse as a spectral shift.",
+  "convention_declared": "All CERTIFIED_RESONANCE_CATALOG_V1 frequencies are Omega_inf in T-time; raw t-time omega is stored separately as omega_t.",
+  "Omega_inf_factor": 1.99532686
+ },
+ "G4_asymptotic": {
+  "formula": "G4(phi) = 1/2 + a1 (phi - 1)",
+  "phi_inf": 0.99833372,
+  "G4_inf": 0.49916686,
+  "relative_deviation_from_0p5": -0.00166628,
+  "note": "G4_inf ~ 0.49917 vs GR's 1/2: a ~0.17% shift in the asymptotic effective Planck mass. Metric is flat but the coupling constant carries the branch signature."
+ },
+ "final_classification": "ASYMPTOTICALLY_MINKOWSKI_NONUNIT_LAPSE",
+ "status_change": "supersedes REGULAR_FINITE_LIMIT_EXTERIOR_NOT_FLAT from V4_GLOBAL_EXTERIOR_V1: the exterior is flat up to time normalization; c_inf = 0.501 was the COORDINATE speed dr/dt, not a new physical propagation speed (dr/dT = 1).",
+ "wall_seconds": 3.8
+}

@@ -3568,6 +3568,11 @@
       "sha256": "7100e6d525a8a621f3b658f8ce11b122e5b50457586315c31bd22dfa3e4df14e"
     },
     {
+      "path": "data/generated/spectral/V4_ASYMPTOTIC_NORMALIZATION_AUDIT_V1.json",
+      "size_bytes": 2367,
+      "sha256": "92e78cb4aa74ef247cd3d18d01fde5260501df487acf1ba6b49cb5ee9b2d82e0"
+    },
+    {
       "path": "data/generated/spectral/V4_GHOSTFREE_BRANCH_EXPORT_V1.json",
       "size_bytes": 845,
       "sha256": "29bf30afade40c8e51eeda98142d6f73356168724e477120f40fe7a9ed4bb287"
@@ -6766,6 +6771,11 @@
       "path": "tools/run_ssz_spectroscopy_suite.py",
       "size_bytes": 10063,
       "sha256": "8f68928c26a9f6da116fab4a1452176101c2485ee1d3ddc9df595f9568f1566a"
+    },
+    {
+      "path": "tools/run_v4_asymptotic_normalization_audit.py",
+      "size_bytes": 11591,
+      "sha256": "4adcd1753bd5cabdd57a84560866fee9ce98bebb1b38b152ffc476e653ad7a1c"
     },
     {
       "path": "tools/run_v4_dof_audit_refined.py",
