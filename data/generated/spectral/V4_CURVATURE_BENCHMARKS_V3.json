@@ -91,5 +91,6 @@
  },
  "all_benchmarks_pass": true,
  "final_classification": "ASYMPTOTICALLY_MINKOWSKI_NONUNIT_LAPSE",
- "wall_seconds": 1.3
+ "wall_seconds": 1.3,
+ "language_note": "Kretschmann power p = -6.0001 is a NUMERICAL FIT over r in [20, 395], not an exact identity. Correct reading: 'consistent with r^-6 to the fitted precision' (mass-like Weyl tail). Do not quote as 'exact'."
 }
