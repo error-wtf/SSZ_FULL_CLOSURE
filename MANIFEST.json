@@ -3608,6 +3608,36 @@
       "sha256": "fa2e82cd3fb9cc48476741216927545d3b5afe4d99f1ff50439007bd56f2aea8"
     },
     {
+      "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V1.json",
+      "size_bytes": 1514,
+      "sha256": "4033a6c204103251e79cc52536215d9c3f2637b18c7f49c7a6588e4ab97d64a3"
+    },
+    {
+      "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V1.npz",
+      "size_bytes": 837631,
+      "sha256": "3822624c9f3334b0f24e3b27bed5c129500c995bb221ab813232003f65e96986"
+    },
+    {
+      "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V1.npz.sha256",
+      "size_bytes": 65,
+      "sha256": "2c5e39165f1cc31e9433ffee30f732eb8212dfdd1bc22f1d7d1e31a64d72c281"
+    },
+    {
+      "path": "data/generated/spectral/V4_SCHUR_DOUBLE_COUNT_TEST_V1.json",
+      "size_bytes": 526,
+      "sha256": "96bddd97032f0431c275ec36cbf1b9dce2fb15730c10845934f1f6ff7162f621"
+    },
+    {
+      "path": "data/generated/spectral/V4_SCHUR_ORIGIN_TRACE_V1.json",
+      "size_bytes": 547,
+      "sha256": "8cc06a2920ca65327594e6abf28dda551c32386fc58a04e64be01c4a01168f82"
+    },
+    {
+      "path": "data/generated/spectral/V4_SCHUR_VS_STRIKE_DIAGNOSTIC_V1.json",
+      "size_bytes": 1347,
+      "sha256": "26de6f06d084888b5f877adc292bd9c10881b3c362a42f066023dbddca52e03a"
+    },
+    {
       "path": "data/generated/spectral/V4_S_CONTRACT_FORENSICS_V1.json",
       "size_bytes": 1282,
       "sha256": "c8cfe9a333f6b7f069c3bfbf31505ca07013bf5cd5232705513e98be01cee2d3"
@@ -6818,6 +6848,11 @@
       "sha256": "8c133b09803ff8b59eb8515817b9161bda3dcd66b61dc27bdccbb3941b41b51c"
     },
     {
+      "path": "tools/run_v4_physical_resonance_export.py",
+      "size_bytes": 10662,
+      "sha256": "a440cc641385fcce5675d93180a357c308600432f7abe5ec47ea56fc4b54490f"
+    },
+    {
       "path": "tools/run_v4_s_contract_forensics.py",
       "size_bytes": 6262,
       "sha256": "cc1d1ea4eb59127837306cb2749fbd0eb3be2b7feba1e084302d135c78c58f37"
@@ -6836,6 +6871,21 @@
       "path": "tools/run_v4_s_term_provenance.py",
       "size_bytes": 10672,
       "sha256": "899e7c37dd88e87b5ff120dd9d606c766d4104e9c7fb7b68a39053cd599f5239"
+    },
+    {
+      "path": "tools/run_v4_schur_double_count_test.py",
+      "size_bytes": 6383,
+      "sha256": "37080b92393d55625c2d1025139dece31abdb4b5f95aaac287655d1405cafe73"
+    },
+    {
+      "path": "tools/run_v4_schur_origin_trace.py",
+      "size_bytes": 8189,
+      "sha256": "0d411602606165e88e9b538eaa2eb452b0c38d85631c177b635e5040529b1dc3"
+    },
+    {
+      "path": "tools/run_v4_schur_vs_strike_diagnostic.py",
+      "size_bytes": 7723,
+      "sha256": "e58b021c3413d9519496bd68e22d7bb82c666898108553959bdba050fcf5a998"
     },
     {
       "path": "tools/show_code_map.py",

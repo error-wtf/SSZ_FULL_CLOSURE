@@ -1,0 +1,14 @@
+{
+ "audit": "V4_SCHUR_DOUBLE_COUNT_TEST_V1",
+ "declared_rule": "every disagreement node with correction/Block > 1 => Schur invalid here (double-count), STRIKE stands; any disagreement node with ratio < 1 => real escalation",
+ "n_disagreement": 22,
+ "ratios_at_disagreement": {
+  "min": 0.7827647533081084,
+  "max": 5.940900940183036,
+  "min_median_all": 0.0017072714126424924,
+  "max_median_all": 12.875321902043522
+ },
+ "all_disagreement_ratios_above_1": false,
+ "verdict": "REAL_ESCALATION_REQUIRED",
+ "wall_seconds": 4.7
+}

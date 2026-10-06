@@ -1,0 +1,37 @@
+{
+ "audit": "V4_SCHUR_VS_STRIKE_DIAGNOSTIC_V1",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.3
+ },
+ "window": [
+  0.05,
+  1.35
+ ],
+ "n_nodes": 3500,
+ "Kcc_absolute": {
+  "min": 0.0061456003424769645,
+  "max": 1900354.9761453078,
+  "median": 55.03231737954337,
+  "interpretation": "K_cc spans orders of magnitude; if it is  LARGE the chi row carries chi-second-derivative terms and chi is NOT purely algebraic in this reduced form"
+ },
+ "schur_correction_relative_max": 12.875321902043522,
+ "schur_correction_relative_median": 0.0017072714126424924,
+ "strike_min_eigenvalue": {
+  "min": 4.140933113215259e-06,
+  "n_negative": 0
+ },
+ "schur_min_eigenvalue": {
+  "min": -0.3059533282428861,
+  "n_negative": 22
+ },
+ "disagreement_nodes": 22,
+ "disagreement_Kcc_range": [
+  0.01581743196459995,
+  0.12001398535626975
+ ],
+ "Kcc_to_principal_scale_ratio": 3051597634.348457,
+ "verdict": "SCHUR_CORRUPTS_STRIKE_HEALTHY \u2014 AMBIGUOUS, escalate",
+ "escalation_note": "The DOF audit certified the principal (psi,V) strike as positive; the Schur back-reaction turns it negative. Either the chi elimination is algebraic (strike exact, Schur double-counts the constraint) or the chi channel is dynamical (the DOF audit's sector attribution needs revision). This is a THEORY question, not a numerics question. Solver BLOCKED until resolved.",
+ "wall_seconds": 4.5
+}

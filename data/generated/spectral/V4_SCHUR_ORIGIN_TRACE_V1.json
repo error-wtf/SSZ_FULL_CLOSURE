@@ -1,0 +1,23 @@
+{
+ "audit": "V4_SCHUR_ORIGIN_TRACE_V1",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.3
+ },
+ "n_disagreement": 22,
+ "disagreement_r_range": [
+  0.3007859388396685,
+  0.8008716776221778
+ ],
+ "Kcc_median_all": 55.03231737954337,
+ "frac_disagreement_nodes_with_Kcc_above_median": 0.0,
+ "correction_block_share_at_disagreement": {
+  "K": 0.9999,
+  "G": 0.0,
+  "S": 0.0,
+  "M": 0.0001
+ },
+ "outer_edge_share": 0.0,
+ "verdict": "DISAGREEMENT_SPREAD \u2014 chi elimination genuinely dynamical; escalate to theory review. Solver BLOCKED.",
+ "wall_seconds": 4.7
+}
