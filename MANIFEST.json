@@ -3653,6 +3653,21 @@
       "sha256": "2c5e39165f1cc31e9433ffee30f732eb8212dfdd1bc22f1d7d1e31a64d72c281"
     },
     {
+      "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V2_3DOF.json",
+      "size_bytes": 1444,
+      "sha256": "1b8026384f9080c3b62433d6956adea1308b7325d4450b3633b79279fcdb43fe"
+    },
+    {
+      "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V2_3DOF.npz",
+      "size_bytes": 1127105,
+      "sha256": "ff2087354a78826a021a4ffe0c6d18f066a8d666fe7af8166cd29eebdc8b1b90"
+    },
+    {
+      "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V2_3DOF.npz.sha256",
+      "size_bytes": 65,
+      "sha256": "b5cff4d98f0f1f48380b862fc1b031085999e31eb0dcd1f1c83fadf315dd0d41"
+    },
+    {
       "path": "data/generated/spectral/V4_SCHUR_DOUBLE_COUNT_TEST_V1.json",
       "size_bytes": 526,
       "sha256": "96bddd97032f0431c275ec36cbf1b9dce2fb15730c10845934f1f6ff7162f621"
@@ -6896,6 +6911,11 @@
       "path": "tools/run_v4_physical_resonance_export.py",
       "size_bytes": 10662,
       "sha256": "a440cc641385fcce5675d93180a357c308600432f7abe5ec47ea56fc4b54490f"
+    },
+    {
+      "path": "tools/run_v4_physical_resonance_export_v2_3dof.py",
+      "size_bytes": 10824,
+      "sha256": "e9350c732258e5139d56719469a4f1c79494a0f68f7392b99aed464795f7892e"
     },
     {
       "path": "tools/run_v4_s_contract_forensics.py",

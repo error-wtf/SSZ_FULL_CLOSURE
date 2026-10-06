@@ -1,0 +1,45 @@
+{
+ "audit": "V4_PHYSICAL_RESONANCE_EXPORT_V2_3DOF",
+ "branch": {
+  "a1": -0.5,
+  "eps": -0.3
+ },
+ "domain": {
+  "r_in": 0.05,
+  "r_window_end": 1.35,
+  "r_ext": 60.0,
+  "n_window": 3500,
+  "n_exterior": 600,
+  "grid": "dense-uniform window + logarithmic exterior",
+  "artifact_note": "uniform full-domain grid produced 2 spurious negative Schur nodes at r~1.5-2.25 (window undersampled); this grid resolves the stiff chi dynamics"
+ },
+ "branch_limits": {
+  "f_inf": 0.24617405,
+  "h_inf": 0.99945765
+ },
+ "k_phys_health": {
+  "min_eigenvalue_full_domain": 4.204268089256036e-06,
+  "min_eigenvalue_window": 4.204268089256036e-06,
+  "positive_full_domain": true,
+  "note": "window value must match V4_PHYSICAL_DOF_AUDIT_V1_REFINED (+4.47e-06) up to grid differences"
+ },
+ "interface_continuity_max_abs_dK": 0.1362449859200936,
+ "asymptotic_normalization": {
+  "definition_time": "T = sqrt(f_inf) * t",
+  "definition_tortoise": "R_star = sqrt(f_inf) * r_star",
+  "definition_freq": "Omega_inf = omega_t / sqrt(f_inf)",
+  "Omega_inf_factor": 2.01548174,
+  "f_inf": 0.24617405
+ },
+ "exterior_decay_note": "Kretschmann tail consistent with r^-6 (V4_CURVATURE_BENCHMARKS_V3, p=-6.0001); outgoing basis derived from the continued exterior in V4_PHYSICAL_BC_V1",
+ "npz_sha256": "ff2087354a78826a021a4ffe0c6d18f066a8d666fe7af8166cd29eebdc8b1b90",
+ "npz_shape_summary": {
+  "K_phys": [
+   4100,
+   3,
+   3
+  ],
+  "r_grid": 4100
+ },
+ "wall_seconds": 5.2
+}
