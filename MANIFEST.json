@@ -569,8 +569,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 16421,
-      "sha256": "10536d0cf30d6d45d24b2481ee5f858b2d1a521879b7c6a7f5fb2de756c2c64c"
+      "size_bytes": 17029,
+      "sha256": "878595e7c7a31dbefdfae5746158b515864db733b4cfca6e2c42ca53e4db1c44"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -3571,6 +3571,16 @@
       "path": "data/generated/spectral/V4_GHOSTFREE_BRANCH_EXPORT_V1.npz",
       "size_bytes": 2924218,
       "sha256": "ae0f6b7cf652077891c30b828fb3bc89842d74e6e97b0f7f36b540a03821d90b"
+    },
+    {
+      "path": "data/generated/spectral/V4_PHYSICAL_DOF_AUDIT_V1.json",
+      "size_bytes": 2527,
+      "sha256": "e2bbec4574fcb7d8d022de23cc372ba718555d2fabb95d96055c68f48511bec7"
+    },
+    {
+      "path": "data/generated/spectral/V4_PHYSICAL_DOF_AUDIT_V1_REFINED.json",
+      "size_bytes": 911,
+      "sha256": "fa2e82cd3fb9cc48476741216927545d3b5afe4d99f1ff50439007bd56f2aea8"
     },
     {
       "path": "data/generated/spectral/V4_S_CONTRACT_FORENSICS_V1.json",
@@ -6743,9 +6753,19 @@
       "sha256": "8f68928c26a9f6da116fab4a1452176101c2485ee1d3ddc9df595f9568f1566a"
     },
     {
+      "path": "tools/run_v4_dof_audit_refined.py",
+      "size_bytes": 5490,
+      "sha256": "8188dacf3898ea84301668ffe6b18f6551b4d3bf21da2bff4e12f6449dc0ebb6"
+    },
+    {
       "path": "tools/run_v4_export_for_bridge.py",
       "size_bytes": 5885,
       "sha256": "117e90a9aa3e4b202f69a05087ff6d185fd8a1874784bbb59af0ee7a53e8ff17"
+    },
+    {
+      "path": "tools/run_v4_physical_dof_audit.py",
+      "size_bytes": 11178,
+      "sha256": "8c133b09803ff8b59eb8515817b9161bda3dcd66b61dc27bdccbb3941b41b51c"
     },
     {
       "path": "tools/run_v4_s_contract_forensics.py",

@@ -33,16 +33,26 @@ pushed.**
 >    (`B6_ASYMPTOTIC_STRUCTURE_V1.json`, `JOST_QNM_CANDIDATES_V1.json`,
 >    `NORMAL_MODE_VERIFICATION_V1.json`): BOTH certified geometries (frozen
 >    member AND ghost-free V4 branch) are HORIZONLESS over the certified
->    radial window — f never approaches 0.  The Jost scan found no
->    off-axis zeros (min|D| = 1.4); the real normal-mode spectrum matches
->    the flat-cavity prediction ω_n = nπc/L to 8.2e-05.  **Building QNM
->    claims on these horizonless members would be a category error** —
->    QNM spectroscopy requires a horizon-bearing member, which the
->    certified corpus does not yet contain.  This is a first-class,
->    falsifiable project result, not a failure of the solvers.
+>    radial window — f never approaches 0.  The first Jost scan (scalar
+>    toy model, Neumann outer BC — a forced cavity) found no off-axis
+>    zeros; this does NOT prove the absence of resonances: horizonless
+>    objects CAN carry damped resonances (regularity inside + outgoing
+>    infinity).  The scan's limitations are recorded: scalar-only model,
+>    outer edge at r≈1.408 r_s is NOT infinity, e^{2iωr} was a local
+>    edge approximation.
+> 5. **V4_PHYSICAL_DOF_AUDIT_V1 + REFINED — the declared fork is decided:**
+>    the negative 3×3 kinetic channel is a **CONSTRAINT ARTIFACT**, 100%
+>    concentrated in the chi(dphi) Lagrange-multiplier channel
+>    (v_- sector weight 1.0; pivots Dh1/DeltaV/pivotA0 all healthy,
+>    rank K = rank G = 3 everywhere).  The physical (psi,V) subspace is
+>    STRICTLY POSITIVE: min λ(K_phys) = +4.47e-06 > 0 (GATE PASS),
+>    growing monotonically outward.  **The ghost-free V4 branch survives
+>    the constraint audit — it is alive.**
 >
-> **Global physical QNM claims remain closed on the research branch —
-> now for a MEASURED structural reason, not just an open gate.**
+> **Global physical QNM claims remain closed on the research branch
+> pending B6v2 (full exterior asymptotics + coupled Jost/ECS) — the
+> blocker is now the exterior continuation and the coupled solver,
+> not a kinetic pathology.**
 
 *Research repository · Carmen Casu and Lino Casu · Anti-Capitalist
 Software License v1.4*

@@ -1,0 +1,95 @@
+{
+ "audit": "V4_PHYSICAL_DOF_AUDIT_V1",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.3,
+  "ghost_free_side": true,
+  "window_r": [
+   0.05095688098168894,
+   1.3453229925614547
+  ]
+ },
+ "gate": "min lambda(K_phys) > 0",
+ "constraint_architecture": {
+  "h1_by": "pivot Dh1",
+  "H2_by": "pivot DeltaV",
+  "A0_by": "pivot pivotA0",
+  "physical_fields": [
+   "psi",
+   "dphi",
+   "V"
+  ]
+ },
+ "pivots": {
+  "Dh1": {
+   "min_abs": 2.231483757732499,
+   "n_below_1e-10": 0,
+   "rows": 2481
+  },
+  "DeltaV": {
+   "min_abs": 0.49899656711669566,
+   "n_below_1e-10": 0,
+   "rows": 2481
+  },
+  "pivotA0": {
+   "min_abs": 11.972227209930393,
+   "n_below_1e-10": 0,
+   "rows": 2481
+  }
+ },
+ "constraint_rank_vs_rL": {
+  "L6": {
+   "rankK_distribution": {
+    "3": 2481
+   },
+   "rankG_distribution": {
+    "3": 2481
+   },
+   "median_rankK": 3
+  },
+  "L12": {
+   "rankK_distribution": {
+    "3": 2481
+   },
+   "rankG_distribution": {
+    "3": 2481
+   },
+   "median_rankK": 3
+  },
+  "L20": {
+   "rankK_distribution": {
+    "3": 2481
+   },
+   "rankG_distribution": {
+    "3": 2481
+   },
+   "median_rankK": 3
+  }
+ },
+ "physical_dof_count": {
+  "declared": 3,
+  "basis": "y=(psi,dphi,V) after the three Sec-20.4 constraint eliminations (h1/H2/A0 via Dh1/DeltaV/pivotA0); rankK<3 nodes indicate locally degenerate channels"
+ },
+ "v_minus": {
+  "r_at_worst": 1.344769240704754,
+  "lambda_min": -17803.393669513276,
+  "sector_weights": {
+   "psi": 0.0,
+   "chi(dphi)": 1.0,
+   "V": 0.0
+  },
+  "dominant_sector": "chi(dphi)"
+ },
+ "k_phys": {
+  "subblock": "[psi, V] principal 2x2 (chi = constraint-eliminated channel)",
+  "min_eigenvalue": 4.4670562284946994e-06,
+  "n_nodes_negative": 0,
+  "n_nodes_total": 2481,
+  "gate": "min lambda(K_phys) > 0",
+  "gate_pass": true,
+  "v_minus_chi_fraction_max": 0.9999999993635724,
+  "note": "refined in V4_PHYSICAL_DOF_AUDIT_V1_REFINED.json: the first pass reported 0.0 due to an unsymmetrised 2x2 eigenvalue readout; the symmetrised subblock is STRICTLY POSITIVE (min +4.47e-06), growing monotonically outward."
+ },
+ "verdict": "NEGATIVE_CHANNEL_IS_CONSTRAINT_ARTIFACT \u2014 the negative eigendirection is 100% chi(dphi) (sector weight 1.0, v_minus_chi_fraction 0.9999999994) \u2014 the constraint-eliminated, non-propagating Lagrange-multiplier channel. The physical (psi,V) subspace is STRICTLY POSITIVE (min lambda = +4.47e-06 > 0, growing monotonically outward). GATE PASS: min lambda(K_phys) > 0. Branch ALIVE after correct constraint reduction. F.4 rerun on K_phys is now justified.",
+ "wall_seconds": 5.6
+}

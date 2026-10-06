@@ -1,0 +1,40 @@
+{
+ "audit": "V4_PHYSICAL_DOF_AUDIT_V1_REFINED",
+ "chi_channel": {
+  "min_eig": -17803.393669513276,
+  "max_eig": 0.15021215974993563,
+  "all_negative": false,
+  "interpretation": "chi is the constraint channel; its 'eigenvalue' is a Lagrange-multiplier stiffness, not a propagating speed"
+ },
+ "psi_V_subblock": {
+  "min_over_nodes": 4.4670562284946994e-06,
+  "max_over_nodes": 0.1502129531846116,
+  "n_nodes_with_|min|<1e-8": 0,
+  "first_zero_r": null,
+  "last_zero_r": null,
+  "n_strictly_negative": 0,
+  "r[0.0,0.3)": {
+   "min": 4.47e-06,
+   "max": 0.00535135,
+   "n": 593
+  },
+  "r[0.3,0.6)": {
+   "min": 0.00539099,
+   "max": 0.02987361,
+   "n": 542
+  },
+  "r[0.6,1.0)": {
+   "min": 0.02992879,
+   "max": 0.08295765,
+   "n": 722
+  },
+  "r[1.0,1.36)": {
+   "min": 0.08304958,
+   "max": 0.15021295,
+   "n": 624
+  },
+  "det_zero_nodes": 169,
+  "det_min_abs": 9.613643136297407e-10
+ },
+ "wall_seconds": 3.5
+}
