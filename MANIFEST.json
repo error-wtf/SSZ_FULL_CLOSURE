@@ -3558,6 +3558,11 @@
       "sha256": "2976566a4e65e01f1f0d19bcee46899b2a6b0b075ac497c219f1fb8144f4822f"
     },
     {
+      "path": "data/generated/spectral/V4_S_TERM_PROVENANCE.json",
+      "size_bytes": 1909,
+      "sha256": "fdf022e0fdc25d8cc70d31b5116d1f624f38187e41c7e88cdc36cad54b79be9f"
+    },
+    {
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_REPRODUCTION.json",
       "size_bytes": 3443,
       "sha256": "0e3bd65029c6188ee9a6f1be48ab634a97a022613fee99cdface3d92ea41cecf"
@@ -6706,6 +6711,11 @@
       "path": "tools/run_v4_s_projection_repair.py",
       "size_bytes": 7584,
       "sha256": "2dcb1b612bf38477a421dc8e7f79726b83e370982b33fe934646c2d22a9de431"
+    },
+    {
+      "path": "tools/run_v4_s_term_provenance.py",
+      "size_bytes": 10672,
+      "sha256": "899e7c37dd88e87b5ff120dd9d606c766d4104e9c7fb7b68a39053cd599f5239"
     },
     {
       "path": "tools/show_code_map.py",
