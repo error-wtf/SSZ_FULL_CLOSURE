@@ -29,8 +29,20 @@ pushed.**
 >    eigenvalue channel growing toward the stiff outer edge — attribution
 >    (even-parity residual vs V-sector mixing vs outer-edge asymptotics)
 >    is the declared B8 next step.
+> 4. **B6 asymptotic structure + Jost scan + normal-mode verification**
+>    (`B6_ASYMPTOTIC_STRUCTURE_V1.json`, `JOST_QNM_CANDIDATES_V1.json`,
+>    `NORMAL_MODE_VERIFICATION_V1.json`): BOTH certified geometries (frozen
+>    member AND ghost-free V4 branch) are HORIZONLESS over the certified
+>    radial window — f never approaches 0.  The Jost scan found no
+>    off-axis zeros (min|D| = 1.4); the real normal-mode spectrum matches
+>    the flat-cavity prediction ω_n = nπc/L to 8.2e-05.  **Building QNM
+>    claims on these horizonless members would be a category error** —
+>    QNM spectroscopy requires a horizon-bearing member, which the
+>    certified corpus does not yet contain.  This is a first-class,
+>    falsifiable project result, not a failure of the solvers.
 >
-> **Global physical QNM claims remain closed on the research branch.**
+> **Global physical QNM claims remain closed on the research branch —
+> now for a MEASURED structural reason, not just an open gate.**
 
 *Research repository · Carmen Casu and Lino Casu · Anti-Capitalist
 Software License v1.4*

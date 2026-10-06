@@ -569,8 +569,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 15574,
-      "sha256": "58ff8091e232422e967a23da4eeeae150bae0fcfe889b46cf98cdf9963002fe0"
+      "size_bytes": 16421,
+      "sha256": "10536d0cf30d6d45d24b2481ee5f858b2d1a521879b7c6a7f5fb2de756c2c64c"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -3388,6 +3388,11 @@
       "sha256": "fcbdc3a4e066b8449ff0a1cd8855422eb9b7e182d213c74b15078c6d35e5f440"
     },
     {
+      "path": "data/generated/spectral/B6_ASYMPTOTIC_STRUCTURE_V1.json",
+      "size_bytes": 1753,
+      "sha256": "9737bd2cccb7c60b151f0c20a28bf29244c922f4464c51cf0f2bd07f13972033"
+    },
+    {
       "path": "data/generated/spectral/COMMON_SPECTRAL_FORMAT_V1.json",
       "size_bytes": 21310,
       "sha256": "24f0beeaeaff13619ab0c7d9526fb090ce5c984e870944e21d5a73f32e3a3a15"
@@ -3416,6 +3421,11 @@
       "path": "data/generated/spectral/FROZEN_SPECTRAL_OPERATOR_EXPORT_V1.npz",
       "size_bytes": 8376346,
       "sha256": "85caecd59155d7d155dcb70e5cfa0b148366504778f45f51bc0f960294baab1a"
+    },
+    {
+      "path": "data/generated/spectral/JOST_QNM_CANDIDATES_V1.json",
+      "size_bytes": 748,
+      "sha256": "7d34280332ff56a79ff280cce071311ede56367841760ee392546508d82d197a"
     },
     {
       "path": "data/generated/spectral/MODE_CERTIFICATES_V1.json",
@@ -3536,6 +3546,11 @@
       "path": "data/generated/spectral/NATIVE_WINDOW_SPECTROSCOPY_REPORT.json",
       "size_bytes": 78717,
       "sha256": "34af3c73f31aeed0639984981cd6785bb037c8255b165ffd7358fc2d30750fb4"
+    },
+    {
+      "path": "data/generated/spectral/NORMAL_MODE_VERIFICATION_V1.json",
+      "size_bytes": 1415,
+      "sha256": "327563ad66a983258c7374f281b03221cee9169f1b97c8d268010864fe9ce512"
     },
     {
       "path": "data/generated/spectral/SPECTROSCOPY_SOURCE_OF_TRUTH_2026-10-04.json",
@@ -6578,6 +6593,11 @@
       "sha256": "431f807cda82bc6e47c6073093ea71e931a0a038e421d87a5ec8bf6e6aec8dfd"
     },
     {
+      "path": "tools/run_b6_asymptotic_structure.py",
+      "size_bytes": 4384,
+      "sha256": "0079d4f80ada9987dc79e4ceb4f2ad218746c2981a9a46b1259b844d82cb30c5"
+    },
+    {
       "path": "tools/run_b8_sector_tracking_v4.py",
       "size_bytes": 10392,
       "sha256": "c5da2ea7cb2f1bd7dee296581e81c34889d9f0bfd665e2b1d709bc42f9d44684"
@@ -6633,6 +6653,11 @@
       "sha256": "371337b1f1dd77ccf7c4a967ab88e529b0864c5cc05c4777b1c506163716ac85"
     },
     {
+      "path": "tools/run_jost_qnm_candidates.py",
+      "size_bytes": 8057,
+      "sha256": "5b6bcbcfc83ac902a996c7f50ac27c6b1797332be94b20c388d194a8ccdedff7"
+    },
+    {
       "path": "tools/run_luminal_background_solve.py",
       "size_bytes": 3521,
       "sha256": "e6aecfe8d423fd2f3a39102c33361a6a66a4110de200ce61b5ce968210bee9f3"
@@ -6671,6 +6696,11 @@
       "path": "tools/run_native_window_spectroscopy.py",
       "size_bytes": 12939,
       "sha256": "82d30987bcce17210937064df9152c2d1aa8433e4f44e70d7556acac36378d43"
+    },
+    {
+      "path": "tools/run_normal_mode_verification.py",
+      "size_bytes": 6288,
+      "sha256": "c89bf3206c85ae225ba9152f72aefc5d3c3a764893ceda1d1a11d7859410c624"
     },
     {
       "path": "tools/run_p5_global_testfield_qnm_cap.py",

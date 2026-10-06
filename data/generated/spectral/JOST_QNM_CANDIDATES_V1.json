@@ -1,0 +1,23 @@
+{
+ "audit": "JOST_QNM_CANDIDATES_V1",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.3,
+  "ghost_free_side": true
+ },
+ "bc_derivation": "B6_ASYMPTOTIC_STRUCTURE_V1: quasi-flat branch (f\u22480.25117 const, no horizon), dr*/dr\u22482, outer=OUTGOING e^{2i\u03c9r}, inner=REGULARITY (no singularity in V4 family)",
+ "sector_scan": [
+  {
+   "sector": "psi",
+   "candidates": [],
+   "min_absD_on_grid": 1.3998048727135166
+  },
+  {
+   "sector": "V",
+   "candidates": [],
+   "min_absD_on_grid": 1.3998048727135166
+  }
+ ],
+ "honest_scope": "QNM CANDIDATES from the diagonal scalar problems on the quasi-flat branch. Dual-solver certification (ECS) and the coupled 3-sector Jost solve are the next gates. NOT a certified QNM catalogue yet.",
+ "wall_seconds": 3.5
+}

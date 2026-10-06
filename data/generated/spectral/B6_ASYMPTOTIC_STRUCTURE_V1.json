@@ -1,0 +1,130 @@
+{
+ "audit": "B6_ASYMPTOTIC_STRUCTURE_V1",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.3
+ },
+ "domain": [
+  0.01,
+  1.4084507042253522
+ ],
+ "rows": 3299,
+ "profile_regions": {
+  "inner_core": {
+   "f": [
+    0.25,
+    0.251
+   ],
+   "h": [
+    0.99936,
+    1.0
+   ],
+   "phi": [
+    0.99843,
+    1.0
+   ],
+   "rows": 696
+  },
+  "interior": {
+   "f": [
+    0.251,
+    0.25116
+   ],
+   "h": [
+    0.99956,
+    0.99995
+   ],
+   "phi": [
+    0.99833,
+    0.99843
+   ],
+   "rows": 1143
+  },
+  "outer": {
+   "f": [
+    0.25116,
+    0.25117
+   ],
+   "h": [
+    0.99995,
+    0.99998
+   ],
+   "phi": [
+    0.99833,
+    0.99833
+   ],
+   "rows": 1083
+  },
+  "outer_edge": {
+   "f": [
+    0.25117,
+    0.25117
+   ],
+   "h": [
+    0.99998,
+    0.99998
+   ],
+   "phi": [
+    0.99833,
+    0.99833
+   ],
+   "rows": 376
+  }
+ },
+ "tortoise": {
+  "drstar_dr_inner": 2.0,
+  "drstar_dr_outer": 1.9954,
+  "monotone": false
+ },
+ "local_speed2_L6": {
+  "inner": {
+   "sector_0": 3.9826,
+   "sector_1": 0.0001,
+   "sector_2": 3.9825
+  },
+  "middle": {
+   "sector_0": 3.9817,
+   "sector_1": 0.0001,
+   "sector_2": 3.9817
+  },
+  "outer": {
+   "sector_0": 3.9815,
+   "sector_1": 0.0011,
+   "sector_2": 3.9815
+  }
+ },
+ "local_speed2_L12": {
+  "inner": {
+   "sector_0": 3.9826,
+   "sector_1": 0.0001,
+   "sector_2": 3.9825
+  },
+  "middle": {
+   "sector_0": 3.9817,
+   "sector_1": 0.0001,
+   "sector_2": 3.9817
+  },
+  "outer": {
+   "sector_0": 3.9815,
+   "sector_1": 0.0011,
+   "sector_2": 3.9815
+  }
+ },
+ "local_speed2_L20": {
+  "inner": {
+   "sector_0": 3.9826,
+   "sector_1": 0.0001,
+   "sector_2": 3.9825
+  },
+  "middle": {
+   "sector_0": 3.9817,
+   "sector_1": 0.0001,
+   "sector_2": 3.9817
+  },
+  "outer": {
+   "sector_0": 3.9815,
+   "sector_1": 0.0011,
+   "sector_2": 3.9815
+  }
+ }
+}

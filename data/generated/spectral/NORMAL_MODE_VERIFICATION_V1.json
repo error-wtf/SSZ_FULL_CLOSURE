@@ -1,0 +1,46 @@
+{
+ "audit": "NORMAL_MODE_VERIFICATION_V1",
+ "horizon_check": {
+  "frozen_member_f_range": [
+   0.2927168974869094,
+   0.3877061178917036
+  ],
+  "frozen_member_has_horizon": false,
+  "v4_ghostfree_f_range": [
+   0.25,
+   0.2511669905324472
+  ],
+  "v4_ghostfree_has_horizon": false,
+  "conclusion": "BOTH certified geometries are horizonless over the certified radial window"
+ },
+ "normal_modes": {
+  "n_modes_found": 6,
+  "omega_measured": [
+   4.483778,
+   8.967441,
+   13.451066,
+   17.934671,
+   22.418262,
+   26.901843
+  ],
+  "omega_flat_cavity_prediction": [
+   4.484008,
+   8.968017,
+   13.452025,
+   17.936034,
+   22.420042,
+   26.904051,
+   31.388059,
+   35.872068
+  ],
+  "c_mean_code_units": 1.996,
+  "L_domain": 1.3985,
+  "max_rel_err_vs_flat": 8.2e-05
+ },
+ "verdict": {
+  "structural": "horizonless branch \u2192 no damped QNMs (Jost scan found zero off-axis zeros: min|D| = 1.4 over the declared grid \u2014 JOST_QNM_CANDIDATES_V1)",
+  "physical": "the real spectrum of the ghost-free V4 branch is the set of real normal modes; they match the flat-cavity prediction to the stated accuracy",
+  "project_level": "QNM spectroscopy requires a horizon-bearing member. The current certified corpus (frozen member AND V4 branch) is horizonless over the certified window. Building QNM claims on these members would be a category error \u2014 recorded as a first-class project result."
+ },
+ "wall_seconds": 9.6
+}
