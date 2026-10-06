@@ -3583,9 +3583,34 @@
       "sha256": "5e5f3d6a23f0632d8954913946eacfc1f36738bca3408c83da234198b3f33e6a"
     },
     {
+      "path": "data/generated/spectral/V4_DOF_ARCHITECTURE_REAUDIT_V2.json",
+      "size_bytes": 1703,
+      "sha256": "c781562e350758af606f5bef9bf1e433918e373d2385edccb9b843b36f8ab582"
+    },
+    {
       "path": "data/generated/spectral/V4_FULL_3DOF_BRANCH_HEALTH_V1.json",
       "size_bytes": 1413,
       "sha256": "5a146f769e7f3c5e477d43556ee7361d37c0f03622baef2f9d1cd508d577ac04"
+    },
+    {
+      "path": "data/generated/spectral/V4_FULL_3DOF_KINETIC_HEALTH_V1.json",
+      "size_bytes": 2432,
+      "sha256": "f290d161c90460162db732cff37e9bee9c242ae53c12b2cb02cd2c6fc4f06eea"
+    },
+    {
+      "path": "data/generated/spectral/V4_FULL_3DOF_OPERATOR_V2.json",
+      "size_bytes": 3872,
+      "sha256": "bcb708ed3a9044008a753a3de524943528d031331b16f74f51028da09b59a455"
+    },
+    {
+      "path": "data/generated/spectral/V4_FULL_3DOF_OPERATOR_V2.npz",
+      "size_bytes": 3199800,
+      "sha256": "1166f5a439c7b65e9856e544c8548ac940cdb3cf03565c5c97e962737c2158d4"
+    },
+    {
+      "path": "data/generated/spectral/V4_FULL_3DOF_OPERATOR_V2.npz.sha256",
+      "size_bytes": 65,
+      "sha256": "342a6d451eeeee0a8fbc3c9ef4af7bcec687be3e490974f31ce3890bc2f18f14"
     },
     {
       "path": "data/generated/spectral/V4_GHOSTFREE_BRANCH_EXPORT_V1.json",
@@ -6851,6 +6876,11 @@
       "path": "tools/run_v4_full3dof_branch_health.py",
       "size_bytes": 6333,
       "sha256": "6ae1356afd65d68df12816fff3a67a30a49aaa1f6e89db77dc9e489cf9214f1c"
+    },
+    {
+      "path": "tools/run_v4_full3dof_operator_v2.py",
+      "size_bytes": 7134,
+      "sha256": "ae0328c8ad8c75ea736f5f5ec515189d7c90cae9f175c5eaa429956c9d9d0618"
     },
     {
       "path": "tools/run_v4_global_exterior.py",

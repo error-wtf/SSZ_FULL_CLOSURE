@@ -1,0 +1,93 @@
+{
+ "audit": "V4_FULL_3DOF_KINETIC_HEALTH_V1",
+ "branch": {
+  "a1": -0.5,
+  "eps": -0.3
+ },
+ "physical_basis": [
+  "psi",
+  "dphi",
+  "V"
+ ],
+ "n_physical_dof": 3,
+ "dof_derivation": "V4_UNREDUCED_CONSTRAINT_RANK_V1.json \u2014 dphi carries kinetic terms in the unreduced 8x8 Euler descriptor; no primary constraint removes it",
+ "supersedes": "the 2x2 'K_phys' projection verdicts (UNDER_REVIEW)",
+ "L_ladder": [
+  6,
+  12,
+  20,
+  42,
+  110,
+  420,
+  1000
+ ],
+ "gate_rule7": "rank K = 3 AND min eig K > 0 over the domain/L ladder",
+ "all_healthy": true,
+ "min_eig_per_L": {
+  "L6": 4.20426808925604e-06,
+  "L12": 2.10213404462802e-06,
+  "L20": 1.2612804267768118e-06,
+  "L42": 6.006097270365768e-07,
+  "L110": 2.2932371395942036e-07,
+  "L420": 2.1489145981717553e-08,
+  "L1000": 3.782821605098079e-09
+ },
+ "min_eig_location": {
+  "L6": 0.05,
+  "L12": 0.05,
+  "L20": 0.05,
+  "L42": 0.05,
+  "L110": 0.05,
+  "L420": 0.05,
+  "L1000": 0.05
+ },
+ "rankK3_everywhere": {
+  "L6": true,
+  "L12": true,
+  "L20": true,
+  "L42": true,
+  "L110": true,
+  "L420": true,
+  "L1000": true
+ },
+ "pivots_min_abs": {
+  "L6": {
+   "Dh1_min_abs": 2.2293541999235984,
+   "DeltaV_min_abs": 0.5012777718767273,
+   "pivotA0_min_abs": 12.048670497139405
+  },
+  "L12": {
+   "Dh1_min_abs": 11.146876818182935,
+   "DeltaV_min_abs": 0.5012777718767273,
+   "pivotA0_min_abs": 24.09734099427881
+  },
+  "L20": {
+   "Dh1_min_abs": 33.440724515510084,
+   "DeltaV_min_abs": 0.5012777718767273,
+   "pivotA0_min_abs": 40.16223499046468
+  },
+  "L42": {
+   "Dh1_min_abs": 156.0570161845494,
+   "DeltaV_min_abs": 0.5012777718767273,
+   "pivotA0_min_abs": 84.34069347997584
+  },
+  "L110": {
+   "Dh1_min_abs": 1103.547142356437,
+   "DeltaV_min_abs": 0.5012777718767273,
+   "pivotA0_min_abs": 220.89229244755575
+  },
+  "L420": {
+   "Dh1_min_abs": 16307.981524275445,
+   "DeltaV_min_abs": 0.5012777718767273,
+   "pivotA0_min_abs": 843.4069347997583
+  },
+  "L1000": {
+   "Dh1_min_abs": 92705.43969756732,
+   "DeltaV_min_abs": 0.5012777718767273,
+   "pivotA0_min_abs": 2008.111749523234
+  }
+ },
+ "note_min_eig_scaling": "min eig ~ 1/L scaling (weak chi-coupling back-reaction, same pattern as the earlier F.4-v2 scan); strictly positive over the full ladder",
+ "operator_export": "V4_FULL_3DOF_OPERATOR_V2.npz (sha256 1166f5a439c7b65e...)",
+ "verdict": "THREE_CHANNEL_HEALTHY \u2014 COUPLED_RESONANCE_SOLVER_V1 proceeds with Psi = (psi, dphi, V)^T on branch (a1=-0.5, eps=-0.3)"
+}

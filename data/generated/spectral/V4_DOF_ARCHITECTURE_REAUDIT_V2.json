@@ -1,0 +1,32 @@
+{
+ "audit": "V4_DOF_ARCHITECTURE_REAUDIT_V2",
+ "date": "2026-10-07",
+ "source_read": [
+  "src/ssz_hybrid_full_constraint_maps_JET9D8(1).py (line 9: 'Physical basis: y = (psi, dphi, V), with y_r = (psi', dphi', V')')",
+  "src/ssz_p5/reducer/unreduced_descriptor.py (FIELDS = 8-field unreduced Euler set)",
+  "src/ssz_p5_profile_operator_reducer_JET9D8_2026-09-16.py (canonical_audit)"
+ ],
+ "prior_verdict_status": {
+  "V4_PHYSICAL_DOF_AUDIT_V1": "UNDER_REVIEW / INTERNALLY_INCONSISTENT \u2014 declared physical_fields=[psi,dphi,V] and rankK=3 everywhere, then projected dphi away as 'non-propagating constraint channel' WITHOUT an unreduced-action constraint derivation. The 2x2 'K_phys' projection is INVALID as a physical reduction.",
+  "artifact_preserved": true
+ },
+ "notation_correction": "'chi' in project docs is the NAME of the three-component physical vector (psi,dphi,V); it is NOT dphi alone. New artifacts use explicit field names.",
+ "evidence": {
+  "unreduced_descriptor": "V4_UNREDUCED_CONSTRAINT_RANK_V1.json \u2014 dphi carries kinetic terms (max coeff 3.80e+06, all 3500 nodes); NO primary constraint removes dphi; 3 physical DOF confirmed",
+  "full3dof_health": "V4_FULL_3DOF_BRANCH_HEALTH_V1.json \u2014 (+0.5,\u00b10.3) H3-ghost (100% dphi negative); (-0.5,\u00b10.3) HEALTHY (min eig +4.13e-06/+4.20e-06 > 0, rank 3 everywhere)",
+  "schur_diagnostics": "V4_SCHUR_* artifacts retained as evidence that post-hoc Schur on the action-reduced 3x3 is a second, unjustified reduction (Lino review confirmed)"
+ },
+ "production_branch": {
+  "a1": -0.5,
+  "eps": -0.3,
+  "channels": [
+   "psi",
+   "dphi",
+   "V"
+  ],
+  "n_dof": 3
+ },
+ "supersedes": [
+  "2x2 K_phys projection verdicts"
+ ]
+}
