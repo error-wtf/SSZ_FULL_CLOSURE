@@ -1,0 +1,78 @@
+{
+ "audit": "F4_FINITE_L_HEALTH_V4_S_PROJECTED_V1",
+ "supersedes_blocker": "F4_FINITE_L_HEALTH_V4_ATTEMPT_BLOCKED_RECORD.json",
+ "repair_basis": "V4_S_PROJECTION_REPAIR_V1 (antisymmetric identity projection; validator UNCHANGED)",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.5,
+  "ghost_free_side": true
+ },
+ "window_r": [
+  0.05095688098168894,
+  1.3453229925614547
+ ],
+ "window_rows": 2481,
+ "L_ladder": [
+  6,
+  12,
+  20,
+  42,
+  110,
+  420,
+  1000
+ ],
+ "health": {
+  "6": {
+   "validator": "PASS",
+   "min_eig_K": -71466.82420253337,
+   "min_K_22": 4.448509942546911e-06,
+   "kinetic_healthy": false,
+   "radial_healthy": true
+  },
+  "12": {
+   "validator": "PASS",
+   "min_eig_K": -71468.8875602403,
+   "min_K_22": 2.2242549712734555e-06,
+   "kinetic_healthy": false,
+   "radial_healthy": true
+  },
+  "20": {
+   "validator": "PASS",
+   "min_eig_K": -71469.24647563222,
+   "min_K_22": 1.334552982764074e-06,
+   "kinetic_healthy": false,
+   "radial_healthy": true
+  },
+  "42": {
+   "validator": "PASS",
+   "min_eig_K": -71469.39759174557,
+   "min_K_22": 6.355014203638449e-07,
+   "kinetic_healthy": false,
+   "radial_healthy": true
+  },
+  "110": {
+   "validator": "PASS",
+   "min_eig_K": -71469.439607555,
+   "min_K_22": 2.4264599686619527e-07,
+   "kinetic_healthy": false,
+   "radial_healthy": true
+  },
+  "420": {
+   "validator": "PASS",
+   "min_eig_K": -71469.44949582528,
+   "min_K_22": 6.355014203638448e-08,
+   "kinetic_healthy": false,
+   "radial_healthy": true
+  },
+  "1000": {
+   "validator": "PASS",
+   "min_eig_K": -71469.45084376854,
+   "min_K_22": 2.6691059655281473e-08,
+   "kinetic_healthy": false,
+   "radial_healthy": true
+  }
+ },
+ "all_pass": false,
+ "h1_verdict": "H1 health clause NOT confirmed: scalar channel healthy (N4 K_scalar >= 0 measured), but the reduced 3x3 kinetic matrix has a negative eigenvalue channel growing toward the stiff outer edge (min_eig_K from -1.2 inner to -7.1e4 at r=1.345). Attribution (B8 sector separation) is the declared next step: (a) even-parity residual ghost, (b) V-sector mixing, (c) outer-edge asymptotics of the stiff branch.",
+ "wall_seconds": 6.3
+}

@@ -1,0 +1,46 @@
+{
+ "audit": "V4_S_CONTRACT_FORENSICS_V1",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.5,
+  "ghost_free_side": true,
+  "reached_core": true,
+  "phi_range": [
+   0.9972236797218171,
+   1.0
+  ]
+ },
+ "reducer_diagnostics": {
+  "max_h0_quadratic": 0.0,
+  "max_P20_asym": 1.5336263814447193e-08,
+  "max_P02_asym": 2.220446049250313e-16,
+  "max_P11_asym": 0.0,
+  "max_time_first_sym_res": 0.0,
+  "max_radial_first_sym_res": 3.604218363761902e-06,
+  "max_high_order": 1.858779796748422e-11,
+  "max_S_sym": 3.604218363761902e-06,
+  "max_R_abs": 0.0
+ },
+ "S_asym_scaled_max": 6.168033094597607e-08,
+ "S_asym_per_pair": {
+  "S[0,0]+S[0,0]_max": 5.977301986703765e-13,
+  "S[0,1]+S[1,0]_max": 6.750155989720952e-12,
+  "S[0,2]+S[2,0]_max": 0.0,
+  "S[1,0]+S[0,1]_max": 6.750155989720952e-12,
+  "S[1,1]+S[1,1]_max": 3.604218363761902e-06,
+  "S[1,2]+S[2,1]_max": 0.0,
+  "S[2,0]+S[0,2]_max": 0.0,
+  "S[2,1]+S[1,2]_max": 0.0,
+  "S[2,2]+S[2,2]_max": 1.0914380510484989e-11
+ },
+ "S_asym_per_region": {
+  "inner": 4.0381564758718014e-10,
+  "middle": 1.6833655536174774e-07,
+  "outer": 3.604218363761902e-06
+ },
+ "radial_first_sym_res": 3.604218363761902e-06,
+ "S_antisym_abs_max": 3.604218363761902e-06,
+ "golden_radial_first_sym_res": NaN,
+ "golden_S_antisym_abs_max": NaN,
+ "golden_S_asym_scaled_max": NaN
+}

@@ -569,8 +569,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 15049,
-      "sha256": "85cbfc9937687adabf8c51f00a1a793d41a83fe18a761b213a596d2feec0788e"
+      "size_bytes": 15574,
+      "sha256": "58ff8091e232422e967a23da4eeeae150bae0fcfe889b46cf98cdf9963002fe0"
     },
     {
       "path": "README_FOR_CODEX.md",
@@ -3403,6 +3403,11 @@
       "sha256": "c83352e57b48c49a0d63006a05ed333701d4d9ba7cc186ba063797c8a31895b6"
     },
     {
+      "path": "data/generated/spectral/F4_FINITE_L_HEALTH_V4_S_PROJECTED_V1.json",
+      "size_bytes": 2108,
+      "sha256": "cec47b6d394d5cd01a747e9bc7b14b4fa4dc07824f6d56d9f6e57082918bf2e1"
+    },
+    {
       "path": "data/generated/spectral/FROZEN_SPECTRAL_OPERATOR_EXPORT_V1.json",
       "size_bytes": 2680,
       "sha256": "bd0e6942bb492a88382f74e1731e727f3caf2fd49d6b9166b55251c50d07429d"
@@ -3541,6 +3546,16 @@
       "path": "data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V3.json",
       "size_bytes": 36535,
       "sha256": "7100e6d525a8a621f3b658f8ce11b122e5b50457586315c31bd22dfa3e4df14e"
+    },
+    {
+      "path": "data/generated/spectral/V4_S_CONTRACT_FORENSICS_V1.json",
+      "size_bytes": 1282,
+      "sha256": "c8cfe9a333f6b7f069c3bfbf31505ca07013bf5cd5232705513e98be01cee2d3"
+    },
+    {
+      "path": "data/generated/spectral/V4_S_PROJECTION_REPAIR_V1.json",
+      "size_bytes": 799,
+      "sha256": "2976566a4e65e01f1f0d19bcee46899b2a6b0b075ac497c219f1fb8144f4822f"
     },
     {
       "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_REPRODUCTION.json",
@@ -6568,6 +6583,11 @@
       "sha256": "6e13533ec9b53a46f61baa7406ed51f619400e806fadee027461b67c0227e970"
     },
     {
+      "path": "tools/run_f4_finite_l_s_projected.py",
+      "size_bytes": 6352,
+      "sha256": "d27f49d9e1a45d7a29c1251945396764de7d3447ed455c8cf67ae686166bc25f"
+    },
+    {
       "path": "tools/run_finite_l_health_v4.py",
       "size_bytes": 6897,
       "sha256": "e94547e62c8670c09e72005cf0b5ee8b6d40b3d423549880a6457816f8eb9d2f"
@@ -6671,6 +6691,21 @@
       "path": "tools/run_ssz_spectroscopy_suite.py",
       "size_bytes": 10063,
       "sha256": "8f68928c26a9f6da116fab4a1452176101c2485ee1d3ddc9df595f9568f1566a"
+    },
+    {
+      "path": "tools/run_v4_s_contract_forensics.py",
+      "size_bytes": 6262,
+      "sha256": "cc1d1ea4eb59127837306cb2749fbd0eb3be2b7feba1e084302d135c78c58f37"
+    },
+    {
+      "path": "tools/run_v4_s_contract_locate.py",
+      "size_bytes": 4824,
+      "sha256": "abbca82750b660b63cef369fa1f917c276efd6688160f3770c2cfa8014a844aa"
+    },
+    {
+      "path": "tools/run_v4_s_projection_repair.py",
+      "size_bytes": 7584,
+      "sha256": "2dcb1b612bf38477a421dc8e7f79726b83e370982b33fe934646c2d22a9de431"
     },
     {
       "path": "tools/show_code_map.py",

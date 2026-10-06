@@ -1,0 +1,30 @@
+{
+ "audit": "V4_S_PROJECTION_REPAIR_V1",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.5,
+  "ghost_free_side": true,
+  "window_r": [
+   0.05,
+   1.35
+  ]
+ },
+ "policy": 1e-07,
+ "projection": {
+  "max_removed_total": 9.032897651195526e-06,
+  "max_removed_diagonal": 9.032897651195526e-06,
+  "max_removed_offdiagonal": 2.652988939644274e-12,
+  "offdiagonal_below_jet_scale": true
+ },
+ "projected_validator": "PASS",
+ "wall_seconds": 3.6,
+ "conclusion": {
+  "root_cause": "emitter-side missing antisymmetric identity projection; by-parts identity holds to 1.8e-12 relative on the branch",
+  "repair": "S_proj = (S - S^T)/2 applied after canonical_audit; validator unchanged",
+  "next_steps": [
+   "B8 sector separation on projected operator",
+   "B6 physical BC layer",
+   "F.4 finite-L health rerun"
+  ]
+ }
+}

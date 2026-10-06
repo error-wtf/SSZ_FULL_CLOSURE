@@ -12,16 +12,25 @@ pushed.**
 
 > **RESEARCH STATUS (2026-10-06):** `TRUE_FULL_CLOSURE_PASS` applies to
 > the historically registered frozen corpus. Subsequent spectroscopy
-> research on `spectroscopy-real-data-20261004` has uncovered
-> branch-dependent kinetic pathology (V4 varying-G4 family:
-> sign(K_scalar) = −sign(a1·ε); ghost branches = H3_PHYSICAL_GHOST,
-> opposite branches = K>0 candidates) and is conducting a new V4
-> action-level health certification (finite-L health currently
-> BLOCKED_FAIL_CLOSED on the S-antisymmetry producer contract).
-> **Global physical QNM claims remain closed on the research branch**
-> (`artifacts/N4_V4_BRANCH_VERBAND.json`,
-> `data/generated/spectral/F4_FINITE_L_HEALTH_V4_ATTEMPT_BLOCKED_RECORD.json`,
-> `docs/N1_N4_LUMINAL_RESOLVE_SPEC.md`).
+> research on `spectroscopy-real-data-20261004`:
+>
+> 1. V4 varying-G4 family: `sign(K_scalar) = −sign(a1·ε)` over 8 branch
+>    combinations — ghost side `H3_PHYSICAL_GHOST`, opposite side K>0
+>    candidate (`artifacts/N4_V4_BRANCH_VERBAND.json`).
+> 2. S-contract blocker RESOLVED: the F4 `BLOCKED_FAIL_CLOSED` traced to
+>    the missing antisymmetric identity projection in the emitter chain
+>    (by-parts identity holds to 1.8e-12 relative; absolute jet residual
+>    landed in S[1,1]; measured `data/generated/spectral/V4_S_CONTRACT_
+>    FORENSICS_V1.json`, repair `V4_S_PROJECTION_REPAIR_V1.json` —
+>    validator UNCHANGED, S := (S − Sᵀ)/2 after audit).
+> 3. finite-L health RERUN on the projected ghost-free branch
+>    (`F4_FINITE_L_HEALTH_V4_S_PROJECTED_V1.json`): validator PASS all L;
+>    scalar channel healthy, but the 3×3 kinetic matrix carries a negative
+>    eigenvalue channel growing toward the stiff outer edge — attribution
+>    (even-parity residual vs V-sector mixing vs outer-edge asymptotics)
+>    is the declared B8 next step.
+>
+> **Global physical QNM claims remain closed on the research branch.**
 
 *Research repository · Carmen Casu and Lino Casu · Anti-Capitalist
 Software License v1.4*
