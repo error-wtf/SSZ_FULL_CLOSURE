@@ -1,0 +1,26 @@
+{
+ "export": "V4_GHOSTFREE_BRANCH_EXPORT_V1",
+ "schema": "FROZEN_SPECTRAL_OPERATOR_EXPORT_V1 array schema",
+ "branch": {
+  "a1": 0.5,
+  "eps": -0.3,
+  "ghost_free_side": true
+ },
+ "window_r": [
+  0.05095688098168894,
+  1.3453229925614547
+ ],
+ "window_rows": 2481,
+ "L_ladder": [
+  6,
+  12,
+  20
+ ],
+ "S_projection": "antisymmetric identity projection S := (S - S^T)/2, declared in V4_S_PROJECTION_REPAIR_V1; validator UNCHANGED",
+ "max_S_projection_abs": 4.858709871768951e-06,
+ "background_residuals": "E00/E11/E22 certified in N2_LUMINAL_SOLVE_RESULT_V4",
+ "npz_sha256": "ae0f6b7cf652077891c30b828fb3bc89842d74e6e97b0f7f36b540a03821d90b",
+ "producer": "SSZ_FULL_CLOSURE (closure branch spectroscopy-real-data-20261004)",
+ "validator_note": "consumer (SSZ-Transport-Bridge) imports NO closure code; hash-bound npz only",
+ "wall_seconds": 4.5
+}

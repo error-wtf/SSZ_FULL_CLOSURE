@@ -3548,6 +3548,16 @@
       "sha256": "7100e6d525a8a621f3b658f8ce11b122e5b50457586315c31bd22dfa3e4df14e"
     },
     {
+      "path": "data/generated/spectral/V4_GHOSTFREE_BRANCH_EXPORT_V1.json",
+      "size_bytes": 845,
+      "sha256": "29bf30afade40c8e51eeda98142d6f73356168724e477120f40fe7a9ed4bb287"
+    },
+    {
+      "path": "data/generated/spectral/V4_GHOSTFREE_BRANCH_EXPORT_V1.npz",
+      "size_bytes": 2924218,
+      "sha256": "ae0f6b7cf652077891c30b828fb3bc89842d74e6e97b0f7f36b540a03821d90b"
+    },
+    {
       "path": "data/generated/spectral/V4_S_CONTRACT_FORENSICS_V1.json",
       "size_bytes": 1282,
       "sha256": "c8cfe9a333f6b7f069c3bfbf31505ca07013bf5cd5232705513e98be01cee2d3"
@@ -6568,6 +6578,11 @@
       "sha256": "431f807cda82bc6e47c6073093ea71e931a0a038e421d87a5ec8bf6e6aec8dfd"
     },
     {
+      "path": "tools/run_b8_sector_tracking_v4.py",
+      "size_bytes": 10392,
+      "sha256": "c5da2ea7cb2f1bd7dee296581e81c34889d9f0bfd665e2b1d709bc42f9d44684"
+    },
+    {
       "path": "tools/run_background_null_hessian_native_tail_repair.py",
       "size_bytes": 10990,
       "sha256": "483dd2337d36ae8291504252ca94d02474a00d3681028d471763cdccaf5a0aaf"
@@ -6696,6 +6711,11 @@
       "path": "tools/run_ssz_spectroscopy_suite.py",
       "size_bytes": 10063,
       "sha256": "8f68928c26a9f6da116fab4a1452176101c2485ee1d3ddc9df595f9568f1566a"
+    },
+    {
+      "path": "tools/run_v4_export_for_bridge.py",
+      "size_bytes": 5885,
+      "sha256": "117e90a9aa3e4b202f69a05087ff6d185fd8a1874784bbb59af0ee7a53e8ff17"
     },
     {
       "path": "tools/run_v4_s_contract_forensics.py",
