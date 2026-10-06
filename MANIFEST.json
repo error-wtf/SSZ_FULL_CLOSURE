@@ -3578,6 +3578,11 @@
       "sha256": "ae0f6b7cf652077891c30b828fb3bc89842d74e6e97b0f7f36b540a03821d90b"
     },
     {
+      "path": "data/generated/spectral/V4_GLOBAL_EXTERIOR_V1.json",
+      "size_bytes": 3128,
+      "sha256": "9e48f7afe50c512a7e12dd1c1a154ff4c13946a1ffe720f024c1cf9a153a3224"
+    },
+    {
       "path": "data/generated/spectral/V4_PHYSICAL_DOF_AUDIT_V1.json",
       "size_bytes": 2527,
       "sha256": "e2bbec4574fcb7d8d022de23cc372ba718555d2fabb95d96055c68f48511bec7"
@@ -6771,6 +6776,11 @@
       "path": "tools/run_v4_export_for_bridge.py",
       "size_bytes": 5885,
       "sha256": "117e90a9aa3e4b202f69a05087ff6d185fd8a1874784bbb59af0ee7a53e8ff17"
+    },
+    {
+      "path": "tools/run_v4_global_exterior.py",
+      "size_bytes": 11884,
+      "sha256": "1f415d7118c1430c8039d5303435a813c3f63798380754d894248421bc2fa518"
     },
     {
       "path": "tools/run_v4_physical_dof_audit.py",

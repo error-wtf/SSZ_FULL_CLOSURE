@@ -1,0 +1,86 @@
+{
+ "E00": {
+  "leading_power_of_r": 2,
+  "leading_coefficient": "-2*a1*h*phi_field + 2*a1*h + 2*a1*phi_field - 2*a1 - h + 1",
+  "n_terms": 3
+ },
+ "E11": {
+  "leading_power_of_r": 2,
+  "leading_coefficient": "2*a1*h*phi_field - 2*a1*h - 2*a1*phi_field + 2*a1 + h - 1",
+  "n_terms": 3
+ },
+ "E22": {
+  "leading_power_of_r": 1,
+  "leading_coefficient": "-2*a1*h*ph - a1*hp*phi_field + a1*hp - a1*fp*h*phi_field/f + a1*fp*h/f - hp/2 - fp*h/(2*f)",
+  "n_terms": 2
+ },
+ "series_cascade": {
+  "note": "E00/E11 leading 1/r^2 terms vanish identically for h_inf=1, phi_inf=1 with f_inf free (symbolically verified). f_inf is an integration constant of the asymptotic family \u2014 flatness is NOT forced by the action. Subleading orders constrain the falloff coefficients; numeric continuation carries the classification.",
+  "n_equations": 8,
+  "leading_terms": {
+   "E00": "-2*a1*h*phi_field + 2*a1*h + 2*a1*phi_field - 2*a1 - h + 1",
+   "E11": "2*a1*h*phi_field - 2*a1*h - 2*a1*phi_field + 2*a1 + h - 1",
+   "E22": "-2*a1*h*ph - a1*hp*phi_field + a1*hp - a1*fp*h*phi_field/f + a1*fp*h/f - hp/2 - fp*h/(2*f)"
+  }
+ },
+ "continuation": {
+  "branch": {
+   "a1": 0.5,
+   "eps": -0.3
+  },
+  "r_reached": 400.0,
+  "reached_r400": true,
+  "blowup_at": null,
+  "fits": {
+   "f": {
+    "limit_estimate": 0.25117241,
+    "c1_over_r": -7.607380338110651e-06,
+    "max_abs_residual_2p": 2.3443911645326665e-08,
+    "max_abs_residual_3p": 1.2561195417148951e-09,
+    "value_at_390": 0.25117239
+   },
+   "h": {
+    "limit_estimate": 1.0,
+    "c1_over_r": -2.9707719970061978e-05,
+    "max_abs_residual_2p": 1.6793824908489796e-07,
+    "max_abs_residual_3p": 8.9960270344136e-09,
+    "value_at_390": 0.99999992
+   },
+   "phi": {
+    "limit_estimate": 0.99833372,
+    "c1_over_r": 2.0677485169224349e-07,
+    "max_abs_residual_2p": 9.318630800336791e-08,
+    "max_abs_residual_3p": 4.991676072485518e-09,
+    "value_at_390": 0.99833372
+   }
+  }
+ },
+ "classification": "REGULAR_FINITE_LIMIT_EXTERIOR_NOT_FLAT",
+ "derived_bcs": {
+  "outer": "Psi ~ exp(+i omega r_*), r_* = integral dr/sqrt(f h); numerically r_* ~ r/c_inf with c_inf = sqrt(f_inf*h_inf) = 0.501171 (tortoise slope 1.995327), derived from the continued branch, not assumed",
+  "inner": "regularity at the regular centre of the V4 branch",
+  "matching": null,
+  "note": "f_inf = 0.251172 != 1: the exterior limit is NOT asymptotic flatness. This is a property of the V4 branch (f_inf enters as an integration constant of the asymptotic family per the symbolic cascade). QNM/resonance analysis proceeds with the DERIVED limit; comparing against flat-infinity QNMs would be a category error."
+ },
+ "exterior_operator_health": {
+  "L": 6,
+  "nodes": 2500,
+  "r_range": [
+   1.35,
+   390.0
+  ],
+  "min_lambda_K_phys": 0.15098957574614313,
+  "positive": true
+ },
+ "operator_hashes": {
+  "K_phys_psiV_L6": "sha256:a55b7b31574499586573f40c63d45276",
+  "G_psiV_L6": "sha256:40434a02762eb9e44d310e5488ae1d46",
+  "S_psiV_L6": "sha256:728316e2345872d4839fae88f745d41d",
+  "M_psiV_L6": "sha256:b268fe7241b3998df1b111113e4b0fea",
+  "branch": {
+   "a1": 0.5,
+   "eps": -0.3
+  }
+ },
+ "wall_seconds": 4.3
+}
