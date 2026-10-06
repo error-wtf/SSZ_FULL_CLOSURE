@@ -3574,8 +3574,8 @@
     },
     {
       "path": "data/generated/spectral/V4_CURVATURE_BENCHMARKS_V3.json",
-      "size_bytes": 2526,
-      "sha256": "4804fd67f19cf3064378826a4d5aa338b811e01d76f5629e6eef3d939efde474"
+      "size_bytes": 2752,
+      "sha256": "81cf52cadf804be7e8d2b7abb217f0dd0a4ca22732444e0aa9bf245aa2322b4d"
     },
     {
       "path": "data/generated/spectral/V4_CURVATURE_INVARIANTS_V2.json",
