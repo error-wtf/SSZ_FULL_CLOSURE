@@ -3393,14 +3393,39 @@
       "sha256": "9737bd2cccb7c60b151f0c20a28bf29244c922f4464c51cf0f2bd07f13972033"
     },
     {
+      "path": "data/generated/spectral/CERTIFIED_RESONANCE_CATALOG_V1.csv",
+      "size_bytes": 155,
+      "sha256": "00e27d8eeaff65920f9eebda41d31a4b8455d52364d8c5faebef05564c9fce77"
+    },
+    {
+      "path": "data/generated/spectral/CERTIFIED_RESONANCE_CATALOG_V1.json",
+      "size_bytes": 940,
+      "sha256": "fd9885c802e3767357988329184deb119ae032a0d88f5f95d8d2e1a67e5e2fdb"
+    },
+    {
+      "path": "data/generated/spectral/CERTIFIED_RESONANCE_CATALOG_V1.sha256",
+      "size_bytes": 65,
+      "sha256": "7eb652e5d21df80af14fd4eddbf160d2c754166899e2b8a5561c03b69c994314"
+    },
+    {
       "path": "data/generated/spectral/COMMON_SPECTRAL_FORMAT_V1.json",
       "size_bytes": 21310,
       "sha256": "24f0beeaeaff13619ab0c7d9526fb090ce5c984e870944e21d5a73f32e3a3a15"
     },
     {
+      "path": "data/generated/spectral/COUPLED_RESONANCE_CONTROL_SUITE_V1.json",
+      "size_bytes": 965,
+      "sha256": "a66341b9bac2f2c145aeaaed0f9d37698da3c65282f41c6e5c54caca3d816cbf"
+    },
+    {
       "path": "data/generated/spectral/CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_AUDIT.json",
       "size_bytes": 11607,
       "sha256": "266fa0313ec3a882af551dae77fd53e5fb4a70fa3fe675e5c048ad9604673bad"
+    },
+    {
+      "path": "data/generated/spectral/ECS_CANDIDATES_V1.json",
+      "size_bytes": 3501,
+      "sha256": "6737334a3ca2b27113ecfd88956f80ac57e0dc99b644d715487eb44e44b0f827"
     },
     {
       "path": "data/generated/spectral/F4_FINITE_L_HEALTH_V4_ATTEMPT_BLOCKED_RECORD.json",
@@ -3426,6 +3451,16 @@
       "path": "data/generated/spectral/FROZEN_SPECTRAL_OPERATOR_EXPORT_V1.npz",
       "size_bytes": 8376346,
       "sha256": "85caecd59155d7d155dcb70e5cfa0b148366504778f45f51bc0f960294baab1a"
+    },
+    {
+      "path": "data/generated/spectral/JOST_CANDIDATES_V1.json",
+      "size_bytes": 14222,
+      "sha256": "3c254e1255335d076a287d9af0c28566ed4d2569099629edc4a0ca8a9ed1bb53"
+    },
+    {
+      "path": "data/generated/spectral/JOST_ECS_MATCHING_V1.json",
+      "size_bytes": 1028,
+      "sha256": "415700bc017805abf3ac8bb1036c99f09a2234731ea3efae11193a0091c58156"
     },
     {
       "path": "data/generated/spectral/JOST_QNM_CANDIDATES_V1.json",
@@ -4211,6 +4246,11 @@
       "path": "docs/CENTRAL_PRODUCTION_EXPORT.md",
       "size_bytes": 2899,
       "sha256": "4fa6c7cc1169f710e2c030e62a49fa1517a38e9d0f5816983636c1b7b890643b"
+    },
+    {
+      "path": "docs/COUPLED_RESONANCE_GATES_V1.json",
+      "size_bytes": 1554,
+      "sha256": "49c9189244df8b753b9b760f3250c85ec6e676544f4dc447f4d6cf1efdb9742e"
     },
     {
       "path": "docs/DIRECT_IMPLEMENTATION_FINDINGS.md",
@@ -6738,6 +6778,16 @@
       "sha256": "483dd2337d36ae8291504252ca94d02474a00d3681028d471763cdccaf5a0aaf"
     },
     {
+      "path": "tools/run_coupled_resonance_controls.py",
+      "size_bytes": 10338,
+      "sha256": "ff5f56c4254890c328d5496e68d795ee24b57ee0da3859a2d0b1ce73edcd2ccc"
+    },
+    {
+      "path": "tools/run_coupled_resonance_controls_v2.py",
+      "size_bytes": 5346,
+      "sha256": "3f497609e348e44f5ef5c0e795864573bd0bdc2547162832101bfba9d8df6dea"
+    },
+    {
       "path": "tools/run_current_member_eq131_finite_continuation.py",
       "size_bytes": 9966,
       "sha256": "cc12667e222121adcd86e61579491d9fdbafa3cb17db8c8fdbe49a3a8328f02c"
@@ -6751,6 +6801,11 @@
       "path": "tools/run_current_member_inner_radial_finite_continuation.py",
       "size_bytes": 10733,
       "sha256": "6e13533ec9b53a46f61baa7406ed51f619400e806fadee027461b67c0227e970"
+    },
+    {
+      "path": "tools/run_ecs_discovery_v1.py",
+      "size_bytes": 6795,
+      "sha256": "2a7b964f2e38d0b9579330e5b1450f8acd241d50dd63bc134bc80b64d180d24f"
     },
     {
       "path": "tools/run_f4_finite_l_kphys_v2.py",
@@ -6786,6 +6841,11 @@
       "path": "tools/run_inner_higher_jet_finite_continuation.py",
       "size_bytes": 10000,
       "sha256": "371337b1f1dd77ccf7c4a967ab88e529b0864c5cc05c4777b1c506163716ac85"
+    },
+    {
+      "path": "tools/run_jost_discovery_v1.py",
+      "size_bytes": 10036,
+      "sha256": "681f56f7bd3053a3fcc23c781e0071a144c35435d1a06aca9364b25faeb70d9e"
     },
     {
       "path": "tools/run_jost_qnm_candidates.py",
