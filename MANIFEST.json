@@ -3458,6 +3458,11 @@
       "sha256": "6737334a3ca2b27113ecfd88956f80ac57e0dc99b644d715487eb44e44b0f827"
     },
     {
+      "path": "data/generated/spectral/ECS_ENDPOINT_BC_UNIT_TEST_V1.json",
+      "size_bytes": 793,
+      "sha256": "61b60ccbaf2b3c9c4bfbd008500d7e3342a096db732bd0125c34b458236f1f54"
+    },
+    {
       "path": "data/generated/spectral/ECS_V2_CANDIDATES.json",
       "size_bytes": 12202,
       "sha256": "0c1e5e666c5fb2292e168644eab7d8d959661d68209b967a3f7625f79bcb7919"
