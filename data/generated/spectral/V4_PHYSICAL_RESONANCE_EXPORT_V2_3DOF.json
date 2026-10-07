@@ -31,7 +31,7 @@
   "Omega_inf_factor": 2.01548174,
   "f_inf": 0.24617405
  },
- "exterior_decay_note": "Kretschmann tail consistent with r^-6 (V4_CURVATURE_BENCHMARKS_V3, p=-6.0001); outgoing basis derived from the continued exterior in V4_PHYSICAL_BC_V1",
+ "exterior_decay_note": "Kretschmann tail consistent with r^-6 (V4_CURVATURE_BENCHMARKS_V3, p=-6.0001); outgoing basis derived from the continued exterior in V4_PHYSICAL_BC_V2_3DOF",
  "npz_sha256": "ff2087354a78826a021a4ffe0c6d18f066a8d666fe7af8166cd29eebdc8b1b90",
  "npz_shape_summary": {
   "K_phys": [
@@ -41,5 +41,6 @@
   ],
   "r_grid": 4100
  },
- "wall_seconds": 5.2
+ "wall_seconds": 5.2,
+ "outgoing_bc_reference": "V4_PHYSICAL_BC_V2_3DOF.json"
 }

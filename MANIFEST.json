@@ -3628,6 +3628,11 @@
       "sha256": "9e48f7afe50c512a7e12dd1c1a154ff4c13946a1ffe720f024c1cf9a153a3224"
     },
     {
+      "path": "data/generated/spectral/V4_PHYSICAL_BC_V2_3DOF.json",
+      "size_bytes": 2329,
+      "sha256": "f318d257192713668c22e90c45ae0722ab60b074900218a1891901da5a305e60"
+    },
+    {
       "path": "data/generated/spectral/V4_PHYSICAL_DOF_AUDIT_V1.json",
       "size_bytes": 2527,
       "sha256": "e2bbec4574fcb7d8d022de23cc372ba718555d2fabb95d96055c68f48511bec7"
@@ -3654,8 +3659,8 @@
     },
     {
       "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V2_3DOF.json",
-      "size_bytes": 1444,
-      "sha256": "1b8026384f9080c3b62433d6956adea1308b7325d4450b3633b79279fcdb43fe"
+      "size_bytes": 1506,
+      "sha256": "8c5168fdb3e675f688af2d018234e67fdb8388b80c757bf1d77e3ca6eb8708de"
     },
     {
       "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V2_3DOF.npz",
@@ -4311,6 +4316,11 @@
       "path": "docs/TRUE_CLOSURE_EXPLAINED.md",
       "size_bytes": 24094,
       "sha256": "736a34495ed9d733bf332a55046d1efe766a8ed7c040d1fb975129a77eeef38b"
+    },
+    {
+      "path": "docs/V4_PHYSICAL_BOUNDARY_CONDITIONS_V2_3DOF.md",
+      "size_bytes": 2078,
+      "sha256": "d3104ae99273af631d396d9bc26e0785f95ea871b2addf40fb033eb74d3c68cd"
     },
     {
       "path": "docs/WORKING_INTEGRATION_2026-09-18.md",
@@ -6903,6 +6913,11 @@
       "sha256": "1f415d7118c1430c8039d5303435a813c3f63798380754d894248421bc2fa518"
     },
     {
+      "path": "tools/run_v4_physical_bc_v2_3dof.py",
+      "size_bytes": 9468,
+      "sha256": "956ca0b94dec9e069b5480fc80a1aa7f3f59aaf72eb336f2afd90454ef9c0f0b"
+    },
+    {
       "path": "tools/run_v4_physical_dof_audit.py",
       "size_bytes": 11178,
       "sha256": "8c133b09803ff8b59eb8515817b9161bda3dcd66b61dc27bdccbb3941b41b51c"
@@ -6914,8 +6929,8 @@
     },
     {
       "path": "tools/run_v4_physical_resonance_export_v2_3dof.py",
-      "size_bytes": 10824,
-      "sha256": "e9350c732258e5139d56719469a4f1c79494a0f68f7392b99aed464795f7892e"
+      "size_bytes": 11324,
+      "sha256": "d1552ff5a52f3748c933581833572fd20bb9eff4a5dce063015a820c5d5e7e66"
     },
     {
       "path": "tools/run_v4_s_contract_forensics.py",

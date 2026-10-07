@@ -1,33 +1,41 @@
 #!/usr/bin/env python3
-"""V4_PHYSICAL_RESONANCE_EXPORT_V1 — the producer block for the coupled
-resonance solver (COUPLED_RESONANCE_SOLVER_V1 pre-step).
+#!/usr/bin/env python3
+"""V4_PHYSICAL_RESONANCE_EXPORT_V2_3DOF — the producer block for the
+coupled THREE-CHANNEL resonance solver (COUPLED_RESONANCE_SOLVER_V1
+pre-step).
+
+PHYSICAL BASIS:  Psi = (psi, dphi, V)^T  — THREE dynamical channels.
+NO Schur reduction, NO channel projection: the Closure DOF re-audit
+(V4_UNREDUCED_CONSTRAINT_RANK_V1, V4_DOF_ARCHITECTURE_REAUDIT_V2)
+proved from the unreduced 8x8 Euler descriptor that dphi carries
+kinetic terms (e1*(dphi_dot)^2, max coeff 3.8e+06) and NO primary
+constraint removes it. Sec-20.4 eliminates only h1/H2/H1/dA0/dA1.
+
+PRODUCTION BRANCH:  (a1 = -0.5, eps = -0.3)
+(the +a1 branches are H3-ghosts: min eig K(3x3) < 0, 100% dphi)
 
 WHAT THIS DOES
 ==============
-1. Builds the reduced (K, G, S, M) operator blocks on the FULL radial
-   domain: interior window [0.05, 1.35] PLUS continued exterior
-   [1.35, R_EXT] on one common grid.
-2. Performs the constraint-reduced (psi, V) projection WITH constraint
-   back-reaction (Schur complement of the chi block), NOT a naive
-   principal-submatrix strike. The chi channel is non-propagating
-   (Lagrange multiplier, V4_PHYSICAL_DOF_AUDIT_V1) so its elimination
-   contributes the Schur correction -K_cv K_cc^{-1} K_vc per block,
-   preserving ALL physical coupling terms as required.
-3. Exports the physical blocks + exterior metric + asymptotic
-   normalization constants in the frozen schema, hash-bound to the
-   certified V4 branch (a1=+0.5, eps=-0.3).
+1. Builds the FULL 3x3 (K, G, S, M) operator blocks on the complete
+   radial domain: interior window [0.05, 1.35] PLUS continued
+   logarithmic exterior [1.35, 60] on one non-uniform grid.
+2. Exports them in the (psi, dphi, V) basis with the exterior metric
+   and the MEASURED asymptotic normalization constants:
+       f_inf = 0.24617405, h_inf = 0.99945765
+       T = sqrt(f_inf) * t
+       Omega_inf = omega_t / sqrt(f_inf) = 2.01548174 * omega_t
+   (supersedes the OLD branch's 1.9953 factor — different branch!)
+3. Hash-bound npz + sidecar.
 
 WHAT THIS DOES NOT DO
 =====================
-- No boundary conditions imposed here (that is V4_PHYSICAL_BC_V1).
-- No root finding (that is SOLVER A/B).
+- No boundary conditions imposed here (that is V4_PHYSICAL_BC_V2_3DOF).
+- No root finding (that is SOLVER A/B: Jost, ECS).
 - No certification (that is the C-R gates).
 
 Validation inside this tool:
-- re-derives the certified branch (same rhs/integrator as all previous
-  artifacts)
-- checks K_phys (Schur-reduced) min eigenvalue > 0 over the full domain
-- checks continuity of the blocks at the window/exterior interface
+- re-derives the branch (same rhs/integrator as all prior artifacts)
+- checks min eigenvalue of the FULL 3x3 K > 0 over the full domain
 - writes SHA256 sidecar.
 """
 from __future__ import annotations
@@ -58,7 +66,10 @@ def load(name, path):
     return mod
 
 
-def schur_reduce(K, G, S, M, phys=(0, 2), cons=(1,)):
+def schur_reduce_unused_DO_NOT_CALL(K, G, S, M, phys=(0, 2), cons=(1,)):
+    """DEPRECATED: post-hoc Schur on the action-reduced 3x3 was a second,
+    unjustified reduction (see V4_DOF_ARCHITECTURE_REAUDIT_V2). Retained
+    only as diagnostic evidence."""
     """Constraint reduction WITH back-reaction (Schur complement).
 
     The chi equation (constraint, no time derivatives on chi in the
@@ -212,7 +223,7 @@ def main() -> int:
     out["exterior_decay_note"] = ("Kretschmann tail consistent with r^-6 "
                                     "(V4_CURVATURE_BENCHMARKS_V3, p=-6.0001); "
                                     "outgoing basis derived from the "
-                                    "continued exterior in V4_PHYSICAL_BC_V1")
+                                    "continued exterior in V4_PHYSICAL_BC_V2_3DOF")
 
     # ---------- export
     np.savez_compressed(
