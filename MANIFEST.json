@@ -3438,6 +3438,11 @@
       "sha256": "8f2672db473d6b8279ec725f2fa9752cfe7e6168fdcfbce0c04027c25391c2bb"
     },
     {
+      "path": "data/generated/spectral/COUPLED_RESONANCE_SOLVER_V2_1_CERTIFICATE.json",
+      "size_bytes": 4346,
+      "sha256": "9442be123bfe78b3fbd96b29c40ed4066b5b4f4c5ea27b2cf59b39262dd701c5"
+    },
+    {
       "path": "data/generated/spectral/CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_AUDIT.json",
       "size_bytes": 11607,
       "sha256": "266fa0313ec3a882af551dae77fd53e5fb4a70fa3fe675e5c048ad9604673bad"
@@ -3631,6 +3636,11 @@
       "path": "data/generated/spectral/SOLVER_PREFLIGHT_V1.json",
       "size_bytes": 3643,
       "sha256": "41a6baaa9bd022a095eea8695b8f1cf4edad84d8812e115efe1e365d02b7c29c"
+    },
+    {
+      "path": "data/generated/spectral/SOLVER_V2_BASELINE_SEAL.json",
+      "size_bytes": 2017,
+      "sha256": "2fa1578f79c56089ed15a1aafd2bc1d19b5ce915d348c370f4b45a7760bfdb5d"
     },
     {
       "path": "data/generated/spectral/SPECTROSCOPY_SOURCE_OF_TRUTH_2026-10-04.json",
@@ -6986,6 +6996,11 @@
       "path": "tools/run_solver_preflight_v1.py",
       "size_bytes": 11508,
       "sha256": "9eb44197c1c4903568ceeb3220a25dea498796ca093f6aa64627b316b7c74d73"
+    },
+    {
+      "path": "tools/run_solver_v21_controls.py",
+      "size_bytes": 11460,
+      "sha256": "4bc703ac90aa1c22ec84033a62418b24118fa9a53ee6e9ba902b5e6e3a5869c3"
     },
     {
       "path": "tools/run_spectral_selection_probe.py",

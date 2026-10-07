@@ -1,0 +1,128 @@
+{
+ "audit": "COUPLED_RESONANCE_SOLVER_V2_1_CERTIFICATE",
+ "design": "exact-pole constant-complex-potential references",
+ "w_poles": [
+  "(0.6-0.2j)",
+  "(1-0.3j)",
+  "(1.4-0.25j)"
+ ],
+ "controls": {
+  "A_ecs": {
+   "theta25": {
+    "ch1_w=0.60-0.20j": {
+     "nearest_eig": [
+      1.0,
+      -0.3
+     ],
+     "rel_err": 0.6519202405178486
+    },
+    "ch2_w=1.00-0.30j": {
+     "nearest_eig": [
+      1.0,
+      -0.3
+     ],
+     "rel_err": 1.750178062227045e-12
+    },
+    "ch3_w=1.40-0.25j": {
+     "nearest_eig": [
+      1.0,
+      -0.3
+     ],
+     "rel_err": 0.28345388743989974
+    }
+   },
+   "theta35": {
+    "ch1_w=0.60-0.20j": {
+     "nearest_eig": [
+      1.0,
+      -0.3
+     ],
+     "rel_err": 0.651920240518059
+    },
+    "ch2_w=1.00-0.30j": {
+     "nearest_eig": [
+      1.0,
+      -0.3
+     ],
+     "rel_err": 1.8327771301312467e-12
+    },
+    "ch3_w=1.40-0.25j": {
+     "nearest_eig": [
+      1.0,
+      -0.3
+     ],
+     "rel_err": 0.28345388743989064
+    }
+   }
+  },
+  "A_ecs_pass": false,
+  "A_jost": {
+   "ch1_w=0.60-0.20j": {
+    "dip_at": [
+     0.6,
+     -0.2
+    ],
+    "sigma_min": "2.691e-18",
+    "rel_err": 0.0
+   },
+   "ch2_w=1.00-0.30j": {
+    "dip_at": [
+     1.0,
+     -0.3
+    ],
+    "sigma_min": "8.083e-17",
+    "rel_err": 0.0
+   },
+   "ch3_w=1.40-0.25j": {
+    "dip_at": [
+     1.4,
+     -0.25
+    ],
+    "sigma_min": "1.032e-17",
+    "rel_err": 0.0
+   }
+  },
+  "A_jost_pass": true,
+  "A_pass": false,
+  "D_free_wave": {
+   "n_deep_spurious": 0,
+   "pass": true,
+   "note": "free wave has no discrete poles; deep spurious eigenvalues would indicate continuum leakage"
+  },
+  "D_pass": true,
+  "E_negative": {
+   "E1_wrong_pole_probe": {
+    "sigma_at_true_pole": "4.333e-18",
+    "sigma_at_wrong_pole": "1.570e-16",
+    "note": "the true pole location must show a DEEPER matching deficiency than an off-pole point"
+   },
+   "E1_pass": true,
+   "E2_wrong_sign": {
+    "sigma_at_incoming_mirror": "1.319e+01",
+    "pass": true
+   }
+  },
+  "A_ecs_analysis": "Jost-V2 recovers ALL three exact poles exactly (rel_err 0). ECS-V2 recovers ch2 exactly (1.8e-12) but the ch1/ch3 nearest-eigenvalue search kept landing on the ch2 pole \u2014 the ch1/ch3 poles are either outside the resolved spectrum of this grid configuration or suppressed by the interior-grid interpolation. Follow-up: per-channel ECS with tuned r_match/n before ECS can be certified. Jost production machinery: CERTIFIED by this chain. ECS production machinery: PARTIAL."
+ },
+ "status": "SOLVER_V2_NOT_CERTIFIED",
+ "missing_controls": [
+  "A"
+ ],
+ "scope_note": "RW/Leaver control (instruction item 3) tracked separately; this certificate covers the exact-pole reference chain A/D/E through both production paths",
+ "jost_v2_verdict": "CERTIFIED \u2014 recovers all three exact constant-complex-potential poles with rel_err = 0.0; negative controls distinguish true pole / wrong pole / incoming mirror",
+ "ecs_v2_verdict": "NOT YET CERTIFIED \u2014 recovers 1 of 3 exact poles (ch2, rel_err 1.8e-12); ch1/ch3 absent from the spectrum; PT-well at theta=90deg shows box ladder (0.689*n) instead of the Im-axis poles 2j/1j. Follow-up: per-channel ECS diagnostics and pole-sector geometry before ECS certification.",
+ "ssz_interpretation_lock": "with ECS uncertified, the SSZ V2 result stays NO_COMMON_CANDIDATE_IN_SCANNED_DOMAIN_V2 (Jost-side only negative evidence is NOT sufficient for a physical no-resonance claim)",
+ "wall_seconds": 808.8,
+ "additional_diagnostics": {
+  "PT_well_theta90": {
+   "setup": "V = -6 sech^2(x), poles expected at w = 2j, 1j",
+   "result": "theta=90deg spectrum contains a clean box ladder (0.689, 1.376, 2.062, 2.743, 3.420 = 0.689*n) and NOT the Im-axis QNM poles",
+   "interpretation": "center-regular BC + ECS-outside at 90deg yields box-like interior spectrum; true QNM extraction needs either outgoing center treatment (not physical for SSZ) or a larger rotated sector \u2014 open ECS design question, honestly unresolved"
+  }
+ },
+ "summary": {
+  "PRODUCTION JOST-V2": "CERTIFIED \u2014 exact pole recovery (rel_err 0.0), negative controls pass",
+  "PRODUCTION ECS-V2": "NOT CERTIFIED \u2014 recovers 1 of 3 constant-V poles; PT poles not isolated at theta=90",
+  "SSZ consequence": "V2 result remains NO_COMMON_CANDIDATE_IN_SCANNED_DOMAIN_V2; physical no-resonance claim still BLOCKED on ECS certification"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "audit": "SOLVER_V2_BASELINE_SEAL",
+ "sealed_at": "2026-10-07T11:18:51Z",
+ "closure_head": "203d943735574bf2b2ba841ab1d577bb8e969d8b",
+ "frozen_artifacts": {
+  "V4_CENTER_REGULAR_BASIS_V2.npz": "690eeb067cbed08904b482bf14a9c3ac2ce2e0b5abdda75032963bd64d4d1875",
+  "V4_CENTER_PERTURBATION_FROBENIUS_V2.json": "775512164417fab9481e1787b8c06738ce3b3581d0f1a5e19b3979d4cefe2852",
+  "V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.npz": "ad2bee7d3994097479933c1eea787f3aa381648d098ffd36aab32a4c436db2ef",
+  "V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.json": "fa9e7b7b58b417b1390aab0eff537c1daa93b878c7b2adaa018499cf8f50ece5",
+  "JOST_V2_PROBE.json": "518d7917a44599b3de0ce0992a03e1c164581408cf3a7339022230521b300b27",
+  "ECS_V2_CANDIDATES.json": "0c1e5e666c5fb2292e168644eab7d8d959661d68209b967a3f7625f79bcb7919",
+  "JOST_ECS_MATCHING_V2.json": "4c7bfc0a45a8c217fe6df1336edf23b773bff465913b2c49ae30583c7552c43b",
+  "CERTIFIED_RESONANCE_CATALOG_V2.json": "0c7e0f050afef0c3addf811568f086d6279c35196238f45748bb5d96064b0b3c",
+  "COUPLED_RESONANCE_SOLVER_V1_REVIEW.json": "8f2672db473d6b8279ec725f2fa9752cfe7e6168fdcfbce0c04027c25391c2bb"
+ },
+ "frozen_solver_sources": {
+  "run_jost_discovery_v2.py": "c1f3ac44238881a59275955fff1e42bde08827cc083696338469d46beb8ec84d",
+  "run_ecs_discovery_v2.py": "92b8856e0b092f84eb78bb8232406f1c1cf6ad511aa2f2ac363a8b3270a76eb9",
+  "run_center_frobenius_v2.py": "f1e1ef2a5ccadeb4d947b355936fe77ec6bc41af886ba078ca9ff79de1fe9b82",
+  "run_v4_physical_resonance_export_v3_3dof.py": "89d50c60d4afc4f30ffbd3a0772a29ff1d1af8a499e49159a90061ce9c283d53",
+  "run_coupled_resonance_controls_v2.py": "3f497609e348e44f5ef5c0e795864573bd0bdc2547162832101bfba9d8df6dea"
+ },
+ "semantics": "V2 same-domain result = NO_COMMON_CANDIDATE_IN_SCANNED_DOMAIN_V2 (high diagnostic quality); promotion to a physical negative result requires V2.1 production-solver controls (COUPLED_RESONANCE_SOLVER_V2_1_CERTIFICATE)",
+ "status": "SEELED \u2014 no modification of solver sources or inputs below this seal without version bump"
+}
