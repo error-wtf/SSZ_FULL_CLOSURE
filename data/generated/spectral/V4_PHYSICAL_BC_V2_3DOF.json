@@ -48,5 +48,15 @@
   "C-R1 Jost/ECS agreement",
   "C-R2..C-R5 convergence/stability gates"
  ],
- "wall_seconds": 1.2
+ "wall_seconds": 1.2,
+ "channel_dispersion_measured": {
+  "source": "SOLVER_PREFLIGHT_V1 P1 (det P_inf(omega,k)=0 at r=60)",
+  "k_over_omega": {
+   "psi": 2.0156147,
+   "dphi": 0.0362735,
+   "V": 2.0157527
+  },
+  "verdict": "CHANNEL_SPECIFIC_SPEEDS \u2014 the common metric-driven speed holds for TWO channels (2.0156/2.0158 \u2248 Omega_inf factor) but the third (dphi-associated) channel is ~56x slower. The solver MUST use per-channel k_j in the outgoing BC: Psi_j ~ A_j exp(+i omega_t k_j r_star / omega_t)... i.e. exp(+i omega_t r_star) for the fast channels and exp(+i 0.0363 omega_t r_star) for the slow channel.",
+  "common_speed_bc_invalid": true
+ }
 }
