@@ -1,0 +1,28 @@
+{
+ "audit": "JOST_EVANS_V2_2_DIAGNOSTIC_ADDENDUM_1CHANNEL",
+ "setup": "1-channel square well V=-2.5 on (0,1), Neumann center, outgoing infinity; QR-stabilized 2x1 phase-space propagation; Evans in log space",
+ "reference_root_mpmath_dps80": [
+  2.2383463024,
+  -1.4820919693
+ ],
+ "results": {
+  "coarse_grid_dip": {
+   "omega": [
+    2.188346,
+    -1.357092
+   ],
+   "log_abs_D": -648.9
+  },
+  "fine_grid_dip": {
+   "omega": [
+    2.2133463,
+    -1.32709197
+   ],
+   "log_abs_D": -649.8,
+   "rel_err": 0.0585
+  }
+ },
+ "key_finding": "the amplitude instability is SOLVED: log|D| reaches -650 (282 orders of dynamic range) with QR+det tracking; the remaining 5.8% pole displacement is systematic and subject to the next convergence analysis (grid doubling at the same pole)",
+ "three_channel_context": "the 3-channel (1 well + 2 free) determinant smears the single-channel pole (dip 11-18% off, scan-dependent); per-channel Evans is the correct decomposition, confirming the V2.2-b plan",
+ "timestamp": "2026-10-07T17:19:45Z"
+}
