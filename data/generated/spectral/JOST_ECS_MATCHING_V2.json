@@ -1,0 +1,42 @@
+{
+ "audit": "JOST_ECS_MATCHING_V2",
+ "supersedes": "JOST_ECS_MATCHING_V1.json (diagnostic only)",
+ "domain_apples_to_apples": {
+  "L": 6,
+  "Re_omega_t": [
+   0.05,
+   1.5
+  ],
+  "Im_omega_t": [
+   -0.05,
+   -0.8
+  ]
+ },
+ "jost_v2": {
+  "fixes_applied": [
+   "Frobenius regular start basis (V4_CENTER_REGULAR_BASIS_V2)",
+   "k_j(omega) per-eval from full pencil incl. S",
+   "single r-coordinate convention (no extra sqrt(f_inf))",
+   "genuine two-sided matching, r_match enters",
+   "stateless deterministic outgoing-branch choice"
+  ],
+  "bug_found_during_v2": "stateful k_ref branch tracking drifted with call history and created a call-order-dependent 'sharp minimum' at Im\u2248-0.284 that vanished under threshold variation and fresh-state runs \u2014 REPRODUCIBILITY BUG, fixed by stateless per-evaluation classification",
+  "result": "sigma_min smooth across the domain (3.8e-02 at r_match=20 to 3.1e-03 at r_match=50, flat in Re and Im); NO isolated 2D minimum; resolution-converged (2.756e-02/2.757e-02/2.758e-02 at n=6k/12k/24k)"
+ },
+ "ecs_v2": {
+  "fixes_applied": [
+   "correct companion linearisation (unit-tested, residual 2.5e-15)",
+   "single complex grid (no double scaling)",
+   "analytic 1/r exterior continuation",
+   "center-regular BC in the pencil",
+   "R from V3 export"
+  ],
+  "result": "spectra at theta=35/45 deg (n=800): all eigenvalues except two lie ON the rotated-continuum line arg(w) = -theta (within 1.5 deg); the two off-line candidates move WITH theta (0.4314-0.1123j at 35deg vs 0.4134-0.1459j at 45deg) = continuum-edge artifacts, NOT theta-stable poles"
+ },
+ "C-R1_check": {
+  "criterion": "|Omega_jost - Omega_ecs|/|Omega| < 1e-3",
+  "result": "no Jost candidate exists (no isolated minimum) and no theta-stable ECS pole exists \u2014 nothing to match",
+  "verdict": "NO_COMMON_CERTIFIABLE_CANDIDATE_IN_SCANNED_DOMAIN_V2"
+ },
+ "jost_ecs_cross_check": "the single ECS off-line candidate at theta=35 (0.4314-0.1123j) was probed by Jost-V2: sigma_min = 1.1e-02 (rm=30) / 5.8e-03 (rm=40) \u2014 no dip, no pole"
+}

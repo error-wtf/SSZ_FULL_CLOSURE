@@ -1,0 +1,16 @@
+{
+ "audit": "COUPLED_RESONANCE_SOLVER_V1_REVIEW",
+ "status": "SOLVER_IMPLEMENTATION_UNDER_REVIEW",
+ "supersedes_semantics_of": [
+  "SOLVER_PREFLIGHT_V1 (P0 tested BACKGROUND regularity only, not the perturbation Frobenius basis; P1 evaluated the dispersion only at omega=1 without S/R terms)",
+  "JOST_CANDIDATES_V1 (start basis Y=I, Y'=0 at r=0.05 is a Neumann-like assumption, not derived center regularity; outer derivative mixed an extra sqrt(f_inf) into the r-coordinate wavenumber; r_match was never used by jost_det, so the V1 'C-R5 stability' was tautological)",
+  "ECS_CANDIDATES_V1 (wrong companion linearisation of the quadratic pencil; complex scaling applied twice \u2014 complex grid AND extra e^{-i theta} derivative factors; coefficients evaluated at real(z) instead of analytically continued)",
+  "JOST_ECS_MATCHING_V1 (C-R1 verdict not certifiable: the two solvers did not provably solve the same boundary-value problem)",
+  "CERTIFIED_RESONANCE_CATALOG_V1 (remains DIAGNOSTIC EVIDENCE, marked SUPERSEDED_AS_PHYSICS_CLAIM; the empty catalogue must not be read as 'SSZ has no resonances')"
+ ],
+ "reason": "P0/P1/Jost/ECS implementation audit found unresolved mathematical inconsistencies (center basis, asymptotic pencil, coordinate convention, QEP linearisation, ECS scaling, R-folded-into-S by assertion, controls did not exercise the production solvers)",
+ "controls_v1_caveat": "V1 controls validated Hermitian Dirichlet bound-state eigenproblems, NOT Jost outflow, ECS, or the QEP linearisation",
+ "correct_current_claim": "V1-Jost and V1-ECS found no common certifiable candidate UNDER THEIR RESPECTIVE V1 IMPLEMENTATIONS",
+ "review_date": "2026-10-07T08:16:28Z",
+ "successor": "COUPLED_RESONANCE_SOLVER_V2 (forensics + rebuild)"
+}

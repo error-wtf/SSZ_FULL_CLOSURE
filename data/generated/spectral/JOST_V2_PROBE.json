@@ -1,0 +1,97 @@
+{
+ "audit": "JOST_DISCOVERY_V2",
+ "fixes": [
+  "F1 true Frobenius start basis",
+  "F2 k_j(w) per-eval from full pencil with S",
+  "F3 single r-coordinate convention",
+  "F4 genuine two-sided matching at real r_match",
+  "F5 R consumed from V3 export (proven zero)"
+ ],
+ "r_match_probe": [
+  {
+   "omega_t": [
+    0.3,
+    0.1
+   ],
+   "scan": [
+    {
+     "r_match": 20.0,
+     "sigma_min": "7.929e-02"
+    },
+    {
+     "r_match": 25.0,
+     "sigma_min": "1.995e-02"
+    },
+    {
+     "r_match": 30.0,
+     "sigma_min": "8.760e-03"
+    },
+    {
+     "r_match": 35.0,
+     "sigma_min": "2.228e-03"
+    },
+    {
+     "r_match": 40.0,
+     "sigma_min": "7.901e-04"
+    }
+   ]
+  },
+  {
+   "omega_t": [
+    0.602,
+    -0.354
+   ],
+   "scan": [
+    {
+     "r_match": 20.0,
+     "sigma_min": "1.811e-03"
+    },
+    {
+     "r_match": 25.0,
+     "sigma_min": "3.177e-05"
+    },
+    {
+     "r_match": 30.0,
+     "sigma_min": "6.068e-07"
+    },
+    {
+     "r_match": 35.0,
+     "sigma_min": "1.240e-08"
+    },
+    {
+     "r_match": 40.0,
+     "sigma_min": "1.452e-10"
+    }
+   ]
+  },
+  {
+   "omega_t": [
+    0.6,
+    0.15
+   ],
+   "scan": [
+    {
+     "r_match": 20.0,
+     "sigma_min": "9.996e-02"
+    },
+    {
+     "r_match": 25.0,
+     "sigma_min": "5.210e-02"
+    },
+    {
+     "r_match": 30.0,
+     "sigma_min": "2.701e-02"
+    },
+    {
+     "r_match": 35.0,
+     "sigma_min": "8.860e-03"
+    },
+    {
+     "r_match": 40.0,
+     "sigma_min": "1.819e-03"
+    }
+   ]
+  }
+ ],
+ "wall_seconds": 70.5
+}

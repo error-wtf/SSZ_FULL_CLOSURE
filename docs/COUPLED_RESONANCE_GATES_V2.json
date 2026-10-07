@@ -1,0 +1,29 @@
+{
+ "audit": "COUPLED_RESONANCE_GATES_V2",
+ "supersedes": "COUPLED_RESONANCE_GATES_V1.json (preserved)",
+ "frozen_before_v2_scan": true,
+ "frozen_at": "2026-10-07T09:01:12Z",
+ "v2_fixes_required_by_gates": {
+  "C-R1": "Jost/ECS pole agreement (both V2, correct implementations)",
+  "C-R2": "radial-resolution stability (shooter steps ladder)",
+  "C-R3": "outer-domain stability (r_max ladder)",
+  "C-R4": "ECS-angle stability (theta ladder, pole OFF continuum line)",
+  "C-R5": "r_match stability (r_match now genuinely enters the matching)",
+  "C-R6": "equation residual norm",
+  "C-R7": "center-basis stability (Frobenius basis, start-radius ladder)",
+  "C-R8": "asymptotic outgoing-basis stability (stateless branch choice)",
+  "C-R9": "branch continuation from seeds",
+  "C-R10": "kinetic/flux consistency"
+ },
+ "v1_gate_invalidations": {
+  "C-R5_v1": "invalid \u2014 r_match was unused by jost_det (tautological)",
+  "C-R1_v1": "not certifiable \u2014 solvers did not share a proven BVP"
+ },
+ "tolerances": {
+  "pole_agreement_rel": 0.001,
+  "ladder_stability_rel": 0.001,
+  "residual_rel": 1e-06,
+  "ecstheta_offset_from_continuum_line_min_deg": 5.0
+ },
+ "notes": "a certified pole must (i) appear in BOTH V2 solvers, (ii) be stable under all ladders, (iii) sit OFF the ECS continuum line arg(w) = -theta"
+}

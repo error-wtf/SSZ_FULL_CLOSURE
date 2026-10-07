@@ -3408,6 +3408,21 @@
       "sha256": "7eb652e5d21df80af14fd4eddbf160d2c754166899e2b8a5561c03b69c994314"
     },
     {
+      "path": "data/generated/spectral/CERTIFIED_RESONANCE_CATALOG_V2.csv",
+      "size_bytes": 86,
+      "sha256": "472bd7d48c3c45f1f9b06d9f5186456345812ba26bccbf02e42e1d724dbba877"
+    },
+    {
+      "path": "data/generated/spectral/CERTIFIED_RESONANCE_CATALOG_V2.json",
+      "size_bytes": 1420,
+      "sha256": "0c7e0f050afef0c3addf811568f086d6279c35196238f45748bb5d96064b0b3c"
+    },
+    {
+      "path": "data/generated/spectral/CERTIFIED_RESONANCE_CATALOG_V2.sha256",
+      "size_bytes": 65,
+      "sha256": "322a81f035139b0e49620eb08c955121e5b4bdb65b91dd6a00829a67feee413b"
+    },
+    {
       "path": "data/generated/spectral/COMMON_SPECTRAL_FORMAT_V1.json",
       "size_bytes": 21310,
       "sha256": "24f0beeaeaff13619ab0c7d9526fb090ce5c984e870944e21d5a73f32e3a3a15"
@@ -3418,6 +3433,11 @@
       "sha256": "a66341b9bac2f2c145aeaaed0f9d37698da3c65282f41c6e5c54caca3d816cbf"
     },
     {
+      "path": "data/generated/spectral/COUPLED_RESONANCE_SOLVER_V1_REVIEW.json",
+      "size_bytes": 1755,
+      "sha256": "8f2672db473d6b8279ec725f2fa9752cfe7e6168fdcfbce0c04027c25391c2bb"
+    },
+    {
       "path": "data/generated/spectral/CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_AUDIT.json",
       "size_bytes": 11607,
       "sha256": "266fa0313ec3a882af551dae77fd53e5fb4a70fa3fe675e5c048ad9604673bad"
@@ -3426,6 +3446,11 @@
       "path": "data/generated/spectral/ECS_CANDIDATES_V1.json",
       "size_bytes": 3501,
       "sha256": "6737334a3ca2b27113ecfd88956f80ac57e0dc99b644d715487eb44e44b0f827"
+    },
+    {
+      "path": "data/generated/spectral/ECS_V2_CANDIDATES.json",
+      "size_bytes": 12202,
+      "sha256": "0c1e5e666c5fb2292e168644eab7d8d959661d68209b967a3f7625f79bcb7919"
     },
     {
       "path": "data/generated/spectral/F4_FINITE_L_HEALTH_V4_ATTEMPT_BLOCKED_RECORD.json",
@@ -3463,9 +3488,19 @@
       "sha256": "415700bc017805abf3ac8bb1036c99f09a2234731ea3efae11193a0091c58156"
     },
     {
+      "path": "data/generated/spectral/JOST_ECS_MATCHING_V2.json",
+      "size_bytes": 2051,
+      "sha256": "4c7bfc0a45a8c217fe6df1336edf23b773bff465913b2c49ae30583c7552c43b"
+    },
+    {
       "path": "data/generated/spectral/JOST_QNM_CANDIDATES_V1.json",
       "size_bytes": 748,
       "sha256": "7d34280332ff56a79ff280cce071311ede56367841760ee392546508d82d197a"
+    },
+    {
+      "path": "data/generated/spectral/JOST_V2_PROBE.json",
+      "size_bytes": 1492,
+      "sha256": "518d7917a44599b3de0ce0992a03e1c164581408cf3a7339022230521b300b27"
     },
     {
       "path": "data/generated/spectral/MODE_CERTIFICATES_V1.json",
@@ -3613,6 +3648,16 @@
       "sha256": "92e78cb4aa74ef247cd3d18d01fde5260501df487acf1ba6b49cb5ee9b2d82e0"
     },
     {
+      "path": "data/generated/spectral/V4_CENTER_PERTURBATION_FROBENIUS_V2.json",
+      "size_bytes": 2051,
+      "sha256": "775512164417fab9481e1787b8c06738ce3b3581d0f1a5e19b3979d4cefe2852"
+    },
+    {
+      "path": "data/generated/spectral/V4_CENTER_REGULAR_BASIS_V2.npz",
+      "size_bytes": 1192,
+      "sha256": "690eeb067cbed08904b482bf14a9c3ac2ce2e0b5abdda75032963bd64d4d1875"
+    },
+    {
       "path": "data/generated/spectral/V4_CURVATURE_BENCHMARKS_V3.json",
       "size_bytes": 2752,
       "sha256": "81cf52cadf804be7e8d2b7abb217f0dd0a4ca22732444e0aa9bf245aa2322b4d"
@@ -3711,6 +3756,16 @@
       "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V2_3DOF.npz.sha256",
       "size_bytes": 65,
       "sha256": "b5cff4d98f0f1f48380b862fc1b031085999e31eb0dcd1f1c83fadf315dd0d41"
+    },
+    {
+      "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.json",
+      "size_bytes": 971,
+      "sha256": "fa9e7b7b58b417b1390aab0eff537c1daa93b878c7b2adaa018499cf8f50ece5"
+    },
+    {
+      "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.npz",
+      "size_bytes": 1218389,
+      "sha256": "ad2bee7d3994097479933c1eea787f3aa381648d098ffd36aab32a4c436db2ef"
     },
     {
       "path": "data/generated/spectral/V4_SCHUR_DOUBLE_COUNT_TEST_V1.json",
@@ -4251,6 +4306,11 @@
       "path": "docs/COUPLED_RESONANCE_GATES_V1.json",
       "size_bytes": 1554,
       "sha256": "49c9189244df8b753b9b760f3250c85ec6e676544f4dc447f4d6cf1efdb9742e"
+    },
+    {
+      "path": "docs/COUPLED_RESONANCE_GATES_V2.json",
+      "size_bytes": 1313,
+      "sha256": "1f3d4f3b9452007be73c63e8126ce8e95b102dddfa50f3125b327a532578b13d"
     },
     {
       "path": "docs/DIRECT_IMPLEMENTATION_FINDINGS.md",
@@ -6778,6 +6838,11 @@
       "sha256": "483dd2337d36ae8291504252ca94d02474a00d3681028d471763cdccaf5a0aaf"
     },
     {
+      "path": "tools/run_center_frobenius_v2.py",
+      "size_bytes": 9858,
+      "sha256": "f1e1ef2a5ccadeb4d947b355936fe77ec6bc41af886ba078ca9ff79de1fe9b82"
+    },
+    {
       "path": "tools/run_coupled_resonance_controls.py",
       "size_bytes": 10338,
       "sha256": "ff5f56c4254890c328d5496e68d795ee24b57ee0da3859a2d0b1ce73edcd2ccc"
@@ -6806,6 +6871,11 @@
       "path": "tools/run_ecs_discovery_v1.py",
       "size_bytes": 6795,
       "sha256": "2a7b964f2e38d0b9579330e5b1450f8acd241d50dd63bc134bc80b64d180d24f"
+    },
+    {
+      "path": "tools/run_ecs_discovery_v2.py",
+      "size_bytes": 7122,
+      "sha256": "92b8856e0b092f84eb78bb8232406f1c1cf6ad511aa2f2ac363a8b3270a76eb9"
     },
     {
       "path": "tools/run_f4_finite_l_kphys_v2.py",
@@ -6846,6 +6916,11 @@
       "path": "tools/run_jost_discovery_v1.py",
       "size_bytes": 10036,
       "sha256": "681f56f7bd3053a3fcc23c781e0071a144c35435d1a06aca9364b25faeb70d9e"
+    },
+    {
+      "path": "tools/run_jost_discovery_v2.py",
+      "size_bytes": 9699,
+      "sha256": "c1f3ac44238881a59275955fff1e42bde08827cc083696338469d46beb8ec84d"
     },
     {
       "path": "tools/run_jost_qnm_candidates.py",
@@ -7001,6 +7076,11 @@
       "path": "tools/run_v4_physical_resonance_export_v2_3dof.py",
       "size_bytes": 11324,
       "sha256": "d1552ff5a52f3748c933581833572fd20bb9eff4a5dce063015a820c5d5e7e66"
+    },
+    {
+      "path": "tools/run_v4_physical_resonance_export_v3_3dof.py",
+      "size_bytes": 5218,
+      "sha256": "89d50c60d4afc4f30ffbd3a0772a29ff1d1af8a499e49159a90061ce9c283d53"
     },
     {
       "path": "tools/run_v4_s_contract_forensics.py",

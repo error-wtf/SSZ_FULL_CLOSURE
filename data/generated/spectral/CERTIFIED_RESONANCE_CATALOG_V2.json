@@ -1,0 +1,38 @@
+{
+ "audit": "CERTIFIED_RESONANCE_CATALOG_V2",
+ "supersedes": "CERTIFIED_RESONANCE_CATALOG_V1.json (marked UNDER_REVIEW by COUPLED_RESONANCE_SOLVER_V1_REVIEW.json)",
+ "production_branch": {
+  "a1": -0.5,
+  "eps": -0.3
+ },
+ "closure_full_sha": "see git log (V2 solver commit)",
+ "operator_artifact": "V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.npz",
+ "operator_sha256": "ad2bee7d3994097479933c1eea787f3aa381648d098ffd36aab32a4c436db2ef",
+ "center_basis_artifact": "V4_CENTER_REGULAR_BASIS_V2.npz",
+ "gates": "docs/COUPLED_RESONANCE_GATES_V2.json",
+ "frequency_conventions": {
+  "omega_t": "raw solver frequency",
+  "Omega_inf": "omega_t / sqrt(f_inf), f_inf=0.24588743 (Richardson extrapolation)"
+ },
+ "scanned_domain_v2_same_as_v1": {
+  "Re_omega_t": [
+   0.05,
+   1.5
+  ],
+  "Im_omega_t": [
+   -0.05,
+   -0.8
+  ],
+  "L": 6
+ },
+ "certified_modes": [],
+ "verdict": "NO_CERTIFIED_RESONANCE_IN_SCANNED_DOMAIN (V2 solvers)",
+ "semantics": "this V2 verdict is now backed by two INDEPENDENT, implementation-audited, unit-tested solvers sharing one derived center basis and one coordinate convention; it is a physically meaningful negative result FOR THIS DOMAIN AND L",
+ "rejected_ledger_v2": [],
+ "provenance": {
+  "controls_v2": "COUPLED_RESONANCE_CONTROL_SUITE_V1.json (v2 eigen-method, all PASS)",
+  "jost_probe": "JOST_V2_PROBE.json",
+  "ecs_candidates": "ECS_V2_CANDIDATES.json",
+  "matching": "JOST_ECS_MATCHING_V2.json"
+ }
+}
