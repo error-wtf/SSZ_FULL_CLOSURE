@@ -1,0 +1,39 @@
+{
+ "audit": "JOST_EVANS_V2_2_DIAGNOSTIC",
+ "design": {
+  "A": "principal-angle discovery metric (bounded)",
+  "B": "Evans with complex det tracking"
+ },
+ "blind_discovery": {
+  "metric": "1 - prod(svd(Qr^H Ql))",
+  "n_coarse_points": 140,
+  "best_metric_value": -2.6645352591003757e-15,
+  "best_omega": [
+   2.6,
+   -1.7
+  ]
+ },
+ "evans_refinement": {
+  "dip_at": [
+   2.5883463,
+   -1.13209197
+  ],
+  "log_abs_E_at_dip": -4.606544219935529,
+  "reference": [
+   2.2383463024,
+   -1.4820919693
+  ],
+  "rel_err": 0.18437926746690442
+ },
+ "r_match_check": {
+  "15.0": "log|D| at dip via internal rm=20: -4.6 (r_match now enters via separate scan below)",
+  "20.0": "log|D| at dip via internal rm=20: -4.6 (r_match now enters via separate scan below)",
+  "25.0": "log|D| at dip via internal rm=20: -4.6 (r_match now enters via separate scan below)"
+ },
+ "resolution_ladder": {
+  "1200": "-3.6",
+  "2400": "-4.6",
+  "4800": "1.0"
+ },
+ "wall_seconds": 407.7
+}
