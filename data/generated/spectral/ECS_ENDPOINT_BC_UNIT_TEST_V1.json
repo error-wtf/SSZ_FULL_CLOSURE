@@ -1,0 +1,21 @@
+{
+ "audit": "ECS_ENDPOINT_BC_UNIT_TEST_V1",
+ "setup": "free wave (V=0), 3 channels, theta=30deg, Neumann-center (Trel=0) + Psi(z_end)=0 endpoint, grid n=600",
+ "fixed_bugs_exercised": [
+  "outer endpoint BC",
+  "one-sided center stencil"
+ ],
+ "result": {
+  "kept_decaying_eigenvalues": 294,
+  "first_values": [
+   "0.026-0.007j (x3)",
+   "0.079-0.021j (x3)",
+   "0.131-0.035j (x3)",
+   "0.183-0.049j (x3)"
+  ],
+  "structure": "equidistant box ladder n*0.052 along the z_end direction (arg ~ -15 deg = direction of the complex domain vector r_in -> z_end), clean channel-triples",
+  "pass": true
+ },
+ "note": "before the fixes this test returned kept=0 (dead center row + no endpoint condition); the ladder is now the expected discretized free spectrum",
+ "timestamp": "2026-10-07T12:55:57Z"
+}
