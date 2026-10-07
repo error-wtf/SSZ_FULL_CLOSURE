@@ -3498,6 +3498,11 @@
       "sha256": "681ae26320d49fe5fe9539e929035b469f95fc5709b54c7fed4e75889b4711e1"
     },
     {
+      "path": "data/generated/spectral/HALF_LINE_SQUARE_WELL_REFERENCE_ROOTS_V2.json",
+      "size_bytes": 649,
+      "sha256": "e29640c1f0a0987ca316e5e7d59fb17a850d52338f7508d24d9c841db086cc13"
+    },
+    {
       "path": "data/generated/spectral/JOST_CANDIDATES_V1.json",
       "size_bytes": 14222,
       "sha256": "3c254e1255335d076a287d9af0c28566ed4d2569099629edc4a0ca8a9ed1bb53"
@@ -3526,6 +3531,11 @@
       "path": "data/generated/spectral/JOST_QNM_CANDIDATES_V1.json",
       "size_bytes": 748,
       "sha256": "7d34280332ff56a79ff280cce071311ede56367841760ee392546508d82d197a"
+    },
+    {
+      "path": "data/generated/spectral/JOST_V2_2_CERTIFICATE.json",
+      "size_bytes": 1821,
+      "sha256": "667578c03a12fdc890d179084e80527b2bf2233462840d34c6d8e7c8c5a4dd9b"
     },
     {
       "path": "data/generated/spectral/JOST_V2_PROBE.json",

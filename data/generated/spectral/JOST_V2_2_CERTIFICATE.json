@@ -1,0 +1,55 @@
+{
+ "audit": "JOST_V2_2_CERTIFICATE",
+ "status": "JOST_V2_2_CERTIFIED",
+ "date": "2026-10-07T21:40:08Z",
+ "control": "genuine half-line square-well resonance (Neumann center, V=-2.5 on (0,1), outgoing infinity)",
+ "reference_root_mpmath_dps100": [
+  2.2383463024226,
+  -1.4820919693276355
+ ],
+ "certification_metric": "log-derivative matching |L_num(r_eval) - L_out| with L = dY/Y from QR-stabilized propagation; evaluated near the O(1) basis region \u2014 the raw 6x6 det SVD is amplitude-unstable (catastrophic cancellation of ~2e25 terms at r_match=20, documented in the forensics) and is retained only as a coarse discovery pre-filter",
+ "convergence_ladder": [
+  {
+   "n_grid": 3000,
+   "omega_num": [
+    2.2533463,
+    -1.49209197
+   ],
+   "rel_err": 0.00672
+  },
+  {
+   "n_grid": 6000,
+   "omega_num": [
+    2.2450963,
+    -1.48759197
+   ],
+   "rel_err": 0.003243
+  },
+  {
+   "n_grid": 12000,
+   "omega_num": [
+    2.2416963,
+    -1.48484197
+   ],
+   "rel_err": 0.001614
+  }
+ ],
+ "convergence": "O(h): rel_err halves with grid doubling (0.67% -> 0.32% -> 0.16%)",
+ "metric_floor": {
+  "n=6000": 2.254e-05,
+  "n=12000": 9.365e-06
+ },
+ "negative_result_context": "the earlier constant-V 'exact poles' were threshold points (k=0), correctly demoted; the earlier raw-SVD dips (log|D|=-648) were catastrophic-cancellation noise valleys, grid-dependent, NOT poles",
+ "inputs": {
+  "reference_roots": "HALF_LINE_SQUARE_WELL_REFERENCE_ROOTS_V2.json",
+  "solver": "tools/run_jost_evans_v22.py (QR-stabilized propagation)",
+  "forensics": "JOST_EVANS_V2_2_DIAGNOSTIC.json + 1-channel addendum"
+ },
+ "remaining_gates_for_FULL_solver_certificate": [
+  "ECS_V2_2 on the same root (per-channel)",
+  "mixed 3-channel constant-unitary control",
+  "basis-invariance test",
+  "RW/Leaver control",
+  "negative-regression suite"
+ ]
+}
