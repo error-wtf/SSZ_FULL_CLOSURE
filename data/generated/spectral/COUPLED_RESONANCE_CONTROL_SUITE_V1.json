@@ -1,0 +1,38 @@
+{
+ "audit": "COUPLED_RESONANCE_CONTROL_SUITE_V1 (v2, eigen-method)",
+ "note": "discretized Dirichlet eigenproblems; robust vs the Wronskian-scan degeneracy of v1",
+ "control_A_poschl_teller": {
+  "expected_bound_energies": [
+   -9.0,
+   -4.0,
+   -1.0
+  ],
+  "discrete_eigenvalues": [
+   -9.000026,
+   -4.000075,
+   -1.000075
+  ],
+  "rel_errors": [
+   3e-06,
+   1.9e-05,
+   7.5e-05
+  ],
+  "pass": true
+ },
+ "control_BC_coupled": {
+  "coupling_g": 0.01,
+  "note": "sensitivity measured with the SMALL coupling g=0.01; the flip control D uses g=0.5 to make the movement unambiguous",
+  "max_pole_shift_vs_uncoupled": 0.00010424,
+  "shift_below_tolerance": true,
+  "pass": true
+ },
+ "control_D_negative_flip": {
+  "max_move_plus_vs_minus": 0.09569392,
+  "relative_move": 0.00598085,
+  "must_exceed_C_R1_tolerance": 0.001,
+  "pass": true
+ },
+ "all_controls_pass": true,
+ "verdict": "CONTROLS_PASS \u2014 solver may proceed to the SSZ operator",
+ "wall_seconds": 250.7
+}

@@ -1,0 +1,44 @@
+{
+ "audit": "CERTIFIED_RESONANCE_CATALOG_V1",
+ "production_branch": {
+  "a1": -0.5,
+  "eps": -0.3
+ },
+ "closure_full_sha": "36c6a54",
+ "operator_sha256": "ff2087354a78826a",
+ "gates_file": "docs/COUPLED_RESONANCE_GATES_V1.json",
+ "frequency_conventions": {
+  "omega_t": "raw solver frequency",
+  "Omega_inf": "omega_t / sqrt(f_inf), f_inf=0.24588743 (Richardson-extrapolated)"
+ },
+ "scanned_domain": {
+  "Re_omega_t": [
+   0.05,
+   1.5
+  ],
+  "Im_omega_t": [
+   -0.05,
+   -0.8
+  ],
+  "L": 6
+ },
+ "certified_modes": [],
+ "verdict": "NO_CERTIFIED_RESONANCE_FOUND_IN_SCANNED_DOMAIN",
+ "rejected_ledger": [
+  {
+   "omega_t": [
+    0.602,
+    -0.354
+   ],
+   "Omega_inf": [
+    1.2135,
+    -0.7135
+   ],
+   "status": "REJECTED_JOST_ECS",
+   "jost_absD": 2.16e-05,
+   "r_match_stable": true,
+   "ecs_theta_stable": false,
+   "reason": "no ECS counterpart at theta in {15,25,40,50} deg; |D| suppression only 2.7 orders (pole-typical: 6+)"
+  }
+ ]
+}

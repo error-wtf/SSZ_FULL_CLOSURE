@@ -1,0 +1,48 @@
+{
+ "audit": "COUPLED_RESONANCE_GATES_V1",
+ "frozen_before_first_scan": true,
+ "frozen_at": "2026-10-07T00:31:40Z",
+ "gates": {
+  "C-R1": {
+   "name": "Jost/ECS pole agreement",
+   "criterion": "|Omega_jost - Omega_ecs| / |Omega_jost| < 1e-3 (Re and Im)"
+  },
+  "C-R2": {
+   "name": "radial-resolution stability",
+   "criterion": "|pole(N_r) - pole(2*N_r)| / |pole| < 1e-3"
+  },
+  "C-R3": {
+   "name": "outer-domain stability",
+   "criterion": "|pole(r_max) - pole(2*r_max)| / |pole| < 1e-3, r_max in {60,120} minimum"
+  },
+  "C-R4": {
+   "name": "ECS-angle stability",
+   "criterion": "|pole(theta) - pole(theta+0.05)| / |pole| < 1e-3"
+  },
+  "C-R5": {
+   "name": "matching-radius stability",
+   "criterion": "|pole(r_m) - pole(r_m+1.0)| / |pole| < 1e-3"
+  },
+  "C-R6": {
+   "name": "equation residual norm",
+   "criterion": "relative L2 residual < 1e-6 at the pole"
+  },
+  "C-R7": {
+   "name": "center-basis stability",
+   "criterion": "pole shift < 1e-3 under center start-radius or series-order variation"
+  },
+  "C-R8": {
+   "name": "asymptotic outgoing-basis stability",
+   "criterion": "pole shift < 1e-3 under asymptotic-basis truncation"
+  },
+  "C-R9": {
+   "name": "branch continuation",
+   "criterion": "continuous path from seed to pole tracked or grid-deformation evidence"
+  },
+  "C-R10": {
+   "name": "kinetic/flux consistency",
+   "criterion": "outgoing flux direction confirmed by Wronskian current sign"
+  }
+ },
+ "tolerance_policy": "frozen before first SSZ root; changes require a version bump and preservation of the failed version"
+}

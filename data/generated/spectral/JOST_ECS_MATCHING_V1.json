@@ -1,0 +1,39 @@
+{
+ "audit": "JOST_ECS_MATCHING_V1",
+ "frozen_candidates": {
+  "jost": {
+   "best": {
+    "omega_t": [
+     0.602,
+     -0.354
+    ],
+    "absD": 2.16e-05,
+    "local_minimum_2d": true,
+    "r_match_independent": {
+     "25": 2.16e-05,
+     "30": 2.16e-05,
+     "35": 2.16e-05
+    },
+    "depth_vs_background": "2.7 orders (1.2e-02 far-field vs 2.2e-05 min)",
+    "note": "isolated shallow minimum, not numerically zero"
+   }
+  },
+  "ecs": {
+   "thetas_run": [
+    15,
+    25,
+    40,
+    50
+   ],
+   "n_pts": 700,
+   "eigenvalues_near_jost_candidate": 0,
+   "theta_stable_structures": "none in [0.3,0.9]x[-0.6,-0.1]"
+  }
+ },
+ "C-R1_check": {
+  "criterion": "|Omega_jost - Omega_ecs|/|Omega| < 1e-3",
+  "result": "FAIL \u2014 no ECS eigenvalue within 0.1 of the Jost minimum at any theta",
+  "verdict": "REJECTED_JOST_ECS"
+ },
+ "interpretation": "the Jost shallow minimum is a valley of the matching function, not a certified pole; genuine QNM poles show 6+ orders of |D| suppression and appear as theta-stable ECS eigenvalues"
+}
