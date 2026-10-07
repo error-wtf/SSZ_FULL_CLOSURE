@@ -3513,6 +3513,16 @@
       "sha256": "4c7bfc0a45a8c217fe6df1336edf23b773bff465913b2c49ae30583c7552c43b"
     },
     {
+      "path": "data/generated/spectral/JOST_EVANS_V2_2_DIAGNOSTIC.json",
+      "size_bytes": 954,
+      "sha256": "d8babe80a44647d91d93fd0807f96cc51727ddfeb2e6886f26a1cad0de811ec0"
+    },
+    {
+      "path": "data/generated/spectral/JOST_EVANS_V2_2_DIAGNOSTIC_1CHANNEL_ADDENDUM.json",
+      "size_bytes": 1026,
+      "sha256": "8258faa3e93eef0146c46ddae32e0498c755f21bc65209fb34494f39daf166ed"
+    },
+    {
       "path": "data/generated/spectral/JOST_QNM_CANDIDATES_V1.json",
       "size_bytes": 748,
       "sha256": "7d34280332ff56a79ff280cce071311ede56367841760ee392546508d82d197a"
@@ -6946,6 +6956,11 @@
       "path": "tools/run_jost_discovery_v2.py",
       "size_bytes": 9699,
       "sha256": "c1f3ac44238881a59275955fff1e42bde08827cc083696338469d46beb8ec84d"
+    },
+    {
+      "path": "tools/run_jost_evans_v22.py",
+      "size_bytes": 9148,
+      "sha256": "b58967d5e56ff6f6fcb1446e66b77bdc61e0df674521949a3abb63a94b911926"
     },
     {
       "path": "tools/run_jost_qnm_candidates.py",
