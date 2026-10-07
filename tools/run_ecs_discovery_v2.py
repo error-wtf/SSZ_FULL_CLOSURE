@@ -82,6 +82,13 @@ def build_pencil_fixed(d3, cb, theta_deg, n_in=450, n_out=350,
         D1[i, i] = (hp-hm)/(hm*hp)
         D2[i, i-1] = 2.0/(hm*(hm+hp)); D2[i, i+1] = 2.0/(hp*(hm+hp))
         D2[i, i] = -2.0/(hm*hp)
+    # one-sided 2nd-order stencil at the FIRST node (needed by the
+    # center-BC row; previously D1 row 0 was all-zero, silently killing
+    # the center constraint for any basis with dY != 0):
+    h0, h1 = h[0], h[1]
+    D1[0, 0] = -(2*h0 + h1)/(h0*(h0+h1))
+    D1[0, 1] = (h0 + h1)/(h0*h1)
+    D1[0, 2] = -h0/(h1*(h0+h1))
     fitK = fit_exterior(d3["K_phys"], r_real)
     fitG = fit_exterior(d3["G_phys"], r_real)
     fitS = fit_exterior(d3["S_phys"], r_real)
@@ -128,6 +135,15 @@ def build_pencil_fixed(d3, cb, theta_deg, n_in=450, n_out=350,
         C0[row, :] += d1row          # Psi' term
         for cc in range(3):
             C0[row, 3*0+cc] += -Trel[ch, cc]  # -Trel Psi term
+    # ---- OUTER ENDPOINT BC (V2.2 fix): Psi(z_end) = 0 ----------------
+    # The last 3 row blocks previously kept the algebraic interior
+    # stencil row (no valid endpoint condition). Impose Psi(z_end)=0
+    # explicitly — standard ECS truncation for a sufficiently long
+    # rotated tail. Endpoint convergence is tested separately.
+    for ch in range(3):
+        row = 3*(n-1) + ch
+        C0[row, :] = 0; C1[row, :] = 0; C2[row, :] = 0
+        C0[row, 3*(n-1) + ch] = 1.0   # Psi_ch(z_end) = 0
     return C2, C1, C0, z
 
 

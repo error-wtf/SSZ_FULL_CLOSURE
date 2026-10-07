@@ -3443,6 +3443,11 @@
       "sha256": "9442be123bfe78b3fbd96b29c40ed4066b5b4f4c5ea27b2cf59b39262dd701c5"
     },
     {
+      "path": "data/generated/spectral/COUPLED_RESONANCE_SOLVER_V2_1_REVIEW.json",
+      "size_bytes": 1508,
+      "sha256": "eea83b4200d0839d4172b66b07c1e8e8f411d1c9f59ceb084e9e267e963080e0"
+    },
+    {
       "path": "data/generated/spectral/CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_AUDIT.json",
       "size_bytes": 11607,
       "sha256": "266fa0313ec3a882af551dae77fd53e5fb4a70fa3fe675e5c048ad9604673bad"
@@ -3481,6 +3486,11 @@
       "path": "data/generated/spectral/FROZEN_SPECTRAL_OPERATOR_EXPORT_V1.npz",
       "size_bytes": 8376346,
       "sha256": "85caecd59155d7d155dcb70e5cfa0b148366504778f45f51bc0f960294baab1a"
+    },
+    {
+      "path": "data/generated/spectral/HALF_LINE_SQUARE_WELL_REFERENCE_ROOTS_V1.json",
+      "size_bytes": 625,
+      "sha256": "681ae26320d49fe5fe9539e929035b469f95fc5709b54c7fed4e75889b4711e1"
     },
     {
       "path": "data/generated/spectral/JOST_CANDIDATES_V1.json",
@@ -6884,8 +6894,8 @@
     },
     {
       "path": "tools/run_ecs_discovery_v2.py",
-      "size_bytes": 7122,
-      "sha256": "92b8856e0b092f84eb78bb8232406f1c1cf6ad511aa2f2ac363a8b3270a76eb9"
+      "size_bytes": 7953,
+      "sha256": "4163aaec3838a504a68067ab6b9ebb13f08d2e74b2767ba15d85be5cb746f27f"
     },
     {
       "path": "tools/run_f4_finite_l_kphys_v2.py",

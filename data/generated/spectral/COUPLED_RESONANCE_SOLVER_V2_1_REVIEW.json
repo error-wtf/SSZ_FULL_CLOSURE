@@ -1,0 +1,20 @@
+{
+ "audit": "COUPLED_RESONANCE_SOLVER_V2_1_REVIEW",
+ "status": "CONTROL_DESIGN_UNDER_REVIEW",
+ "supersedes_interpretation_of": "COUPLED_RESONANCE_SOLVER_V2_1_CERTIFICATE.json (preserved)",
+ "reasons": [
+  "ECS pencil outer endpoint: D1/D2 rows at the last node were never replaced by a physical endpoint condition \u2014 the last 3 row blocks degenerate to the algebraic equation (w^2 K - M - S'/2) Psi = 0, which is NOT an ECS truncation. For constant-V controls this can artificially manufacture w^2 = V_j. The 'exact' ch2 recovery may be a boundary-row artifact.",
+  "Constant-complex-potential control: k(w) = sqrt(w^2 - w_j^2) has k=0 AT w = w_j \u2014 a dispersion threshold/branch point, not an isolated resonance pole. The Jost sigma_min zero there certifies threshold handling, not pole recovery.",
+  "Wrong-pole negative control invalid: W_POLES[1] is itself channel 2's special point in the SAME 3-channel system \u2014 the global sigma_min may legitimately be small there.",
+  "PT-well 2j/1j poles are bound-state objects under a different topology; not half-line QNM references."
+ ],
+ "actions": [
+  "fix ECS outer endpoint BC (Psi(z_end)=0) + endpoint unit test",
+  "replace controls with finite-range square-well half-line resonances",
+  "independent mpmath high-precision reference roots, frozen before runs",
+  "mixed-3-channel control via constant unitary mixing",
+  "RW/Leaver control afterwards",
+  "reissue JOST_V2_2 + ECS_V2_2 certificates"
+ ],
+ "review_date": "2026-10-07T12:29:55Z"
+}
