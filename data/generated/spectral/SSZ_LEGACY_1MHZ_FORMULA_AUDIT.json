@@ -24,5 +24,28 @@
   },
   "consistency_with_previous_audits": "konsistent mit ANTI_NUMEROLOGY_NMAX_AUDIT_V1 und SEGMENTATION_CUTOFF_1MHZ_AUDIT_V1",
   "no_observational_input": true,
-  "observational_seal": "maintained"
+  "observational_seal": "maintained",
+  "owner_review_confirmation_2026_10_08": {
+    "reviewer": "Lino (co-author of the 2025 paper)",
+    "confirmed_errors": {
+      "E1_convergence_to_zero": "pi_eff = N*s_phi / (2 R0 e^{lambda N}) konvergiert unter BEIDEN s_phi-Annahmen gegen 0, nicht gegen pi: skript-exakt (s_phi=phi^-N): pi_eff(42)=2.0e-26; s_phi konstant: pi_eff(42)=1.2e-17. Limit in beiden Faellen 0.",
+      "E2_criterion_proves_nothing": "|pi_eff(N+1)-pi_eff(N)|<epsilon prueft nur Nachbar-Differenzen; jede Nullfolge erfuellt es. Kriterium schlaegt bei N=17 an mit Wert 9.85e-11 \u2014 weit weg von pi. epsilon (Laengenskala) ist ausserdem mit dimensionslosem pi_eff dimensionsinkonsistent verknuepft.",
+      "E3_epsilon_tunability": "die 42 kann durch die gewaehlte numerische Genauigkeit von epsilon entstanden sein \u2014 kein Nachweis einer fundamentalen Grenze",
+      "E4_N_ambiguity": "N bezeichnet im Paper mal Segmentanzahl, mal phi-Unterteilungsschritte \u2014 nicht dieselben Groessen",
+      "co_author_verdict": "die 42-Herleitung ist NICHT best\u00e4tigt; die GesamtidEE SSZ bleibt davon unber\u00fchrt; maximale Segmentierungsdichte (Xi<=Xi_max, D>=1/(1+Xi_max)>0) bleibt eigenst\u00e4ndige, untersuchenswerte Hypothese"
+    },
+    "numeric_evidence": {
+      "script_exact": {
+        "pi_eff_17": "9.854e-11",
+        "pi_eff_42": "2.015e-26",
+        "limit": "0"
+      },
+      "s_phi_constant": {
+        "pi_eff_42": "1.207e-17",
+        "limit": "0"
+      },
+      "criterion_trigger": "N=17 (epsilon=1e-10), Wert dort 9.85e-11 != pi"
+    }
+  },
+  "final_classification": "PI_LIMIT_42_NOT_ESTABLISHED \u2014 vom Mitautor best\u00e4tigt; 42 endg\u00fcltig an Douglas Adams verwiesen; Xi_max-Hypothese bleibt offen"
 }
