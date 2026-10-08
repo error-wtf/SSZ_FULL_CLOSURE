@@ -1,0 +1,20 @@
+{
+ "audit": "JOST_SSZ_D1_CANDIDATES_V4",
+ "tile": {
+  "re": [
+   1.5,
+   3.0
+  ],
+  "im": [
+   -0.8,
+   -0.05
+  ]
+ },
+ "branch": {
+  "a1": -0.5,
+  "eps": -0.3,
+  "L": 6
+ },
+ "candidates": [],
+ "n": 0
+}

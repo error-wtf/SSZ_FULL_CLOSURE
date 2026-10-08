@@ -1,0 +1,114 @@
+{
+  "artifact": "NO_CERTIFIED_RESONANCE_IN_EXPANDED_DOMAIN_V1",
+  "created_utc": "2026-10-08T19:34:36+00:00",
+  "closure_head": "1f4cb3e3d4d2cf4ed1dcbf2b20523b4df817da16",
+  "branch": {
+    "a1": -0.5,
+    "eps": -0.3,
+    "L": 6
+  },
+  "physical_fields": [
+    "psi",
+    "dphi",
+    "V"
+  ],
+  "strictly_limited_to": {
+    "Re_omega_t": [
+      0.05,
+      3.0
+    ],
+    "Im_omega_t": [
+      -2.0,
+      -0.05
+    ],
+    "tiles": {
+      "original_box": {
+        "Re": [
+          0.05,
+          1.5
+        ],
+        "Im": [
+          -0.05,
+          -0.8
+        ],
+        "verdict": "NO_CERTIFIED_RESONANCE_IN_SCANNED_DOMAIN"
+      },
+      "D1_HIGH_RE": {
+        "Re": [
+          1.5,
+          3.0
+        ],
+        "Im": [
+          -0.8,
+          -0.05
+        ],
+        "candidates": 0
+      },
+      "D2_DEEP_IM": {
+        "Re": [
+          0.05,
+          1.5
+        ],
+        "Im": [
+          -2.0,
+          -0.8
+        ],
+        "candidates": 0
+      },
+      "D3_HIGH_RE_DEEP_IM": {
+        "Re": [
+          1.5,
+          3.0
+        ],
+        "Im": [
+          -2.0,
+          -0.8
+        ],
+        "candidates": 0
+      }
+    }
+  },
+  "solver_certification": "COUPLED_RESONANCE_SOLVER_V2_2_CERTIFIED",
+  "discovery_paths_independent": true,
+  "cross_visibility": "none \u2014 ECS never read Jost candidates, vice versa",
+  "matching_summary": {
+    "D1": {
+      "ecs_n": 0,
+      "jost_n": 0,
+      "common": [],
+      "common_n": 0
+    },
+    "D2": {
+      "ecs_n": 0,
+      "jost_n": 0,
+      "common": [],
+      "common_n": 0
+    },
+    "D3": {
+      "ecs_n": 0,
+      "jost_n": 0,
+      "common": [],
+      "common_n": 0
+    }
+  },
+  "n_common_all_tiles": 0,
+  "no_broader_no_qnm_claim": true,
+  "negative_Re_region": "NOT covered: w->-w* symmetry not proven for resonances under the fixed outgoing BC (SSZ_FREQUENCY_SYMMETRY_CHECK_V1: SYMMETRY_UNRESOLVED_FOR_RESONANCES)",
+  "next_preregistered_ladder": [
+    "L=12",
+    "L=20",
+    "L=42",
+    "branch (a1=-0.5, eps=+0.3) from the original small box"
+  ],
+  "candidate_artifacts_sha256": {
+    "JOST_SSZ_D1_CANDIDATES_V4.json": "3c36a40b2a51816483b791b8121d0a72e9d181a398730458337529efdc033cd9",
+    "JOST_SSZ_D2_CANDIDATES_V4.json": "5e0e77cd3c69091b7bfcbd371c9aa8da4a94416f67db6d75d5333d35ea388fad",
+    "JOST_SSZ_D3_CANDIDATES_V4.json": "ab283901341b3d7c5d0a164b6f0751e167c156e8b819e3d6314cfefa1ff238db",
+    "ECS_SSZ_D1_CANDIDATES_V4.json": "fa2e14832c9333ab4a2876caf22243ee899aa3574ce6750b4fda7e04007ffc92",
+    "ECS_SSZ_D2_CANDIDATES_V4.json": "f59206e5304b53001cf3aac468977a2897bd1fa990e8beb7acf5622245c4f5c7",
+    "ECS_SSZ_D3_CANDIDATES_V4.json": "3f4fdf6e3bcef7dad18701944e5ce3cdc31fe0a3ce13174df00b9c38c2b33a88"
+  },
+  "matching_sha256": "f95ad9f6a0f93d0f5f5706490367a2af0ffb42f675d64af12bda18240ef1d8ea",
+  "preregistration_sha256": "78301ad7d60c5eb26ee07da81e2ed16d1c502560f99302cf6c8bcba69a3c7a4a",
+  "observational_seal": "maintained \u2014 no NICER/GWOSC input anywhere in this expansion"
+}
