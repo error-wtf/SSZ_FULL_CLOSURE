@@ -3828,6 +3828,11 @@
       "sha256": "126ab36e7c3acef6e5d16596b5c5f176908296d2ffdac65af31b0ab3bcb39b7d"
     },
     {
+      "path": "data/generated/spectral/NO_CERTIFIED_RESONANCE_L20_V1.json",
+      "size_bytes": 2227,
+      "sha256": "7feffe03cabdc3d9fb71fff6f5c3bae0d3852478651146d25b38cd17895e5acf"
+    },
+    {
       "path": "data/generated/spectral/RESONANCE_BASIS_INVARIANCE_V1.json",
       "size_bytes": 2221,
       "sha256": "3185d5c83425447891973168f762094f473e0fc01f2945fa64195a2a8b0f0342"
