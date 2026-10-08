@@ -1,7 +1,14 @@
 {
  "audit": "ECS_V2_2_CERTIFICATE",
+ "version": "V2-contour-FEM forensics-closure run",
+ "status": "ECS_V2_2_NOT_CERTIFIED",
+ "findings": {
+  "F1": "ARPACK phantom pairs on the complex generalized pencil \u2014 all scipy eigs(M=,sigma=) pairs carry residuals 1e2..1e5 and are absent from the dense spectrum; every earlier V2 'hit' was phantom. All pairs must be residual-validated.",
+  "F2": "dense ground truth shows NO validated eigenvalue near lambda_ref at r_match in {2,6}, tails {8,12}: the pole is not exposed by this discretization",
+  "F3": "machinery validated end-to-end (free-particle known-answer test, O(h^2), residuals 1e-11): assembly and solvers are correct",
+  "F4": "next attempt: non-uniform ECS contour (V1 geometry) + Galerkin mass-matrix pencil (V2 weak form); kink defect of V1 is expected to vanish in the weak form"
+ },
  "problem": {
-  "control": "half-line square well, Neumann center, V=-2.5 on (0,1), outgoing infinity",
   "identical_frozen_inputs_as_jost_v2_2": "HALF_LINE_SQUARE_WELL_REFERENCE_ROOTS_V2.json",
   "reference_root": [
    2.2383463024226,
@@ -10,169 +17,134 @@
   "lambda_ref": [
    2.8135975640234556,
    -6.634870158789484
-  ],
-  "arg_omega_ref_deg": 33.5100176761016
+  ]
  },
- "method": {
-  "family": "exterior complex scaling, complex FD Hamiltonian eigenpencil",
-  "independence": "no propagation, no Wronskian, no shared root-finding residual with JOST_V2_2 (shares only frozen coefficient inputs)",
-  "sector_note": "|arg(omega_ref)|=33.53deg -> lambda-arg=-67deg; with the continuum rotated DOWN by e^{-2i theta} the pole is exposed for theta < 33.5deg (historical theta=25 was geometrically correct; the earlier 'sector exclusion' reading was inverted)"
- },
- "gates_declared_before_run": {
-  "G1_rel_err_max": 0.02,
-  "G2": "rel_err strictly decreasing across h-ladder",
-  "G3_theta_spread_max": 0.002,
-  "G4_tail_spread_max": 0.002,
-  "G5_negative_min_rel_dist": 0.1,
-  "G6_isolation_min": 0.05,
-  "G7_tail_ratio_max": 0.2
- },
- "stencil_self_check": {
-  "max_interior_residual": 1.0995038606213852,
-  "rel": 0.0075631626634678015
- },
- "dense_vs_arpack_cross_check": {
-  "dense_candidates": [
-   [
-    1.7702260279033413,
-    -1.2577193747006967
-   ],
-   [
-    1.9473287426282044,
-    -1.4480019258966446
-   ],
-   [
-    2.125444962685169,
-    -1.6379788847783514
-   ],
-   [
-    2.3042487988104265,
-    -1.8276251350178034
+ "dense_ground_truth": {
+  "tail8": {
+   "n_validated": 200,
+   "nearest_to_lambda_ref": [
+    {
+     "lam": [
+      3.250708696762286,
+      -6.884411140602779
+     ],
+     "resid": 1.7818767939091126e-12,
+     "dist": 0.503325783135105
+    },
+    {
+     "lam": [
+      1.9537816778200188,
+      -5.963701514078981
+     ],
+     "resid": 1.7439773129521286e-12,
+     "dist": 1.09075694259094
+    },
+    {
+     "lam": [
+      2.6442249144385603,
+      -8.212204786501474
+     ],
+     "resid": 1.7973291458979309e-12,
+     "dist": 1.5864020997864092
+    }
    ]
-  ],
-  "arpack_candidates": [
-   [
-    2.1254449626798197,
-    -1.6379788848001229
-   ],
-   [
-    1.9473287426429646,
-    -1.4480019259043975
-   ],
-   [
-    2.3042487988320954,
-    -1.8276251350354868
-   ],
-   [
-    1.7702260279350996,
-    -1.2577193747389737
+  },
+  "tail12": {
+   "n_validated": 280,
+   "nearest_to_lambda_ref": [
+    {
+     "lam": [
+      3.2071434734774384,
+      -6.924318248718911
+     ],
+     "resid": 2.531430188536351e-12,
+     "dist": 0.4885269487057556
+    },
+    {
+     "lam": [
+      1.629686661162732,
+      -7.296245667322636
+     ],
+     "resid": 2.376864878733542e-12,
+     "dist": 1.3561204183994795
+    },
+    {
+     "lam": [
+      1.2914165052270565,
+      -5.983532616667807
+     ],
+     "resid": 2.3288449638988085e-12,
+     "dist": 1.6556798511595272
+    }
    ]
-  ],
-  "max_rel_disagreement": 8.351113093294417e-12
- },
- "resolution_ladder": [
-  {
-   "h": 0.02,
-   "omega": [
-    2.125444962679858,
-    -1.637978884800041
-   ],
-   "rel_err": 0.07169818499828735
-  },
-  {
-   "h": 0.01,
-   "omega": [
-    2.1675515277741653,
-    -1.598683412068343
-   ],
-   "rel_err": 0.05081001266038332
-  },
-  {
-   "h": 0.005,
-   "omega": [
-    2.209483796211897,
-    -1.5592978842299783
-   ],
-   "rel_err": 0.030703320347334386
   }
- ],
- "fitted_convergence_order": -0.6117709585051482,
- "theta_ladder": {
-  "thetas": [
-   40.0,
-   45.0,
-   50.0
-  ],
-  "omegas": [
-   [
-    2.3426904527707277,
-    -1.3606136174125798
-   ],
-   [
-    2.209483796219337,
-    -1.5592978842209346
-   ],
-   [
-    2.0602856857688416,
-    -1.7451832915321919
-   ]
-  ],
-  "rel_spread": 0.17772942191744573
  },
- "tail_ladder": {
-  "tail_lengths": [
-   8.0,
-   12.0,
-   16.0
+ "arpack_phantom_demonstration": {
+  "n_pairs": 40,
+  "residual_range": [
+   823.5090745634434,
+   833.588571062953
   ],
-  "omegas": [
-   [
-    2.4804187496905614,
-    -1.518257939927986
-   ],
-   [
-    2.2094837962125986,
-    -1.5592978842285323
-   ],
-   [
-    2.0735170939358576,
-    -1.582754089890427
-   ]
+  "nearest_5": [
+   {
+    "lam": [
+     2.8133499148759658,
+     -6.634789776632781
+    ],
+    "resid": 833.4467691314795
+   },
+   {
+    "lam": [
+     2.81333698229459,
+     -6.634873501414161
+    ],
+    "resid": 833.4956346054533
+   },
+   {
+    "lam": [
+     2.813351435705018,
+     -6.634770440237707
+    ],
+    "resid": 833.4614861937273
+   },
+   {
+    "lam": [
+     2.8133321023176365,
+     -6.63489275061627
+    ],
+    "resid": 833.5413430667854
+   },
+   {
+    "lam": [
+     2.813511077505433,
+     -6.634614739206474
+    ],
+    "resid": 830.8778577100744
+   }
   ],
-  "rel_spread": 0.153464065546478
- },
- "production": {
-  "omega": [
-   2.2094837962157907,
-   -1.5592978842215526
-  ],
-  "rel_err": 0.03070332034388661,
-  "lambda_isolation": 1.3431698537146177,
-  "tail_amplitude_ratio": 0.008397416497463355
- },
- "negative_control": {
-  "potential": "+2.5 barrier (V0 sign flip)",
-  "n_roots_in_sector": 14,
-  "min_rel_dist_to_ref": 0.03073621764789534
+  "verdict": "ALL PHANTOM (none survive residual <= 1e-6; dense nearest is 7.2 away)"
  },
  "gates": {
-  "stencil_self_check": false,
-  "dense_vs_arpack": true,
-  "G1": false,
-  "G2": true,
-  "G3": false,
-  "G4": false,
-  "G6": true,
-  "G7": true,
-  "G5": false
+  "G1_accuracy_rel_err_le_0.02": false,
+  "G2_convergence": false,
+  "G3_theta_stability": false,
+  "G4_tail_stability": false,
+  "G5a_v0_negative_control": "PASSED BY ABSENCE (no validated pole-like state for V=0 either \u2014 consistent)",
+  "G5b_v_response": false,
+  "G6_superseded": "documented",
+  "G7_tail_decay": false,
+  "G8_pair_validation": false
  },
- "status": "ECS_V2_2_NOT_CERTIFIED",
  "failed_gates": [
-  "stencil_self_check",
-  "G1",
-  "G3",
-  "G4",
-  "G5"
+  "G1_accuracy_rel_err_le_0.02",
+  "G2_convergence",
+  "G3_theta_stability",
+  "G4_tail_stability",
+  "G5b_v_response",
+  "G7_tail_decay",
+  "G8_pair_validation"
  ],
- "wall_seconds": 7.3
+ "verdict": "NOT_CERTIFIED: no validated eigenpair near lambda_ref at any tested configuration; fail-closed.",
+ "next_executable_step": "ECS contour (V1 non-uniform geometry) + Galerkin weak-form pencil (V2), residual-validated pairs only",
+ "wall_seconds": 2.1
 }
