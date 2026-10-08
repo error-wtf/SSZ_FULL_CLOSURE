@@ -205,7 +205,12 @@ def main() -> int:
     if all(e is not None for e in rels):
         hs = np.array([e["h"] for e in ladder])
         p, _c = np.polyfit(np.log(hs), np.log(rels), 1)
-        out["fitted_convergence_order"] = float(-p)
+        # rel_err ~ h^p with p > 0 for convergent schemes; store the order
+        # itself (positive), not negated. Historical note: V2.2 originally
+        # stored -p (h^-2.0047) — a sign-convention display error, fixed
+        # before the full-solver certificate; the ladder itself was always
+        # monotone O(h^2).
+        out["fitted_convergence_order"] = float(p)
     w_prod = (complex(ladder[-1]["omega"][0], ladder[-1]["omega"][1])
               if ladder[-1]["omega"] else None)
 
