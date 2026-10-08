@@ -3388,6 +3388,11 @@
       "sha256": "fcbdc3a4e066b8449ff0a1cd8855422eb9b7e182d213c74b15078c6d35e5f440"
     },
     {
+      "path": "data/generated/spectral/ANTI_NUMEROLOGY_NMAX_AUDIT_V1.json",
+      "size_bytes": 4179,
+      "sha256": "6ee6824ce32ca61b24a8fb838ec05b151c57d0f189834156a5bd71e106837c86"
+    },
+    {
       "path": "data/generated/spectral/B6_ASYMPTOTIC_STRUCTURE_V1.json",
       "size_bytes": 1753,
       "sha256": "9737bd2cccb7c60b151f0c20a28bf29244c922f4464c51cf0f2bd07f13972033"

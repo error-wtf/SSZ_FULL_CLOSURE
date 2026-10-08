@@ -1,0 +1,66 @@
+{
+  "artifact": "ANTI_NUMEROLOGY_NMAX_AUDIT_V1",
+  "created_utc": "2026-10-08T20:52:56+00:00",
+  "closure_head": "6fda7290d2340075412e56a60be012a0648d46c5",
+  "question": "Kann der aktuelle SSZ-Formalismus N_max = ln(s0/lp)/ln(phi) ohne vorgegebenes 42 bestimmen?",
+  "audited_old_chain": {
+    "source": "SegmentedSpacetimeandPi.md + prove_pi_limit_42_english.py",
+    "formula": "s_N = s0 * phi^(-N); N_max = ln(s0/lp)/ln(phi)",
+    "finding": "the old script sets s0 = lp * phi^42 BACKWARDS and then reports N_max = 42 \u2014 reverse construction, not prediction",
+    "pi_eff_convergence_claim": "the paper's pi_eff(N) formula tends to 0 for growing N, not to pi \u2014 the 42-decimal precision-limit claim is not established",
+    "status": "NOT_DERIVED_INDEPENDENTLY"
+  },
+  "current_formalism_structure": {
+    "segmentation_density": "Xi(r) = 1 - exp(-phi * r_s / r), LOCAL and continuous",
+    "saturation": "Xi_max = 1 - exp(-phi) = 0.801712 at r = r_s (horizon value)",
+    "certified_operator": "K,G,S,M from a CONTINUOUS background solve in u = r_s/r (r_s = 1 unit); NO discrete phi-ladder of segment lengths exists anywhere in the certified P5 chain",
+    "s0_in_current_theory": "NOT DEFINED \u2014 the current formalism has no independent initial segment scale; the only natural length is r_s (used as the unit), and the background domain is r in [0.05, 60] r_s"
+  },
+  "quantitative_check": {
+    "planck_length_m": 1.616255e-35,
+    "s0_needed_for_Nmax_42_m": 9.682572820653914e-27,
+    "s0_needed_note": "s0 = lp * phi^42 = 9.7e-27 m \u2014 three orders BELOW the proton scale and 8 orders above lp; no object in the current P5 chain lives at this scale",
+    "if_s0_equals_r_s_unit": {
+      "s0_m_note": "r_s is the unit; in meters it is the remnant's Schwarzschild radius \u2014 an astrophysical scale (km), giving a meaningless N_max against lp",
+      "nmax_r_s_unit_m": 166.47630490000753
+    },
+    "for_reference": {
+      "s0_proton_0.84fm": {
+        "nmax": 94.3
+      },
+      "s0_compton_electron": {
+        "nmax": 107.1
+      }
+    }
+  },
+  "relation_L_vs_N": {
+    "L_42": "angular harmonic index of the perturbation operator (this campaign)",
+    "N_max_42": "segmentation depth of the OLD pi-ladder (2025 paper)",
+    "identity_check": "NOT identifiable. No equation in the current formalism connects the angular index L to the old phi-ladder depth N. The current operator is continuous; it has no segment counting.",
+    "possible_bridge_if_any": "a_seg(r) from Xi_max could define L_UV(r) ~ pi R(r)/a_seg(r) \u2014 but Xi saturation is dimensionless and yields no length; deriving a_seg from the certified chain FAILED (no such object exists in it)"
+  },
+  "verdict": {
+    "nmax_from_current_ssz": "NOT_DERIVABLE",
+    "reason": "the certified SSZ chain contains no discrete phi-ladder and no independent initial segment scale s0; the old 42 is reverse-engineered (s0 = lp*phi^42) and its pi_eff convergence claim fails (pi_eff -> 0)",
+    "classification_of_old_42": "DOUGLAS_ADAMS_CURIO (reverse-constructed), not a theory prediction",
+    "numerology_risk_retired": true
+  },
+  "no_observational_input": true,
+  "observational_seal": "maintained",
+  "bound_artifacts": {
+    "monograph": "a028d69bd8e66886b9552683376873801936362b25e90eb1516b7e800b837902",
+    "old_pi_paper": "af3820fe89b876d9a609ee19d7da23a16776348ece91e9c1445f30620bbf0f06",
+    "old_proof_script": "868dd4b417f3d9dfc7fada3ede52e9d218a2862db1662670bf16699391e642c7"
+  },
+  "pi_eff_verification": {
+    "formula_from_script": "pi_eff(N) = N * phi^-N / (2 e^N)  (with R0=1, lambda_seg=1)",
+    "analytic_limit": "pi_eff(N) = N/2 * (phi*e)^(-N) -> 0 for N -> infinity. NOT convergent to pi.",
+    "numeric_check": {
+      "pi_eff(10)": "1.85e-06",
+      "pi_eff(42)": "2.02e-26",
+      "pi_eff(100)": "2.35e-63"
+    },
+    "script_convergence_criterion": "|pi_eff(N+1)-pi_eff(N)| < 1e-10 triggers at N=17 (not 42)",
+    "conclusion": "the 42-decimal precision-limit claim is DOUBLY unsupported: the formula does not converge to pi, and its own diff-criterion triggers at N=17, not 42. The 42 in the script comes solely from the reverse-engineered s0 = lp*phi^42."
+  }
+}
