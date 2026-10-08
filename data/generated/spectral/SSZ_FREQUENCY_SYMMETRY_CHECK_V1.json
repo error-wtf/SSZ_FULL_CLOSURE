@@ -1,0 +1,14 @@
+{
+  "artifact": "SSZ_FREQUENCY_SYMMETRY_CHECK_V1",
+  "created_utc": "2026-10-08T19:31:30+00:00",
+  "question": "does the resonance spectrum obey omega -> -omega* under the current time convention and BCs?",
+  "operator_form": "(G psi')' + (S - G') psi' + (M + S'/2) psi = w^2 K psi, radiation BC carries the linear-in-w term",
+  "coefficient_matrices_real": true,
+  "bulk_dependence": "w^2 only (real, even under w -> -w*)",
+  "bc_dependence": "linear in w; outgoing direction FIXED by the radiation condition",
+  "proven_symmetry": "w <-> w* (complex conjugation) \u2014 from real coefficient matrices; holds for the discretized pencil as well",
+  "not_proven": "w -> -w*: maps outgoing radiation to incoming radiation under the current fixed-direction BC; the resonance problem is NOT invariant under this map without an additional time-reversal derivation",
+  "verdict": "SYMMETRY_UNRESOLVED_FOR_RESONANCES",
+  "consequence_per_preregistration": "declare a separate negative-Re tile later; positive-Re search does NOT cover the mirror; the symmetry is NOT assumed silently",
+  "operator_sha256": "ad2bee7d3994097479933c1eea787f3aa381648d098ffd36aab32a4c436db2ef"
+}
