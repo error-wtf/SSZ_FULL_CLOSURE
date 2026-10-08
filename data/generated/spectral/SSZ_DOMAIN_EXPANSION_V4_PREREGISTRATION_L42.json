@@ -81,5 +81,7 @@
     "branch (a1=-0.5,eps=+0.3) from the original small box, subject to its independent theory-health gate"
   ],
   "no_null_informed_changes": true,
-  "observational_seal": "maintained"
+  "observational_seal": "maintained",
+  "operator_artifact_sha256": "d9deed5cd674433b67f334b3d1fa77b668228ef4d11923a529686daf762e256f",
+  "operator_bound_utc": "2026-10-08T20:06:53+00:00"
 }
