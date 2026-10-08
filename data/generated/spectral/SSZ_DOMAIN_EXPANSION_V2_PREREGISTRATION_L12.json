@@ -1,0 +1,106 @@
+{
+  "artifact": "SSZ_DOMAIN_EXPANSION_V2_PREREGISTRATION_L12",
+  "created_utc": "2026-10-08T19:41:34+00:00",
+  "closure_head": "08b9f3e3b3bf23a26ae306030fcb70f57bd58ca5",
+  "law": "ANTI_CIRCULAR_FORWARD_PREDICTION_LAW.md (08b9f3e)",
+  "ladder_step": "A (L=12), authorized by SSZ_DOMAIN_EXPANSION_V1_PREREGISTRATION.json next_ladder",
+  "single_axis_change": "L: 6 -> 12",
+  "branch_fixed": {
+    "a1": -0.5,
+    "eps": -0.3
+  },
+  "physical_fields": [
+    "psi",
+    "dphi",
+    "V"
+  ],
+  "operator_pipeline": {
+    "generator": "tools/run_v4_physical_resonance_export_v3_3dof.py",
+    "declared_change": "L = 6 -> 12 (only)",
+    "output": "V4_PHYSICAL_RESONANCE_EXPORT_V4_L12.npz",
+    "note": "operator regenerated and SHA-bound BEFORE any scan; no solver/source changes"
+  },
+  "tiles": {
+    "D1_HIGH_RE": {
+      "Re_omega_t": [
+        1.5,
+        3.0
+      ],
+      "Im_omega_t": [
+        -0.8,
+        -0.05
+      ]
+    },
+    "D2_DEEP_IM": {
+      "Re_omega_t": [
+        0.05,
+        1.5
+      ],
+      "Im_omega_t": [
+        -2.0,
+        -0.8
+      ]
+    },
+    "D3_HIGH_RE_DEEP_IM": {
+      "Re_omega_t": [
+        1.5,
+        3.0
+      ],
+      "Im_omega_t": [
+        -2.0,
+        -0.8
+      ]
+    },
+    "D0_ORIGINAL": {
+      "Re_omega_t": [
+        0.05,
+        1.5
+      ],
+      "Im_omega_t": [
+        -0.8,
+        -0.05
+      ],
+      "note": "original box re-scanned at the new L (pole structure can depend on L; nothing is inherited from the L=6 scan)"
+    }
+  },
+  "tiles_immutable": true,
+  "combined_coverage": {
+    "Re_omega_t": [
+      0.05,
+      3.0
+    ],
+    "Im_omega_t": [
+      -2.0,
+      -0.05
+    ]
+  },
+  "discovery_protocol": {
+    "jost": "certified JOST_V2_2, independent; refinement rule as declared in run_ssz_domain_expansion_v1.py docstring (6x4 lattice + one 3x3 half-spacing pass)",
+    "ecs": "certified ECS_V2_2, independent, residual<=1e-6, no Jost seeding",
+    "outputs": [
+      "JOST_SSZ_L12_D{n}_CANDIDATES_V1.json",
+      "ECS_SSZ_L12_D{n}_CANDIDATES_V1.json"
+    ]
+  },
+  "matching_rule": "common survivor of both solvers + all C-R gates, only after candidate freeze",
+  "frequency_conventions": {
+    "omega_t": "raw solver",
+    "Omega_inf": "omega_t / sqrt(f_inf), f_inf=0.24588743"
+  },
+  "outcomes": {
+    "common_poles": "CERTIFIED_RESONANCE_CATALOG_V2_L12.json (new artifact, nothing overwritten)",
+    "no_poles": "NO_CERTIFIED_RESONANCE_L12_V1.json (strict, no_broader_no_qnm_claim=true)"
+  },
+  "ladder_after_this": [
+    "L=20",
+    "L=42",
+    "branch (a1=-0.5, eps=+0.3)"
+  ],
+  "observational_seal": "maintained \u2014 no NICER/GWOSC spectral content anywhere in this step",
+  "bound_artifacts_sha256": {
+    "ANTI_CIRCULAR_LAW": "94d268d6c929a588e78c297a84e47fb04ebcdff49043049e798e68bd83f139b6",
+    "V1_PREREGISTRATION": "78301ad7d60c5eb26ee07da81e2ed16d1c502560f99302cf6c8bcba69a3c7a4a",
+    "V1_NULL_VERDICT": "cabe3f45315773c7646e65644b9f6b680a3c59dc4450cdbd32cde3056a752700",
+    "SOLVER_CERTIFICATE": "39eba86a4636fcfb83e83b8a9d821f825d08ad9512e37f0d590bc77c5a869691"
+  }
+}
