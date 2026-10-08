@@ -1,0 +1,66 @@
+{
+  "artifact": "SSZ_L_LADDER_V1_SUMMARY",
+  "created_utc": "2026-10-08T20:12:11+00:00",
+  "closure_head": "f76eafaedfaeb880321763ff96d4777c2b8bed0f",
+  "branch": {
+    "a1": -0.5,
+    "eps": -0.3
+  },
+  "physical_fields": [
+    "psi",
+    "dphi",
+    "V"
+  ],
+  "box": {
+    "Re_omega_t": [
+      0.05,
+      3.0
+    ],
+    "Im_omega_t": [
+      -2.0,
+      -0.05
+    ]
+  },
+  "per_L": {
+    "L=6": {
+      "operator": "V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.npz",
+      "operator_sha256": "ad2bee7d3994097479933c1eea787f3aa381648d098ffd36aab32a4c436db2ef",
+      "jost_n": 0,
+      "ecs_n": 0,
+      "common_n": 0,
+      "verdict": "NO_CERTIFIED_RESONANCE_IN_EXPANDED_DOMAIN_V1.json",
+      "verdict_sha256": "cabe3f45315773c7646e65644b9f6b680a3c59dc4450cdbd32cde3056a752700"
+    },
+    "L=12": {
+      "operator": "V4_PHYSICAL_RESONANCE_EXPORT_V4_L12.npz",
+      "operator_sha256": "3e0e0a4fc6f492cef63ac00ea785a198976dccf29f738566e02cdeefd297d284",
+      "jost_n": 0,
+      "ecs_n": 0,
+      "common_n": 0,
+      "verdict": "NO_CERTIFIED_RESONANCE_L12_V1.json",
+      "verdict_sha256": "126ab36e7c3acef6e5d16596b5c5f176908296d2ffdac65af31b0ab3bcb39b7d"
+    },
+    "L=20": {
+      "operator": "V4_PHYSICAL_RESONANCE_EXPORT_V5_L20.npz",
+      "operator_sha256": "1c4824afa2d5fa206309e0d78fcbdc97930fcdf859e190bc80b5dbc839c6b0aa",
+      "jost_n": 0,
+      "ecs_n": 0,
+      "common_n": 0,
+      "verdict": "NO_CERTIFIED_RESONANCE_L20_V1.json",
+      "verdict_sha256": "7feffe03cabdc3d9fb71fff6f5c3bae0d3852478651146d25b38cd17895e5acf"
+    },
+    "L=42": {
+      "operator": "V4_PHYSICAL_RESONANCE_EXPORT_V6_L42.npz",
+      "operator_sha256": "d9deed5cd674433b67f334b3d1fa77b668228ef4d11923a529686daf762e256f",
+      "jost_n": 0,
+      "ecs_n": 0,
+      "common_n": 0,
+      "verdict": "NO_CERTIFIED_RESONANCE_L42_V1.json",
+      "verdict_sha256": "cea75fd00b6760f78ef592511b204388db90192b632df1d36cece2b19b35b81e"
+    }
+  },
+  "conclusion": "all four preregistered L values strictly null under the certified V2.2 dual-solver protocol; no broader no-QNM claim",
+  "no_broader_no_qnm_claim": true,
+  "next": "eps=+0.3 branch, health-gated, original small box first",
+  "observational_seal": "maintained throughout"
+}

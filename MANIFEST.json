@@ -3963,6 +3963,11 @@
       "sha256": "cdc1c765416b2758d5f0e49f12296a1d0d47d32f6126fb510fbb56df2efa3018"
     },
     {
+      "path": "data/generated/spectral/SSZ_L_LADDER_V1_SUMMARY.json",
+      "size_bytes": 2213,
+      "sha256": "86f38d2af3e28d1efcdbfb643ab35b74e257339bc504c4f0a1e6a7f30bff1572"
+    },
+    {
       "path": "data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V3.json",
       "size_bytes": 36535,
       "sha256": "7100e6d525a8a621f3b658f8ce11b122e5b50457586315c31bd22dfa3e4df14e"
