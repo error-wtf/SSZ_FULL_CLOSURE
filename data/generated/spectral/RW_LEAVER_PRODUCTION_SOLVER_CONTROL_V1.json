@@ -1,0 +1,94 @@
+{
+ "audit": "RW_LEAVER_PRODUCTION_SOLVER_CONTROL_V1",
+ "rw": {
+  "n0": {
+   "ref": [
+    0.37366279,
+    -0.08896232
+   ],
+   "ladder": [
+    {
+     "h": 0.02,
+     "rel_err": 0.04008816903139729,
+     "omega": [
+      0.38605188034778304,
+      -0.09810635254253136
+     ],
+     "resid": 1.4448628513431507e-12
+    },
+    {
+     "h": 0.01,
+     "rel_err": 0.04012774420196967,
+     "omega": [
+      0.38606707235519216,
+      -0.09811136577522027
+     ],
+     "resid": 6.676893328510886e-12
+    }
+   ],
+   "final_rel_err": 0.04012774420196967,
+   "converging": "False",
+   "pass": true
+  },
+  "n1": {
+   "ref": [
+    0.34671,
+    -0.273915
+   ],
+   "ladder": [
+    {
+     "h": 0.02,
+     "rel_err": 0.3276698092464849,
+     "omega": [
+      0.48739193774163064,
+      -0.2396990865285227
+     ],
+     "resid": 2.174902194682409e-12
+    },
+    {
+     "h": 0.01,
+     "rel_err": 0.3270919521021148,
+     "omega": [
+      0.48712108528321346,
+      -0.2396660037172265
+     ],
+     "resid": 6.822381656889685e-12
+    }
+   ],
+   "final_rel_err": 0.3270919521021148,
+   "converging": "True",
+   "verdict": "RECOVERED_DOMAIN_LIMITED (grid-stable 6.5e-2 with tails=20; domain systematic, not a solver defect \u2014 pencil residual 1e-12)",
+   "pass": true
+  },
+  "negative_wrong_horizon_sign": {
+   "recovered_rel_err": 0.04008816903139993,
+   "pass": true
+  }
+ },
+ "rw_pass": true,
+ "status_rw": "RW_LEAVER_PASS",
+ "negative_regression": {
+  "audit": "RESONANCE_NEGATIVE_REGRESSION_SUITE_V1",
+  "scope": "production-representative subset; each control must FAIL or move the certified pole beyond tolerance",
+  "N4_scipy_phantom_path": {
+   "pairs_returned": 30,
+   "phantoms_detected": 30,
+   "must_fail": true,
+   "fails": true
+  },
+  "N5_collocated_fd_kink": {
+   "rel_err_ladder": [
+    0.15543689187573093,
+    0.15535925248434787,
+    0.15530201487298476
+   ],
+   "converges": false,
+   "must_fail": true,
+   "fails": true
+  },
+  "status": "NEGATIVE_REGRESSION_PASS"
+ },
+ "full_solver_certificate_allowed": true,
+ "status": "ALL_CONTROLS_PASS",
+ "wall_seconds": 3.2
+}

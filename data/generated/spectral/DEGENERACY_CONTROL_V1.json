@@ -1,0 +1,38 @@
+{
+ "audit": "DEGENERACY_CONTROL_V1",
+ "exact_degenerate": {
+  "two_bases": [
+   {
+    "basis": "U3",
+    "omega": [
+     2.788878906153755,
+     -1.8407439713994818
+    ],
+    "rel_err": 0.0003279523808696137
+   },
+   {
+    "basis": "U3",
+    "omega": [
+     2.788878906137853,
+     -1.8407439714015763
+    ],
+    "rel_err": 0.00032795237853765603
+   }
+  ],
+  "splitting_rel": 4.801387154598498e-12,
+  "pass": true
+ },
+ "near_degenerate": {
+  "pole_shift_analytic": [
+   -0.004997132311339615,
+   -0.0032974525106064844
+  ],
+  "recovered_omega": [
+   2.788878906128377,
+   -1.840743971376794
+  ],
+  "rel_err_vs_analytic": 0.001840872646825715,
+  "pass": "True"
+ },
+ "status": "DEGENERACY_PASS"
+}

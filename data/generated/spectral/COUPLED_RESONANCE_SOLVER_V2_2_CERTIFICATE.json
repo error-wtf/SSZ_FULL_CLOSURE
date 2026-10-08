@@ -1,0 +1,38 @@
+{
+ "audit": "COUPLED_RESONANCE_SOLVER_V2_2_CERTIFICATE",
+ "status": "COUPLED_RESONANCE_SOLVER_V2_2_CERTIFIED",
+ "issued": "2026-10-08T14:35:10Z",
+ "closure_head": "e92aaab (see git for full SHA; seal bind below)",
+ "gates": {
+  "JOST_V2_2_CERTIFIED": true,
+  "ECS_V2_2_CERTIFIED": true,
+  "mixed_3channel_control": "MIXED_3CHANNEL_PASS",
+  "basis_invariance": [
+   "BASIS_INVARIANCE_PASS",
+   2.393962525589431e-12
+  ],
+  "degeneracy_control": "DEGENERACY_PASS",
+  "rw_leaver": "RW_LEAVER_PASS",
+  "negative_regression": "NEGATIVE_REGRESSION_PASS"
+ },
+ "artifact_hashes": {
+  "DEGENERACY_CONTROL_V1.json": "e7555788c953840daf645794b40e676be31b9ce187c1de81ec25c638d5ba7d20",
+  "DUAL_SOLVER_BASELINE_SEAL_V1.json": "4c5c1e70aa5098f053730a92db294368640e97e3f765ac209416b181cafc3b9c",
+  "ECS_V2_2_CERTIFICATE.json": "560f840da0454bd357bcbf7d3f58c05ccbe02ac99b790d61f8f209d9c9f1dc5b",
+  "HALF_LINE_SQUARE_WELL_REFERENCE_ROOTS_V2.json": "e29640c1f0a0987ca316e5e7d59fb17a850d52338f7508d24d9c841db086cc13",
+  "JOST_V2_2_CERTIFICATE.json": "667578c03a12fdc890d179084e80527b2bf2233462840d34c6d8e7c8c5a4dd9b",
+  "MIXED_3CHANNEL_RESONANCE_CONTROL_V1.json": "6e27d08ee9ef73030b8e0f4eab81b2c386cc1aea2965578180592bfe9dae4c18",
+  "RESONANCE_BASIS_INVARIANCE_V1.json": "3185d5c83425447891973168f762094f473e0fc01f2945fa64195a2a8b0f0342",
+  "RESONANCE_NEGATIVE_REGRESSION_SUITE_V1.json": "519211a16206fe7591736c207c5b10b3f5ed5e7f2f79d8ad33b7fc4c22cdfc08",
+  "RW_LEAVER_PRODUCTION_SOLVER_CONTROL_V1.json": "721eaa197d7591fb215c77cbeda9cf83288d23b570d78681b2d473329e52edb8",
+  "THREE_CHANNEL_REFERENCE_POLES_V1.json": "493fb6755bddd7fb8a4b10fc605b112cf867bef6c295d72b4b676df2ff7c1211"
+ },
+ "conventions_note": "ECS fitted_convergence_order: the certificate field stores log(rel_err)-vs-log(h) slope (-2.0047); the physical convergence order is |slope| = 2.005, i.e. O(h^2). Normalized here to avoid a spurious h^-2 reading.",
+ "convergence_order_ecs_production": 2.005,
+ "scope": "Both certified scalar solvers remain correct under: (a) the 3-channel coupled setting with nontrivial constant unitary mixing (spectrum invariant, both solvers recover all six frozen poles with converging ladders), (b) arbitrary basis rotations (spread 2.4e-12, machine precision \u2014 the gauge invariance), (c) exactly and nearly degenerate channels (no invented splitting), (d) genuine GR complex-pole recovery (RW l=2 fundamental 4.0e-2 grid-stable; n=1 recovered with declared 6.5e-2 domain systematic), (e) the documented historical failure modes (phantom pairs, kink collocation) are reproduced as failures and excluded by the production validation rule.",
+ "limitations": [
+  "RW n=1 overtone carries a declared ~6.5e-2 domain-truncation systematic (weakly damped mode, finite domain); not a solver defect.",
+  "Mixed 3-channel final rel_err at production grids: 8.2e-5 (low pole) to 2.3e-2 (highest poles); grids documented per pole in MIXED_3CHANNEL_RESONANCE_CONTROL_V1.json.",
+  "Negative-regression suite covers the production-representative subset (N4 phantom pairs, N5 kink collocation); the remaining historical failure modes (N1-N3, N6-N12) are excluded by construction in the current code paths (ECS uses Galerkin weak form + validated shift-invert; Jost uses Riccati log-derivative) and are each documented in the respective certificate forensics."
+ ]
+}

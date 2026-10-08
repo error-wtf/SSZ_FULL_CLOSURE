@@ -1,0 +1,34 @@
+{
+ "audit": "NO_CERTIFIED_RESONANCE_IN_SCANNED_DOMAIN",
+ "domain": {
+  "a1": -0.5,
+  "eps": -0.3,
+  "L": 6,
+  "re_omega_t": [
+   0.05,
+   1.5
+  ],
+  "im_omega_t": [
+   -0.05,
+   -0.8
+  ]
+ },
+ "strictly_limited_to": {
+  "a1": -0.5,
+  "eps": -0.3,
+  "L": 6,
+  "re_omega_t": [
+   0.05,
+   1.5
+  ],
+  "im_omega_t": [
+   -0.05,
+   -0.8
+  ]
+ },
+ "no_broader_no_qnm_claim": true,
+ "verified_by": [
+  "JOST_V2_2",
+  "ECS_V2_2"
+ ]
+}

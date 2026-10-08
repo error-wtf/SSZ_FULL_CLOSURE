@@ -1,0 +1,18 @@
+{
+ "audit": "JOST_SSZ_CANDIDATES_V3",
+ "domain": {
+  "a1": -0.5,
+  "eps": -0.3,
+  "L": 6,
+  "re_omega_t": [
+   0.05,
+   1.5
+  ],
+  "im_omega_t": [
+   -0.05,
+   -0.8
+  ]
+ },
+ "candidates": [],
+ "n": 0
+}

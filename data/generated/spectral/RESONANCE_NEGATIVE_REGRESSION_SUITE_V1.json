@@ -1,0 +1,21 @@
+{
+ "audit": "RESONANCE_NEGATIVE_REGRESSION_SUITE_V1",
+ "scope": "production-representative subset; each control must FAIL or move the certified pole beyond tolerance",
+ "N4_scipy_phantom_path": {
+  "pairs_returned": 30,
+  "phantoms_detected": 30,
+  "must_fail": true,
+  "fails": true
+ },
+ "N5_collocated_fd_kink": {
+  "rel_err_ladder": [
+   0.15543689187573093,
+   0.15535925248434787,
+   0.15530201487298476
+  ],
+  "converges": false,
+  "must_fail": true,
+  "fails": true
+ },
+ "status": "NEGATIVE_REGRESSION_PASS"
+}

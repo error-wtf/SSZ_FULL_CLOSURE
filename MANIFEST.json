@@ -3448,9 +3448,19 @@
       "sha256": "eea83b4200d0839d4172b66b07c1e8e8f411d1c9f59ceb084e9e267e963080e0"
     },
     {
+      "path": "data/generated/spectral/COUPLED_RESONANCE_SOLVER_V2_2_CERTIFICATE.json",
+      "size_bytes": 3335,
+      "sha256": "39eba86a4636fcfb83e83b8a9d821f825d08ad9512e37f0d590bc77c5a869691"
+    },
+    {
       "path": "data/generated/spectral/CURRENT_MEMBER_FULL_AVAILABLE_DOMAIN_AUDIT.json",
       "size_bytes": 11607,
       "sha256": "266fa0313ec3a882af551dae77fd53e5fb4a70fa3fe675e5c048ad9604673bad"
+    },
+    {
+      "path": "data/generated/spectral/DEGENERACY_CONTROL_V1.json",
+      "size_bytes": 696,
+      "sha256": "e7555788c953840daf645794b40e676be31b9ce187c1de81ec25c638d5ba7d20"
     },
     {
       "path": "data/generated/spectral/DUAL_SOLVER_BASELINE_SEAL_V1.json",
@@ -3466,6 +3476,11 @@
       "path": "data/generated/spectral/ECS_ENDPOINT_BC_UNIT_TEST_V1.json",
       "size_bytes": 793,
       "sha256": "61b60ccbaf2b3c9c4bfbd008500d7e3342a096db732bd0125c34b458236f1f54"
+    },
+    {
+      "path": "data/generated/spectral/ECS_SSZ_CANDIDATES_V3.json",
+      "size_bytes": 30988,
+      "sha256": "5d8dd240cfb211b68fd8cd00ec0d6bea910fccb7a447fdd31e0576a4e7e72e69"
     },
     {
       "path": "data/generated/spectral/ECS_V2_2_CERTIFICATE.json",
@@ -3543,6 +3558,11 @@
       "sha256": "7d34280332ff56a79ff280cce071311ede56367841760ee392546508d82d197a"
     },
     {
+      "path": "data/generated/spectral/JOST_SSZ_CANDIDATES_V3.json",
+      "size_bytes": 202,
+      "sha256": "7f50ae0255117261b5eb928b58a02d44cfdbd54529115ced8ddef90416b7ca3a"
+    },
+    {
       "path": "data/generated/spectral/JOST_V2_2_CERTIFICATE.json",
       "size_bytes": 1821,
       "sha256": "667578c03a12fdc890d179084e80527b2bf2233462840d34c6d8e7c8c5a4dd9b"
@@ -3551,6 +3571,11 @@
       "path": "data/generated/spectral/JOST_V2_PROBE.json",
       "size_bytes": 1492,
       "sha256": "518d7917a44599b3de0ce0992a03e1c164581408cf3a7339022230521b300b27"
+    },
+    {
+      "path": "data/generated/spectral/MIXED_3CHANNEL_RESONANCE_CONTROL_V1.json",
+      "size_bytes": 7757,
+      "sha256": "6e27d08ee9ef73030b8e0f4eab81b2c386cc1aea2965578180592bfe9dae4c18"
     },
     {
       "path": "data/generated/spectral/MODE_CERTIFICATES_V1.json",
@@ -3678,6 +3703,26 @@
       "sha256": "327563ad66a983258c7374f281b03221cee9169f1b97c8d268010864fe9ce512"
     },
     {
+      "path": "data/generated/spectral/NO_CERTIFIED_RESONANCE_IN_SCANNED_DOMAIN.json",
+      "size_bytes": 424,
+      "sha256": "01a7936a8372742186caf48a79551fbc78f24f3b38e392df42e745797e6615ed"
+    },
+    {
+      "path": "data/generated/spectral/RESONANCE_BASIS_INVARIANCE_V1.json",
+      "size_bytes": 2221,
+      "sha256": "3185d5c83425447891973168f762094f473e0fc01f2945fa64195a2a8b0f0342"
+    },
+    {
+      "path": "data/generated/spectral/RESONANCE_NEGATIVE_REGRESSION_SUITE_V1.json",
+      "size_bytes": 517,
+      "sha256": "519211a16206fe7591736c207c5b10b3f5ed5e7f2f79d8ad33b7fc4c22cdfc08"
+    },
+    {
+      "path": "data/generated/spectral/RW_LEAVER_PRODUCTION_SOLVER_CONTROL_V1.json",
+      "size_bytes": 2068,
+      "sha256": "721eaa197d7591fb215c77cbeda9cf83288d23b570d78681b2d473329e52edb8"
+    },
+    {
       "path": "data/generated/spectral/SOLVER_PREFLIGHT_V1.json",
       "size_bytes": 3643,
       "sha256": "41a6baaa9bd022a095eea8695b8f1cf4edad84d8812e115efe1e365d02b7c29c"
@@ -3693,9 +3738,19 @@
       "sha256": "b3d3bd76edaa7a223abe7238ec43bfb2ce65f245ea5be75ed74ca12a89abebfc"
     },
     {
+      "path": "data/generated/spectral/SSZ_DOMAIN_RERUN_V3_STATUS.json",
+      "size_bytes": 309,
+      "sha256": "e4f1535bbff6fe5ebb56f5b0c193a86a69c6ec00d5b214af5e25fd9bdd899a6e"
+    },
+    {
       "path": "data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V3.json",
       "size_bytes": 36535,
       "sha256": "7100e6d525a8a621f3b658f8ce11b122e5b50457586315c31bd22dfa3e4df14e"
+    },
+    {
+      "path": "data/generated/spectral/THREE_CHANNEL_REFERENCE_POLES_V1.json",
+      "size_bytes": 1215,
+      "sha256": "493fb6755bddd7fb8a4b10fc605b112cf867bef6c295d72b4b676df2ff7c1211"
     },
     {
       "path": "data/generated/spectral/V4_ASYMPTOTIC_NORMALIZATION_AUDIT_V1.json",
@@ -6943,6 +6998,11 @@
       "sha256": "483dd2337d36ae8291504252ca94d02474a00d3681028d471763cdccaf5a0aaf"
     },
     {
+      "path": "tools/run_basis_invariance.py",
+      "size_bytes": 8129,
+      "sha256": "7b337dc5c34f4f6d737cf4a7ebdc758dc72f4eab7d1ba3f23b0c738709b706d6"
+    },
+    {
       "path": "tools/run_center_frobenius_v2.py",
       "size_bytes": 9858,
       "sha256": "f1e1ef2a5ccadeb4d947b355936fe77ec6bc41af886ba078ca9ff79de1fe9b82"
@@ -7058,6 +7118,11 @@
       "sha256": "ee4a1cc528378380fbd8fa562cf2b3c1502ed2b767bb4426e3ffe13e18bb4199"
     },
     {
+      "path": "tools/run_mixed_3channel_control.py",
+      "size_bytes": 15224,
+      "sha256": "3d83163811ef912be2fae7172511c72408d3a63b3da64257afffbfd59e5c1f1e"
+    },
+    {
       "path": "tools/run_mode_certificates.py",
       "size_bytes": 4627,
       "sha256": "4733246f12a687d326cdb7ec0de8fb0a7da27525463dc985df88ce0094739c5f"
@@ -7098,6 +7163,11 @@
       "sha256": "c6c89b92318a2b105d88bd6084edbfc66f302e53a15782f70e380bd46043d806"
     },
     {
+      "path": "tools/run_rw_leaver_and_negatives.py",
+      "size_bytes": 13295,
+      "sha256": "3dd2551eedce2036ff72333eb2d73a50e2382f03e158a5d5e43890fc912a9d21"
+    },
+    {
       "path": "tools/run_solver_preflight_v1.py",
       "size_bytes": 11508,
       "sha256": "9eb44197c1c4903568ceeb3220a25dea498796ca093f6aa64627b316b7c74d73"
@@ -7116,6 +7186,11 @@
       "path": "tools/run_spectroscopy_l1000_robustness.py",
       "size_bytes": 4500,
       "sha256": "04adf2fad4ac7364cfb4eb6fec1ddbbb7a020b57c1be7fac32a5323d5dbf3fb7"
+    },
+    {
+      "path": "tools/run_ssz_domain_v3.py",
+      "size_bytes": 12461,
+      "sha256": "e8971cdef9b724bfad3e82fd3c2e318c60f1d2aec5e10f0a951f11329bafafa7"
     },
     {
       "path": "tools/run_ssz_fixed_observable_spectroscopy_v2.py",
