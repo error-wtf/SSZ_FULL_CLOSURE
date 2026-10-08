@@ -1,0 +1,11 @@
+{
+  "artifact": "CERTIFIED_RESONANCE_CATALOG_V2_SUPERSEDED",
+  "created_utc": "2026-10-08T19:29:42+00:00",
+  "supersedes": "CERTIFIED_RESONANCE_CATALOG_V2.json",
+  "superseded_by": "NO_CERTIFIED_RESONANCE_IN_SCANNED_DOMAIN (V2.2-certified dual-solver rerun, commit 07dcd00 + e4ae38b + b20bed9)",
+  "historical_closure_sha": "see git log (V2 solver commit)",
+  "historical_solver_state": "pre-V2_2 (obsolete)",
+  "status": "SUPERSEDED_HISTORICAL_DO_NOT_CONSUME",
+  "warning": "HISTORICAL ARTIFACT. MUST NOT be consumed by Spectroscopy-Bridge or any pipeline as current theory output. Retained for provenance only. The authoritative verdict is NO_CERTIFIED_RESONANCE_IN_SCANNED_DOMAIN within the scanned box, with domain expansion D1/D2/D3 preregistered separately.",
+  "original_content_sha256": "0c7e0f050afef0c3addf811568f086d6279c35196238f45748bb5d96064b0b3c"
+}
