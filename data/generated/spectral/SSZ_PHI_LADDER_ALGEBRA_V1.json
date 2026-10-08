@@ -1,0 +1,81 @@
+{
+  "artifact": "SSZ_PHI_LADDER_ALGEBRA_V1",
+  "created_utc": "2026-10-08T21:06:39+00:00",
+  "closure_head": "93d2a1686b2f0801953e51e5b7fa99d1842af9a0",
+  "core_identity": {
+    "formula": "n = ln(r_end/r_start)/ln(phi); S_end = S_start * (r_end/r_start)",
+    "exact_insight": "phi k\u00fcrzt sich aus S_end heraus: die Segmentanzahl am Ende h\u00e4ngt NICHT von phi ab, nur die Stufenzahl n",
+    "book_instance": "S_start=4, ratio=1e6 -> n=28.71, S_end=4e6 (verifiziert)",
+    "s_start_4_origin": "2*phi \u2248 pi am Einheitskreis (Buch sec 3.21); declared empirical input, not derived (Buch sagt das selbst)"
+  },
+  "scale_pairs_table": {
+    "Buch 3.21.2 (unit-normalized)": {
+      "r_start_m": 1e-06,
+      "r_end_m": 1.0,
+      "ratio": 1000000.0,
+      "n": 28.71,
+      "comment": "unit circle convention, r_end/r_start = 1e6"
+    },
+    "lp bis 1 m": {
+      "r_start_m": 1.616255e-35,
+      "r_end_m": 1.0,
+      "ratio": 6.18714249917247e+34,
+      "n": 166.48,
+      "comment": "Planck bis Meter"
+    },
+    "lp bis rs(10Msun)": {
+      "r_start_m": 1.616255e-35,
+      "r_end_m": 29539.937713977153,
+      "ratio": 1.8276780405305567e+39,
+      "n": 187.87,
+      "comment": "Planck bis stellares r_s"
+    },
+    "Proton bis rs(10Msun)": {
+      "r_start_m": 8.4e-16,
+      "r_end_m": 29539.937713977153,
+      "ratio": 3.5166592516639465e+19,
+      "n": 93.53,
+      "comment": "Protonen-/QCD-Skala bis r_s"
+    },
+    "Compton_e bis rs(10Msun)": {
+      "r_start_m": 3.8615926772428334e-13,
+      "r_end_m": 29539.937713977153,
+      "ratio": 7.649677266083016e+16,
+      "n": 80.79,
+      "comment": "Compton bis r_s"
+    },
+    "atomare Skala bis rs(10Msun)": {
+      "r_start_m": 5.29e-11,
+      "r_end_m": 29539.937713977153,
+      "ratio": 558410920869133.3,
+      "n": 70.56,
+      "comment": "Bohr-Radius bis r_s"
+    },
+    "Kern bis lp (INVERTIERT)": {
+      "r_start_m": 1.616255e-35,
+      "r_end_m": 8.4e-16,
+      "ratio": 5.197199699304875e+19,
+      "n": 94.34,
+      "comment": "nur lp->Proton, microscopic ladder"
+    },
+    "rs(10Msun) bis Galaktisches Jahr": {
+      "r_start_m": 29539.937713977153,
+      "r_end_m": 2.097471461405862e+20,
+      "ratio": 7100460000000000.0,
+      "n": 75.85,
+      "comment": "unphysical stretch \u2014 test only"
+    }
+  },
+  "n42_reference_check": {
+    "ratio_for_n42": 599074578.0000008,
+    "if_r_end_1m_then_r_start_m": 1.6692412543000592e-09,
+    "if_r_end_rs_10msun_then_r_start_m": 4.9309282681624844e-05,
+    "interpretation": "n=42 verlangt ein Skalenverh\u00e4ltnis von 1.44e9 \u2014 kein etabliertes Physik-Skalenpaar der Tabelle liefert das; der n\u00e4chste etablierte Wert ist lp->1m mit n=79.8"
+  },
+  "current_ssz_connection": {
+    "finding": "die zertifizierte P5-Kette hat keine phi-Ladder (siehe ANTI_NUMEROLOGY_NMAX_AUDIT_V1); diese Algebra ist die SAUBERE FORMULIERUNG der alten Idee \u2014 42 als Skalenverh\u00e4ltnis-Z\u00e4hler ist Mathematik, keine Theorie-Vorhersage, solange kein Skalenpaar aus SSZ abgeleitet wird",
+    "verdict_classification": "MATHEMATICAL_COUNTING_IDENTITY (correct), no physics bridge in current formalism"
+  },
+  "no_observational_input": true,
+  "observational_seal": "maintained"
+}
