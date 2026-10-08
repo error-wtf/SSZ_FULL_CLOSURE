@@ -1,0 +1,44 @@
+{
+  "artifact": "HIGH_L_ONSET_DERIVATION_V1",
+  "created_utc": "2026-10-08T20:21:42+00:00",
+  "closure_head": "9e61813cb6a9ae25e00d651442b21e8defe544bd",
+  "monograph_indication": {
+    "source": "SSZ_P5_FULL_CLOSURE_MONOGRAPH_2026-09-16.pdf, sec 12.3",
+    "sha256": "a028d69bd8e66886b9552683376873801936362b25e90eb1516b7e800b837902",
+    "statement": "erste trapped ground states erst ungef\u00e4hr bei l=256 (Skalar) bzw. 257 (Maxwell) \u2014 WKB-Beobachtung auf der eingefrorenen Geometrie mit TESTFELD-Potentialen V_l = f l(l+1)/r^2",
+    "monograph_caveat": "Testfelder sind kein Ersatz f\u00fcr den gekoppelten HSVT-Operator (same section)"
+  },
+  "coupled_operator_structure": {
+    "operator": "V4_PHYSICAL_RESONANCE_EXPORT_V6_L42.npz (branch -0.5/-0.3)",
+    "operator_sha256": "d9deed5cd674433b67f334b3d1fa77b668228ef4d11923a529686daf762e256f",
+    "effective_potential": "P(r) = K^{-1} (M + S'/2), largest eigenvalue per radius",
+    "lambda_max_behavior": "monotone decreasing from ~8.7e5 (core, r=0.05) to 1.43 (r=60); exterior ridge 2332 at r~1.03; NO exterior local maximum => no barrier",
+    "w_ridge_estimate": 48.286754728440904,
+    "w_ridge_meaning": "a classically trapped pocket in the coupled operator, if any, would require w ~ sqrt(ridge) ~ O(26-50), far above the scanned [0.05, 3] window"
+  },
+  "pocket_scan_result": {
+    "protocol": "contiguous allowed segments (veff < w^2) bounded on BOTH sides by forbidden regions, w in [0.05,3] (40 samples), L in {6,42,100,150,200,256,300,400}",
+    "pocket_counts": {
+      "6": 0,
+      "42": 0,
+      "100": 0,
+      "150": 0,
+      "200": 0,
+      "256": 0,
+      "300": 0,
+      "400": 0
+    },
+    "finding": "ZERO pockets at every L \u2014 the nulls are structurally explained"
+  },
+  "interpretation": {
+    "ladder_nulls_explained": "the [0.05,3] window contains no classical pocket in the reduced coupled operator at ANY L \u2014 the nulls are structural, not under-resolved",
+    "monograph_reconciliation": "the trapped-mode indication lives on the TEST-FIELD operator at l~256/257, not on the reduced coupled export; both statements are consistent",
+    "two_legal_followups_theory_only": [
+      "A: coupled-operator resonance scan at w ~ O(26-50) (the ridge regime) with the certified solvers, preregistered separately",
+      "B: test-field trapped-mode scan at l~256/257 on the frozen geometry with the CAP/spectral machinery of run_p5_global_testfield_qnm_cap.py, explicitly labeled test-field diagnostics (monograph convention: they are NOT promoted to the coupled HSVT QNM spectrum)"
+    ]
+  },
+  "no_observational_input": true,
+  "observational_seal": "maintained",
+  "committed_before_any_followup_scan": true
+}

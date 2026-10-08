@@ -3603,6 +3603,16 @@
       "sha256": "e29640c1f0a0987ca316e5e7d59fb17a850d52338f7508d24d9c841db086cc13"
     },
     {
+      "path": "data/generated/spectral/HIGH_L_LAMBDA_TABLE_V1.npz",
+      "size_bytes": 9269,
+      "sha256": "40b809efde40362bad4b263d2de23ff84cb2b48e5661af91225abf727fbcccf9"
+    },
+    {
+      "path": "data/generated/spectral/HIGH_L_ONSET_DERIVATION_V1.json",
+      "size_bytes": 2704,
+      "sha256": "ea4e22807338e4997cd91b4edfcdbfd7f392a8291754701f4885b40dbf0077a6"
+    },
+    {
       "path": "data/generated/spectral/JOST_CANDIDATES_V1.json",
       "size_bytes": 14222,
       "sha256": "3c254e1255335d076a287d9af0c28566ed4d2569099629edc4a0ca8a9ed1bb53"
