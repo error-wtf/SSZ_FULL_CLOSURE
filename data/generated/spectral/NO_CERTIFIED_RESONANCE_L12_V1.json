@@ -1,0 +1,67 @@
+{
+  "artifact": "NO_CERTIFIED_RESONANCE_L12_V1",
+  "created_utc": "2026-10-08T19:49:09+00:00",
+  "closure_head": "c2ffaa40408d7d91b718ae54f35d6d439eb86589",
+  "ladder_step": "A (L=12)",
+  "branch": {
+    "a1": -0.5,
+    "eps": -0.3,
+    "L": 12
+  },
+  "physical_fields": [
+    "psi",
+    "dphi",
+    "V"
+  ],
+  "strictly_limited_to": {
+    "Re_omega_t": [
+      0.05,
+      3.0
+    ],
+    "Im_omega_t": [
+      -2.0,
+      -0.05
+    ],
+    "operator": "V4_PHYSICAL_RESONANCE_EXPORT_V4_L12.npz",
+    "operator_sha256": "3e0e0a4fc6f492cef63ac00ea785a198976dccf29f738566e02cdeefd297d284"
+  },
+  "tiles": {
+    "D0": {
+      "ecs": 0,
+      "jost": 0,
+      "common": 0
+    },
+    "D1": {
+      "ecs": 0,
+      "jost": 0,
+      "common": 0
+    },
+    "D2": {
+      "ecs": 0,
+      "jost": 0,
+      "common": 0
+    },
+    "D3": {
+      "ecs": 0,
+      "jost": 0,
+      "common": 0
+    }
+  },
+  "n_common_all_tiles": 0,
+  "no_broader_no_qnm_claim": true,
+  "solver_certification": "COUPLED_RESONANCE_SOLVER_V2_2_CERTIFIED (unchanged algorithms)",
+  "preregistration_sha256": "273af55ecb0e2a5c9b4a7fb965b3ccf3447152e4308047655528ffcf13bf1593",
+  "matching_sha256": "ce4dd959e4d28a0e83d85e3abe75fd1fff8c61ec00d29b068975acd128f60888",
+  "candidate_artifacts_sha256": {
+    "JOST_SSZ_L12_D0_CANDIDATES_V1.json": "8756f429daca9cbc8bfe42726013d90276ba1a517019e8837cbfb7845a85ac60",
+    "JOST_SSZ_L12_D1_CANDIDATES_V1.json": "d3d413cd77864c213e1d3afe12d09138519ba595a361f119087a42b08ce75d40",
+    "JOST_SSZ_L12_D2_CANDIDATES_V1.json": "74e735cd1c56e3988602c1a669b60fe9c0eed3fa9dd0d62925d7d274505e785a",
+    "JOST_SSZ_L12_D3_CANDIDATES_V1.json": "94bf62be4d21a9fb50a0e91b4a0f153552f95c93487bb47f31f23254cd91da9f",
+    "ECS_SSZ_L12_D0_CANDIDATES_V1.json": "5c3948e3986f8f35dd1e0eaf246370afde2b77a9cccf1e7d10490ba288bb4c29",
+    "ECS_SSZ_L12_D1_CANDIDATES_V1.json": "a96238286a0747e123a9dca11e4e41125b616942bdb7e4b18a7d94c9be42ca28",
+    "ECS_SSZ_L12_D2_CANDIDATES_V1.json": "71339ed459c078e5633b696e5eb5cf68b5ad8f73409cc112bab8b9a67f77c6d3",
+    "ECS_SSZ_L12_D3_CANDIDATES_V1.json": "e1b582557276cd08b2112c2dc82ae1233c8bbe23cf3c74973da1bc371b44d2e6"
+  },
+  "observational_seal": "maintained",
+  "next_ladder_step": "B (L=20), same protocol"
+}
