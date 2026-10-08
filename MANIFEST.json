@@ -3983,6 +3983,11 @@
       "sha256": "cdc1c765416b2758d5f0e49f12296a1d0d47d32f6126fb510fbb56df2efa3018"
     },
     {
+      "path": "data/generated/spectral/SSZ_LEGACY_1MHZ_FORMULA_AUDIT.json",
+      "size_bytes": 1961,
+      "sha256": "dbc7f4861554fafbc2e340ed900ccbd955a4a7f41a2cd7a03cd29d2313206d9d"
+    },
+    {
       "path": "data/generated/spectral/SSZ_L_LADDER_V1_SUMMARY.json",
       "size_bytes": 2213,
       "sha256": "86f38d2af3e28d1efcdbfb643ab35b74e257339bc504c4f0a1e6a7f30bff1572"

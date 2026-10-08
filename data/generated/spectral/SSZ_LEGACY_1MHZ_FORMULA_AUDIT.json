@@ -1,0 +1,28 @@
+{
+  "artifact": "SSZ_LEGACY_1MHZ_FORMULA_AUDIT",
+  "created_utc": "2026-10-08T21:14:32+00:00",
+  "closure_head": "86cfde9bae4dfce9257cd863e017e6baab242671",
+  "found_formula": {
+    "source": "SegmentedSpacetime-ANewPerspectiveonLightGravityandBlackHoles.md (emergent-spacetime clone), lines ~568-625",
+    "formula": "lambda_min = 4c/N with N = total segments per photon period",
+    "instance": "N=4e6 -> lambda = 299.79 m -> f = 1.000 MHz",
+    "exit_recalc": "lambda = 4c/(N-4) = 1199 m -> 250 kHz"
+  },
+  "structural_finding": {
+    "identity": "In dieser Formel gilt EXAKT N = 4*f(Hz) \u2014 'N_max Segmente' und 'Frequenz' sind dieselbe Gr\u00f6\u00dfe, nicht zwei unabh\u00e4ngige",
+    "consequence": "die 1 MHz sagt nichts neues \u00fcber N_max aus; sie IST N_max (geteilt durch 4). Die Formel ist eine Einheiten-Wanderschaft, keine Physik-Herleitung"
+  },
+  "compatibility_check_42_vs_1mhz": {
+    "question": "ergeben die 42 (phi-Ladder) und die 1 MHz (N-Formel) dieselbe Zahl?",
+    "N_from_1MHz": "4000000 (4e6)",
+    "N_required_for_42": "4 * phi^42 / 4 = phi^42 = 5.991e+08 Segmente -> f = 599 MHz",
+    "result": "INKOMPATIBEL: 1 MHz <=> N=4e6 <=> n=28.7 phi-Stufen; n=42 <=> 600 MHz. Die beiden Legacy-Zahlen stammen aus VERSCHIEDENEN Skalenverh\u00e4ltnissen (1e6 vs 6e8) und passen in der eigenen alten Formel nicht zusammen"
+  },
+  "answer_to_lino_question": {
+    "question": "existiert eine zweite Rechnung s0(f), die die 42 unabh\u00e4ngig erzeugt?",
+    "answer": "JA, die N-Formel existiert \u2014 aber sie erzeugt die 42 NICHT. s0(f)-Br\u00fccke: lambda = 4c/N = 4c/(4f) = c/f: trivial (Wellenl\u00e4nge der Frequenz selbst). Die alte 42 bleibt NICHT_DERIVABLE; die 1 MHz ist die N-Formel mit dem Buch-Ratio 1e6 (n=28.7), keine 42."
+  },
+  "consistency_with_previous_audits": "konsistent mit ANTI_NUMEROLOGY_NMAX_AUDIT_V1 und SEGMENTATION_CUTOFF_1MHZ_AUDIT_V1",
+  "no_observational_input": true,
+  "observational_seal": "maintained"
+}
