@@ -1,0 +1,36 @@
+{
+ "audit": "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L20",
+ "branch": {
+  "a1": -0.5,
+  "eps": -0.3,
+  "L": 20
+ },
+ "tiles": {
+  "D0": {
+   "ecs_n": 0,
+   "jost_n": 0,
+   "common": [],
+   "common_n": 0
+  },
+  "D1": {
+   "ecs_n": 0,
+   "jost_n": 0,
+   "common": [],
+   "common_n": 0
+  },
+  "D2": {
+   "ecs_n": 0,
+   "jost_n": 0,
+   "common": [],
+   "common_n": 0
+  },
+  "D3": {
+   "ecs_n": 0,
+   "jost_n": 0,
+   "common": [],
+   "common_n": 0
+  }
+ },
+ "wall_seconds": 39.6,
+ "any_common": false
+}

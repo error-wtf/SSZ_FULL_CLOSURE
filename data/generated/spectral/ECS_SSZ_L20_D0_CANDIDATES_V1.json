@@ -1,0 +1,20 @@
+{
+ "audit": "ECS_SSZ_L20_D0_CANDIDATES_V1",
+ "tile": {
+  "re": [
+   0.05,
+   1.5
+  ],
+  "im": [
+   -0.8,
+   -0.05
+  ]
+ },
+ "branch": {
+  "a1": -0.5,
+  "eps": -0.3,
+  "L": 20
+ },
+ "candidates": [],
+ "n": 0
+}
