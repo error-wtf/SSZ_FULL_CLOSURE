@@ -3453,6 +3453,11 @@
       "sha256": "266fa0313ec3a882af551dae77fd53e5fb4a70fa3fe675e5c048ad9604673bad"
     },
     {
+      "path": "data/generated/spectral/DUAL_SOLVER_BASELINE_SEAL_V1.json",
+      "size_bytes": 1379,
+      "sha256": "4c5c1e70aa5098f053730a92db294368640e97e3f765ac209416b181cafc3b9c"
+    },
+    {
       "path": "data/generated/spectral/ECS_CANDIDATES_V1.json",
       "size_bytes": 3501,
       "sha256": "6737334a3ca2b27113ecfd88956f80ac57e0dc99b644d715487eb44e44b0f827"

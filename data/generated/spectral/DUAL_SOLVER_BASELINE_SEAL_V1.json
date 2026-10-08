@@ -1,0 +1,27 @@
+{
+ "audit": "DUAL_SOLVER_BASELINE_SEAL_V1",
+ "created": "2026-10-08T13:16:31Z",
+ "closure_head": "db0ca06eeb46cd5b1b7d8096c1ae53ac021cae8f",
+ "branch": "spectroscopy-real-data-20261004",
+ "certificates": {
+  "JOST_V2_2_CERTIFICATE.json": {
+   "sha256": "667578c03a12fdc890d179084e80527b2bf2233462840d34c6d8e7c8c5a4dd9b",
+   "status": "JOST_V2_2_CERTIFIED"
+  },
+  "ECS_V2_2_CERTIFICATE.json": {
+   "sha256": "560f840da0454bd357bcbf7d3f58c05ccbe02ac99b790d61f8f209d9c9f1dc5b",
+   "status": "ECS_V2_2_CERTIFIED"
+  }
+ },
+ "reference_roots": {
+  "HALF_LINE_SQUARE_WELL_REFERENCE_ROOTS_V2.json": {
+   "sha256": "e29640c1f0a0987ca316e5e7d59fb17a850d52338f7508d24d9c841db086cc13",
+   "root1": [
+    2.2383463024226,
+    -1.4820919693276355
+   ]
+  }
+ },
+ "frozen_rule": "While the remaining controls (mixed 3-channel, basis invariance, degeneracy, RW/Leaver, negative regression) are executed, the certified scalar solver algorithms JOST_V2_2 and ECS_V2_2 must not be modified. Any algorithm change invalidates this seal and requires re-certification from scratch.",
+ "note": "ECS certificate field fitted_convergence_order stores the slope of log(rel_err) vs log(h), which is negative because rel_err decreases with h; the physical convergence order is its absolute value, |\u22122.0047| = 2.005 (O(h^2)). Presentation to be normalized to +2.005 in the full-solver certificate build."
+}
