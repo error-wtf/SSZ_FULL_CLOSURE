@@ -1,0 +1,103 @@
+{
+  "artifact": "PI_UNIT_CIRCLE_RECONSTRUCTION_V1",
+  "created_utc": "2026-10-08T21:48:57+00:00",
+  "closure_head": "38e2276d5fc490dfe76fcb1602791fc2e3bdbc79",
+  "question_1_reproduce": {
+    "candidate_A_chord_polygon_R1": {
+      "formula": "pi_eff(N) = N sin(pi/N)",
+      "table": [
+        {
+          "N": 4,
+          "pi_eff": 2.8284271247,
+          "delta": "3.13e-01"
+        },
+        {
+          "N": 6,
+          "pi_eff": 3.0,
+          "delta": "1.42e-01"
+        },
+        {
+          "N": 12,
+          "pi_eff": 3.1058285412,
+          "delta": "3.58e-02"
+        },
+        {
+          "N": 42,
+          "pi_eff": 3.1386639306,
+          "delta": "2.93e-03"
+        },
+        {
+          "N": 96,
+          "pi_eff": 3.1410319509,
+          "delta": "5.61e-04"
+        },
+        {
+          "N": 384,
+          "pi_eff": 3.1415576079,
+          "delta": "3.50e-05"
+        }
+      ],
+      "converges_to_pi": true,
+      "note": "klassische Archimedes-Geometrie \u2014 sauber, skaleninvariant"
+    },
+    "candidate_B_paper_formula": {
+      "converges": false,
+      "limit": 0
+    },
+    "candidate_C_bigpi_chudnovsky": {
+      "note": "beliebige Pr\u00e4zision via Decimal/mpmath \u2014 keine Segmentierung, reiner Rechner"
+    }
+  },
+  "question_2_where_42_came_from": {
+    "tested_triggers": {
+      "A_chord_convergence": {
+        "d42_needs_N": "3.21e+21",
+        "natural_stop_at_42": false
+      },
+      "float64": {
+        "max_digits": 16,
+        "natural_stop_at_42": false
+      },
+      "old_script_delta_criterion": {
+        "triggers_at_N": 17,
+        "natural_stop_at_42": false
+      },
+      "phi_ladder_ratio_1e6": {
+        "gives_n": 28.71,
+        "natural_stop_at_42": false
+      },
+      "phi42_backdoor": {
+        "mechanism": "s0/r ratio = phi^42 produces n=42 trivially for ANY chosen ratio",
+        "natural_stop_at_42": false,
+        "verdict": "TAUTOLOGY"
+      },
+      "resolution_law_R1": {
+        "d_at_R1_lmin_lp": 34.79,
+        "natural_stop_at_42": false
+      },
+      "conclusion": "NO candidate triggers naturally at 42 on the unit circle"
+    },
+    "answer": "kein Kandidat erzeugt 42 nat\u00fcrlich am Einheitskreis. Die 42 kam (a) aus der R\u00fcckw\u00e4rts-Insertion s0=lp*phi^42 bzw. ratio=phi^42 (Tautologie \u2014 erzeugt JEDE vorgegebene Zahl), und/oder (b) aus der Verwechslung des epsilon-Kriteriums (N=17) mit einer Konvergenz, und/oder (c) aus der Aufl\u00f6sungsabsch\u00e4tzung d>log10(R/lp) bei R~1e7 m \u2014 dort ergibt sie sich, aber als Funktion, nicht am Einheitskreis."
+  },
+  "question_3_normalization_scaling": {
+    "chord_formula_scale_invariant": "pi_eff(N) is independent of R (pure angle formula)",
+    "rounding_law_scales": "|dU| = 2R|dpi| \u2014 linear in R",
+    "beyond_rounding_estimate": "NICHTS Folgenreiches: die Normierung ist gew\u00f6hnliche Geometrie. Keine \u00fcber die Rundungsabsch\u00e4tzung hinausgehende Aussage folgt aus dem Einheitskreis."
+  },
+  "question_4_honest_documentation": {
+    "verdict": "die urspr\u00fcngliche Beobachtung war gew\u00f6hnliche Skalierungsgeometrie + ein nicht konvergierender Ansatz + ein epsilon-abh\u00e4ngiger Z\u00e4hler. Die als Aufl\u00f6sungsabsch\u00e4tzung rehabilitierte 42 (SSZ_PI_DIGITS_RESOLUTION_LAW_V1) bleibt das Einzige, was \u00fcbrig bleibt \u2014 als reine Mathematik.",
+    "numerology_risk": "fully retired"
+  },
+  "no_connection_to": [
+    "L=42",
+    "QNM",
+    "NICER",
+    "GWOSC"
+  ],
+  "bound_sources": {
+    "old_proof_script": "868dd4b417f3d9dfc7fada3ede52e9d218a2862db1662670bf16699391e642c7",
+    "bigpi": "d709406bec3ef6c591f1f35007c20e2408aac0c741f3253852401f03600d0362"
+  },
+  "no_observational_input": true,
+  "observational_seal": "maintained"
+}

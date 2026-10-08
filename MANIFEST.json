@@ -3893,6 +3893,11 @@
       "sha256": "cea75fd00b6760f78ef592511b204388db90192b632df1d36cece2b19b35b81e"
     },
     {
+      "path": "data/generated/spectral/PI_UNIT_CIRCLE_RECONSTRUCTION_V1.json",
+      "size_bytes": 3743,
+      "sha256": "b32a84769e6569a7659aafd31b539fb4e5d6126ebf2a44faeb06e358bd20c68f"
+    },
+    {
       "path": "data/generated/spectral/RESONANCE_BASIS_INVARIANCE_V1.json",
       "size_bytes": 2221,
       "sha256": "3185d5c83425447891973168f762094f473e0fc01f2945fa64195a2a8b0f0342"
