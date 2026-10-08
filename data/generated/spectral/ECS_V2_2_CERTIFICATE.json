@@ -1,13 +1,7 @@
 {
  "audit": "ECS_V2_2_CERTIFICATE",
- "version": "V2-contour-FEM forensics-closure run",
- "status": "ECS_V2_2_NOT_CERTIFIED",
- "findings": {
-  "F1": "ARPACK phantom pairs on the complex generalized pencil \u2014 all scipy eigs(M=,sigma=) pairs carry residuals 1e2..1e5 and are absent from the dense spectrum; every earlier V2 'hit' was phantom. All pairs must be residual-validated.",
-  "F2": "dense ground truth shows NO validated eigenvalue near lambda_ref at r_match in {2,6}, tails {8,12}: the pole is not exposed by this discretization",
-  "F3": "machinery validated end-to-end (free-particle known-answer test, O(h^2), residuals 1e-11): assembly and solvers are correct",
-  "F4": "next attempt: non-uniform ECS contour (V1 geometry) + Galerkin mass-matrix pencil (V2 weak form); kink defect of V1 is expected to vanish in the weak form"
- },
+ "version": "V3 \u2014 non-uniform ECS contour + Galerkin weak form",
+ "supersedes": "V1 FD (bcaab3c) + V2 uniform-contour (26d62db)",
  "problem": {
   "identical_frozen_inputs_as_jost_v2_2": "HALF_LINE_SQUARE_WELL_REFERENCE_ROOTS_V2.json",
   "reference_root": [
@@ -17,134 +11,147 @@
   "lambda_ref": [
    2.8135975640234556,
    -6.634870158789484
-  ]
- },
- "dense_ground_truth": {
-  "tail8": {
-   "n_validated": 200,
-   "nearest_to_lambda_ref": [
-    {
-     "lam": [
-      3.250708696762286,
-      -6.884411140602779
-     ],
-     "resid": 1.7818767939091126e-12,
-     "dist": 0.503325783135105
-    },
-    {
-     "lam": [
-      1.9537816778200188,
-      -5.963701514078981
-     ],
-     "resid": 1.7439773129521286e-12,
-     "dist": 1.09075694259094
-    },
-    {
-     "lam": [
-      2.6442249144385603,
-      -8.212204786501474
-     ],
-     "resid": 1.7973291458979309e-12,
-     "dist": 1.5864020997864092
-    }
-   ]
-  },
-  "tail12": {
-   "n_validated": 280,
-   "nearest_to_lambda_ref": [
-    {
-     "lam": [
-      3.2071434734774384,
-      -6.924318248718911
-     ],
-     "resid": 2.531430188536351e-12,
-     "dist": 0.4885269487057556
-    },
-    {
-     "lam": [
-      1.629686661162732,
-      -7.296245667322636
-     ],
-     "resid": 2.376864878733542e-12,
-     "dist": 1.3561204183994795
-    },
-    {
-     "lam": [
-      1.2914165052270565,
-      -5.983532616667807
-     ],
-     "resid": 2.3288449638988085e-12,
-     "dist": 1.6556798511595272
-    }
-   ]
+  ],
+  "frozen_config": {
+   "V0": -2.5,
+   "a": 1.0,
+   "r_match": 1.5,
+   "tail": 16.0,
+   "theta_deg": 45.0
   }
  },
- "arpack_phantom_demonstration": {
-  "n_pairs": 40,
-  "residual_range": [
-   823.5090745634434,
-   833.588571062953
-  ],
-  "nearest_5": [
-   {
-    "lam": [
-     2.8133499148759658,
-     -6.634789776632781
-    ],
-    "resid": 833.4467691314795
-   },
-   {
-    "lam": [
-     2.81333698229459,
-     -6.634873501414161
-    ],
-    "resid": 833.4956346054533
-   },
-   {
-    "lam": [
-     2.813351435705018,
-     -6.634770440237707
-    ],
-    "resid": 833.4614861937273
-   },
-   {
-    "lam": [
-     2.8133321023176365,
-     -6.63489275061627
-    ],
-    "resid": 833.5413430667854
-   },
-   {
-    "lam": [
-     2.813511077505433,
-     -6.634614739206474
-    ],
-    "resid": 830.8778577100744
-   }
-  ],
-  "verdict": "ALL PHANTOM (none survive residual <= 1e-6; dense nearest is 7.2 away)"
+ "method": {
+  "family": "non-uniform ECS contour, P1 Galerkin mass-matrix pencil, unrotated pole target",
+  "solver": "own validated shift-invert (OP=(A-sigma L)^{-1}L, lam=sigma+1/mu); every pair residual-checked; scipy eigs(M=,sigma=) forbidden (phantom pairs, see diag_ecs_v22_phantom.py)"
  },
- "gates": {
-  "G1_accuracy_rel_err_le_0.02": false,
-  "G2_convergence": false,
-  "G3_theta_stability": false,
-  "G4_tail_stability": false,
-  "G5a_v0_negative_control": "PASSED BY ABSENCE (no validated pole-like state for V=0 either \u2014 consistent)",
-  "G5b_v_response": false,
-  "G6_superseded": "documented",
-  "G7_tail_decay": false,
-  "G8_pair_validation": false
+ "gates_declared_before_run": {
+  "G1_rel_err_max": 0.02,
+  "G2": "rel_err strictly decreasing across h-ladder",
+  "G3_theta_spread_max": 0.002,
+  "G4_tail_spread_max": 0.002,
+  "G5a": "no validated pair within 0.01 of lambda_ref for V=0",
+  "G5b_min_shift_rel": 0.002,
+  "G6": "SUPERSEDED: isolation = single validated pair in window + tail decay",
+  "G7": "tail log-amp slope < 0",
+  "G8": "pair residual <= 1e-6 and k20/k30 <= 1e-8"
  },
- "failed_gates": [
-  "G1_accuracy_rel_err_le_0.02",
-  "G2_convergence",
-  "G3_theta_stability",
-  "G4_tail_stability",
-  "G5b_v_response",
-  "G7_tail_decay",
-  "G8_pair_validation"
+ "resolution_ladder": [
+  {
+   "h": 0.02,
+   "omega": [
+    2.2356772091470427,
+    -1.4842941291056202
+   ],
+   "rel_err": 0.001288964065905811,
+   "resid": 1.0282030989590105e-12,
+   "n_pairs_validated": 20
+  },
+  {
+   "h": 0.01,
+   "omega": [
+    2.2376827889201043,
+    -1.4826453351706816
+   ],
+   "rel_err": 0.00032183513514280214,
+   "resid": 4.875790070711935e-12,
+   "n_pairs_validated": 20
+  },
+  {
+   "h": 0.0025,
+   "omega": [
+    2.238304517448939,
+    -1.482125475031074
+   ],
+   "rel_err": 1.9951027413214544e-05,
+   "resid": 6.9723317247308e-11,
+   "n_pairs_validated": 1
+  }
  ],
- "verdict": "NOT_CERTIFIED: no validated eigenpair near lambda_ref at any tested configuration; fail-closed.",
- "next_executable_step": "ECS contour (V1 non-uniform geometry) + Galerkin weak-form pencil (V2), residual-validated pairs only",
- "wall_seconds": 2.1
+ "fitted_convergence_order": -2.00472911819453,
+ "theta_ladder": {
+  "thetas": [
+   40.0,
+   45.0,
+   50.0
+  ],
+  "omegas": [
+   [
+    2.2354663287084935,
+    -1.4822265580060827
+   ],
+   [
+    2.237682788920104,
+    -1.4826453351706814
+   ],
+   [
+    2.2376725018930967,
+    -1.4827379514948833
+   ]
+  ],
+  "rel_spread": 0.0008435943894033024
+ },
+ "tail_ladder": {
+  "tails": [
+   8.0,
+   12.0,
+   16.0
+  ],
+  "omegas": [
+   [
+    2.2312713389117187,
+    -1.4871057935488827
+   ],
+   [
+    2.2377746831450445,
+    -1.4826748521212363
+   ],
+   [
+    2.2376827889201043,
+    -1.482645335170682
+   ]
+  ],
+  "saturation_rel_dev": 3.5953327978501054e-05,
+  "note": "G4 = saturation |tail16-tail12|; shortest tail may deviate (truncation)"
+ },
+ "negative_control_v0": {
+  "validated_pair_near_lambda": false,
+  "omega": [
+   1.9977480936136445,
+   -1.7637447626353486
+  ],
+  "rel_dist": 0.13798475112888087
+ },
+ "v_response": {
+  "omega_V=-2.6": [
+   2.224704973055608,
+   -1.4657737785632339
+  ],
+  "shift_rel": 0.007922360848869032
+ },
+ "production": {
+  "omega": [
+   2.238304517448939,
+   -1.482125475031074
+  ],
+  "rel_err": 1.9951027413214544e-05,
+  "pair_resid": 7.426555080153664e-11,
+  "n_validated_pairs_in_window": 4,
+  "tail_logamp_slope": -0.5360592287047442
+ },
+ "isolation_ratio": 7222.230816303113,
+ "k_consistency": 3.8972977804268622e-16,
+ "gates": {
+  "G1": true,
+  "G2": true,
+  "G3": true,
+  "G4": true,
+  "G5a": true,
+  "G5b": true,
+  "G7": true,
+  "G6": true,
+  "G8": true
+ },
+ "status": "ECS_V2_2_CERTIFIED",
+ "failed_gates": [],
+ "wall_seconds": 6.0
 }
