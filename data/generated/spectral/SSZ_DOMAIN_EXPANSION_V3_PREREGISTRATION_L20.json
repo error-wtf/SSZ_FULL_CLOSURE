@@ -99,5 +99,7 @@
   "bound_artifacts_sha256": {
     "L12_VERDICT": "126ab36e7c3acef6e5d16596b5c5f176908296d2ffdac65af31b0ab3bcb39b7d",
     "SOLVER_CERTIFICATE": "39eba86a4636fcfb83e83b8a9d821f825d08ad9512e37f0d590bc77c5a869691"
-  }
+  },
+  "operator_artifact_sha256": "1c4824afa2d5fa206309e0d78fcbdc97930fcdf859e190bc80b5dbc839c6b0aa",
+  "operator_bound_utc": "2026-10-08T19:59:03+00:00"
 }
