@@ -1,0 +1,67 @@
+{
+  "artifact": "NO_CERTIFIED_RESONANCE_L42_V1",
+  "created_utc": "2026-10-08T20:11:40+00:00",
+  "closure_head": "dc5cf3c517b2c0c01974c458f86314d4d073cba3",
+  "ladder_step": "C (L=42)",
+  "branch": {
+    "a1": -0.5,
+    "eps": -0.3,
+    "L": 42
+  },
+  "physical_fields": [
+    "psi",
+    "dphi",
+    "V"
+  ],
+  "strictly_limited_to": {
+    "Re_omega_t": [
+      0.05,
+      3.0
+    ],
+    "Im_omega_t": [
+      -2.0,
+      -0.05
+    ],
+    "operator": "V4_PHYSICAL_RESONANCE_EXPORT_V6_L42.npz",
+    "operator_sha256": "d9deed5cd674433b67f334b3d1fa77b668228ef4d11923a529686daf762e256f"
+  },
+  "tiles": {
+    "D0": {
+      "ecs": 0,
+      "jost": 0,
+      "common": 0
+    },
+    "D1": {
+      "ecs": 0,
+      "jost": 0,
+      "common": 0
+    },
+    "D2": {
+      "ecs": 0,
+      "jost": 0,
+      "common": 0
+    },
+    "D3": {
+      "ecs": 0,
+      "jost": 0,
+      "common": 0
+    }
+  },
+  "n_common_all_tiles": 0,
+  "no_broader_no_qnm_claim": true,
+  "solver_certification": "COUPLED_RESONANCE_SOLVER_V2_2_CERTIFIED (unchanged algorithms)",
+  "preregistration_sha256": "bdb6aed4ab2f4e3346d46757f16d61b2b265f3873cb6be4e360045a660b47bad",
+  "matching_sha256": "6974f9620ff42cff94cd8450622b3cee9797fe2e527fc20acbdc214738cc6984",
+  "candidate_artifacts_sha256": {
+    "JOST_SSZ_L42_D0_CANDIDATES_V1.json": "d274d02d2fc90d890aa34785725c6889a9adaf5810f41b767f13b73321ebc92f",
+    "JOST_SSZ_L42_D1_CANDIDATES_V1.json": "ece1b740079a500c6cd33e235f245c028c2a6b6d26cf03707d89e6d3775c31d0",
+    "JOST_SSZ_L42_D2_CANDIDATES_V1.json": "de45d55fa60f322f64bfb05e1d4e0977d309e2510081ff41d64935ba6303b34f",
+    "JOST_SSZ_L42_D3_CANDIDATES_V1.json": "13992aa8047770c80fe15e37addc00da9fab781afbd07a40ebb5f05e6da3be21",
+    "ECS_SSZ_L42_D0_CANDIDATES_V1.json": "fad611563473812559f5c4adc10a70f7a0c15891b5da5a5d9f46ab5135732a8c",
+    "ECS_SSZ_L42_D1_CANDIDATES_V1.json": "615ed7c4194a5705d4d2d7b3700d03b7f24befa802c9972b3efa2390755ec2b8",
+    "ECS_SSZ_L42_D2_CANDIDATES_V1.json": "6be6d1e9d70e048221c62bad426eb3a598e107dbfdfe7ffe061cf953371b4ca3",
+    "ECS_SSZ_L42_D3_CANDIDATES_V1.json": "b386a0e49e1ae03109651c6e7ade7af4249a7f798a8f2f1a11abff947756c07f"
+  },
+  "observational_seal": "maintained",
+  "next": "eps=+0.3 branch from the original small box, subject to its independent theory-health gate"
+}
