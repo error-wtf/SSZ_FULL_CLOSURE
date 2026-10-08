@@ -3908,6 +3908,11 @@
       "sha256": "721eaa197d7591fb215c77cbeda9cf83288d23b570d78681b2d473329e52edb8"
     },
     {
+      "path": "data/generated/spectral/SEGMENTATION_CUTOFF_1MHZ_AUDIT_V1.json",
+      "size_bytes": 2580,
+      "sha256": "11ff0ec504a25412059620dcdff1dc72f017a9122cab557f3375701db9dcdb34"
+    },
+    {
       "path": "data/generated/spectral/SOLVER_PREFLIGHT_V1.json",
       "size_bytes": 3643,
       "sha256": "41a6baaa9bd022a095eea8695b8f1cf4edad84d8812e115efe1e365d02b7c29c"

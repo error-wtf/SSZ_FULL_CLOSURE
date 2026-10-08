@@ -1,0 +1,43 @@
+{
+  "artifact": "SEGMENTATION_CUTOFF_1MHZ_AUDIT_V1",
+  "created_utc": "2026-10-08T21:04:52+00:00",
+  "closure_head": "e0dd1ebbea966e3f9c6791544e0aa8cce01e7130",
+  "source": {
+    "book": "SSZ_BOOK_EN_FINAL_BEST_VERSION.md, sec 3.21.2 (line ~3141) and 3.21.3 (line ~3153)",
+    "sha256": "6192fb4460d0e75305f3132f3bba487d1cbb3d130552bd9b97716f52c455d34e"
+  },
+  "book_claims": {
+    "cutoff_assertion": "finite segmentation implies a minimum wavelength for coherent wave propagation inside the maximally segmented region; radio band, frequency ~ 1 MHz",
+    "n_max_assertion": "N_max = ln(lp/s0)/ln(phi) ~= 42 phi-subdivision levels",
+    "own_concession": "sec 6.7 summary: 'the UV cutoff (l_seg is unknown)' \u2014 the book itself declares the segment lattice spacing UNKNOWN, which is the quantity that would set the cutoff",
+    "chapter_21_check": "no MHz calculation exists there (only solar-burst phenomenology and SKA specs)"
+  },
+  "reconstruction_attempt": {
+    "book_parameters": "r_min = 1e-6 r_s, n = 28.7 quarter-turns, S_end = 4*phi^28.7 ~ 4e6",
+    "candidates_tested": {
+      "lambda = 2 pi r_min": "1615 MHz (10 Msun), 538 MHz (30), 269 MHz (60) \u2014 mass-dependent, GHz not MHz",
+      "lambda = r_min": "10.1 GHz (10 Msun) \u2014 three orders above",
+      "lambda = 2 pi r_min / S_end": "PHz regime \u2014 nine orders above"
+    },
+    "finding": "no candidate reproduces '1 MHz'; a FIXED 1 MHz is incompatible with any r_min(r_s)-proportional cutoff across masses; the book provides no formula and no numerical derivation of 1 MHz"
+  },
+  "bridge_check": {
+    "question": "does the book derive a link between f_cut and N_max=42?",
+    "answer": "NO \u2014 the two sections use different ladders (rs/r_min with 28.7 levels vs lp/s0 with 42 levels); no equation joins them",
+    "lino_suspicion_confirmed": true
+  },
+  "current_formalism_crosscheck": "consistent with ANTI_NUMEROLOGY_NMAX_AUDIT_V1: the certified P5 chain has no l_seg, no phi-ladder, no cutoff frequency derivable from segmentation",
+  "verdict": {
+    "1_mhz_status": "UNBOUND_ASSERTION (no derivation in the book; own summary admits l_seg unknown)",
+    "n_max_42_status": "reverse-constructed (see ANTI_NUMEROLOGY_NMAX_AUDIT_V1)",
+    "bridge_status": "ABSENT",
+    "numerology_cleanup_complete": true
+  },
+  "substantive_theory_only_followups_unchanged": [
+    "A: ridge-regime coupled scan w in [20,60]",
+    "B: test-field trapped scan l~256/257 (diagnostic label)",
+    "C: eps=+0.3 branch, health-gated"
+  ],
+  "no_observational_input": true,
+  "observational_seal": "maintained"
+}
