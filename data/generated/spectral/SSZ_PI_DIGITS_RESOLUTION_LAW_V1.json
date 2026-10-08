@@ -1,0 +1,73 @@
+{
+  "artifact": "SSZ_PI_DIGITS_RESOLUTION_LAW_V1",
+  "created_utc": "2026-10-08T21:30:40+00:00",
+  "closure_head": "79b7f51c5fdf687369bb59bd1d05c63bf51be0f3",
+  "reconstructed_law": {
+    "error_propagation": "|dU| = 2R |d_pi|",
+    "resolution_requirement": "|dU| < l_min",
+    "digit_law": "d > log10(R / l_min)",
+    "interpretation": "pi braucht keine Grenze \u2014 d ist die Anzahl Stellen, bei der der Umfangs-Rundungsfehler unter der kleinsten physikalisch relevanten L\u00e4nge bleibt. Eine Funktion, keine Konstante."
+  },
+  "special_case_legacy_42": {
+    "l_min": "lp (Planck-L\u00e4nge) \u2014 PHYSIKALISCHE ANNAHME, kein bewiesenes Gesetz",
+    "R_for_42": "1.616e+07 m (R/lp = 10^42)",
+    "example": "R = 1e7 m -> d > 41.79 -> 42 Stellen gen\u00fcgen",
+    "status": "saubere Aufl\u00f6sungsabsch\u00e4tzung; die 42 ist der Spezialfall l_min = lp bei planetaren Radien \u2014 NICHT universell, NICHT eine SSZ-Konstante, NICHT mit dem Winkelindex L verwandt"
+  },
+  "digits_table_lmin_lp": {
+    "Proton": {
+      "R_m": 8.4e-16,
+      "digits_needed_lp": 19.72,
+      "check": "bei d=20 Stellen ist |dU| = 8.40e-36 m < lp"
+    },
+    "Atom (Bohr)": {
+      "R_m": 5.29e-11,
+      "digits_needed_lp": 24.51,
+      "check": "bei d=25 Stellen ist |dU| = 5.29e-36 m < lp"
+    },
+    "1 Meter": {
+      "R_m": 1.0,
+      "digits_needed_lp": 34.79,
+      "check": "bei d=35 Stellen ist |dU| = 1.00e-35 m < lp"
+    },
+    "Erde": {
+      "R_m": 6371000.0,
+      "digits_needed_lp": 41.6,
+      "check": "bei d=42 Stellen ist |dU| = 6.37e-36 m < lp"
+    },
+    "Sonne": {
+      "R_m": 696000000.0,
+      "digits_needed_lp": 43.63,
+      "check": "bei d=44 Stellen ist |dU| = 6.96e-36 m < lp"
+    },
+    "1 AE": {
+      "R_m": 149600000000.0,
+      "digits_needed_lp": 45.97,
+      "check": "bei d=46 Stellen ist |dU| = 1.50e-35 m < lp"
+    },
+    "Sgr A* (Horizont ~ 12e9 m)": {
+      "R_m": 12000000000.0,
+      "digits_needed_lp": 44.87,
+      "check": "bei d=45 Stellen ist |dU| = 1.20e-35 m < lp"
+    },
+    "beobachtbares Universum": {
+      "R_m": 4.4e+26,
+      "digits_needed_lp": 61.43,
+      "check": "bei d=62 Stellen ist |dU| = 4.40e-36 m < lp"
+    }
+  },
+  "example_verification": {
+    "case": "R = 1e7 m, d = 42",
+    "circumference_uncertainty_m": 1.0000000000000001e-35,
+    "below_planck_length": true
+  },
+  "what_this_is_not": [
+    "keine Behauptung, dass pi endet (pi hat unendlich viele Stellen)",
+    "keine SSZ-Konstante (gilt f\u00fcr JEDEN Modellkreis, unabh\u00e4ngig von SSZ)",
+    "keine Verbindung zum Winkelindex L des QNM-Solvers",
+    "keine Derivation aus Xi_max oder der P5-Kette"
+  ],
+  "relation_to_retired_claims": "ersetzt die nicht etablierte pi_eff-Konvergenz (SSZ_LEGACY_1MHZ_FORMULA_AUDIT: pi_eff -> 0, Kriterium bei N=17) durch eine saubere Fehlerfortpflanzung. Die alte Beobachtung '42 Nachkommastellen' ist damit als Aufl\u00f6sungs-Absch\u00e4tzung REHABILITIERT \u2014 als Mathematik, nicht als SSZ-Naturkonstante.",
+  "no_observational_input": true,
+  "observational_seal": "maintained"
+}
