@@ -4,7 +4,7 @@
   "a1": -0.5,
   "eps": -0.3
  },
- "L": 6,
+ "L": 12,
  "n_nodes": 4100,
  "grid": {
   "r_in": 0.05,
@@ -13,7 +13,7 @@
   "n_win": 3500,
   "n_ext": 600
  },
- "npz_sha256": "ad2bee7d3994097479933c1eea787f3aa381648d098ffd36aab32a4c436db2ef",
+ "npz_sha256": "3e0e0a4fc6f492cef63ac00ea785a198976dccf29f738566e02cdeefd297d284",
  "R_block": {
   "max_abs": 0.0,
   "max_abs_asymptotic_last100": 0.0,
@@ -23,15 +23,15 @@
  "S_antisymmetric_kept": true,
  "diagnostics": {
   "max_h0_quadratic": "0.0",
-  "max_P20_asym": "9.174254955723882e-08",
-  "max_P02_asym": "4.547473508864641e-13",
+  "max_P20_asym": "1.862565568444552e-08",
+  "max_P02_asym": "1.1368683772161603e-13",
   "max_P11_asym": "0.0",
   "max_time_first_sym_res": "0.0",
-  "max_radial_first_sym_res": "2.035562829405535e-08",
+  "max_radial_first_sym_res": "4.673120201914571e-08",
   "higher_operator_keys": "[(2, 1), (2, 2)]",
-  "max_high_order": "2.60770320892334e-07",
-  "max_S_sym": "2.035562829405535e-08",
+  "max_high_order": "1.7415732145309448e-07",
+  "max_S_sym": "4.673120201914571e-08",
   "max_R_abs": "0.0"
  },
- "wall_seconds": 5.1
+ "wall_seconds": 5.8
 }

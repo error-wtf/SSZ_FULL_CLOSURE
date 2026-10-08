@@ -102,5 +102,8 @@
     "V1_PREREGISTRATION": "78301ad7d60c5eb26ee07da81e2ed16d1c502560f99302cf6c8bcba69a3c7a4a",
     "V1_NULL_VERDICT": "cabe3f45315773c7646e65644b9f6b680a3c59dc4450cdbd32cde3056a752700",
     "SOLVER_CERTIFICATE": "39eba86a4636fcfb83e83b8a9d821f825d08ad9512e37f0d590bc77c5a869691"
-  }
+  },
+  "operator_artifact_sha256": "3e0e0a4fc6f492cef63ac00ea785a198976dccf29f738566e02cdeefd297d284",
+  "operator_bound_utc": "2026-10-08T19:43:36+00:00",
+  "operator_n_nodes": 4100
 }
