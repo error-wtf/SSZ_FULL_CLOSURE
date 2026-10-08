@@ -3538,6 +3538,26 @@
       "sha256": "c59f14b42081d0e3f5950c91dcb4f81c04b1038b9b49272d845b3fcc7249b879"
     },
     {
+      "path": "data/generated/spectral/ECS_SSZ_L42_D0_CANDIDATES_V1.json",
+      "size_bytes": 207,
+      "sha256": "fad611563473812559f5c4adc10a70f7a0c15891b5da5a5d9f46ab5135732a8c"
+    },
+    {
+      "path": "data/generated/spectral/ECS_SSZ_L42_D1_CANDIDATES_V1.json",
+      "size_bytes": 206,
+      "sha256": "615ed7c4194a5705d4d2d7b3700d03b7f24befa802c9972b3efa2390755ec2b8"
+    },
+    {
+      "path": "data/generated/spectral/ECS_SSZ_L42_D2_CANDIDATES_V1.json",
+      "size_bytes": 206,
+      "sha256": "6be6d1e9d70e048221c62bad426eb3a598e107dbfdfe7ffe061cf953371b4ca3"
+    },
+    {
+      "path": "data/generated/spectral/ECS_SSZ_L42_D3_CANDIDATES_V1.json",
+      "size_bytes": 205,
+      "sha256": "b386a0e49e1ae03109651c6e7ade7af4249a7f798a8f2f1a11abff947756c07f"
+    },
+    {
       "path": "data/generated/spectral/ECS_V2_2_CERTIFICATE.json",
       "size_bytes": 4062,
       "sha256": "a44ee2e096390ca5a6a6313debabd3192d10d9f9430dc79fb16d0a40fd1cf800"
@@ -3671,6 +3691,26 @@
       "path": "data/generated/spectral/JOST_SSZ_L20_D3_CANDIDATES_V1.json",
       "size_bytes": 206,
       "sha256": "751bdce097e91f2a2cb030636ba89725c4edb256018e121bf32666e4ca74b47d"
+    },
+    {
+      "path": "data/generated/spectral/JOST_SSZ_L42_D0_CANDIDATES_V1.json",
+      "size_bytes": 208,
+      "sha256": "d274d02d2fc90d890aa34785725c6889a9adaf5810f41b767f13b73321ebc92f"
+    },
+    {
+      "path": "data/generated/spectral/JOST_SSZ_L42_D1_CANDIDATES_V1.json",
+      "size_bytes": 207,
+      "sha256": "ece1b740079a500c6cd33e235f245c028c2a6b6d26cf03707d89e6d3775c31d0"
+    },
+    {
+      "path": "data/generated/spectral/JOST_SSZ_L42_D2_CANDIDATES_V1.json",
+      "size_bytes": 207,
+      "sha256": "de45d55fa60f322f64bfb05e1d4e0977d309e2510081ff41d64935ba6303b34f"
+    },
+    {
+      "path": "data/generated/spectral/JOST_SSZ_L42_D3_CANDIDATES_V1.json",
+      "size_bytes": 206,
+      "sha256": "13992aa8047770c80fe15e37addc00da9fab781afbd07a40ebb5f05e6da3be21"
     },
     {
       "path": "data/generated/spectral/JOST_V2_2_CERTIFICATE.json",
@@ -3888,6 +3928,11 @@
       "sha256": "d8ede57e07825b6f94d9f57c490c47943c839a723f23bd63e59d77e8a2fa2217"
     },
     {
+      "path": "data/generated/spectral/SSZ_DOMAIN_EXPANSION_V2_MATCHING_L42.json",
+      "size_bytes": 488,
+      "sha256": "6974f9620ff42cff94cd8450622b3cee9797fe2e527fc20acbdc214738cc6984"
+    },
+    {
       "path": "data/generated/spectral/SSZ_DOMAIN_EXPANSION_V2_PREREGISTRATION_L12.json",
       "size_bytes": 3244,
       "sha256": "273af55ecb0e2a5c9b4a7fb965b3ccf3447152e4308047655528ffcf13bf1593"
@@ -3896,6 +3941,11 @@
       "path": "data/generated/spectral/SSZ_DOMAIN_EXPANSION_V3_PREREGISTRATION_L20.json",
       "size_bytes": 2867,
       "sha256": "cc565394bc4140295e8687a7533794c3e15436cc083da385866ad2184fde3b4b"
+    },
+    {
+      "path": "data/generated/spectral/SSZ_DOMAIN_EXPANSION_V4_PREREGISTRATION_L42.json",
+      "size_bytes": 1981,
+      "sha256": "bdb6aed4ab2f4e3346d46757f16d61b2b265f3873cb6be4e360045a660b47bad"
     },
     {
       "path": "data/generated/spectral/SSZ_DOMAIN_RERUN_V3_STATUS.json",
@@ -4044,8 +4094,8 @@
     },
     {
       "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.json",
-      "size_bytes": 975,
-      "sha256": "b95bc517e50127675dc680fa5971caa5cccfd86333a35ff1cff4d5515cd34f10"
+      "size_bytes": 977,
+      "sha256": "a3ec231465624df72079c08114855e369906c87efa5b4e55eb05673a33b77a63"
     },
     {
       "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.npz",
@@ -4061,6 +4111,11 @@
       "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V5_L20.npz",
       "size_bytes": 1211472,
       "sha256": "1c4824afa2d5fa206309e0d78fcbdc97930fcdf859e190bc80b5dbc839c6b0aa"
+    },
+    {
+      "path": "data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V6_L42.npz",
+      "size_bytes": 1206578,
+      "sha256": "d9deed5cd674433b67f334b3d1fa77b668228ef4d11923a529686daf762e256f"
     },
     {
       "path": "data/generated/spectral/V4_SCHUR_DOUBLE_COUNT_TEST_V1.json",
@@ -7398,6 +7453,11 @@
       "sha256": "84d58235222b30af60e96679a984d64a749d057de794a645ef3c6844854a3018"
     },
     {
+      "path": "tools/run_ssz_domain_expansion_v4_l42.py",
+      "size_bytes": 11953,
+      "sha256": "cfe41e9a55527c1d405770f01533243a5dcc404a8e261e7a1c5903ebde15d5b4"
+    },
+    {
       "path": "tools/run_ssz_domain_v3.py",
       "size_bytes": 12461,
       "sha256": "e8971cdef9b724bfad3e82fd3c2e318c60f1d2aec5e10f0a951f11329bafafa7"
@@ -7496,6 +7556,11 @@
       "path": "tools/run_v4_physical_resonance_export_v5_l20.py",
       "size_bytes": 5218,
       "sha256": "4c76ba1da368722d1fc821c6ea110da4352ed0b0df2038500438db6bb915414c"
+    },
+    {
+      "path": "tools/run_v4_physical_resonance_export_v6_l42.py",
+      "size_bytes": 5218,
+      "sha256": "d8c43f2e70354b22dec6926d88f24969fbba2124cb2ee7c8205ee1374d483d94"
     },
     {
       "path": "tools/run_v4_s_contract_forensics.py",
