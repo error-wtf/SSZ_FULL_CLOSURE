@@ -3463,6 +3463,11 @@
       "sha256": "61b60ccbaf2b3c9c4bfbd008500d7e3342a096db732bd0125c34b458236f1f54"
     },
     {
+      "path": "data/generated/spectral/ECS_V2_2_CERTIFICATE.json",
+      "size_bytes": 3605,
+      "sha256": "5a91cc70ad052046568513819f70805236f875aac7af40fbf1d3129403614092"
+    },
+    {
       "path": "data/generated/spectral/ECS_V2_CANDIDATES.json",
       "size_bytes": 12202,
       "sha256": "0c1e5e666c5fb2292e168644eab7d8d959661d68209b967a3f7625f79bcb7919"
@@ -6698,6 +6703,51 @@
       "sha256": "3dbcc303cb0138cc8a474b512a8ec41dfb669439f4bad8fc91520376f6b0a84f"
     },
     {
+      "path": "tools/diag_ecs_v22_constv.py",
+      "size_bytes": 1617,
+      "sha256": "54df25f637163005cd746b93d5595ee8e75b750accc6573986dfa25157c5c171"
+    },
+    {
+      "path": "tools/diag_ecs_v22_dense.py",
+      "size_bytes": 1766,
+      "sha256": "fcabe602f2321930ae2927ea4830dd93188f0c784a31c2f57bb7c5278106e4a8"
+    },
+    {
+      "path": "tools/diag_ecs_v22_dev.py",
+      "size_bytes": 3068,
+      "sha256": "a8b7831a1875859c07990bcc3af0c71fbd7f06559ef1969e7526e08c23c430f3"
+    },
+    {
+      "path": "tools/diag_ecs_v22_ho.py",
+      "size_bytes": 2254,
+      "sha256": "661891e471b41280d1d6ffce5c4dec252db2791497d88887965d795326849c2b"
+    },
+    {
+      "path": "tools/diag_ecs_v22_movers.py",
+      "size_bytes": 1359,
+      "sha256": "44876c24f2144847aea07324b59f18a7913db309e5ef344b016a52a4eea99e94"
+    },
+    {
+      "path": "tools/diag_ecs_v22_movers_dense.py",
+      "size_bytes": 2236,
+      "sha256": "e4dbe09158106a234debcdd8124b7cfc3a4412e0e4eef981783017e2d0f5dd2c"
+    },
+    {
+      "path": "tools/diag_ecs_v22_residual.py",
+      "size_bytes": 1527,
+      "sha256": "0d16390413d646a0b2b5e61a3aaf06c70137f3761aef621ff5cfe554ff47bc7d"
+    },
+    {
+      "path": "tools/diag_ecs_v22_rmatch.py",
+      "size_bytes": 2350,
+      "sha256": "20ce671b3ed13eba0c75cefbbf363f57f1d0f6b1bae6933bee753fb39faf8c17"
+    },
+    {
+      "path": "tools/diag_ecs_v22_tracked.py",
+      "size_bytes": 2129,
+      "sha256": "47c11c7776cef9772f6b7c89addffcb50e31f24cb676cd4b2cedb2bc98065add"
+    },
+    {
       "path": "tools/diagnose_current_member_sign_branch.py",
       "size_bytes": 10172,
       "sha256": "4aab0e6e0b37baecae3e72d9d5604511f312398b4b899da5d4201c2d48d3cde5"
@@ -6921,6 +6971,11 @@
       "path": "tools/run_ecs_discovery_v2.py",
       "size_bytes": 7953,
       "sha256": "4163aaec3838a504a68067ab6b9ebb13f08d2e74b2767ba15d85be5cb746f27f"
+    },
+    {
+      "path": "tools/run_ecs_square_well_v22.py",
+      "size_bytes": 14642,
+      "sha256": "7e3622f7e53d1f1948ea41de4dfdab1610393fdf1ca9610eca8897f2131102c1"
     },
     {
       "path": "tools/run_f4_finite_l_kphys_v2.py",
