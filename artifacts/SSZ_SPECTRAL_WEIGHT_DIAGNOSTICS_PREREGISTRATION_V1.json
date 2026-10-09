@@ -1,0 +1,33 @@
+{
+ "artifact": "SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_PREREGISTRATION_V1",
+ "created_utc": "2026-10-09T19:45:00Z",
+ "trigger": "owner research question 2026-10-09: does the certified SSZ 3-field operator predict which resonances carry MEASURABLE spectral weight (Weisz/Li-style observability), not merely existence?",
+ "source_hierarchy": {
+  "operator_input": "V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.npz (sha ad2bee7d39940974..., bound in CERTIFIED_RESONANCE_CATALOG_V2.json)",
+  "certified_status": "catalog V2 verdict = NO_CERTIFIED_RESONANCE_IN_SCANNED_DOMAIN (null stands, untouched)",
+  "reference_diagnostics": [
+   "WEISZ1978_FK_REPRODUCTION.json (97.1% weight in one mode for 13*lambda=10a, coupling 0.3) — METHOD reference only",
+   "LI2023_CSTAAH_REPRODUCTION.json (j_c=1937 for N=2584, sigma=1, lambda=1.5) — METHOD reference only"
+  ],
+  "explicit_non_claims": [
+   "no equality claim between conservative FK phonons and open-system QNMs",
+   "no equality claim between Li's analog lattice segmentation and SSZ segmentation",
+   "no SSZ parameter fitting, no theory modification (A1)",
+   "a residual pattern in the finite radial problem is NOT a certified global QNM residue"
+  ]
+ },
+ "frozen_definitions": {
+  "observable": "Green-function residue weight per mode: w_i = |<L_i, b>| * |<R_i, b>| for source/probe vector b (unit dipole at inner boundary channel 0), eigenpairs (w_i, L_i, R_i) of the discretized 3-DOF radial operator assembled from the certified profiles",
+  "weight_entropy": "S = -sum p_i log p_i with p_i = w_i / sum(w) over the scanned window",
+  "participation_ratio": "PR_i = (sum_k |psi_i(r_k)|^2)^2 / (N_points * sum_k |psi_i(r_k)|^4), basis-invariant",
+  "selectivity_metric": "C = max_i p_i (Weisz-comparable: fraction of total weight in the strongest mode)",
+  "robustness": "each diagnostic recomputed at 2 grid resolutions and 2 boundary treatments (Dirichlet, Robin); a value is reported only if it varies <5% across all four"
+ },
+ "acceptance": {
+  "pass": "weight spectrum computed with all four robustness variants agreeing; selectivity C and entropy S reported per scanned window with uncertainty from the variants",
+  "fail": "variants disagree >5% -> diagnostic reported as UNSTABLE, no physical claim",
+  "null_interpretation": "if all residues fall below the null band from off-resonance background, the result is 'no measurable spectral weight in the scanned window' — a valid observational-class (NUMERICALLY_VERIFIED) answer to the owner's question"
+ },
+ "windows": "full certified scan domain (as in CERTIFIED_RESONANCE_CATALOG_V2 scanned_domain), 4x finer frequency grid than V2 scan",
+ "status": "FROZEN before first run"
+}
