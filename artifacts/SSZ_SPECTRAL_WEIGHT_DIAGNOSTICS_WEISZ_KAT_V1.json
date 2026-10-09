@@ -1,0 +1,47 @@
+{
+ "artifact": "SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_WEISZ_KAT_V1",
+ "purpose": "Known-Answer-Test of the frozen diagnostics on the archived Weisz reproduction",
+ "preregistration": "SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_PREREGISTRATION_V1",
+ "diagnostics_per_case": {
+  "(13, 10, 0.3)": {
+   "selectivity_C": 0.9712499743350256,
+   "spectral_entropy_S": 0.1427760293744691,
+   "participation_ratio_PR": 0.10593668344281466,
+   "n_modes": 10
+  },
+  "(13, 10, 0.7)": {
+   "selectivity_C": 0.8817550597617505,
+   "spectral_entropy_S": 0.46135315519529824,
+   "participation_ratio_PR": 0.12750967870295848,
+   "n_modes": 10
+  },
+  "(48, 49, 0.005)": {
+   "selectivity_C": 0.8653115127424341,
+   "spectral_entropy_S": 0.39758206273492824,
+   "participation_ratio_PR": 0.02661422670829849,
+   "n_modes": 49
+  },
+  "(48, 49, 0.01)": {
+   "selectivity_C": 0.6904831546670115,
+   "spectral_entropy_S": 0.6348764629536205,
+   "participation_ratio_PR": 0.03574959390994331,
+   "n_modes": 49
+  },
+  "(48, 49, 0.02)": {
+   "selectivity_C": 0.5015030323289424,
+   "spectral_entropy_S": 0.7549059257714811,
+   "participation_ratio_PR": 0.04184236264571945,
+   "n_modes": 49
+  }
+ },
+ "KAT_case_13_10_03": {
+  "archived_selectivity": 0.9712499743350262,
+  "computed": {
+   "selectivity_C": 0.9712499743350256,
+   "spectral_entropy_S": 0.1427760293744691,
+   "participation_ratio_PR": 0.10593668344281466,
+   "n_modes": 10
+  },
+  "pass_1pct": true
+ }
+}
