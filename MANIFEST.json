@@ -2233,6 +2233,11 @@
       "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
     },
     {
+      "path": "artifacts/SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_GW_V1.json",
+      "size_bytes": 2914,
+      "sha256": "c66c52b6fa4a0418f9842cbe556cebf0dde7d7f5de997cd9475fcd1b85927d1d"
+    },
+    {
       "path": "artifacts/SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_PREREGISTRATION_V1.json",
       "size_bytes": 2680,
       "sha256": "ddd9198ae713bac2b228beb21ca08f4330a650a2f47ddf78cbc399f7c5d67a21"
@@ -7491,6 +7496,11 @@
       "path": "tools/run_spectral_selection_probe.py",
       "size_bytes": 3610,
       "sha256": "ef38367e032c3593bbe757df1a9b3040cafb9c23859e617ad118baa115d861e4"
+    },
+    {
+      "path": "tools/run_spectral_weight_diagnostics_gw.py",
+      "size_bytes": 7954,
+      "sha256": "492371ec503cd7e0d799a0a4fe6e79c908a9e2a7cbdc45810b455908e6ae7fab"
     },
     {
       "path": "tools/run_spectral_weight_diagnostics_weisz_kat.py",

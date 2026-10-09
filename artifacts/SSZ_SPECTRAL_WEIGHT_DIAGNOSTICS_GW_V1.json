@@ -1,0 +1,67 @@
+{
+ "artifact": "SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_GW_V1",
+ "preregistration": "SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_PREREGISTRATION_V1",
+ "operator_source": "V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.npz",
+ "window": [
+  0.05,
+  1.5
+ ],
+ "n_freq": 800,
+ "variants": {
+  "n600_dirichlet": {
+   "n_peaks": 0,
+   "peaks_top5": [],
+   "selectivity_C": null,
+   "entropy_S": null,
+   "g_max": 0.048597,
+   "g_median": 0.04663071,
+   "wall_s": 433.9,
+   "note": "no significant peaks -> weight distribution undefined; entire window below 6-sigma local noise"
+  },
+  "n600_robin": {
+   "n_peaks": 0,
+   "peaks_top5": [],
+   "selectivity_C": null,
+   "entropy_S": null,
+   "g_max": 0.0486,
+   "g_median": 0.04663343,
+   "wall_s": 505.0,
+   "note": "no significant peaks -> weight distribution undefined; entire window below 6-sigma local noise"
+  },
+  "n1000_dirichlet": {
+   "n_peaks": 0,
+   "peaks_top5": [],
+   "selectivity_C": null,
+   "entropy_S": null,
+   "g_max": 0.029153,
+   "g_median": 0.0279751,
+   "wall_s": 1054.3,
+   "note": "no significant peaks -> weight distribution undefined; entire window below 6-sigma local noise"
+  },
+  "n1000_robin": {
+   "n_peaks": 0,
+   "peaks_top5": [],
+   "selectivity_C": null,
+   "entropy_S": null,
+   "g_max": 0.029155,
+   "g_median": 0.02797673,
+   "wall_s": 1413.8,
+   "note": "no significant peaks -> weight distribution undefined; entire window below 6-sigma local noise"
+  }
+ },
+ "robustness_top5_match_vs_n1000_dirichlet": {
+  "n600_dirichlet": "0/0",
+  "n600_robin": "0/0",
+  "n1000_robin": "0/0"
+ },
+ "verdict": "PEAKS_NOT_ROBUST \u2014 diagnostics reported, no resonance claim",
+ "wall_seconds": 3407.0,
+ "interpretation": {
+  "result": "NUMERICALLY_VERIFIED NULL",
+  "statement": "the Green-function response G_00(w) of the certified 3-DOF operator shows NO peak exceeding 6-sigma local noise anywhere in the certified scan window Re(w_t) in [0.05, 1.5], across 2 resolutions and 2 boundary conditions (max |G| 0.029-0.049, monotonically decaying character)",
+  "consistency": "matches CERTIFIED_RESONANCE_CATALOG_V2 (NO_CERTIFIED_RESONANCE_IN_SCANNED_DOMAIN) \u2014 now confirmed at the response-function level: even forced dipole excitation extracts no measurable spectral weight",
+  "weisz_contrast": "Weisz FK lattice: 97.1% of weight in one mode. SSZ certified window: 0% in any mode (none resolvable). The observability question is answered for this window: there is nothing to observe, not an unobserved abundance",
+  "owner_question": "'which resonances carry measurable weight' \u2014 answer for the certified window: none. Next discriminators: (a) widen window / include Im(w) damping channels, (b) test whether sub-threshold resonances EXIST (eigenvalue search) but carry negligible coupling \u2014 distinguishes 'no modes' from 'uncoupled modes'",
+  "no_claim": "this is the finite radial box response, NOT a certified global QNM residue (prereg non-claim 3)"
+ }
+}
