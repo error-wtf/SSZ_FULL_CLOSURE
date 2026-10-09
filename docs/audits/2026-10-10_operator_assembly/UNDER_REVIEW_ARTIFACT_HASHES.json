@@ -1,0 +1,90 @@
+{
+ "ECS_SSZ_CANDIDATES_V3.json": {
+  "sha256": "5d8dd240cfb211b68fd8cd00ec0d6bea910fccb7a447fdd31e0576a4e7e72e69",
+  "size": 30988
+ },
+ "ECS_SSZ_D1_CANDIDATES_V4.json": {
+  "sha256": "fa2e14832c9333ab4a2876caf22243ee899aa3574ce6750b4fda7e04007ffc92",
+  "size": 201
+ },
+ "ECS_SSZ_D2_CANDIDATES_V4.json": {
+  "sha256": "f59206e5304b53001cf3aac468977a2897bd1fa990e8beb7acf5622245c4f5c7",
+  "size": 201
+ },
+ "ECS_SSZ_D3_CANDIDATES_V4.json": {
+  "sha256": "3f4fdf6e3bcef7dad18701944e5ce3cdc31fe0a3ce13174df00b9c38c2b33a88",
+  "size": 200
+ },
+ "ECS_SSZ_L12_D1_CANDIDATES_V1.json": {
+  "sha256": "a96238286a0747e123a9dca11e4e41125b616942bdb7e4b18a7d94c9be42ca28",
+  "size": 206
+ },
+ "ECS_SSZ_L12_D2_CANDIDATES_V1.json": {
+  "sha256": "71339ed459c078e5633b696e5eb5cf68b5ad8f73409cc112bab8b9a67f77c6d3",
+  "size": 206
+ },
+ "ECS_SSZ_L12_D3_CANDIDATES_V1.json": {
+  "sha256": "e1b582557276cd08b2112c2dc82ae1233c8bbe23cf3c74973da1bc371b44d2e6",
+  "size": 205
+ },
+ "ECS_SSZ_L20_D1_CANDIDATES_V1.json": {
+  "sha256": "8dee74f73af28e497ed70a833a8f9ff601efed132f63e3326f2cb8696d4197fa",
+  "size": 206
+ },
+ "ECS_SSZ_L20_D2_CANDIDATES_V1.json": {
+  "sha256": "5de7accdd280b75c40f156afd0e8fbdc8336724fb8652872b78aa8ac8f9af97b",
+  "size": 206
+ },
+ "ECS_SSZ_L20_D3_CANDIDATES_V1.json": {
+  "sha256": "c59f14b42081d0e3f5950c91dcb4f81c04b1038b9b49272d845b3fcc7249b879",
+  "size": 205
+ },
+ "ECS_SSZ_L42_D1_CANDIDATES_V1.json": {
+  "sha256": "615ed7c4194a5705d4d2d7b3700d03b7f24befa802c9972b3efa2390755ec2b8",
+  "size": 206
+ },
+ "ECS_SSZ_L42_D2_CANDIDATES_V1.json": {
+  "sha256": "6be6d1e9d70e048221c62bad426eb3a598e107dbfdfe7ffe061cf953371b4ca3",
+  "size": 206
+ },
+ "ECS_SSZ_L42_D3_CANDIDATES_V1.json": {
+  "sha256": "b386a0e49e1ae03109651c6e7ade7af4249a7f798a8f2f1a11abff947756c07f",
+  "size": 205
+ },
+ "SSZ_DOMAIN_EXPANSION_V1_MATCHING.json": {
+  "sha256": "f95ad9f6a0f93d0f5f5706490367a2af0ffb42f675d64af12bda18240ef1d8ea",
+  "size": 404
+ },
+ "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L12.json": {
+  "sha256": "ce4dd959e4d28a0e83d85e3abe75fd1fff8c61ec00d29b068975acd128f60888",
+  "size": 489
+ },
+ "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L20.json": {
+  "sha256": "d8ede57e07825b6f94d9f57c490c47943c839a723f23bd63e59d77e8a2fa2217",
+  "size": 489
+ },
+ "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L42.json": {
+  "sha256": "6974f9620ff42cff94cd8450622b3cee9797fe2e527fc20acbdc214738cc6984",
+  "size": 488
+ },
+ "NO_CERTIFIED_RESONANCE_IN_EXPANDED_DOMAIN_V1.json": {
+  "sha256": "cabe3f45315773c7646e65644b9f6b680a3c59dc4450cdbd32cde3056a752700",
+  "size": 3004
+ },
+ "NO_CERTIFIED_RESONANCE_L12_V1.json": {
+  "sha256": "126ab36e7c3acef6e5d16596b5c5f176908296d2ffdac65af31b0ab3bcb39b7d",
+  "size": 2227
+ },
+ "NO_CERTIFIED_RESONANCE_L20_V1.json": {
+  "sha256": "7feffe03cabdc3d9fb71fff6f5c3bae0d3852478651146d25b38cd17895e5acf",
+  "size": 2227
+ },
+ "NO_CERTIFIED_RESONANCE_L42_V1.json": {
+  "sha256": "cea75fd00b6760f78ef592511b204388db90192b632df1d36cece2b19b35b81e",
+  "size": 2282
+ },
+ "artifacts/SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_GW_V1.json": {
+  "sha256": "c66c52b6fa4a0418f9842cbe556cebf0dde7d7f5de997cd9475fcd1b85927d1d",
+  "size": 2914
+ }
+}

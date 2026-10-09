@@ -1,0 +1,8 @@
+{
+ "bc": "robin",
+ "prod_g_max": 0.07291470329781613,
+ "fixed_g_max": 0.0854787986924035,
+ "max_rel_dev": 0.1723,
+ "median_rel_dev": 0.1532,
+ "wall_s": 415.8
+}

@@ -1,0 +1,21 @@
+{
+ "audit": "ECS_SSZ_D2_CANDIDATES_V1_FIXED_ML",
+ "tile": {
+  "re": [
+   0.05,
+   1.5
+  ],
+  "im": [
+   -2.0,
+   -0.8
+  ]
+ },
+ "branch": {
+  "a1": -0.5,
+  "eps": -0.3,
+  "L": 6
+ },
+ "fix": "ML = P1 mass matrix of K_phys (was: never filled)",
+ "candidates": [],
+ "n": 0
+}

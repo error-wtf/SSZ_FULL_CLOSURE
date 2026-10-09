@@ -1,0 +1,25 @@
+{
+ "audit": "M4_RERUN_GW_STENCIL_FIX_N400",
+ "note": "certification pass n=400; production was n=600/1000",
+ "variants": {
+  "n400_dirichlet": {
+   "prod_g_max": 0.07291,
+   "fixed_g_max": 0.085452,
+   "prod_g_median": 0.06995607,
+   "fixed_g_median": 0.08065519,
+   "max_rel_dev": 0.172,
+   "median_rel_dev": 0.1529,
+   "wall_s": 455.0
+  },
+  "n400_robin": {
+   "prod_g_max": 0.072915,
+   "fixed_g_max": 0.085479,
+   "prod_g_median": 0.06996014,
+   "fixed_g_median": 0.08067732,
+   "max_rel_dev": 0.1723,
+   "median_rel_dev": 0.1532,
+   "wall_s": 434.2
+  }
+ },
+ "wall_s": 889.2
+}
