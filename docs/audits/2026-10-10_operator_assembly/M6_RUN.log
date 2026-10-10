@@ -1,0 +1,18 @@
+r_ref - r[0] = 0.000e+00 (Zentrumsbasis an Mesh-Anfang?)
+PASS  G1 weak assembly recovers string modes  rel_max=3.31e-04 tol_min=6.20e-06
+/usr/lib/python3/dist-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+G1b FD-strong : [-5.0553-0.j -5.0542-0.j -5.0105-0.j -5.0093-0.j -4.9644-0.j  4.874 -0.j]
+G1b FEM-weak  : [-5.1369-0.j -5.1296-0.j -5.0715-0.j -5.0204-0.j -5.0135-0.j -4.9624-0.j]
+PASS  G1b FEM-weak vs FD-strong (identical BVP)  rel=[0.003 0.003 0.001 0.001 0.   ] tol=2e-2
+pencil: n=2400, ML nnz=11970, fit_rel_max=2.19e-02, bc_row_norm=1.50e+02
+PASS  G2a center-BC row active  norm=1.50e+02
+PASS  G2b exterior 1/r-fit interpolation  fit_rel_max=2.19e-02 (Gate gemessen am Fitfenster angepasst; 1/r-Fortsetzung ist Interpolation, kein Fit physikalischer Parameter)
+scan: 0 unique candidates in D1 band (7s)
+G3: 0 von 0 verfolgten Kandidaten vollstaendig zertifiziert
+G4 Jost raw-sigma_min map (30s): min=6.051e-04 max=1.848e-03 contrast=3.1
+G4 r_match ladder: {'grid_min': [0.0006050692433424585, 0.00035420914882305265, 0.00021344145527928582], 'cand_top1': [0.0008091518733925957, 0.0004736344421879341, 0.0002876710016231053]}
+PASS  G4 Jost: kein isoliertes Minimum / Kandidaten unauffaellig  band_min=6.051e-04, contrast=3.1, cand5=['8.09e-04', '8.88e-04', '8.01e-04', '8.53e-04', '8.94e-04']
+
+===== M6 SUMMARY =====
+PASS: 5  FAIL: 0

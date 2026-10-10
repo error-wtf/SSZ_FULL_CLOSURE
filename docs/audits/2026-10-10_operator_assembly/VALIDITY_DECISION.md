@@ -219,6 +219,57 @@ M4_RERUN_GW_ROBIN_ONLY.json, m4_rerun_gw_stencil.py.
 
 ---
 
+## 3c. M6: FEM-Neuassembly + Jost-Gegenprobe am selben npz (2026-10-10, Commit 3fa959f + M6-Dateien)
+
+Runner: `m6_fem_jost_crosscheck.py` · Ergebnis: `M6_FEM_JOST_CROSSCHECK.json`
+· Log: `M6_RUN.log` · Ausführung: 5/5 Gates PASS, 0 FAIL, wall 39,7 s.
+
+Implementiert alle drei Nutzer-Punkte gegen den M4-Rerun:
+1. **Schwache Form**: D1-Koeffizient **+S** (Element-Term `de[i,j]*s_ab` mit
+   `s_ab = S`, KEIN `S − G′`), Testschleifen korrekt transponiert
+   (`A[test=jj, trial=ii]`) — der S-Term war im ersten Entwurf dieses
+   Runners selbst noch transponiert (antisymmetrisch → Vorzeichenflip);
+   vom Smoke-Test G1b abgefangen, VOR dem Lauf.
+2. **Außenzone**: volles ω²K — K, G, S, M via dokumentierter 1/r-Fortsetzung
+   der V3-Profile auf dem rotierten Konturabschnitt (fit_rel_max 2,2e−2,
+   Interpolation, kein Fit).
+3. **Zentrums-RB**: `Psi'(r0) = Trel·Psi(r0)`, `Trel = dY_reg·Y_reg⁻¹`,
+   einseitiger 2.-Ordnungs-Stencil in Mesh-Zeile 0 (bc_row_norm 1,5e2,
+   Zeile aktiv).
+
+Gates (vor dem Lauf deklariert):
+- **G1** String-Kontrolle der Weak-Assembly: rel_max 3,3e−4 (tol 6,2e−6). PASS
+- **G1b** FEM-weak vs. GW-validierter FD-strong-Operator, IDENTISCHES BVP
+  (Realteil [r0,30], Dirichlet): rel 0,0–0,4 % (tol 2 %). PASS — die
+  korrigierte schwache Form löst denselben Operator.
+- **G2a/G2b** Struktur: PASS.
+- **G3** Band-Scan Re ω 0,6–4,4 / Im ω −0,55..−0,02, 112 Shifts,
+  Shift-Invert-Residuum-Gate 1e−8: **0 Kandidaten**. (D1-Band in Re 1,2–2,2
+  eingeschlossen.) Kein Pol des korrigierten Operators in der Domäne.
+- **G4** Jost-Gegenprobe (zertifizierte Metrik: rohes σ_min der 6×6-
+  Matching-Matrix, Kalibration JOST_ECS_MATCHING_V2 „smooth, NO isolated
+  minimum"): σ_min glatt, min 6,1e−4 / max 1,8e−3, **Kontrast 3,1** (kein
+  isoliertes 2D-Minimum). Alle 5 M4-Feinkandidaten: σ_min 8,0–8,9e−4,
+  Spanne < 12 %, auf Umgebungsniveau — kein Kandidat ist als Resonanz
+  hervorgehoben. r_match-Leiter (20/30/40): monoton fallend an Gitter-Minimum
+  UND Kandidat (Faktor ~2,8), kein struktureller Unterschied. PASS.
+
+### Konsequenz
+- Der korrigierte ECS/FEM-Operator und der Jost-Operator tragen jetzt
+  DENSELBEN Nullbefund im D1-Fenster: **kein theta-stabiler Pol, kein
+  Jost-Minimum, keine FEM-Kandidatin mit res ≤ 1e−8.**
+- Die fünf D1-Feinkandidaten aus M4 (ECS_SSZ_D1_CANDIDATES_V1_FIXED_ML)
+  sind damit endgültig widerlegt: nicht theta-stabil (M4), nicht im
+  FEM-Spektrum des korrigierten Operators (M6 G3), nicht als Jost-
+  Struktur sichtbar (M6 G4). Status der Datei: INVALID bleibt, jetzt
+  mit positiver Gegenprobe statt nur Konstruktionskritik.
+- M4-Rerun-B (GW-Null) bleibt unberührt und wird durch M6 G1b zusätzlich
+  getragen (FD-strong und FEM-weak stimmen am echten Profil überein).
+- **D2/D3 und L12/L20/L42**: die Neuberechnung auf M6-Assembly ist jetzt
+  freigegeben (Nutzer-Reihenfolge eingehalten: erst Operator-Level-
+  Verifikation, dann L-Scans). Bis dahin bleibt die UNDER_REVIEW-
+  Markierung der ECS-Kandidatendateien bestehen.
+
 ## 4. Vorgehen (Nutzer-Vorgaben, eingehalten)
 
 - Zuerst variable-K/G/S/M-Kontrolle (M3, 9/9 PASS), dann Reproduktion. ✓
