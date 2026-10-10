@@ -1,0 +1,36 @@
+
+[Q1] Frobenius-Normen auf r<=30 (Innenbereich, 3998 Knoten):
+     ||S||        = 7.250550e+01
+     ||G'||       = 4.182762e+05
+     ||S - G'||   = 4.182762e+05
+     Phantom/true = ||G'||/||S|| = 5.769e+03
+PASS  Q1a Phantom-Term -G' existiert in Assembly (Code-Fakt: s_ab = Sm - Gpm)  run_ssz_domain_expansion_v1.py:108, m4_rerun_ecs_fixed.py:95
+PASS  Q1b korrekte schwache Form hat Koeffizient +S (Herleitung: G Psi''+G' Psi' = (G Psi')')  Jost V2.2 A1 = Gp - S bestaetigt starke Form
+PASS  Q1c Phantom-Term dominiert S um Groessenordnung  ||G'||/||S|| = 5.769e+03 -> 135 D1-Kandidaten auf falschem Operator
+PASS  Q1d M4-Fix nutzt korrekte 2h-Ableitung fuer G' (Fehler ist die schwache Form selbst)  Gitter nichtuniform; mediane rel. Abweichung np.gradient vs 2h-Form = 2.89e-14 (99.98% der Eintraege exakt; Randknoten via Spiegelung) -> Ableitung korrekt
+
+[Q2] m4_rerun_ecs_fixed.py Zeilen 84-87 (Aussengebiet e >= n_in):
+     Km = np.zeros((3,3)); Gm = I3; Sm = 0; Mm = 0
+     => ML-Assembly-Beitrag k_ab = Km = 0  ->  kein w^2-Term im Aussen.
+     Einziger Aussen-Operator: int Psi' v' mit G=I (Neumann-ähnlich,
+     keine auslaufende Welle, keine Frequenzabhängigkeit).
+PASS  Q2a ECS-Aussenbereich enthaelt keinen w^2-Term (Code-Fakt)  ML bleibt im Aussenteil leer; Wellenpropagation nicht repraesentiert
+PASS  Q2b Defekt identisch in Produktion v1 und M4-Fix (uebernommen, nicht neu)  Blast-Radius: beide ECS-SSZ-Pfade, NICHT ECS_V2_2-Zertifikat
+
+[Q3] V4_CENTER_REGULAR_BASIS_V2 keys: ['r_ref', 'Y_regular', 'dY_regular', 'exponents']
+     r_ref = [0.05], exponents = [0.53904131 2.00028061 1.0016822 ]
+     Referenzen auf 'cb' im M4-Fix: 1 (nur das np.load);
+     weitere Verwendungen: KEINE
+PASS  Q3a Zentrumsbasis wird geladen aber nie in die Assembly/BC uebernommen  Zentrumsknoten behaelt natuerliche (Neumann-artige) RB, nicht die Frobenius-Basis
+PASS  Q3b Jost V2.2 startet dagegen MIT der regularen Basis (Y0, dY0) ->  ECS und Jost loesen NICHT dasselbe Randwertproblem
+
+[KONSEQUENZ] Die M4-Aussage 'ECS-Null erstmals auf validem Operator'
+wird ZURUECKGEZOGEN: die 135/5/0-Kandidaten von D1 entstanden auf einer
+Assembly mit (a) Phantom-Term -G' (dominant), (b) ohne w^2-Aussengebiet,
+(c) ohne Zentrums-RB. Der GW-Pfad (starker Operator, FD, dG - S) ist von
+Frage 1 NICHT betroffen: dort ist die starke Form korrekt formuliert;
+seine 0-Peaks-Nulls bleiben von diesen drei Punkten unberuehrt
+(Normierungsfrage separat offen).
+
+===== M5 CONTROL SUMMARY =====
+PASS: 8   FAIL: 0

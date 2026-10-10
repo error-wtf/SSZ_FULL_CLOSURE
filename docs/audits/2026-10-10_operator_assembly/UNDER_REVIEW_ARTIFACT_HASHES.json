@@ -3,6 +3,11 @@
   "sha256": "5d8dd240cfb211b68fd8cd00ec0d6bea910fccb7a447fdd31e0576a4e7e72e69",
   "size": 30988
  },
+ "ECS_SSZ_D1_CANDIDATES_V1_FIXED_ML.json": {
+  "note": "BUG-3/4/5",
+  "sha256": "f05bc61a356572787a6c251e0cd14c270177efb5695da36c469768ce1413f02c",
+  "status": "UNDER_REVIEW"
+ },
  "ECS_SSZ_D1_CANDIDATES_V4.json": {
   "sha256": "fa2e14832c9333ab4a2876caf22243ee899aa3574ce6750b4fda7e04007ffc92",
   "size": 201
@@ -51,21 +56,15 @@
   "sha256": "b386a0e49e1ae03109651c6e7ade7af4249a7f798a8f2f1a11abff947756c07f",
   "size": 205
  },
- "SSZ_DOMAIN_EXPANSION_V1_MATCHING.json": {
-  "sha256": "f95ad9f6a0f93d0f5f5706490367a2af0ffb42f675d64af12bda18240ef1d8ea",
-  "size": 404
+ "M4_THETA_STABILITY_D1.json": {
+  "note": "BUG-3/4/5",
+  "sha256": "be336405a5b398f3a38dee97755a9ba9a0103bc302e584630ce778c4effb5058",
+  "status": "UNDER_REVIEW"
  },
- "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L12.json": {
-  "sha256": "ce4dd959e4d28a0e83d85e3abe75fd1fff8c61ec00d29b068975acd128f60888",
-  "size": 489
- },
- "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L20.json": {
-  "sha256": "d8ede57e07825b6f94d9f57c490c47943c839a723f23bd63e59d77e8a2fa2217",
-  "size": 489
- },
- "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L42.json": {
-  "sha256": "6974f9620ff42cff94cd8450622b3cee9797fe2e527fc20acbdc214738cc6984",
-  "size": 488
+ "M5_WEAK_FORM_CONTROL.log": {
+  "note": "M5 control artifact",
+  "sha256": "4b9a140ad8eb0adcf256b467ad6416a765d87e4bd73a5fd3ede4143dc6271a55",
+  "status": "UNDER_REVIEW"
  },
  "NO_CERTIFIED_RESONANCE_IN_EXPANDED_DOMAIN_V1.json": {
   "sha256": "cabe3f45315773c7646e65644b9f6b680a3c59dc4450cdbd32cde3056a752700",
@@ -83,8 +82,39 @@
   "sha256": "cea75fd00b6760f78ef592511b204388db90192b632df1d36cece2b19b35b81e",
   "size": 2282
  },
+ "SSZ_DOMAIN_EXPANSION_V1_MATCHING.json": {
+  "sha256": "f95ad9f6a0f93d0f5f5706490367a2af0ffb42f675d64af12bda18240ef1d8ea",
+  "size": 404
+ },
+ "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L12.json": {
+  "sha256": "ce4dd959e4d28a0e83d85e3abe75fd1fff8c61ec00d29b068975acd128f60888",
+  "size": 489
+ },
+ "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L20.json": {
+  "sha256": "d8ede57e07825b6f94d9f57c490c47943c839a723f23bd63e59d77e8a2fa2217",
+  "size": 489
+ },
+ "SSZ_DOMAIN_EXPANSION_V2_MATCHING_L42.json": {
+  "sha256": "6974f9620ff42cff94cd8450622b3cee9797fe2e527fc20acbdc214738cc6984",
+  "size": 488
+ },
  "artifacts/SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_GW_V1.json": {
   "sha256": "c66c52b6fa4a0418f9842cbe556cebf0dde7d7f5de997cd9475fcd1b85927d1d",
   "size": 2914
+ },
+ "m4_rerun_ecs_fixed.py": {
+  "note": "BUG-3/4/5",
+  "sha256": "468aee7e67dd56bb000fe76714955a9ceb0cd6f3fa8b974bf2133255a5069afe",
+  "status": "UNDER_REVIEW"
+ },
+ "m4_theta_stability.py": {
+  "note": "BUG-3/4/5 (same build_fem)",
+  "sha256": "95b1c7d4d7861511491c151023c9e23259396b0b10fd615520cb0aabe5b3d113",
+  "status": "UNDER_REVIEW"
+ },
+ "m5_weak_form_control.py": {
+  "note": "M5 control artifact",
+  "sha256": "1a6f6f34277b9e5dd4e72f2106ecf79fae9a867803f65c555b0a9cf60ebe1ba5",
+  "status": "UNDER_REVIEW"
  }
 }
