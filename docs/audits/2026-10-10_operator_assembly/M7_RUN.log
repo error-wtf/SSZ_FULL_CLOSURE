@@ -1,0 +1,91 @@
+
+===== PART A: RK4 direction control (y'' + k^2 y = 0, k=1.7) =====
+A1 outward 2->8 : rel_err=3.041e-10
+A2 inward  8->1 : rel_err=3.021e-09
+A3 M6-bug walk: d=-1.0, h=+0.00467, x: 8.0 -> 15.000, samples in [1,8): 0
+PASS  A1 outward control  rel=3.041e-10 tol=1e-8
+PASS  A2 inward control  rel=3.021e-09 tol=1e-8
+PASS  A3 bug demo (walks outward, never in [1,8))  walk 8.0->15.00
+
+===== PART B: outgoing eigenpair preservation (SSZ profile) =====
+cond(C2)@r=60 = 4.320e+04
+  k=0.061005+0.008107j  pair_res=4.73e-13  flipped_res=4.39e-01
+  k=-0.061005+0.028156j  pair_res=5.04e-13  flipped_res=4.39e-01
+  k=3.280361-0.426250j  pair_res=4.66e-16  flipped_res=1.95e-02
+  pencil-k drift 60->45->30 (diagnostic): 0.254
+PASS  B all 3 outgoing eigenpairs preserved (res<=1e-10, no flips)  res_max=5.04e-13 flips=0
+
+===== PART C: M6-G4 rerun (fixed integrator, honest basis) =====
+C sigma_min map (22s): min=4.302e-03 max=1.925e-02 contrast=4.5 argmin=(1.7, -0.05)
+C r_match ladder: {'grid_min': [0.004301928046555681, 0.0006014611784858798, 7.963306254933713e-05], 'cand_top1': [0.01699891971583801, 0.011328334525828062, 0.010295149955654356]}
+PASS  C M6-G4 criteria on fixed apparatus (frozen M6 gate)  contrast=4.5 cand5=['1.70e-02', '1.75e-02', '1.73e-02', '1.73e-02', '1.75e-02']
+
+===== PART D: reference pole recovery (PT l=2.5, poles 2.5i & 1.5i)
+  (pre-verified in probe session: N(2.5i)=3.5e-10, N(1.5i)=2e-9)
+D pole: w=0.000000+2.500000j N=3.48e-10 raw=3.48e-10 best_ref_err=0.00e+00
+D pole: w=0.000000+1.500000j N=2.06e-09 raw=2.06e-09 best_ref_err=2.22e-16
+D pole: w=0.000000+0.499976j N=1.02e-04 raw=1.28e-04 best_ref_err=2.44e-05
+PASS  D reference poles recovered (2.5i, 1.5i, 0.5i; each <5e-3)  errs=['0.0e+00', '2.2e-16', '2.4e-05']
+
+===== PART E: FEM vs corrected Jost (box, identical BCs) =====
+/usr/lib/python3/dist-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+E-FEM(FD-strong) physische Box-Moden: n=3186, erste 12: [0.0953 0.0953 0.1504 0.1505 0.2038 0.2039 0.2566 0.2566 0.3092 0.3092
+ 0.3615 0.3615]
+E-Jost box modes w = ['0.3600', '0.4650', '0.5700', '0.5681', '0.6731', '0.7781', '0.8831', '1.0369', '1.1419', '1.2469', '1.3500', '1.4531', '1.5581', '1.6631', '1.7681', '1.9219', '2.0269', '2.1300', '2.2331', '2.3381', '2.4919', '2.5969', '2.7019', '2.8069', '2.8556', '3.0131', '3.0628', '3.2175', '3.3225', '3.4284', '3.5850', '3.6881', '3.8419', '3.9469', '4.0519', '4.1569', '4.2563', '4.3650', '4.4681', '4.5731', '4.7269', '4.8319', '4.9369', '5.0381', '5.1431', '5.2388', '5.4038', '5.5050', '5.6119', '5.7113', '5.8144', '5.9231']
+  w_J=0.3600  w_F=0.36150275337142673  rel=4.16e-03  D=2.4e-02
+  w_J=0.4650  w_F=0.4659442703998339  rel=2.03e-03  D=1.0e-02
+  w_J=0.5700  w_F=0.5701916596460621  rel=3.36e-04  D=8.7e-04
+  w_J=0.5681  w_F=0.5701916596460621  rel=3.62e-03  D=2.1e-02
+  w_J=0.6731  w_F=0.6743324620032474  rel=1.79e-03  D=8.6e-03
+  w_J=0.7781  w_F=0.778406956597724  rel=3.62e-04  D=6.5e-04
+  w_J=0.8831  w_F=0.8824763980116709  rel=7.35e-04  D=8.7e-03
+  w_J=1.0369  w_F=1.0384197405974105  rel=1.49e-03  D=6.8e-03
+  w_J=1.1419  w_F=1.1423800102962478  rel=4.42e-04  D=9.0e-05
+  w_J=1.2469  w_F=1.2464262056593756  rel=3.60e-04  D=5.8e-03
+  w_J=1.3500  w_F=1.3502530501935255  rel=1.87e-04  D=1.5e-04
+  w_J=1.4531  w_F=1.454172733334786  rel=7.21e-04  D=2.2e-03
+  w_J=1.5581  w_F=1.558084278203894  rel=2.61e-05  D=2.6e-03
+  w_J=1.6631  w_F=1.662122850484679  rel=6.03e-04  D=6.7e-03
+  w_J=1.7681  w_F=1.7660142928565317  rel=1.20e-03  D=1.0e-02
+  w_J=1.9219  w_F=1.9218281622994655  rel=2.44e-05  D=2.4e-03
+  w_J=2.0269  w_F=2.025687452475798  rel=5.86e-04  D=6.0e-03
+  w_J=2.1300  w_F=2.1295342344973798  rel=2.19e-04  D=3.1e-03
+  w_J=2.2331  w_F=2.2333348293620117  rel=9.40e-05  D=4.4e-04
+  w_J=2.3381  w_F=2.337188044794676  rel=4.01e-04  D=3.7e-03
+  w_J=2.4919  w_F=2.4928910448929  rel=4.08e-04  D=2.4e-03
+  w_J=2.5969  w_F=2.5967069386701964  rel=6.47e-05  D=5.1e-04
+  w_J=2.7019  w_F=2.7004820943539887  rel=5.16e-04  D=3.2e-03
+  w_J=2.8069  w_F=2.804235469747169  rel=9.41e-04  D=5.7e-03
+  w_J=2.8556  w_F=2.8560700008892588  rel=1.56e-04  D=1.8e-03
+  w_J=3.0131  w_F=3.011746270083684  rel=4.58e-04  D=4.9e-04
+  w_J=3.0628  w_F=3.0635132037592254  rel=2.29e-04  D=4.7e-03
+  w_J=3.2175  w_F=3.2190461777142745  rel=4.80e-04  D=4.6e-03
+  w_J=3.3225  w_F=3.3227049867641196  rel=6.17e-05  D=2.5e-03
+  w_J=3.4284  w_F=3.4263751702324767  rel=6.02e-04  D=1.2e-03
+  w_J=3.5850  w_F=3.581815642177924  rel=8.89e-04  D=3.1e-03
+  w_J=3.6881  w_F=3.685420679230402  rel=7.34e-04  D=7.9e-04
+  w_J=3.8419  w_F=3.84078933326072  rel=2.83e-04  D=2.3e-03
+  w_J=3.9469  w_F=3.9443537578074643  rel=6.39e-04  D=4.7e-04
+  w_J=4.0519  w_F=4.047902867493002  rel=9.81e-04  D=1.3e-03
+  w_J=4.1569  w_F=4.151430326294979  rel=1.31e-03  D=3.0e-03
+  w_J=4.2563  w_F=4.2549335555765495  rel=3.09e-04  D=4.2e-03
+  w_J=4.3650  w_F=4.358410712604078  rel=1.51e-03  D=3.6e-03
+  w_J=4.4681  w_F=4.461860630833875  rel=1.40e-03  D=2.3e-03
+  w_J=4.5731  w_F=4.565282854012147  rel=1.72e-03  D=3.2e-03
+  w_J=4.7269  w_F=4.72036480549312  rel=1.38e-03  D=4.1e-04
+  w_J=4.8319  w_F=4.823718882570858  rel=1.69e-03  D=2.2e-03
+  w_J=4.9369  w_F=4.927046742641787  rel=1.99e-03  D=2.0e-03
+  w_J=5.0381  w_F=5.030349027575626  rel=1.55e-03  D=1.4e-04
+  w_J=5.1431  w_F=5.133624086158036  rel=1.85e-03  D=1.0e-03
+  w_J=5.2388  w_F=5.236770648593103  rel=3.78e-04  D=4.6e-05
+  w_J=5.4038  w_F=5.391740237479958  rel=2.23e-03  D=2.1e-03
+  w_J=5.5050  w_F=5.4949345054710275  rel=1.83e-03  D=5.4e-04
+  w_J=5.6119  w_F=5.59810553995244  rel=2.46e-03  D=2.8e-03
+  w_J=5.7113  w_F=5.701251860644354  rel=1.75e-03  D=2.4e-03
+  w_J=5.8144  w_F=5.8043723086487935  rel=1.72e-03  D=3.4e-03
+  w_J=5.9231  w_F=5.9074672176321705  rel=2.65e-03  D=2.4e-03
+PASS  E FD-strong vs corrected Jost: >=5 modes rel<=5e-3, none diverging  6/6 modes within tol (tol=5e-3, declared before run: below FD O(h^2)~4e-3 error scale AND below the half-spacing of the dense box ladder >=1e-2)
+
+===== M7 SUMMARY =====
+PASS: 7  FAIL: 0

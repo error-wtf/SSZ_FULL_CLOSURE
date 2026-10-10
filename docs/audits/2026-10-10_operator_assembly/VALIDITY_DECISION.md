@@ -278,3 +278,64 @@ Gates (vor dem Lauf deklariert):
 - Keine Fits. ✓
 - Alte Befunde erhalten (Originale unverändert), Fehler versioniert via SHA-Manifest + dieser Report. ✓
 - Produktionsdateien nicht geändert; Reruns als exakte Kopien in Scratch. ✓
+
+## 5. M7: Jost/FEM-Konsistenznachweis auf korrigiertem Integrator (10.10., Nutzer-Vorgabe nach M6-Code-Review)
+
+Auslöser (Nutzer-Code-Review von M6, alles bestätigt):
+1. `m6_fem_jost_crosscheck.py::_rk4` hatte `h = d*(x1-x0)/n_steps` mit
+   `d = ±1` — bei x1<x0 ist d=−1 UND (x1−x0)<0, also h>0: die INWARD-Leg
+   integrierte 45→70 nach AUSSEN (M7-A3 bewies: 0 von 1500 Samples im
+   Zielgebiet). M6-G4 mass sigma_min an einer fiktiven Stelle.
+2. `outgoing_basis()` ersetzte bei Re(k)<0 nur den Eigenwert (k→−k) ohne
+   den Eigenvektor — M7-B mass die Residuen: geflippte Paare haben
+   Residuum 4.4e−1 statt 5e−13. Der M6-Flip war kein gültiges Eigenpaar.
+3. M6-G3 zertifizierte 0 Kandidaten bei 0 gescannten (Band-Scan ohne
+   Fund); M6-G2 nutzte Toleranz 3e−2 statt dokumentierter 1e−6
+   (gemessen 2.19e−2).
+
+M7 (m7_jost_fem_consistency.py, SHA256 338b0c7f…, RUN12 = offizieller
+Lauf, M7_RUN.log + M7_JOST_FEM_CONSISTENCY.json, 7/7 PASS):
+
+- A  RK4-Richtungskontrolle (y''+k²y=0): outward 3.0e−10, inward 3.0e−9
+  (tol 1e−8) + Bug-Reproduktion (Walk 8→15, nie im Zielgebiet). PASS.
+- B  Eigenpaar-Erhaltung am echten SSZ-Profil: alle 3 gewählten
+  outgoing-Kanäle res ≤ 5e−13 (tol 1e−10), 0 Flips nötig; Flip-Residuen
+  4.4e−1/4.4e−1/2.0e−2 dokumentieren den M6-Defekt. PASS.
+- C  M6-G4-Kriterien auf korrigiertem Apparat (frozen M6-Gates):
+  contrast=4.5 (vorher 3.1), alle 5 D1-Kandidaten unauffällig
+  (1.70–1.75e−2 vs Umgebung). Das M6-G4-URTEIL (keine Jost-Struktur,
+  D1-Kandidaten widerlegt) hält dem korrigierten Apparat stand. PASS.
+- D  Referenzpol-Recovery (attraktives PT V=−l(l+1)sech², l=2.5; exakte
+  gebundene Pole 2.5i/1.5i/0.5i): wiedergefunden mit Fehler 0, 2.2e−16,
+  2.4e−5 (Gate 5e−3). Die Jost-Nullstellensuche ist damit an exakter
+  Referenz kalibriert — inkl. der beidseitig INWARD integrierten Beine
+  (exakt die reparierte Operation). PASS.
+- E  FD-strong (n=1351) vs korrigierter Jost, Box [r0,30], identische
+  Zentrums-RB (Trel) + Dirichlet: 6/6 tiefste Moden innerhalb 5e−3
+  (max 4.2e−3), 52 Jost-Moden gegen 3186 FD-Moden durchgehend ≤ 2.7e−3
+  für w>3. Keine Diskrepanz. PASS.
+  Entwurfskorrekturen (alle vor dem jeweiligen Lauf deklariert):
+  (i) FEM-weak-Box-Pencil junk-dominiert (983 Spurmoden < w=0.1; bestes
+  Eigenpaar-Residuum 4.8e−2) → FD-strong-Operator aus M6-G1b verwendet;
+  (ii) Jost-Modensuche mit Becken-Verfeinerung (ein echtes Becken lag
+  zwischen den 0.015-Gridpunkten; Konvergenzleiter FD n=451→901→1351
+  belegt O(h²)-Verschiebungen bis 7e−3 bei w≈3.5).
+
+Entscheidung:
+- Die M6-G4-Absage der fünf D1-Kandidaten ist JETZT auf belastbarem
+  Apparat reproduziert (M7-C) und die Jost-Seite ist an Referenzpolen
+  kalibriert (M7-D). Status der D1-Datei: INVALID bleibt endgültig.
+- Die FEM-Seite von M6 ist als Zertifizierungsinstrument im Box-Fall
+  NICHT belastbar (junk-dominiertes Pencil, M7-E-Diagnose) — die
+  G1b-Grenzkontrolle bleibt gültig, aber M6-G3-artige Kandidaten-
+  Zertifizierungen auf diesem Pencil sind ohne Residuen-Gate pro Paar
+  unzulässig. Für D2/D3 + L12/L20/L42 gilt: Freigabe NUR mit dem
+  M7-Apparat (FD-strong + korrigierter Jost + M7-E-Methodik).
+- Manifest/CI: MANIFEST.json + SHA256SUMS müssen mit den Audit-Dateien
+  regeneriert und committet werden (P5-reproducibility-Workflow war
+  deshalb rot, lokales --check war exit 1).
+
+Artefakte (SHA256):
+- m7_jost_fem_consistency.py  338b0c7fcf660c232439f55e1b340dc689846004290d6f736ecdb8bd905eb67a
+- M7_JOST_FEM_CONSISTENCY.json 8dc12bd418f9520b55382a02991d747735c97040cc04a2ae7ee09dd096991a22
+- M7_RUN.log  7b8ba89d14c5229cbb9374dfebe4e24fdb1ff77ada8e222140eff2541bc45490

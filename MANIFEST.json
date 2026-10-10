@@ -4853,6 +4853,111 @@
       "sha256": "ccdee01adc5406190f53d124e3d1a33443ad41b752e8280de0594d68b6ab1564"
     },
     {
+      "path": "docs/audits/2026-10-10_operator_assembly/ECS_SSZ_D1_CANDIDATES_V1_FIXED_ML.json",
+      "size_bytes": 23432,
+      "sha256": "f05bc61a356572787a6c251e0cd14c270177efb5695da36c469768ce1413f02c"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/ECS_SSZ_D2_CANDIDATES_V1_FIXED_ML.json",
+      "size_bytes": 271,
+      "sha256": "429750af2a9fc8a81fe18e1025d64bd0c70ce17cd5c2f695634ce3495b90bc53"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/ECS_SSZ_D3_CANDIDATES_V1_FIXED_ML.json",
+      "size_bytes": 270,
+      "sha256": "f45018080f8fcffde8dcc304316a80766adbbaf9f96da6ebdffd7ea18462e674"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/M4_RERUN_ECS_SUMMARY.json",
+      "size_bytes": 111,
+      "sha256": "159304fc19c09b23bf5908e7653cc65d8f6880da41c02fe92cdea531dd02cd93"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/M4_RERUN_GW_ROBIN_ONLY.json",
+      "size_bytes": 160,
+      "sha256": "15415007958332770499603090d037424db8f1bbad5d831a1778aa50b6dd9e88"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/M4_RERUN_GW_SUMMARY.json",
+      "size_bytes": 581,
+      "sha256": "06e01133cb3b8df4f13285069bb28f8715e6fddc458d5e621127f5135c907e95"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/M4_THETA_STABILITY_D1.json",
+      "size_bytes": 1397,
+      "sha256": "be336405a5b398f3a38dee97755a9ba9a0103bc302e584630ce778c4effb5058"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/M5_WEAK_FORM_CONTROL.log",
+      "size_bytes": 2491,
+      "sha256": "4b9a140ad8eb0adcf256b467ad6416a765d87e4bd73a5fd3ede4143dc6271a55"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/M6_FEM_JOST_CROSSCHECK.json",
+      "size_bytes": 2331,
+      "sha256": "70428469b535ed5694a84ade42a1844a776a79b49c858aa73993c66111930fbd"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/M6_RUN.log",
+      "size_bytes": 1495,
+      "sha256": "39fb786d412513212c08576e8375ead4ada2b1793c1a8d3b168c377607ba2618"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/M7_JOST_FEM_CONSISTENCY.json",
+      "size_bytes": 9806,
+      "sha256": "8dc12bd418f9520b55382a02991d747735c97040cc04a2ae7ee09dd096991a22"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/M7_RUN.log",
+      "size_bytes": 6162,
+      "sha256": "7b8ba89d14c5229cbb9374dfebe4e24fdb1ff77ada8e222140eff2541bc45490"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/UNDER_REVIEW_ARTIFACT_HASHES.json",
+      "size_bytes": 4128,
+      "sha256": "1c4595e1953ca8aa442a67cf0ff1f1ac7b80364d2a4f28bfb9c62d7f8fab0607"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/VALIDITY_DECISION.md",
+      "size_bytes": 20177,
+      "sha256": "bfe4654a9a0816a56fd84235c3d6dcc96f7146d783f77fd7f2e984e7eb0d229d"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/m3_variable_kgsm_control.py",
+      "size_bytes": 8621,
+      "sha256": "8373786a9f96b657716baf0fdeedea4cc23ed4c31550f65a64f81b7ceb585546"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/m4_rerun_ecs_fixed.py",
+      "size_bytes": 9051,
+      "sha256": "468aee7e67dd56bb000fe76714955a9ceb0cd6f3fa8b974bf2133255a5069afe"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/m4_rerun_gw_stencil.py",
+      "size_bytes": 5718,
+      "sha256": "2fd45ab727a626bbf04dd0d412101d9fd1f6ff37cba3fe17b0ce118a55619561"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/m4_theta_stability.py",
+      "size_bytes": 5640,
+      "sha256": "95b1c7d4d7861511491c151023c9e23259396b0b10fd615520cb0aabe5b3d113"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/m5_weak_form_control.py",
+      "size_bytes": 6185,
+      "sha256": "1a6f6f34277b9e5dd4e72f2106ecf79fae9a867803f65c555b0a9cf60ebe1ba5"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/m6_fem_jost_crosscheck.py",
+      "size_bytes": 27891,
+      "sha256": "1609904a6174b798ad76cc753656ac8aaf52038d11e26b09b95c8718adeeee7b"
+    },
+    {
+      "path": "docs/audits/2026-10-10_operator_assembly/m7_jost_fem_consistency.py",
+      "size_bytes": 29033,
+      "sha256": "338b0c7fcf660c232439f55e1b340dc689846004290d6f736ecdb8bd905eb67a"
+    },
+    {
       "path": "docs/canonical/ACTION_MEMBER_REGISTRY.yaml",
       "size_bytes": 3652,
       "sha256": "ffd3ff799f1f3150dd884f6672c68f1d45986ba0d3e3f562370c9ad170d5db8a"
