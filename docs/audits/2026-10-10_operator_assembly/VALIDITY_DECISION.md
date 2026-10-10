@@ -335,6 +335,11 @@ Entscheidung:
   regeneriert und committet werden (P5-reproducibility-Workflow war
   deshalb rot, lokales --check war exit 1).
 
+CI-Verifikation (Commit 8ee40752, live per GitHub-API abgerufen):
+- Spectroscopy source-of-truth audit = SUCCESS
+- SSZ P5 reproducibility = SUCCESS (Fix bestätigt; vorheriger Stand
+  9596047 war dort ROT: "Manifest differs from current files")
+
 Artefakte (SHA256):
 - m7_jost_fem_consistency.py  338b0c7fcf660c232439f55e1b340dc689846004290d6f736ecdb8bd905eb67a
 - M7_JOST_FEM_CONSISTENCY.json 8dc12bd418f9520b55382a02991d747735c97040cc04a2ae7ee09dd096991a22

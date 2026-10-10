@@ -4919,8 +4919,8 @@
     },
     {
       "path": "docs/audits/2026-10-10_operator_assembly/VALIDITY_DECISION.md",
-      "size_bytes": 20177,
-      "sha256": "bfe4654a9a0816a56fd84235c3d6dcc96f7146d783f77fd7f2e984e7eb0d229d"
+      "size_bytes": 20423,
+      "sha256": "0107d8b1eb5da247793e8114771bc98a037746a26ab20b9a0ee31ab1ec951055"
     },
     {
       "path": "docs/audits/2026-10-10_operator_assembly/m3_variable_kgsm_control.py",
