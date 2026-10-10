@@ -22,7 +22,7 @@ ROOT = Path("/home/error/physics/clones/SSZ_FULL_CLOSURE")
 sys.path.insert(0, str(ROOT / "src"))
 ART = ROOT / "data/generated/spectral"
 OUT_NPZ = ART / "V4_PHYSICAL_RESONANCE_EXPORT_V6_L42.npz"
-OUT_JSON = ART / "V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.json"
+OUT_JSON = ART / "V4_PHYSICAL_RESONANCE_EXPORT_V6_L42.json"
 
 
 def main() -> int:
