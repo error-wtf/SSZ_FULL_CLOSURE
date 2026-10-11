@@ -1,0 +1,118 @@
+{
+ "artifact": "SSZ_WEISZ_RESPONSE_BRIDGE_V1",
+ "purpose": "Weisz-inspired observable response: explicit source/detector projections on the certified SSZ 3-DOF operator; Weisz FK reference validates the response machinery itself.",
+ "stage1_weisz_reference": {
+  "13 lambda = 10 a": {
+   "beta": 0.7,
+   "grad_inf": 3.5221976169008684e-09,
+   "hessian_min": 0.17546915803144175,
+   "residue_sum_rule": 0.9999999999999998,
+   "top1_weight": 0.8817550522119801,
+   "frozen_top1_weight": 0.8817550597617502,
+   "top1_abs_diff": 7.549770031367586e-09,
+   "lorentzian_window_rel_err_top3": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_eff": 1.275096807394154
+  },
+  "48 lambda = 49 a": {
+   "beta": 0.02,
+   "grad_inf": 3.593676125754862e-08,
+   "hessian_min": -2.4851295305154204e-08,
+   "residue_sum_rule": 0.9999999999999996,
+   "top1_weight": 0.5015030323330272,
+   "frozen_top1_weight": 0.501503032328942,
+   "top1_abs_diff": 4.085176641410726e-12,
+   "lorentzian_window_rel_err_top3": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_eff": 2.0502757696350944
+  }
+ },
+ "stage1_gates": {
+  "G1_sum_rule_13 lambda = 10 a": true,
+  "G2_lorentzian_representation_13 lambda = 10 a": true,
+  "G3_frozen_match_13 lambda = 10 a": true,
+  "G1_sum_rule_48 lambda = 49 a": true,
+  "G2_lorentzian_representation_48 lambda = 49 a": true,
+  "G3_frozen_match_48 lambda = 49 a": true
+ },
+ "stage1_overall_pass": true,
+ "stage2_ssz_projections": {
+  "operator_source": "V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.npz",
+  "grid": {
+   "n_fine": 300,
+   "n_coarse": 200,
+   "window_r": [
+    0.05,
+    1.0
+   ],
+   "bc": "dirichlet",
+   "w_grid": [
+    0.05,
+    1.5,
+    600
+   ]
+  },
+  "projections": {
+   "A_ch0_ch0": {
+    "n_peaks": 0,
+    "selectivity_C": NaN,
+    "entropy_S": -0.0,
+    "top3_w": [],
+    "g_max": 0.078688,
+    "g_median": 0.0735395431,
+    "spectral_shape": "11,10,9,8,7,6,5,4,3,2,1,0",
+    "resolution_stability_top3": "25/12"
+   },
+   "B_ch0_ch2": {
+    "n_peaks": 0,
+    "selectivity_C": NaN,
+    "entropy_S": -0.0,
+    "top3_w": [],
+    "g_max": 0.0,
+    "g_median": 0.0,
+    "spectral_shape": "0,1,2,3,4,5,6,7,8,9,10,11",
+    "resolution_stability_top3": "25/12"
+   },
+   "C_ch1_ch1_late": {
+    "n_peaks": 0,
+    "selectivity_C": NaN,
+    "entropy_S": -0.0,
+    "top3_w": [],
+    "g_max": 2e-06,
+    "g_median": 2.3531e-06,
+    "spectral_shape": "11,10,9,8,7,6,5,4,3,2,1,0",
+    "resolution_stability_top3": "25/12"
+   }
+  },
+  "certified_crosscheck": {
+   "n600_dirichlet": {
+    "bridge_g_max": 0.048597,
+    "certified_g_max": 0.048597,
+    "bridge_g_median": 0.04663071,
+    "certified_g_median": 0.04663071,
+    "match": true
+   },
+   "n1000_dirichlet": {
+    "bridge_g_max": 0.029153,
+    "certified_g_max": 0.029153,
+    "bridge_g_median": 0.0279751,
+    "certified_g_median": 0.0279751,
+    "match": true
+   }
+  },
+  "wall_seconds": 661.1
+ },
+ "stage2_overall_pass": true,
+ "stage2_gates": {
+  "certified_reproduction_600dir": true,
+  "projection_dependence_demonstrated": false
+ },
+ "claims_guard": "Stage 2 reports projection-dependent observable spectra of the frozen discrete operator only. The certified GW diagnostic verdict (PEAKS_NOT_ROBUST, no resonance claim) is reproduced, not overturned. No astrophysical prediction, no NICER/GWOSC claim.",
+ "wall_seconds": 661.9
+}
