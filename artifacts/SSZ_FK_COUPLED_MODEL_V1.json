@@ -1,0 +1,99 @@
+{
+ "model": "SSZ_FK_COUPLED_MODEL_V1",
+ "declared_before_run": true,
+ "claims": "NONE (model study)",
+ "background": {
+  "r_over_rs": 2.727272727272727,
+  "Xi": 0.18333333333333335,
+  "D": 0.8450704225352113,
+  "s": 1.1833333333333333
+ },
+ "gates": {
+  "G-A_fk_recovery": {
+   "freq_rel_err_max": 3.959041081633678e-14,
+   "sum_rule": 0.9999999999999991,
+   "pass": true
+  },
+  "G-B_energy": {
+   "max_rel_dE": 4.281504911217948e-08,
+   "pass": true
+  },
+  "G-C_stability_ladder": {
+   "entries": [
+    {
+     "V0": 0.01,
+     "beta": 0.17600454474771401,
+     "grad_inf": 2.7602919949742954e-14,
+     "min_gen_eig": 0.035179762771972586,
+     "stable": true
+    },
+    {
+     "V0": 0.1,
+     "beta": 1.76004544747714,
+     "grad_inf": 1.2460462545105244e-07,
+     "min_gen_eig": 3.119575385314037,
+     "stable": true
+    },
+    {
+     "V0": 0.5,
+     "beta": 8.8002272373857,
+     "grad_inf": 1.8396395518038844e-13,
+     "min_gen_eig": 17.50262933150575,
+     "stable": true
+    },
+    {
+     "V0": 1.0,
+     "beta": 17.6004544747714,
+     "grad_inf": 2.0466391532913963e-07,
+     "min_gen_eig": 5.5204775534172175,
+     "stable": true
+    },
+    {
+     "V0": 2.0,
+     "beta": 35.2009089495428,
+     "grad_inf": 1.0970824654114864e-07,
+     "min_gen_eig": 36.1461294950273,
+     "stable": true
+    },
+    {
+     "V0": 4.0,
+     "beta": 70.4018178990856,
+     "grad_inf": 1.5886285353872154e-06,
+     "min_gen_eig": 112.35826277440903,
+     "stable": true
+    }
+   ],
+   "any_unstable": false,
+   "pass": true
+  },
+  "G-D_rsg_consistency": {
+   "note": "s*d=1 => EXACT invariance in the continuum; lattice dev is O(dr^2) discretization, certified by Richardson: halving dr must reduce the error ~4x",
+   "sd_identity_max_err": 1.1102230246251565e-16,
+   "rel_err_dr": 0.00029870888500518314,
+   "rel_err_dr_half": 8.258800481066329e-05,
+   "richardson_ratio": 3.616855567463903,
+   "pass": true
+  },
+  "G-E_new_structure": {
+   "alpha_best": 0.9191907077802026,
+   "max_rel_resid_after_alpha_fit": 0.5642466802128533,
+   "collapsible_to_uniform_factor": false,
+   "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+   "pass": true
+  },
+  "G-F_projection_dependence": {
+   "max_rel_diff": 0.9999999884191119,
+   "pass": true
+  }
+ },
+ "stability_verdicts": {
+  "0.01": true,
+  "0.1": true,
+  "0.5": true,
+  "1.0": true,
+  "2.0": true,
+  "4.0": true
+ },
+ "wall_seconds": 54.3,
+ "application_B_verdict": "NOT_DERIVABLE_FROM_CURRENT_SSZ_FORMALISM (no action principle for Xi; documented in docs/SSZ_FK_COUPLED_MODEL_V1.md)"
+}

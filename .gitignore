@@ -11,3 +11,4 @@ dist/
 .env
 FULL_PIPELINE_REPORT.json
 FULL_PIPELINE_REPORT.md
+data/generated/spectral/ssz_local_resolvent/SSZ_LOCAL_RESOLVENT_CURVES.csv

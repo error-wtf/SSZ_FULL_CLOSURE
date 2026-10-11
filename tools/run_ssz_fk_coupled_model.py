@@ -132,13 +132,18 @@ class FKModel:
         return best[2], best[1]
 
     def modes(self, u_eq: np.ndarray):
+        """Generalized eigenproblem H u = w^2 M u, solved in symmetric form
+        M^{-1/2} H M^{-1/2} v = w^2 v  (mass-weighting is EXACT, no post-hoc
+        symmetrization of M^-1 H -- that is only equivalent for uniform mass).
+        Returns (w2, u_modes, H) with u_modes M-orthonormal: u^T M u = I."""
         H = self.hessian(u_eq)
         H = 0.5 * (H + H.T)
-        Mi = np.diag(1.0 / self.mass)
-        A = Mi @ H
-        A = 0.5 * (A + A.T)
-        w2, v = np.linalg.eigh(A)
-        return w2, v, H
+        inv_sqrt = 1.0 / np.sqrt(self.mass)
+        Hs = inv_sqrt[:, None] * H * inv_sqrt[None, :]
+        Hs = 0.5 * (Hs + Hs.T)          # harmless: Hs is already symmetric
+        w2, v = np.linalg.eigh(Hs)
+        u_modes = inv_sqrt[:, None] * v  # back to u-coordinates, M-orthonormal
+        return w2, u_modes, H
 
     # ---- response: P(w) = b^dag Im[(A - (w+i0)^2)^-1] b --------------------
     def response(self, u_eq: np.ndarray, ws: np.ndarray, src: int, det: int,

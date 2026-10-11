@@ -64,8 +64,8 @@
     "selectivity_C": NaN,
     "entropy_S": -0.0,
     "top3_w": [],
-    "g_max": 0.078688,
-    "g_median": 0.0735395431,
+    "g_max": 0.093004,
+    "g_median": 0.0847773799,
     "spectral_shape": "11,10,9,8,7,6,5,4,3,2,1,0",
     "resolution_stability_top3": "12/12"
    },
@@ -84,29 +84,29 @@
     "selectivity_C": NaN,
     "entropy_S": -0.0,
     "top3_w": [],
-    "g_max": 2e-06,
-    "g_median": 2.3531e-06,
+    "g_max": 3e-06,
+    "g_median": 2.9414e-06,
     "spectral_shape": "11,10,9,8,7,6,5,4,3,2,1,0",
     "resolution_stability_top3": "12/12"
    }
   },
   "certified_crosscheck": {
    "n600_dirichlet": {
-    "bridge_g_max": 0.048597,
-    "certified_g_max": 0.048597,
-    "bridge_g_median": 0.04663071,
-    "certified_g_median": 0.04663071,
+    "bridge_g_max": 0.056956,
+    "certified_g_max": 0.056956,
+    "bridge_g_median": 0.05376277,
+    "certified_g_median": 0.05376277,
     "match": true
    },
    "n1000_dirichlet": {
-    "bridge_g_max": 0.029153,
-    "certified_g_max": 0.029153,
-    "bridge_g_median": 0.0279751,
-    "certified_g_median": 0.0279751,
+    "bridge_g_max": 0.034167,
+    "certified_g_max": 0.034167,
+    "bridge_g_median": 0.03225386,
+    "certified_g_median": 0.03225386,
     "match": true
    }
   },
-  "wall_seconds": 797.4
+  "wall_seconds": 500.2
  },
  "stage2_overall_pass": true,
  "stage2_gates": {
@@ -115,5 +115,5 @@
   "projection_dependence_demonstrated": true
  },
  "claims_guard": "Stage 2 reports projection-dependent observable spectra of the frozen discrete operator only. The certified GW diagnostic verdict (PEAKS_NOT_ROBUST, no resonance claim) is reproduced, not overturned. No astrophysical prediction, no NICER/GWOSC claim.",
- "wall_seconds": 798.2
+ "wall_seconds": 501.0
 }

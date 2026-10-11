@@ -173,9 +173,9 @@ def assemble_ssz(npz, n: int, bc: str):
     h = np.full(n, r1[1] - r1[0])
     dGz = np.zeros_like(Gc); dSz = np.zeros_like(Sc)
     hc = h[1:n - 1]
-    dGz[1:-1] = (Gc[2:] - Gc[:-2]) / hc[:, None, None]
+    dGz[1:-1] = (Gc[2:] - Gc[:-2]) / (2.0 * hc[:, None, None])
     dGz[0] = dGz[1]; dGz[-1] = dGz[-2]
-    dSz[1:-1] = (Sc[2:] - Sc[:-2]) / hc[:, None, None]
+    dSz[1:-1] = (Sc[2:] - Sc[:-2]) / (2.0 * hc[:, None, None])
     dSz[0] = dSz[1]; dSz[-1] = dSz[-2]
 
     D1 = np.zeros((n, n)); D2 = np.zeros((n, n))

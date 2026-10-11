@@ -1,9 +1,9 @@
 {
  "artifact": "SSZ_SPECTRAL_RESPONSE_FRAMEWORK_V1",
  "stage": "Stage 3 \u2014 physical source coupling (synthetic, MODEL-level)",
- "chain": "SSZ equations -> global operator (certified 3-DOF NPZ) -> Green function -> projection response (Stage-2 certified) -> detector model (chi^2_2 periodogram, T_det synthetic) -> blind recovery",
+ "chain": "SSZ equations -> global operator (certified 3-DOF NPZ) -> Green function -> projection response (Stage-2 certified) -> detector model (additive-Gaussian amplitude noise, nonparametric 200-trial null) -> blind recovery of OPERATOR-eigenfrequency injections",
  "detector_model": {
-  "statistic": "exponential (chi^2_2) multiplicative periodogram noise",
+  "statistic": "additive Gaussian on the amplitude spectrum (N(0, sigma), sigma = 0.05 * median); false-alarm rate calibrated nonparametrically by the G2 null trials, NOT by a chi^2_2 distribution",
   "noise_trials": 200,
   "injection_snr": 30.0,
   "peak_threshold_sigma": 6.0,
@@ -21,22 +21,22 @@
   "G1": {
    "projections": {
     "A_ch0_ch0": {
-     "g_max": 0.07868776079114806,
-     "g_median": 0.07353954307637942
+     "g_max": 0.09300432217851556,
+     "g_median": 0.08477737992005238
     },
     "B_ch0_ch2": {
      "g_max": 0.0,
      "g_median": 0.0
     },
     "C_ch1_ch1_late": {
-     "g_max": 2.3539941277862518e-06,
-     "g_median": 2.3530887078556636e-06
+     "g_max": 2.9427961053300665e-06,
+     "g_median": 2.941364889481696e-06
     }
    },
    "certified_reproduction": {
     "A_ch0_ch0": {
-     "bridge_g_max": 0.078688,
-     "framework_g_max": 0.078688,
+     "bridge_g_max": 0.093004,
+     "framework_g_max": 0.093004,
      "abs_diff": 0.0,
      "match": true
     },
@@ -47,8 +47,8 @@
      "match": true
     },
     "C_ch1_ch1_late": {
-     "bridge_g_max": 2e-06,
-     "framework_g_max": 2e-06,
+     "bridge_g_max": 3e-06,
+     "framework_g_max": 3e-06,
      "abs_diff": 0.0,
      "match": true
     }
@@ -60,29 +60,29 @@
    "g2_noise_null": {
     "n_trials": 200,
     "median_max_z": 0.0,
-    "max_max_z": 6.814,
+    "max_max_z": 0.0,
     "median_n_peaks": 0.0,
     "pass": true
    },
    "g3_blind_recovery": {
     "injected_ws": [
-     0.34048,
-     1.01344,
-     1.22646
+     2.86456,
+     4.52057,
+     6.12593
     ],
     "recovered_ws": [
-     0.34048,
-     1.01344,
-     1.22646
+     2.86405,
+     4.51918,
+     6.12552
     ],
     "freq_errors": [
-     0.0,
-     0.0,
-     0.0
+     0.000511,
+     0.001387,
+     0.000407
     ],
     "n_injected": 3,
     "n_recovered": 3,
-    "bin_width": 0.002417,
+    "bin_width": 0.00375,
     "pass": true
    },
    "g4_false_alarm": {
@@ -92,9 +92,9 @@
     "pass": true
    },
    "injection_metadata": {
-    "amp": 0.11030931461456914,
+    "amp": 0.1822666119719351,
     "lorentzian_reg": 1e-06,
-    "noise_sigma": 0.003676977153818971,
+    "noise_sigma": 0.006075553732397837,
     "noise_model": "additive Gaussian, sigma=NOISE_FRAC*median"
    }
   },
@@ -106,5 +106,5 @@
   }
  },
  "claims_guard": "Stage 3 is a SYNTHETIC end-to-end validation of the prediction chain on the frozen discrete operator. It demonstrates that injected modes are blindly recoverable through the certified response chain \u2014 it does NOT claim any detection in real data. The certified GW verdict PEAKS_NOT_ROBUST is reproduced, not overturned. No NICER/GWOSC claim. All results MODEL-level.",
- "wall_seconds": 74.9
+ "wall_seconds": 81.0
 }
