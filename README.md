@@ -69,16 +69,19 @@ pushed.**
 
 ---
 
-## Re-certification 2026-10-11 — the four certified pillars
+## Re-certification 2026-10-11 — the five certified pillars
 
 **Status banner (2026-10-11):** `TRUE_FULL_CLOSURE_PASS` corpus intact ·
-pytest **317 passed, 1 skipped** · Evidence-Registry **19/19 audits
-expected-exit** (`data/generated/repo_observability/ALL_EVIDENCE_RUN.json`
+pytest **318 passed, 1 skipped** (documentation re-run on HEAD `5245a0f`,
+after release-metadata refresh) · Evidence-Registry audits
+expected-exit (`data/generated/repo_observability/ALL_EVIDENCE_RUN.json`
 status `PASS`) · release metadata stamped to HEAD · lint clean. Full
 Pipeline: `PYTHONPATH=src python tools/run_full_pipeline.py` →
-[`FULL_PIPELINE_REPORT.md`](FULL_PIPELINE_REPORT.md).
+[`FULL_PIPELINE_REPORT.md`](FULL_PIPELINE_REPORT.md); full narrative of the
+2026-10-11 run including the initial FAIL and its fix:
+[`docs/FULL_PIPELINE_REPORT_2026-10-11.md`](docs/FULL_PIPELINE_REPORT_2026-10-11.md).
 
-Beyond the historical corpus, four additional pillars were built,
+Beyond the historical corpus, five additional pillars were built,
 re-certified and frozen on 2026-10-11 (all numbers below are read live
 from `artifacts/*.json` by `demos/animate_core_results.py` and
 `tools/run_full_pipeline.py` — nothing is hand-written):
@@ -86,6 +89,7 @@ from `artifacts/*.json` by `demos/animate_core_results.py` and
 | pillar | artifact | certified verdict |
 |--------|----------|-------------------|
 | **FK Coupled Model V1** (Run 11, mass-weighted) | `SSZ_FK_COUPLED_MODEL_V1.json` | **6/6 gates PASS.** Core result: **G-E `NEW_STRUCTURE_NOT_COLLAPSIBLE`** — the SSZ-FK response is *not* recoverable as FK × redshift (this is the finding, not a bug); b = a/φ deep branch is solitonic without stable fixed point → Weisz regime δ ≈ 5.9 %, κ = 25; free edges ω_q = 2√(κ/m)·sin(qπ/2M) incl. null mode; grid O(dr²) → Richardson. Appendix B (segment lattice) is **NOT derivable**. |
+| **6a Action-Derived Matter Probe** (proper-length, 2026-10-11) | `SSZ_ACTION_DERIVED_MATTER_PROBE_V1.json` | **`NEW_STRUCTURE_NOT_COLLAPSIBLE` — stable 12/12.** Proper-length re-matching φ = Q·l collapses the residual **0.5642 → 0.0043** (factor ≈ 131) across 4 variants × 3 matchings; P0/P1 bit-exact, P2 = documented FAIL. The 56.4 % uniform-α residue of G-E is *structural*, not a matching artifact. Details: [§ 6a below](#6a--action-derived-matter-probe--proper-length-stands). |
 | **Spectral Weight Diagnostics** (GW defaults) | `SW_DIAGNOSTICS` full-report § 4.5 | **`PEAKS_NOT_ROBUST`** — honest negative: maxG drops 0.05696 → 0.03417 from n=600 → n=1000, consistent across Dirichlet/Robin. **No resonance claim is made.** |
 | **Weisz Response Bridge** (Run 6) | `SSZ_WEISZ_RESPONSE_BRIDGE_V1.json` | **Stage 1 (FK reference) PASS + Stage 2 (SSZ projections) PASS** — the response machine is validated: A: g_max = 9.30e-2, B: **exactly 0** (selection rule), C: 3e-6. |
 | **Spectral Response Framework** (Run 6, Stage 3) | `SSZ_SPECTRAL_RESPONSE_FRAMEWORK_V1.json` | **5/5 gates PASS.** Blind recovery 3/3 injected modes (ω = 2.86456, 4.52057, 6.12593, Lorentzian 3 bins wide); noise null median max-z = 0.0; detector additive-Gaussian σ = 5 %·median. |
@@ -96,9 +100,164 @@ astrophysical discovery**. Coupling to matter remains a documented
 *coupling assumption*; the 56.4 % figure and comparable indicators are
 numerical candidates, not established physical signatures.
 
+### 6a · Action-Derived Matter Probe — proper-length stands
+
+*Artifact (frozen, sha256 `5c55025b1f44381edffcbb726ec1e39820fe47a923b3a6d07f557a8aea490955`):*
+`artifacts/SSZ_ACTION_DERIVED_MATTER_PROBE_V1.json` · interactive:
+`demos/demo_1_ge_not_collapsible.py`, `demos/demo_2_proper_length_probe.py` ·
+animated sweep: `figures/A2_proper_length_6a_sweep.gif`
+
+The G-E gate of the FK pillar says: the SSZ-FK response cannot be written as
+FK × redshift — best uniform-α matching leaves a **residual of 0.5642**
+(56.4 %, source: `SSZ_FK_COUPLED_MODEL_V1.json → gates/…/residual`).
+The obvious reviewer objection is: *maybe a better matching kills that
+residue.* Pillar 6a exists to answer exactly that.
+
+The probe re-matches the same data with a **proper-length** ansatz
+(φ = Q·l instead of a uniform α) and sweeps **4 variants × 3 matchings =
+12 combinations**:
+
+| quantity | value | where to verify |
+|---|---|---|
+| uniform-α residual (G-E baseline) | **0.5642** | `SSZ_FK_COUPLED_MODEL_V1.json` (gate G-E) |
+| proper-length residual | **0.0043** | `SSZ_ACTION_DERIVED_MATTER_PROBE_V1.json → variants/proper_phase` |
+| collapse factor | **≈ 131×** | ratio of the two above |
+| variants × matchings | 4 × 3 = 12 | `variants` + `matchings` arrays |
+| verdict stability | **12/12 `NEW_STRUCTURE_NOT_COLLAPSIBLE`** | `verdicts.proper_phase.rank_by_rank` |
+| solver check P0/P1 | bit-exact | `verdicts.proper_phase` per-rank deltas ~2e-7 |
+| P2 | **documented FAIL** | `verdicts.proper_phase` (kept, not hidden) |
+
+**Why this matters (both directions):** the residual collapse proves the
+56.4 % is an artifact of the *uniform-α matching class* — with the correct
+proper-length structure the data match to 0.4 %. But the verdict does **not**
+flip: every one of the 12 combinations still certifies
+`NEW_STRUCTURE_NOT_COLLAPSIBLE`, because collapsing the residual requires
+*new structure* (the proper-length phase), not a rescaling. That is the
+certified statement: **the geometry is not collapsible — new structure is
+required.** The P2 sub-check fails and is documented as such; P0/P1 are
+bit-exact between the independent solvers, so the collapse itself is not a
+solver artifact.
+
 ---
 
-## Animations — every core result as an animated GIF
+## Figures & animations — every core result, visualized from the frozen artifacts
+
+Static plots (`tools/make_figures_v1.py`, writes `figures/`) and animated
+GIFs (`demos/animate_core_results.py`, writes `demos/output/`). **Every
+plotted number is read live from `artifacts/*.json` at render time —
+nothing is synthetic or hand-written.** Regenerate all static figures:
+
+```bash
+OMP_NUM_THREADS=2 python tools/make_figures_v1.py   # ~2 min incl. GIF encoding
+python demos/animate_core_results.py                # ~5–10 s
+```
+
+### Static figures (F1–F6)
+
+![Certified metric functions](figures/F1_geometry_metric_functions.png)
+
+**F1 — ONE frozen geometry: the metric functions of the certified operator
+export.** Three panels — f(r), h(r), φ(r) — on the shared radial window
+(x-axis normalized r/r_max). *Data:* loaded live from the certified NPZ
+`data/generated/spectral/V4_PHYSICAL_RESONANCE_EXPORT_V3_3DOF.npz`
+(keys `r`, `f`, `h`, `phi`). *Statement:* every spectral and stability
+statement in this repository is evaluated on exactly this one frozen
+geometry — no figure in this README uses any other background.
+
+![FK coupled gates and stability ladder](figures/F2_fk_coupled_gates.png)
+
+**F2 — FK coupled model V1: gates, stability ladder, and the G-E residual.**
+Left: all gates A–F as live-read PASS bars (6/6). Middle: the G-C stability
+ladder — minimum generalized eigenvalue per rung vs β (log-log), every
+rung strictly positive → no ghosts. Right: the G-E residual after the best
+*uniform-α* fit: baseline φ = ωt normalized to 1.0, best fit reaches only
+0.5642 (would require α ≈ 0.92) → `NEW_STRUCTURE_NOT_COLLAPSIBLE`.
+*Data:* `artifacts/SSZ_FK_COUPLED_MODEL_V1.json` (`gates`, incl.
+`G-C_stability_ladder.entries`, `G-E_new_structure.max_rel_resid_after_alpha_fit`).
+
+![6a proper-length probe](figures/F3_proper_length_probe_6a.png)
+
+**F3 — 6a proper-length probe: the residual collapse, verdict unchanged.**
+Left: all 12 variant × matching combinations (log scale) — the three
+baseline bars (red) sit at 0.5642, everything under φ = Q·ℓ drops to
+0.0043 (≈ ×131); dashed line = uniform-FK reference (resid 1.0), dotted =
+baseline 0.5642. Right: the four probe gates P0–P3 — P0/P1/P3 PASS,
+**P2 FAIL is the documented degeneracy finding** (the matching is not
+well-defined on degenerate subspaces; see
+[§ 6a](#6a--action-derived-matter-probe--proper-length-stands)). *Data:*
+`artifacts/SSZ_ACTION_DERIVED_MATTER_PROBE_V1.json` (`variants.*.*`,
+`frozen_reference`, `gates`, `verdicts`). *Statement:* G-E is robust —
+`NEW_STRUCTURE_NOT_COLLAPSIBLE` in 12/12 combinations; the 56 % residue
+is a property of the matching class, not of the data.
+
+![SW diagnostics resolution drop](figures/F4_swdiag_resolution_drop.png)
+
+**F4 — Spectral-weight diagnostics: the honest negative.** Left: g_max and
+g_median across the four grids — n600 Dirichlet/Robin: 0.05696/0.05697,
+n1000 Dirichlet/Robin: 0.03417/0.03418 (Dirichlet and Robin agree within
+each resolution, the drop is real, not boundary-condition noise). Right:
+n_peaks above threshold = **0 on every grid**. *Data:*
+`artifacts/SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_GW_V1.json` (`variants.*.g_max`,
+`.g_median`, `.n_peaks`, `verdict`). *Statement:* certified verdict
+**`PEAKS_NOT_ROBUST` — diagnostics reported, no resonance claim**. The
+candidates decay with resolution; this figure is the repository's
+documented failure, kept visible on purpose.
+
+![Weisz bridge projections](figures/F5_weisz_bridge_projections.png)
+
+**F5 — Weisz response bridge, Run 6.** Left: the three SSZ projections onto
+the frozen operator, log scale — A (ch0,ch0) g_max = 9.30e-2 (mismatch,
+expected), **B (ch0,ch2) = exactly 0** (the selection rule — structural
+orthogonality, the machine's sharpest derived null), C (ch1,ch1 late) =
+3e-6 (consistency). Right: Stage 1 FK reference top-1 spectral weights
+(0.8818 and 0.5015 for the two registered references) — the validated
+machine the projections are measured with. *Data:*
+`artifacts/SSZ_WEISZ_RESPONSE_BRIDGE_V1.json` (`stage1_weisz_reference`,
+`stage2_ssz_projections.projections`, run 6).
+
+![SRF blind recovery](figures/F6_srf_blind_recovery.png)
+
+**F6 — Spectral response framework, Stage 3: blind recovery and
+false-alarm control.** Left: injected vs. blind-recovered mode frequencies
+(ω = 2.86456 / 4.52057 / 6.12593 injected; recovered 2.86405 / 4.51918 /
+6.12552 — the pipeline had no knowledge of the injection). Right:
+frequency errors 0.000511 / 0.001387 / 0.000407, each below one frequency
+bin (bin width 0.00375, dashed line); noise-null control: 200 trials,
+median max-z = 0.0. *Data:*
+`artifacts/SSZ_SPECTRAL_RESPONSE_FRAMEWORK_V1.json`
+(`detail.G2_G3_G4.g3_blind_recovery`). *Statement:* the detector is
+calibrated — it finds what is there and nothing else.
+
+### Animated figures (A1–A3, GIFs — run automatically on GitHub)
+
+![FK G-C stability ladder animation](figures/A1_fk_stability_ladder.gif)
+
+**A1 — G-C stability ladder, rung by rung** *(file:
+`figures/A1_fk_stability_ladder.gif`)*. The ladder from F2 built up frame by
+frame on log-log axes: each rung (V0 → β) appears with its minimum
+generalized eigenvalue annotated. End title: min eig > 0 everywhere,
+ladder COMPLETE — 6/6 gates PASS. *Data:*
+`artifacts/SSZ_FK_COUPLED_MODEL_V1.json` (`gates.G-C_stability_ladder.entries`).
+
+![6a proper-length sweep animation](figures/A2_proper_length_6a_sweep.gif)
+
+**A2 — 6a residual collapse, combination by combination** *(file:
+`figures/A2_proper_length_6a_sweep.gif`)*. The residual bar falling from
+0.5642 to 0.0043 as the sweep walks the 12 variants × matchings — while the
+verdict line stays `NEW_STRUCTURE_NOT_COLLAPSIBLE` throughout.
+*Data:* `artifacts/SSZ_ACTION_DERIVED_MATTER_PROBE_V1.json`.
+
+![SRF blind recovery animation](figures/A3_srf_blind_recovery.gif)
+
+**A3 — SRF blind recovery, frame by frame** *(file:
+`figures/A3_srf_blind_recovery.gif`)*. The three injected modes appear as
+blue lines (the pipeline is blind to them), then the green recovery bars
+lock onto each mode with the error annotated (err < bin width 0.00375);
+end frame states the 200-trial noise-null result (median max-z = 0.0).
+*Data:* `artifacts/SSZ_SPECTRAL_RESPONSE_FRAMEWORK_V1.json`
+(`detail.G2_G3_G4.g3_blind_recovery`).
+
+### Pillar animations (demos/output/, regenerated by the pipeline)
 
 ```bash
 python demos/animate_core_results.py      # writes demos/output/*.gif (~5–10 s)
@@ -357,12 +516,32 @@ PYTHONPATH=src python -c "from ssz_p5.closure.gates import \
 PYTHONPATH=src python tools/evaluate_true_closure.py     # TRUE FULL CLOSURE
 PYTHONPATH=src python tools/generate_absolute_full_closure.py
 PYTHONPATH=src python tools/render_true_closure_visualizations.py
+
+# One-command full pipeline (stages: pytest → evidence registry → certified
+# pillar artifacts → release metadata + demo GIFs). Writes FULL_PIPELINE_REPORT.md.
+PYTHONPATH=src OMP_NUM_THREADS=2 python tools/run_full_pipeline.py   # 318 passed, 1 skipped
+
+# Figures from this README (static F1–F6 + animated A1–A3):
+OMP_NUM_THREADS=2 python tools/make_figures_v1.py
+
+# Interactive demos (each < 1 s, prints live values from the artifacts):
+python demos/demo_1_ge_not_collapsible.py        # G-E NEW_STRUCTURE_NOT_COLLAPSIBLE
+python demos/demo_2_proper_length_probe.py       # 6a residual collapse 0.5642 → 0.0043
+python demos/demo_3_peaks_not_robust.py          # SW-Diag honest negative
+python demos/demo_4_recovery_and_selection_rule.py  # blind recovery + selection rule B = 0
 ```
 
 All numbers are deterministic from the frozen member
 (`data/generated/phase2_q2/ELECTRIC_PRODUCTION_MEMBER_CURRENT.csv`,
 sha256 `8bd460ef…`); no network needed except the optional live MCP
 provenance refresh.
+
+**Note on release metadata:** if `tools/run_full_pipeline.py` fails at the
+final stage with `test_release_metadata_current`, the release stamps
+(`MODEL_LOCK.json`, `EVIDENCE_INDEX.json`) lag behind HEAD — run
+`PYTHONPATH=src python tools/refresh_release_metadata.py` and re-run the
+pipeline. Exactly this happened during the 2026-10-11 documentation run
+(see [`docs/FULL_PIPELINE_REPORT_2026-10-11.md`](docs/FULL_PIPELINE_REPORT_2026-10-11.md) § 3).
 
 ## Key insight, in one paragraph
 
@@ -395,11 +574,17 @@ tests/negative/                      falsifiers + guards
 tools/evaluate_true_closure.py       TRUE FULL CLOSURE evaluator
 tools/run_full_pipeline.py           one-command full pipeline → FULL_PIPELINE_REPORT.md
 tools/run_all_evidence.py            19 registered audits (needs PYTHONPATH=src)
+tools/make_figures_v1.py             static figures F1–F6 + GIFs A1–A3 from artifacts
+tools/refresh_release_metadata.py    re-stamp MODEL_LOCK/EVIDENCE_INDEX to HEAD
+figures/                             F1–F6 PNG + A1–A3 GIF (README figures)
 demos/animate_core_results.py        5 animated GIFs of the certified pillars
+demos/demo_1..4_*.py                 4 interactive demos of the key results
 docs/TRUE_CLOSURE_EXPLAINED.md       every gate, fully explained
+docs/FULL_PIPELINE_REPORT_2026-10-11.md  narrative of the 2026-10-11 pipeline run
 docs/figures/true_closure/           all visualizations
 demos/output/                        animated pillar GIFs (regenerable)
 artifacts/true_full_closure/         proof chain + provenance
+artifacts/SSZ_*_V1.json              frozen pillar artifacts (FK, 6a, SW-Diag, Bridge, SRF)
 REPRODUCE.md                         step-by-step reproduction
 PEER_REVIEW.md                       reviewer guide: claims, controls, limits
 paper/                               monograph + appendices

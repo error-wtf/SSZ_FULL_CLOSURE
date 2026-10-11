@@ -1,8 +1,17 @@
 # FULL PIPELINE REPORT — SSZ_FULL_CLOSURE
 
-**Ausgeführt:** 2026-10-11T14:52:35+02:00
-**git HEAD:** `261ac3a93504087b2742cc579e154c2535c0c0f1`
+**Ausgeführt:** 2026-10-11T17:09:03+02:00
+**git HEAD:** `5245a0fe5ca15e864bf1dc95021437622cd495be`
 **Gesamtergebnis: PASS — alle Stages grün**
+
+## Stage: pytest Suite — PASS
+
+>     cls = validator_for(schema)
+> 
+> -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+> =========================== short test summary info ============================
+> SKIPPED [1] tests/unit/test_bridge_catalog_schemas.py:22: smoke catalog is a placeholder string, not a document
+> 318 passed, 1 skipped, 5 warnings in 164.94s (0:02:44)
 
 ## Stage: Evidence-Registry (run_all_evidence) — PASS
 
@@ -23,9 +32,9 @@
 
 ## Stage: Release-Metadaten + Demos — PASS
 
-| git HEAD | PASS | 261ac3a93504 |
-| MODEL_LOCK.json | PASS | 261ac3a93504 |
-| EVIDENCE_INDEX.json | PASS | 261ac3a93504 |
+| git HEAD | PASS | 5245a0fe5ca1 |
+| MODEL_LOCK.json | PASS | 5245a0fe5ca1 |
+| EVIDENCE_INDEX.json | PASS | 5245a0fe5ca1 |
 | Demo-GIFs | PASS | 01_fk_coupled_gates_ladder.gif, 02_swdiag_resolution_drop.gif, 03_bridge_projections.gif, 04_srf_blind_recovery.gif, 05_chain_overview.gif |
 
 ---
