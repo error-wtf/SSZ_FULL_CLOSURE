@@ -1,0 +1,293 @@
+{
+  "status": "SSZ_WEISZ1978_QUANTITATIVE_SELECTIVITY_COMPARISON_COMPLETE",
+  "weisz_reproduction_pass": true,
+  "ssz_v3_controls_pass": true,
+  "ssz_v3_robust_residue_reordering": true,
+  "selectivity_metrics": {
+    "weisz_top1_range": [
+      0.5015030323289424,
+      0.9712499743350256
+    ],
+    "weisz_top2_range": [
+      0.9527089963623915,
+      0.9996615560976496
+    ],
+    "weisz_neff_range": [
+      1.0593668344281466,
+      2.050275769640253
+    ],
+    "ssz_top1_range": [
+      0.3797308496275843,
+      0.9591056140557872
+    ],
+    "ssz_top2_range": [
+      0.7222843336904023,
+      1.0
+    ],
+    "ssz_neff_range": [
+      1.0860502819432547,
+      2.9397243319599395
+    ],
+    "fraction_two_modes_ge_95pct": {
+      "weisz": 1.0,
+      "ssz": 0.65
+    },
+    "fraction_neff_le_2p1": {
+      "weisz": 1.0,
+      "ssz": 0.7583333333333333
+    }
+  },
+  "ssz_radius_sensitivity": [
+    {
+      "L": 6,
+      "observable": "equal_weight",
+      "top1_span": 0.14067756347973315,
+      "neff_span": 0.5566639351218567,
+      "top2_min": 0.7357088811670924,
+      "top2_max": 0.8740997991356156
+    },
+    {
+      "L": 6,
+      "observable": "field_0",
+      "top1_span": 0.29173997491434156,
+      "neff_span": 0.9512271842840172,
+      "top2_min": 0.7555393715533814,
+      "top2_max": 0.8841715447818831
+    },
+    {
+      "L": 6,
+      "observable": "field_1",
+      "top1_span": 0.23701732872417486,
+      "neff_span": 0.7371032080304505,
+      "top2_min": 0.7854240149770011,
+      "top2_max": 0.8714068589837425
+    },
+    {
+      "L": 6,
+      "observable": "field_2",
+      "top1_span": 0.02467807157568902,
+      "neff_span": 0.06292849916408905,
+      "top2_min": 0.9999999999999999,
+      "top2_max": 1.0
+    },
+    {
+      "L": 6,
+      "observable": "ramp_weight",
+      "top1_span": 0.20906647974409404,
+      "neff_span": 0.5832015776513164,
+      "top2_min": 0.8068791612418823,
+      "top2_max": 0.9042811112663023
+    },
+    {
+      "L": 20,
+      "observable": "equal_weight",
+      "top1_span": 0.14158906781398073,
+      "neff_span": 0.7108291828383833,
+      "top2_min": 0.7665695917971901,
+      "top2_max": 0.9672813277987085
+    },
+    {
+      "L": 20,
+      "observable": "field_0",
+      "top1_span": 0.16594959785622226,
+      "neff_span": 0.8149246573381679,
+      "top2_min": 0.7333571189609487,
+      "top2_max": 0.9570633661448471
+    },
+    {
+      "L": 20,
+      "observable": "field_1",
+      "top1_span": 0.34680027551714643,
+      "neff_span": 1.2872729621972772,
+      "top2_min": 0.7222843336904023,
+      "top2_max": 0.916063601871739
+    },
+    {
+      "L": 20,
+      "observable": "field_2",
+      "top1_span": 0.021280420656796473,
+      "neff_span": 0.04973239164627041,
+      "top2_min": 0.9999999999999998,
+      "top2_max": 1.0
+    },
+    {
+      "L": 20,
+      "observable": "ramp_weight",
+      "top1_span": 0.10861177616706286,
+      "neff_span": 0.4896040456872217,
+      "top2_min": 0.8177513035124466,
+      "top2_max": 0.9764902207721526
+    },
+    {
+      "L": 42,
+      "observable": "equal_weight",
+      "top1_span": 0.0749876981543881,
+      "neff_span": 0.32077657056132236,
+      "top2_min": 0.9057608599038338,
+      "top2_max": 0.9887413545100472
+    },
+    {
+      "L": 42,
+      "observable": "field_0",
+      "top1_span": 0.07980257778565214,
+      "neff_span": 0.4239832606286926,
+      "top2_min": 0.8855539897128683,
+      "top2_max": 0.9856228963353799
+    },
+    {
+      "L": 42,
+      "observable": "field_1",
+      "top1_span": 0.4506615671904748,
+      "neff_span": 1.5209361301744553,
+      "top2_min": 0.7323243610712475,
+      "top2_max": 0.9363137900107478
+    },
+    {
+      "L": 42,
+      "observable": "field_2",
+      "top1_span": 0.03746435033974904,
+      "neff_span": 0.07600744043052354,
+      "top2_min": 0.9999999999999999,
+      "top2_max": 1.0
+    },
+    {
+      "L": 42,
+      "observable": "ramp_weight",
+      "top1_span": 0.10934301269805524,
+      "neff_span": 0.25891101220176527,
+      "top2_min": 0.9269426727013066,
+      "top2_max": 0.9916688370791168
+    },
+    {
+      "L": 110,
+      "observable": "equal_weight",
+      "top1_span": 0.07444441751778819,
+      "neff_span": 0.1466410768252664,
+      "top2_min": 0.9756158265884791,
+      "top2_max": 0.9972928466692701
+    },
+    {
+      "L": 110,
+      "observable": "field_0",
+      "top1_span": 0.056081588732576515,
+      "neff_span": 0.13355648262692088,
+      "top2_min": 0.9704247112382153,
+      "top2_max": 0.9966020107012358
+    },
+    {
+      "L": 110,
+      "observable": "field_1",
+      "top1_span": 0.42310922842300447,
+      "neff_span": 1.4952041956264215,
+      "top2_min": 0.7767574495335707,
+      "top2_max": 0.9571694413415134
+    },
+    {
+      "L": 110,
+      "observable": "field_2",
+      "top1_span": 0.04836414548436574,
+      "neff_span": 0.08597561512189489,
+      "top2_min": 0.9999999999999999,
+      "top2_max": 1.0
+    },
+    {
+      "L": 110,
+      "observable": "ramp_weight",
+      "top1_span": 0.11873368208528745,
+      "neff_span": 0.280230853972919,
+      "top2_min": 0.9810402785263408,
+      "top2_max": 0.9979589869228804
+    },
+    {
+      "L": 420,
+      "observable": "equal_weight",
+      "top1_span": 0.07724257612194518,
+      "neff_span": 0.14782180977327797,
+      "top2_min": 0.9966372608460514,
+      "top2_max": 0.9996348774900199
+    },
+    {
+      "L": 420,
+      "observable": "field_0",
+      "top1_span": 0.05588828286980807,
+      "neff_span": 0.08961144165891533,
+      "top2_min": 0.995937340411506,
+      "top2_max": 0.9995455388156883
+    },
+    {
+      "L": 420,
+      "observable": "field_1",
+      "top1_span": 0.3125698418773849,
+      "neff_span": 1.024280343056075,
+      "top2_min": 0.8436948740069468,
+      "top2_max": 0.9765734640432201
+    },
+    {
+      "L": 420,
+      "observable": "field_2",
+      "top1_span": 0.053857713250672457,
+      "neff_span": 0.08840898451458057,
+      "top2_min": 1.0,
+      "top2_max": 1.0
+    },
+    {
+      "L": 420,
+      "observable": "ramp_weight",
+      "top1_span": 0.12213339228313236,
+      "neff_span": 0.2878596422236821,
+      "top2_min": 0.9973725744603773,
+      "top2_max": 0.9997221840599151
+    },
+    {
+      "L": 1000,
+      "observable": "equal_weight",
+      "top1_span": 0.07760845275196326,
+      "neff_span": 0.148944409405404,
+      "top2_min": 0.9990811738119474,
+      "top2_max": 0.9999005174504725
+    },
+    {
+      "L": 1000,
+      "observable": "field_0",
+      "top1_span": 0.055885923205801546,
+      "neff_span": 0.08909816227119394,
+      "top2_min": 0.9988913252510847,
+      "top2_max": 0.9998763976327577
+    },
+    {
+      "L": 1000,
+      "observable": "field_1",
+      "top1_span": 0.2388744193871538,
+      "neff_span": 0.7031097711070748,
+      "top2_min": 0.8830636092219257,
+      "top2_max": 0.9844480647428991
+    },
+    {
+      "L": 1000,
+      "observable": "field_2",
+      "top1_span": 0.05503349249514766,
+      "neff_span": 0.08869875381111036,
+      "top2_min": 1.0,
+      "top2_max": 1.0
+    },
+    {
+      "L": 1000,
+      "observable": "ramp_weight",
+      "top1_span": 0.12266209855745958,
+      "neff_span": 0.28895706138662436,
+      "top2_min": 0.9992810271199348,
+      "top2_max": 0.9999241567792909
+    }
+  ],
+  "tests": {
+    "weisz_few_visible_modes_reproduced": true,
+    "ssz_has_weisz_like_sparse_observable_cases": true,
+    "ssz_selectivity_changes_with_radius": true,
+    "ssz_residue_order_reversal_survives_v3_controls": true
+  },
+  "interpretation": {
+    "supported": "Both numerical systems exhibit sparse observable spectral weight; SSZ additionally shows robust radius-dependent redistribution in the tested healthy window.",
+    "not_supported": "Identity of microscopic mechanism, Anderson localization in SSZ, or global SSZ QNM/retarded-Green spectroscopy."
+  },
+  "table_csv": "data/generated/spectral/SSZ_WEISZ1978_SELECTIVITY_TABLE.csv"
+}

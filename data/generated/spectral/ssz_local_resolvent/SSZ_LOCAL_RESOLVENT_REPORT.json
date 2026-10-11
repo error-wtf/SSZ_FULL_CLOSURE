@@ -1,0 +1,1471 @@
+{
+  "status": "SSZ_LOCAL_PRINCIPAL_RESOLVENT_SPECTRA_EVALUATED",
+  "scope": "current locked member, registered healthy window only",
+  "L_values": [
+    6,
+    20,
+    42,
+    110,
+    420,
+    1000
+  ],
+  "u_targets": [
+    0.63,
+    0.65,
+    0.67,
+    0.69
+  ],
+  "eta_fracs": [
+    0.01,
+    0.005,
+    0.002
+  ],
+  "case_count": 360,
+  "summary": {
+    "L6_u0.630008_field_0": {
+      "top1": 0.6764393673525251,
+      "top2": 0.8841715447818832,
+      "effective_mode_count": 1.9449989074579919,
+      "dominant_mode": 1,
+      "dominant_omega": 0.44571799496779807,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.630008_field_1": {
+      "top1": 0.6407818961087545,
+      "top2": 0.8714068589837425,
+      "effective_mode_count": 2.0819214964949,
+      "dominant_mode": 1,
+      "dominant_omega": 0.44571799496779807,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.630008_field_2": {
+      "top1": 0.8244004843242849,
+      "top2": 1.0,
+      "effective_mode_count": 1.4075162948767066,
+      "dominant_mode": 0,
+      "dominant_omega": 0.14363616975420265,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L6_u0.630008_equal_weight": {
+      "top1": 0.5887391595707484,
+      "top2": 0.8740997991356156,
+      "effective_mode_count": 2.2527832129468375,
+      "dominant_mode": 1,
+      "dominant_omega": 0.44571799496779807,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.630008_ramp_weight": {
+      "top1": 0.47990699490001265,
+      "top2": 0.8820058215519094,
+      "effective_mode_count": 2.463558935852809,
+      "dominant_mode": 1,
+      "dominant_omega": 0.44571799496779807,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.649989_field_0": {
+      "top1": 0.40688198890728833,
+      "top2": 0.7837672975487646,
+      "effective_mode_count": 2.8220520877388218,
+      "dominant_mode": 0,
+      "dominant_omega": 0.12570918713901585,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.649989_field_1": {
+      "top1": 0.40376456738457966,
+      "top2": 0.7854240149770012,
+      "effective_mode_count": 2.81902470452535,
+      "dominant_mode": 0,
+      "dominant_omega": 0.12570918713901585,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.649989_field_2": {
+      "top1": 0.8239810749884969,
+      "top2": 1.0,
+      "effective_mode_count": 1.4085945913665001,
+      "dominant_mode": 0,
+      "dominant_omega": 0.12570918713901585,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L6_u0.649989_equal_weight": {
+      "top1": 0.49901273407302066,
+      "top2": 0.785973726596233,
+      "effective_mode_count": 2.6513414485504434,
+      "dominant_mode": 0,
+      "dominant_omega": 0.12570918713901585,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.649989_ramp_weight": {
+      "top1": 0.6162494274973834,
+      "top2": 0.817896130313584,
+      "effective_mode_count": 2.204650817151965,
+      "dominant_mode": 0,
+      "dominant_omega": 0.12570918713901585,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.669996_field_0": {
+      "top1": 0.5201736188474732,
+      "top2": 0.7910667245326333,
+      "effective_mode_count": 2.5798676587501808,
+      "dominant_mode": 0,
+      "dominant_omega": 0.11566970489049264,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.669996_field_1": {
+      "top1": 0.5393652060395073,
+      "top2": 0.8202527990840665,
+      "effective_mode_count": 2.486809207664686,
+      "dominant_mode": 0,
+      "dominant_omega": 0.11566970489049264,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.669996_field_2": {
+      "top1": 0.8288629420773184,
+      "top2": 1.0,
+      "effective_mode_count": 1.396059848522361,
+      "dominant_mode": 0,
+      "dominant_omega": 0.11566970489049264,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L6_u0.669996_equal_weight": {
+      "top1": 0.5964477060533527,
+      "top2": 0.8537639326268511,
+      "effective_mode_count": 2.255572139906242,
+      "dominant_mode": 0,
+      "dominant_omega": 0.11566970489049264,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.669996_ramp_weight": {
+      "top1": 0.6889734746441066,
+      "top2": 0.9042811112663024,
+      "effective_mode_count": 1.8860667341667359,
+      "dominant_mode": 0,
+      "dominant_omega": 0.11566970489049264,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.690004_field_0": {
+      "top1": 0.3846993924381835,
+      "top2": 0.7555393715533814,
+      "effective_mode_count": 2.8962260917420086,
+      "dominant_mode": 2,
+      "dominant_omega": 3.6740881864664856,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.690004_field_1": {
+      "top1": 0.49988279452302364,
+      "top2": 0.8294094609581746,
+      "effective_mode_count": 2.580167319878564,
+      "dominant_mode": 0,
+      "dominant_omega": 0.1311631478846799,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.690004_field_2": {
+      "top1": 0.848659146564186,
+      "top2": 0.9999999999999999,
+      "effective_mode_count": 1.345666092202411,
+      "dominant_mode": 0,
+      "dominant_omega": 0.1311631478846799,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L6_u0.690004_equal_weight": {
+      "top1": 0.4557701425736196,
+      "top2": 0.7357088811670924,
+      "effective_mode_count": 2.8094471480686942,
+      "dominant_mode": 0,
+      "dominant_omega": 0.1311631478846799,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L6_u0.690004_ramp_weight": {
+      "top1": 0.5486215656166168,
+      "top2": 0.8068791612418824,
+      "effective_mode_count": 2.4692683118180523,
+      "dominant_mode": 0,
+      "dominant_omega": 0.1311631478846799,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.630008_field_0": {
+      "top1": 0.45250125289413357,
+      "top2": 0.7333571189609487,
+      "effective_mode_count": 2.818999161644674,
+      "dominant_mode": 0,
+      "dominant_omega": 0.09683626630768602,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.630008_field_1": {
+      "top1": 0.7736209266041909,
+      "top2": 0.9160636018717391,
+      "effective_mode_count": 1.5978918750488096,
+      "dominant_mode": 1,
+      "dominant_omega": 0.44571799496677345,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.630008_field_2": {
+      "top1": 0.6908434076650511,
+      "top2": 0.9999999999999999,
+      "effective_mode_count": 1.745680798386698,
+      "dominant_mode": 0,
+      "dominant_omega": 0.09683626630768602,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L20_u0.630008_equal_weight": {
+      "top1": 0.5225732229099844,
+      "top2": 0.7665695917971902,
+      "effective_mode_count": 2.5832667149752706,
+      "dominant_mode": 0,
+      "dominant_omega": 0.09683626630768602,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.630008_ramp_weight": {
+      "top1": 0.6300060364167471,
+      "top2": 0.8177513035124466,
+      "effective_mode_count": 2.1488256044674854,
+      "dominant_mode": 0,
+      "dominant_omega": 0.09683626630768602,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.649989_field_0": {
+      "top1": 0.5749577095554367,
+      "top2": 0.8966032762985447,
+      "effective_mode_count": 2.2485900847197375,
+      "dominant_mode": 0,
+      "dominant_omega": 0.08405817055139654,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.649989_field_1": {
+      "top1": 0.5454444454983404,
+      "top2": 0.8369336998774738,
+      "effective_mode_count": 2.4445918182535857,
+      "dominant_mode": 1,
+      "dominant_omega": 1.0511252256170671,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.649989_field_2": {
+      "top1": 0.6981894509997753,
+      "top2": 1.0,
+      "effective_mode_count": 1.7284348290335916,
+      "dominant_mode": 0,
+      "dominant_omega": 0.08405817055139654,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L20_u0.649989_equal_weight": {
+      "top1": 0.6340599715568401,
+      "top2": 0.9195336486783474,
+      "effective_mode_count": 2.040807573736186,
+      "dominant_mode": 0,
+      "dominant_omega": 0.08405817055139654,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.649989_ramp_weight": {
+      "top1": 0.7261764156233983,
+      "top2": 0.9414234644769423,
+      "effective_mode_count": 1.732817887221658,
+      "dominant_mode": 0,
+      "dominant_omega": 0.08405817055139654,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.669996_field_0": {
+      "top1": 0.6184508507503558,
+      "top2": 0.9570633661448471,
+      "effective_mode_count": 2.0040745043065065,
+      "dominant_mode": 0,
+      "dominant_omega": 0.07714266271387972,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L20_u0.669996_field_1": {
+      "top1": 0.45249820629329873,
+      "top2": 0.7522494218144224,
+      "effective_mode_count": 2.8091010736707758,
+      "dominant_mode": 0,
+      "dominant_omega": 0.07714266271387972,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 2
+      }
+    },
+    "L20_u0.669996_field_2": {
+      "top1": 0.7035226435524422,
+      "top2": 1.0,
+      "effective_mode_count": 1.7157281037338734,
+      "dominant_mode": 0,
+      "dominant_omega": 0.07714266271387972,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L20_u0.669996_equal_weight": {
+      "top1": 0.6641622907239652,
+      "top2": 0.9672813277987085,
+      "effective_mode_count": 1.8724375321368874,
+      "dominant_mode": 0,
+      "dominant_omega": 0.07714266271387972,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L20_u0.669996_ramp_weight": {
+      "top1": 0.73861781258381,
+      "top2": 0.9764902207721528,
+      "effective_mode_count": 1.6592215587802635,
+      "dominant_mode": 0,
+      "dominant_omega": 0.07714266271387972,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L20_u0.690004_field_0": {
+      "top1": 0.5539043529588822,
+      "top2": 0.9373408608188816,
+      "effective_mode_count": 2.1845520231169693,
+      "dominant_mode": 0,
+      "dominant_omega": 0.0895801749222963,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.690004_field_1": {
+      "top1": 0.4268206510870445,
+      "top2": 0.7222843336904023,
+      "effective_mode_count": 2.8851648372460867,
+      "dominant_mode": 0,
+      "dominant_omega": 0.0895801749222963,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.690004_field_2": {
+      "top1": 0.6822422228956457,
+      "top2": 1.0,
+      "effective_mode_count": 1.7654604953801438,
+      "dominant_mode": 0,
+      "dominant_omega": 0.0895801749222963,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L20_u0.690004_equal_weight": {
+      "top1": 0.5845374373842149,
+      "top2": 0.9507157170935134,
+      "effective_mode_count": 2.091177476076438,
+      "dominant_mode": 0,
+      "dominant_omega": 0.0895801749222963,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L20_u0.690004_ramp_weight": {
+      "top1": 0.6338415342678176,
+      "top2": 0.9624554718033766,
+      "effective_mode_count": 1.9563659873359391,
+      "dominant_mode": 0,
+      "dominant_omega": 0.0895801749222963,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.630008_field_0": {
+      "top1": 0.5530359720183555,
+      "top2": 0.8855539897128683,
+      "effective_mode_count": 2.3282078969861133,
+      "dominant_mode": 0,
+      "dominant_omega": 0.070247790788403,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.630008_field_1": {
+      "top1": 0.8303924168180591,
+      "top2": 0.9363137900107478,
+      "effective_mode_count": 1.4187882017854843,
+      "dominant_mode": 1,
+      "dominant_omega": 0.44571799496661757,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.630008_field_2": {
+      "top1": 0.6549025886242787,
+      "top2": 1.0,
+      "effective_mode_count": 1.8248520708064624,
+      "dominant_mode": 0,
+      "dominant_omega": 0.070247790788403,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L42_u0.630008_equal_weight": {
+      "top1": 0.6126663015025146,
+      "top2": 0.9057608599038338,
+      "effective_mode_count": 2.1270014137627813,
+      "dominant_mode": 0,
+      "dominant_omega": 0.070247790788403,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.630008_ramp_weight": {
+      "top1": 0.7106514305862975,
+      "top2": 0.9269426727013066,
+      "effective_mode_count": 1.7948657604529223,
+      "dominant_mode": 0,
+      "dominant_omega": 0.070247790788403,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.649989_field_0": {
+      "top1": 0.6134003893303803,
+      "top2": 0.9629641449486779,
+      "effective_mode_count": 2.000694195141788,
+      "dominant_mode": 0,
+      "dominant_omega": 0.06077171635898742,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.649989_field_1": {
+      "top1": 0.6337326626962522,
+      "top2": 0.8670420008265358,
+      "effective_mode_count": 2.110915235334184,
+      "dominant_mode": 1,
+      "dominant_omega": 1.0511252256171748,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.649989_field_2": {
+      "top1": 0.6649086266205015,
+      "top2": 1.0,
+      "effective_mode_count": 1.8037852822287965,
+      "dominant_mode": 0,
+      "dominant_omega": 0.06077171635898742,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L42_u0.649989_equal_weight": {
+      "top1": 0.6650361356888759,
+      "top2": 0.9707345057725121,
+      "effective_mode_count": 1.863651442250199,
+      "dominant_mode": 0,
+      "dominant_omega": 0.06077171635898742,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.649989_ramp_weight": {
+      "top1": 0.7521351595017736,
+      "top2": 0.9783083232313396,
+      "effective_mode_count": 1.6198735757910707,
+      "dominant_mode": 0,
+      "dominant_omega": 0.06077171635898742,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.669996_field_0": {
+      "top1": 0.6328385498040077,
+      "top2": 0.9856228963353799,
+      "effective_mode_count": 1.9042246363574207,
+      "dominant_mode": 0,
+      "dominant_omega": 0.05571281266949297,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.669996_field_1": {
+      "top1": 0.39670643868869404,
+      "top2": 0.778850669288279,
+      "effective_mode_count": 2.8383510435462864,
+      "dominant_mode": 0,
+      "dominant_omega": 0.05571281266949297,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.669996_field_2": {
+      "top1": 0.670193971603,
+      "top2": 0.9999999999999999,
+      "effective_mode_count": 1.7923331931553073,
+      "dominant_mode": 0,
+      "dominant_omega": 0.05571281266949297,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L42_u0.669996_equal_weight": {
+      "top1": 0.674244853760166,
+      "top2": 0.9887413545100472,
+      "effective_mode_count": 1.806224843201459,
+      "dominant_mode": 0,
+      "dominant_omega": 0.05571281266949297,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.669996_ramp_weight": {
+      "top1": 0.746449323901948,
+      "top2": 0.9916688370791168,
+      "effective_mode_count": 1.619725375664822,
+      "dominant_mode": 0,
+      "dominant_omega": 0.05571281266949297,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.690004_field_0": {
+      "top1": 0.5752428975861249,
+      "top2": 0.9807367106423913,
+      "effective_mode_count": 2.017346362636025,
+      "dominant_mode": 0,
+      "dominant_omega": 0.06535288655628949,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.690004_field_1": {
+      "top1": 0.3797308496275843,
+      "top2": 0.7323243610712475,
+      "effective_mode_count": 2.9397243319599395,
+      "dominant_mode": 0,
+      "dominant_omega": 0.06535288655628949,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.690004_field_2": {
+      "top1": 0.6327296212632509,
+      "top2": 1.0,
+      "effective_mode_count": 1.8683406335858308,
+      "dominant_mode": 0,
+      "dominant_omega": 0.06535288655628949,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L42_u0.690004_equal_weight": {
+      "top1": 0.5992571556057779,
+      "top2": 0.9843881990001759,
+      "effective_mode_count": 1.9697494256175532,
+      "dominant_mode": 0,
+      "dominant_omega": 0.06535288655628949,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L42_u0.690004_ramp_weight": {
+      "top1": 0.6427921468037183,
+      "top2": 0.987709806997295,
+      "effective_mode_count": 1.8786363878665873,
+      "dominant_mode": 0,
+      "dominant_omega": 0.06535288655628949,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.630008_field_0": {
+      "top1": 0.6031084745695301,
+      "top2": 0.9704247112382154,
+      "effective_mode_count": 2.0018587357518562,
+      "dominant_mode": 0,
+      "dominant_omega": 0.04469569362652956,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.630008_field_1": {
+      "top1": 0.8868445541768621,
+      "top2": 0.9571694413415134,
+      "effective_mode_count": 1.260599578566063,
+      "dominant_mode": 1,
+      "dominant_omega": 0.4457179949665635,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.630008_field_2": {
+      "top1": 0.6333538449794468,
+      "top2": 1.0,
+      "effective_mode_count": 1.8671817740238827,
+      "dominant_mode": 0,
+      "dominant_omega": 0.04469569362652956,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L110_u0.630008_equal_weight": {
+      "top1": 0.6564914447181447,
+      "top2": 0.9756158265884791,
+      "effective_mode_count": 1.8747095043704614,
+      "dominant_mode": 0,
+      "dominant_omega": 0.04469569362652956,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.630008_ramp_weight": {
+      "top1": 0.7493542957413842,
+      "top2": 0.9810402785263408,
+      "effective_mode_count": 1.6245113387357901,
+      "dominant_mode": 0,
+      "dominant_omega": 0.04469569362652956,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.649989_field_0": {
+      "top1": 0.6285407330255932,
+      "top2": 0.9909648972421597,
+      "effective_mode_count": 1.8993483604944794,
+      "dominant_mode": 0,
+      "dominant_omega": 0.03857792719183124,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.649989_field_1": {
+      "top1": 0.7356028059477551,
+      "top2": 0.90330239512796,
+      "effective_mode_count": 1.7283543195854294,
+      "dominant_mode": 1,
+      "dominant_omega": 1.0511252256172159,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.649989_field_2": {
+      "top1": 0.645125832059471,
+      "top2": 1.0,
+      "effective_mode_count": 1.8445997932065015,
+      "dominant_mode": 0,
+      "dominant_omega": 0.03857792719183124,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L110_u0.649989_equal_weight": {
+      "top1": 0.6772110957096259,
+      "top2": 0.9927702143198474,
+      "effective_mode_count": 1.7913291580464274,
+      "dominant_mode": 0,
+      "dominant_omega": 0.03857792719183124,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.649989_ramp_weight": {
+      "top1": 0.7626795248792173,
+      "top2": 0.9945647764355264,
+      "effective_mode_count": 1.5736127321069664,
+      "dominant_mode": 0,
+      "dominant_omega": 0.03857792719183124,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.669996_field_0": {
+      "top1": 0.6372721711024322,
+      "top2": 0.9966020107012358,
+      "effective_mode_count": 1.8683022531249354,
+      "dominant_mode": 0,
+      "dominant_omega": 0.03534142677518444,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.669996_field_1": {
+      "top1": 0.49897919744749536,
+      "top2": 0.8193544437159878,
+      "effective_mode_count": 2.6024496265718877,
+      "dominant_mode": 1,
+      "dominant_omega": 2.558142484054655,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.669996_field_2": {
+      "top1": 0.6503803743827897,
+      "top2": 1.0,
+      "effective_mode_count": 1.8340933651203077,
+      "dominant_mode": 0,
+      "dominant_omega": 0.03534142677518444,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L110_u0.669996_equal_weight": {
+      "top1": 0.6770429197380716,
+      "top2": 0.9972928466692701,
+      "effective_mode_count": 1.7826759070767548,
+      "dominant_mode": 0,
+      "dominant_omega": 0.03534142677518444,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.669996_ramp_weight": {
+      "top1": 0.7486080925288795,
+      "top2": 0.9979589869228804,
+      "effective_mode_count": 1.6061828777120692,
+      "dominant_mode": 0,
+      "dominant_omega": 0.03534142677518444,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L110_u0.690004_field_0": {
+      "top1": 0.5811905823698557,
+      "top2": 0.9956867411327005,
+      "effective_mode_count": 1.9622919585409524,
+      "dominant_mode": 0,
+      "dominant_omega": 0.04174515841626089,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L110_u0.690004_field_1": {
+      "top1": 0.46373532575385773,
+      "top2": 0.7767574495335708,
+      "effective_mode_count": 2.755803774192484,
+      "dominant_mode": 2,
+      "dominant_omega": 3.674088186468151,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L110_u0.690004_field_2": {
+      "top1": 0.602016228898424,
+      "top2": 0.9999999999999999,
+      "effective_mode_count": 1.9200689802422026,
+      "dominant_mode": 0,
+      "dominant_omega": 0.04174515841626089,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L110_u0.690004_equal_weight": {
+      "top1": 0.6027666781918377,
+      "top2": 0.996438870386056,
+      "effective_mode_count": 1.9293169839020212,
+      "dominant_mode": 0,
+      "dominant_omega": 0.04174515841626089,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L110_u0.690004_ramp_weight": {
+      "top1": 0.6439458427939299,
+      "top2": 0.997138991748856,
+      "effective_mode_count": 1.8538435860798854,
+      "dominant_mode": 0,
+      "dominant_omega": 0.04174515841626089,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L420_u0.630008_field_0": {
+      "top1": 0.617497053810862,
+      "top2": 0.995937340411506,
+      "effective_mode_count": 1.9064462329763523,
+      "dominant_mode": 0,
+      "dominant_omega": 0.023188724807559787,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.630008_field_1": {
+      "top1": 0.9383486305715025,
+      "top2": 0.9765734640432203,
+      "effective_mode_count": 1.133134084501668,
+      "dominant_mode": 1,
+      "dominant_omega": 0.4457179949665562,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.630008_field_2": {
+      "top1": 0.6231569954172774,
+      "top2": 1.0,
+      "effective_mode_count": 1.8855995761439517,
+      "dominant_mode": 0,
+      "dominant_omega": 0.023188724807559787,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L420_u0.630008_equal_weight": {
+      "top1": 0.6688999503250105,
+      "top2": 0.9966372608460514,
+      "effective_mode_count": 1.8022882693886935,
+      "dominant_mode": 0,
+      "dominant_omega": 0.023188724807559787,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.630008_ramp_weight": {
+      "top1": 0.7603492211400329,
+      "top2": 0.9973725744603773,
+      "effective_mode_count": 1.5764965515142093,
+      "dominant_mode": 0,
+      "dominant_omega": 0.023188724807559787,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.649989_field_0": {
+      "top1": 0.6321749544400347,
+      "top2": 0.9987779037254703,
+      "effective_mode_count": 1.8725035234194622,
+      "dominant_mode": 0,
+      "dominant_omega": 0.019991647924487658,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.649989_field_1": {
+      "top1": 0.8441254685096734,
+      "top2": 0.9427860160405076,
+      "effective_mode_count": 1.3782549813660108,
+      "dominant_mode": 1,
+      "dominant_omega": 1.0511252256172336,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.649989_field_2": {
+      "top1": 0.6358162511501507,
+      "top2": 1.0,
+      "effective_mode_count": 1.8625716132059404,
+      "dominant_mode": 0,
+      "dominant_omega": 0.019991647924487658,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L420_u0.649989_equal_weight": {
+      "top1": 0.680016955748067,
+      "top2": 0.9990151103344311,
+      "effective_mode_count": 1.7724718549455696,
+      "dominant_mode": 0,
+      "dominant_omega": 0.019991647924487658,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.649989_ramp_weight": {
+      "top1": 0.765237050024189,
+      "top2": 0.9992536977669325,
+      "effective_mode_count": 1.5616408751861346,
+      "dominant_mode": 0,
+      "dominant_omega": 0.019991647924487658,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.669996_field_0": {
+      "top1": 0.637879936350243,
+      "top2": 0.9995455388156883,
+      "effective_mode_count": 1.8597972233402722,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01830793919183074,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.669996_field_1": {
+      "top1": 0.6598529767978077,
+      "top2": 0.87692458892967,
+      "effective_mode_count": 2.0093491293974277,
+      "dominant_mode": 1,
+      "dominant_omega": 2.558142484054675,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.669996_field_2": {
+      "top1": 0.641058977110484,
+      "top2": 1.0,
+      "effective_mode_count": 1.8525542098823737,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01830793919183074,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L420_u0.669996_equal_weight": {
+      "top1": 0.677144226248777,
+      "top2": 0.9996348774900199,
+      "effective_mode_count": 1.7776998541787508,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01830793919183074,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.669996_ramp_weight": {
+      "top1": 0.7486188696666282,
+      "top2": 0.9997221840599151,
+      "effective_mode_count": 1.6038925478957624,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01830793919183074,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.690004_field_0": {
+      "top1": 0.5819916534804349,
+      "top2": 0.9994380232312896,
+      "effective_mode_count": 1.9494086649991875,
+      "dominant_mode": 0,
+      "dominant_omega": 0.021701645680402986,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.690004_field_1": {
+      "top1": 0.6257787886941175,
+      "top2": 0.8436948740069468,
+      "effective_mode_count": 2.157414427557743,
+      "dominant_mode": 1,
+      "dominant_omega": 3.6740881864681403,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.690004_field_2": {
+      "top1": 0.5872012638598115,
+      "top2": 1.0,
+      "effective_mode_count": 1.9409631943969543,
+      "dominant_mode": 0,
+      "dominant_omega": 0.021701645680402986,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L420_u0.690004_equal_weight": {
+      "top1": 0.6027743796261218,
+      "top2": 0.9995318773371709,
+      "effective_mode_count": 1.9202936647188475,
+      "dominant_mode": 0,
+      "dominant_omega": 0.021701645680402986,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L420_u0.690004_ramp_weight": {
+      "top1": 0.6431036577410566,
+      "top2": 0.9996202239524218,
+      "effective_mode_count": 1.8495005174098167,
+      "dominant_mode": 0,
+      "dominant_omega": 0.021701645680402986,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.630008_field_0": {
+      "top1": 0.6190178325821676,
+      "top2": 0.9988913252510848,
+      "effective_mode_count": 1.895777088989407,
+      "dominant_mode": 0,
+      "dominant_omega": 0.015070806401038757,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.630008_field_1": {
+      "top1": 0.9591056140557871,
+      "top2": 0.9844480647428991,
+      "effective_mode_count": 1.086050281943255,
+      "dominant_mode": 1,
+      "dominant_omega": 0.44571799496656855,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.630008_field_2": {
+      "top1": 0.6210271162184287,
+      "top2": 1.0,
+      "effective_mode_count": 1.889305136976535,
+      "dominant_mode": 0,
+      "dominant_omega": 0.015070806401038757,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L1000_u0.630008_equal_weight": {
+      "top1": 0.6701702506981781,
+      "top2": 0.9990811738119474,
+      "effective_mode_count": 1.7943289728413938,
+      "dominant_mode": 0,
+      "dominant_omega": 0.015070806401038757,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.630008_ramp_weight": {
+      "top1": 0.7614825679245296,
+      "top2": 0.9992810271199348,
+      "effective_mode_count": 1.5713281009169635,
+      "dominant_mode": 0,
+      "dominant_omega": 0.015070806401038757,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.649989_field_0": {
+      "top1": 0.6324588326957762,
+      "top2": 0.9996669989165033,
+      "effective_mode_count": 1.8696966407090376,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01298975531138049,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.649989_field_1": {
+      "top1": 0.8930351545394257,
+      "top2": 0.9607085511533042,
+      "effective_mode_count": 1.2443455479229644,
+      "dominant_mode": 1,
+      "dominant_omega": 1.0511252256172043,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.649989_field_2": {
+      "top1": 0.6338761926014224,
+      "top2": 1.0,
+      "effective_mode_count": 1.8662089780506985,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01298975531138049,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L1000_u0.649989_equal_weight": {
+      "top1": 0.6801956483695109,
+      "top2": 0.9997311967600041,
+      "effective_mode_count": 1.7706349294435353,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01298975531138049,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.649989_ramp_weight": {
+      "top1": 0.7654266889602822,
+      "top2": 0.9997959467516516,
+      "effective_mode_count": 1.56053224976589,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01298975531138049,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.669996_field_0": {
+      "top1": 0.6378223667006104,
+      "top2": 0.9998763976327577,
+      "effective_mode_count": 1.859079857751572,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01189484866399782,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.669996_field_1": {
+      "top1": 0.7494474372032156,
+      "top2": 0.9092752208815785,
+      "effective_mode_count": 1.6794095586482827,
+      "dominant_mode": 1,
+      "dominant_omega": 2.558142484054667,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.669996_field_2": {
+      "top1": 0.6391168124167481,
+      "top2": 1.0,
+      "effective_mode_count": 1.8562967372218449,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01189484866399782,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L1000_u0.669996_equal_weight": {
+      "top1": 0.6770094158838504,
+      "top2": 0.9999005174504726,
+      "effective_mode_count": 1.7774604495393596,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01189484866399782,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.669996_ramp_weight": {
+      "top1": 0.7484889836303276,
+      "top2": 0.9999241567792909,
+      "effective_mode_count": 1.6039639449660066,
+      "dominant_mode": 0,
+      "dominant_omega": 0.01189484866399782,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.690004_field_0": {
+      "top1": 0.5819364434948089,
+      "top2": 0.999847997230573,
+      "effective_mode_count": 1.9481780200227659,
+      "dominant_mode": 0,
+      "dominant_omega": 0.014110448932516,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.690004_field_1": {
+      "top1": 0.7202311946686334,
+      "top2": 0.8830636092219258,
+      "effective_mode_count": 1.789160053050329,
+      "dominant_mode": 1,
+      "dominant_omega": 3.6740881864681385,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.690004_field_2": {
+      "top1": 0.5840833199216005,
+      "top2": 1.0,
+      "effective_mode_count": 1.9449954910329552,
+      "dominant_mode": 0,
+      "dominant_omega": 0.014110448932516,
+      "eta_peak_counts": {
+        "0.002": 2,
+        "0.005": 2,
+        "0.01": 2
+      }
+    },
+    "L1000_u0.690004_equal_weight": {
+      "top1": 0.6025871956175476,
+      "top2": 0.9998731449864913,
+      "effective_mode_count": 1.9195793388489393,
+      "dominant_mode": 0,
+      "dominant_omega": 0.014110448932516,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    },
+    "L1000_u0.690004_ramp_weight": {
+      "top1": 0.6427645904028226,
+      "top2": 0.9998968734306575,
+      "effective_mode_count": 1.8494893111525144,
+      "dominant_mode": 0,
+      "dominant_omega": 0.014110448932516,
+      "eta_peak_counts": {
+        "0.002": 3,
+        "0.005": 3,
+        "0.01": 3
+      }
+    }
+  },
+  "artifacts": {
+    "modes_csv": "data/generated/spectral/ssz_local_resolvent/SSZ_LOCAL_RESOLVENT_MODES.csv",
+    "curves_csv": "data/generated/spectral/ssz_local_resolvent/SSZ_LOCAL_RESOLVENT_CURVES.csv"
+  },
+  "guard": "These are local principal generalized-mode/resolvent spectra, not center-to-infinity QNM spectra."
+}

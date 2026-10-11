@@ -1,0 +1,174 @@
+{
+  "status": "FROZEN_SPECTRAL_TRIAS_COMPARISON_BASELINE_V1",
+  "frozen_at_utc": "2026-10-11T04:19:55Z",
+  "purpose": "Freeze-then-Compare Baseline fuer den Drei-Paper-Vergleich (Weisz 1978, Sokoloff/Sacco/Weisz 1978, Li 2023) gegen die lokale SSZ-Spektralanalyse auf derselben 3-DOF-Operatorversion.",
+  "scope": "Nur drei Ebenen: Residuen/Selektivitaet, Lokalisierungsdiagnostik, physikalische Resonanzpole. Keine Aussage ueber gemeinsame mikroskopische Mechanismen, keine SSZ-Mobility-Edge, keine globalen QNM-Resonanzen.",
+  "operator_version": {
+    "frozen_export": "FROZEN_SPECTRAL_OPERATOR_EXPORT_V1",
+    "npz_sha256": "85caecd59155d7d155dcb70e5cfa0b148366504778f45f51bc0f960294baab1a",
+    "healthy_window_u": [
+      0.62,
+      0.7
+    ],
+    "L_values": [
+      6,
+      12,
+      20,
+      42,
+      110,
+      420,
+      1000
+    ]
+  },
+  "input_artifacts": {
+    "weisz_reproduction": {
+      "path": "data/generated/spectral/weisz1978/WEISZ1978_FK_REPRODUCTION.json",
+      "sha256": "e823cf08bd4fdd2fd1b2d109fb73fc730c89b370f2f0888158c6f42d33de8057",
+      "bytes": 7103
+    },
+    "li_reproduction": {
+      "path": "data/generated/spectral/li2023_cst_aah/LI2023_CSTAAH_REPRODUCTION.json",
+      "sha256": "0e3bd65029c6188ee9a6f1be48ab634a97a022613fee99cdface3d92ea41cecf",
+      "bytes": 3443
+    },
+    "ssz_fixed_observable_v3": {
+      "path": "data/generated/spectral/SSZ_SPECTROSCOPY_FIXED_OBSERVABLE_V3.json",
+      "sha256": "7100e6d525a8a621f3b658f8ce11b122e5b50457586315c31bd22dfa3e4df14e",
+      "bytes": 36535
+    },
+    "frozen_operator_export_v1": {
+      "path": "data/generated/spectral/FROZEN_SPECTRAL_OPERATOR_EXPORT_V1.json",
+      "sha256": "bd0e6942bb492a88382f74e1731e727f3caf2fd49d6b9166b55251c50d07429d",
+      "bytes": 2680
+    },
+    "frozen_operator_export_v1_npz": {
+      "path": "data/generated/spectral/FROZEN_SPECTRAL_OPERATOR_EXPORT_V1.npz",
+      "sha256": "85caecd59155d7d155dcb70e5cfa0b148366504778f45f51bc0f960294baab1a",
+      "bytes": 8376346
+    },
+    "ssz_local_resolvent_modes": {
+      "path": "data/generated/spectral/ssz_local_resolvent/SSZ_LOCAL_RESOLVENT_MODES.csv",
+      "sha256": "2ca65d9340cb160b57364e9a507e68314d4a46f22422f46350349ec9cfd2135b",
+      "bytes": 41280
+    },
+    "ssz_local_resolvent_report": {
+      "path": "data/generated/spectral/ssz_local_resolvent/SSZ_LOCAL_RESOLVENT_REPORT.json",
+      "sha256": "a7995648b7788ec26f8262f56b3775da54aea724fac3155f13dbcb7271398381",
+      "bytes": 38978
+    },
+    "ssz_weisz_comparison": {
+      "path": "data/generated/spectral/SSZ_WEISZ1978_QUANTITATIVE_COMPARISON.json",
+      "sha256": "17a4d1287a9e8c3a9ba70a6d9f50a4e271195036665255f4604b32626f020a2f",
+      "bytes": 7902
+    },
+    "ssz_weisz_table_csv": {
+      "path": "data/generated/spectral/SSZ_WEISZ1978_SELECTIVITY_TABLE.csv",
+      "sha256": "1e270f191128dfeeb087214e1ceb0fafb5f9f69cb0de13c0ac77dd1b09910011",
+      "bytes": 19654
+    }
+  },
+  "baseline_numbers": {
+    "weisz_1978": {
+      "13 lambda = 10 a": {
+        "beta": 0.7,
+        "top_weight": 0.8817550597617502,
+        "neff": 1.2750967870295857,
+        "hessian_min": 0.1754691675777833
+      },
+      "48 lambda = 49 a": {
+        "beta": 0.02,
+        "top_weight": 0.501503032328942,
+        "neff": 2.0502757696402565,
+        "hessian_min": -2.485138919746018e-08
+      }
+    },
+    "li_2023": {
+      "fig1_jc_check": {
+        "N": 2584,
+        "sigma": 1.0,
+        "lambda": 1.5,
+        "jc_computed": 1937,
+        "jc_paper": 1937,
+        "match": true
+      },
+      "fig2_N4181_100theta": {
+        "btilde_localized_median": 0.051341236455751005,
+        "btilde_extended_median": 0.46014764714804235,
+        "frac_states_localized_region": 0.7486103802917963
+      }
+    },
+    "ssz_L6_field0": {
+      "robust_nondegenerate_pair_inversions": [
+        {
+          "a": 0,
+          "b": 2,
+          "max_diff": 0.3130627975043295,
+          "u_max": 0.6685258814703676,
+          "min_diff": -0.7668224774807803,
+          "u_min": 0.6200037509377344
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "max_diff": 0.062178626776289325,
+          "u_max": 0.6706526631657914,
+          "min_diff": -0.8082420207511419,
+          "u_min": 0.6200037509377344
+        }
+      ],
+      "robust_nondegenerate_inversion_count": 2,
+      "cluster_top1_range": [
+        0.38083872265937424,
+        0.8583548327439741
+      ],
+      "cluster_top2_range": [
+        0.7289444532331864,
+        0.9498871880071679
+      ],
+      "cluster_neff_range": [
+        1.3375019079089419,
+        2.9094122399897073
+      ],
+      "cluster_count_range": [
+        3,
+        3
+      ]
+    },
+    "ssz_local_resolvent_360case": {
+      "top1_range": [
+        0.3797308496275843,
+        0.9591056140557871
+      ],
+      "top2_range": [
+        0.7222843336904023,
+        1.0
+      ],
+      "neff_range": [
+        1.086050281943255,
+        2.9397243319599395
+      ]
+    },
+    "comparison_tests": {
+      "weisz_few_visible_modes_reproduced": true,
+      "ssz_has_weisz_like_sparse_observable_cases": true,
+      "ssz_selectivity_changes_with_radius": true,
+      "ssz_residue_order_reversal_survives_v3_controls": true
+    }
+  },
+  "lean_register": {
+    "module": "Mathverify/SpectralDiagnostics.lean (standalone repo /home/error/math-verify)",
+    "theorems": [
+      "two_mode_convexity",
+      "ipr_lower_bound",
+      "neff_two_mode_bound",
+      "neff_point_mass",
+      "neff_uniform_three",
+      "ipr_bound_sharp_at_balance"
+    ],
+    "meaning": "IPR/n_eff-Algebra und die 95%-Zwei-Moden-Schranke n_eff <= 2/s^2 = 800/361 maschinell bewiesen (lake build gruen, kein sorry)."
+  },
+  "interpretation_guard": {
+    "supported": "Both numerical systems exhibit sparse observable spectral weight; SSZ additionally shows robust radius-dependent redistribution in the tested healthy window.",
+    "not_supported": "Identity of microscopic mechanism, Anderson localization in SSZ, or global SSZ QNM/retarded-Green spectroscopy."
+  }
+}
