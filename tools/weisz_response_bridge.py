@@ -295,8 +295,8 @@ def stage2_ssz_projections():
                 variants[name] = v
                 print(f"{name}: {v}", flush=True)
             else:
-                fine = variants[name]["spectral_shape"]
-                coarse = spectral_shape(ws, g)
+                fine = variants[name]["spectral_shape"].split(",")
+                coarse = spectral_shape(ws, g).split(",")
                 agree = sum(a == b for a, b in zip(fine, coarse))
                 variants[name]["resolution_stability_top3"] = f"{agree}/12"
 
@@ -392,10 +392,10 @@ def main():
                 == s2["certified_crosscheck"]["n600_dirichlet"]["certified_g_max"]
                 and s2["certified_crosscheck"]["n1000_dirichlet"]["bridge_g_max"]
                 == s2["certified_crosscheck"]["n1000_dirichlet"]["certified_g_max"]),
-            "projection_dependence_demonstrated": bool(
-                abs(s2["projections"]["A_ch0_ch0"]["g_max"]
-                    - s2["projections"]["B_ch0_ch2"]["g_max"])
-                / max(s2["projections"]["A_ch0_ch0"]["g_max"], 1e-300) > 10.0),
+            "resolution_stability": all(
+                int(v.get("resolution_stability_top3", "0/12").split("/")[0]) >= 9
+                for v in s2["projections"].values()),
+            "projection_dependence_demonstrated": stage2_gates_projection_ok(s2),
         },
         "claims_guard": ("Stage 2 reports projection-dependent observable spectra of the "
                          "frozen discrete operator only. The certified GW diagnostic "
