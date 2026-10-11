@@ -1,0 +1,110 @@
+{
+ "artifact": "SSZ_SPECTRAL_RESPONSE_FRAMEWORK_V1",
+ "stage": "Stage 3 \u2014 physical source coupling (synthetic, MODEL-level)",
+ "chain": "SSZ equations -> global operator (certified 3-DOF NPZ) -> Green function -> projection response (Stage-2 certified) -> detector model (chi^2_2 periodogram, T_det synthetic) -> blind recovery",
+ "detector_model": {
+  "statistic": "exponential (chi^2_2) multiplicative periodogram noise",
+  "noise_trials": 200,
+  "injection_snr": 30.0,
+  "peak_threshold_sigma": 6.0,
+  "rng_seed": 11
+ },
+ "gates": {
+  "S3_G1_chain_consistency": true,
+  "S3_G2_noise_null": true,
+  "S3_G3_blind_recovery": true,
+  "S3_G4_false_alarm_control": true,
+  "S3_G5_resolution_stability": true
+ },
+ "overall_pass": true,
+ "detail": {
+  "G1": {
+   "projections": {
+    "A_ch0_ch0": {
+     "g_max": 0.07868776079114806,
+     "g_median": 0.07353954307637942
+    },
+    "B_ch0_ch2": {
+     "g_max": 0.0,
+     "g_median": 0.0
+    },
+    "C_ch1_ch1_late": {
+     "g_max": 2.3539941277862518e-06,
+     "g_median": 2.3530887078556636e-06
+    }
+   },
+   "certified_reproduction": {
+    "A_ch0_ch0": {
+     "bridge_g_max": 0.078688,
+     "framework_g_max": 0.078688,
+     "abs_diff": 0.0,
+     "match": true
+    },
+    "B_ch0_ch2": {
+     "bridge_g_max": 0.0,
+     "framework_g_max": 0.0,
+     "abs_diff": 0.0,
+     "match": true
+    },
+    "C_ch1_ch1_late": {
+     "bridge_g_max": 2e-06,
+     "framework_g_max": 2e-06,
+     "abs_diff": 0.0,
+     "match": true
+    }
+   },
+   "pattern_ok": true,
+   "pass": true
+  },
+  "G2_G3_G4": {
+   "g2_noise_null": {
+    "n_trials": 200,
+    "median_max_z": 0.0,
+    "max_max_z": 6.814,
+    "median_n_peaks": 0.0,
+    "pass": true
+   },
+   "g3_blind_recovery": {
+    "injected_ws": [
+     0.34048,
+     1.01344,
+     1.22646
+    ],
+    "recovered_ws": [
+     0.34048,
+     1.01344,
+     1.22646
+    ],
+    "freq_errors": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_injected": 3,
+    "n_recovered": 3,
+    "bin_width": 0.002417,
+    "pass": true
+   },
+   "g4_false_alarm": {
+    "n_other_peaks": 0,
+    "max_other_snr": 0.0,
+    "injection_snr": 30.0,
+    "pass": true
+   },
+   "injection_metadata": {
+    "amp": 0.11030931461456914,
+    "lorentzian_reg": 1e-06,
+    "noise_sigma": 0.003676977153818971,
+    "noise_model": "additive Gaussian, sigma=NOISE_FRAC*median"
+   }
+  },
+  "G5": {
+   "grid": "n=200, 400 freqs (coarse)",
+   "n_injected": 3,
+   "n_recovered": 3,
+   "pass": true
+  }
+ },
+ "claims_guard": "Stage 3 is a SYNTHETIC end-to-end validation of the prediction chain on the frozen discrete operator. It demonstrates that injected modes are blindly recoverable through the certified response chain \u2014 it does NOT claim any detection in real data. The certified GW verdict PEAKS_NOT_ROBUST is reproduced, not overturned. No NICER/GWOSC claim. All results MODEL-level.",
+ "wall_seconds": 74.9
+}
