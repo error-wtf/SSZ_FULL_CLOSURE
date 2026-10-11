@@ -8,7 +8,7 @@
       "multipoles": {
         "6": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 4.834466726854262e-09,
+          "max_closed_formula_scaled_difference": 5.123384605454362e-09,
           "max_forbidden_H0_term": 1.1102230246251565e-16,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -59,7 +59,7 @@
         },
         "12": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 4.8344667256422776e-09,
+          "max_closed_formula_scaled_difference": 4.866201885889154e-09,
           "max_forbidden_H0_term": 2.220446049250313e-16,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -110,7 +110,7 @@
         },
         "20": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 4.834466724026299e-09,
+          "max_closed_formula_scaled_difference": 4.630921555827172e-09,
           "max_forbidden_H0_term": 4.440892098500626e-16,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -161,7 +161,7 @@
         },
         "42": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 4.834466719582357e-09,
+          "max_closed_formula_scaled_difference": 4.792334307168744e-09,
           "max_forbidden_H0_term": 8.881784197001252e-16,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -212,7 +212,7 @@
         },
         "110": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 4.834466705846539e-09,
+          "max_closed_formula_scaled_difference": 2.7496789977438964e-09,
           "max_forbidden_H0_term": 1.3877787807814457e-17,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -263,7 +263,7 @@
         },
         "420": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 4.834466643227367e-09,
+          "max_closed_formula_scaled_difference": 3.116474772690836e-09,
           "max_forbidden_H0_term": 1.3877787807814457e-17,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -314,7 +314,7 @@
         },
         "1000": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 4.834466526068921e-09,
+          "max_closed_formula_scaled_difference": 2.0784907683868425e-09,
           "max_forbidden_H0_term": 2.842170943040401e-14,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -370,7 +370,7 @@
       "multipoles": {
         "6": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 5.859002727426343e-10,
+          "max_closed_formula_scaled_difference": 1.2420890178028676e-09,
           "max_forbidden_H0_term": 1.7763568394002505e-15,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -421,7 +421,7 @@
         },
         "12": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 6.558681375778974e-10,
+          "max_closed_formula_scaled_difference": 1.3265544108923942e-09,
           "max_forbidden_H0_term": 1.7763568394002505e-15,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -472,7 +472,7 @@
         },
         "20": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 3.703200281146568e-10,
+          "max_closed_formula_scaled_difference": 1.4588265848069915e-09,
           "max_forbidden_H0_term": 1.7763568394002505e-15,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -523,7 +523,7 @@
         },
         "42": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 7.191892636981834e-10,
+          "max_closed_formula_scaled_difference": 1.9908370507693007e-09,
           "max_forbidden_H0_term": 1.7763568394002505e-15,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -574,7 +574,7 @@
         },
         "110": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 5.203509666108555e-10,
+          "max_closed_formula_scaled_difference": 1.990837106280452e-09,
           "max_forbidden_H0_term": 3.552713678800501e-15,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -625,7 +625,7 @@
         },
         "420": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 3.757382796347863e-10,
+          "max_closed_formula_scaled_difference": 4.3562050097078893e-10,
           "max_forbidden_H0_term": 1.4210854715202004e-14,
           "H0_square_max_abs": 0.0,
           "operator_structure": {
@@ -676,7 +676,7 @@
         },
         "1000": {
           "status": "PASS",
-          "max_closed_formula_scaled_difference": 1.977445901468755e-09,
+          "max_closed_formula_scaled_difference": 1.0488362521140945e-09,
           "max_forbidden_H0_term": 2.842170943040401e-14,
           "H0_square_max_abs": 0.0,
           "operator_structure": {

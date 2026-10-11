@@ -6,26 +6,26 @@
   "derivatives": "JET9D8 window=9 degree=8",
   "light_rings": [
     {
-      "radius": 1.4161606552723742,
-      "f": 0.295876793067912,
-      "h": 0.37412980232784293,
+      "radius": 1.416160655272375,
+      "f": 0.2958767930679123,
+      "h": 0.37412980232784165,
       "tensor_h": 0.9999699059644178,
-      "a4": 0.16635027979409078,
-      "geometric_factor": 1.8302026908571805,
-      "zero_vector_required_tensor_f": -1.638626777346889,
-      "zero_vector_required_f_over_h": -1.638676091723501,
-      "electric_q_for_f_equals_h": 1.5636514881801942
+      "a4": 0.16635027979409056,
+      "geometric_factor": 1.830202690274466,
+      "zero_vector_required_tensor_f": -1.6386267768251634,
+      "zero_vector_required_f_over_h": -1.6386760912017597,
+      "electric_q_for_f_equals_h": 1.5636514878710226
     },
     {
-      "radius": 1.4999999937556716,
-      "f": 0.33333333028806633,
-      "h": 0.3333333363761863,
-      "tensor_h": 0.9720791219735426,
-      "a4": 0.16201318684266958,
-      "geometric_factor": -1.3333330090815845,
-      "zero_vector_required_tensor_f": 0.9720788983685167,
-      "zero_vector_required_f_over_h": 0.9999997699724016,
-      "electric_q_for_f_equals_h": 1.4907001578681684e-07
+      "radius": 1.4999999937556818,
+      "f": 0.33333333028807083,
+      "h": 0.33333333637619084,
+      "tensor_h": 0.9720791219735354,
+      "a4": 0.16201318684267058,
+      "geometric_factor": -1.3333330031809019,
+      "zero_vector_required_tensor_f": 0.9720788940665687,
+      "zero_vector_required_f_over_h": 0.9999997655468967,
+      "electric_q_for_f_equals_h": 1.519379764177622e-07
     }
   ],
   "inner_zero_vector_no_go": true,
@@ -34,12 +34,12 @@
   "electric_seed": {
     "path": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_EQ85_SEED.csv",
     "definition": "pointwise Eq.85 solution for q=A0prime^2*v8 with tensor_F target fixed to tensor_H of the carrier witness",
-    "min": -0.19547630970541138,
-    "max": 1.733689982887512,
-    "median": -0.0327397112775948,
+    "min": -0.19547630891514078,
+    "max": 1.733690094090769,
+    "median": -0.03273970729807637,
     "positive_fraction": 0.2264,
-    "inner_light_ring_q_for_F_equals_H": 1.5636514881801942,
-    "outer_light_ring_q_for_F_equals_H": 1.4907001578681684e-07,
+    "inner_light_ring_q_for_F_equals_H": 1.5636514878710226,
+    "outer_light_ring_q_for_F_equals_H": 1.519379764177622e-07,
     "warning": "This seed solves only the necessary background identity for a chosen tensor target; it is not a holonomic action reconstruction."
   }
 }

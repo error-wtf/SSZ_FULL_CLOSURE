@@ -16,7 +16,7 @@
     "literal_scaled": 1.1481481491290702,
     "prediction_scaled": 8.086249512696124e-09,
     "rank1_scaled": 2.7084537450479164e-15,
-    "alpha7_scaled": 8.419560264280624e-12
+    "alpha7_scaled": 7.686100533276827e-12
   },
   "first_failing_step": null,
   "first_published_shortcut_divergence": "EQ47_MIXED_MISSING_K_TO_M_PROJECTION_FACTOR",
@@ -50,103 +50,50 @@
     "predicted_residual": 10169.545195219933,
     "prediction_scaled": 2.5220154980039796e-14,
     "rank1_scaled": 5.692665638402945e-16,
-    "null_quadratic_B1": 4053.6873221225546,
-    "null_quadratic_B2": -695976.104649254,
-    "alpha7_scaled": 4.3728552898183773e-13,
-    "m5_minus_shortcut_B1": 7430.806554354716,
-    "m5_minus_shortcut_B2": 1219816.355979998,
-    "projected_eq47_m5_minus_B1": 3402.833326512566,
-    "projected_eq47_m5_minus_B2": -807926.1380909168,
-    "m5_plus_shortcut_B1": 7399.506262242084,
-    "m5_plus_shortcut_B2": 248059.06616859464,
-    "projected_eq47_m5_plus_B1": 7650.649221539274,
-    "projected_eq47_m5_plus_B2": 126690.22470237433,
+    "null_quadratic_B1": 4053.687320299507,
+    "null_quadratic_B2": -695976.1049633179,
+    "alpha7_scaled": 1.486807903801122e-12,
+    "m5_minus_shortcut_B1": 7430.806552525883,
+    "m5_minus_shortcut_B2": 1219816.3556654367,
+    "projected_eq47_m5_minus_B1": 3402.833326513607,
+    "projected_eq47_m5_minus_B2": -807926.1380910611,
+    "m5_plus_shortcut_B1": 7399.5062604132145,
+    "m5_plus_shortcut_B2": 248059.06610602213,
+    "projected_eq47_m5_plus_B1": 7650.649221541177,
+    "projected_eq47_m5_plus_B2": 126690.22470241699,
     "leading_eps_power": 3.0,
-    "action_root0": -164.9755219539495,
-    "action_root1": 1.0000000000000122,
-    "action_root2": 4218.662844076511,
-    "action_B1": 4053.687322122566,
-    "action_B2": -695976.1046492563,
-    "vector_factor_remainder": 8.792085282038897e-09,
-    "literal_shortcut_B1": 7430.806521841723,
-    "literal_shortcut_B2": 1219816.3585651186
+    "action_root0": -164.97552209420328,
+    "action_root1": 1.0000000000000124,
+    "action_root2": 4218.662842393717,
+    "action_B1": 4053.6873202995166,
+    "action_B2": -695976.1049633203,
+    "vector_factor_remainder": 8.77753336681053e-09,
+    "literal_shortcut_B1": 7430.806520012904,
+    "literal_shortcut_B2": 1219816.358250556
   },
   "finite_L_to_laurent": "PASS",
   "finite_L_root_scaled_errors": [
-    0.37958417065990036,
-    0.038991719490752495,
-    0.003909849566769271,
-    0.0003910867902219236
+    0.3795841721556669,
+    0.03899171953045051,
+    0.003909849570607533,
+    0.0003910867915795042
   ],
   "dense_branch_angular": "DENSE_ANGULAR_FAIL",
-  "dense_angular_direct_2026-09-22": {
-    "route": "DIRECT_NULL_VECTOR_EPS3_DETERMINANT",
-    "tool": "tools/audit_dense_angular_direct.py",
-    "evidence": "data/generated/dense_angular_direct_2026-09-22/",
-    "witness_anchor_scaled": 1.1218116118742811e-15,
-    "witness_anchor_u": 0.6500150037509377,
-    "max_rank1_scaled": 2.338202021749017e-15,
-    "max_eq46_scaled": 1.3929715924098487e-10,
-    "max_eq46_vec_scaled": 1.0124898603612985e-15,
-    "alpha7_kinetic_identity": {
-      "scope": "central genuine-SVT member oracle; diagnostic only on the hybrid dense member",
-      "witness_representative_scaled": 4.3728552898183773e-13,
-      "dense_max_scaled": 0.8022350435833089
-    },
-    "trusted_points": 297,
-    "n_cminus_negative": 297,
-    "min_cminus": -1473.2079063534215,
-    "u_at_min_cminus": 0.7063353338334584,
-    "min_cV": 0.048412752850779846,
-    "min_cplus": 2514.1881725342664,
-    "n_disc_negative": 0,
-    "mode_tracking": "vector root identity-based; gaps 231.09/2514.09; no degeneracies",
-    "method_agreement_jaccard_negative_u_vs_finiteL1000": 1.0,
-    "verdict": "DENSE_ANGULAR_ACTION_DIRECT_FAIL",
-    "classification": "CANDIDATE_PHYSICAL_FALSIFICATION_GATE_FOR_CURRENT_MEMBER",
-    "tangent_baseline_refreeze_2026-09-22": {
-      "cause": "TOTAL41 emitted with an intermediate holonomic re-emission chain during 1ff011f development; e3 channel drifted 1.5626839589798224e-05 vs finalized sources",
-      "action": "REFREEZE_BASELINE_FROM_CURRENT_SOURCES with historical predictor c (no re-optimization); provenance in REFREEZE_PROVENANCE.json; frozen originals kept as *.2026-09-21_frozen",
-      "post_refreeze_replay_scaled_error": 0.0,
-      "dense_K_after_refreeze": {
-        "min_K": 1.2603117195246649e-05,
-        "L": 1000,
-        "u": 0.7048124531132783,
-        "status": "DENSE_K_PASS_UNCHANGED"
-      }
-    },
-    "tangent_sensitivity_2026-09-22": {
-      "status": "EVALUATED_TWO_STEPS_L1000",
-      "evidence": "data/generated/angular_eq47_projection_2026-09-21/DENSE_ACTION_TANGENT_SENSITIVITY.csv",
-      "derivatives_d_root_dc_axis": [
-        -2429.8344175349484,
-        1074.147858548713,
-        269.02924520300076,
-        -193.94225691939934
-      ],
-      "worst_point_u": 0.7063353338334584,
-      "finite_L1000_worst_root": -1481.4835824739075,
-      "mode_character": "pure project-psi branch (psi_coordinate_weight 0.99997)",
-      "controllability": "all four background-null axes reach the angular margin; a minimal-norm step exists within historical trust bounds",
-      "no_fit_classification": "CONTROLLABILITY_DIAGNOSTIC_ONLY; using these gradients to choose jets would be stability fitting (prohibited). Repair requires an independently registered transverse-selection principle or an explicit CONSTRUCTION_CONSTRAINT demotion of the angular gate."
-    },
-    "next_bounded_work": "user decision: (A) accept PHYSICAL_FALSIFICATION_GATE for the certified member, or (B) declare angular positivity a CONSTRUCTION_CONSTRAINT with a pre-registered stability-independent selection principle, demoting the angular gate in the closure ledger"
-  },
   "dense_summary": {
     "trusted_points": 297,
-    "high_L_minimum": -3.0762041738033584e+59,
+    "high_L_minimum": -3.0762041735249907e+59,
     "u_at_minimum": 0.7002175543885971,
     "finite_L_all_positive": false,
     "high_L_order_status": "UNRESOLVED_NONUNIFORM_LEADING_ORDER",
     "high_L_minimum_scope": "raw diagnostic only when order unresolved",
     "leading_order_counts": {
-      "1": 101,
-      "3": 196
+      "1": 94,
+      "3": 203
     },
     "coordinate_weights_scope": "project differential basis; not invariant physical mode fractions",
     "tangent_bundle_sensitivity": "HELD_BASELINE_REPLAY_MISMATCH",
     "oracle_scope": "GM_GHS input absent; diagnostic scan does not release continuation",
-    "tangent_baseline_replay_scaled_error": 1.5626839589798224e-05
+    "tangent_baseline_replay_scaled_error": 1.5450980527015125e-05
   },
   "eq47_only_shortcut_correction": "DETERMINANT_RECONSTRUCTION_WITH_LITERAL_MASS_SLOTS_M5_PLUS",
   "coupled_quadratic_derivation": {
@@ -160,83 +107,5 @@
   "continuation_0p708_to_0p715": "HELD",
   "global_QNM": "HELD",
   "absolute_full_closure": false,
-  "failed_member_freeze_2026-09-22": {
-    "CURRENT_CERTIFIED_MEMBER_ANGULAR": "FAIL_ROBUST",
-    "PHYSICAL_FALSIFICATION_GATE_CURRENT_MEMBER": true,
-    "ABSOLUTE_FULL_CLOSURE_CURRENT_MEMBER": false,
-    "scope": "falsifies the current fixed transverse/action completion only, not the Horndeski+SVT theory family; the background leaves transverse action jets underdetermined",
-    "witness_evidence": [
-      "data/generated/dense_angular_direct_2026-09-22/",
-      "data/generated/angular_eq47_projection_2026-09-21/DENSE_ACTION_TANGENT_SENSITIVITY.csv",
-      "data/generated/strong_field_transition_2026-09-21/TRANSITION_DENSE_H_CONTINUATION_TOTAL41.csv.2026-09-21_frozen"
-    ],
-    "tangent_sensitivity_status": "CONTROLLABILITY_DIAGNOSTIC_RETAINED_MUST_NOT_SELECT_NEW_MEMBER",
-    "member_preservation": "the failed member (historical predictor c, refrozen baseline) remains the canonical TOTAL41/STATE artifacts and is preserved permanently as a falsification/regression witness",
-    "decision": "owner decision 2026-09-22: stricter-than-B path; no repair of the failed member"
-  },
-  "prospective_member_v2_2026-09-22": {
-    "rule_freeze_before_any_stability_evaluation": true,
-    "rule_id": "PROSPECTIVE_V2_TRANSVERSE_ZERO",
-    "rule": "c = 0: the prospective member exercises none of the background-null transverse freedom. Justification: minimal operator content / minimal covariant action complexity / parameter-free uniqueness of the no-free-freedom completion. The rule was fixed without consulting K, c_r^2, c_Omega^2, QNM, published-root or observational information; the historical predictor c was itself K-chosen and is therefore NOT reusable under this rule.",
-    "background": "identical to the failed member by construction (background-null bundle)",
-    "angular_prediction_class": "INDEPENDENT_PREDICTION if the member passes; the selection rule imposes no angular condition",
-    "outcome": {
-      "chain_termination": "FIRST_FAILING_GATE_K",
-      "verdict": "K_GHOST_FAIL",
-      "evidence": "data/generated/strong_field_transition_2026-09-21/PROSPECTIVE_V2_K_GATE.json",
-      "per_L_min_K_at_umax": {
-        "6": -0.10788632373974315,
-        "1000": -18.522265817831975
-      },
-      "meaning": "The background-forced action alone contains a kinetic ghost on the certified dense branch; the historical K>0 transverse repair was necessary, not cosmetic. The minimal-completion hypothesis is refuted."
-    },
-    "structural_consequence": "Within this background-null bundle the viable member set is governed by TWO construction constraints: K>0 (forces c!=0) and angular c_Omega>0 (open for every K-viable member). Any member selected to satisfy both can classify neither gate as INDEPENDENT_PREDICTION. Absolute Full Closure with all gates as independent predictions is therefore unreachable within this bundle; breaking the circularity requires an independent covariant completion principle that fixes the transverse jets from theory rather than from stability.",
-    "proven_statement": "The previous background-determined + transverse-free construction is insufficient for an anti-circular Absolute Full Closure.",
-    "not_proven_statement": "Horndeski+SVT as a theory family is impossible. The canon itself flags the fundamental action as an open inverse problem (SSZ_Variational_Bridge_Paper v2 sections 19-21: no fundamental four-dimensional SSZ action; higher-derivative promotion warnings; SSZ_Middle_Bridge_Unified_Dynamics: defect-to-gauge and NED diagnostics are action-search filters leaving the fundamental inverse problem open).",
-    "canon_alignment_2026-09-22": {
-      "variational_bridge_v2_sha256": "2c93df706b9f70bdea980620a02586c1613d1b1cd067a3edec97248ce2e69ecf",
-      "middle_bridge_md_sha256": "b616c0f9bd82bb2a1c52edeb5fd32cc763d20a70a1e0eff1dba4f4270db4b484",
-      "finding": "Our two falsification results are live instances of the canon's own warnings: effective/one-dimensional constructions promoted to Lorentzian actions introduce extra degrees of freedom and stability problems (Variational Bridge section 20), and the transition must carry the required response change without unacceptable instability (Middle Bridge). The V3 program therefore continues the canon's own stated research target: a deeper SSZ vacuum/phase/segmentation dynamics from which the effective principles reduce."
-    }
-  },
-  "method_pipeline": "PASS",
-  "phase2_blind_forward_replay_2026-09-22": {
-    "members": [
-      "C1",
-      "C3"
-    ],
-    "unblinding_log": "data/generated/phase2/PHASE2_UNBLINDING_LOG.json",
-    "git_commit_before_unblind": "54332690b61cd3f4291b371e41ac47c19b68492d",
-    "C1": {
-      "result": "K_GHOST_FAIL",
-      "stream": "identical to C0 witness (machine precision)",
-      "ledger": "data/generated/phase2/PHASE2_RESULTS_C1.json",
-      "absolute_full_closure": false,
-      "scope_limit": "C1_SCOPE_LIMIT registered"
-    },
-    "C3": {
-      "result": "K_GHOST_FAIL",
-      "classification": "NEW_THEORY_HYPOTHESIS_WITH_FIXED_FIELDSPACE_METRIC (never renamed)",
-      "nontriviality_check": "TRIVIAL (Gram positive definite; unique minimizer c=0)",
-      "stream": "identical to C0 witness (machine precision)",
-      "ledger": "data/generated/phase2/PHASE2_RESULTS_C3.json",
-      "absolute_full_closure": false
-    },
-    "interpretation": "Both pre-registered, stability-blind completion hypotheses select the already-falsified minimal stream: the kinetic ghost is the genuine prediction of both C1 and C3. Per frozen semantics: no repair, no new completion, no optimization; downstream gates NOT_APPLICABLE_DUE_TO_UPSTREAM_FAIL / DIAGNOSTIC_AFTER_UPSTREAM_FAIL.",
-    "no_repair_performed": true,
-    "interpretation_correction_2026-09-22_forensics": {
-      "trigger": "owner-identified contradiction with historical healthy witnesses",
-      "audit": "docs/phase2_forensics/FORENSIC_PROVENANCE_AUDIT.md + data/generated/phase2_forensics/HISTORICAL_MEMBER_PROVENANCE_COMPARISON.json",
-      "retracted": "overstrong reading that minimal completion class necessarily fails and new non-minimal physics is logically forced",
-      "confirmed": "C1/C3 blind predictions (K_GHOST_FAIL on the minimal stream) stand as frozen predictions",
-      "established_facts": [
-        "C1/C3 streams are machine-identical to the central member data (corrector no-op ~1e-11)",
-        "f3X and background-determined structure retained (scalar identity residual 2.8e-4 central / 3.4e-4 corrected window vs 1e-12 historical lobe)",
-        "historical K 10.54 = reduced even-sector K_ZK_exact combination, superseded as full finite-L witness by the 2026-09-17 central kinetic gate FAIL",
-        "angular 84.912/643.142 superseded by the direct eps^3 action determinant",
-        "BACKGROUND=PASS justified (corrector residuals machine precision); Phase-2 E00=1.04 diagnostic was an evaluator-input artifact on the primitive-free stream",
-        "healthy finite-L K representatives exist in-architecture (strong-H carrier 1.6e-7 @ L=1000; exterior 9.9e-7) => Q1=YES; Q2 same-action assembly and Q3 full closure remain open"
-      ]
-    }
-  }
+  "method_pipeline": "PASS"
 }

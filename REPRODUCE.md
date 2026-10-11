@@ -1,5 +1,13 @@
 # Reproduce and interpret the current repository
 
+> **Neu 2026-10-11 — Full Pipeline in einem Befehl:**
+> `PYTHONPATH=src python tools/run_full_pipeline.py` →
+> `FULL_PIPELINE_REPORT.md` (pytest + 19 Evidence-Audits + die vier
+> zertifizierten Pfeiler-Artefakte + Metadaten; Exit 0 nur bei komplett
+> grün). Details siehe Sektion **"Full Pipeline (2026-10-11)"** unten
+> sowie `PEER_REVIEW.md` und `demos/animate_core_results.py` (5 animierte
+> GIFs der Kernergebnisse).
+
 Supported environment: CPython 3.14 on Linux with the pinned dependency lock.
 
 ```bash
@@ -112,3 +120,36 @@ python tools/run_all_evidence.py
 For a full software/integrity run use `python tools/run_all_evidence.py --full`.
 Expected exit code 2 for a rejected-member witness is encoded in
 `REPO_EVIDENCE_REGISTRY.json` and is not silently promoted to Absolute Closure.
+
+## Full Pipeline (2026-10-11)
+
+```bash
+PYTHONPATH=src python tools/run_full_pipeline.py          # alles, ~10–25 min
+PYTHONPATH=src python tools/run_full_pipeline.py --skip-tests   # Stages 2–4, ~5–10 min
+```
+
+Vier Stages, alle real ausgeführt:
+
+1. **pytest** — erwartet `317 passed, 1 skipped` (~162 s). Braucht
+   `jsonschema` (sonst 7 Collection-Errors).
+2. **Evidence-Registry** — `tools/run_all_evidence.py`, 19 Audits;
+   erwartet `status: PASS` in
+   `data/generated/repo_observability/ALL_EVIDENCE_RUN.json`. Muss mit
+   `PYTHONPATH=src` laufen (die Pipeline setzt es selbst); zwei Audits
+   (`regional_kinetic_rejected_member`, `frozen_onshell_rejected_zero_vector`)
+   haben **erwarteten Exit 2** — das ist registriert, kein Fehler.
+3. **Zertifizierte Pfeiler-Artefakte** — Live-Check gegen eingefrorene
+   Erwartungen: FK V1 6/6 Gates PASS, Bridge Run 6 Stage1+2 PASS,
+   SRF Run 6 5/5 Gates PASS; plus sha256/Größe je Artefakt.
+4. **Metadaten + Demos** — `MODEL_LOCK.json`/`EVIDENCE_INDEX.json` ==
+   HEAD, 5 Demo-GIFs vorhanden.
+
+Output: `FULL_PIPELINE_REPORT.md` (Datum, HEAD, Stage-Verdicts,
+Artefakt-Hashes, ehrliche Interpretation). Demo-GIFs (neu erzeugbar):
+`python demos/animate_core_results.py` (~10 s → `demos/output/*.gif`).
+
+Bekannte Stolpersteine: `PYTHONPATH=src` vergessen → alle Audits
+`ModuleNotFoundError: ssz_p5`; `jsonschema` fehlt → pytest
+Collection-Errors; nach neuem Commit Metadata-Stempel auffrischen
+(`tools/refresh_release_metadata.py`) sonst schlägt
+`test_release_metadata_current` fehl.

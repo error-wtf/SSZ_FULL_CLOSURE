@@ -3,27 +3,159 @@
   "absolute_full_closure": "NOT_INFERRED_FROM_THIS_RUN",
   "selection": {
     "full_checks_included": false,
-    "only": [
-      "regional_kinetic_rejected_member",
-      "frozen_onshell_rejected_zero_vector"
-    ],
-    "complete_registered_audits": false
+    "only": [],
+    "complete_registered_audits": true
   },
-  "status": "PASS_SELECTED",
+  "status": "PASS",
   "runs": [
+    {
+      "id": "zero_vector_light_ring",
+      "category": "member_rejection",
+      "scope": "Analytic/light-ring exclusion of global A0prime=0 member and electric seed generation",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_zero_vector_light_ring.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/absolute_attempt_2026-09-19/ZERO_VECTOR_LIGHT_RING_AUDIT.json",
+      "stdout_tail": "{\n  \"status\": \"PASS_DIAGNOSTIC_ZERO_VECTOR_EXCLUDED_AT_INNER_LIGHT_RING\",\n  \"scope\": \"Local necessary on-shell Eq.85 diagnostic; not a no-go theorem for electric SVT members or P5 geometry\",\n  \"source_csv\": \"data/production/ssz_p5_horndeski_carrier_through_light_rings_to_core_2026-09-12.csv\",\n  \"source_sha256\": \"65b32db2d2769d49af1616476608368d8d17f3d6ebc1b29cb5f2ca87bbba18ba\",\n  \"derivatives\": \"JET9D8 window=9 degree=8\",\n  \"light_rings\": [\n    {\n      \"radius\": 1.416160655272375,\n      \"f\": 0.2958767930679123,\n      \"h\": 0.37412980232784165,\n      \"tensor_h\": 0.9999699059644178,\n      \"a4\": 0.16635027979409056,\n      \"geometric_factor\": 1.830202690274466,\n      \"zero_vector_required_tensor_f\": -1.6386267768251634,\n      \"zero_vector_required_f_over_h\": -1.6386760912017597,\n      \"electric_q_for_f_equals_h\": 1.5636514878710226\n    },\n    {\n      \"radius\": 1.4999999937556818,\n      \"f\": 0.33333333028807083,\n      \"h\": 0.33333333637619084,\n      \"tensor_h\": 0.9720791219735354,\n      \"a4\": 0.16201318684267058,\n      \"geometric_factor\": -1.3333330031809019,\n      \"zero_vector_required_tensor_f\": 0.9720788940665687,\n      \"zero_vector_required_f_over_h\": 0.9999997655468967,\n      \"electric_q_for_f_equals_h\": 1.519379764177622e-07\n    }\n  ],\n  \"inner_zero_vector_no_go\": true,\n  \"outer_zero_vector_consistency_check\": true,\n  \"logic\": \"At a light ring 2f-rf'=0, Eq.85 loses the a4' control. For A0prime=0 the inner P5 light ring requires tensor_F<0 while tensor_H>0 implies a4>0. The electric term -2rfh A0prime^2 v8 is therefore a necessary available control for a stable hybrid branch.\",\n  \"electric_seed\": {\n    \"path\": \"data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_EQ85_SEED.csv\",\n    \"definition\": \"pointwise Eq.85 solution for q=A0prime^2*v8 with tensor_F target fixed to tensor_H of the carrier witness\",\n    \"min\": -0.19547630891514078,\n    \"max\": 1.733690094090769,\n    \"median\": -0.03273970729807637,\n    \"positive_fraction\": 0.2264,\n    \"inner_light_ring_q_for_F_equals_H\": 1.5636514878710226,\n    \"outer_light_ring_q_for_F_equals_H\": 1.519379764177622e-07,\n    \"warning\": \"This seed solves only the necessary background identity for a chosen tensor target; it is not a holonomic action reconstruction.\"\n  }\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "electric_hybrid_principal_feasibility",
+      "category": "active_search",
+      "scope": "Current pivot-safe Central principal feasibility checkpoint",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_electric_hybrid_principal_feasibility.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/absolute_attempt_2026-09-19/ELECTRIC_HYBRID_PRINCIPAL_RECIPE_AUDIT.json",
+      "stdout_tail": "{\n  \"status\": \"FEASIBILITY_ONLY_NOT_BACKGROUND_CERTIFIED\",\n  \"scope\": \"central 0.62<u<0.70 finite-L kinetic/pivot response of the stored primitive-control recipe\",\n  \"validation\": {\n    \"constraint_pivots_nonzero\": true,\n    \"high_L_positive_42_110_420_1000\": true,\n    \"all_required_L_positive\": false\n  },\n  \"scans\": [\n    {\n      \"L\": 6,\n      \"min_eig_K\": -3.242946009176103,\n      \"u\": 0.6999287321830457,\n      \"x\": 1.4287168879052097,\n      \"min_abs_Dh1\": 151.05792186119652,\n      \"min_abs_auxiliary_determinant\": 441.87942773832293,\n      \"pass_kinetic\": false\n    },\n    {\n      \"L\": 12,\n      \"min_eig_K\": -0.130993726717627,\n      \"u\": 0.6999287321830457,\n      \"x\": 1.4287168879052097,\n      \"min_abs_Dh1\": 556.9131348819137,\n      \"min_abs_auxiliary_determinant\": 1767.517710953292,\n      \"pass_kinetic\": false\n    },\n    {\n      \"L\": 20,\n      \"min_eig_K\": -0.012877363539509162,\n      \"u\": 0.6999812453113278,\n      \"x\": 1.4286097044717736,\n      \"min_abs_Dh1\": 1494.404760713267,\n      \"min_abs_auxiliary_determinant\": 4909.771419314698,\n      \"pass_kinetic\": false\n    },\n    {\n      \"L\": 42,\n      \"min_eig_K\": 0.0012545874985009531,\n      \"u\": 0.6999812453113278,\n      \"x\": 1.4286097044717736,\n      \"min_abs_Dh1\": 6408.14856737855,\n      \"min_abs_auxiliary_determinant\": 21652.09195917783,\n      \"pass_kinetic\": true\n    },\n    {\n      \"L\": 110,\n      \"min_eig_K\": 0.00046476833515427803,\n      \"u\": 0.6999812453113278,\n      \"x\": 1.4286097044717736,\n      \"min_abs_Dh1\": 43253.85371835734,\n      \"min_abs_auxiliary_determinant\": 148520.58543426963,\n      \"pass_kinetic\": true\n    },\n    {\n      \"L\": 420,\n      \"min_eig_K\": 3.9884934613010546e-05,\n      \"u\": 0.6999812453113278,\n      \"x\": 1.4286097044717736,\n      \"min_abs_Dh1\": 625909.5126805246,\n      \"min_abs_auxiliary_determinant\": 2165209.195917784,\n      \"pass_kinetic\": true\n    },\n    {\n      \"L\": 1000,\n      \"min_eig_K\": 7.3161306485240825e-06,\n      \"u\": 0.6999812453113278,\n      \"x\": 1.4286097044717736,\n      \"min_abs_Dh1\": 3542794.4788180315,\n      \"min_abs_auxiliary_determinant\": 12274428.548286732,\n      \"pass_kinetic\": true\n    }\n  ],\n  \"interpretation\": \"The stored Horndeski primitive controls strongly reduce the old Central kinetic failure while preserving large constraint-pivot margins, but L=6,12,20 remain negative near the upper Central edge. Further principal-only shaping is not promoted as closure; the next control must come from the electric/background action sector.\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "strong_field_transition",
+      "category": "active_search",
+      "scope": "Action-first 0.70<=u<=0.715 transition diagnostics, mode tracking, electric nondegeneracy, and falsification of single-channel shortcuts",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_strong_field_transition.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/STRONG_FIELD_TRANSITION_AUDIT.json",
+      "stdout_tail": "      0.056958920366137804\n      ],\n      \"min_abs_Dh1\": 1960.096564892278,\n      \"min_abs_auxiliary_determinant\": 9753.313600284411\n    },\n    \"420\": {\n      \"first_min_eigenvalue_zero_u\": 0.7012942383150262,\n      \"min_eig_K_transition\": -27.235732191495092,\n      \"light_ring_u_grid\": 0.70612528132033,\n      \"light_ring_min_eig_K\": -11.418500884012774,\n      \"light_ring_weakest_vector\": [\n        0.0020813378811367985,\n        -0.998355811502398,\n        0.05728299636028447\n      ],\n      \"min_abs_Dh1\": 27529.82481447223,\n      \"min_abs_auxiliary_determinant\": 142188.80323059243\n    },\n    \"1000\": {\n      \"first_min_eigenvalue_zero_u\": 0.7012940913864435,\n      \"min_eig_K_transition\": -27.98282633561888,\n      \"light_ring_u_grid\": 0.70612528132033,\n      \"light_ring_min_eig_K\": -11.734007618171274,\n      \"light_ring_weakest_vector\": [\n        -0.0009656353505394298,\n        0.9987013283062156,\n        -0.05093843723329279\n      ],\n      \"min_abs_Dh1\": 154845.0164871627,\n      \"min_abs_auxiliary_determinant\": 806058.9752301171\n    }\n  },\n  \"g2xx_kinetic_direction\": {\n    \"amplitude\": 10000.0,\n    \"shape\": \"C-infinity compact bump on 0.70<u<0.715\",\n    \"response\": {\n      \"6\": {\n        \"max_abs_delta_K\": 0.0,\n        \"max_abs_delta_min_eigenvalue\": 0.0\n      },\n      \"12\": {\n        \"max_abs_delta_K\": 0.0,\n        \"max_abs_delta_min_eigenvalue\": 0.0\n      },\n      \"20\": {\n        \"max_abs_delta_K\": 0.0,\n        \"max_abs_delta_min_eigenvalue\": 0.0\n      },\n      \"42\": {\n        \"max_abs_delta_K\": 0.0,\n        \"max_abs_delta_min_eigenvalue\": 0.0\n      },\n      \"110\": {\n        \"max_abs_delta_K\": 0.0,\n        \"max_abs_delta_min_eigenvalue\": 0.0\n      },\n      \"420\": {\n        \"max_abs_delta_K\": 0.0,\n        \"max_abs_delta_min_eigenvalue\": 0.0\n      },\n      \"1000\": {\n        \"max_abs_delta_K\": 0.0,\n        \"max_abs_delta_min_eigenvalue\": 0.0\n      }\n    },\n    \"interpretation\": \"G2XX is a null/near-null direction for the right-transition even kinetic obstruction if all reported deltas are negligible.\"\n  },\n  \"g4xx_single_channel_background_null_test\": {\n    \"status\": \"REJECTED_RANK_DEFICIENT_AS_SINGLE_CHANNEL\",\n    \"reason\": \"quartic tubular background pivot too small: 0.0\",\n    \"required_next_step\": \"joint Horndeski normal bundle / rank-resolved background-preserving solve\"\n  },\n  \"historical_inner_probe\": {\n    \"source\": \"data/prestaged/direct41/inner_selected_candidate_41of41.csv\",\n    \"L\": 6,\n    \"eig_min_near_u_0p71\": -693.8636043239683,\n    \"min_eig_0p710_to_0p714\": -26626.446134825943,\n    \"u_of_min\": 0.7107678571428571,\n    \"final_member_eligible\": false\n  },\n  \"high_L_diagnostic\": {\n    \"finite_sample_log_slope_min_eig_K\": -1.991616367675031,\n    \"finite_sample_log_slope_min_cr2\": -0.9862570252789651,\n    \"certification\": \"NOT_A_HIGH_L_PROOF\",\n    \"required_next_gate\": \"analytic high-L reduction of the unreduced principal symbol / canonically normalized characteristics\"\n  },\n  \"solver_contract\": {\n    \"action_first\": true,\n    \"historical_coefficient_profiles_are_targets\": false,\n    \"single_transition_0p70_to_0p715\": true,\n    \"electric_support_required_through_inner_light_ring\": true,\n    \"dehair_only_after_light_ring\": true,\n    \"background_null_controls_preferred\": true,\n    \"mode_tracking_required\": true,\n    \"rank_loss_is_physical_event_not_regularization_target\": true,\n    \"absolute_action_to_41_reemission_required\": true,\n    \"angular_gate_must_regress_exact_SVT_oracle_before_hybrid\": true,\n    \"qnm_boundary_conditions\": \"regular center + outgoing infinity\"\n  },\n  \"promotion\": {\n    \"strong_field_transition\": false,\n    \"global_direct41\": false,\n    \"global_KRGSM\": false,\n    \"same_operator_QNM\": false,\n    \"absolute_full_closure\": false\n  }\n}\nWROTE /home/error/physics/clones/SSZ_FULL_CLOSURE/data/generated/strong_field_transition_2026-09-20/STRONG_FIELD_TRANSITION_AUDIT.json\nWROTE /home/error/physics/clones/SSZ_FULL_CLOSURE/data/generated/strong_field_transition_2026-09-20/HYBRID_RIGHT_TRANSITION_MODE_SCAN.csv\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "transition_primitive_sensitivity",
+      "category": "active_search",
+      "scope": "Mode-projected kinetic sensitivity of compact Horndeski primitive directions at the inner light ring; diagnostic only",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_transition_primitive_sensitivity.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/TRANSITION_PRIMITIVE_SENSITIVITY.json",
+      "stdout_tail": "\": {\n      \"6\": {\n        \"baseline_lambda_min\": -0.06893357234813786,\n        \"lambda_minus_eps\": -0.0689335726232742,\n        \"lambda_plus_eps\": -0.06893357207303318,\n        \"d_lambda_min_d_amplitude\": 2.7512050970734947e-07,\n        \"linear_amplitude_to_zero_if_positive_slope\": 250557.73712204778,\n        \"weakest_vector\": [\n          0.9963883002676008,\n          -0.08491379652584449,\n          -4.742793291357047e-05\n        ]\n      },\n      \"20\": {\n        \"baseline_lambda_min\": -0.36781328459006235,\n        \"lambda_minus_eps\": -0.3678132895225606,\n        \"lambda_plus_eps\": -0.3678132796574247,\n        \"d_lambda_min_d_amplitude\": 4.932567937432353e-06,\n        \"linear_amplitude_to_zero_if_positive_slope\": 74568.31598786401,\n        \"weakest_vector\": [\n          0.8486112338386856,\n          -0.5287882001817737,\n          0.015556771879269776\n        ]\n      },\n      \"42\": {\n        \"baseline_lambda_min\": -6.091487706724609,\n        \"lambda_minus_eps\": -6.09148773561084,\n        \"lambda_plus_eps\": -6.091487677838454,\n        \"d_lambda_min_d_amplitude\": 2.8886192993127224e-05,\n        \"linear_amplitude_to_zero_if_positive_slope\": 210878.86895216454,\n        \"weakest_vector\": [\n          0.04429017977614732,\n          -0.9978775475419556,\n          0.047736569703409046\n        ]\n      },\n      \"1000\": {\n        \"baseline_lambda_min\": -11.734007618171274,\n        \"lambda_minus_eps\": -11.734007664160163,\n        \"lambda_plus_eps\": -11.734007572182382,\n        \"d_lambda_min_d_amplitude\": 4.598889091766978e-05,\n        \"linear_amplitude_to_zero_if_positive_slope\": 255148.7410117745,\n        \"weakest_vector\": [\n          -0.0009656353505394298,\n          0.9987013283062156,\n          -0.05093843723329279\n        ]\n      }\n    },\n    \"H_tensor\": {\n      \"6\": {\n        \"baseline_lambda_min\": -0.06893357234813786,\n        \"lambda_minus_eps\": -0.0689334651562481,\n        \"lambda_plus_eps\": -0.06893367954031046,\n        \"d_lambda_min_d_amplitude\": -0.00010719203118181309,\n        \"linear_amplitude_to_zero_if_positive_slope\": null,\n        \"weakest_vector\": [\n          0.9963883002676008,\n          -0.08491379652584449,\n          -4.742793291357047e-05\n        ]\n      },\n      \"20\": {\n        \"baseline_lambda_min\": -0.36781328459006235,\n        \"lambda_minus_eps\": -0.3678108881913302,\n        \"lambda_plus_eps\": -0.3678156813901339,\n        \"d_lambda_min_d_amplitude\": -0.002396599401849331,\n        \"linear_amplitude_to_zero_if_positive_slope\": null,\n        \"weakest_vector\": [\n          0.8486112338386856,\n          -0.5287882001817737,\n          0.015556771879269776\n        ]\n      },\n      \"42\": {\n        \"baseline_lambda_min\": -6.091487706724609,\n        \"lambda_minus_eps\": -6.09147575127816,\n        \"lambda_plus_eps\": -6.091499661958782,\n        \"d_lambda_min_d_amplitude\": -0.011955340311065044,\n        \"linear_amplitude_to_zero_if_positive_slope\": null,\n        \"weakest_vector\": [\n          0.04429017977614732,\n          -0.9978775475419556,\n          0.047736569703409046\n        ]\n      },\n      \"1000\": {\n        \"baseline_lambda_min\": -11.734007618171274,\n        \"lambda_minus_eps\": -11.733989503752296,\n        \"lambda_plus_eps\": -11.734025732590286,\n        \"d_lambda_min_d_amplitude\": -0.018114418995018866,\n        \"linear_amplitude_to_zero_if_positive_slope\": null,\n        \"weakest_vector\": [\n          -0.0009656353505394298,\n          0.9987013283062156,\n          -0.05093843723329279\n        ]\n      }\n    }\n  },\n  \"interpretation\": {\n    \"dominant_positive_direction\": \"a1\",\n    \"F_tensor\": \"near-null for the failing kinetic mode\",\n    \"H_tensor\": \"weak and negative at the sampled light-ring point\",\n    \"promotion_rule\": \"a1 must be realized together with compensating Horndeski/SVT action jets satisfying the background EOM; primitive sensitivity alone is never a closure certificate\"\n  }\n}\nWROTE /home/error/physics/clones/SSZ_FULL_CLOSURE/data/generated/strong_field_transition_2026-09-20/TRANSITION_PRIMITIVE_SENSITIVITY.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "descriptor_pullback",
+      "category": "reusable_infrastructure",
+      "scope": "Generalized-psi descriptor to established reducer operator equivalence",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_descriptor_pullback_equivalence.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/absolute_attempt_2026-09-19/DESCRIPTOR_PULLBACK_EQUIVALENCE.json",
+      "stdout_tail": "   [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          0,\n          2\n        ],\n        [\n          2,\n          0\n        ],\n        [\n          2,\n          1\n        ],\n        [\n          2,\n          2\n        ]\n      ],\n      \"operator_keys_reference\": [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          0,\n          2\n        ],\n        [\n          2,\n          0\n        ],\n        [\n          2,\n          1\n        ],\n        [\n          2,\n          2\n        ]\n      ],\n      \"per_key\": {\n        \"(0, 0)\": {\n          \"max_scaled\": 1.058407569815926e-06,\n          \"p99_scaled\": 1.0963405499097197e-07,\n          \"relative_frobenius\": 2.322023824551124e-09\n        },\n        \"(0, 1)\": {\n          \"max_scaled\": 6.351710268859279e-10,\n          \"p99_scaled\": 5.8984084283508796e-12,\n          \"relative_frobenius\": 3.2549970097995934e-11\n        },\n        \"(0, 2)\": {\n          \"max_scaled\": 2.498001805406602e-16,\n          \"p99_scaled\": 6.938893903907228e-17,\n          \"relative_frobenius\": 8.3763329589566e-16\n        },\n        \"(2, 0)\": {\n          \"max_scaled\": 5.148503845475716e-11,\n          \"p99_scaled\": 1.6156087578878036e-11,\n          \"relative_frobenius\": 2.4300762072807248e-11\n        },\n        \"(2, 1)\": {\n          \"max_scaled\": 1.5693161528075144e-13,\n          \"p99_scaled\": 7.218772725420115e-15,\n          \"relative_frobenius\": 3.1792716631089436e-13\n        },\n        \"(2, 2)\": {\n          \"max_scaled\": 1.409462824231156e-18,\n          \"p99_scaled\": 5.079360809963922e-19,\n          \"relative_frobenius\": 1.9035929311128835e-17\n        }\n      },\n      \"principal_max_scaled\": 6.351710268859279e-10,\n      \"P00_relative_frobenius\": 2.322023824551124e-09,\n      \"pass\": true\n    },\n    \"1000\": {\n      \"L\": 1000.0,\n      \"operator_keys_descriptor_pullback\": [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          0,\n          2\n        ],\n        [\n          2,\n          0\n        ],\n        [\n          2,\n          1\n        ],\n        [\n          2,\n          2\n        ]\n      ],\n      \"operator_keys_reference\": [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          0,\n          2\n        ],\n        [\n          2,\n          0\n        ],\n        [\n          2,\n          1\n        ],\n        [\n          2,\n          2\n        ]\n      ],\n      \"per_key\": {\n        \"(0, 0)\": {\n          \"max_scaled\": 4.2639146088350084e-07,\n          \"p99_scaled\": 4.4979791571992534e-08,\n          \"relative_frobenius\": 4.2112811826040585e-10\n        },\n        \"(0, 1)\": {\n          \"max_scaled\": 9.370006992526214e-10,\n          \"p99_scaled\": 5.167056782440243e-12,\n          \"relative_frobenius\": 4.62169850988004e-11\n        },\n        \"(0, 2)\": {\n          \"max_scaled\": 2.3592239273284576e-16,\n          \"p99_scaled\": 6.938893903907228e-17,\n          \"relative_frobenius\": 8.227581480191155e-16\n        },\n        \"(2, 0)\": {\n          \"max_scaled\": 2.512265395715474e-11,\n          \"p99_scaled\": 6.878136948884634e-12,\n          \"relative_frobenius\": 1.0384747378314841e-11\n        },\n        \"(2, 1)\": {\n          \"max_scaled\": 3.6959615386928147e-14,\n          \"p99_scaled\": 2.9609538113058518e-15,\n          \"relative_frobenius\": 1.2077689652978737e-13\n        },\n        \"(2, 2)\": {\n          \"max_scaled\": 7.091471551430676e-19,\n          \"p99_scaled\": 2.168404344971009e-19,\n          \"relative_frobenius\": 8.225274141857984e-18\n        }\n      },\n      \"principal_max_scaled\": 9.370006992526214e-10,\n      \"P00_relative_frobenius\": 4.2112811826040585e-10,\n      \"pass\": true\n    }\n  },\n  \"DESCRIPTOR_TO_KRGSM_PULLBACK\": \"PASS\",\n  \"DEEP_CORE_POLICY\": \"KEEP_DESCRIPTOR_DAE_UNREDUCED_NO_EXPLICIT_D_h1_INVERSE\",\n  \"QNM_STATUS\": \"REPRESENTATION_VALIDATED; PRODUCTION_QNM_BLOCKED_UNTIL_ONSHELL_ELECTRIC_HYBRID_IS_PROMOTED\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "radial_descriptor_pencil",
+      "category": "reusable_infrastructure",
+      "scope": "Singular DAE quadratic radial pencil structure and Strong-H equivalence",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_radial_descriptor_pencil.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/absolute_attempt_2026-09-19/RADIAL_DESCRIPTOR_PENCIL_AUDIT.json",
+      "stdout_tail": "286410912638e-10\n        },\n        \"A1\": {\n          \"max_scaled\": 0.0,\n          \"relative_frobenius\": 0.0\n        },\n        \"A2\": {\n          \"max_scaled\": 2.553949053057934e-10,\n          \"relative_frobenius\": 2.2615308900906092e-10\n        }\n      },\n      \"dimension\": 99\n    },\n    \"420\": {\n      \"status\": \"PASS\",\n      \"errors\": {\n        \"A0\": {\n          \"max_scaled\": 1.4513567050997497e-08,\n          \"relative_frobenius\": 6.396137138629331e-11\n        },\n        \"A1\": {\n          \"max_scaled\": 0.0,\n          \"relative_frobenius\": 0.0\n        },\n        \"A2\": {\n          \"max_scaled\": 2.3099799201155663e-10,\n          \"relative_frobenius\": 2.0104120434738645e-10\n        }\n      },\n      \"dimension\": 99\n    },\n    \"1000\": {\n      \"status\": \"PASS\",\n      \"errors\": {\n        \"A0\": {\n          \"max_scaled\": 1.4810429315697082e-08,\n          \"relative_frobenius\": 5.305576016087955e-11\n        },\n        \"A1\": {\n          \"max_scaled\": 0.0,\n          \"relative_frobenius\": 0.0\n        },\n        \"A2\": {\n          \"max_scaled\": 5.443175449323643e-11,\n          \"relative_frobenius\": 4.863588853351204e-11\n        }\n      },\n      \"dimension\": 99\n    }\n  },\n  \"deep_core\": {\n    \"6\": {\n      \"status\": \"PASS_STRUCTURE\",\n      \"x_min\": 0.01,\n      \"x_max\": 1.4084507042253522,\n      \"pencil\": {\n        \"dimension\": 264,\n        \"nnz_A0\": 3661,\n        \"nnz_A1\": 696,\n        \"nnz_A2\": 198,\n        \"rank_A2\": 90,\n        \"singular_kinetic_expected\": true\n      },\n      \"linearized_dimension\": 528,\n      \"finite_entries\": true\n    },\n    \"12\": {\n      \"status\": \"PASS_STRUCTURE\",\n      \"x_min\": 0.01,\n      \"x_max\": 1.4084507042253522,\n      \"pencil\": {\n        \"dimension\": 264,\n        \"nnz_A0\": 3661,\n        \"nnz_A1\": 696,\n        \"nnz_A2\": 198,\n        \"rank_A2\": 90,\n        \"singular_kinetic_expected\": true\n      },\n      \"linearized_dimension\": 528,\n      \"finite_entries\": true\n    },\n    \"20\": {\n      \"status\": \"PASS_STRUCTURE\",\n      \"x_min\": 0.01,\n      \"x_max\": 1.4084507042253522,\n      \"pencil\": {\n        \"dimension\": 264,\n        \"nnz_A0\": 3677,\n        \"nnz_A1\": 696,\n        \"nnz_A2\": 198,\n        \"rank_A2\": 90,\n        \"singular_kinetic_expected\": true\n      },\n      \"linearized_dimension\": 528,\n      \"finite_entries\": true\n    },\n    \"42\": {\n      \"status\": \"PASS_STRUCTURE\",\n      \"x_min\": 0.01,\n      \"x_max\": 1.4084507042253522,\n      \"pencil\": {\n        \"dimension\": 264,\n        \"nnz_A0\": 3629,\n        \"nnz_A1\": 696,\n        \"nnz_A2\": 198,\n        \"rank_A2\": 90,\n        \"singular_kinetic_expected\": true\n      },\n      \"linearized_dimension\": 528,\n      \"finite_entries\": true\n    },\n    \"110\": {\n      \"status\": \"PASS_STRUCTURE\",\n      \"x_min\": 0.01,\n      \"x_max\": 1.4084507042253522,\n      \"pencil\": {\n        \"dimension\": 264,\n        \"nnz_A0\": 3709,\n        \"nnz_A1\": 696,\n        \"nnz_A2\": 198,\n        \"rank_A2\": 90,\n        \"singular_kinetic_expected\": true\n      },\n      \"linearized_dimension\": 528,\n      \"finite_entries\": true\n    },\n    \"420\": {\n      \"status\": \"PASS_STRUCTURE\",\n      \"x_min\": 0.01,\n      \"x_max\": 1.4084507042253522,\n      \"pencil\": {\n        \"dimension\": 264,\n        \"nnz_A0\": 3709,\n        \"nnz_A1\": 696,\n        \"nnz_A2\": 198,\n        \"rank_A2\": 90,\n        \"singular_kinetic_expected\": true\n      },\n      \"linearized_dimension\": 528,\n      \"finite_entries\": true\n    },\n    \"1000\": {\n      \"status\": \"PASS_STRUCTURE\",\n      \"x_min\": 0.01,\n      \"x_max\": 1.4084507042253522,\n      \"pencil\": {\n        \"dimension\": 264,\n        \"nnz_A0\": 3725,\n        \"nnz_A1\": 696,\n        \"nnz_A2\": 198,\n        \"rank_A2\": 90,\n        \"singular_kinetic_expected\": true\n      },\n      \"linearized_dimension\": 528,\n      \"finite_entries\": true\n    }\n  },\n  \"STRONG_H_RADIAL_PENCIL_EQUIVALENCE\": \"PASS\",\n  \"DEEP_CORE_DESCRIPTOR_PENCIL\": \"PASS_STRUCTURE\",\n  \"PHYSICAL_QNM_BOUNDARY_CONDITIONS\": \"DEFERRED_UNTIL_ONSHELL_ELECTRIC_HYBRID_IS_PROMOTED\",\n  \"ABSOLUTE_QNM_CERTIFICATE\": \"BLOCKED_BY_MISSING_PROMOTED_GLOBAL_ACTION_MEMBER\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "core_generalized_psi_descriptor",
+      "category": "reusable_infrastructure",
+      "scope": "Core/Carrier H0 constraint structure without explicit bad Schur inversion",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_core_generalized_psi_descriptor.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/absolute_attempt_2026-09-18/CORE_GENERALIZED_PSI_DESCRIPTOR_AUDIT.json",
+      "stdout_tail": "],\n              [\n                1,\n                1\n              ],\n              [\n                2,\n                0\n              ],\n              [\n                2,\n                1\n              ]\n            ],\n            \"max_total_derivative_order\": 3,\n            \"max_time_derivative_order\": 2,\n            \"max_radial_derivative_order\": 2\n          }\n        },\n        \"110\": {\n          \"status\": \"PASS\",\n          \"max_closed_formula_scaled_difference\": 1.990837106280452e-09,\n          \"max_forbidden_H0_term\": 3.552713678800501e-15,\n          \"H0_square_max_abs\": 0.0,\n          \"operator_structure\": {\n            \"fields\": [\n              \"H0\",\n              \"H1\",\n              \"H2\",\n              \"h1\",\n              \"dphi\",\n              \"dA0\",\n              \"dA1\",\n              \"V\"\n            ],\n            \"operator_keys\": [\n              [\n                0,\n                0\n              ],\n              [\n                0,\n                1\n              ],\n              [\n                0,\n                2\n              ],\n              [\n                1,\n                0\n              ],\n              [\n                1,\n                1\n              ],\n              [\n                2,\n                0\n              ],\n              [\n                2,\n                1\n              ]\n            ],\n            \"max_total_derivative_order\": 3,\n            \"max_time_derivative_order\": 2,\n            \"max_radial_derivative_order\": 2\n          }\n        },\n        \"420\": {\n          \"status\": \"PASS\",\n          \"max_closed_formula_scaled_difference\": 4.3562050097078893e-10,\n          \"max_forbidden_H0_term\": 1.4210854715202004e-14,\n          \"H0_square_max_abs\": 0.0,\n          \"operator_structure\": {\n            \"fields\": [\n              \"H0\",\n              \"H1\",\n              \"H2\",\n              \"h1\",\n              \"dphi\",\n              \"dA0\",\n              \"dA1\",\n              \"V\"\n            ],\n            \"operator_keys\": [\n              [\n                0,\n                0\n              ],\n              [\n                0,\n                1\n              ],\n              [\n                0,\n                2\n              ],\n              [\n                1,\n                0\n              ],\n              [\n                1,\n                1\n              ],\n              [\n                2,\n                0\n              ],\n              [\n                2,\n                1\n              ]\n            ],\n            \"max_total_derivative_order\": 3,\n            \"max_time_derivative_order\": 2,\n            \"max_radial_derivative_order\": 2\n          }\n        },\n        \"1000\": {\n          \"status\": \"PASS\",\n          \"max_closed_formula_scaled_difference\": 1.0488362521140945e-09,\n          \"max_forbidden_H0_term\": 2.842170943040401e-14,\n          \"H0_square_max_abs\": 0.0,\n          \"operator_structure\": {\n            \"fields\": [\n              \"H0\",\n              \"H1\",\n              \"H2\",\n              \"h1\",\n              \"dphi\",\n              \"dA0\",\n              \"dA1\",\n              \"V\"\n            ],\n            \"operator_keys\": [\n              [\n                0,\n                0\n              ],\n              [\n                0,\n                1\n              ],\n              [\n                0,\n                2\n              ],\n              [\n                1,\n                0\n              ],\n              [\n                1,\n                1\n              ],\n              [\n                2,\n                0\n              ],\n              [\n                2,\n                1\n              ]\n            ],\n            \"max_total_derivative_order\": 3,\n            \"max_time_derivative_order\": 2,\n            \"max_radial_derivative_order\": 2\n          }\n        }\n      }\n    }\n  },\n  \"CORE_GENERALIZED_PSI_DESCRIPTOR\": \"PASS\",\n  \"DIRECT_CORE_KRGM\": \"OPEN_DESCRIPTOR_DAE_SPECTRAL_LINEARIZATION\",\n  \"COUPLED_QNM\": \"BLOCKED_BY_DESCRIPTOR_TO_SPECTRAL_OPERATOR\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "inner_y_hessian",
+      "category": "historical_blocker_resolution",
+      "scope": "4D f2(phi,X,F,Y) reachability; proves f2-only controls are insufficient",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_inner_y_hessian.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/inner_y_hessian/INNER_F2_4D_ALGEBRAIC_REACHABILITY.json",
+      "stdout_tail": "{\n  \"status\": \"F2_ONLY_TARGET_SET_NOT_REACHABLE\",\n  \"scope\": \"background-null f2(phi,X,F,Y) Hessian deformation only\",\n  \"transverse_controls\": [\n    \"XX\",\n    \"XF\",\n    \"XY\",\n    \"FF\",\n    \"FY\",\n    \"YY\"\n  ],\n  \"algebraic_targets\": [\n    \"v5\",\n    \"c3\",\n    \"v1\",\n    \"v4\",\n    \"c2\"\n  ],\n  \"rank_counts\": {\n    \"1\": 54,\n    \"2\": 45,\n    \"3\": 733,\n    \"4\": 569\n  },\n  \"max_local_rank\": 4,\n  \"max_scaled_projection_residual\": 0.9996426927970768,\n  \"median_scaled_projection_residual\": 0.12506554905378725,\n  \"worst_row\": {\n    \"row\": 152,\n    \"u\": 0.7105428571428571,\n    \"x\": 1.4073746431300012,\n    \"A0prime\": 1.4069427413524045,\n    \"local_rank\": 3,\n    \"max_scaled_projection_residual\": 0.9996426927970768,\n    \"l2_scaled_projection_residual\": 1.412971653033383,\n    \"smallest_retained_singular\": 0.004801319378821405\n  },\n  \"interpretation\": \"The Y sector supersedes the old 3D holonomy exclusion, but dimension counting does not give six independent coefficient controls. The current independently blended lower/principal target set violates the local column space of the f2-only background-null response. Full Inner closure therefore requires a joint action-jet construction with additional mixed f3/f4 (and, if needed, lower Horndeski) control directions, rather than separate coefficient targets.\",\n  \"inner_direct_41\": \"NOT_CERTIFIED\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "central_action",
+      "category": "reusable_infrastructure",
+      "scope": "Direct central lower action replay diagnostic",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_central_action.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/absolute_attempt_2026-09-18/CENTRAL_FULL_ACTION_LOWER_AUDIT.json",
+      "stdout_tail": "{\n  \"status\": \"DIAGNOSTIC_ONLY\",\n  \"validation\": {\n    \"metric_background_equations\": false,\n    \"published_kinetic_matches_schur\": true,\n    \"published_kinetic_positive_L6\": false\n  },\n  \"witness\": {\n    \"x\": 1.4492674838955182,\n    \"u\": 0.6900037509377344,\n    \"A0prime\": 1.449267483895518,\n    \"background\": {\n      \"E00\": -0.0426562530802817,\n      \"E11\": -13.198372464768651,\n      \"JA\": -5.803421780494639e-12,\n      \"JA_prime\": 5.723009824492242e-07,\n      \"eq131_lhs\": -10.539433303576773,\n      \"eq131_rhs\": -0.7183008841606464,\n      \"eq131_residual\": -9.821132419416127\n    },\n    \"K_published\": [\n      [\n        0.0070529580482169936,\n        -1.723413164667946,\n        1.324773800489066\n      ],\n      [\n        -1.723413164667946,\n        -34.68536930864995,\n        36.93019594842266\n      ],\n      [\n        1.324773800489066,\n        36.93019594842266,\n        106.3316587762722\n      ]\n    ],\n    \"eigenvalues\": [\n      -43.861671792770224,\n      0.09070492967218574,\n      115.42430928876848\n    ]\n  },\n  \"background_max_abs\": {\n    \"E00\": 2.7237451688408156,\n    \"E11\": 17.545951843733604,\n    \"JA\": 2.8514011971510346e-10,\n    \"JA_prime\": 8.056931272775455e-06,\n    \"eq131_lhs\": 79.51866086264667,\n    \"eq131_rhs\": 6.224708658080855,\n    \"eq131_residual\": 77.28230513952278\n  }\n}\n",
+      "stderr_tail": ""
+    },
     {
       "id": "regional_kinetic_rejected_member",
       "category": "expected_rejection",
       "scope": "Expected finite-L kinetic failure of rejected 2026-09-17 regional electric member",
       "command": [
-        "/opt/pyvenv/bin/python",
+        "/home/error/physics/venv/bin/python",
         "tools/audit_regional_kinetic.py"
       ],
       "expected_exit": 2,
       "actual_exit": 2,
       "expectation_met": true,
       "evidence": "build/REGIONAL_CENTRAL_KINETIC_GATE.json",
-      "stdout_tail": "Central Full-SVT kinetic gate: FAIL\nL=   6 min(K)=-692.138603 negative rows=2007\nL=  12 min(K)=-242.045378 negative rows=1549\nL=  20 min(K)=-82.7819885 negative rows=1159\nL=  42 min(K)=-0.0404298248 negative rows=435\nL= 110 min(K)=0.000502616601 negative rows=0\nL= 420 min(K)=4.60432283e-05 negative rows=0\nL=1000 min(K)=8.2043773e-06 negative rows=0\n/mnt/data/ssz_joint/SSZ_FULL_CLOSURE/build/REGIONAL_CENTRAL_KINETIC_GATE.json\n",
+      "stdout_tail": "Central Full-SVT kinetic gate: FAIL\nL=   6 min(K)=-692.138603 negative rows=2007\nL=  12 min(K)=-242.045378 negative rows=1549\nL=  20 min(K)=-82.7819885 negative rows=1159\nL=  42 min(K)=-0.0404298248 negative rows=435\nL= 110 min(K)=0.000502616605 negative rows=0\nL= 420 min(K)=4.60432283e-05 negative rows=0\nL=1000 min(K)=8.2043773e-06 negative rows=0\n/home/error/physics/clones/SSZ_FULL_CLOSURE/build/REGIONAL_CENTRAL_KINETIC_GATE.json\n",
       "stderr_tail": ""
     },
     {
@@ -31,14 +163,134 @@
       "category": "expected_rejection",
       "scope": "Expected on-shell failure of the restricted frozen zero-vector carrier witness",
       "command": [
-        "/opt/pyvenv/bin/python",
+        "/home/error/physics/venv/bin/python",
         "tools/audit_frozen_onshell.py"
       ],
       "expected_exit": 2,
       "actual_exit": 2,
       "expectation_met": true,
       "evidence": "build/FROZEN_ONSHELL_IDENTITY.json",
-      "stdout_tail": "FAIL_ON_SHELL_IDENTITY\nr/rs=1.599997795025131\nJET9D8, stride=1: residual=0.07097442387191553\nJET9D8, stride=2: residual=0.07097442558966049\nJET9D8, stride=3: residual=0.07097442580377993\nJET9D8, stride=4: residual=0.07097442561865269\naction jets and scalar chain rule; remaining derivatives JET9D8, stride=n/a: residual=0.07097442116687691\nReport: build/FROZEN_ONSHELL_IDENTITY.json\n",
+      "stdout_tail": "FAIL_ON_SHELL_IDENTITY\nr/rs=1.599997795025131\nJET9D8, stride=1: residual=0.07097442350813442\nJET9D8, stride=2: residual=0.07097442575472306\nJET9D8, stride=3: residual=0.07097442564955381\nJET9D8, stride=4: residual=0.07097442554341685\naction jets and scalar chain rule; remaining derivatives JET9D8, stride=n/a: residual=0.07097442116686467\nReport: build/FROZEN_ONSHELL_IDENTITY.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "production_sources",
+      "category": "provenance",
+      "scope": "Production source registry and provenance audit",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_production_sources.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "",
+      "stdout_tail": "/home/error/physics/clones/SSZ_FULL_CLOSURE/data/diagnostic/PRODUCTION_SOURCE_CONTRACT.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "production_regions",
+      "category": "provenance",
+      "scope": "Regional production resolver audit",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_production_regions.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "",
+      "stdout_tail": "{\n  \"cover\": {\n    \"weak_exterior_H\": \"u < 0.5515230871346237\",\n    \"outer_same_action_H_SVT\": \"0.5515230871346237 <= u < 0.61\",\n    \"central_exact_SVT\": \"0.61 <= u < 0.71\",\n    \"inner_same_action_SVT_H\": \"0.71 <= u < 0.715\",\n    \"punctured_H_core\": \"u >= 0.715\"\n  },\n  \"witnesses\": [\n    {\n      \"x_requested\": 1.5999977950251312,\n      \"x\": 1.600019205031718,\n      \"u\": 0.6249924981245312,\n      \"region\": \"central_exact_SVT\",\n      \"A0prime\": 1.6000092819081309,\n      \"pure_H_null_vector_gate\": \"NOT_APPLICABLE\"\n    },\n    {\n      \"x_requested\": 1.41616064,\n      \"x\": 1.4161792906354749,\n      \"u\": 0.70612528132033,\n      \"region\": \"central_exact_SVT\",\n      \"A0prime\": 1.4161792906354749,\n      \"pure_H_null_vector_gate\": \"NOT_APPLICABLE\"\n    }\n  ],\n  \"strong_H_carrier_role\": \"principal/control witness; never global production background\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "transition_projected_controllability",
+      "category": "active_search",
+      "scope": "Projected local action-tangent controllability of the right strong-field transition; no historical coefficient targets",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_transition_projected_controllability.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY.json",
+      "stdout_tail": "u=0.701294074 rank3=3 rank4=4 common3=0.001377459832176033 common4=0.000500842058745934\nu=0.703000750 rank3=3 rank4=4 common3=0.1351170793040739 common4=0.1254272186663988\nu=0.706125281 rank3=3 rank4=4 common3=0.19860246111489177 common4=0.060822180786555526\nu=0.707989497 rank3=3 rank4=4 common3=0.24914030260930092 common4=0.07174150535148566\n{\n  \"metric_vector_tangent_has_one_direction_improving_all_required_L_at_all_sampled_points\": true,\n  \"extended_scalar_identity_tangent_has_one_direction_improving_all_required_L_at_all_sampled_points\": true,\n  \"all_per_L_gradients_have_nonzero_projection_in_extended_tangent\": true,\n  \"interpretation\": \"A positive result is a local first-order controllability statement only. It licenses a predictor-corrector continuation attempt; it does not prove a finite healthy branch.\"\n}\nWROTE /home/error/physics/clones/SSZ_FULL_CLOSURE/data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY.json\nWROTE /home/error/physics/clones/SSZ_FULL_CLOSURE/data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY.csv\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "transition_horndeski_a1_projection",
+      "category": "active_search",
+      "scope": "Full local Horndeski background-null projection of the primitive a1 clue",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_transition_horndeski_a1_projection.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/TRANSITION_HORNDESKI_A1_PROJECTION.json",
+      "stdout_tail": "{\n  \"status\": \"PASS_A1_SURVIVES_BACKGROUND_NULL_PROJECTION\",\n  \"lr_projected_fraction\": 0.8905131910235575,\n  \"lr_a1_gain\": 0.22469864874559878,\n  \"max_background_residual\": 6.0396141543172215e-15,\n  \"kinetic_slopes\": {\n    \"6\": 0.11197686381719807,\n    \"20\": 3.6997851255277103,\n    \"42\": 13.626759888043516,\n    \"1000\": 11.33474541352264\n  },\n  \"all_L_positive\": true\n}\nWROTE /home/error/physics/clones/SSZ_FULL_CLOSURE/data/generated/strong_field_transition_2026-09-20/TRANSITION_HORNDESKI_A1_PROJECTION.json\nWROTE /home/error/physics/clones/SSZ_FULL_CLOSURE/data/generated/strong_field_transition_2026-09-20/TRANSITION_HORNDESKI_A1_PROJECTION.csv\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "transition_projection_convergence",
+      "category": "active_search",
+      "scope": "Finite-difference and localization robustness for projected-controllability diagnostics",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_transition_projection_convergence.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY_CONVERGENCE.json",
+      "stdout_tail": "{\n  \"status\": \"PASS_PROJECTED_CONTROLLABILITY_NUMERICS\",\n  \"joint_fd_spread\": 1.056392823211892e-06,\n  \"joint_fd_converged\": true,\n  \"a1_amplitude_sign_stable\": true,\n  \"a1_width_sign_robust\": false\n}\nWROTE /home/error/physics/clones/SSZ_FULL_CLOSURE/data/generated/strong_field_transition_2026-09-20/TRANSITION_PROJECTED_CONTROLLABILITY_CONVERGENCE.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "angular_m5_symbolic_provenance",
+      "category": "angular_method",
+      "scope": "Exact symbolic delta-A0 source, Appendix v12 identity, m5 minus branch, and minus/plus cross-term provenance",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_angular_m5_symbolic.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/angular_universal_reducer_2026-09-21/ANGULAR_M5_SYMBOLIC_PROVENANCE.json",
+      "stdout_tail": "{\n  \"appendix_substitution\": \"v12=-v6/(2h)\",\n  \"checks\": {\n    \"global_deltaA0_sign_invariant\": true,\n    \"minus_plus_difference\": true,\n    \"source_to_minus\": true\n  },\n  \"classification\": \"PUBLISHED_REDUCED_SHORTCUT_CONFLICT\",\n  \"m5_action_minus\": \"a4*v13 - a6*v6\",\n  \"m5_published_plus_comparator\": \"a4*v13 + a6*v6\",\n  \"minus_minus_plus_cross_term\": \"a6*v13*v6/(a4*v9)\",\n  \"schur_minus\": \"-(a4*v13 - a6*v6)**2/(4*a4**2*v9)\",\n  \"schur_plus\": \"-(a4*v13 + a6*v6)**2/(4*a4**2*v9)\",\n  \"source_after_appendix\": \"v13 - a6*v6/a4\",\n  \"status\": \"PASS\",\n  \"unreduced_scalar_source\": \"v13 + 2*a6*h*v12/a4\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "angular_universal_provenance",
+      "category": "angular_method",
+      "scope": "Formal Laurent vs finite-L regression, Eq83-style component mapping, characteristic-polynomial comparison, and first-divergent-stage localization",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/audit_angular_universal_provenance.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/angular_universal_reducer_2026-09-21/ANGULAR_UNIVERSAL_PROVENANCE_AUDIT.json",
+      "stdout_tail": "        \"p99\": 18.325319927169836,\n          \"p999\": 124.40791683820161\n        }\n      },\n      \"M13_0\": {\n        \"minus\": {\n          \"max\": 4.584099295474693e-08,\n          \"median\": 3.9584793909678607e-11,\n          \"p90\": 8.135969935284772e-09,\n          \"p99\": 2.360329261868483e-08,\n          \"p999\": 3.726796503758355e-08\n        },\n        \"minus_better_median\": false,\n        \"plus\": {\n          \"max\": 4.584099295474693e-08,\n          \"median\": 3.9584793909678607e-11,\n          \"p90\": 8.135969935284772e-09,\n          \"p99\": 2.360329261868483e-08,\n          \"p999\": 3.726796503758355e-08\n        }\n      },\n      \"M22_0\": {\n        \"minus\": {\n          \"max\": 3.111009183579662e-14,\n          \"median\": 3.6333580561268413e-16,\n          \"p90\": 2.1446795587820035e-15,\n          \"p99\": 1.187862052252976e-14,\n          \"p999\": 1.9449473041705052e-14\n        },\n        \"minus_better_median\": true,\n        \"plus\": {\n          \"max\": 4.588036771395135,\n          \"median\": 1.7732201591632943,\n          \"p90\": 4.312761261686314,\n          \"p99\": 4.5556212076916305,\n          \"p999\": 4.586141858890116\n        }\n      },\n      \"M23_0\": {\n        \"minus\": {\n          \"max\": 0.03741566118959571,\n          \"median\": 5.633261116730778e-07,\n          \"p90\": 0.0003422220920769469,\n          \"p99\": 0.006695207728609449,\n          \"p999\": 0.02131622566946575\n        },\n        \"minus_better_median\": true,\n        \"plus\": {\n          \"max\": 423.16833180218146,\n          \"median\": 3.2075829365349975,\n          \"p90\": 6.496197671887988,\n          \"p99\": 21.496865660123344,\n          \"p999\": 57.688144160542656\n        }\n      },\n      \"M33_0\": {\n        \"minus\": {\n          \"max\": 0.0,\n          \"median\": 0.0,\n          \"p90\": 0.0,\n          \"p99\": 0.0,\n          \"p999\": 0.0\n        },\n        \"minus_better_median\": false,\n        \"plus\": {\n          \"max\": 0.0,\n          \"median\": 0.0,\n          \"p90\": 0.0,\n          \"p99\": 0.0,\n          \"p999\": 0.0\n        }\n      }\n    },\n    \"first_divergent_component\": \"M23_0\",\n    \"project_to_paper_mass_sign\": \"M_paper = - M_project\"\n  },\n  \"first_divergent_stage\": \"M23_0\",\n  \"genuine_svt_m5_provenance\": {\n    \"action_branch\": \"m5_minus = a4*v13 - a6*v6\",\n    \"classification\": \"PUBLISHED_REDUCED_SHORTCUT_CONFLICT\",\n    \"m22_minus_plus_cross_identity\": {\n      \"max\": 1.8039607530445687e-13,\n      \"median\": 1.651601151374651e-16,\n      \"p90\": 4.3175308098116523e-16,\n      \"p99\": 2.7782737701678386e-15,\n      \"p999\": 4.3526764852048374e-14\n    },\n    \"note\": \"Minus/plus are compared only as provenance branches; the common action is never edited to hit the plus shortcut.\",\n    \"published_shortcut_comparator\": \"m5_plus = a4*v13 + a6*v6\"\n  },\n  \"laurent_engine\": {\n    \"classification\": \"PASS_FINITE_L_REGRESSION\",\n    \"finite_L_rows\": [\n      {\n        \"L\": 1000.0,\n        \"max_abs_K\": 2.984279490192421e-13,\n        \"max_abs_M\": 0.020926964469254017,\n        \"max_scaled_K\": 1.4312905955118997e-14,\n        \"max_scaled_M\": 9.892350071934975e-07\n      },\n      {\n        \"L\": 10000.0,\n        \"max_abs_K\": 4.263256414560601e-14,\n        \"max_abs_M\": 0.00035538896918296814,\n        \"max_scaled_K\": 6.606893648307768e-16,\n        \"max_scaled_M\": 4.1009020268768934e-08\n      }\n    ],\n    \"note\": \"Formal eps=1/L algebra is compared against the accepted full finite-L common-action reducer.\"\n  },\n  \"maxwell_horndeski_audit_B\": {\n    \"classification\": \"EXACT_GM_GHS_REPLAY_NOT_PRESENT_IN_INPUT_CHECKPOINT\",\n    \"expected_exact_characteristic\": \"(1-z)^3\",\n    \"note\": \"The attached safety checkpoint predates the user-reported GM-GHS replay. The follow-up pipeline includes the oracle hook but does not fabricate a rerun without the exact input artifact.\"\n  },\n  \"outputs\": [\n    \"data/generated/angular_universal_reducer_2026-09-21/ANGULAR_EQ83_COMPONENT_MAPPING.csv\",\n    \"data/generated/angular_universal_reducer_2026-09-21/ANGULAR_CHARACTERISTIC_POLYNOMIAL_COMPARISON.csv\"\n  ],\n  \"status\": \"ANGULAR_UNIVERSAL_PROVENANCE_PIPELINE\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "id": "angular_universal_pipeline",
+      "category": "angular_method",
+      "scope": "Held method-only angular pipeline; explicitly does not evaluate Dense branch or advance continuation",
+      "command": [
+        "/home/error/physics/venv/bin/python",
+        "tools/run_angular_universal_pipeline.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "expectation_met": true,
+      "evidence": "data/generated/angular_universal_reducer_2026-09-21/ANGULAR_UNIVERSAL_PIPELINE_STATUS.json",
+      "stdout_tail": "65543e-15,\n    \"kinetic_scaled\": 3.4299909072558193e-15,\n    \"projected_scaled\": 6.287794165917957e-08,\n    \"literal_scaled\": 1.1481481491290702,\n    \"prediction_scaled\": 8.086249512696124e-09,\n    \"rank1_scaled\": 2.7084537450479164e-15,\n    \"alpha7_scaled\": 7.686100533276827e-12\n  },\n  \"first_failing_step\": null,\n  \"first_published_shortcut_divergence\": \"EQ47_MIXED_MISSING_K_TO_M_PROJECTION_FACTOR\",\n  \"paper_url\": \"https://arxiv.org/html/2404.11910v3\",\n  \"paper_numbering\": {\n    \"requested_4.46\": \"HTML84\",\n    \"requested_4.47\": \"HTML85\"\n  },\n  \"representative\": {\n    \"u\": 0.6500150037509377,\n    \"x\": 1.5384260274446897,\n    \"R\": -0.14783638046293304,\n    \"K11\": 2.1507179291019245,\n    \"K13\": 24.476982793628313,\n    \"K33\": 278.5686949333019,\n    \"K12\": 10.312663470948085,\n    \"K23\": 479.32937208290815,\n    \"K22\": 57.68393414629942,\n    \"M11\": -0.3179543540351166,\n    \"M13\": -3.618588540862963,\n    \"M33\": -41.18258756922236,\n    \"eq46_11\": 1.4770181111107035e-13,\n    \"eq46_13\": 1.4861928264441277e-13,\n    \"eq46_33\": 3.450694954831451e-16,\n    \"kinetic_residual\": 1.8189894035458565e-12,\n    \"kinetic_scaled\": 2.0530930075888718e-16,\n    \"projected_residual\": -2.5852386897895485e-10,\n    \"projected_scaled\": 1.9737756213311116e-13,\n    \"literal_residual\": 10169.545195219676,\n    \"literal_scaled\": 1.147836380462904,\n    \"predicted_residual\": 10169.545195219933,\n    \"prediction_scaled\": 2.5220154980039796e-14,\n    \"rank1_scaled\": 5.692665638402945e-16,\n    \"null_quadratic_B1\": 4053.687320299507,\n    \"null_quadratic_B2\": -695976.1049633179,\n    \"alpha7_scaled\": 1.486807903801122e-12,\n    \"m5_minus_shortcut_B1\": 7430.806552525883,\n    \"m5_minus_shortcut_B2\": 1219816.3556654367,\n    \"projected_eq47_m5_minus_B1\": 3402.833326513607,\n    \"projected_eq47_m5_minus_B2\": -807926.1380910611,\n    \"m5_plus_shortcut_B1\": 7399.5062604132145,\n    \"m5_plus_shortcut_B2\": 248059.06610602213,\n    \"projected_eq47_m5_plus_B1\": 7650.649221541177,\n    \"projected_eq47_m5_plus_B2\": 126690.22470241699,\n    \"leading_eps_power\": 3.0,\n    \"action_root0\": -164.97552209420328,\n    \"action_root1\": 1.0000000000000124,\n    \"action_root2\": 4218.662842393717,\n    \"action_B1\": 4053.6873202995166,\n    \"action_B2\": -695976.1049633203,\n    \"vector_factor_remainder\": 8.77753336681053e-09,\n    \"literal_shortcut_B1\": 7430.806520012904,\n    \"literal_shortcut_B2\": 1219816.358250556\n  },\n  \"finite_L_to_laurent\": \"PASS\",\n  \"finite_L_root_scaled_errors\": [\n    0.3795841721556669,\n    0.03899171953045051,\n    0.003909849570607533,\n    0.0003910867915795042\n  ],\n  \"dense_branch_angular\": \"DENSE_ANGULAR_FAIL\",\n  \"dense_summary\": {\n    \"trusted_points\": 297,\n    \"high_L_minimum\": -3.0762041735249907e+59,\n    \"u_at_minimum\": 0.7002175543885971,\n    \"finite_L_all_positive\": false,\n    \"high_L_order_status\": \"UNRESOLVED_NONUNIFORM_LEADING_ORDER\",\n    \"high_L_minimum_scope\": \"raw diagnostic only when order unresolved\",\n    \"leading_order_counts\": {\n      \"1\": 94,\n      \"3\": 203\n    },\n    \"coordinate_weights_scope\": \"project differential basis; not invariant physical mode fractions\",\n    \"tangent_bundle_sensitivity\": \"HELD_BASELINE_REPLAY_MISMATCH\",\n    \"oracle_scope\": \"GM_GHS input absent; diagnostic scan does not release continuation\",\n    \"tangent_baseline_replay_scaled_error\": 1.5450980527015125e-05\n  },\n  \"eq47_only_shortcut_correction\": \"DETERMINANT_RECONSTRUCTION_WITH_LITERAL_MASS_SLOTS_M5_PLUS\",\n  \"coupled_quadratic_derivation\": {\n    \"Q\": \"(ms-z*ks)*(mg-z*kg)-(msg-z*ksg)^2\",\n    \"q2\": \"ks*kg-ksg^2\",\n    \"B1\": \"(ms*kg+ks*mg-2*msg*ksg)/q2\",\n    \"B2\": \"(ms*mg-msg^2)/q2\",\n    \"decomposition\": \"projected_eq47_m5_plus versus literal_shortcut isolates determinant/projection route; projected minus versus plus isolates m5 in the same route; action versus projected minus measures remaining mass-mapping discrepancy\"\n  },\n  \"exact_GM_GHS\": \"EXACT_GM_GHS_REPLAY_NOT_PRESENT_IN_INPUT_CHECKPOINT\",\n  \"continuation_0p708_to_0p715\": \"HELD\",\n  \"global_QNM\": \"HELD\",\n  \"absolute_full_closure\": false\n}\n",
       "stderr_tail": ""
     }
   ]

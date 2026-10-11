@@ -11,38 +11,42 @@
   "n600_dirichlet": {
    "n_peaks": 0,
    "peaks_top5": [],
-   "selectivity_C": NaN,
-   "entropy_S": -0.0,
+   "selectivity_C": null,
+   "selectivity_C_undefined_reason": "no peaks detected above threshold; selectivity undefined (no peak to be selective for)",
+   "entropy_S": null,
    "g_max": 0.056956,
    "g_median": 0.05376277,
-   "wall_s": 907.3
+   "wall_s": 132.5
   },
   "n600_robin": {
    "n_peaks": 0,
    "peaks_top5": [],
-   "selectivity_C": NaN,
-   "entropy_S": -0.0,
+   "selectivity_C": null,
+   "selectivity_C_undefined_reason": "no peaks detected above threshold; selectivity undefined (no peak to be selective for)",
+   "entropy_S": null,
    "g_max": 0.056973,
    "g_median": 0.05377751,
-   "wall_s": 559.2
+   "wall_s": 132.4
   },
   "n1000_dirichlet": {
    "n_peaks": 0,
    "peaks_top5": [],
-   "selectivity_C": NaN,
-   "entropy_S": -0.0,
+   "selectivity_C": null,
+   "selectivity_C_undefined_reason": "no peaks detected above threshold; selectivity undefined (no peak to be selective for)",
+   "entropy_S": null,
    "g_max": 0.034167,
    "g_median": 0.03225386,
-   "wall_s": 965.8
+   "wall_s": 539.7
   },
   "n1000_robin": {
    "n_peaks": 0,
    "peaks_top5": [],
-   "selectivity_C": NaN,
-   "entropy_S": -0.0,
+   "selectivity_C": null,
+   "selectivity_C_undefined_reason": "no peaks detected above threshold; selectivity undefined (no peak to be selective for)",
+   "entropy_S": null,
    "g_max": 0.034178,
    "g_median": 0.03226271,
-   "wall_s": 1359.0
+   "wall_s": 543.5
   }
  },
  "robustness_top5_match_vs_n1000_dirichlet": {
@@ -51,5 +55,5 @@
   "n1000_robin": "0/0"
  },
  "verdict": "PEAKS_NOT_ROBUST \u2014 diagnostics reported, no resonance claim",
- "wall_seconds": 3791.3
+ "wall_seconds": 1348.2
 }

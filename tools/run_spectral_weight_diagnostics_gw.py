@@ -152,14 +152,27 @@ def main():
                 good = ~np.isnan(g)
                 g = np.interp(ws, ws[good], g[good])
             peaks, med, mad = peak_table(ws, g)
-            # selectivity over detected peaks
-            gp = np.array([p["g"] for p in peaks]) if peaks else np.array([0.0])
-            p = gp / gp.sum()
+            # selectivity over detected peaks; strict-JSON null (with reason)
+            # when no peaks exist instead of NaN (0/0), fix 2026-10-11
+            if peaks:
+                gp = np.array([p["g"] for p in peaks])
+                p = gp / gp.sum()
+                sel_c: float | None = round(float(p.max()), 4)
+                ent_s: float | None = round(
+                    float(-np.sum(p[p > 0] * np.log(p[p > 0]))), 4)
+                sel_reason = None
+            else:
+                sel_c = None
+                ent_s = None
+                sel_reason = ("no peaks detected above threshold; "
+                              "selectivity undefined (no peak to be "
+                              "selective for)")
             variants[f"n{n}_{bc}"] = {
                 "n_peaks": len(peaks),
                 "peaks_top5": sorted(peaks, key=lambda x: -x["g"])[:5],
-                "selectivity_C": round(float(p.max()), 4),
-                "entropy_S": round(float(-np.sum(p[p > 0] * np.log(p[p > 0]))), 4),
+                "selectivity_C": sel_c,
+                "selectivity_C_undefined_reason": sel_reason,
+                "entropy_S": ent_s,
                 "g_max": round(float(g.max()), 6),
                 "g_median": round(float(np.median(g)), 8),
                 "wall_s": round(time.time() - t1, 1),

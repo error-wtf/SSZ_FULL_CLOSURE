@@ -6,14 +6,14 @@
   "central_endpoint_radial_jets": {
     "v5": [
       -3873.246322762169,
-      346586.89998697984
+      346586.8999869908
     ],
     "c3": [
-      337.2044016680054,
-      -29233.669123789536
+      337.20440166800535,
+      -29233.669123792126
     ],
     "e3": [
-      323.0873587659583
+      323.0873587659872
     ]
   },
   "required_radial_orders": {
@@ -41,7 +41,7 @@
     "f2Xphi_control",
     "f2phiphi_control"
   ],
-  "control_map_residual": 1.1973783193772385e-11,
+  "control_map_residual": 1.197378319377256e-11,
   "background_null_check": "NOT_CERTIFIED_UNTIL_COMMON_HESSIAN_HOLONOMY",
   "action_control_status": "LOCAL_RESPONSE_REALIZED_AND_REEMITTED",
   "common_action_warning": "f2phiF/f2Xphi/f2phiphi cannot be promoted independently of f2FF/f2XF/f2XX; run the common Hessian holonomy audit",
@@ -58,7 +58,7 @@
       "c3",
       "e3"
     ],
-    "max_scaled_replay_error": 1.1973783193772385e-11,
+    "max_scaled_replay_error": 1.197378319377256e-11,
     "all_controls_finite": true,
     "vector_active_rows": 1359,
     "vector_free_rows": 42,
@@ -70,7 +70,9 @@
     "principal_symbol_reason": "holonomic completion generally induces f2XX/f2XF/f2FF, so unchanged principal symbol cannot be certified from the split lower inverse alone",
     "endpoint_rule": "when A0prime=0 require v5_target=0 and use reduced c3/e3 block"
   },
-  "existing_emitter_interface": "selected_v5/selected_c3/selected_e3 remain an output interface; production values are now supplied by the explicit lower-order action-control inverse",
+  "existing_emitter_interface": [
+    "selected_v5/selected_c3/selected_e3 remain an output interface; production values are now supplied by the explicit lower-order action-construction"
+  ],
   "sources": [
     {
       "path": "data/production/ssz_p5_F2_inner_same_action_RESOLVED_v2_background_jets_2026-09-15.csv",
@@ -95,18 +97,18 @@
   ],
   "generator": {
     "path": "src/ssz_p5/production/inner_targets.py",
-    "sha256": "b090ac9c8d7d49cfba1e9f7294c8f8825bccb7431f6d0069a7211180fd5f8338"
+    "sha256": "bf90e9680e9767539e3338de608bf055cf27305d4e833c90a0b97f11ff76882a"
   },
   "target_artifact": {
     "path": "data/generated/inner_controls/INNER_LOWER_ORDER_TARGETS.csv",
-    "sha256": "26e84ad5dcdcc3c4e7eca1a629a519ddf86501eb2eb464d11660721806229462"
+    "sha256": "44af87819b9864098593fa26b27d40da4ad46e44d4cc7d1bf13b98d33421eb2b"
   },
   "action_control_artifact": {
     "path": "data/generated/inner_controls/INNER_LOWER_ORDER_ACTION_CONTROLS.csv",
-    "sha256": "18d54896058e9e88e0e8a7229740e8c200150e39fedb96d72c8e5bb156c0f02b"
+    "sha256": "68bae64338e4de1c948b280c350d7622b71bd609f85760b0743c4ce015437938"
   },
   "reemitted_lower_artifact": {
     "path": "data/generated/inner_controls/INNER_LOWER_ORDER_REEMITTED.csv",
-    "sha256": "48ec0ad7810ee1e63f68bbd9a0c4be7e27b26ff08efb59f5b6024a4b909738ee"
+    "sha256": "a22cb71a148fb3e3877ce6e6bbfdda2c3e0af5dcd2ce5b7313e39dda31b3a96b"
   }
 }

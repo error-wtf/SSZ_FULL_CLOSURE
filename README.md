@@ -67,6 +67,71 @@ pushed.**
 > the theory, not an entrance ticket.  Global physical QNM claims remain
 > closed on the research branch.
 
+---
+
+## Re-certification 2026-10-11 — the four certified pillars
+
+**Status banner (2026-10-11):** `TRUE_FULL_CLOSURE_PASS` corpus intact ·
+pytest **317 passed, 1 skipped** · Evidence-Registry **19/19 audits
+expected-exit** (`data/generated/repo_observability/ALL_EVIDENCE_RUN.json`
+status `PASS`) · release metadata stamped to HEAD · lint clean. Full
+Pipeline: `PYTHONPATH=src python tools/run_full_pipeline.py` →
+[`FULL_PIPELINE_REPORT.md`](FULL_PIPELINE_REPORT.md).
+
+Beyond the historical corpus, four additional pillars were built,
+re-certified and frozen on 2026-10-11 (all numbers below are read live
+from `artifacts/*.json` by `demos/animate_core_results.py` and
+`tools/run_full_pipeline.py` — nothing is hand-written):
+
+| pillar | artifact | certified verdict |
+|--------|----------|-------------------|
+| **FK Coupled Model V1** (Run 11, mass-weighted) | `SSZ_FK_COUPLED_MODEL_V1.json` | **6/6 gates PASS.** Core result: **G-E `NEW_STRUCTURE_NOT_COLLAPSIBLE`** — the SSZ-FK response is *not* recoverable as FK × redshift (this is the finding, not a bug); b = a/φ deep branch is solitonic without stable fixed point → Weisz regime δ ≈ 5.9 %, κ = 25; free edges ω_q = 2√(κ/m)·sin(qπ/2M) incl. null mode; grid O(dr²) → Richardson. Appendix B (segment lattice) is **NOT derivable**. |
+| **Spectral Weight Diagnostics** (GW defaults) | `SW_DIAGNOSTICS` full-report § 4.5 | **`PEAKS_NOT_ROBUST`** — honest negative: maxG drops 0.05696 → 0.03417 from n=600 → n=1000, consistent across Dirichlet/Robin. **No resonance claim is made.** |
+| **Weisz Response Bridge** (Run 6) | `SSZ_WEISZ_RESPONSE_BRIDGE_V1.json` | **Stage 1 (FK reference) PASS + Stage 2 (SSZ projections) PASS** — the response machine is validated: A: g_max = 9.30e-2, B: **exactly 0** (selection rule), C: 3e-6. |
+| **Spectral Response Framework** (Run 6, Stage 3) | `SSZ_SPECTRAL_RESPONSE_FRAMEWORK_V1.json` | **5/5 gates PASS.** Blind recovery 3/3 injected modes (ω = 2.86456, 4.52057, 6.12593, Lorentzian 3 bins wide); noise null median max-z = 0.0; detector additive-Gaussian σ = 5 %·median. |
+
+**Research status (unchanged in force):** every green result certifies the
+*implemented model and the synthetic evaluation chain* — **no new
+astrophysical discovery**. Coupling to matter remains a documented
+*coupling assumption*; the 56.4 % figure and comparable indicators are
+numerical candidates, not established physical signatures.
+
+---
+
+## Animations — every core result as an animated GIF
+
+```bash
+python demos/animate_core_results.py      # writes demos/output/*.gif (~5–10 s)
+```
+
+| GIF | shows |
+|-----|-------|
+| `01_fk_coupled_gates_ladder.gif` | FK V1: gate ladder A–F filled live + G-C stability ladder (V0 → β) built point by point |
+| `02_swdiag_resolution_drop.gif` | SW-Diag: the honest resolution drop of maxG across 4 grids → `PEAKS_NOT_ROBUST` |
+| `03_bridge_projections.gif` | Bridge Run 6: projections A (9.3e-2) / B (exactly 0) / C (3e-6) on log scale |
+| `04_srf_blind_recovery.gif` | SRF: detector noise level rising, blind recovery of the 3 injected modes, null test |
+| `05_chain_overview.gif` | the four pillars + core finding in one picture |
+
+## Full Pipeline & Report
+
+One command runs the **entire verification chain** and writes
+`FULL_PIPELINE_REPORT.md` (date, HEAD, per-stage verdicts, artifact
+hashes, honest OPEN/BLOCKED list; exit 0 only when all stages are green):
+
+```bash
+PYTHONPATH=src python tools/run_full_pipeline.py   # ~10–25 min, pytest dominates
+```
+
+Stages: (1) full pytest suite · (2) evidence registry — all 19 audits
+via `tools/run_all_evidence.py` (needs `PYTHONPATH=src`; the pipeline
+sets it) · (3) certified pillar artifacts checked live against frozen
+expectations (FK 6/6, Bridge Stage1+2, SRF 5/5) · (4) release metadata
+stamps (`MODEL_LOCK.json` / `EVIDENCE_INDEX.json` == HEAD) + demo GIFs
+present. Details: [`REPRODUCE.md`](REPRODUCE.md),
+[`PEER_REVIEW.md`](PEER_REVIEW.md).
+
+---
+
 *Research repository · Carmen Casu and Lino Casu · Anti-Capitalist
 Software License v1.4*
 
@@ -328,10 +393,15 @@ src/ssz_p5/true_closure/             forward chain + proof graph + MCP client
 tests/scientific/                    30 scientific tests (incl. 17 transport)
 tests/negative/                      falsifiers + guards
 tools/evaluate_true_closure.py       TRUE FULL CLOSURE evaluator
-tools/render_true_closure_visualizations.py   all figures above
+tools/run_full_pipeline.py           one-command full pipeline → FULL_PIPELINE_REPORT.md
+tools/run_all_evidence.py            19 registered audits (needs PYTHONPATH=src)
+demos/animate_core_results.py        5 animated GIFs of the certified pillars
 docs/TRUE_CLOSURE_EXPLAINED.md       every gate, fully explained
 docs/figures/true_closure/           all visualizations
+demos/output/                        animated pillar GIFs (regenerable)
 artifacts/true_full_closure/         proof chain + provenance
+REPRODUCE.md                         step-by-step reproduction
+PEER_REVIEW.md                       reviewer guide: claims, controls, limits
 paper/                               monograph + appendices
 ```
 

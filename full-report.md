@@ -233,7 +233,7 @@ Roadmap (echte    P_obs(ω) = d†·G^R(ω)·C_J(ω)·G^A(ω)·d + N(ω) mit
 
 | Modul | Inhalt | Stand |
 |---|---|---|
-| `tools/weisz_response_bridge.py` | Stage 1 (FK-Referenz-Equilibria + Lorentzian-Gewichte = q0-Residuen = Frozen-Zahlen) + Stage 2 (SSZ-Projektionen A/B/C, Auflösungsstabilität); Assembler FAKTOR-2-GEFIXT (§ 4.5) | Run 6 final: **STAGE1 PASS \| STAGE2 PASS** gegen frisches SW-Diag-Cert; A 0.056956 / B 0.0 / C 3e-6, Crosschecks n=600/n=1000 exakt, C-Kanal `ch1_ch1_late`: PEAKS_NOT_ROBUST |
+| `tools/weisz_response_bridge.py` | Stage 1 (FK-Referenz-Equilibria + Lorentzian-Gewichte = q0-Residuen = Frozen-Zahlen) + Stage 2 (SSZ-Projektionen A/B/C, Auflösungsstabilität); Assembler FAKTOR-2-GEFIXT (§ 4.5) | Run 6 final: **STAGE1 PASS \| STAGE2 PASS** gegen frisches SW-Diag-Cert; Crosschecks n=600/n=1000 exakt; Artefakt strikt-JSON (NaN→null + `selectivity_C_undefined_reason`, s. § 6); A-Kanal `ch0_ch0` g_max 0.093004 (= S3-G1-Zertifizat), SW-Diag-Gitter n600 `maxG` 0.056956 (anderer Check, nicht A-Projektion) |
 | `tools/run_ssz_fk_coupled_model.py` | FK-Coupled-Model V1, alle 6 Gates; massengewichteter Solver (§ 4.4) | 6/6 PASS (Run 11, massengewichtet); Runs 6–10 mit Alt-Solver deterministisch identisch; G-E-Verdikt robust (Δ ≈ 2e-7) |
 | `tools/run_ssz_spectral_response_framework.py` | Stage 3: Operator → Green → Projektion → Detektor → blinde Recovery; Injektionen aus Operator-Eigenfrequenzen; Fenster 2.5–7.0 (Operator-Moden), Grid 1200; Null-Test nur außerhalb bekannter Moden; G1-Kette auf zertifiziertem Gitter | **5/5 Gates PASS (Run 6, final)** |
 | `tools/run_ssz_local_resolvent_spectra.py` | Lokale Resolventen-Spektren, 360 Fälle | exit 0; top1 0.380–0.959, top2 0.722–1.0, **n_eff 1.09–2.94** |
@@ -255,9 +255,9 @@ Roadmap (echte    P_obs(ω) = d†·G^R(ω)·C_J(ω)·G^A(ω)·d + N(ω) mit
 
 | Gate | Prüfung | Ergebnis |
 |---|---|---|
-| S3-G1 Ketten-Konsistenz | Stufe-2-Projektionsmaxima exakt reproduziert (round(g,6) vs. Zertifizat) | A: 0.078688 (abs_diff 0.0); B: 0.0; C: 2.354e-6 — 3/3 match |
+| S3-G1 Ketten-Konsistenz | Stufe-2-Projektionsmaxima exakt reproduziert (round(g,6) vs. Zertifizat) | A: 0.093004 (abs_diff 0.0); B: 0.0; C: 2.354e-6 — 3/3 match (Run 6, Zertifizat = Bridge-Run-6-Artefakt) |
 | S3-G2 Noise-Null | 200 Trials ohne Injektion | median max-z **0.0**, median n_peaks 0 |
-| S3-G3 Blinde Recovery | 3 injizierte Modi, Recovery blind | **3/3**, Frequenzfehler **0.0** |
+| S3-G3 Blinde Recovery | 3 injizierte Modi, Recovery blind | **3/3**, max. Frequenzfehler **0.001387** < Bin-Breite 0.00375 (Fehler: 0.000511 / 0.001387 / 0.000407) |
 | S3-G4 False Alarm | Peaks > 3·bin_w weg von Injektionen | **0** Nicht-Injektions-Peaks (bei SNR 30) |
 | S3-G5 Auflösung | grobes Gitter n = 200/400 Frequenzen | **3/3** recovered |
 
@@ -472,6 +472,20 @@ Zahlen sind damit **eingefroren**. Logs: `weisz_bridge_run5_factor2fixed.log`,
    Frozen-Export entkoppelt — Absicht des V3-Exports (z. B. Petschek-Sektor
    ohne Rückkopplung) oder ein Export-Defekt? Das ist eine Frage an die
    V3-Export-Pipeline, nicht an den Assembler.
+   **Nachtrag NaN-Fix-Rerun (11.10.26, abends):** Rerun aus den Quellen
+   bestätigt die Struktur exakt — B g_max = 0.0, A g_max = 0.093004
+   (unverändert), C 3e-6, Crosschecks n=600/n=1000 exakt, STAGE1+2 PASS.
+5a. **Striktes JSON (Lino-Audit 11.10.26, Befund 2 — BEHOBEN):** Beide
+   Artefakte (`SSZ_WEISZ_RESPONSE_BRIDGE_V1.json`,
+   `SSZ_SPECTRAL_WEIGHT_DIAGNOSTICS_GW_V1.json`) enthielten `NaN` für
+   Selektivitätskennzahlen bei null Peaks. Fix in beiden Generatoren:
+   `selectivity_C`/`entropy_S` jetzt `null` plus neues Feld
+   `selectivity_C_undefined_reason` mit explizitem Grund; keine
+   Tests/Pipeline-Consumer lesen diese Felder (verifiziert). Artefakte
+   komplett aus den Scripts regeneriert (SW-Diag ~15 min, Bridge ~2 min);
+   Validierung: kein `NaN`/`Infinity` im Rohtext, `json.loads` mit
+   `parse_constant`-Reject bestanden; Gate-Zahlen byteidentisch zur
+   eingefrorenen Re-Zertifizierung. Physik unverändert.
 4. **Quellphysik (Stufe 4):** b ist ein kanalselektiver Einheitsvektor, kein
    Quellmodell; Amplituden in G3 sind gesetzt. Echte stochastische Quelle
    (C_J(ω)) + Instrumentenrauschen N(ω) in P_obs = d†G^R C_J G^A d + N.

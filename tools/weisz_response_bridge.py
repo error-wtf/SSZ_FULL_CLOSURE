@@ -247,12 +247,23 @@ def peak_selectivity(w, g, n_sigma=6.0):
     for i in range(1, len(g) - 1):
         if g[i] > g[i - 1] and g[i] >= g[i + 1] and sig[i] >= n_sigma:
             peaks.append({"w": round(float(w[i]), 5), "g": round(float(g[i]), 6)})
-    gp = np.array([p["g"] for p in peaks]) if peaks else np.array([0.0])
-    p = gp / gp.sum()
+    gp = np.array([p["g"] for p in peaks]) if peaks else np.array([])
+    # strict JSON: null + reason instead of NaN (0/0) when no peaks, fix 2026-10-11
+    if peaks:
+        p = gp / gp.sum()
+        sel_c = round(float(p.max()), 4)
+        ent_s = round(float(-np.sum(p[p > 0] * np.log(p[p > 0]))), 4)
+        sel_reason = None
+    else:
+        sel_c = None
+        ent_s = None
+        sel_reason = ("no peaks detected above threshold; selectivity "
+                      "undefined (no peak to be selective for)")
     return {
         "n_peaks": len(peaks),
-        "selectivity_C": round(float(p.max()), 4),
-        "entropy_S": round(float(-np.sum(p[p > 0] * np.log(p[p > 0]))), 4),
+        "selectivity_C": sel_c,
+        "selectivity_C_undefined_reason": sel_reason,
+        "entropy_S": ent_s,
         "top3_w": [p2["w"] for p2 in sorted(peaks, key=lambda x: -x["g"])[:3]],
     }
 

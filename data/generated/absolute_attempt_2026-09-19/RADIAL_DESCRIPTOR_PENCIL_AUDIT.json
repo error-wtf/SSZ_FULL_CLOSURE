@@ -8,16 +8,16 @@
       "status": "PASS",
       "errors": {
         "A0": {
-          "max_scaled": 8.049553122730389e-08,
-          "relative_frobenius": 2.156476084021258e-10
+          "max_scaled": 8.049549738138386e-08,
+          "relative_frobenius": 2.159114218737086e-10
         },
         "A1": {
           "max_scaled": 0.0,
           "relative_frobenius": 0.0
         },
         "A2": {
-          "max_scaled": 9.387785582397845e-08,
-          "relative_frobenius": 8.988734832974726e-09
+          "max_scaled": 4.7977108718491146e-08,
+          "relative_frobenius": 4.706914678712981e-09
         }
       },
       "dimension": 99
@@ -26,16 +26,16 @@
       "status": "PASS",
       "errors": {
         "A0": {
-          "max_scaled": 8.23985723761008e-08,
-          "relative_frobenius": 2.1818904618080892e-10
+          "max_scaled": 8.240033160217738e-08,
+          "relative_frobenius": 2.1838782493768994e-10
         },
         "A1": {
           "max_scaled": 0.0,
           "relative_frobenius": 0.0
         },
         "A2": {
-          "max_scaled": 2.456276986888436e-09,
-          "relative_frobenius": 6.770629644355485e-10
+          "max_scaled": 2.2127171053500947e-09,
+          "relative_frobenius": 4.5013913466918766e-10
         }
       },
       "dimension": 99
@@ -44,16 +44,16 @@
       "status": "PASS",
       "errors": {
         "A0": {
-          "max_scaled": 1.9938977121199438e-07,
-          "relative_frobenius": 2.1559508454527947e-10
+          "max_scaled": 1.993943013775103e-07,
+          "relative_frobenius": 2.1623350470382572e-10
         },
         "A1": {
           "max_scaled": 0.0,
           "relative_frobenius": 0.0
         },
         "A2": {
-          "max_scaled": 3.703546925314474e-10,
-          "relative_frobenius": 1.5528892691566692e-10
+          "max_scaled": 3.680283300333542e-10,
+          "relative_frobenius": 1.2925219420091706e-10
         }
       },
       "dimension": 99
@@ -62,16 +62,16 @@
       "status": "PASS",
       "errors": {
         "A0": {
-          "max_scaled": 4.449744044628935e-08,
-          "relative_frobenius": 2.0546234893953895e-10
+          "max_scaled": 4.449611634996427e-08,
+          "relative_frobenius": 2.0577718613429934e-10
         },
         "A1": {
           "max_scaled": 0.0,
           "relative_frobenius": 0.0
         },
         "A2": {
-          "max_scaled": 2.2808051738645073e-10,
-          "relative_frobenius": 1.2756027125975597e-10
+          "max_scaled": 2.346125793639686e-10,
+          "relative_frobenius": 1.5874684003177134e-10
         }
       },
       "dimension": 99
@@ -80,16 +80,16 @@
       "status": "PASS",
       "errors": {
         "A0": {
-          "max_scaled": 1.4269745666093003e-08,
-          "relative_frobenius": 1.539687541300497e-10
+          "max_scaled": 1.4317773440318404e-08,
+          "relative_frobenius": 1.5434286410912638e-10
         },
         "A1": {
           "max_scaled": 0.0,
           "relative_frobenius": 0.0
         },
         "A2": {
-          "max_scaled": 1.6636741109952233e-11,
-          "relative_frobenius": 2.165074095794823e-11
+          "max_scaled": 2.553949053057934e-10,
+          "relative_frobenius": 2.2615308900906092e-10
         }
       },
       "dimension": 99
@@ -98,16 +98,16 @@
       "status": "PASS",
       "errors": {
         "A0": {
-          "max_scaled": 1.453589301112868e-08,
-          "relative_frobenius": 6.400772798293904e-11
+          "max_scaled": 1.4513567050997497e-08,
+          "relative_frobenius": 6.396137138629331e-11
         },
         "A1": {
           "max_scaled": 0.0,
           "relative_frobenius": 0.0
         },
         "A2": {
-          "max_scaled": 1.7130377305409406e-10,
-          "relative_frobenius": 1.4868609580829534e-10
+          "max_scaled": 2.3099799201155663e-10,
+          "relative_frobenius": 2.0104120434738645e-10
         }
       },
       "dimension": 99
@@ -116,16 +116,16 @@
       "status": "PASS",
       "errors": {
         "A0": {
-          "max_scaled": 1.4760211992266815e-08,
-          "relative_frobenius": 5.3128677776265514e-11
+          "max_scaled": 1.4810429315697082e-08,
+          "relative_frobenius": 5.305576016087955e-11
         },
         "A1": {
           "max_scaled": 0.0,
           "relative_frobenius": 0.0
         },
         "A2": {
-          "max_scaled": 5.336664267299817e-11,
-          "relative_frobenius": 4.607742305191389e-11
+          "max_scaled": 5.443175449323643e-11,
+          "relative_frobenius": 4.863588853351204e-11
         }
       },
       "dimension": 99
