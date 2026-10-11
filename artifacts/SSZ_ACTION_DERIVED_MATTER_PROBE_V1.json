@@ -1,0 +1,177 @@
+{
+ "model": "SSZ_ACTION_DERIVED_MATTER_PROBE_V1",
+ "declared_before_run": true,
+ "claims": "NONE (robustness study of a model-level verdict)",
+ "frozen_reference": {
+  "alpha_best": 0.9191907077802026,
+  "max_rel_resid_after_alpha_fit": 0.5642466802128533
+ },
+ "variants": {
+  "baseline": {
+   "rank_by_rank": {
+    "alpha_best": 0.9191907077802026,
+    "max_rel_resid_after_alpha_fit": 0.5642466802128533,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_pairs": 20
+   },
+   "overlap_matching": {
+    "alpha_best": 0.8596107783561328,
+    "max_rel_resid_after_alpha_fit": 1.98090123180844,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_pairs": 20,
+    "mean_overlap": 0.40961137372610407,
+    "min_overlap": 0.29187606894433743,
+    "assignment_flips_vs_rank": 10
+   },
+   "subspace_group_matching": {
+    "alpha_best": 0.9493243388619049,
+    "max_rel_resid_after_alpha_fit": 0.625687226997698,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_groups": 20,
+    "min_principal_angle_cos": 0.2976012917304361,
+    "mean_principal_angle_cos": 0.43882322648261685
+   },
+   "fd_check": {
+    "grad_rel_err": 1.5841985795490975e-09,
+    "hessian_rel_err": 1.2242780362102486e-09
+   },
+   "grad_inf": 2.3490009196103223e-07,
+   "wall_seconds": 0.5
+  },
+  "proper_phase": {
+   "rank_by_rank": {
+    "alpha_best": 0.9992853340757143,
+    "max_rel_resid_after_alpha_fit": 0.0043202083386454865,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_pairs": 20
+   },
+   "overlap_matching": {
+    "alpha_best": 0.9992853339874036,
+    "max_rel_resid_after_alpha_fit": 0.004320208427401156,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_pairs": 20,
+    "mean_overlap": 0.8873518949704577,
+    "min_overlap": 0.5861124031330897,
+    "assignment_flips_vs_rank": 2
+   },
+   "subspace_group_matching": {
+    "alpha_best": 0.9989887812736069,
+    "max_rel_resid_after_alpha_fit": 0.005366998144224193,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_groups": 20,
+    "min_principal_angle_cos": 0.8287422640924706,
+    "mean_principal_angle_cos": 0.9181561682126127
+   },
+   "fd_check": {
+    "grad_rel_err": 2.6150745185116375e-10,
+    "hessian_rel_err": 8.646440231944716e-11
+   },
+   "grad_inf": 1.2878587085651816e-13,
+   "wall_seconds": 0.4
+  },
+  "action_inertia": {
+   "rank_by_rank": {
+    "alpha_best": 0.8520976320752477,
+    "max_rel_resid_after_alpha_fit": 0.5627166621509546,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_pairs": 20
+   },
+   "overlap_matching": {
+    "alpha_best": 0.788533161701544,
+    "max_rel_resid_after_alpha_fit": 2.3158897876626345,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_pairs": 20,
+    "mean_overlap": 0.4175398892141244,
+    "min_overlap": 0.2725751863993062,
+    "assignment_flips_vs_rank": 18
+   },
+   "subspace_group_matching": {
+    "alpha_best": 0.8310737182778746,
+    "max_rel_resid_after_alpha_fit": 0.6063778807670891,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_groups": 20,
+    "min_principal_angle_cos": 0.24625897562124288,
+    "mean_principal_angle_cos": 0.4281776602223383
+   },
+   "fd_check": {
+    "grad_rel_err": 1.5841985795490975e-09,
+    "hessian_rel_err": 1.2242780362102486e-09
+   },
+   "grad_inf": 2.3490009196103223e-07,
+   "wall_seconds": 0.5
+  },
+  "proper_plus_inertia": {
+   "rank_by_rank": {
+    "alpha_best": 0.92631552777415,
+    "max_rel_resid_after_alpha_fit": 0.006756008307411522,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_pairs": 20
+   },
+   "overlap_matching": {
+    "alpha_best": 0.9263127501009055,
+    "max_rel_resid_after_alpha_fit": 0.007965415195497384,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_pairs": 20,
+    "mean_overlap": 0.8188228900159957,
+    "min_overlap": 0.5179680108744731,
+    "assignment_flips_vs_rank": 6
+   },
+   "subspace_group_matching": {
+    "alpha_best": 0.925858597062725,
+    "max_rel_resid_after_alpha_fit": 0.0074788014489721765,
+    "verdict": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+    "n_groups": 20,
+    "min_principal_angle_cos": 0.5179680108744732,
+    "mean_principal_angle_cos": 0.835335032556127
+   },
+   "fd_check": {
+    "grad_rel_err": 2.6150745185116375e-10,
+    "hessian_rel_err": 8.646440231944716e-11
+   },
+   "grad_inf": 1.2878587085651816e-13,
+   "wall_seconds": 0.5
+  }
+ },
+ "verdicts": {
+  "baseline": {
+   "rank_by_rank": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+   "overlap_matching": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+   "subspace_group_matching": "NEW_STRUCTURE_NOT_COLLAPSIBLE"
+  },
+  "proper_phase": {
+   "rank_by_rank": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+   "overlap_matching": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+   "subspace_group_matching": "NEW_STRUCTURE_NOT_COLLAPSIBLE"
+  },
+  "action_inertia": {
+   "rank_by_rank": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+   "overlap_matching": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+   "subspace_group_matching": "NEW_STRUCTURE_NOT_COLLAPSIBLE"
+  },
+  "proper_plus_inertia": {
+   "rank_by_rank": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+   "overlap_matching": "NEW_STRUCTURE_NOT_COLLAPSIBLE",
+   "subspace_group_matching": "NEW_STRUCTURE_NOT_COLLAPSIBLE"
+  }
+ },
+ "gates": {
+  "P0_reproduce_frozen": {
+   "delta_alpha": 0.0,
+   "delta_resid": 0.0,
+   "pass": true
+  },
+  "P1_fd_consistency": {
+   "pass": true
+  },
+  "P2_matching_well_defined": {
+   "pass": false,
+   "note": "Gruppen-Matching: >= 10 Gruppen, Hauptwinkel-cos > 0.9. Einzelvektor-Hungarian ist bei Frequenzentartung ill-posed und wird nur als Diagnose gefuehrt (nicht gegatet)."
+  },
+  "P3_ge_robustness": {
+   "pass": true,
+   "verdict": "GE_ROBUST_AGAINST_PROPER_LENGTH_AND_ACTION_INERTIA",
+   "note": "pass heisst: alle 4 Varianten x beide Zuordnungen behalten NEW_STRUCTURE_NOT_COLLAPSIBLE. Ein Kollaps einer Variante widerlegt die Messung nicht, zeigt aber Modellabhaengigkeit."
+  }
+ },
+ "wall_seconds": 1.9
+}

@@ -451,6 +451,8 @@ Zahlen sind damit **eingefroren**. Logs: `weisz_bridge_run5_factor2fixed.log`,
    und darf nicht stillschweigend als direktes radiales Materiegitter
    gelesen werden. → Proper-Längen-Variante als G-E-Robustheitstest
    implementieren (Pending bis nach Re-Zertifizierung).
+   **BEARBEITET (11.10.26, spät): Prüfstand gelaufen, Ergebnisse unten
+   (Punkt 6a).**
 2. **Unabhängige Modenzuordnung für G-E:** rank-by-rank-Matching durch
    Überlappungs-Matching |⟨v_n^flat|v_m^SSZ⟩| ersetzen/ergänzen, damit das
    Verdikt nicht auf einem Zuordnungsartefakt beruht.
@@ -510,6 +512,60 @@ Zahlen sind damit **eingefroren**. Logs: `weisz_bridge_run5_factor2fixed.log`,
 10. **Inkommensurable Periodizitäten:** unentschieden (Lino-Entscheidung:
     untersuchen, NUR wenn Skalen aus SSZ oder Astrophysik herleitbar sind) —
     bislang keine herleitbare Skala identifiziert, Baustein bleibt zu.
+
+**6a. G-E-Robustheits-Prüfstand (11.10.26, spät) — erste Bearbeitung der drei
+offenen physikalischen Arbeiten (Punkte 1a + 2 oben; Materie-Wirkung als
+Variante K mitgetestet):**
+
+Tool: `tools/run_action_derived_matter_probe.py`; Artefakt:
+`artifacts/SSZ_ACTION_DERIVED_MATTER_PROBE_V1.json` (sha256
+5c55025b…a490955, strikt-JSON validiert). Vier Modellvarianten × drei
+Zuordnungsverfahren; Gates vor dem Lauf deklariert.
+
+| Variante | Änderung | rank α / max Rest | Gruppen α / max Rest |
+| --- | --- | --- | --- |
+| baseline | eingefroren (Referenz) | 0.919191 / 0.564247 | 0.949324 / 0.625687 |
+| proper_phase (P) | φ = Q·[ℓ(r)+s·u], dℓ/dr = s | 0.999285 / **0.004320** | 0.998989 / 0.005367 |
+| action_inertia (K) | m·s²/D statt m/D² | 0.852098 / 0.562717 | 0.831074 / 0.606378 |
+| proper_plus_inertia | P+K | 0.926316 / 0.006756 | 0.925859 / 0.007479 |
+
+Gates: **P0 PASS** (Baseline reproduziert Run-11 exakt, |Δ| < 1e-6), **P1
+PASS** (FD-Konsistenz aller Ableitungen, ≤ 2.6e-9), **P2 FAIL — als Befund
+dokumentiert** (Hauptwinkel-cos bis 0.246; die Flach-/SSZ-Softspektren haben
+entartete Multipletts — flach: 3 Moden exakt bei 2.3665; SSZ-Baseline: 5
+Moden bei 2.3496–2.3662 — Matching auf Einzelvektoren ist dort ill-posed,
+Paare kreuzen die Frequenzbänder mit Overlap 0.27–0.45), **P3 PASS**
+(NEW_STRUCTURE_NOT_COLLAPSIBLE bleibt in allen 12 Kombinationen bestehen).
+
+**Interpretation (vorsichtig, Modell-Ebene, KEIN astrophysikalischer Claim):**
+
+1. Das formale Verdikt ist robust: keine Variante kollabiert auf einen
+   einheitlichen Faktor. Die Nichtkollapsibilität ist also keine Eigenschaft
+   der Phasen-Identifikation, der Trägheitsform oder der Zuordnungsmethode.
+2. ABER: Der Maximalrest ist KEINE Invariante. Unter der proper-radialen
+   Phase fällt er von 0.564 auf 0.0043 (Faktor ~130), α → 0.9993. Die
+   „neue Struktur" wird unter Proper-Längen-Phase fast zu einem
+   Skalierungsfaktor — das formale Verdikt trägt sie nur, weil die
+   Schwelle (1e-5) extrem scharf ist. Die physikalisch wichtige Zahl ist
+   der Rest selbst, und der ist stark modellabhängig.
+3. Der Proper-Längen-Test zeigt damit genau die Art von Sensitivität, die
+   er finden sollte: Die Mehrskalen-Identifikation (x_n ↔ r) trägt
+   substanziell zur Restgröße bei. Eine echte Materie-Wirkung muss diese
+   Identifikation liefern, nicht voraussetzen.
+4. Die Aktions-Kinetik (K) allein ändert wenig (Rest 0.563); sie koppelt
+   an die gleiche Phase und erbt deren Struktur.
+5. P2-FAIL ist ein instrumenteller Befund: Jede künftige
+   Modenzuordnung bei diesem Gitter muss entartungs-bewusst arbeiten
+   (Unterraum-/Projektor-Vergleich, nicht Einzelvektor-Matching). Das
+   Gruppen-Matching (dritte Spalte) ist die erste saubere Umsetzung und
+   bestätigt das Bild quantitativ.
+
+Offen daraus: (i) Warum bildet die proper-radiale Phase die flachen Moden
+fast exakt ab? Hypothese: dφ/dr = Q·s(r) macht die Substratkopplung lokal
+konstanter und die Kette näher an einen uniformen Oszillator — zu prüfen
+gegen die D(r_s)/Xi-Struktur. (ii) Die eigentliche Materie-Wirkung (Punkt 1
+oben) bleibt die entscheidende Aufgabe; K war nur eine Kinetik-Variante,
+keine Herleitung.
 
 ---
 
