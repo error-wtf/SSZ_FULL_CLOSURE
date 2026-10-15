@@ -1,0 +1,136 @@
+name: Full geometric spectral audit
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  full-spectral-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+
+      - name: Lint new spectral code
+        run: |
+          ruff check \
+            src/ssz_p5/qnm/principal_tracking.py \
+            src/ssz_p5/qnm/spectral_weights.py \
+            tools/run_full_available_spectral_audit.py \
+            tools/run_spectral_weight_gate.py \
+            tools/build_current_member_local_krgsm.py \
+            tests/unit/test_geometric_spectral_selection.py
+
+      - name: Unit tests for new diagnostics
+        run: python -m pytest -q tests/unit/test_geometric_spectral_selection.py
+
+      - name: Full repository pytest except host-path-only provenance assertion
+        run: python -m pytest -q --ignore=tests/unit/test_import_provenance.py
+
+      - name: Run portable provenance tests on clean tree
+        run: |
+          python -m pytest -q \
+            tests/unit/test_import_provenance.py::test_no_forbidden_path_in_sys_path \
+            tests/unit/test_import_provenance.py::test_gate_dependency_enforcement \
+            tests/unit/test_import_provenance.py::test_release_metadata_current
+
+      - name: Verify hardcoded local canonical-path assertion is nonportable
+        shell: bash
+        run: |
+          mkdir -p data/generated/spectral_selection
+          set +e
+          python -m pytest -q \
+            tests/unit/test_import_provenance.py::test_import_provenance \
+            >data/generated/spectral_selection/local_only_path_test.txt 2>&1
+          rc=$?
+          set -e
+          test "$rc" -ne 0
+          grep -q '/home/error/ssz-full-closure' tests/unit/test_import_provenance.py
+          grep -q 'non-canonical path' data/generated/spectral_selection/local_only_path_test.txt
+
+      - name: CI-equivalent import provenance check
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import ssz_p5
+          import ssz_p5.action.light_ring_identity as lri
+          import ssz_p5.action.kt_mh_background as kt
+          import ssz_p5.production.svt_background_eom as svt
+
+          root = Path(ssz_p5.__file__).resolve().parent.parent
+          forbidden = Path("/home/error/SSZ_FULL_CLOSURE").resolve()
+          for mod in (lri, kt, svt):
+              f = Path(mod.__file__).resolve()
+              assert f.is_relative_to(root), (mod.__name__, f, root)
+              assert not f.is_relative_to(forbidden), (mod.__name__, f, forbidden)
+          print("CI-equivalent import provenance: PASS")
+          PY
+
+      - name: Rebuild current member and run all local principal scans
+        run: python tools/run_full_available_spectral_audit.py
+
+      - name: Build all available current-member KRGSM matrices
+        run: python tools/build_current_member_local_krgsm.py
+
+      - name: Full closure auditor
+        run: |
+          python ssz_p5_full_closure_auditor.py \
+            --data-dir . --full \
+            --json data/generated/spectral_selection/FULL_CLOSURE_REAUDIT.json \
+            --csv data/generated/spectral_selection/FULL_CLOSURE_REAUDIT.csv
+
+      - name: Verify global spectral-weight gate fails closed
+        shell: bash
+        run: |
+          set +e
+          python tools/run_spectral_weight_gate.py
+          rc=$?
+          set -e
+          test "$rc" -eq 2
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/generated/spectral_selection/SPECTRAL_WEIGHT_GATE.json")
+          d = json.loads(p.read_text())
+          assert d["status"] == "SPECTRAL_SELECTION_NOT_YET_EVALUABLE"
+          assert d["blocker"] == "MISSING_CURRENT_MEMBER_CENTER_TO_INFINITY_DIRECT_KRGM"
+          PY
+
+      - name: Attempt direct-global KRGM build and verify repository does not fake it
+        shell: bash
+        run: |
+          set +e
+          python -m ssz_p5.cli build krgm \
+            >data/generated/spectral_selection/direct-build.txt 2>&1
+          rc=$?
+          set -e
+          test "$rc" -ne 0
+          grep -q "Direct global production builder is gated" \
+            data/generated/spectral_selection/direct-build.txt
+
+      - name: Verify strict QNM gate remains closed without direct product
+        shell: bash
+        run: |
+          set +e
+          python -m ssz_p5.cli qnm-gate \
+            >data/generated/spectral_selection/qnm-gate.txt 2>&1
+          rc=$?
+          set -e
+          test "$rc" -ne 0
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-geometric-spectral-audit
+          path: data/generated/spectral_selection/
