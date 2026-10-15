@@ -1,4 +1,4 @@
-"""Fail-closed radial spectral-weight selection diagnostics.
+r"""Fail-closed radial spectral-weight selection diagnostics.
 
 This module intentionally does not manufacture a global eigenproblem.  It only
 post-processes a hash-bound spectral export produced from the certified direct
